@@ -113,7 +113,43 @@ export const CONTACT_CTA = {
   ctaHref: "/contact",
 } as const;
 
-// Legacy exports preserved for components not yet migrated (coagent page, about page, contact page)
+// TODO: founder to write personal bio paragraph here
+export const ABOUT_PAGE = {
+  studio: {
+    eyebrow: "Studio",
+    heading: "RAIN",
+    // Holding copy — founder to replace with personal bio paragraph
+    body: "Studio bio \u2014 coming. RAIN today is a studio of one.",
+  },
+  structure: {
+    eyebrow: "Structure",
+    heading: "How RAIN is structured",
+    paragraphs: [
+      "RAIN is incorporated as a Public Benefit Corporation (PBC) \u2014 a for-profit legal entity whose charter binds the company to a specific public benefit purpose alongside any pursuit of profit. The charter names that purpose explicitly: advancing the responsible development and deployment of AI systems through research-grounded consulting and contribution to independent AI safety and alignment research. Decisions of the company are required to balance profit with that purpose. The mission is part of the legal entity, not a marketing line.",
+      "Mission lock is real. Removing or materially weakening the benefit purpose requires a two-thirds stockholder vote \u2014 which today means the founder, but binds any future investor or acquirer. The structure is solo-ownable and capable of taking commercial engagements at market rates. It is not a non-profit. Clients do not receive tax deductions for fees paid to RAIN; they are paying for consulting services. What they get, in addition to the work, is a partner whose incentives cannot quietly drift.",
+      "Each year RAIN produces an annual benefit report covering how the public benefit purpose was advanced, how shareholder and benefit interests were balanced, the safety-research grant allocation for the year, and any failures against the commitments in the charter. That report is published on this site. It is the public record of what was actually done, not what was intended.",
+    ],
+  },
+  commitment: {
+    eyebrow: "The commitment",
+    heading: "Safety research, in writing",
+    body: "A fixed percentage of net consulting revenue \u2014 currently 5%, reviewed annually \u2014 is committed to independent AI safety and alignment research. The commitment is named in RAIN\u2019s charter, executed via grants to recipient organisations, and reported in the annual benefit report. The recipient organisations will be named in the first annual benefit report. This is not a discretionary donation; it is an operating obligation of the studio.",
+  },
+  advisors: {
+    eyebrow: "Advisors",
+    heading: "Advisory board",
+    body: "Advisors will be named here as RAIN brings them on. We are not listing names that aren\u2019t yet real.",
+  },
+  contact: {
+    eyebrow: "Contact",
+    heading: "Working on something serious?",
+    body: "Tell us about it.",
+    ctaLabel: "Start a conversation \u2192",
+    ctaHref: "/contact",
+  },
+} as const;
+
+// Legacy exports preserved for components not yet migrated (coagent page, contact page)
 
 export const COAGENT = {
   eyebrow: "Selected work",
@@ -179,13 +215,14 @@ export const IMAGERY = {
 } as const;
 
 export const CONTACT_PAGE = {
-  heading: "Get in touch",
-  body: "Describe what you are building and where AI fits. If RAIN can help, the answer will be straightforward. If not, that will be clear too.",
+  heading: "Tell us what you're working on.",
+  body: "Every message gets read by a real person. We reply within two business days. There's no sales funnel — the next thing that happens is a real conversation.",
   formLabels: {
     name: "Name",
     email: "Email",
     message: "What are you working on?",
     submit: "Send",
-    success: "Sent. Expect a reply within 24 hours.",
+    success: "Sent. We'll read it and reply within two business days.",
   },
+  fallbackEmail: "founder-email-placeholder@example.com", // TODO: founder to confirm public email
 } as const;

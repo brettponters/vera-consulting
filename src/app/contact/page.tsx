@@ -71,7 +71,7 @@ export default function ContactPage() {
                   type="text"
                   required
                   autoComplete="name"
-                  className="bg-bg-subtle border border-white/10 rounded-lg px-4 py-3 font-sans text-fg-base placeholder:text-fg-muted/40 focus:outline-none focus:ring-1 focus:ring-accent transition"
+                  className="bg-bg-subtle border border-black/10 rounded-lg px-4 py-3 font-sans text-fg-base placeholder:text-fg-muted/40 focus:outline-none focus:ring-1 focus:ring-accent transition"
                   placeholder="Your name"
                 />
               </div>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                   type="email"
                   required
                   autoComplete="email"
-                  className="bg-bg-subtle border border-white/10 rounded-lg px-4 py-3 font-sans text-fg-base placeholder:text-fg-muted/40 focus:outline-none focus:ring-1 focus:ring-accent transition"
+                  className="bg-bg-subtle border border-black/10 rounded-lg px-4 py-3 font-sans text-fg-base placeholder:text-fg-muted/40 focus:outline-none focus:ring-1 focus:ring-accent transition"
                   placeholder="you@example.com"
                 />
               </div>
@@ -106,8 +106,8 @@ export default function ContactPage() {
                   name="message"
                   required
                   rows={6}
-                  className="bg-bg-subtle border border-white/10 rounded-lg px-4 py-3 font-sans text-fg-base placeholder:text-fg-muted/40 focus:outline-none focus:ring-1 focus:ring-accent transition resize-none"
-                  placeholder="Tell me what you're building…"
+                  className="bg-bg-subtle border border-black/10 rounded-lg px-4 py-3 font-sans text-fg-base placeholder:text-fg-muted/40 focus:outline-none focus:ring-1 focus:ring-accent transition resize-none"
+                  placeholder="What are you trying to figure out, ship, or fix?"
                 />
               </div>
 
@@ -126,6 +126,11 @@ export default function ContactPage() {
               </button>
             </form>
           )}
+
+          <p className="font-sans text-sm text-fg-muted mt-12">
+            Prefer email? Write directly to{' '}
+            <span className="text-fg-base">{CONTACT_PAGE.fallbackEmail}</span>
+          </p>
         </div>
       </Container>
     </main>
