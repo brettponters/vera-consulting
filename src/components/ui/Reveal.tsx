@@ -35,7 +35,7 @@ export function Reveal({ children, delay = 0, className }: RevealProps) {
         initial={{ clipPath: 'inset(0 0 100% 0)' }}
         animate={{ clipPath: 'inset(0 0 0% 0)' }}
         transition={{
-          duration: 0.7,
+          duration: 0.5,
           delay,
           ease: [0.22, 1, 0.36, 1],
         }}

@@ -28,7 +28,7 @@ export function Eyebrow({ children, className = '', delay = 0 }: EyebrowProps) {
         {children}
       </span>
       <motion.span
-        className="block h-px bg-fg-muted/40"
+        className="block h-px bg-fg-muted/30"
         style={{ width: 32 }}
         initial={{ scaleX: 0, originX: 0 }}
         whileInView={reduced ? { scaleX: 1 } : { scaleX: 1 }}

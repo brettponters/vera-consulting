@@ -8,36 +8,17 @@ export function AntiPosition() {
   const reduced = useReducedMotion();
 
   return (
-    <div className="relative overflow-hidden bg-bg-subtle">
-      {/* Top hairline — draws in from left */}
-      <motion.div
-        className="absolute top-0 left-0 h-px bg-fg-base/10"
-        initial={{ scaleX: 0, originX: 0 }}
-        whileInView={reduced ? { scaleX: 1 } : { scaleX: 1 }}
-        viewport={{ once: true, margin: '-20px' }}
-        transition={reduced ? { duration: 0 } : { duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        style={{ width: '100%' }}
-      />
-      {/* Bottom hairline — draws in from right */}
-      <motion.div
-        className="absolute bottom-0 right-0 h-px bg-fg-base/10"
-        initial={{ scaleX: 0, originX: 1 }}
-        whileInView={reduced ? { scaleX: 1 } : { scaleX: 1 }}
-        viewport={{ once: true, margin: '-20px' }}
-        transition={reduced ? { duration: 0 } : { duration: 0.5, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-        style={{ width: '100%' }}
-      />
-
+    <div className="relative bg-bg-subtle border-y border-fg-base/10">
       <Container>
         <motion.p
           className="py-4 text-center font-sans text-xs font-medium uppercase tracking-[0.18em] text-fg-muted"
-          initial={reduced ? { opacity: 0 } : { opacity: 0, x: -8 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-20px' }}
           transition={
             reduced
-              ? { duration: 0.3 }
-              : { duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }
+              ? { duration: 0 }
+              : { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
           }
         >
           {ANTI_POSITION.line}

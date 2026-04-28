@@ -10,7 +10,7 @@ import { HERO, IMAGERY } from '@/config/copy';
 import { BRAND_NAME } from '@/config/brand';
 
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 8 },
   visible: (delay: number) => ({
     opacity: 1,
     y: 0,

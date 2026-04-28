@@ -19,7 +19,7 @@ function hasDeliverables(part: Part): part is PartWithDeliverables {
 }
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 8 },
   visible: {
     opacity: 1,
     y: 0,
