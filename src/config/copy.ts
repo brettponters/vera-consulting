@@ -9,10 +9,6 @@ export const HERO = {
   ctaHref: '/contact',
 } as const;
 
-export const ANTI_POSITION = {
-  line: 'No decks. No buzzwords. The thing gets built.',
-} as const;
-
 export const ENGAGEMENTS = [
   {
     id: 'strategy',
@@ -56,55 +52,6 @@ export const ENGAGEMENTS = [
     ] as const,
   },
 ] as const;
-
-export const HOW_RAIN_WORKS = {
-  eyebrow: 'How RAIN works',
-  sectionTitle: 'Built for production. Designed to last.',
-  parts: [
-    {
-      id: 'what-rain-is',
-      title: 'What RAIN is',
-      body: 'RAIN is a small studio that builds AI agents and ships them to production. The work is technical, hands-on, and scoped tightly — no sprawling teams, no handoffs to junior staff. Clients come with real operational problems: repetitive decisions, high-volume workflows, tasks that eat time without adding judgment. RAIN turns those into agents that run reliably after the engagement ends. The studio takes on a limited number of projects at a time, because the quality of the work depends on staying close to it.',
-    },
-    {
-      id: 'what-we-believe',
-      title: 'What we believe',
-      body: 'Software built for appearances breaks quickly. RAIN believes the only thing worth shipping is something that keeps working once the builder has left. That means scope defined upfront, honest assessments of where AI actually helps, and a refusal to build things that should not be built. The best AI implementations are often invisible — they do their job, stay out of the way, and let people focus on the work that requires them. Slide decks full of potential are easy to produce. RAIN would rather produce the thing.',
-    },
-    {
-      id: 'responsible-ai',
-      title: 'Responsible AI, defined',
-      body: 'Responsible AI is not a values statement — it is an engineering posture. Every agent RAIN ships is built with tested refusal patterns: defined inputs the system will decline to act on, documented and verified before launch. Spending caps are configured so agents cannot run up unbounded costs in the event of a loop or unexpected usage spike. Audit trails are a standard deliverable, not a premium add-on — every consequential action the agent takes is logged in a queryable format. Failure modes are tested adversarially before anything goes live: edge cases, prompt injection attempts, off-label inputs, and graceful degradation paths. The goal is an agent the client can operate confidently, explain to stakeholders, and hand to an auditor without scrambling.',
-    },
-    {
-      id: 'what-agents-are',
-      title: 'What agents are',
-      body: 'An AI agent is a system that takes a goal, breaks it into steps, uses tools to act on those steps, and decides when the goal has been met. That is meaningfully different from a chatbot, which responds to messages but does not plan or take action. It is also different from traditional automation, which follows a fixed script and cannot adapt when conditions change. A real-world example: an agent that handles inbound sales inquiries might read the email, look up the sender in a CRM, check product availability, draft a personalized reply, and flag anything it is not confident about for human review — all without a fixed script. Another example: an agent that monitors a data pipeline, detects anomalies, files a ticket with the relevant context, and pages the on-call engineer only when the issue crosses a severity threshold. The value is in the judgment layer — the ability to handle variation and make reasonable decisions within defined boundaries.',
-    },
-    {
-      id: 'how-a-build-runs',
-      title: 'How a Build engagement runs',
-      body: 'Every Build engagement runs from spec to production in six weeks. Scope is defined before work starts — no scope creep, no shifting requirements mid-build. The agent is built, tested, and handed off with documentation the client\'s team can actually use. Three deliverables ship with every build, standard:',
-      deliverables: [
-        {
-          title: 'Red-team report',
-          description:
-            'Adversarial probing of the deployed agent — prompt injection, jailbreaks, edge-case failures — with severity ratings and remediation steps.',
-        },
-        {
-          title: 'Guardrails spec',
-          description:
-            'A technical document defining input/output filters, refusal patterns, toxicity thresholds, PII handling, and cost caps before anything goes live.',
-        },
-        {
-          title: 'Monitoring spec',
-          description:
-            'Drift detection, latency budgets, false-alarm-rate ceilings, and alert routing — so the agent stays reliable after launch, not just on demo day.',
-        },
-      ],
-    },
-  ],
-} as const;
 
 export const COAGENT = {
   eyebrow: 'Selected work',
@@ -168,29 +115,6 @@ export const IMAGERY = {
     alt: 'CoAgent platform interface showing a multi-agent workflow for real estate operations',
     credit: '',
   },
-} as const;
-
-export const METHODOLOGY = {
-  sectionTitle: 'How RAIN works.',
-  sectionSubtitle: 'Every engagement runs the same way — tight scope, honest assessment, production handoff.',
-  items: [
-    {
-      title: 'Define the problem',
-      description: 'Before any code is written, RAIN maps the problem precisely: what the agent needs to do, where the boundaries are, and what success looks like. Vague briefs get sharpened. Misaligned expectations get surfaced early.',
-    },
-    {
-      title: 'Build to spec',
-      description: 'Scope is locked before work starts. The build runs in six weeks — no drift, no scope creep, no shifting requirements mid-engagement. What was agreed on is what ships.',
-    },
-    {
-      title: 'Red-team before launch',
-      description: 'Every agent is adversarially tested before it goes live. Prompt injection, edge-case failures, off-label inputs, graceful degradation paths — all documented with severity ratings.',
-    },
-    {
-      title: 'Hand off something that runs',
-      description: 'The engagement ends with a production-ready agent, a monitoring spec, a guardrails spec, and documentation the client\'s team can actually use. Not a prototype. Not a proof of concept.',
-    },
-  ],
 } as const;
 
 export const CONTACT_CTA = {
