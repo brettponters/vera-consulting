@@ -5,7 +5,9 @@
 export const colors = {
   bg: {
     base: '#0a0a0a',
-    subtle: '#111111',
+    subtle: '#0f0f10',
+    deep: '#060606',
+    elevated: '#141416',
   },
   fg: {
     base: '#ededed',
