@@ -146,23 +146,22 @@ export const ABOUT = {
 } as const;
 
 // IMAGERY — central registry of image references.
-// src values are placeholders; researcher-imagery (task #38) will populate them.
-// TODO: replace src: '' values once research/v3-imagery.md lands.
+// All images sourced from Unsplash (free commercial license, no attribution required).
 export const IMAGERY = {
   hero: {
-    src: '',
-    alt: 'Abstract visualization of interconnected nodes representing an agent reasoning through steps',
-    credit: '',
+    src: 'https://images.unsplash.com/photo-1765370847579-70d5d83401d2?w=1920&q=80',
+    alt: 'A square of warm light cast on a textured plaster wall',
+    credit: 'Asse Slotendijk / Unsplash',
   },
   about: {
-    src: '',
-    alt: 'A quiet, focused workspace — the kind of environment where careful technical work gets done',
-    credit: '',
+    src: 'https://images.unsplash.com/photo-1742046335792-060080d72460?w=1920&q=80',
+    alt: 'A dark office workspace lit by warm amber desk lamp and soft ambient light',
+    credit: 'okeykat / Unsplash',
   },
   howRainWorks: {
-    src: '',
-    alt: 'Diagram or photograph illustrating a structured, step-by-step process',
-    credit: '',
+    src: 'https://images.unsplash.com/photo-1542621334-a254cf47733d?w=1920&q=80',
+    alt: 'Brown pencil resting on white architectural floor plan paper',
+    credit: 'Sven Mieke / Unsplash',
   },
   selectedWorkCoAgent: {
     src: '',
