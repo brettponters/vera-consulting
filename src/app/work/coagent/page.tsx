@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
+import { TextLink } from '@/components/ui/TextLink';
 import CoAgentArchitectureFull from '@/components/diagrams/CoAgentArchitectureFull';
 import { COAGENT } from '@/config/copy';
 
@@ -309,12 +310,9 @@ export default function CoAgentPage() {
           <p className="text-fg-muted text-sm mb-4">
             Want something like this built for your team?
           </p>
-          <Link
-            href="/contact"
-            className="inline-block text-sm font-medium text-fg-base border border-fg-muted/25 hover:border-accent hover:text-accent transition-colors duration-200 rounded-lg px-5 py-2.5"
-          >
+          <TextLink href="/contact" className="text-sm font-medium">
             Book a call &rarr;
-          </Link>
+          </TextLink>
         </Container>
       </section>
     </main>
