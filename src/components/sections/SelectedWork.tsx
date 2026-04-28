@@ -1,11 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { COAGENT, SELECTED_WORK } from '@/config/copy';
+import { COAGENT, IMAGERY } from '@/config/copy';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { TextLink } from '@/components/ui/TextLink';
 import CoAgentArchitectureCompact from '@/components/diagrams/CoAgentArchitectureCompact';
+import Image from 'next/image';
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLElement>(null);
@@ -30,16 +31,16 @@ function useInView(threshold = 0.1) {
   return { ref, inView };
 }
 
-function rowStyle(visible: boolean, delay: string) {
-  return {
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(10px)',
-    transition: `opacity 0.45s ease ${delay}, transform 0.45s ease ${delay}`,
-  };
-}
-
 export function SelectedWork() {
   const { ref, inView } = useInView();
+
+  const fadeUp = {
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0)' : 'translateY(16px)',
+    transition: 'opacity 0.5s ease, transform 0.5s ease',
+  };
+
+  const hasImage = Boolean(IMAGERY.selectedWorkCoAgent.src);
 
   return (
     <section
@@ -48,69 +49,44 @@ export function SelectedWork() {
       aria-label="Selected work"
     >
       <Container>
-        {/* Header */}
-        <div style={rowStyle(inView, '0ms')}>
-          <Eyebrow className="mb-4">{COAGENT.eyebrow}</Eyebrow>
-          <p className="text-fg-muted max-w-lg leading-relaxed">
-            A sample of what RAIN has shipped. More in progress.
-          </p>
-        </div>
+        <div style={fadeUp}>
+          <Eyebrow className="mb-10">{COAGENT.eyebrow}</Eyebrow>
 
-        {/* Work list */}
-        <div className="mt-10">
-          {/* CoAgent entry */}
-          <div
-            className="border-t border-white/[0.05] py-8 flex flex-col md:flex-row gap-6 md:gap-10 items-start"
-            style={rowStyle(inView, '80ms')}
-          >
-            {/* Thumbnail — compact diagram at ~40% width */}
-            <div className="w-full md:w-[40%] shrink-0 border border-fg-muted/10 rounded-lg overflow-hidden bg-bg-base/40 p-3">
-              <CoAgentArchitectureCompact className="w-full h-auto opacity-75" />
+          {/* 12-col showcase grid */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+            {/* Image area — 7 cols */}
+            <div className="md:col-span-7 rounded-xl overflow-hidden bg-bg-elevated border border-white/[0.06]">
+              {hasImage ? (
+                <Image
+                  src={IMAGERY.selectedWorkCoAgent.src}
+                  alt={IMAGERY.selectedWorkCoAgent.alt}
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto"
+                />
+              ) : (
+                <div className="p-8 md:p-10">
+                  <CoAgentArchitectureCompact className="w-full h-auto opacity-80" />
+                </div>
+              )}
             </div>
 
-            {/* Text */}
-            <div className="flex flex-col justify-center gap-3">
-              <h2 className="font-display text-xl font-semibold text-fg-base leading-snug">
-                {SELECTED_WORK[0].name}
+            {/* Text area — 5 cols */}
+            <div className="md:col-span-5 flex flex-col justify-center gap-5 md:pt-2">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold text-fg-base leading-snug">
+                {COAGENT.headline}
               </h2>
-              <p className="text-sm text-fg-muted leading-relaxed max-w-sm">
-                {SELECTED_WORK[0].blurb}
+              <p className="text-sm text-fg-muted leading-relaxed">
+                {COAGENT.body}
+              </p>
+              <p className="text-xs text-fg-muted/60 tracking-wide">
+                Local-first AI agent&nbsp;&middot;&nbsp;Shipped 2026&nbsp;&middot;&nbsp;Built by RAIN
               </p>
               <TextLink href={COAGENT.ctaHref} className="text-sm w-fit">
-                {COAGENT.ctaLabel}
-                <span
-                  className="inline-block transition-transform duration-200 group-hover:translate-x-0.5"
-                  aria-hidden="true"
-                >
-                  &rarr;
-                </span>
+                {COAGENT.ctaLabel}&nbsp;&rarr;
               </TextLink>
             </div>
           </div>
-
-          {/* Placeholder slot */}
-          <div
-            className="border-t border-white/[0.05] py-8 flex flex-col md:flex-row gap-6 md:gap-10 items-start"
-            style={rowStyle(inView, '160ms')}
-          >
-            {/* Dashed placeholder visual */}
-            <div className="w-full md:w-[40%] shrink-0 border border-dashed border-fg-muted/20 rounded-lg aspect-video flex items-center justify-center">
-              <span className="text-xs text-fg-muted/40 tracking-wide">—</span>
-            </div>
-
-            {/* Text */}
-            <div className="flex flex-col justify-center gap-1">
-              <p className="text-sm text-fg-muted/50 leading-relaxed">
-                More builds in progress.
-              </p>
-            </div>
-          </div>
-
-          {/* Bottom border */}
-          <div
-            className="border-t border-white/[0.05]"
-            style={rowStyle(inView, '200ms')}
-          />
         </div>
       </Container>
     </section>
