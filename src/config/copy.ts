@@ -149,6 +149,144 @@ export const ABOUT_PAGE = {
   },
 } as const;
 
+// ── CoAgent case study page — single source of truth ──────────────────────
+// Sections map 1:1 to design doc §3 order.
+export const COAGENT_CASE_STUDY = {
+  meta: {
+    title: "CoAgent \u2014 RAIN",
+    description:
+      "How RAIN built CoAgent: a local-first autonomous AI agent for real estate. Architecture, autonomy design, what broke, and what it taught us.",
+  },
+
+  // §3.1 Hero
+  hero: {
+    eyebrow: "Case study",
+    headline: "CoAgent",
+    body: "A local-first autonomous AI agent for real estate \u2014 designed and built end-to-end by RAIN. Claude is the reasoning core. MCP servers are the hands. Every piece of sensitive data stays on the user\u2019s machine.",
+  },
+
+  // §3.2 What it is
+  whatItIs: {
+    heading: "What it is",
+    paragraphs: [
+      "CoAgent runs entirely on the user\u2019s own computer. It connects to email, calendar, contracts, property data, and document storage through MCP (Model Context Protocol) \u2014 an open standard that gives Claude versioned, tool-shaped access to each integration without a centralised cloud backend.",
+      "Claude is the reasoning core. When something happens \u2014 an email arrives, a scheduled heartbeat fires, or the user sends a message \u2014 Claude reads the relevant context from memory, decides what to do, and either acts or queues the decision for human approval. Everything it learns is written back as plain markdown files, so the memory is readable, auditable, and portable.",
+      "It is currently deployed in real estate, handling email triage, showing coordination, follow-up, listing research, and contract preparation. The underlying architecture is general.",
+    ],
+  },
+
+  // §3.3 Architecture (walkthrough text \u2014 diagram is the SVG component)
+  architecture: {
+    heading: "Architecture",
+    walkthrough:
+      "The agent runtime is a monorepo of purpose-built packages. Claude orchestrates tool calls through a custom MCP manager that enforces per-tool timeouts and structured error handling. A scheduler handles periodic triggers \u2014 incoming email, calendar events, new messages \u2014 without holding the process open unnecessarily between events. Memory lives in two layers: plain markdown files for narrative context, and a local LanceDB vector index for semantic retrieval. Nothing in the memory layer leaves the machine.",
+    stackHeading: "Stack at a glance",
+    stack: [
+      { layer: "Primary LLM", tech: "Anthropic Claude (Sonnet / Opus)" },
+      { layer: "Fallback LLMs", tech: "OpenAI GPT-4o, Moonshot Kimi K2.6" },
+      { layer: "Embeddings", tech: "Voyage AI" },
+      { layer: "Vector store", tech: "LanceDB (local)" },
+      { layer: "Structured store", tech: "SQLite (better-sqlite3)" },
+      { layer: "Tool protocol", tech: "Model Context Protocol v1.0" },
+      { layer: "Desktop UI", tech: "React + TypeScript (Tauri)" },
+      { layer: "Mobile sync", tech: "React Native + WebSocket relay" },
+      { layer: "Scheduling", tech: "node-cron" },
+      { layer: "Logging", tech: "Pino (structured JSON)" },
+    ],
+  },
+
+  // §3.4 Autonomy split
+  autonomySplit: {
+    heading: "The autonomy split",
+    intro:
+      "The first design decision was where to draw the automation boundary. Rather than letting the agent act freely, CoAgent classifies every pending action by risk level and holds anything consequential for a one-tap human decision.",
+    autoLabel: "Runs automatically",
+    autoItems: [
+      "Follow-up emails and reminders",
+      "Showing confirmations",
+      "Contact notes and filing",
+      "Morning briefing summaries",
+      "Deadline alerts",
+    ],
+    queueLabel: "Queues for approval",
+    queueItems: [
+      "Contracts and offers",
+      "Financial analysis and underwriting",
+      "Any outbound message that commits a position",
+      "DocuSign preparation and dispatch",
+    ],
+    rationale:
+      "The line is drawn at consequence, not complexity. A routine follow-up is low-stakes even if the drafting is non-trivial. A contract preparation is high-stakes even if the fields are straightforward. Users consistently report trusting the agent with more volume once they have seen that high-stakes decisions surface for review rather than executing silently.",
+  },
+
+  // §3.5 What we got right
+  whatWeGotRight: {
+    heading: "What we got right",
+    items: [
+      {
+        title: "Local-first data architecture",
+        body: "Keeping raw data on the user\u2019s machine removed an entire class of data-custody questions, made the system auditable without a dashboard, and meant the agent could keep working without a network connection for most tasks.",
+      },
+      {
+        title: "MCP as the tool interface",
+        body: "Building each integration as an independent MCP server made the system composable from day one. Gmail, Calendar, DocuSign, and Rentcast are each testable and replaceable in isolation. When the DocuSign integration needed a breaking change, nothing else in the agent core was affected.",
+      },
+      {
+        title: "Markdown memory",
+        body: "Plain markdown files as the memory format survive schema migrations trivially. The user can read their own agent\u2019s memory in any text editor. It is easy to inspect when debugging \u2014 which proved valuable repeatedly in production.",
+      },
+      {
+        title: "Explicit approval queue",
+        body: "The queue is not a fallback for uncertainty \u2014 it is a first-class interface. The agent routes high-stakes work to a human not reluctantly, but as the expected path. This framing made it easier to explain to users and easier to trust.",
+      },
+    ],
+  },
+
+  // §3.6 What broke \u2014 MOST IMPORTANT SECTION per design doc §3
+  // TODO: founder to add specific failure cases here before launch.
+  // Do not invent failure modes \u2014 ship real incidents or leave this placeholder.
+  whatBroke: {
+    heading: "What broke",
+    intro:
+      "Most case studies skip this section. We don\u2019t. The failures are where the real architecture decisions live.",
+    // Placeholder \u2014 replace with real items when founder provides specifics:
+    // items: [
+    //   { title: "Failure name", body: "What happened and what was done about it." },
+    // ],
+  },
+
+  // §3.7 What it taught us
+  whatItTaughtUs: {
+    heading: "What it taught us",
+    items: [
+      {
+        title: "Autonomy is earned, not granted",
+        body: "Users need to see the approval queue work correctly before they trust the autonomous path. Ship the queue first, earn trust with it, then expand autonomous scope based on what users actually approve consistently.",
+      },
+      {
+        title: "Memory design is product design",
+        body: "How an agent stores and retrieves context shapes everything else: what it notices, what it forgets, how it handles contradictions. Memory architecture deserves as much attention as the LLM choice.",
+      },
+      {
+        title: "Local-first is a constraint worth accepting early",
+        body: "The constraint forces better data discipline from the start. Every integration has to be honest about what leaves the machine and why. That discipline prevents a category of architectural drift that is very hard to reverse later.",
+      },
+      {
+        title: "The failure modes that matter are classification failures",
+        body: "The agent rarely fails to act. It occasionally acts on a misclassification \u2014 treating a high-stakes decision as routine, or surfacing something trivial for approval. The monitoring work is mostly about catching those classification boundaries.",
+      },
+    ],
+  },
+
+  // §3.8 CTA
+  cta: {
+    heading: "Want to see something like this for your business?",
+    body: "Tell us what you\u2019re trying to automate. We\u2019ll tell you what\u2019s realistic.",
+    label: "Start a conversation \u2192",
+    href: "/contact",
+  },
+} as const;
+
 // Legacy exports preserved for components not yet migrated (coagent page, contact page)
 
 export const COAGENT = {
