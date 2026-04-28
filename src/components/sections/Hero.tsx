@@ -4,16 +4,17 @@ import { motion, type Variants, type Transition } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { DotGrid } from '@/components/ui/DotGrid';
+import { Reveal } from '@/components/ui/Reveal';
 import { HERO } from '@/config/copy';
 import { BRAND_NAME } from '@/config/brand';
 
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 16 },
   visible: (delay: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.5,
       ease: [0.22, 1, 0.36, 1] as Transition['ease'],
       delay,
     },
@@ -36,23 +37,19 @@ export function Hero() {
             {BRAND_NAME}
           </motion.p>
 
-          <motion.h1
-            className="font-display font-bold leading-[0.95] tracking-[-0.03em] text-fg-base"
-            style={{
-              fontSize: 'clamp(3.5rem, 8vw, 7rem)',
-            }}
-            variants={fadeUp}
-            custom={0.1}
-            initial="hidden"
-            animate="visible"
-          >
-            {HERO.headline}
-          </motion.h1>
+          <Reveal delay={0.08}>
+            <h1
+              className="font-display font-bold leading-[0.95] tracking-[-0.03em] text-fg-base"
+              style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)' }}
+            >
+              {HERO.headline}
+            </h1>
+          </Reveal>
 
           <motion.p
             className="mt-6 max-w-xl font-sans text-[clamp(1rem,1.8vw,1.125rem)] leading-relaxed text-fg-muted"
             variants={fadeUp}
-            custom={0.2}
+            custom={0.3}
             initial="hidden"
             animate="visible"
           >
@@ -62,7 +59,7 @@ export function Hero() {
           <motion.div
             className="mt-10"
             variants={fadeUp}
-            custom={0.3}
+            custom={0.45}
             initial="hidden"
             animate="visible"
           >
