@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
@@ -27,27 +28,26 @@ const fadeUp = {
 };
 
 function ImageSlot() {
-  if (IMAGERY.howRainWorks.src) {
-    return (
-      <div className="mt-8 w-full overflow-hidden rounded-sm">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={IMAGERY.howRainWorks.src}
-          alt={IMAGERY.howRainWorks.alt}
-          className="w-full aspect-video object-cover"
-        />
-      </div>
-    );
-  }
-  // Graceful placeholder when no image is sourced yet
+  if (!IMAGERY.howRainWorks.src) return null;
+
   return (
-    <div
-      className="mt-8 w-full aspect-video rounded-sm bg-bg-elevated flex items-center justify-center"
-      aria-hidden="true"
-    >
-      <span className="text-fg-muted/30 text-xs uppercase tracking-widest select-none">
-        Image coming
-      </span>
+    <div className="mt-8 w-full relative overflow-hidden rounded-sm" style={{ aspectRatio: '16/9' }}>
+      <Image
+        src={IMAGERY.howRainWorks.src}
+        alt={IMAGERY.howRainWorks.alt}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 60vw, 720px"
+        className="object-cover object-center"
+        style={{ filter: 'brightness(0.75)' }}
+      />
+      {IMAGERY.howRainWorks.credit && (
+        <span
+          className="absolute bottom-2 right-2 text-[10px] text-fg-muted/40 select-none"
+          aria-hidden="true"
+        >
+          {IMAGERY.howRainWorks.credit}
+        </span>
+      )}
     </div>
   );
 }
