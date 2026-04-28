@@ -92,6 +92,22 @@ export const COAGENT = {
   ctaHref: '/work/coagent',
 } as const;
 
+export const SELECTED_WORK: readonly {
+  id: string;
+  name: string;
+  blurb: string;
+  href: string;
+  status: 'live' | 'in-progress';
+}[] = [
+  {
+    id: 'coagent',
+    name: 'CoAgent',
+    blurb: 'Multi-agent platform for real estate operations. Automates lead qualification, property analysis, and client communication.',
+    href: '/work/coagent',
+    status: 'live',
+  },
+] as const;
+
 export const ABOUT = {
   heading: 'About RAIN',
   body: 'A small studio that builds AI agents and ships them to production. RAIN takes on a limited number of engagements at a time — no sprawling teams, no handoffs to juniors. Speculative builds, slide-only deliverables, and vanity AI projects get declined. Work runs transparently: scope is defined upfront, safety is standard, and the handoff is real.',

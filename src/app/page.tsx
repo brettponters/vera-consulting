@@ -1,7 +1,7 @@
 import { Hero } from '@/components/sections/Hero';
 import { AntiPosition } from '@/components/sections/AntiPosition';
 import { Engagements } from '@/components/sections/Engagements';
-import { CoAgentMarquee } from '@/components/sections/CoAgentMarquee';
+import { SelectedWork } from '@/components/sections/SelectedWork';
 import { Methodology } from '@/components/sections/Methodology';
 import { About } from '@/components/sections/About';
 import { ContactCTA } from '@/components/sections/ContactCTA';
@@ -17,8 +17,8 @@ export default function HomePage() {
       {/* Section 3: Engagements */}
       <Engagements />
 
-      {/* Section 4: CoAgent marquee — builder-4 */}
-      <CoAgentMarquee />
+      {/* Section 4: Selected work — builder-4 */}
+      <SelectedWork />
 
       {/* Accent hairline — sole accent outside CTAs */}
       <div className="flex justify-center py-0 bg-bg-base" aria-hidden="true">
