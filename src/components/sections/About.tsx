@@ -6,7 +6,7 @@ import { ABOUT } from '@/config/copy';
 
 export function About() {
   return (
-    <section className="py-24 bg-bg-base">
+    <section className="py-24 bg-bg-subtle border-t border-white/[0.04]">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 16 }}

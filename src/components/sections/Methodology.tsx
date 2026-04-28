@@ -15,7 +15,7 @@ const fadeUp = {
 
 export function Methodology() {
   return (
-    <section className="py-24 bg-bg-subtle">
+    <section className="py-24 bg-bg-base">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 16 }}

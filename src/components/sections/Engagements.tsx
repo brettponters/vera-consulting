@@ -15,7 +15,7 @@ const fadeUp = {
 
 export function Engagements() {
   return (
-    <section className="py-24 bg-bg-base">
+    <section className="py-24 bg-bg-base border-t border-white/[0.04]">
       <Container>
         <h2 className="font-display text-3xl md:text-4xl font-bold text-fg-base mb-4">
           Engagements
@@ -34,18 +34,13 @@ export function Engagements() {
               viewport={{ once: true, margin: '-60px' }}
               className="group relative flex flex-col border border-fg-muted/20 rounded-lg p-8 bg-bg-base transition-all duration-300 hover:bg-bg-subtle hover:-translate-y-1"
             >
-              {/* Price */}
+              {/* Outcome headline */}
               <span className="font-display text-2xl font-bold text-fg-base">
-                {eng.priceLabel}
+                {eng.outcomeHeadline}
               </span>
               <span className="text-fg-muted text-sm mt-1 mb-5">
                 {eng.durationLabel}
               </span>
-
-              {/* Name */}
-              <h3 className="font-display text-xl font-bold text-fg-base mb-3">
-                {eng.name}
-              </h3>
 
               {/* Description */}
               <p className="text-fg-muted text-sm leading-relaxed mb-6 flex-1">

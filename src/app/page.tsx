@@ -20,6 +20,11 @@ export default function HomePage() {
       {/* Section 4: CoAgent marquee — builder-4 */}
       <CoAgentMarquee />
 
+      {/* Accent hairline — sole accent outside CTAs */}
+      <div className="flex justify-center py-0 bg-bg-base" aria-hidden="true">
+        <div className="h-px w-20 bg-accent opacity-60" />
+      </div>
+
       {/* Section 5: Methodology */}
       <Methodology />
 

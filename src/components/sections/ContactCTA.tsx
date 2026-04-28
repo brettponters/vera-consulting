@@ -7,7 +7,7 @@ import { CONTACT_CTA } from '@/config/copy';
 
 export function ContactCTA() {
   return (
-    <section className="py-24 bg-bg-subtle border-t border-white/[0.06]">
+    <section className="py-24 bg-bg-deep border-t border-white/[0.04]">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 16 }}

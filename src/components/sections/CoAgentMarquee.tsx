@@ -62,7 +62,7 @@ export function CoAgentMarquee() {
   return (
     <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 border-t border-fg-muted/10"
+      className="py-24 bg-bg-subtle border-t border-white/[0.04]"
       aria-label="CoAgent case study preview"
     >
       <Container>
