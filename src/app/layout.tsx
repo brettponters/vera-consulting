@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { cabinetGrotesk, satoshi } from '@/app/fonts';
-import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
-import { CursorDot } from '@/components/ui/CursorDot';
-import { BRAND_NAME, DESCRIPTION, TAGLINE } from '@/config/brand';
+import { BRAND_NAME, DESCRIPTION } from '@/config/brand';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -21,8 +19,7 @@ export default function RootLayout({
       className={`dark ${cabinetGrotesk.variable} ${satoshi.variable}`}
     >
       <body className="bg-bg-base text-fg-base font-sans antialiased min-h-full">
-        <CursorDot />
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        {children}
       </body>
     </html>
   );
