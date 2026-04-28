@@ -22,7 +22,7 @@ const fadeUp: Variants = {
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[92svh] items-center overflow-hidden bg-bg-base">
+    <section className="grain relative flex min-h-[92svh] items-center overflow-hidden bg-bg-base">
       <DotGrid />
       <Container className="relative z-10 py-24 md:py-32">
         <div className="max-w-4xl">
