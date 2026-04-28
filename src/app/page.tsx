@@ -2,7 +2,7 @@ import { Hero } from '@/components/sections/Hero';
 import { AntiPosition } from '@/components/sections/AntiPosition';
 import { Engagements } from '@/components/sections/Engagements';
 import { SelectedWork } from '@/components/sections/SelectedWork';
-import { Methodology } from '@/components/sections/Methodology';
+import { HowRainWorks } from '@/components/sections/HowRainWorks';
 import { About } from '@/components/sections/About';
 import { ContactCTA } from '@/components/sections/ContactCTA';
 
@@ -25,8 +25,8 @@ export default function HomePage() {
         <div className="h-px w-20 bg-accent opacity-60" />
       </div>
 
-      {/* Section 5: Methodology */}
-      <Methodology />
+      {/* Section 5: How RAIN Works */}
+      <HowRainWorks />
 
       {/* Section 6: About — builder-5 */}
       <About />
