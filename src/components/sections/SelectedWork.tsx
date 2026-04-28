@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import { COAGENT, SELECTED_WORK } from '@/config/copy';
 import { Container } from '@/components/layout/Container';
+import { Eyebrow } from '@/components/ui/Eyebrow';
+import { TextLink } from '@/components/ui/TextLink';
 import CoAgentArchitectureCompact from '@/components/diagrams/CoAgentArchitectureCompact';
 
 function useInView(threshold = 0.1) {
@@ -49,9 +50,7 @@ export function SelectedWork() {
       <Container>
         {/* Header */}
         <div style={rowStyle(inView, '0ms')}>
-          <p className="text-xs font-medium tracking-widest uppercase text-fg-muted mb-3">
-            {COAGENT.eyebrow}
-          </p>
+          <Eyebrow className="mb-4">{COAGENT.eyebrow}</Eyebrow>
           <p className="text-fg-muted max-w-lg leading-relaxed">
             A sample of what RAIN has shipped. More in progress.
           </p>
@@ -77,10 +76,7 @@ export function SelectedWork() {
               <p className="text-sm text-fg-muted leading-relaxed max-w-sm">
                 {SELECTED_WORK[0].blurb}
               </p>
-              <Link
-                href={COAGENT.ctaHref}
-                className="text-sm text-fg-muted hover:text-accent transition-colors duration-200 inline-flex items-center gap-1 group w-fit"
-              >
+              <TextLink href={COAGENT.ctaHref} className="text-sm w-fit">
                 {COAGENT.ctaLabel}
                 <span
                   className="inline-block transition-transform duration-200 group-hover:translate-x-0.5"
@@ -88,7 +84,7 @@ export function SelectedWork() {
                 >
                   &rarr;
                 </span>
-              </Link>
+              </TextLink>
             </div>
           </div>
 

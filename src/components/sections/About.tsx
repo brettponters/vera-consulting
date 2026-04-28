@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ABOUT } from '@/config/copy';
 
 export function About() {
@@ -15,6 +16,7 @@ export function About() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="max-w-prose"
         >
+          <Eyebrow className="mb-4">Studio</Eyebrow>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-fg-base mb-6">
             {ABOUT.heading}
           </h2>

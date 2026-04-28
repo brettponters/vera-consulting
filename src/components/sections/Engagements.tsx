@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ENGAGEMENTS } from '@/config/copy';
 
 const rowVariant = {
@@ -20,6 +21,7 @@ export function Engagements() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16">
           {/* Left col: section title + framing line */}
           <div className="lg:pt-1">
+            <Eyebrow className="mb-4">Services</Eyebrow>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-fg-base tracking-tight mb-4">
               What we do
             </h2>
