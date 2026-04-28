@@ -179,15 +179,6 @@ export const SELECTED_WORK: readonly {
   },
 ] as const;
 
-export const ABOUT = {
-  heading: "About RAIN",
-  paragraphs: [
-    "RAIN is a studio that builds AI agents and ships them to production. The work is technical and direct \u2014 no discovery theater, no month-long strategy phases before a line of code is written. Clients come with real problems, and RAIN builds the thing that solves them.",
-    "The studio keeps its project load small on purpose. Every engagement gets close attention, defined scope, and an honest answer about what AI can and cannot do for a given problem. Speculative builds, slide-only deliverables, and projects where \u201cAI\u201d is mostly a rebrand of existing software get declined.",
-    "Safety engineering is not a checkbox at the end of a build \u2014 it is part of the build. Every agent that ships includes tested refusal patterns, spending caps, audit logging, and a monitoring spec. That is what makes the handoff real: the client gets something they can operate, explain, and trust.",
-  ],
-  body: "A small studio that builds AI agents and ships them to production. RAIN takes on a limited number of engagements at a time \u2014 no sprawling teams, no handoffs to juniors. Speculative builds, slide-only deliverables, and vanity AI projects get declined. Work runs transparently: scope is defined upfront, safety is standard, and the handoff is real.",
-} as const;
 
 // IMAGERY \u2014 central registry of image references.
 // All images sourced from Unsplash (free commercial license, no attribution required).
