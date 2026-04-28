@@ -2,77 +2,66 @@
 
 import { motion } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
-import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Reveal } from '@/components/ui/Reveal';
 import { ENGAGEMENTS } from '@/config/copy';
 
-const rowVariant = {
+const itemVariant = {
   hidden: { opacity: 0, y: 8 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, delay: i * 0.08, ease: 'easeOut' as const },
+    transition: { duration: 0.45, delay: i * 0.1, ease: 'easeOut' as const },
   }),
 };
 
 export function Engagements() {
   return (
-    <section className="py-24 bg-bg-base border-t border-white/[0.04]">
+    <section className="py-24 bg-bg-base border-t border-black/[0.06]">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16">
-          {/* Left col: section title + framing line */}
-          <div className="lg:pt-1">
-            <Eyebrow className="mb-4">Services</Eyebrow>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-fg-base tracking-tight mb-4">
-              What we do
+        <div className="max-w-3xl mx-auto">
+          <Reveal>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-fg-base tracking-tight mb-3">
+              {ENGAGEMENTS.heading}
             </h2>
-            <p className="text-fg-muted text-base leading-relaxed max-w-xs">
-              Three ways to work together. Each ends with something real.
+          </Reveal>
+          <Reveal delay={0.08}>
+            <p className="text-fg-muted text-base leading-relaxed mb-16">
+              {ENGAGEMENTS.subhead}
             </p>
-          </div>
+          </Reveal>
 
-          {/* Right col: stacked vertical outcome list */}
-          <div>
-            {ENGAGEMENTS.map((eng, i) => (
+          <div className="space-y-10">
+            {ENGAGEMENTS.items.map((item, i) => (
               <motion.div
-                key={eng.id}
+                key={item.id}
                 custom={i}
-                variants={rowVariant}
+                variants={itemVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: '-40px' }}
                 className={
-                  i < ENGAGEMENTS.length - 1
-                    ? 'pb-10 mb-10 border-b border-white/[0.05]'
-                    : 'pb-2'
+                  i < ENGAGEMENTS.items.length - 1
+                    ? 'pb-10 border-b border-black/[0.08]'
+                    : ''
                 }
               >
-                {/* Outcome headline */}
-                <p className="font-display text-2xl md:text-3xl font-bold text-fg-base tracking-tight leading-snug mb-1">
-                  {eng.outcomeHeadline}
+                <p className="font-sans text-base leading-[1.75] text-fg-base">
+                  <strong className="font-semibold">{item.name}</strong>{' '}
+                  {item.body}
                 </p>
-
-                {/* Duration label */}
-                {eng.durationLabel && (
-                  <p className="text-fg-muted text-sm mb-4">{eng.durationLabel}</p>
-                )}
-
-                {/* Description */}
-                <p className="text-fg-muted text-base leading-relaxed max-w-prose mb-5">
-                  {eng.description}
-                </p>
-
-                {/* Deliverables dash list */}
-                <ul className="space-y-1.5">
-                  {eng.deliverables.map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-sm text-fg-muted">
-                      <span className="shrink-0 select-none">—</span>
-                      <span>{d}</span>
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             ))}
           </div>
+
+          <motion.p
+            className="mt-12 text-sm text-fg-muted italic"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {ENGAGEMENTS.footerLine}
+          </motion.p>
         </div>
       </Container>
     </section>

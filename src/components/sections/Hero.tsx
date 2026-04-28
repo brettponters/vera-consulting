@@ -5,9 +5,7 @@ import { motion, type Variants, type Transition } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { DotGrid } from '@/components/ui/DotGrid';
-import { Reveal } from '@/components/ui/Reveal';
 import { HERO, IMAGERY } from '@/config/copy';
-import { BRAND_NAME } from '@/config/brand';
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 8 },
@@ -36,53 +34,54 @@ export function Hero() {
           className="object-cover object-center"
         />
       )}
-      {/* Dark overlay: base color + gradient toward bottom */}
+      {/* Light overlay so copy reads over photo */}
       {IMAGERY.hero.src && (
         <div
           className="absolute inset-0 z-[1]"
           style={{
             background:
-              'linear-gradient(to bottom, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.88) 60%, rgba(10,10,10,0.95) 100%)',
+              'linear-gradient(to bottom, rgba(250,250,247,0.55) 0%, rgba(250,250,247,0.78) 60%, rgba(250,250,247,0.92) 100%)',
           }}
           aria-hidden="true"
         />
       )}
       <DotGrid />
       <Container className="relative z-10 py-24 md:py-32">
-        <div className="max-w-4xl">
+        <div className="max-w-3xl">
           <motion.p
-            className="mb-4 font-display text-[clamp(0.75rem,1.5vw,0.875rem)] font-medium uppercase tracking-[0.2em] text-fg-muted"
+            className="mb-6 font-display text-[clamp(0.75rem,1.5vw,0.875rem)] font-medium uppercase tracking-[0.2em] text-fg-muted"
             variants={fadeUp}
             custom={0}
             initial="hidden"
             animate="visible"
           >
-            {BRAND_NAME}
+            {HERO.name}
           </motion.p>
 
-          <Reveal delay={0.08}>
-            <h1
-              className="font-display font-bold leading-[0.95] tracking-[-0.03em] text-fg-base"
-              style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)' }}
-            >
-              {HERO.headline}
-            </h1>
-          </Reveal>
-
           <motion.p
-            className="mt-6 max-w-xl font-sans text-[clamp(1rem,1.8vw,1.125rem)] leading-relaxed text-fg-muted"
+            className="font-sans text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.75] text-fg-base"
             variants={fadeUp}
-            custom={0.3}
+            custom={0.1}
             initial="hidden"
             animate="visible"
           >
-            {HERO.subheadline}
+            {HERO.paragraph1}
+          </motion.p>
+
+          <motion.p
+            className="mt-5 font-sans text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.75] text-fg-base"
+            variants={fadeUp}
+            custom={0.2}
+            initial="hidden"
+            animate="visible"
+          >
+            {HERO.paragraph2}
           </motion.p>
 
           <motion.div
             className="mt-10"
             variants={fadeUp}
-            custom={0.45}
+            custom={0.35}
             initial="hidden"
             animate="visible"
           >

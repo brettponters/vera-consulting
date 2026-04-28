@@ -2,67 +2,129 @@
 // Import BRAND_NAME from brand.ts where typographically natural.
 
 export const HERO = {
-  headline: 'AI agents that ship to production.',
-  subheadline:
-    'RAIN builds custom agents, handles the safety engineering, and hands off something that stays running. Good work, clearly scoped, no guesswork.',
-  ctaLabel: 'Book a call',
-  ctaHref: '/contact',
+  name: "RAIN",
+  paragraph1:
+    "Business innovation should be backed by research and fundamentals. You have to understand the fundamentals to understand the risks and the rewards. Most teams adopting AI today are moving fast on tools they don\u2019t fully understand \u2014 and that\u2019s the gap RAIN is built to close.",
+  paragraph2:
+    "We help companies put AI to work capably, honestly, and with the depth to know how it actually behaves. The thing we\u2019re offering is the feeling of being safe in our hands.",
+  ctaLabel: "Let\u2019s talk \u2192",
+  ctaHref: "/contact",
 } as const;
 
-export const ENGAGEMENTS = [
-  {
-    id: 'strategy',
-    outcomeHeadline: 'An honest map of where AI fits in your stack.',
-    durationLabel: '2 weeks',
-    description:
-      'A focused assessment of where AI fits and where it does not. Ends with a deployment plan, a risk register, and a clear go/no-go — not a slide deck.',
-    deliverables: [
-      'Deployment plan',
-      'Risk register',
-      'Opportunity sizing report',
-      'Go/no-go recommendation',
-      '90-day roadmap',
-    ] as const,
-  },
-  {
-    id: 'build',
-    outcomeHeadline: 'A production-ready agent, shipped.',
-    durationLabel: '6 weeks',
-    description:
-      'Defined scope, from spec to production. Every build ships with a red-team report, guardrails spec, and monitoring spec — standard, not optional.',
-    deliverables: [
-      'Production-ready agent',
-      'Red-team report',
-      'Deployment guardrails spec',
-      'Monitoring spec',
-      'Handoff documentation',
-    ] as const,
-  },
-  {
-    id: 'embedded',
-    outcomeHeadline: 'AI engineering embedded in your team.',
-    durationLabel: 'Ongoing',
-    description:
-      'One to two days a week, inside the team. RAIN owns the AI roadmap, reviews architecture, and keeps what ships running.',
-    deliverables: [
-      'Weekly cadence + technical leadership',
-      'Architecture review',
-      'Vendor diligence',
-      'On-call agent ops',
-    ] as const,
-  },
-] as const;
+export const ENGAGEMENTS = {
+  heading: "What we do",
+  subhead:
+    "Three ways we work with companies. We size each engagement to what the work actually needs.",
+  items: [
+    {
+      id: "strategy",
+      name: "Strategy.",
+      body: "A short, focused engagement. We come in, look at what you have, look at what you\u2019re being sold, and tell you what\u2019s real, what\u2019s risky, and what\u2019s worth doing. The output is a written assessment a non-technical executive can act on \u2014 and that often saves you from spending millions on the wrong thing.",
+    },
+    {
+      id: "build",
+      name: "Build.",
+      body: "We design and ship custom AI systems \u2014 agents, internal tools, decision-support, document-handling pipelines, whatever the work needs. We write the code. We integrate it. We test it adversarially. We hand it over with documentation a competent in-house team can maintain.",
+    },
+    {
+      id: "steward",
+      name: "Steward.",
+      body: "Ongoing partnership for clients who want us watching their AI systems over time. Quarterly reviews, incident response, retraining, regulatory adaptation, and the unsexy work of keeping production AI healthy.",
+    },
+  ],
+  footerLine:
+    "Most clients start with Strategy. A subset graduate to Build. A subset of those graduate to Steward.",
+} as const;
+
+export const HOW_WE_THINK = {
+  heading: "How we think about this work",
+  opening: [
+    "Business innovation should be backed by research and fundamentals. You have to understand the fundamentals to understand the risks and the rewards. Most teams adopting AI today are moving fast on tools they don\u2019t fully understand \u2014 and that\u2019s the gap RAIN is built to close.",
+    "The depth that catches the risks is the same depth that captures the rewards. Reading the research isn\u2019t friction on innovation \u2014 it\u2019s what makes innovation real.",
+  ],
+  values: [
+    {
+      id: "responsibly-powerful",
+      name: "Responsibly powerful",
+      body: "We don\u2019t sell caution. We sell outcomes \u2014 real ones \u2014 delivered by AI systems that are full-strength: capable, autonomous where it makes sense, integrated deeply into your operations. We\u2019re also honest: models hallucinate, agents hit cases their training didn\u2019t prepare them for, tools fail in ways that surprise their builders. We don\u2019t promise AI that doesn\u2019t make mistakes. We promise the discipline that catches the mistakes the moment they happen, contains them, and surfaces them \u2014 so the system fails gracefully, not catastrophically.",
+    },
+    {
+      id: "transparency",
+      name: "Transparency",
+      body: "We\u2019re open about what we\u2019re building, how it works, and what it can and can\u2019t do. No black-box demos. No mystified architecture diagrams. Our clients understand what they\u2019re getting \u2014 and so do their boards, their auditors, and their customers.",
+    },
+    {
+      id: "data-security",
+      name: "Data security",
+      body: "What goes into your models, and what comes out, is treated like the sensitive material it is. Least privilege. Audit trails. Clear ownership. We name the risks of training-data leakage, prompt injection, and model exfiltration explicitly, and we engineer against them.",
+    },
+    {
+      id: "research-grounded",
+      name: "Research-grounded judgment",
+      body: "The AI field moves fast and most of what\u2019s in trade press is wrong. We read the actual papers \u2014 alignment, interpretability, agent design, security, safety \u2014 and our recommendations are grounded in them. The reading list on this site isn\u2019t decoration; it\u2019s how we work.",
+    },
+  ],
+} as const;
+
+export const COAGENT_PREVIEW = {
+  heading: "CoAgent \u2014 what it looks like when we build",
+  paragraph1:
+    "CoAgent is a local-first autonomous AI agent we designed and built end-to-end. It runs entirely on the user\u2019s own machine, integrates with their tools through open standards (MCP), keeps data local, and queues high-stakes decisions for human approval. We built it to demonstrate every value on this page in working code: powerful (autonomous, multi-tool), responsible (human-in-the-loop where it matters), transparent (architecture and memory readable to anyone who looks), and secure by design (your data never leaves your machine).",
+  paragraph2:
+    "It\u2019s currently deployed in real estate. The architecture is general.",
+  ctaLabel: "Read the full case study \u2192",
+  ctaHref: "/work/coagent",
+} as const;
+
+export const READING_PREVIEW = {
+  heading: "What we read",
+  paragraph1:
+    "The recommendations we make come from somewhere. Below is a small sample of the papers and books our practice is built on. The full list lives at our reading page, updated regularly.",
+  tagline: "We don\u2019t make this up.",
+  ctaLabel: "Browse the full list \u2192",
+  ctaHref: "/reading",
+  // PLACEHOLDER \u2014 founder to confirm reading list before these are replaced with real entries
+  papers: [
+    { id: "p1", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
+    { id: "p2", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
+    { id: "p3", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
+    { id: "p4", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
+    { id: "p5", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
+    { id: "p6", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
+    { id: "p7", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
+    { id: "p8", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
+  ],
+} as const;
+
+export const STRUCTURE = {
+  heading: "How we\u2019re structured",
+  paragraphs: [
+    "RAIN is a Public Benefit Corporation. The charter names a specific public benefit purpose \u2014 advancing the responsible development and deployment of AI \u2014 and a fixed percentage of net consulting revenue is committed in writing to independent AI safety and alignment research. Mission lock isn\u2019t a marketing line; it\u2019s part of the legal entity.",
+    "What you get when you hire us is a partner whose incentives can\u2019t quietly drift: do the work well, tell the truth, and contribute, transparently, to the safety research the field still needs.",
+  ],
+  ctaLabel: "More on how we\u2019re structured \u2192",
+  ctaHref: "/about",
+} as const;
+
+export const CONTACT_CTA = {
+  heading: "Working on something serious?",
+  body: "Tell us about it. We read every message ourselves and reply within two business days.",
+  ctaLabel: "Start a conversation \u2192",
+  ctaHref: "/contact",
+} as const;
+
+// Legacy exports preserved for components not yet migrated (coagent page, about page, contact page)
 
 export const COAGENT = {
-  eyebrow: 'Selected work',
-  headline: 'CoAgent',
-  body: 'CoAgent is a multi-agent platform built for real estate operations teams. It handles lead qualification, property analysis, and client communication across a high-volume workflow — the kind of work that is repetitive enough to automate but variable enough to break rigid scripts. Built by RAIN with the same safety deliverables that ship with every engagement: red-team report, guardrails spec, monitoring spec.',
+  eyebrow: "Selected work",
+  headline: "CoAgent",
+  body: "CoAgent is a multi-agent platform built for real estate operations teams. It handles lead qualification, property analysis, and client communication across a high-volume workflow \u2014 the kind of work that is repetitive enough to automate but variable enough to break rigid scripts. Built by RAIN with the same safety deliverables that ship with every engagement: red-team report, guardrails spec, monitoring spec.",
   metrics: [
-    { label: 'Agents deployed', value: 'X+' },
-    { label: 'Tasks automated weekly', value: 'X,XXX+' },
+    { label: "Agents deployed", value: "X+" },
+    { label: "Tasks automated weekly", value: "X,XXX+" },
   ],
-  ctaLabel: 'Read the case study',
-  ctaHref: '/work/coagent',
+  ctaLabel: "Read the case study",
+  ctaHref: "/work/coagent",
 } as const;
 
 export const SELECTED_WORK: readonly {
@@ -70,67 +132,60 @@ export const SELECTED_WORK: readonly {
   name: string;
   blurb: string;
   href: string;
-  status: 'live' | 'in-progress';
+  status: "live" | "in-progress";
 }[] = [
   {
-    id: 'coagent',
-    name: 'CoAgent',
-    blurb: 'Multi-agent platform for real estate operations. Automates lead qualification, property analysis, and client communication.',
-    href: '/work/coagent',
-    status: 'live',
+    id: "coagent",
+    name: "CoAgent",
+    blurb: "Multi-agent platform for real estate operations. Automates lead qualification, property analysis, and client communication.",
+    href: "/work/coagent",
+    status: "live",
   },
 ] as const;
 
 export const ABOUT = {
-  heading: 'About RAIN',
+  heading: "About RAIN",
   paragraphs: [
-    'RAIN is a studio that builds AI agents and ships them to production. The work is technical and direct — no discovery theater, no month-long strategy phases before a line of code is written. Clients come with real problems, and RAIN builds the thing that solves them.',
-    'The studio keeps its project load small on purpose. Every engagement gets close attention, defined scope, and an honest answer about what AI can and cannot do for a given problem. Speculative builds, slide-only deliverables, and projects where "AI" is mostly a rebrand of existing software get declined.',
-    'Safety engineering is not a checkbox at the end of a build — it is part of the build. Every agent that ships includes tested refusal patterns, spending caps, audit logging, and a monitoring spec. That is what makes the handoff real: the client gets something they can operate, explain, and trust.',
+    "RAIN is a studio that builds AI agents and ships them to production. The work is technical and direct \u2014 no discovery theater, no month-long strategy phases before a line of code is written. Clients come with real problems, and RAIN builds the thing that solves them.",
+    "The studio keeps its project load small on purpose. Every engagement gets close attention, defined scope, and an honest answer about what AI can and cannot do for a given problem. Speculative builds, slide-only deliverables, and projects where \u201cAI\u201d is mostly a rebrand of existing software get declined.",
+    "Safety engineering is not a checkbox at the end of a build \u2014 it is part of the build. Every agent that ships includes tested refusal patterns, spending caps, audit logging, and a monitoring spec. That is what makes the handoff real: the client gets something they can operate, explain, and trust.",
   ],
-  // Legacy single-body field kept for any components not yet migrated to paragraphs[]
-  body: 'A small studio that builds AI agents and ships them to production. RAIN takes on a limited number of engagements at a time — no sprawling teams, no handoffs to juniors. Speculative builds, slide-only deliverables, and vanity AI projects get declined. Work runs transparently: scope is defined upfront, safety is standard, and the handoff is real.',
+  body: "A small studio that builds AI agents and ships them to production. RAIN takes on a limited number of engagements at a time \u2014 no sprawling teams, no handoffs to juniors. Speculative builds, slide-only deliverables, and vanity AI projects get declined. Work runs transparently: scope is defined upfront, safety is standard, and the handoff is real.",
 } as const;
 
-// IMAGERY — central registry of image references.
+// IMAGERY \u2014 central registry of image references.
 // All images sourced from Unsplash (free commercial license, no attribution required).
 export const IMAGERY = {
   hero: {
-    src: 'https://images.unsplash.com/photo-1765370847579-70d5d83401d2?w=1920&q=80',
-    alt: 'A square of warm light cast on a textured plaster wall',
-    credit: 'Asse Slotendijk / Unsplash',
+    src: "https://images.unsplash.com/photo-1765370847579-70d5d83401d2?w=1920&q=80",
+    alt: "A square of warm light cast on a textured plaster wall",
+    credit: "Asse Slotendijk / Unsplash",
   },
   about: {
-    src: 'https://images.unsplash.com/photo-1742046335792-060080d72460?w=1920&q=80',
-    alt: 'A dark office workspace lit by warm amber desk lamp and soft ambient light',
-    credit: 'okeykat / Unsplash',
+    src: "https://images.unsplash.com/photo-1742046335792-060080d72460?w=1920&q=80",
+    alt: "A dark office workspace lit by warm amber desk lamp and soft ambient light",
+    credit: "okeykat / Unsplash",
   },
   howRainWorks: {
-    src: 'https://images.unsplash.com/photo-1542621334-a254cf47733d?w=1920&q=80',
-    alt: 'Brown pencil resting on white architectural floor plan paper',
-    credit: 'Sven Mieke / Unsplash',
+    src: "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=1920&q=80",
+    alt: "Brown pencil resting on white architectural floor plan paper",
+    credit: "Sven Mieke / Unsplash",
   },
   selectedWorkCoAgent: {
-    src: '',
-    alt: 'CoAgent platform interface showing a multi-agent workflow for real estate operations',
-    credit: '',
+    src: "",
+    alt: "CoAgent platform interface showing a multi-agent workflow for real estate operations",
+    credit: "",
   },
-} as const;
-
-export const CONTACT_CTA = {
-  heading: 'Have a problem that needs an agent, not a deck?',
-  ctaLabel: 'Book a call',
-  ctaHref: '/contact',
 } as const;
 
 export const CONTACT_PAGE = {
-  heading: 'Get in touch',
-  body: 'Describe what you are building and where AI fits. If RAIN can help, the answer will be straightforward. If not, that will be clear too.',
+  heading: "Get in touch",
+  body: "Describe what you are building and where AI fits. If RAIN can help, the answer will be straightforward. If not, that will be clear too.",
   formLabels: {
-    name: 'Name',
-    email: 'Email',
-    message: 'What are you working on?',
-    submit: 'Send',
-    success: 'Sent. Expect a reply within 24 hours.',
+    name: "Name",
+    email: "Email",
+    message: "What are you working on?",
+    submit: "Send",
+    success: "Sent. Expect a reply within 24 hours.",
   },
 } as const;
