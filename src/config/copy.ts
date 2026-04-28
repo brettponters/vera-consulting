@@ -171,6 +171,29 @@ export const IMAGERY = {
   },
 } as const;
 
+export const METHODOLOGY = {
+  sectionTitle: 'How RAIN works.',
+  sectionSubtitle: 'Every engagement runs the same way — tight scope, honest assessment, production handoff.',
+  items: [
+    {
+      title: 'Define the problem',
+      description: 'Before any code is written, RAIN maps the problem precisely: what the agent needs to do, where the boundaries are, and what success looks like. Vague briefs get sharpened. Misaligned expectations get surfaced early.',
+    },
+    {
+      title: 'Build to spec',
+      description: 'Scope is locked before work starts. The build runs in six weeks — no drift, no scope creep, no shifting requirements mid-engagement. What was agreed on is what ships.',
+    },
+    {
+      title: 'Red-team before launch',
+      description: 'Every agent is adversarially tested before it goes live. Prompt injection, edge-case failures, off-label inputs, graceful degradation paths — all documented with severity ratings.',
+    },
+    {
+      title: 'Hand off something that runs',
+      description: 'The engagement ends with a production-ready agent, a monitoring spec, a guardrails spec, and documentation the client\'s team can actually use. Not a prototype. Not a proof of concept.',
+    },
+  ],
+} as const;
+
 export const CONTACT_CTA = {
   heading: 'Have a problem that needs an agent, not a deck?',
   ctaLabel: 'Book a call',
