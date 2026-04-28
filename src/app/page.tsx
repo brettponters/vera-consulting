@@ -1,6 +1,7 @@
 import { Hero } from '@/components/sections/Hero';
 import { AntiPosition } from '@/components/sections/AntiPosition';
 import { Engagements } from '@/components/sections/Engagements';
+import { CoAgentMarquee } from '@/components/sections/CoAgentMarquee';
 import { Methodology } from '@/components/sections/Methodology';
 import { About } from '@/components/sections/About';
 import { ContactCTA } from '@/components/sections/ContactCTA';
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Engagements />
 
       {/* Section 4: CoAgent marquee — builder-4 */}
+      <CoAgentMarquee />
 
       {/* Section 5: Methodology */}
       <Methodology />
