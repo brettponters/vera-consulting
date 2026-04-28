@@ -1,0 +1,28 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Container } from '@/components/layout/Container';
+import { ABOUT } from '@/config/copy';
+
+export function About() {
+  return (
+    <section className="py-24 bg-bg-base">
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="max-w-prose"
+        >
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-fg-base mb-6">
+            {ABOUT.heading}
+          </h2>
+          <p className="font-sans text-lg leading-relaxed text-fg-muted">
+            {ABOUT.body}
+          </p>
+        </motion.div>
+      </Container>
+    </section>
+  );
+}
