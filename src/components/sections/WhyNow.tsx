@@ -10,30 +10,35 @@ import {
 import { whyNow } from "@/content/why-now";
 import { palette } from "@/lib/theme";
 import { Container } from "@/components/ui/Container";
-import { DateTicker } from "./why-now/DateTicker";
-import { CalendarGrid } from "./why-now/CalendarGrid";
-import { ConnectingLine } from "./why-now/ConnectingLine";
-import { AnchorPanel } from "./why-now/AnchorPanel";
 
 /**
- * WhyNow — the motion-heavy showpiece section.
+ * WhyNow — cinematic scroll-driven editorial section.
  *
  * Architecture:
- * - A tall scroll container (~280vh) creates the pin space.
+ * - A tall scroll container (~300vh) creates the pin space.
  * - The inner panel is position:sticky, filling the viewport.
  * - useScroll tracks progress through the scroll container (0→1).
- * - Five motion layers animate against scroll progress:
- *   1. Background date ticker (slow y-translate)
- *   2. Quarterly grid (cell-by-cell stroke-dasharray reveal)
- *   3. Anchor dots (scale-in + single dampened settle)
- *   4. Connecting lines (pathLength draw-in → color fade)
- *   5. Copy panel (per-anchor fade-in)
- * - Final beat: terracotta wash breathes once at progress ~0.85
- * - Section unpins after third anchor lands; closing prose follows below.
+ * - Three "moments" are cross-faded into each other as scroll progresses.
+ *   Each moment is a full-viewport composition: large display type as
+ *   protagonist, small quarter label as metadata, one terracotta accent.
+ * - Moments transition: scale(1)→scale(0.94) + opacity 1→0 on the
+ *   outgoing moment; opacity 0→1 on the incoming. Ease-out only.
+ * - A hairline progress indicator runs along the bottom during the pin.
+ * - Closing prose fades in during the final phase, section unpins after.
  *
- * Mobile (≤640px): vertical timeline, no pin, same copy.
- * prefers-reduced-motion: section unpins; all reveals collapse to fade-in.
+ * prefers-reduced-motion: section unpins; collapses to static vertical list.
+ * Mobile (≤640px): drop pin entirely; clean vertical sequence.
  */
+
+// Scroll layout constants
+// Three moments each occupy ~28% of scroll progress; closing at ~88–100%.
+const MOMENTS = [
+  { start: 0.05, peak: 0.16, exit: 0.32 },
+  { start: 0.32, peak: 0.44, exit: 0.60 },
+  { start: 0.60, peak: 0.72, exit: 0.86 },
+];
+const CLOSING_START = 0.86;
+
 export default function WhyNow() {
   const shouldReduceMotion = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,354 +48,328 @@ export default function WhyNow() {
     offset: ["start start", "end end"],
   });
 
-  // Scroll thresholds for each anchor landing (within 0→0.85 of total progress)
-  const ANCHOR_THRESHOLDS = [0.2, 0.42, 0.64];
-  // When the terracotta final-beat pulse fires
-  const FINAL_BEAT = 0.82;
-
-  // Final-beat terracotta wash — breathes once, ~5% opacity
-  const washOpacity = useTransform(
-    scrollYProgress,
-    [FINAL_BEAT, FINAL_BEAT + 0.04, FINAL_BEAT + 0.1],
-    shouldReduceMotion ? [0, 0, 0] : [0, 0.05, 0]
-  );
-
   return (
     <section aria-label="Why the next 18 months matter">
-      {/* ── Mobile layout (≤ 640px): vertical timeline, no pin ── */}
+      {/* Mobile: static vertical list, no pin */}
       <div className="block sm:hidden">
-        <MobileWhyNow />
+        <StaticList />
       </div>
 
-      {/* ── Desktop layout (> 640px): scroll-pinned showpiece ── */}
+      {/* Desktop scroll-pinned showpiece */}
       <div
         ref={containerRef}
         className="hidden sm:block relative"
-        style={{
-          // ~280vh of scroll space. Reduced-motion collapses to natural height.
-          height: shouldReduceMotion ? "auto" : "280vh",
-        }}
+        style={{ height: shouldReduceMotion ? "auto" : "300vh" }}
       >
-        {/* Sticky panel — fills the viewport while scrolling through container */}
         <div
           className={
             shouldReduceMotion
               ? "relative py-24"
               : "sticky top-0 h-screen overflow-hidden"
           }
+          style={{ backgroundColor: palette.bg }}
         >
-          {/* Layer 1 — background date ticker */}
-          <DateTicker
-            progress={scrollYProgress}
-            reducedMotion={shouldReduceMotion ?? false}
-          />
+          {/* H2 — fixed position at top, never moves */}
+          <div className="absolute top-0 left-0 right-0 z-20 pt-14 pb-0 pointer-events-none">
+            <Container size="wide">
+              <h2
+                className="font-serif font-normal text-[clamp(1.1rem,2vw,1.5rem)] leading-tight max-w-[520px]"
+                style={{ color: palette.muted }}
+              >
+                {whyNow.h2}
+              </h2>
+            </Container>
+          </div>
 
-          {/* Final-beat terracotta wash */}
-          <motion.div
-            aria-hidden="true"
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundColor: palette.accent,
-              opacity: washOpacity,
-            }}
-          />
-
-          <Container size="wide" className="relative z-10 h-full flex flex-col justify-center py-16">
-            {/* H2 — the still center. Never moves. */}
-            <h2
-              className="font-serif font-normal text-[clamp(1.5rem,3.5vw,2.5rem)] leading-tight max-w-[600px] mb-12"
-              style={{ color: palette.heading }}
-            >
-              {whyNow.h2}
-            </h2>
-
-            {/* Main content: grid left, copy panel right */}
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
-              {/* Calendar visual — layers 2, 3, 4 */}
-              <div className="relative flex-1 min-w-0">
-                {/* Layer 2 — quarterly grid */}
-                <CalendarGrid
-                  progress={scrollYProgress}
-                  reducedMotion={shouldReduceMotion ?? false}
-                />
-
-                {/* Layers 3 + 4 — anchors + connecting lines, overlaid on grid */}
-                <AnchorOverlay
-                  progress={scrollYProgress}
-                  thresholds={ANCHOR_THRESHOLDS}
-                  reducedMotion={shouldReduceMotion ?? false}
-                />
-              </div>
-
-              {/* Layer 5 — copy panel */}
-              <div className="w-full lg:w-[340px] xl:w-[380px] flex-shrink-0">
-                <AnchorPanel
-                  anchors={whyNow.anchors}
-                  progress={scrollYProgress}
-                  thresholds={ANCHOR_THRESHOLDS}
-                  reducedMotion={shouldReduceMotion ?? false}
-                />
-              </div>
+          {/* Three cinematic moments */}
+          {shouldReduceMotion ? (
+            <div className="relative z-10 flex flex-col gap-24 py-32 pt-40">
+              {whyNow.anchors.map((anchor, i) => (
+                <Container key={i} size="wide">
+                  <MomentContent anchor={anchor} index={i} static />
+                </Container>
+              ))}
             </div>
-          </Container>
+          ) : (
+            <>
+              {whyNow.anchors.map((anchor, i) => (
+                <ScrollMoment
+                  key={i}
+                  anchor={anchor}
+                  index={i}
+                  progress={scrollYProgress}
+                  moment={MOMENTS[i]}
+                />
+              ))}
+            </>
+          )}
+
+          {/* Closing prose — fades in during final phase */}
+          {!shouldReduceMotion && (
+            <ScrollClosing progress={scrollYProgress} />
+          )}
+
+          {/* Hairline progress bar along bottom edge */}
+          {!shouldReduceMotion && (
+            <ProgressBar progress={scrollYProgress} />
+          )}
         </div>
 
-        {/* Closing prose — lives below the sticky panel, appears after unpin */}
-        {!shouldReduceMotion && (
-          <ClosingProse />
+        {/* Reduced-motion closing prose below the static list */}
+        {shouldReduceMotion && (
+          <div className="py-16">
+            <Container size="prose">
+              <ClosingProseText />
+            </Container>
+          </div>
         )}
       </div>
-
-      {/* Closing prose for reduced-motion: inline */}
-      {shouldReduceMotion && (
-        <div className="hidden sm:block">
-          <ClosingProse />
-        </div>
-      )}
     </section>
   );
 }
 
-// ─── Anchor overlay (dots + lines) ────────────────────────────────────────────
+// ─── ScrollMoment ─────────────────────────────────────────────────────────────
 
-interface AnchorOverlayProps {
+interface MomentData {
+  quarter: string;
+  decisionNow: string;
+  consequenceBy2027: string;
+}
+
+interface ScrollMomentProps {
+  anchor: MomentData;
+  index: number;
   progress: ReturnType<typeof useScroll>["scrollYProgress"];
-  thresholds: number[];
-  reducedMotion: boolean;
+  moment: { start: number; peak: number; exit: number };
+}
+
+function ScrollMoment({ anchor, index, progress, moment }: ScrollMomentProps) {
+  const { start, peak, exit } = moment;
+
+  // Opacity: fade in from start→peak, hold through, fade out at exit
+  const opacity = useTransform(
+    progress,
+    [start, peak, exit - 0.06, exit],
+    [0, 1, 1, 0]
+  );
+
+  // Scale: starts slightly small, rises to 1 at peak, gently compresses on exit
+  const scale = useTransform(
+    progress,
+    [start, peak, exit - 0.06, exit],
+    [0.97, 1, 1, 0.95]
+  );
+
+  // Y lift: moment rises up very slightly as it exits (5vh)
+  const y = useTransform(
+    progress,
+    [start, peak, exit - 0.06, exit],
+    ["12px", "0px", "0px", "-24px"]
+  );
+
+  return (
+    <motion.div
+      aria-hidden={index > 0 ? "true" : undefined}
+      className="absolute inset-0 z-10 flex items-center"
+      style={{ opacity, scale, y }}
+      transition={{ ease: "easeOut" }}
+    >
+      <Container size="wide">
+        <MomentContent anchor={anchor} index={index} />
+      </Container>
+    </motion.div>
+  );
+}
+
+// ─── MomentContent ────────────────────────────────────────────────────────────
+
+interface MomentContentProps {
+  anchor: MomentData;
+  index: number;
+  static?: boolean;
 }
 
 /**
- * Positioned overlay on the calendar grid.
- * Renders anchor dots and connecting lines via SVG.
+ * The typographic composition for one risk moment.
  *
- * Grid geometry: 4 columns (Q1–Q4) × 2 rows (2026, 2027).
- * Anchors land at: Q2 2026, Q3 2026, Q4 2026 (col 1, 2, 3 of row 0).
- * Lines connect from decision quarter to a point in 2027 row.
+ * Hierarchy (top → bottom):
+ *   - Quarter label: tiny monospace, muted. Terracotta accent only on Q2 (index 0).
+ *   - Decision line: body-weight sans, medium size — the "now" framing
+ *   - Consequence: large Fraunces display — the weight, the protagonist
+ *
+ * The consequence is intentionally much larger. The point is the consequence,
+ * not the decision. Reading order is decision → consequence.
  */
-function AnchorOverlay({ progress, thresholds, reducedMotion }: AnchorOverlayProps) {
-  // Dot positions as % of SVG viewport (100 wide × 50 tall for 2 rows)
-  // Columns at 12.5, 37.5, 62.5, 87.5 (centers of 4 equal columns)
-  // Row 0 (2026) y=25%, row 1 (2027) y=75%
-  const dotPositions = [
-    { cx: 37.5, cy: 25 }, // Q2 2026
-    { cx: 62.5, cy: 25 }, // Q3 2026
-    { cx: 87.5, cy: 25 }, // Q4 2026
-  ];
-
-  // Each connecting line: from anchor quarter → same quarter in 2027
-  const linePaths = dotPositions.map(({ cx, cy }) =>
-    `M ${cx} ${cy} L ${cx} 75`
-  );
+function MomentContent({ anchor, index }: MomentContentProps) {
+  // Terracotta is precious — used only on the quarter label, only on the first moment
+  const quarterColor = index === 0 ? palette.accent : palette.muted;
 
   return (
-    <svg
-      viewBox="0 0 100 50"
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      aria-hidden="true"
-      preserveAspectRatio="none"
-    >
-      {/* Connecting lines */}
-      {linePaths.map((d, i) => (
-        <ConnectingLine
-          key={i}
-          d={d}
-          progress={progress}
-          drawStart={thresholds[i] + 0.02}
-          drawEnd={thresholds[i] + 0.1}
-          fadeStart={thresholds[i] + 0.1}
-          reducedMotion={reducedMotion}
-        />
-      ))}
+    <div className="flex flex-col gap-6 max-w-[800px]">
+      {/* Quarter — metadata, not protagonist */}
+      <span
+        className="font-mono text-xs tracking-[0.2em] uppercase"
+        style={{ color: quarterColor }}
+      >
+        {anchor.quarter}
+      </span>
 
-      {/* Anchor dots */}
-      {dotPositions.map(({ cx, cy }, i) => (
-        <AnchorDotSvg
-          key={i}
-          cx={cx}
-          cy={cy}
-          progress={progress}
-          threshold={thresholds[i]}
-          reducedMotion={reducedMotion}
-        />
-      ))}
-    </svg>
-  );
-}
+      {/* Decision — body weight, the cause */}
+      <p
+        className="font-sans text-[clamp(1rem,1.5vw,1.25rem)] leading-relaxed max-w-[520px]"
+        style={{ color: palette.body }}
+      >
+        {anchor.decisionNow}
+      </p>
 
-// SVG-native anchor dot (avoids HTML-in-SVG foreignObject complexity)
-interface AnchorDotSvgProps {
-  cx: number;
-  cy: number;
-  progress: ReturnType<typeof useScroll>["scrollYProgress"];
-  threshold: number;
-  reducedMotion: boolean;
-}
-
-function AnchorDotSvg({ cx, cy, progress, threshold, reducedMotion }: AnchorDotSvgProps) {
-  const scale = useTransform(
-    progress,
-    [threshold - 0.02, threshold + 0.01],
-    reducedMotion ? [1, 1] : [0, 1]
-  );
-
-  const opacity = useTransform(
-    progress,
-    [threshold - 0.02, threshold + 0.02],
-    reducedMotion ? [1, 1] : [0, 1]
-  );
-
-  return (
-    <motion.circle
-      cx={cx}
-      cy={cy}
-      r="2.2"
-      fill={palette.accent}
-      style={{ scale, opacity }}
-      // Single dampened settle — the only spring in the section
-      transition={
-        reducedMotion
-          ? { duration: 0 }
-          : {
-              type: "spring",
-              stiffness: 320,
-              damping: 18,
-              mass: 0.5,
-              duration: 0.15,
-            }
-      }
-    />
-  );
-}
-
-// ─── Closing prose ─────────────────────────────────────────────────────────────
-
-function ClosingProse() {
-  return (
-    <div
-      className="py-20"
-      style={{ backgroundColor: `var(--color-bg)` }}
-    >
-      <Container size="prose">
-        <div
-          className="border-t pt-12 flex flex-col gap-6"
-          style={{ borderColor: palette.hairline }}
-        >
-          {whyNow.closingProse.map((paragraph, i) => (
-            <p
-              key={i}
-              className="font-sans text-base leading-relaxed"
-              style={{
-                color: i === 0 ? palette.body : palette.muted,
-              }}
-            >
-              {paragraph}
-            </p>
-          ))}
-        </div>
-      </Container>
+      {/* Consequence — display weight, the protagonist */}
+      <p
+        className="font-serif font-normal text-[clamp(2rem,5.5vw,4.5rem)] leading-[1.1] tracking-[-0.01em]"
+        style={{ color: palette.heading }}
+      >
+        {anchor.consequenceBy2027}
+      </p>
     </div>
   );
 }
 
-// ─── Mobile layout ─────────────────────────────────────────────────────────────
+// ─── ScrollClosing ─────────────────────────────────────────────────────────────
+
+interface ScrollClosingProps {
+  progress: ReturnType<typeof useScroll>["scrollYProgress"];
+}
+
+function ScrollClosing({ progress }: ScrollClosingProps) {
+  const opacity = useTransform(
+    progress,
+    [CLOSING_START, CLOSING_START + 0.06, 0.97],
+    [0, 1, 1]
+  );
+
+  const y = useTransform(
+    progress,
+    [CLOSING_START, CLOSING_START + 0.08],
+    ["16px", "0px"]
+  );
+
+  return (
+    <motion.div
+      className="absolute inset-0 z-10 flex items-center"
+      style={{ opacity, y }}
+      transition={{ ease: "easeOut" }}
+      aria-hidden="true"
+    >
+      <Container size="prose">
+        <ClosingProseText />
+      </Container>
+    </motion.div>
+  );
+}
+
+// ─── ClosingProseText ─────────────────────────────────────────────────────────
+
+function ClosingProseText() {
+  return (
+    <div
+      className="flex flex-col gap-6 border-t pt-10"
+      style={{ borderColor: palette.hairline }}
+    >
+      {whyNow.closingProse.map((paragraph, i) => (
+        <p
+          key={i}
+          className="font-sans text-base leading-relaxed"
+          style={{ color: i === 0 ? palette.body : palette.muted }}
+        >
+          {paragraph}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+// ─── ProgressBar ─────────────────────────────────────────────────────────────
+
+interface ProgressBarProps {
+  progress: ReturnType<typeof useScroll>["scrollYProgress"];
+}
+
+function ProgressBar({ progress }: ProgressBarProps) {
+  // Only show during the pinned moments, before closing prose
+  const opacity = useTransform(
+    progress,
+    [0, 0.04, CLOSING_START - 0.1, CLOSING_START],
+    [0, 0.5, 0.5, 0]
+  );
+
+  const scaleX = useTransform(progress, [0, CLOSING_START], [0, 1]);
+
+  return (
+    <motion.div
+      aria-hidden="true"
+      className="absolute bottom-0 left-0 right-0 z-30 h-px origin-left"
+      style={{
+        backgroundColor: palette.hairline,
+        opacity,
+        scaleX,
+      }}
+    />
+  );
+}
+
+// ─── StaticList (mobile + reduced-motion) ────────────────────────────────────
 
 /**
- * Mobile vertical timeline — same three anchor pairs, same copy.
- * No pin, minimal motion. Clean reading experience on small screens.
+ * Clean vertical reading layout — no motion, no pin.
+ * Used for mobile and as the prefers-reduced-motion fallback.
  */
-function MobileWhyNow() {
+function StaticList() {
   return (
-    <div className="py-16" style={{ backgroundColor: `var(--color-bg)` }}>
+    <div className="py-16" style={{ backgroundColor: palette.bg }}>
       <Container size="prose">
         {/* H2 */}
         <h2
-          className="font-serif font-normal text-[1.75rem] leading-tight mb-10"
-          style={{ color: palette.heading }}
+          className="font-serif font-normal text-[1.5rem] leading-tight mb-12"
+          style={{ color: palette.muted }}
         >
           {whyNow.h2}
         </h2>
 
-        {/* Vertical timeline */}
-        <div className="relative flex flex-col gap-0">
-          {/* Timeline spine */}
-          <div
-            className="absolute left-[5px] top-2 bottom-2 w-px"
-            style={{ backgroundColor: palette.hairline }}
-            aria-hidden="true"
-          />
-
+        {/* Three risks, stacked */}
+        <div className="flex flex-col gap-14">
           {whyNow.anchors.map((anchor, i) => (
-            <div key={i} className="relative pl-8 pb-10 last:pb-0">
-              {/* Timeline node */}
-              <div
-                className="absolute left-0 top-1 w-[11px] h-[11px] rounded-full border-2"
-                style={{
-                  backgroundColor: palette.bg,
-                  borderColor: palette.accent,
-                }}
-                aria-hidden="true"
-              />
-
-              {/* Quarter label */}
+            <div key={i} className="flex flex-col gap-4">
               <span
-                className="font-mono text-xs tracking-widest uppercase block mb-3"
-                style={{ color: palette.accent }}
+                className="font-mono text-xs tracking-[0.2em] uppercase"
+                style={{ color: i === 0 ? palette.accent : palette.muted }}
               >
                 {anchor.quarter}
               </span>
-
-              <div className="flex flex-col gap-3">
-                {/* Decision */}
-                <div>
-                  <span
-                    className="font-mono text-[0.6rem] tracking-wider uppercase block mb-1"
-                    style={{ color: palette.muted }}
-                  >
-                    Decision now
-                  </span>
-                  <p
-                    className="font-sans text-sm leading-snug"
-                    style={{ color: palette.heading }}
-                  >
-                    {anchor.decisionNow}
-                  </p>
-                </div>
-
-                {/* Consequence */}
-                <div
-                  className="pl-3 border-l"
-                  style={{ borderColor: palette.hairline }}
-                >
-                  <span
-                    className="font-mono text-[0.6rem] tracking-wider uppercase block mb-1"
-                    style={{ color: palette.muted }}
-                  >
-                    Consequence by 2027
-                  </span>
-                  <p
-                    className="font-sans text-sm leading-snug"
-                    style={{ color: palette.body }}
-                  >
-                    {anchor.consequenceBy2027}
-                  </p>
-                </div>
-              </div>
+              <p
+                className="font-sans text-sm leading-relaxed"
+                style={{ color: palette.body }}
+              >
+                {anchor.decisionNow}
+              </p>
+              <p
+                className="font-serif font-normal text-[1.5rem] leading-[1.15]"
+                style={{ color: palette.heading }}
+              >
+                {anchor.consequenceBy2027}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Closing prose */}
         <div
-          className="border-t mt-12 pt-10 flex flex-col gap-5"
+          className="mt-14 border-t pt-10 flex flex-col gap-5"
           style={{ borderColor: palette.hairline }}
         >
           {whyNow.closingProse.map((paragraph, i) => (
             <p
               key={i}
               className="font-sans text-sm leading-relaxed"
-              style={{
-                color: i === 0 ? palette.body : palette.muted,
-              }}
+              style={{ color: i === 0 ? palette.body : palette.muted }}
             >
               {paragraph}
             </p>
