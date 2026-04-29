@@ -1,60 +1,49 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Transition, type Variants } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
-import { Reveal } from '@/components/ui/Reveal';
 import { HOW_WE_THINK } from '@/config/copy';
 
-const paraVariant = {
-  hidden: { opacity: 0, y: 8 },
+const easeOut = [0.22, 1, 0.36, 1] as Transition['ease'];
+
+const fade: Variants = {
+  hidden: { opacity: 0, y: 12 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, delay: i * 0.08, ease: 'easeOut' as const },
+    transition: { duration: 0.55, delay: i * 0.08, ease: easeOut },
   }),
 };
 
 export function HowWeThink() {
   return (
-    <section className="py-24 bg-bg-subtle border-t border-black/[0.06]">
+    <section className="border-t border-black/[0.06] bg-bg-subtle py-24 md:py-32">
       <Container>
-        <div className="max-w-3xl mx-auto">
-          <Reveal>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-fg-base tracking-tight mb-10">
-              {HOW_WE_THINK.heading}
-            </h2>
-          </Reveal>
+        <div className="mx-auto max-w-4xl">
+          <motion.h2
+            className="mb-12 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-fg-base"
+            variants={fade}
+            custom={1}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-80px' }}
+          >
+            {HOW_WE_THINK.heading}
+          </motion.h2>
 
           {HOW_WE_THINK.opening.map((para, i) => (
             <motion.p
               key={i}
-              custom={i}
-              variants={paraVariant}
+              custom={i + 2}
+              variants={fade}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: '-40px' }}
-              className="font-sans text-base leading-[1.85] text-fg-base mb-5"
+              viewport={{ once: true, margin: '-60px' }}
+              className="mb-5 max-w-3xl font-sans text-[1.0625rem] leading-[1.85] text-fg-base"
             >
               {para}
             </motion.p>
           ))}
-
-          <div className="mt-10 space-y-8">
-            {HOW_WE_THINK.values.map((val, i) => (
-              <motion.p
-                key={val.id}
-                custom={i + HOW_WE_THINK.opening.length}
-                variants={paraVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-40px' }}
-                className="font-sans text-base leading-[1.85] text-fg-base"
-              >
-                <strong className="font-semibold text-fg-base">{val.name}.</strong>{' '}
-                {val.body}
-              </motion.p>
-            ))}
-          </div>
         </div>
       </Container>
     </section>

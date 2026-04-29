@@ -3,12 +3,38 @@
 
 export const HERO = {
   name: "RAIN",
-  paragraph1:
-    "Business innovation should be backed by research and fundamentals. You have to understand the fundamentals to understand the risks and the rewards. Most teams adopting AI today are moving fast on tools they don\u2019t fully understand \u2014 and that\u2019s the gap RAIN is built to close.",
-  paragraph2:
-    "We help companies put AI to work capably, honestly, and with the depth to know how it actually behaves. The thing we\u2019re offering is the feeling of being safe in our hands.",
-  ctaLabel: "Let\u2019s talk \u2192",
-  ctaHref: "/contact",
+  // The acronym, spelled out once. Each word animates in sequence on load.
+  acronym: [
+    { letter: "R", word: "Responsible" },
+    { letter: "A", word: "Artificial" },
+    { letter: "I", word: "Intelligence" },
+    { letter: "N", word: "Network" },
+  ],
+  // Display headline — concrete, loss-framed first sentence (was the Premise).
+  headlineLines: [
+    "The choices companies make about AI in the next eighteen months",
+    "will compound for the rest of the decade.",
+  ],
+  body:
+    "Most are being made under pressure, with information shaped by the people selling the technology, and without a clear read on how these systems fail in production.",
+  // Micro-commitment, not a meeting ask. The CoAgent case study earns trust before /contact does.
+  ctaLabel: "Read the CoAgent case study",
+  ctaHref: "/work/coagent",
+  // Slow marquee at the bottom edge of the hero. Plain, factual phrases.
+  marquee: [
+    "Research-grounded",
+    "Public Benefit Corporation",
+    "5% of net revenue \u2192 AI safety research",
+    "Built in the open",
+    "Reading the actual papers",
+    "Local-first by default",
+  ],
+} as const;
+
+export const PREMISE = {
+  paragraphs: [
+    "The choices companies make about AI in the next eighteen months will compound for the rest of the decade. Most are being made under pressure, with information shaped by the people selling the technology, and without a clear read on how these systems fail in production.",
+  ],
 } as const;
 
 export const ENGAGEMENTS = {
@@ -19,7 +45,7 @@ export const ENGAGEMENTS = {
     {
       id: "strategy",
       name: "Strategy.",
-      body: "A short, focused engagement. We come in, look at what you have, look at what you\u2019re being sold, and tell you what\u2019s real, what\u2019s risky, and what\u2019s worth doing. The output is a written assessment a non-technical executive can act on \u2014 and that often saves you from spending millions on the wrong thing.",
+      body: "A short, focused engagement that pressure-tests an AI decision against the actual research \u2014 agent design, alignment, security, operational risk. The deliverable is a written assessment an executive can act on without becoming an expert, and it often saves clients from spending millions on the wrong thing.",
     },
     {
       id: "build",
@@ -32,74 +58,89 @@ export const ENGAGEMENTS = {
       body: "Ongoing partnership for clients who want us watching their AI systems over time. Quarterly reviews, incident response, retraining, regulatory adaptation, and the unsexy work of keeping production AI healthy.",
     },
   ],
-  footerLine:
-    "Most clients start with Strategy. A subset graduate to Build. A subset of those graduate to Steward.",
 } as const;
 
 export const HOW_WE_THINK = {
   heading: "How we think about this work",
   opening: [
-    "Business innovation should be backed by research and fundamentals. You have to understand the fundamentals to understand the risks and the rewards. Most teams adopting AI today are moving fast on tools they don\u2019t fully understand \u2014 and that\u2019s the gap RAIN is built to close.",
+    "You have to understand the fundamentals to understand the risks and the rewards. Most teams adopting AI today are moving fast on tools they don\u2019t fully understand \u2014 and that\u2019s the gap RAIN is built to close.",
     "The depth that catches the risks is the same depth that captures the rewards. Reading the research isn\u2019t friction on innovation \u2014 it\u2019s what makes innovation real.",
   ],
-  values: [
+} as const;
+
+// Numbered, dated, public technical notes. Halo + unity + pratfall surface.
+// Reference patterns: Oxide RFDs, Fly.io blog. The artifact corpus is the move.
+export const FIELD_NOTES = {
+  heading: "Field Notes",
+  description:
+    "Short technical notes from the studio on questions worth thinking carefully about. Numbered, dated, public.",
+  notes: [
     {
-      id: "responsibly-powerful",
-      name: "Responsibly powerful",
-      body: "We don\u2019t sell caution. We sell outcomes \u2014 real ones \u2014 delivered by AI systems that are full-strength: capable, autonomous where it makes sense, integrated deeply into your operations. We\u2019re also honest: models hallucinate, agents hit cases their training didn\u2019t prepare them for, tools fail in ways that surprise their builders. We don\u2019t promise AI that doesn\u2019t make mistakes. We promise the discipline that catches the mistakes the moment they happen, contains them, and surfaces them \u2014 so the system fails gracefully, not catastrophically.",
-    },
-    {
-      id: "transparency",
-      name: "Transparency",
-      body: "We\u2019re open about what we\u2019re building, how it works, and what it can and can\u2019t do. No black-box demos. No mystified architecture diagrams. Our clients understand what they\u2019re getting \u2014 and so do their boards, their auditors, and their customers.",
-    },
-    {
-      id: "data-security",
-      name: "Data security",
-      body: "What goes into your models, and what comes out, is treated like the sensitive material it is. Least privilege. Audit trails. Clear ownership. We name the risks of training-data leakage, prompt injection, and model exfiltration explicitly, and we engineer against them.",
-    },
-    {
-      id: "research-grounded",
-      name: "Research-grounded judgment",
-      body: "The AI field moves fast and most of what\u2019s in trade press is wrong. We read the actual papers \u2014 alignment, interpretability, agent design, security, safety \u2014 and our recommendations are grounded in them. The reading list on this site isn\u2019t decoration; it\u2019s how we work.",
+      id: "rain-001",
+      number: "RAIN-001",
+      date: "April 2026",
+      title: "On where to draw the autonomy line",
+      lede: "Most agent failures aren\u2019t failures of intelligence \u2014 they\u2019re failures of classification. The line between what an agent runs on its own and what it queues for human review should be drawn at consequence, not complexity.",
+      href: "/work/coagent",
     },
   ],
+  ctaLabel: "All Field Notes \u2192",
+  ctaHref: "/notes",
+} as const;
+
+// Two-sided argument. Refutational messages out-persuade one-sided ones with sophisticated audiences
+// (Allen 1991 meta-analysis; O'Keefe 1999). Naming refusals earns disproportionate trust.
+export const WHAT_WE_DONT_DO = {
+  heading: "What we don\u2019t do",
+  items: [
+    "Roadmap decks. The deliverable is a written assessment with citations, not a slide carousel.",
+    "Engagements where the honest answer is don\u2019t. If the research says the work shouldn\u2019t happen, the engagement ends there.",
+    "Subcontracted technical work. The person you talk to is the person writing the code.",
+  ],
+} as const;
+
+export const FOOTER = {
+  colophon:
+    "RAIN is a Public Benefit Corporation. 5% of net consulting revenue is committed to independent AI safety research. This site has no analytics and no cookies. Set in Cabinet Grotesk and Satoshi.",
+  links: [
+    { label: "Work", href: "/work/coagent" },
+    { label: "Reading", href: "/reading" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ],
+  signature: "\u2014 Brett Ponters, founder",
 } as const;
 
 export const COAGENT_PREVIEW = {
   heading: "CoAgent \u2014 what it looks like when we build",
   paragraph1:
     "CoAgent is a local-first autonomous AI agent we designed and built end-to-end. It runs entirely on the user\u2019s own machine, integrates with their tools through open standards (MCP), keeps data local, and queues high-stakes decisions for human approval. We built it to demonstrate every value on this page in working code: powerful (autonomous, multi-tool), responsible (human-in-the-loop where it matters), transparent (architecture and memory readable to anyone who looks), and secure by design (your data never leaves your machine).",
-  paragraph2:
-    "It\u2019s currently deployed in real estate. The architecture is general.",
   ctaLabel: "Read the full case study \u2192",
   ctaHref: "/work/coagent",
 } as const;
 
 export const READING_PREVIEW = {
-  heading: "What we read",
+  heading: "Research Backed",
   paragraph1:
     "The recommendations we make come from somewhere. Below is a small sample of the papers and books our practice is built on. The full list lives at our reading page, updated regularly.",
-  tagline: "We don\u2019t make this up.",
   ctaLabel: "Browse the full list \u2192",
   ctaHref: "/reading",
-  // PLACEHOLDER \u2014 founder to confirm reading list before these are replaced with real entries
+  // Curated to land with business readers (productivity, governance, deployment) while keeping one technical anchor
   papers: [
-    { id: "p1", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
-    { id: "p2", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
-    { id: "p3", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
-    { id: "p4", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
-    { id: "p5", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
-    { id: "p6", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
-    { id: "p7", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
-    { id: "p8", title: "Paper title placeholder \u2014 founder to confirm reading list", authors: "Author(s) \u00b7 Year", href: "#" },
+    { id: "p1", title: "Generative AI at Work", authors: "Brynjolfsson, E. et al. \u00b7 2023", href: "https://arxiv.org/abs/2304.11771" },
+    { id: "p2", title: "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models", authors: "Eloundou, T. et al. \u00b7 2023", href: "https://arxiv.org/abs/2303.10130" },
+    { id: "p3", title: "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality", authors: "Dell\u2019Acqua, F. et al. \u00b7 2023", href: "https://www.hbs.edu/ris/Publication%20Files/24-013_d9b45b68-9e74-42d6-a1c6-c72fb70c7282.pdf" },
+    { id: "p4", title: "Artificial Intelligence Risk Management Framework (AI RMF 1.0)", authors: "NIST \u00b7 2023", href: "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" },
+    { id: "p5", title: "Frontier AI Regulation: Managing Emerging Risks to Public Safety", authors: "Anderljung, M. et al. \u00b7 2023", href: "https://arxiv.org/abs/2307.03718" },
+    { id: "p6", title: "Attention Is All You Need", authors: "Vaswani, A. et al. \u00b7 2017", href: "https://arxiv.org/abs/1706.03762" },
+    { id: "p7", title: "Artificial Intelligence Index Report 2025", authors: "Stanford HAI \u00b7 2025", href: "https://hai.stanford.edu/ai-index/2025-ai-index-report" },
   ],
 } as const;
 
 export const STRUCTURE = {
   heading: "How we\u2019re structured",
   paragraphs: [
-    "RAIN is a Public Benefit Corporation. The charter names a specific public benefit purpose \u2014 advancing the responsible development and deployment of AI \u2014 and a fixed percentage of net consulting revenue is committed in writing to independent AI safety and alignment research. Mission lock isn\u2019t a marketing line; it\u2019s part of the legal entity.",
+    "RAIN is a Public Benefit Corporation. The charter names a specific public benefit purpose \u2014 advancing the responsible development and deployment of AI \u2014 and a fixed percentage of net consulting revenue is committed in writing to independent AI safety and alignment research.",
     "What you get when you hire us is a partner whose incentives can\u2019t quietly drift: do the work well, tell the truth, and contribute, transparently, to the safety research the field still needs.",
   ],
   ctaLabel: "More on how we\u2019re structured \u2192",
@@ -125,7 +166,7 @@ export const ABOUT_PAGE = {
     eyebrow: "Structure",
     heading: "How RAIN is structured",
     paragraphs: [
-      "RAIN is incorporated as a Public Benefit Corporation (PBC) \u2014 a for-profit legal entity whose charter binds the company to a specific public benefit purpose alongside any pursuit of profit. The charter names that purpose explicitly: advancing the responsible development and deployment of AI systems through research-grounded consulting and contribution to independent AI safety and alignment research. Decisions of the company are required to balance profit with that purpose. The mission is part of the legal entity, not a marketing line.",
+      "RAIN is incorporated as a Public Benefit Corporation (PBC) \u2014 a for-profit legal entity whose charter binds the company to a specific public benefit purpose alongside any pursuit of profit. The charter names that purpose explicitly: advancing the responsible development and deployment of AI systems through research-grounded consulting and contribution to independent AI safety and alignment research. Decisions of the company are required to balance profit with that purpose.",
       "Mission lock is real. Removing or materially weakening the benefit purpose requires a two-thirds stockholder vote \u2014 which today means the founder, but binds any future investor or acquirer. The structure is solo-ownable and capable of taking commercial engagements at market rates. It is not a non-profit. Clients do not receive tax deductions for fees paid to RAIN; they are paying for consulting services. What they get, in addition to the work, is a partner whose incentives cannot quietly drift.",
       "Each year RAIN produces an annual benefit report covering how the public benefit purpose was advanced, how shareholder and benefit interests were balanced, the safety-research grant allocation for the year, and any failures against the commitments in the charter. That report is published on this site. It is the public record of what was actually done, not what was intended.",
     ],

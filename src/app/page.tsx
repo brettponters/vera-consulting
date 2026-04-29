@@ -1,34 +1,40 @@
 import { Hero } from '@/components/sections/Hero';
-import { Engagements } from '@/components/sections/Engagements';
-import { HowWeThink } from '@/components/sections/HowWeThink';
 import { SelectedWork } from '@/components/sections/SelectedWork';
+import { FieldNotes } from '@/components/sections/FieldNotes';
+import { Engagements } from '@/components/sections/Engagements';
+import { WhatWeDontDo } from '@/components/sections/WhatWeDontDo';
+import { HowWeThink } from '@/components/sections/HowWeThink';
 import { ReadingPreview } from '@/components/sections/ReadingPreview';
 import { Structure } from '@/components/sections/Structure';
-import { ContactCTA } from '@/components/sections/ContactCTA';
 
+// Section order follows the strategic memo's recommended journey:
+// recognition → proof → unity (artifact) → offer → honesty → belief → tribe → structure → signed close.
 export default function HomePage() {
   return (
     <main>
-      {/* §2.1 Hero */}
+      {/* Recognition + interruption — the loss-framed thesis */}
       <Hero />
 
-      {/* §2.2 What we do */}
-      <Engagements />
-
-      {/* §2.3 How we think about this work */}
-      <HowWeThink />
-
-      {/* §2.4 CoAgent preview */}
+      {/* The artifact, immediately — halo effect */}
       <SelectedWork />
 
-      {/* §2.5 What we read */}
+      {/* Field Notes — second proof artifact, the practice's voice */}
+      <FieldNotes />
+
+      {/* Offer */}
+      <Engagements />
+
+      {/* Two-sided argument — earns trust by naming refusals */}
+      <WhatWeDontDo />
+
+      {/* Belief / method */}
+      <HowWeThink />
+
+      {/* Tribe — the reading list */}
       <ReadingPreview />
 
-      {/* §2.6 How we're structured */}
+      {/* Structure — PBC stated as fact */}
       <Structure />
-
-      {/* §2.7 Contact CTA */}
-      <ContactCTA />
     </main>
   );
 }

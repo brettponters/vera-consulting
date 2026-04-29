@@ -1,91 +1,76 @@
 'use client';
 
-import Image from 'next/image';
-import { motion, type Variants, type Transition } from 'framer-motion';
+import { motion, type Transition, type Variants } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
-import { MagneticButton } from '@/components/ui/MagneticButton';
-import { DotGrid } from '@/components/ui/DotGrid';
-import { HERO, IMAGERY } from '@/config/copy';
+import { HERO } from '@/config/copy';
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 8 },
+const easeOut = [0.22, 1, 0.36, 1] as Transition['ease'];
+
+const fade: Variants = {
+  hidden: { opacity: 0, y: 12 },
   visible: (delay: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.22, 1, 0.36, 1] as Transition['ease'],
-      delay,
-    },
+    transition: { duration: 0.6, ease: easeOut, delay },
   }),
 };
 
 export function Hero() {
   return (
-    <section className="grain relative flex min-h-[92svh] items-center overflow-hidden bg-bg-base">
-      {/* Background atmosphere photo */}
-      {IMAGERY.hero.src && (
-        <Image
-          src={IMAGERY.hero.src}
-          alt={IMAGERY.hero.alt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-      )}
-      {/* Light overlay so copy reads over photo */}
-      {IMAGERY.hero.src && (
-        <div
-          className="absolute inset-0 z-[1]"
-          style={{
-            background:
-              'linear-gradient(to bottom, rgba(250,250,247,0.55) 0%, rgba(250,250,247,0.78) 60%, rgba(250,250,247,0.92) 100%)',
-          }}
-          aria-hidden="true"
-        />
-      )}
-      <DotGrid />
+    <section className="grain relative flex min-h-[90svh] items-center overflow-hidden bg-bg-base pt-20">
       <Container className="relative z-10 py-24 md:py-32">
-        <div className="max-w-3xl">
-          <motion.p
-            className="mb-6 font-display text-[clamp(0.75rem,1.5vw,0.875rem)] font-medium uppercase tracking-[0.2em] text-fg-muted"
-            variants={fadeUp}
-            custom={0}
-            initial="hidden"
-            animate="visible"
-          >
-            {HERO.name}
-          </motion.p>
-
-          <motion.p
-            className="font-sans text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.75] text-fg-base"
-            variants={fadeUp}
+        <div className="max-w-4xl">
+          {/* No eyebrow — the Header carries the brand on every page. The first text fixated
+              here should be the thesis, not the studio name. */}
+          {/* Headline */}
+          <motion.h1
+            className="font-display font-bold leading-[1.04] tracking-[-0.022em] text-[clamp(2.5rem,5.6vw,4.75rem)] text-fg-base"
+            variants={fade}
             custom={0.1}
             initial="hidden"
             animate="visible"
           >
-            {HERO.paragraph1}
-          </motion.p>
+            {HERO.headlineLines.join(' ')}
+          </motion.h1>
 
-          <motion.p
-            className="mt-5 font-sans text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.75] text-fg-base"
-            variants={fadeUp}
+          {/* Static accent underline */}
+          <motion.span
+            aria-hidden
+            className="mt-8 block h-[3px] w-20 bg-accent"
+            variants={fade}
             custom={0.2}
             initial="hidden"
             animate="visible"
-          >
-            {HERO.paragraph2}
-          </motion.p>
+          />
 
-          <motion.div
-            className="mt-10"
-            variants={fadeUp}
-            custom={0.35}
+          {/* Body */}
+          <motion.p
+            className="mt-8 max-w-2xl font-sans text-[clamp(1.125rem,1.7vw,1.25rem)] leading-[1.7] text-fg-base"
+            variants={fade}
+            custom={0.3}
             initial="hidden"
             animate="visible"
           >
-            <MagneticButton href={HERO.ctaHref}>{HERO.ctaLabel}</MagneticButton>
+            {HERO.body}
+          </motion.p>
+
+          {/* CTA */}
+          <motion.div
+            className="mt-12"
+            variants={fade}
+            custom={0.4}
+            initial="hidden"
+            animate="visible"
+          >
+            <a
+              href={HERO.ctaHref}
+              className="group inline-flex items-baseline gap-2 font-display text-base font-medium text-fg-base transition-colors duration-200 hover:text-accent"
+            >
+              <span className="border-b border-fg-base/40 pb-0.5 transition-colors duration-200 group-hover:border-accent">
+                {HERO.ctaLabel}
+              </span>
+              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+            </a>
           </motion.div>
         </div>
       </Container>

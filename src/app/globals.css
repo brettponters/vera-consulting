@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Colors */
-  --color-bg-base: #0c0b0a;
-  --color-bg-subtle: #11100e;
-  --color-bg-deep: #080706;
-  --color-bg-elevated: #15130f;
-  --color-fg-base: #efece6;
-  --color-fg-muted: #8a8680;
-  --color-accent: #e8693a;
+  /* Colors — light, warm, professional */
+  --color-bg-base: #fafaf7;
+  --color-bg-subtle: #f3f0e9;
+  --color-bg-deep: #ece7dc;
+  --color-bg-elevated: #ffffff;
+  --color-fg-base: #1a1815;
+  --color-fg-muted: #6b665e;
+  --color-accent: #c8552a;
 
   /* Fonts */
   --font-display: var(--font-cabinet), sans-serif;
@@ -16,8 +16,8 @@
 }
 
 body {
-  background-color: #0c0b0a;
-  color: #efece6;
+  background-color: #fafaf7;
+  color: #1a1815;
 }
 
 /* Subtle film grain for hero only — SVG feTurbulence noise, opacity ~0.03 */

@@ -1,41 +1,58 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Transition, type Variants } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
-import { Reveal } from '@/components/ui/Reveal';
 import { TextLink } from '@/components/ui/TextLink';
 import { STRUCTURE } from '@/config/copy';
 
+const easeOut = [0.22, 1, 0.36, 1] as Transition['ease'];
+
+const fade: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, delay: i * 0.08, ease: easeOut },
+  }),
+};
+
 export function Structure() {
   return (
-    <section className="py-24 bg-bg-base border-t border-black/[0.06]">
+    <section className="border-t border-black/[0.06] bg-bg-base py-24 md:py-32">
       <Container>
-        <div className="max-w-3xl mx-auto">
-          <Reveal>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-fg-base tracking-tight mb-8">
-              {STRUCTURE.heading}
-            </h2>
-          </Reveal>
+        <div className="mx-auto max-w-4xl">
+          <motion.h2
+            className="mb-12 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-fg-base"
+            variants={fade}
+            custom={1}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-80px' }}
+          >
+            {STRUCTURE.heading}
+          </motion.h2>
 
           {STRUCTURE.paragraphs.map((para, i) => (
             <motion.p
               key={i}
-              className="font-sans text-base leading-[1.85] text-fg-base mb-5"
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.45, delay: i * 0.1, ease: 'easeOut' }}
+              custom={i + 2}
+              variants={fade}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-60px' }}
+              className="mb-5 max-w-3xl font-sans text-[1.0625rem] leading-[1.85] text-fg-base"
             >
               {para}
             </motion.p>
           ))}
 
           <motion.div
-            className="mt-6"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            className="mt-10"
+            variants={fade}
+            custom={STRUCTURE.paragraphs.length + 2}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
           >
             <TextLink href={STRUCTURE.ctaHref} className="text-sm">
               {STRUCTURE.ctaLabel}
