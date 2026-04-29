@@ -1,69 +1,63 @@
-'use client';
+import Link from "next/link";
+import { Container } from "@/components/ui/Container";
 
-import Link from 'next/link';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Container } from '@/components/layout/Container';
-import { BRAND_NAME } from '@/config/brand';
-
-const NAV = [
-  { label: 'Work', href: '/work/coagent' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+const NAV_LINKS = [
+  { href: "/work", label: "Work" },
+  { href: "/reading", label: "Reading" },
+  { href: "/about", label: "About" },
 ];
 
+/**
+ * Site header.
+ *
+ * - RAIN wordmark (text-only, no acronym expansion anywhere)
+ * - Nav: Work · Reading · About
+ * - "Book a call" — always visible, terracotta underline treatment, not a button
+ * - Sticky; no shrink/morph on scroll
+ * - Bottom hairline in #E2D8C6
+ */
 export function Header() {
-  const { scrollY } = useScroll();
-  const bgOpacity = useTransform(scrollY, [0, 80], [0, 0.85]);
-  const borderOpacity = useTransform(scrollY, [0, 80], [0, 0.06]);
-
   return (
-    <motion.header
-      className="fixed inset-x-0 top-0 z-50 backdrop-blur-md"
-      style={{
-        backgroundColor: 'rgba(250, 250, 247, var(--header-bg, 0))',
-      }}
-    >
-      <motion.div
-        aria-hidden
-        className="absolute inset-0"
-        style={{
-          backgroundColor: '#fafaf7',
-          opacity: bgOpacity,
-        }}
-      />
-      <motion.div
-        aria-hidden
-        className="absolute inset-x-0 bottom-0 h-px bg-black"
-        style={{ opacity: borderOpacity }}
-      />
-      <Container className="relative">
-        <div className="flex h-16 items-center justify-between md:h-20">
-          {/* Brand */}
+    <header className="sticky top-0 z-50 bg-[var(--color-bg)]">
+      <Container size="wide">
+        <div className="flex h-14 items-center justify-between gap-8">
+          {/* Wordmark */}
           <Link
             href="/"
-            className="group inline-flex items-baseline gap-3 font-display tracking-tight text-fg-base transition-colors duration-200 hover:text-accent"
+            className="font-serif text-base font-normal tracking-wide text-[var(--color-heading)] no-underline"
+            aria-label="RAIN — home"
           >
-            <span className="text-base font-semibold md:text-lg">{BRAND_NAME}</span>
-            <span aria-hidden className="hidden h-3 w-px bg-fg-muted/30 sm:block" />
-            <span className="hidden text-xs uppercase tracking-[0.18em] text-fg-muted transition-colors duration-200 group-hover:text-fg-base sm:inline">
-              AI strategy consulting
-            </span>
+            RAIN
           </Link>
 
-          {/* Nav */}
-          <nav className="flex items-center gap-7 md:gap-10">
-            {NAV.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="font-display text-sm font-medium text-fg-muted transition-colors duration-200 hover:text-fg-base"
-              >
-                {item.label}
-              </Link>
-            ))}
+          {/* Primary nav */}
+          <nav aria-label="Primary navigation">
+            <ul className="flex items-center gap-7 list-none m-0 p-0">
+              {NAV_LINKS.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="font-sans text-sm text-[var(--color-muted)] no-underline transition-colors duration-150 hover:text-[var(--color-body)]"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </nav>
+
+          {/* Book a call — restrained accent link, never a filled button */}
+          <Link
+            href="/contact"
+            className="font-sans text-sm text-[var(--color-body)] underline underline-offset-4 decoration-[var(--color-accent)] decoration-[1.5px] transition-colors duration-150 hover:text-[var(--color-accent)]"
+          >
+            Book a call
+          </Link>
         </div>
       </Container>
-    </motion.header>
+
+      {/* Bottom hairline */}
+      <div className="border-b border-[var(--color-hairline)]" />
+    </header>
   );
 }

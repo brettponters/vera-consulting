@@ -1,40 +1,16 @@
-import { Hero } from '@/components/sections/Hero';
-import { SelectedWork } from '@/components/sections/SelectedWork';
-import { FieldNotes } from '@/components/sections/FieldNotes';
-import { Engagements } from '@/components/sections/Engagements';
-import { WhatWeDontDo } from '@/components/sections/WhatWeDontDo';
-import { HowWeThink } from '@/components/sections/HowWeThink';
-import { ReadingPreview } from '@/components/sections/ReadingPreview';
-import { Structure } from '@/components/sections/Structure';
+// Home page — section slot skeleton.
+// Each import below is owned by a section agent.
+// The integrator (task #5) owns final assembly and ordering.
+// Do not add section content here — edit the section component files directly.
 
-// Section order follows the strategic memo's recommended journey:
-// recognition → proof → unity (artifact) → offer → honesty → belief → tribe → structure → signed close.
-export default function HomePage() {
-  return (
-    <main>
-      {/* Recognition + interruption — the loss-framed thesis */}
-      <Hero />
+// import Hero from "@/components/sections/Hero";
+// import WhyNow from "@/components/sections/WhyNow";
+// import ThreeShapes from "@/components/sections/ThreeShapes";
+// import SelectedWork from "@/components/sections/SelectedWork";
+// import ResearchBacked from "@/components/sections/ResearchBacked";
+// import About from "@/components/sections/About";
+// import BookACall from "@/components/sections/BookACall";
 
-      {/* The artifact, immediately — halo effect */}
-      <SelectedWork />
-
-      {/* Field Notes — second proof artifact, the practice's voice */}
-      <FieldNotes />
-
-      {/* Offer */}
-      <Engagements />
-
-      {/* Two-sided argument — earns trust by naming refusals */}
-      <WhatWeDontDo />
-
-      {/* Belief / method */}
-      <HowWeThink />
-
-      {/* Tribe — the reading list */}
-      <ReadingPreview />
-
-      {/* Structure — PBC stated as fact */}
-      <Structure />
-    </main>
-  );
+export default function Home() {
+  return null;
 }

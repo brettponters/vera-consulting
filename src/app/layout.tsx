@@ -1,28 +1,25 @@
-import type { Metadata } from 'next';
-import { cabinetGrotesk, satoshi } from '@/app/fonts';
-import { BRAND_NAME, DESCRIPTION } from '@/config/brand';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import './globals.css';
+import type { Metadata } from "next";
+import { serif, sans } from "./fonts";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: BRAND_NAME,
-  description: DESCRIPTION,
+  title: "RAIN",
+  description:
+    "RAIN is a mission-locked AI consulting studio. We help regulated companies put AI to work — capably, honestly, and with the depth to know how it behaves.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="en"
-      className={`${cabinetGrotesk.variable} ${satoshi.variable}`}
-    >
-      <body className="bg-bg-base text-fg-base font-sans antialiased min-h-full">
+    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+      <body>
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,34 +1,77 @@
 @import "tailwindcss";
 
-@theme inline {
-  /* Colors — light, warm, professional */
-  --color-bg-base: #fafaf7;
-  --color-bg-subtle: #f3f0e9;
-  --color-bg-deep: #ece7dc;
-  --color-bg-elevated: #ffffff;
-  --color-fg-base: #1a1815;
-  --color-fg-muted: #6b665e;
-  --color-accent: #c8552a;
+/* ─── Palette ────────────────────────────────────────────────────────────── */
+/* Option A — Refined Cream / Off-Black / Muted Terracotta                   */
+/* These exact hex values are locked. Do not adjust without a design review. */
 
-  /* Fonts */
-  --font-display: var(--font-cabinet), sans-serif;
-  --font-sans: var(--font-satoshi), system-ui, sans-serif;
+@theme {
+  --color-bg:        #F5EDE0;
+  --color-surface:   #FAF6EC;
+  --color-body:      #1A1818;
+  --color-heading:   #131314;
+  --color-muted:     #6B6359;
+  --color-hairline:  #E2D8C6;
+  --color-accent:    #C97B3F;
+  --color-sage:      #6B8775;
+
+  /* Typography scale */
+  --font-serif:  var(--font-serif);
+  --font-sans:   var(--font-sans);
+}
+
+/* ─── CSS custom properties (for non-Tailwind contexts) ─────────────────── */
+
+:root {
+  --color-bg:       #F5EDE0;
+  --color-surface:  #FAF6EC;
+  --color-body:     #1A1818;
+  --color-heading:  #131314;
+  --color-muted:    #6B6359;
+  --color-hairline: #E2D8C6;
+  --color-accent:   #C97B3F;
+  --color-sage:     #6B8775;
+}
+
+/* ─── Base resets ────────────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background-color: #fafaf7;
-  color: #1a1815;
+  background-color: var(--color-bg);
+  color: var(--color-body);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.65;
+  font-size: 1rem;
 }
 
-/* Subtle film grain for hero only — SVG feTurbulence noise, opacity ~0.03 */
-.grain::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  opacity: 0.03;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+  color: var(--color-heading);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* Smooth focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

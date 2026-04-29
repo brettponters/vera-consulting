@@ -1,35 +1,20 @@
-import localFont from 'next/font/local';
+import { Fraunces, Inter_Tight } from "next/font/google";
 
-export const cabinetGrotesk = localFont({
-  src: [
-    {
-      path: '../../public/fonts/cabinet-grotesk-medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/cabinet-grotesk-bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-cabinet',
-  display: 'swap',
+// Fraunces — optical-size variable serif. The ink-trap details at display
+// sizes and the warm, humanist construction give headings the feel of a
+// Knopf hardcover spine. Italic is expressive without being decorative.
+export const serif = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+  axes: ["opsz", "SOFT", "WONK"],
 });
 
-export const satoshi = localFont({
-  src: [
-    {
-      path: '../../public/fonts/satoshi-regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/satoshi-medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-satoshi',
-  display: 'swap',
+// Inter Tight — the condensed sibling of Inter. More economical on the
+// page than plain Inter, with the discipline of a Swiss grotesque. Reads
+// as a precise, unhurried voice in body copy.
+export const sans = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
 });
