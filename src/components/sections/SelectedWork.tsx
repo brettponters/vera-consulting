@@ -1,74 +1,73 @@
-'use client';
+"use client";
 
-import { motion, type Transition, type Variants } from 'framer-motion';
-import { Container } from '@/components/layout/Container';
-import { TextLink } from '@/components/ui/TextLink';
-import CoAgentArchitectureCompact from '@/components/diagrams/CoAgentArchitectureCompact';
-import { COAGENT_PREVIEW } from '@/config/copy';
+import Link from "next/link";
+import { Container } from "@/components/ui/Container";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Hairline } from "@/components/ui/Hairline";
+import { Reveal } from "@/components/ui/Reveal";
+import { selectedWork } from "@/content/selected-work";
 
-const easeOut = [0.22, 1, 0.36, 1] as Transition['ease'];
-
-const fade: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, delay: i * 0.08, ease: easeOut },
-  }),
-};
-
+/**
+ * Selected Work section.
+ *
+ * One named project (CoAgent) treated seriously — like an entry on a
+ * doctor's curriculum vitae. A holding line stands in for any future
+ * work until clients agree to be named.
+ *
+ * No stock photos. No logo strips. No invented projects.
+ */
 export function SelectedWork() {
+  const { featured, holdingLine } = selectedWork;
+
   return (
-    <section className="border-t border-black/[0.06] bg-bg-base py-24 md:py-32">
-      <Container>
-        <div className="mx-auto max-w-5xl">
-          <motion.h2
-            className="mb-12 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-fg-base"
-            variants={fade}
-            custom={1}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
-          >
-            {COAGENT_PREVIEW.heading}
-          </motion.h2>
+    <section
+      id="selected-work"
+      className="py-24 md:py-32 bg-[var(--color-bg)]"
+    >
+      <Container size="wide">
+        <Reveal>
+          <Eyebrow className="mb-4">{selectedWork.eyebrow}</Eyebrow>
+        </Reveal>
 
-          <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-12 md:gap-16">
-            <motion.div
-              className="overflow-hidden rounded-lg border border-black/[0.08] bg-bg-elevated p-8 md:col-span-6 md:p-10"
-              variants={fade}
-              custom={2}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-60px' }}
-            >
-              <CoAgentArchitectureCompact className="h-auto w-full opacity-90" />
-            </motion.div>
+        <Hairline className="mb-12 md:mb-16" />
 
-            <div className="flex flex-col gap-5 md:col-span-6 md:pt-2">
-              <motion.p
-                className="font-sans text-base leading-[1.85] text-fg-base md:text-[1.0625rem]"
-                variants={fade}
-                custom={3}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-60px' }}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+          {/* Featured project — CoAgent */}
+          <Reveal delay={0.05}>
+            <div className="flex flex-col gap-5 pr-0 md:pr-16 pb-12 md:pb-0 border-b md:border-b-0 md:border-r border-[var(--color-hairline)]">
+              {/* Monochrome sigil — a small typographic mark, no stock imagery */}
+              <div
+                aria-hidden="true"
+                className="w-10 h-10 flex items-center justify-center border border-[var(--color-hairline)] text-[var(--color-muted)] font-sans text-xs font-medium tracking-widest uppercase select-none"
               >
-                {COAGENT_PREVIEW.paragraph1}
-              </motion.p>
-              <motion.div
-                variants={fade}
-                custom={4}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-60px' }}
+                CA
+              </div>
+
+              <h3 className="font-serif font-normal text-2xl md:text-3xl text-[var(--color-heading)]">
+                {featured.name}
+              </h3>
+
+              <p className="font-sans text-base text-[var(--color-body)] leading-relaxed">
+                {featured.description}
+              </p>
+
+              <Link
+                href={featured.cta.href}
+                className="font-sans text-sm text-[var(--color-accent)] hover:underline underline-offset-4 mt-1 self-start"
               >
-                <TextLink href={COAGENT_PREVIEW.ctaHref} className="text-sm">
-                  {COAGENT_PREVIEW.ctaLabel}
-                </TextLink>
-              </motion.div>
+                {featured.cta.label}
+              </Link>
             </div>
-          </div>
+          </Reveal>
+
+          {/* Holding tile — honest, no invented projects */}
+          <Reveal delay={0.15}>
+            <div className="flex items-end pl-0 md:pl-16 pt-12 md:pt-0">
+              <p className="font-sans text-sm text-[var(--color-muted)] italic">
+                {holdingLine}
+              </p>
+            </div>
+          </Reveal>
         </div>
       </Container>
     </section>
