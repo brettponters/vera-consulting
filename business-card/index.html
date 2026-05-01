@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VERA — Business Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --surface: #FAFAF7;
+      --body: #0F0F10;
+      --heading: #050507;
+      --muted: #5C5C66;
+      --hairline: #E6E6EA;
+      --accent: #C97B3F;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
+      background: #F0F0ED;
+      color: var(--body);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 40px;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .card {
+      width: 672px;
+      height: 384px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow:
+        0 1px 3px rgba(0,0,0,0.06),
+        0 8px 24px rgba(0,0,0,0.08);
+      background: var(--bg);
+      position: relative;
+    }
+
+    /* ── Oversized V watermark ── */
+    .watermark {
+      position: absolute;
+      right: -20px;
+      top: -40px;
+      width: 380px;
+      height: 460px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Content ── */
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding: 44px 48px;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+    }
+
+    .wordmark {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: 0.1em;
+    }
+
+    .accent-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      position: relative;
+      top: -1px;
+    }
+
+    .acronym {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+    }
+
+    /* ── Person ── */
+    .person {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .person-name {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--heading);
+      letter-spacing: -0.015em;
+    }
+
+    .person-title {
+      font-size: 12.5px;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0.03em;
+    }
+
+    /* ── Bottom ── */
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .divider {
+      width: 36px;
+      height: 1px;
+      background: var(--hairline);
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px 0;
+    }
+
+    .contact-item {
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--body);
+      letter-spacing: 0.01em;
+    }
+
+    .contact-sep {
+      font-size: 11px;
+      color: var(--hairline);
+      margin: 0 10px;
+    }
+
+    .pbc {
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Actions ── */
+    .actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      text-decoration: none;
+    }
+
+    .btn:hover { opacity: 0.85; }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--body);
+      border: 1px solid var(--hairline);
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { background: white; padding: 0; }
+      h1, .actions { display: none; }
+      .card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        width: 3.5in;
+        height: 2in;
+      }
+      .content { padding: 0.2in 0.25in; }
+      .wordmark { font-size: 12pt; }
+      .acronym { font-size: 5.5pt; }
+      .person-name { font-size: 9pt; }
+      .person-title { font-size: 7pt; }
+      .contact-item { font-size: 6.5pt; }
+      .contact-sep { font-size: 6.5pt; }
+      .pbc { font-size: 5pt; }
+      .watermark { right: -10px; top: -20px; width: 200px; height: 240px; }
+    }
+
+    @media (max-width: 720px) {
+      .card { width: 336px; height: 192px; }
+      .content { padding: 20px 24px; }
+      .wordmark { font-size: 16px; }
+      .accent-dot { width: 4px; height: 4px; }
+      .acronym { font-size: 7px; }
+      .person-name { font-size: 13px; }
+      .person-title { font-size: 9px; }
+      .contact-item { font-size: 8px; }
+      .contact-sep { font-size: 8px; margin: 0 6px; }
+      .pbc { font-size: 6px; }
+      .divider { width: 24px; }
+      .brand-row { gap: 8px; }
+      .top { gap: 8px; }
+      .bottom { gap: 6px; }
+      .watermark { right: -16px; top: -20px; width: 180px; height: 230px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>VERA Business Card</h1>
+
+  <div class="card">
+    <!-- Oversized V watermark -->
+    <svg class="watermark" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 60 0 L 200 420 L 340 0"
+        stroke="#C97B3F"
+        stroke-width="48"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        opacity="0.07"
+      />
+    </svg>
+
+    <div class="content">
+      <div class="top">
+        <div class="brand-row">
+          <span class="wordmark">VERA</span>
+          <span class="accent-dot"></span>
+        </div>
+        <span class="acronym">Value-Driven, Ethical, Research-Grounded AI</span>
+      </div>
+
+      <div class="person">
+        <span class="person-name">Brett Ponters</span>
+        <span class="person-title">Founder</span>
+      </div>
+
+      <div class="bottom">
+        <div class="divider"></div>
+        <div class="contact">
+          <span class="contact-item">brett@vera.ai</span>
+          <span class="contact-sep">/</span>
+          <span class="contact-item">(561) 900-8182</span>
+          <span class="contact-sep">/</span>
+          <span class="contact-item">vera.ai</span>
+        </div>
+        <p class="pbc">AI consulting &middot; Public Benefit Corporation</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Print / Save PDF
+    </button>
+    <a class="btn btn-ghost" href="card-front.svg" download>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download SVG
+    </a>
+  </div>
+
+</body>
+</html>
