@@ -32,7 +32,7 @@ export function Reveal({
   return (
     <motion.div
       ref={ref}
-      className={className}
+      className={`reveal-on-scroll ${className}`}
       initial={{ opacity: 0, y: 12 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
       transition={{

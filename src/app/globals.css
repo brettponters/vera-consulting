@@ -91,6 +91,15 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+/* Disable scroll-reveal animations on mobile — prevents flash/flicker */
+@media (max-width: 767px) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

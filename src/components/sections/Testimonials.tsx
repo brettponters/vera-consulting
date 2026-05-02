@@ -53,8 +53,17 @@ export default function Testimonials() {
         </Reveal>
       </Container>
 
-      {/* Marquee of quote cards */}
-      <div className="mt-12">
+      {/* Mobile: swipeable cards */}
+      <div className="mt-10 md:hidden overflow-x-auto scrollbar-hide">
+        <div className="flex w-max gap-4 px-6">
+          {CARDS.map((card, i) => (
+            <TestimonialCard key={i} card={card} />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop: animated marquee */}
+      <div className="mt-12 hidden md:block">
         <Marquee duration={45} pauseOnHover>
           {CARDS.map((card, i) => (
             <div key={i} className="px-3 shrink-0">
