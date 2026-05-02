@@ -1,49 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" width="1050" height="600">
-  <!-- 3.5in x 2in at 300dpi -->
+  <!-- 3.5in x 2in at 300dpi. -->
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap');
-      text { font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; }
+      text {
+        font-family: -apple-system, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+      }
     </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="1050" height="600" fill="#FFFFFF" />
+  <!-- Background with subtle border -->
+  <rect width="1050" height="600" rx="12" fill="#FFFFFF" />
+  <rect x="0.5" y="0.5" width="1049" height="599" rx="12" fill="none" stroke="#E6E6EA" stroke-width="1" />
 
   <!-- Oversized V watermark -->
   <path
-    d="M 640 -40 L 820 520 L 1000 -40"
+    d="M 660 -30 L 840 510 L 1020 -30"
     stroke="#C97B3F"
     stroke-width="72"
     stroke-linecap="round"
     stroke-linejoin="round"
     fill="none"
-    opacity="0.07"
+    opacity="0.08"
   />
 
-  <!-- Wordmark + dot -->
-  <text x="72" y="118" font-size="68" font-weight="700" fill="#050507" letter-spacing="5">VERA</text>
-  <circle cx="310" cy="106" r="8" fill="#C97B3F" />
+  <!-- Wordmark -->
+  <text x="68" y="100" font-size="58" font-weight="700" fill="#050507" letter-spacing="5">VERA</text>
 
-  <!-- Acronym -->
-  <text x="72" y="158" font-size="24" font-weight="500" fill="#5C5C66" letter-spacing="1">Value-Driven, Ethical, Research-Grounded AI</text>
+  <!-- Terracotta dot -->
+  <circle cx="278" cy="79" r="6.5" fill="#C97B3F" />
+
+  <!-- Acronym expansion -->
+  <text x="68" y="132" font-size="20" font-weight="500" fill="#5C5C66" letter-spacing="0.6">Value-Driven, Ethical, Research-Grounded AI</text>
 
   <!-- Name -->
-  <text x="72" y="340" font-size="52" font-weight="600" fill="#050507" letter-spacing="-0.5">Brett Ponters</text>
+  <text x="68" y="290" font-size="46" font-weight="600" fill="#050507" letter-spacing="-0.3">Brett Ponters</text>
 
   <!-- Title in terracotta -->
-  <text x="72" y="380" font-size="32" font-weight="400" fill="#C97B3F" letter-spacing="0.8">Founder</text>
+  <text x="68" y="326" font-size="28" font-weight="400" fill="#C97B3F" letter-spacing="0.5">Founder</text>
 
-  <!-- Divider -->
-  <rect x="72" y="440" width="56" height="1.5" fill="#E6E6EA" />
+  <!-- Divider line -->
+  <rect x="68" y="380" width="48" height="1.5" rx="0.75" fill="#E6E6EA" />
 
   <!-- Contact row -->
-  <text x="72" y="480" font-size="26" font-weight="400" fill="#0F0F10" letter-spacing="0.3">brett@vera.ai</text>
-  <text x="330" y="480" font-size="26" font-weight="400" fill="#E6E6EA">/</text>
-  <text x="360" y="480" font-size="26" font-weight="400" fill="#0F0F10" letter-spacing="0.3">(561) 900-8182</text>
-  <text x="640" y="480" font-size="26" font-weight="400" fill="#E6E6EA">/</text>
-  <text x="670" y="480" font-size="26" font-weight="400" fill="#0F0F10" letter-spacing="0.3">vera.ai</text>
+  <text y="416" font-size="22" font-weight="400" letter-spacing="0.2">
+    <tspan x="68" fill="#0F0F10">brett@veraconsulting.co</tspan>
+    <tspan fill="#D0D0D4" dx="14">/</tspan>
+    <tspan fill="#0F0F10" dx="14">(561) 900-8182</tspan>
+    <tspan fill="#D0D0D4" dx="14">/</tspan>
+    <tspan fill="#0F0F10" dx="14">veraconsulting.co</tspan>
+  </text>
 
   <!-- PBC line -->
-  <text x="72" y="544" font-size="20" font-weight="500" fill="#5C5C66" letter-spacing="1.5">AI CONSULTING · PUBLIC BENEFIT CORPORATION</text>
+  <text x="68" y="530" font-size="17" font-weight="500" fill="#5C5C66" letter-spacing="1.6">AI CONSULTING · PUBLIC BENEFIT CORPORATION</text>
 </svg>
