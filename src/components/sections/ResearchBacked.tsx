@@ -26,7 +26,7 @@ function PaperCard({
     <button
       type="button"
       onClick={() => setOpen(!open)}
-      className="group relative flex flex-col text-left rounded-lg border border-[var(--color-hairline)] bg-white p-6 md:p-8 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md h-full w-full cursor-pointer"
+      className="group relative flex flex-col text-left rounded-lg border border-[var(--color-hairline)] bg-white p-6 md:p-8 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md w-full cursor-pointer"
     >
       <div className="flex items-start justify-between gap-4 w-full">
         <div className="flex-1">
@@ -95,7 +95,7 @@ export function ResearchBacked() {
         </Reveal>
 
         {/* Card grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 items-start">
           {entries.map((entry, i) => (
             <Reveal key={i} delay={0.05 + i * 0.05}>
               <PaperCard entry={entry} index={i} />

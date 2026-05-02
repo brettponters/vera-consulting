@@ -27,7 +27,7 @@ export const whyNow = {
   ],
 
   closingProse: [
-    "None of these are predictions. They\u2019re decisions companies are making this quarter. The ones who make them on purpose end up with AI stacks that are powerful and auditable. The ones who don\u2019t, won\u2019t get a second chance to lay the foundation. We help our clients lay it the first time.",
+    "None of these are predictions. They\u2019re decisions companies integrate are making this quarter. The ones who make them on purpose end up with AI stacks that are powerful and auditable. The ones who don\u2019t, won\u2019t get a second chance to lay the foundation. We help our clients lay it the first time.",
     "We are not, and do not aim to be, a large firm. We take on a small number of engagements where we can be accountable to the result.",
   ],
 } as const;

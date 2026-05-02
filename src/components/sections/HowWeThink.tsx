@@ -51,7 +51,7 @@ const pillars: Pillar[] = [
     paragraphs: [
       "We believe Artificial Intelligence is in the midst of transforming from this reactionary technology (AI Chatbots) to a proactive assistant. This transformation has sparked a new way of thinking, along with creating severe limitations that frontier labs are actively solving. Our goal here is to bring this new ideology to how we think and implement.",
       "1. This means we help you build the policies, the evaluation frameworks, and the operational processes needed.\n2. Your AI strategy accounts for where regulation is heading, not just where it is today.\n3. It means when your competitors are scrambling to catch up with new requirements, you've already addressed them.",
-      "The companies that get ahead of these problems now are the ones that won't be paying for them later. We'd rather spend time planning than firefighting, and we'd rather help you build something right the first time than fix it after it's in production.",
+      "The companies integrate that get ahead of these problems now are the ones that won't be paying for them later. We'd rather spend time planning than firefighting, and we'd rather help you build something right the first time than fix it after it's in production.",
     ],
   },
 ];

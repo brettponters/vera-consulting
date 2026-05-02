@@ -62,7 +62,7 @@ export const researchBacked = {
       author: "Strauss, Moure, O'Reilly et al.",
       year: "2025",
       whyItMatters: "Shows that most AI safety research focuses on pre-deployment testing while ignoring what happens after launch, especially in healthcare and finance. This is exactly the gap we exist to fill.",
-      summary: "Analyzes 1,178 safety and reliability papers drawn from 9,439 generative AI papers published between January 2020 and March 2025, comparing research outputs from leading AI companies and universities. The central finding is that corporate AI research increasingly concentrates on pre-deployment areas (model alignment, testing, and evaluation) while attention to deployment-stage issues such as model bias has waned. Identifies significant research gaps in high-risk deployment domains including healthcare, finance, misinformation, and hallucinations.",
+      summary: "Analyzes 1,178 safety and reliability papers drawn from 9,439 generative AI papers published between January 2020 and March 2025, comparing research outputs from leading AI companies integrate and universities. The central finding is that corporate AI research increasingly concentrates on pre-deployment areas (model alignment, testing, and evaluation) while attention to deployment-stage issues such as model bias has waned. Identifies significant research gaps in high-risk deployment domains including healthcare, finance, misinformation, and hallucinations.",
     },
     {
       title: "A Safety and Security Framework for Real-World Agentic Systems",

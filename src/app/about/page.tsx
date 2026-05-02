@@ -43,7 +43,7 @@ export default function About() {
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
-                VERA exists because the companies doing serious work with AI
+                VERA exists because the companies integrate doing serious work with AI
                 need people in the room who have read the papers and shipped the
                 systems. That&rsquo;s what we do.
               </p>

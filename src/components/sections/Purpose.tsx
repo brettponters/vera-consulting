@@ -39,20 +39,13 @@ export default function Purpose() {
 
           <Reveal delay={0.18}>
             <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-              Most companies are moving very quickly on AI and figuring out the
-              consequences later. We think that’s backwards. Especially
-              when the systems are making real decisions for real people.
-              We’d rather be proactive than reactive. We’d rather go
-              deep than go wide. And we’d rather build something that
-              scales in five years than something that works well today.
+              Most companies integrate are moving very quickly on AI and figuring out the consequences later. We believe that’s backwards. Especially when the systems are making real decisions with real consequences. We’d rather be proactive than reactive as we are proud to integrate artificial intelligence that scales through time.
             </p>
           </Reveal>
 
           <Reveal delay={0.24}>
             <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-10">
-              We build AI that’s efficient, responsible, and ready for
-              production. All three, not a tradeoff. The companies we work
-              with need systems they can actually stand behind.
+              AI that’s efficient, responsible, and ready for production will change the world, we help you understand and act on these unprecedented times.
             </p>
           </Reveal>
 

@@ -48,7 +48,7 @@ export default function About() {
               {/* founder to confirm */}
               <p className="font-sans font-medium text-[var(--color-body)] text-lg leading-relaxed">
                 {/* founder to confirm */}
-                I&rsquo;m [Founder Name]. I started RAIN because the companies I want to work with
+                I&rsquo;m [Founder Name]. I started RAIN because the companies integrate I want to work with
                 (banks, hospitals, law firms, regulated SaaS) are about to deploy AI
                 that will run their core operations for the next decade, and most of them don&rsquo;t
                 have anyone in the building who has read the papers and shipped the systems. RAIN is

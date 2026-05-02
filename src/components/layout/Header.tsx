@@ -35,6 +35,22 @@ export function Header() {
           className="font-sans text-sm font-semibold tracking-wide text-[var(--color-heading)] no-underline flex items-center gap-3"
           aria-label="VERA — home"
         >
+          {/* V logo from business card */}
+          <svg
+            viewBox="0 0 360 540"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-auto shrink-0"
+            aria-hidden="true"
+          >
+            <path
+              d="M 0 0 L 180 540 L 360 0"
+              stroke="#C97B3F"
+              strokeWidth="72"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
           <span>VERA</span>
           <span className="hidden md:inline text-[10px] font-medium tracking-[0.08em] uppercase text-[var(--color-muted)]">
             Value-Driven, Ethical, Research-Grounded AI

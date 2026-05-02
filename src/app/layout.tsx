@@ -8,7 +8,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "VERA",
   description:
-    "VERA is a mission-locked AI consulting practice. We help companies put AI to work. Capably, honestly, and with the depth to know how it behaves.",
+    "VERA is a mission-locked AI consulting practice. We help companies integrate put AI to work. Capably, honestly, and with the depth to know how it behaves.",
 };
 
 export default function RootLayout({
