@@ -23,10 +23,17 @@ export default function GetStarted() {
     };
 
     try {
-      const res = await fetch("/api/lead", {
+      const res = await fetch("https://formsubmit.co/ajax/brettponters@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          company: data.company || "—",
+          message: data.message,
+          _subject: `New VERA lead: ${data.name}`,
+          _template: "table",
+        }),
       });
       if (res.ok) {
         setSubmitted(true);
