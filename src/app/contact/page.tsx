@@ -63,7 +63,7 @@ export default function Contact() {
           <Reveal delay={0.5}>
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/brettponters/coagent-learn-more?hide_gdpr_banner=1"
+              data-url="https://calendly.com/brettponters/vera-learn-more?hide_event_type_details=1&hide_gdpr_banner=1"
               style={{ minWidth: "320px", height: "700px" }}
             />
           </Reveal>
