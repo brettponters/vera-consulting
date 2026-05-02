@@ -49,6 +49,7 @@ body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   line-height: 1.65;
   font-size: 1rem;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,12 +68,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Marquee animation */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 .animate-marquee {
   animation: marquee linear infinite;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* Reduced motion */

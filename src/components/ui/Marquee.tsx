@@ -15,6 +15,7 @@ interface MarqueeProps {
 /**
  * Infinite horizontal scroll strip via CSS animation.
  * Renders 4 copies of children for seamless looping on wide screens.
+ * Uses translate3d for GPU-accelerated rendering on mobile Safari.
  */
 export function Marquee({
   children,
@@ -24,12 +25,12 @@ export function Marquee({
 }: MarqueeProps) {
   return (
     <div
-      className={`overflow-hidden group ${className}`}
-      aria-hidden="true"
+      className={`overflow-hidden ${className}`}
+      style={{ WebkitMaskImage: "-webkit-radial-gradient(white, black)" }}
     >
       <div
         className={`flex w-max animate-marquee ${
-          pauseOnHover ? "group-hover:[animation-play-state:paused]" : ""
+          pauseOnHover ? "hover:[animation-play-state:paused]" : ""
         }`}
         style={{
           animationDuration: `${duration}s`,
