@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 /**
  * Site header.
@@ -12,6 +13,7 @@ import { useEffect, useState } from "react";
  * - Bottom hairline in #E6E6EA
  */
 export function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -19,6 +21,9 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Hide on landing pages (they have their own header)
+  if (pathname === "/get-started") return null;
 
   return (
     <header

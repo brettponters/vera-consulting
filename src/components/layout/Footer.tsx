@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Hairline } from "@/components/ui/Hairline";
 
@@ -25,7 +28,11 @@ const LEGAL_LINKS = [
  * RAIN is a chosen word. No acronym expansion anywhere in this file.
  */
 export function Footer() {
+  const pathname = usePathname();
   const year = new Date().getFullYear();
+
+  // Hide on landing pages
+  if (pathname === "/get-started") return null;
 
   return (
     <footer className="bg-[var(--color-surface)]">
