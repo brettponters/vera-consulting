@@ -66,14 +66,29 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 3px;
 }
 
-/* Marquee animation */
+/* Marquee animation — desktop only */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
 .animate-marquee {
-  animation: marquee linear infinite;
+  animation: none;
+}
+
+@media (min-width: 768px) {
+  .animate-marquee {
+    animation: marquee linear infinite;
+  }
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 /* Reduced motion */

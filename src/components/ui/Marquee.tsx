@@ -4,16 +4,16 @@ import { type ReactNode } from "react";
 
 interface MarqueeProps {
   children: ReactNode;
-  /** Seconds for one full loop. Default: 30 */
+  /** Seconds for one full loop (desktop). Default: 30 */
   duration?: number;
-  /** Pause animation on mouse hover. Default: true */
+  /** Pause animation on mouse hover (desktop). Default: true */
   pauseOnHover?: boolean;
   className?: string;
 }
 
 /**
- * Infinite horizontal scroll strip via CSS animation.
- * Renders 4 copies of children for seamless looping.
+ * Mobile: horizontal swipe scroll (no animation, single copy of content).
+ * Desktop: infinite CSS marquee animation with 4 copies for seamless looping.
  */
 export function Marquee({
   children,
@@ -22,17 +22,19 @@ export function Marquee({
   className = "",
 }: MarqueeProps) {
   return (
-    <div className={`overflow-hidden ${className}`}>
+    <div
+      className={`overflow-x-auto md:overflow-hidden scrollbar-hide ${className}`}
+    >
       <div
         className={`flex w-max animate-marquee ${
-          pauseOnHover ? "hover:[animation-play-state:paused]" : ""
+          pauseOnHover ? "md:hover:[animation-play-state:paused]" : ""
         }`}
         style={{ animationDuration: `${duration}s` }}
       >
         <span className="flex shrink-0">{children}</span>
-        <span className="flex shrink-0">{children}</span>
-        <span className="flex shrink-0">{children}</span>
-        <span className="flex shrink-0">{children}</span>
+        <span className="hidden md:flex shrink-0">{children}</span>
+        <span className="hidden md:flex shrink-0">{children}</span>
+        <span className="hidden md:flex shrink-0">{children}</span>
       </div>
     </div>
   );
