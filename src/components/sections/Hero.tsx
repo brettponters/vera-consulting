@@ -1,77 +1,127 @@
-'use client';
+"use client";
 
-import { motion, type Transition, type Variants } from 'framer-motion';
-import { Container } from '@/components/layout/Container';
-import { HERO } from '@/config/copy';
+import { motion } from "framer-motion";
+import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
 
-const easeOut = [0.22, 1, 0.36, 1] as Transition['ease'];
+/**
+ * Hero — capability-partner pitch.
+ *
+ * Background: a single flowing squiggle line that traces from
+ * bottom-left → up → dips mid-section → rises to top-right.
+ * Gently oscillates vertically on a slow loop for ambient depth.
+ */
 
-const fade: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  visible: (delay: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: easeOut, delay },
-  }),
-};
+const H1_TEXT =
+  "We help companies build AI that's powerful, accountable, and built to last.";
 
-export function Hero() {
+const H1_WORDS = H1_TEXT.split(" ");
+
+export default function Hero() {
   return (
-    <section className="grain relative flex min-h-[90svh] items-center overflow-hidden bg-bg-base pt-20">
-      <Container className="relative z-10 py-24 md:py-32">
-        <div className="max-w-4xl">
-          {/* No eyebrow — the Header carries the brand on every page. The first text fixated
-              here should be the thesis, not the studio name. */}
-          {/* Headline */}
-          <motion.h1
-            className="font-display font-bold leading-[1.04] tracking-[-0.022em] text-[clamp(2.5rem,5.6vw,4.75rem)] text-fg-base"
-            variants={fade}
-            custom={0.1}
-            initial="hidden"
-            animate="visible"
-          >
-            {HERO.headlineLines.join(' ')}
-          </motion.h1>
-
-          {/* Static accent underline */}
-          <motion.span
-            aria-hidden
-            className="mt-8 block h-[3px] w-20 bg-accent"
-            variants={fade}
-            custom={0.2}
-            initial="hidden"
-            animate="visible"
+    <section
+      aria-label="Introduction"
+      className="relative pt-14 pb-10 md:pt-20 md:pb-16 overflow-hidden"
+      style={{
+        background: "linear-gradient(180deg, #FFFFFF 0%, #F5F4F1 25%, #F5F4F1 75%, #FFFFFF 100%)",
+      }}
+    >
+      {/* Squiggle line — flows bottom-left → up → dip → top-right */}
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0"
+        animate={{ y: [0, 10, 0] }}
+        transition={{
+          duration: 16,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <svg
+          viewBox="0 0 1440 700"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          className="h-full w-full"
+        >
+          <path
+            d="M -40 620 C 180 180, 420 220, 680 420 C 940 620, 1140 60, 1480 80"
+            stroke="white"
+            strokeWidth="55"
+            strokeLinecap="round"
+            opacity="0.55"
+            filter="url(#softedge)"
           />
+          <defs>
+            <filter id="softedge" x="-5%" y="-5%" width="110%" height="110%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+            </filter>
+          </defs>
+        </svg>
+      </motion.div>
 
-          {/* Body */}
-          <motion.p
-            className="mt-8 max-w-2xl font-sans text-[clamp(1.125rem,1.7vw,1.25rem)] leading-[1.7] text-fg-base"
-            variants={fade}
-            custom={0.3}
-            initial="hidden"
-            animate="visible"
-          >
-            {HERO.body}
-          </motion.p>
-
-          {/* CTA */}
-          <motion.div
-            className="mt-12"
-            variants={fade}
-            custom={0.4}
-            initial="hidden"
-            animate="visible"
-          >
-            <a
-              href={HERO.ctaHref}
-              className="group inline-flex items-baseline gap-2 font-display text-base font-medium text-fg-base transition-colors duration-200 hover:text-accent"
-            >
-              <span className="border-b border-fg-base/40 pb-0.5 transition-colors duration-200 group-hover:border-accent">
-                {HERO.ctaLabel}
+      <Container size="wide" className="relative z-10">
+        <div className="max-w-[1040px]">
+          {/* Eyebrow with always-on live status dot */}
+          <Reveal delay={0}>
+            <div className="mb-5 flex items-center gap-2.5">
+              <span className="relative inline-flex h-1.5 w-1.5 shrink-0">
+                <span className="absolute inset-0 rounded-full bg-[var(--color-accent)] opacity-75 animate-ping" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
               </span>
-              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </a>
-          </motion.div>
+              <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
+                AI consulting · Public Benefit Corporation
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Word-staggered H1 */}
+          <h1
+            aria-label={H1_TEXT}
+            className="font-sans font-bold text-[var(--color-heading)] leading-[1.05] tracking-[-0.02em] mb-8"
+            style={{ fontSize: "clamp(2.25rem, 5vw, 4.75rem)" }}
+          >
+            {H1_WORDS.map((word, i) => (
+              <motion.span
+                key={`${word}-${i}`}
+                aria-hidden="true"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.55,
+                  delay: 0.15 + i * 0.045,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="inline-block whitespace-pre"
+              >
+                {word}
+                {i < H1_WORDS.length - 1 ? " " : ""}
+              </motion.span>
+            ))}
+          </h1>
+
+          <Reveal delay={0.55}>
+            <p className="font-sans font-normal text-[var(--color-body)] text-lg md:text-xl leading-relaxed max-w-[680px] mb-10">
+              VERA is an AI strategy and implementation consulting company. We
+              believe that this transformative technology will create great
+              opportunity as well as fear. Our goal is to create trust and value
+              by helping teams leverage AI in a way that stays true to their
+              values, reflects the latest research, and delivers real, measurable
+              impact.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.7}>
+            <div className="flex flex-wrap items-center gap-4">
+              <Button href="/contact" variant="filled" size="md" arrow>
+                Book a call
+              </Button>
+              <Button href="/how-we-work" variant="ghost" size="md" arrow>
+                See how we work
+              </Button>
+            </div>
+          </Reveal>
         </div>
       </Container>
     </section>

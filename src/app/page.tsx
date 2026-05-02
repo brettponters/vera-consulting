@@ -1,21 +1,19 @@
 import Hero from "@/components/sections/Hero";
-import WhyNow from "@/components/sections/WhyNow";
-import { ThreeShapes } from "@/components/sections/ThreeShapes";
+import IndustriesMarquee from "@/components/sections/IndustriesMarquee";
+import Purpose from "@/components/sections/Purpose";
+import { HowWeThink } from "@/components/sections/HowWeThink";
 import Testimonials from "@/components/sections/Testimonials";
 import { ResearchBacked } from "@/components/sections/ResearchBacked";
-import About from "@/components/sections/About";
-import BookACall from "@/components/sections/BookACall";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <WhyNow />
-      <ThreeShapes />
+      <IndustriesMarquee />
+      <Purpose />
+      <HowWeThink />
       <Testimonials />
       <ResearchBacked />
-      <About />
-      <BookACall />
     </>
   );
 }

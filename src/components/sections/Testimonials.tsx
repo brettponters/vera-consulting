@@ -1,249 +1,103 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useReducedMotion } from "framer-motion";
-import { testimonials } from "@/content/testimonials";
-import { palette } from "@/lib/theme";
 import { Container } from "@/components/ui/Container";
-import { Hairline } from "@/components/ui/Hairline";
+import { Marquee } from "@/components/ui/Marquee";
+import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * Testimonials — horizontal scroll-snap carousel.
+ * Testimonials — horizontal marquee of quote cards.
  *
- * Architecture:
- * - Desktop (> 640px): cards sit in a horizontal overflow-x scroll track
- *   with scroll-snap-type: x mandatory. Each card snaps cleanly.
- *   framer-motion whileInView drives the section-entry reveal.
- * - Mobile (≤ 640px): always a vertical stack; no horizontal scroll.
- * - prefers-reduced-motion: all motion stripped; vertical static list
- *   at every breakpoint.
- *
- * Motion is in the same ease-out family as WhyNow but deliberately quieter —
- * this is not the showpiece. Cards stagger-fade into view on section entry.
- * No autoplay. No arrow buttons. No pagination dots.
- *
- * Terracotta appears once: the opening quotation mark on each card.
- * All other color is palette-locked.
- *
- * All testimonial content is bracketed placeholder. Do NOT invent quotes
- * or attribution before the founder has confirmed with each client.
+ * Cards scroll continuously left-to-right like the industries strip,
+ * but full-height quote cards instead of text. Pauses on hover.
  */
+
+interface CardData {
+  quote: string;
+  attribution: string;
+}
+
+const CARDS: CardData[] = [
+  {
+    quote:
+      "[Quote about engagement we shipped. Kept anonymous until clients agree to be named.]",
+    attribution: "[Name · Role · Company]",
+  },
+  {
+    quote:
+      "[Quote about engagement we shipped. Kept anonymous until clients agree to be named. This one runs a little longer so the layout breathes at different heights.]",
+    attribution: "[Name · Role · Company]",
+  },
+  {
+    quote:
+      "[Quote about engagement we shipped. Kept anonymous until clients agree to be named. A medium-length note.]",
+    attribution: "[Name · Role · Company]",
+  },
+];
+
 export default function Testimonials() {
-  const shouldReduceMotion = useReducedMotion();
-
   return (
-    <section aria-label="Client testimonials">
-      {/* ── Mobile + reduced-motion: vertical static stack ── */}
-      <div
-        className={
-          shouldReduceMotion ? "block" : "block sm:hidden"
-        }
-      >
-        <VerticalStack />
-      </div>
-
-      {/* ── Desktop: horizontal scroll-snap track ── */}
-      {!shouldReduceMotion && (
-        <div className="hidden sm:block">
-          <HorizontalTrack />
-        </div>
-      )}
-    </section>
-  );
-}
-
-// ─── Horizontal scroll-snap (desktop) ─────────────────────────────────────────
-
-function HorizontalTrack() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  return (
-    <div
-      ref={sectionRef}
-      className="py-24"
-      style={{ backgroundColor: `var(--color-bg)` }}
-    >
-      {/* Section heading — contained, never scrolls */}
-      <Container size="wide">
-        <motion.h2
-          className="font-serif font-normal text-[clamp(1.5rem,2.8vw,2.25rem)] leading-tight mb-2"
-          style={{ color: palette.heading }}
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-        >
-          {testimonials.h2}
-        </motion.h2>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-        >
-          <Hairline />
-        </motion.div>
-      </Container>
-
-      {/*
-       * Scroll track: full-width, overflows horizontally.
-       * Padding-left aligns the first card with the Container grid;
-       * padding-right gives the last card room to breathe.
-       * scroll-snap-type: x mandatory — each card locks to a snap point.
-       */}
-      <div
-        className="mt-10 flex flex-row overflow-x-auto gap-6 pb-6"
-        style={{
-          scrollSnapType: "x mandatory",
-          WebkitOverflowScrolling: "touch",
-          // Align track start with Container wide grid (matches px-6 md:px-10 lg:px-12)
-          paddingLeft: "clamp(1.5rem, calc((100vw - 1200px) / 2 + 3rem), 50vw)",
-          paddingRight: "clamp(1.5rem, calc((100vw - 1200px) / 2 + 3rem), 50vw)",
-          // Hide scrollbar visually; track is still scrollable
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-        }}
-        // Webkit scrollbar hidden via CSS class below
-        aria-label="Testimonials — scroll to see all"
-      >
-        {testimonials.cards.map((card, i) => (
-          <motion.div
-            key={i}
-            style={{ scrollSnapAlign: "start" }}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{
-              duration: 0.4,
-              ease: "easeOut",
-              delay: i * 0.08,
-            }}
-          >
-            <TestimonialCard card={card} />
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Scroll hint — a hairline indicator, no dots or arrows */}
-      <Container size="wide">
-        <motion.p
-          className="font-sans text-xs mt-4"
-          style={{ color: palette.muted }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, ease: "easeOut", delay: 0.3 }}
-        >
-          Scroll to read all
-        </motion.p>
-      </Container>
-    </div>
-  );
-}
-
-// ─── Vertical stack (mobile + reduced-motion) ──────────────────────────────────
-
-function VerticalStack() {
-  return (
-    <div
-      className="py-20"
-      style={{ backgroundColor: `var(--color-bg)` }}
+    <section
+      aria-label="Client testimonials"
+      className="py-16 md:py-24 bg-[var(--color-bg)]"
     >
       <Container size="wide">
-        <h2
-          className="font-serif font-normal text-[clamp(1.4rem,5vw,2.25rem)] leading-tight mb-2"
-          style={{ color: palette.heading }}
-        >
-          {testimonials.h2}
-        </h2>
+        <Reveal>
+          <h2 className="font-sans font-semibold text-[clamp(1.75rem,3vw,2.5rem)] leading-tight tracking-[-0.02em] text-[var(--color-heading)] mb-2">
+            Notes from the work.
+          </h2>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <p className="font-sans text-base text-[var(--color-muted)] mt-3">
+            What clients have said about engagements we&rsquo;ve shipped.
+          </p>
+        </Reveal>
+      </Container>
 
-        <Hairline />
-
-        <div className="mt-10 flex flex-col gap-8">
-          {testimonials.cards.map((card, i) => (
-            <TestimonialCard key={i} card={card} />
+      {/* Marquee of quote cards */}
+      <div className="mt-12">
+        <Marquee duration={45} pauseOnHover>
+          {CARDS.map((card, i) => (
+            <div key={i} className="px-3 shrink-0">
+              <TestimonialCard card={card} />
+            </div>
           ))}
-        </div>
-      </Container>
-    </div>
+        </Marquee>
+      </div>
+    </section>
   );
 }
 
 // ─── Card ──────────────────────────────────────────────────────────────────────
 
-interface TestimonialCardProps {
-  card: {
-    quote: string;
-    name: string;
-    role: string;
-    organization: string;
-  };
-}
-
-/**
- * A single testimonial card.
- *
- * Visual anatomy:
- * - Opening quote glyph in terracotta (accent) — the only accent touch in the section
- * - Quote body in display serif, generous leading
- * - Attribution: name · role · organization in muted sans
- * - Raised surface background, hairline border
- *
- * Width on desktop: 420px fixed, tall enough to hold a ~20-word quote comfortably.
- * On mobile the card fills the container width.
- */
-function TestimonialCard({ card }: TestimonialCardProps) {
+function TestimonialCard({ card }: { card: CardData }) {
   return (
     <article
       className="
         flex flex-col justify-between
-        w-full sm:w-[420px] sm:flex-shrink-0
-        rounded-sm border p-8 sm:p-10
+        w-[min(85vw,420px)]
+        rounded-2xl border border-[var(--color-hairline)]
+        p-8
+        bg-[var(--color-surface)]
       "
-      style={{
-        backgroundColor: `var(--color-surface)`,
-        borderColor: palette.hairline,
-        minHeight: "260px",
-      }}
+      style={{ minHeight: "240px" }}
     >
-      {/* Quote body */}
       <div>
-        {/* Terracotta opening mark — the single accent touch per the palette contract */}
         <span
           aria-hidden="true"
-          className="font-serif font-normal block leading-none mb-4"
-          style={{
-            color: palette.accent,
-            fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
-            lineHeight: 1,
-          }}
+          className="block font-sans leading-none mb-4 text-[var(--color-accent)]"
+          style={{ fontSize: "clamp(2rem,4vw,3rem)", lineHeight: 1 }}
         >
           &#8220;
         </span>
 
-        <blockquote
-          className="font-serif font-normal leading-relaxed"
-          style={{
-            color: palette.heading,
-            fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
-          }}
-        >
+        <blockquote className="font-sans font-medium text-lg leading-relaxed text-[var(--color-body)]">
           {card.quote}
         </blockquote>
       </div>
 
-      {/* Attribution */}
-      <footer className="mt-8 pt-6 border-t" style={{ borderColor: palette.hairline }}>
-        <p
-          className="font-sans text-sm leading-snug"
-          style={{ color: palette.muted }}
-        >
-          <span style={{ color: palette.body }}>{card.name}</span>
-          {" · "}
-          {card.role}
-          {" · "}
-          {card.organization}
+      <footer className="mt-8 pt-6 border-t border-[var(--color-hairline)]">
+        <p className="font-sans text-sm text-[var(--color-muted)]">
+          {card.attribution}
         </p>
       </footer>
     </article>

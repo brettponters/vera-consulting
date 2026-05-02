@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Hairline } from "@/components/ui/Hairline";
 
 const NAV_LINKS = [
-  { href: "/work", label: "Work" },
+  { href: "/how-we-work", label: "How we work" },
   { href: "/reading", label: "Reading" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -18,7 +18,7 @@ const LEGAL_LINKS = [
 /**
  * Site footer.
  *
- * Hard-quoted PBC line (from wireframe spec — do not paraphrase):
+ * Hard-quoted PBC line (do not paraphrase):
  * "RAIN is a Public Benefit Corporation. A fixed percentage of net consulting
  *  revenue is committed annually to independent AI safety and alignment research."
  *
@@ -34,11 +34,11 @@ export function Footer() {
         <div className="py-12 md:py-16 space-y-8">
           {/* Wordmark + PBC statement */}
           <div className="space-y-3 max-w-[560px]">
-            <p className="font-serif text-base text-[var(--color-heading)]">
-              RAIN
+            <p className="font-sans text-sm font-semibold text-[var(--color-heading)]">
+              VERA
             </p>
             <p className="font-sans text-sm leading-relaxed text-[var(--color-muted)]">
-              RAIN is a Public Benefit Corporation. A fixed percentage of net
+              VERA is a Public Benefit Corporation. A fixed percentage of net
               consulting revenue is committed annually to independent AI safety
               and alignment research.
             </p>
@@ -81,7 +81,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="font-sans text-xs text-[var(--color-muted)]">
-            &copy; {year} RAIN
+            &copy; {year} VERA
           </p>
         </div>
       </Container>

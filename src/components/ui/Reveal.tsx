@@ -13,11 +13,12 @@ interface RevealProps {
 }
 
 /**
- * Scroll-triggered fade + slight upward translate.
- * Used for all sections except the WhyNow showpiece, which manages
- * its own motion directly via framer-motion.
+ * Scroll-triggered fade + subtle upward translate (~12px).
+ * 600ms ease-out. Used for all sections except motion-heavy showpieces
+ * that manage their own animation internally.
  *
- * Respects prefers-reduced-motion: collapses to an instant opacity reveal.
+ * Respects prefers-reduced-motion: global CSS collapses transitions to 0.01ms,
+ * so framer-motion completes instantly without code branching.
  */
 export function Reveal({
   children,
@@ -32,16 +33,13 @@ export function Reveal({
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, y: 18 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
+      initial={{ opacity: 0, y: 12 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
       transition={{
-        duration: 0.55,
-        ease: [0.25, 0.1, 0.25, 1],
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
         delay,
       }}
-      // framer-motion respects prefers-reduced-motion automatically when
-      // the global CSS rule sets transition-duration to 0.01ms; the motion
-      // values still run but complete in negligible time.
     >
       {children}
     </motion.div>

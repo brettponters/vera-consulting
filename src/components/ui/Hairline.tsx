@@ -8,7 +8,7 @@ interface HairlineProps {
 }
 
 /**
- * Thin horizontal rule styled to the hairline/divider color (#E2D8C6).
+ * Thin horizontal rule styled to the hairline/divider color (#E6E6EA).
  * Use between sections, inside cards, or under the header.
  */
 export function Hairline({ variant = "contained", className = "" }: HairlineProps) {

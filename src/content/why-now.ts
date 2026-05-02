@@ -1,35 +1,33 @@
 /**
- * Why Now section copy — verbatim from wireframe §3.
+ * Why Now section copy — "The 18 months" capability-partner reframe.
  * Do NOT paraphrase these strings without a design review.
  */
 
 export const whyNow = {
-  h2: "What gets shipped between now and 2027 will set the audit trail for a decade.",
+  eyebrow: "The next 18 months",
 
-  anchors: [
+  h2: "What you ship between now and 2027 is what your AI stack looks like for a decade.",
+
+  pairs: [
     {
-      quarter: "Q2 2026",
-      decisionNow: "Pick a model vendor without an audit interface.",
-      consequenceBy2027:
-        "External audit reveals months of unloggable inference with no recourse to reconstruct.",
+      decisionNow: "Choose model vendors with audit interfaces and provenance you can read.",
+      positioningBy2027:
+        "Every inference reconstructable. External audits surface clean. Procurement passes faster.",
     },
     {
-      quarter: "Q3 2026",
-      decisionNow: "Train on customer data without provenance tagging.",
-      consequenceBy2027:
-        "First GDPR / CCPA discovery request your team can't answer.",
+      decisionNow: "Tag training and retrieval data with provenance from day one.",
+      positioningBy2027:
+        "First GDPR or CCPA discovery request is a ten-minute query, not a six-month project.",
     },
     {
-      quarter: "Q4 2026",
-      decisionNow:
-        "Wire an agent into a core workflow without a rollback path.",
-      consequenceBy2027:
-        "The system can't be removed without halting the operation it now runs.",
+      decisionNow: "Wire agents into core workflows with rollback paths and human override.",
+      positioningBy2027:
+        "AI runs critical operations, and you can still take it offline on a Tuesday afternoon.",
     },
   ],
 
   closingProse: [
-    "None of these are predictions. They are decisions being made this quarter, in companies that will spend the next ten years living with them. We help our clients make them on purpose.",
+    "None of these are predictions. They\u2019re decisions companies are making this quarter. The ones who make them on purpose end up with AI stacks that are powerful and auditable. The ones who don\u2019t, won\u2019t get a second chance to lay the foundation. We help our clients lay it the first time.",
     "We are not, and do not aim to be, a large firm. We take on a small number of engagements where we can be accountable to the result.",
   ],
 } as const;

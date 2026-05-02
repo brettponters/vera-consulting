@@ -1,71 +1,79 @@
 "use client";
 
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Hairline } from "@/components/ui/Hairline";
 import { Reveal } from "@/components/ui/Reveal";
-import { about } from "@/content/about";
 
 /**
  * About — founder-forward section on the home page.
  *
- * This is NOT the /about route. It is a short, warm section that makes
- * the page become a person. The /about route is a separate concern.
- *
- * Layout: wide container. At md+, photo column ~40% (2fr), text ~60% (3fr).
+ * NOT the /about route. A short section that makes the page become a person.
+ * Layout: wide container, md+ photo col (2fr) + text col (3fr).
  */
 export default function About() {
   return (
     <section
       id="about"
       aria-label="About RAIN"
-      className="py-28 md:py-36"
+      className="py-16 md:py-24"
     >
       <Container size="wide">
-        <Hairline className="mb-16" />
-
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 md:gap-16 items-start">
-          {/* ── Founder photo ──────────────────────────────────────────── */}
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 md:gap-20 items-start">
+          {/* ── Founder photo placeholder ──────────────────────────────── */}
           <Reveal delay={0} className="mx-auto md:mx-0 w-full max-w-[320px] md:max-w-none">
-            {/* TODO: founder photo — replace src with real path once provided */}
-            {/* Intentionally renders as a shaped placeholder if the src 404s */}
-            {/* 4:5 portrait aspect ratio */}
-            <img
-              src={about.founderPhotoSrc}
-              alt={about.founderName}
-              width={400}
-              height={500}
-              className="w-full aspect-[4/5] object-cover object-top bg-[var(--color-surface)] border border-[var(--color-hairline)]"
-              style={{ display: "block" }}
-            />
+            <div
+              className="w-full aspect-[4/5] bg-[var(--color-surface)] border border-[var(--color-body)] flex items-center justify-center"
+              aria-label="Founder photo placeholder"
+            >
+              <span className="font-sans text-xs text-[var(--color-muted)]">
+                founder photo placeholder
+              </span>
+            </div>
           </Reveal>
 
-          {/* ── Text ───────────────────────────────────────────────────── */}
-          <div>
+          {/* ── Text column ────────────────────────────────────────────── */}
+          <div className="flex flex-col gap-8">
             <Reveal delay={0.1}>
-              {/*
-               * Founder paragraph — first-person, ~90 words.
-               * Bracketed items are placeholders for founder to confirm.
-               * Do NOT fabricate biographical specifics.
-               */}
-              <p className="font-sans text-[var(--color-body)] text-base leading-relaxed mb-5">
-                {about.paragraph}
-              </p>
+              <div className="flex flex-col gap-4">
+                <Eyebrow>About</Eyebrow>
+                <h2 className="font-sans font-semibold text-[var(--color-heading)] text-3xl md:text-4xl tracking-[-0.02em] leading-tight">
+                  RAIN is a small practice with a specific bet.
+                </h2>
+              </div>
             </Reveal>
 
             <Reveal delay={0.2}>
-              {/* PBC statement — stated as fact, not marketing */}
-              <p className="font-sans text-[var(--color-muted)] text-sm leading-relaxed mb-7">
-                {about.pbcStatement}
+              {/* founder to confirm */}
+              <p className="font-sans font-medium text-[var(--color-body)] text-lg leading-relaxed">
+                {/* founder to confirm */}
+                I&rsquo;m [Founder Name]. I started RAIN because the companies I want to work with
+                (banks, hospitals, law firms, regulated SaaS) are about to deploy AI
+                that will run their core operations for the next decade, and most of them don&rsquo;t
+                have anyone in the building who has read the papers and shipped the systems. RAIN is
+                the practice that does. I take a small number of engagements each year. The work is
+                hands-on: I write the strategy, I build the systems, I stay long enough to watch them
+                run in production. The bet is that depth matters more than scale, and that the firms
+                who plan this on purpose will own the next decade.
               </p>
             </Reveal>
 
             <Reveal delay={0.3}>
-              <a
-                href={about.moreLink.href}
-                className="font-sans text-sm text-[var(--color-accent)] underline underline-offset-4 decoration-[var(--color-accent)] hover:opacity-75 transition-opacity duration-200"
-              >
-                {about.moreLink.label}
-              </a>
+              <div className="flex flex-col gap-6">
+                <Hairline />
+                <p className="font-sans text-[var(--color-muted)] text-base leading-relaxed">
+                  RAIN is incorporated as a Public Benefit Corporation. A fixed percentage of net
+                  consulting revenue is committed annually to independent AI safety research, in our
+                  charter.
+                </p>
+                <Link
+                  href="/about"
+                  className="font-sans text-sm font-medium text-[var(--color-accent)] hover:opacity-75 transition-opacity duration-150 w-fit"
+                >
+                  More about RAIN &rarr;
+                </Link>
+              </div>
             </Reveal>
           </div>
         </div>

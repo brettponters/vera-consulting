@@ -1,59 +1,125 @@
 "use client";
 
 import { Container } from "@/components/ui/Container";
-import { Hairline } from "@/components/ui/Hairline";
 import { Reveal } from "@/components/ui/Reveal";
-import { threeShapes } from "@/content/three-shapes";
+import { AnimatedDiagram } from "@/components/ui/AnimatedDiagram";
 
-/**
- * Three Shapes section.
- *
- * No eyebrow — the H2 carries the section.
- * Three equal-weight typographic cards: Strategy / Build / Steward.
- * No prices, no tiers, no "Learn more" buttons, no icons.
- */
+// founder to confirm — all card copy below
+
+const shapes = [
+  {
+    title: "Strategy",
+    // founder to confirm
+    body: "We sit with your team, read your stack, and write the plan that actually fits — what to build, what to buy, what to leave alone.",
+    diagram: (
+      // Circle mark for Strategy
+      <svg
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        width={32}
+        height={32}
+        aria-hidden="true"
+      >
+        <circle
+          cx="20"
+          cy="20"
+          r="13"
+          stroke="var(--diagram-accent)"
+          strokeWidth="var(--diagram-stroke)"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Build",
+    // founder to confirm
+    body: "We design and ship the systems hands-on — models, evals, retrieval, agent workflows — with the depth to know how they behave under load.",
+    diagram: (
+      // Square mark for Build
+      <svg
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        width={32}
+        height={32}
+        aria-hidden="true"
+      >
+        <rect
+          x="7"
+          y="7"
+          width="26"
+          height="26"
+          stroke="var(--diagram-accent)"
+          strokeWidth="var(--diagram-stroke)"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Operate",
+    // founder to confirm
+    body: "We stay long enough to watch what we built run in production, tune it, document it, and hand it off so your team owns what they run.",
+    diagram: (
+      // Triangle mark for Operate
+      <svg
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        width={32}
+        height={32}
+        aria-hidden="true"
+      >
+        <polygon
+          points="20,6 34,34 6,34"
+          stroke="var(--diagram-accent)"
+          strokeWidth="var(--diagram-stroke)"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+];
+
 export function ThreeShapes() {
   return (
     <section
       id="three-shapes"
-      className="py-24 md:py-32 bg-[var(--color-bg)]"
+      className="py-16 md:py-24 bg-[var(--color-bg)]"
     >
       <Container size="wide">
         <Reveal>
-          <h2 className="font-serif font-normal text-3xl md:text-4xl text-[var(--color-heading)] mb-16">
-            {threeShapes.h2}
+          <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] mb-12 md:mb-16">
+            Three shapes. Sized to the work.
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-          {threeShapes.shapes.map((shape, i) => (
-            <Reveal key={shape.name} delay={i * 0.1}>
-              <div className="flex flex-col gap-4 pr-0 md:pr-12 pb-10 md:pb-0">
-                {i > 0 && (
-                  <Hairline
-                    variant="contained"
-                    className="block md:hidden mb-2"
-                  />
-                )}
-                <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
-                  {shape.name}
-                </p>
-                <p className="font-serif font-normal text-xl md:text-2xl text-[var(--color-heading)] leading-snug">
-                  {shape.description}
+        <div className="grid md:grid-cols-3 gap-8">
+          {shapes.map((shape, i) => (
+            <Reveal key={shape.title} delay={i * 0.1}>
+              <div className="group py-8 px-8 bg-[var(--color-bg)] border border-[var(--color-hairline)] hover:border-[var(--color-body)] transition-colors duration-300">
+                <AnimatedDiagram
+                  reveal="fade"
+                  delay={i * 0.1 + 0.1}
+                  strokeWidth={1.5}
+                  className="mb-6"
+                >
+                  {shape.diagram}
+                </AnimatedDiagram>
+
+                <h3 className="font-sans font-semibold text-xl text-[var(--color-heading)] mb-3">
+                  {shape.title}
+                </h3>
+
+                {/* founder to confirm */}
+                <p className="font-sans font-normal text-base text-[var(--color-body)] leading-relaxed">
+                  {shape.body}
                 </p>
               </div>
             </Reveal>
           ))}
         </div>
 
-        <Reveal delay={0.35}>
-          <div className="mt-14 md:mt-16">
-            <Hairline />
-            <p className="mt-6 font-sans text-sm text-[var(--color-muted)]">
-              {threeShapes.closing}
-            </p>
-          </div>
-        </Reveal>
       </Container>
     </section>
   );

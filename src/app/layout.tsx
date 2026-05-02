@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { serif, sans } from "./fonts";
+import { geist } from "./fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { EditMode } from "@/components/ui/EditMode";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "RAIN",
+  title: "VERA",
   description:
-    "RAIN is a mission-locked AI consulting studio. We help regulated companies put AI to work — capably, honestly, and with the depth to know how it behaves.",
+    "VERA is a mission-locked AI consulting practice. We help companies put AI to work. Capably, honestly, and with the depth to know how it behaves.",
 };
 
 export default function RootLayout({
@@ -16,11 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+    <html lang="en" className={geist.variable}>
       <body>
         <Header />
         <main>{children}</main>
         <Footer />
+        <EditMode />
       </body>
     </html>
   );

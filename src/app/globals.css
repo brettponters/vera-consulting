@@ -1,33 +1,31 @@
 @import "tailwindcss";
 
-/* ─── Palette ────────────────────────────────────────────────────────────── */
-/* Option A — Refined Cream / Off-Black / Muted Terracotta                   */
-/* These exact hex values are locked. Do not adjust without a design review. */
+/* ─── Palette — white system ─────────────────────────────────────────────── */
+/* RAIN v3: white + charcoal + terracotta. Do not adjust without design review. */
 
 @theme {
-  --color-bg:        #F5EDE0;
-  --color-surface:   #FAF6EC;
-  --color-body:      #1A1818;
-  --color-heading:   #131314;
-  --color-muted:     #6B6359;
-  --color-hairline:  #E2D8C6;
+  --color-bg:        #FFFFFF;
+  --color-surface:   #FAFAF7;
+  --color-body:      #0F0F10;
+  --color-heading:   #050507;
+  --color-muted:     #5C5C66;
+  --color-hairline:  #E6E6EA;
   --color-accent:    #C97B3F;
   --color-sage:      #6B8775;
 
-  /* Typography scale */
-  --font-serif:  var(--font-serif);
-  --font-sans:   var(--font-sans);
+  /* Typography */
+  --font-sans: var(--font-geist);
 }
 
 /* ─── CSS custom properties (for non-Tailwind contexts) ─────────────────── */
 
 :root {
-  --color-bg:       #F5EDE0;
-  --color-surface:  #FAF6EC;
-  --color-body:     #1A1818;
-  --color-heading:  #131314;
-  --color-muted:    #6B6359;
-  --color-hairline: #E2D8C6;
+  --color-bg:       #FFFFFF;
+  --color-surface:  #FAFAF7;
+  --color-body:     #0F0F10;
+  --color-heading:  #050507;
+  --color-muted:    #5C5C66;
+  --color-hairline: #E6E6EA;
   --color-accent:   #C97B3F;
   --color-sage:     #6B8775;
 }
@@ -54,16 +52,27 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif), ui-serif, Georgia, serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   color: var(--color-heading);
-  line-height: 1.2;
-  font-weight: 400;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 /* Smooth focus ring */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
 }
 
 /* Reduced motion */

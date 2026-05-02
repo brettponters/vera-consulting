@@ -6,12 +6,12 @@
  * If a hex value changes here, it must also change in globals.css.
  */
 export const palette = {
-  bg:       "#F5EDE0",
-  surface:  "#FAF6EC",
-  body:     "#1A1818",
-  heading:  "#131314",
-  muted:    "#6B6359",
-  hairline: "#E2D8C6",
+  bg:       "#FFFFFF",
+  surface:  "#FAFAF7",
+  body:     "#0F0F10",
+  heading:  "#050507",
+  muted:    "#5C5C66",
+  hairline: "#E6E6EA",
   accent:   "#C97B3F",
   sage:     "#6B8775",
 } as const;
