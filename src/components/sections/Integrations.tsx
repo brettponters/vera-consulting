@@ -45,7 +45,7 @@ export default function Integrations() {
             </Reveal>
             <Reveal delay={0.12}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)]">
-                We don&rsquo;t build AI that lives in a silo. Everything we
+                We don&rsquo;t integrate AI that lives in a silo. Everything we
                 ship connects to the systems you already run. Slack, Outlook,
                 Zoom, Salesforce, your internal tools. The goal is AI that
                 fits into how your team actually works, not a new platform

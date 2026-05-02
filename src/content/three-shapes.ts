@@ -26,7 +26,7 @@ export const threeShapes = {
         "Assess your current AI surface area against what regulators, auditors, and your own leadership team will need to see — and give you a written plan worth acting on.",
     },
     {
-      name: "Build",
+      name: "Integrate",
       // founder to review and confirm
       description:
         "Design and ship a custom AI system — scoped small enough to monitor, documented well enough to defend, and tested for the failure modes that matter in your operation.",

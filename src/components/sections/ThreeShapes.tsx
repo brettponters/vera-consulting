@@ -10,7 +10,7 @@ const shapes = [
   {
     title: "Strategy",
     // founder to confirm
-    body: "We sit with your team, read your stack, and write the plan that actually fits — what to build, what to buy, what to leave alone.",
+    body: "We sit with your team, read your stack, and write the plan that actually fits — what to integrate, what to buy, what to leave alone.",
     diagram: (
       // Circle mark for Strategy
       <svg
@@ -32,7 +32,7 @@ const shapes = [
     ),
   },
   {
-    title: "Build",
+    title: "Integrate",
     // founder to confirm
     body: "We design and ship the systems hands-on — models, evals, retrieval, agent workflows — with the depth to know how they behave under load.",
     diagram: (

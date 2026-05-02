@@ -19,14 +19,14 @@ export const about = {
   // ~95 words, first-person, calm, risk-forward by being plain.
   // Bracketed items need founder confirmation. Do NOT invent specifics.
   paragraph:
-    "I'm [Founder Name]. Before RAIN, I spent [N years] in [the field I worked in] — including [prior role at firm] — where I watched organizations make high-stakes decisions on AI systems they didn't fully understand. I started RAIN because that gap has real costs, and closing it requires someone who has done the reading and will tell you the truth. I take a small number of engagements each year. The work is hands-on. I write the strategy, build the systems, and stay accountable to what they produce.",
+    "I'm [Founder Name]. Before VERA, I spent [N years] in [the field I worked in] — including [prior role at firm] — where I watched organizations make high-stakes decisions on AI systems they didn't fully understand. I started VERA because that gap has real costs, and closing it requires someone who has done the reading and will tell you the truth. I take a small number of engagements each year. The work is hands-on. I write the strategy, integrate the systems, and stay accountable to what they produce.",
 
   // Keep verbatim — set by foundation.
   pbcStatement:
-    "RAIN is incorporated as a Public Benefit Corporation. 5% of net consulting revenue is committed annually to independent AI safety research, in our charter.",
+    "VERA is incorporated as a Public Benefit Corporation. 5% of net consulting revenue is committed annually to independent AI safety research, in our charter.",
 
   moreLink: {
-    label: "More about RAIN →",
+    label: "More about VERA →",
     href: "/about",
   },
 } as const;

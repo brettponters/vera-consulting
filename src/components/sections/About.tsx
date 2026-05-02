@@ -53,7 +53,7 @@ export default function About() {
                 that will run their core operations for the next decade, and most of them don&rsquo;t
                 have anyone in the building who has read the papers and shipped the systems. RAIN is
                 the practice that does. I take a small number of engagements each year. The work is
-                hands-on: I write the strategy, I build the systems, I stay long enough to watch them
+                hands-on: I write the strategy, I integrate the systems, I stay long enough to watch them
                 run in production. The bet is that depth matters more than scale, and that the firms
                 who plan this on purpose will own the next decade.
               </p>

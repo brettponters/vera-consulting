@@ -123,7 +123,7 @@ export default function About() {
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
                 We made that commitment because this technology is powerful,
                 and someone should be making sure it keeps working for people,
-                not just on them. We build AI for a living. Funding the people
+                not just on them. We integrate AI for a living. Funding the people
                 who study its risks felt like the obvious thing to do.
               </p>
             </Reveal>

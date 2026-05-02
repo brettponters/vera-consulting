@@ -33,7 +33,7 @@ const pillars: Pillar[] = [
     heading: "Responsibly powerful",
     paragraphs: [
       "We believe AI is an extremely powerful tool and as it gets more powerful, capabilities will increase exponentially. Our goal is to provide reliability to that power. We focus on solving real operational problems and creating real value for your business.",
-      "But power without responsibility is a liability. Every system we build has guardrails, evaluation frameworks, and documented.",
+      "But power without responsibility is a liability. Every system we integrate has guardrails, evaluation frameworks, and documentation.",
       "You shouldn't have to choose between AI that works and AI that's safe. The whole point is building systems that earn the trust to be used at scale. That means they're capable enough to make a real difference and reliable enough to trust.",
     ],
   },
@@ -50,8 +50,8 @@ const pillars: Pillar[] = [
     heading: "Proactive AI",
     paragraphs: [
       "We believe Artificial Intelligence is in the midst of transforming from this reactionary technology (AI Chatbots) to a proactive assistant. This transformation has sparked a new way of thinking, along with creating severe limitations that frontier labs are actively solving. Our goal here is to bring this new ideology to how we think and implement.",
-      "1. This means we help you build the policies, the evaluation frameworks, and the operational processes needed.\n2. Your AI strategy accounts for where regulation is heading, not just where it is today.\n3. It means when your competitors are scrambling to catch up with new requirements, you've already addressed them.",
-      "The companies integrate that get ahead of these problems now are the ones that won't be paying for them later. We'd rather spend time planning than firefighting, and we'd rather help you build something right the first time than fix it after it's in production.",
+      "1. This means we help you develop the policies, the evaluation frameworks, and the operational processes needed.\n2. Your AI strategy accounts for where regulation is heading, not just where it is today.\n3. It means when your competitors are scrambling to catch up with new requirements, you've already addressed them.",
+      "The companies that get ahead of these problems now are the ones that won't be paying for them later. We'd rather spend time planning than firefighting, and we'd rather help you integrate something right the first time than fix it after it's in production.",
     ],
   },
 ];

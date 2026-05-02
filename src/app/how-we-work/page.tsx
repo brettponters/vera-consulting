@@ -36,9 +36,9 @@ const PHASES = [
   },
   {
     number: "03",
-    title: "Build",
+    title: "Integrate",
     description:
-      "We write code alongside your engineers. Guardrails, monitoring, and documentation are part of the build, not an afterthought. When we're done, your team knows the system inside and out because they helped build it.",
+      "We write code alongside your engineers. Guardrails, monitoring, and documentation are part of the integration, not an afterthought. When we're done, your team knows the system inside and out because they helped integrate it.",
     deliverables: [
       "Production-ready AI systems",
       "Testing and evaluation pipelines",
@@ -102,7 +102,7 @@ const WHAT_YOU_GET = [
 const FAQ = [
   {
     q: "How long does a typical engagement last?",
-    a: "It depends on scope. A focused strategy engagement runs 4-6 weeks. A full build can be 3-6 months. We scope every project individually and give you a clear timeline upfront.",
+    a: "It depends on scope. A focused strategy engagement runs 4-6 weeks. A full integration can be 3-6 months. We scope every project individually and give you a clear timeline upfront.",
   },
   {
     q: "What industries do you work with?",
@@ -157,7 +157,7 @@ export default function HowWeWork() {
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
                 We learn your business before we touch anything. We plan
-                before we build. We build with your team, not around them.
+                before we integrate. We work with your team, not around them.
                 And we stick around after launch.
               </p>
             </Reveal>
@@ -284,7 +284,7 @@ export default function HowWeWork() {
             <Reveal delay={0.18}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-10">
                 We back up what we recommend with actual research.
-                We document everything we build. And when the engagement
+                We document everything we integrate. And when the engagement
                 ends, your team should be able to run the system without
                 calling us. That&rsquo;s how we want it to work.
               </p>
