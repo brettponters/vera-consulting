@@ -50,7 +50,7 @@ export default function Hero() {
             stroke="white"
             strokeWidth="55"
             strokeLinecap="round"
-            opacity="0.55"
+            opacity="0.45"
             filter="url(#softedge)"
           />
           <defs>
