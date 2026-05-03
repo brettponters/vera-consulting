@@ -1,12 +1,17 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
 export default function Contact() {
+  const [tab, setTab] = useState<"form" | "call">("form");
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -16,6 +21,44 @@ export default function Contact() {
       document.body.removeChild(script);
     };
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      company: (form.elements.namedItem("company") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/brettponters@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          company: data.company || "—",
+          message: data.message,
+          _subject: `New VERA contact: ${data.name}`,
+          _template: "table",
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -33,7 +76,7 @@ export default function Contact() {
             </Reveal>
 
             <h1
-              className="font-sans font-bold text-[var(--color-heading)] leading-[1.05] tracking-[-0.02em] mb-8"
+              className="font-sans font-bold text-[var(--color-heading)] leading-[1.05] tracking-[-0.02em] mb-6"
               style={{ fontSize: "clamp(2rem, 4.5vw, 3.75rem)" }}
             >
               <motion.span
@@ -45,28 +88,137 @@ export default function Contact() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                Book a call with us.
+                Let&rsquo;s talk.
               </motion.span>
             </h1>
-
-            <Reveal delay={0.4}>
-              <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[560px]">
-                Pick a time that works for you. No pressure, no pitch. We&rsquo;ll just talk through what you&rsquo;re looking for and see if we can help.
-              </p>
-            </Reveal>
           </div>
+
+          {/* Tabs */}
+          <Reveal delay={0.3}>
+            <div className="flex gap-1 mt-6 bg-[var(--color-surface)] rounded-full p-1 w-fit border border-[var(--color-hairline)]">
+              <button
+                type="button"
+                onClick={() => setTab("form")}
+                className={`rounded-full px-5 py-2 font-sans text-sm font-medium transition-all duration-150 ${
+                  tab === "form"
+                    ? "bg-white text-[var(--color-heading)] shadow-sm"
+                    : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
+                }`}
+              >
+                Send a message
+              </button>
+              <button
+                type="button"
+                onClick={() => setTab("call")}
+                className={`rounded-full px-5 py-2 font-sans text-sm font-medium transition-all duration-150 ${
+                  tab === "call"
+                    ? "bg-white text-[var(--color-heading)] shadow-sm"
+                    : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
+                }`}
+              >
+                Book a call
+              </button>
+            </div>
+          </Reveal>
         </Container>
       </section>
 
       <section className="pb-16 md:pb-24 bg-[var(--color-bg)]">
         <Container size="wide">
-          <Reveal delay={0.5}>
+          {/* Contact form */}
+          {tab === "form" && (
+            <div className="max-w-[560px] pt-4">
+              {submitted ? (
+                <div className="py-16 text-center">
+                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-accent)]">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4 10l4 4 8-8" />
+                    </svg>
+                  </div>
+                  <h2 className="font-sans font-semibold text-xl text-[var(--color-heading)] mb-2">
+                    Got it.
+                  </h2>
+                  <p className="font-sans text-base text-[var(--color-body)]">
+                    We&rsquo;ll be in touch soon.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                  <div>
+                    <label htmlFor="name" className="font-sans text-sm font-medium text-[var(--color-heading)] mb-1.5 block">
+                      Name
+                    </label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="font-sans text-sm font-medium text-[var(--color-heading)] mb-1.5 block">
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="company" className="font-sans text-sm font-medium text-[var(--color-heading)] mb-1.5 block">
+                      Company <span className="text-[var(--color-muted)] font-normal">(optional)</span>
+                    </label>
+                    <input
+                      id="company"
+                      name="company"
+                      type="text"
+                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="font-sans text-sm font-medium text-[var(--color-heading)] mb-1.5 block">
+                      What are you looking for?
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      required
+                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors resize-none"
+                    />
+                  </div>
+
+                  {error && (
+                    <p className="font-sans text-sm text-red-600">{error}</p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-fit rounded-full bg-[var(--color-accent)] px-8 py-3 font-sans text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-50"
+                  >
+                    {submitting ? "Sending..." : "Send message"}
+                  </button>
+                </form>
+              )}
+            </div>
+          )}
+
+          {/* Calendly embed */}
+          {tab === "call" && (
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/brettponters/vera-learn-more?hide_event_type_details=1&hide_gdpr_banner=1"
               style={{ minWidth: "320px", height: "700px" }}
             />
-          </Reveal>
+          )}
         </Container>
       </section>
     </>
