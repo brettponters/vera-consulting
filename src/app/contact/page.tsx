@@ -7,7 +7,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
 export default function Contact() {
-  const [tab, setTab] = useState<"form" | "call">("form");
+  const [tab, setTab] = useState<"call" | "form">("call");
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -93,20 +93,9 @@ export default function Contact() {
             </h1>
           </div>
 
-          {/* Tabs */}
+          {/* Tabs — Book a call first */}
           <Reveal delay={0.3}>
             <div className="flex gap-1 mt-6 bg-[var(--color-surface)] rounded-full p-1 w-fit border border-[var(--color-hairline)]">
-              <button
-                type="button"
-                onClick={() => setTab("form")}
-                className={`rounded-full px-5 py-2 font-sans text-sm font-medium transition-all duration-150 ${
-                  tab === "form"
-                    ? "bg-white text-[var(--color-heading)] shadow-sm"
-                    : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
-                }`}
-              >
-                Send a message
-              </button>
               <button
                 type="button"
                 onClick={() => setTab("call")}
@@ -118,6 +107,17 @@ export default function Contact() {
               >
                 Book a call
               </button>
+              <button
+                type="button"
+                onClick={() => setTab("form")}
+                className={`rounded-full px-5 py-2 font-sans text-sm font-medium transition-all duration-150 ${
+                  tab === "form"
+                    ? "bg-white text-[var(--color-heading)] shadow-sm"
+                    : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
+                }`}
+              >
+                Send a message
+              </button>
             </div>
           </Reveal>
         </Container>
@@ -125,8 +125,17 @@ export default function Contact() {
 
       <section className="pb-16 md:pb-24 bg-[var(--color-bg)]">
         <Container size="wide">
+          {/* Calendly — always in DOM so the script can initialize it */}
+          <div style={{ display: tab === "call" ? "block" : "none" }}>
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/brettponters/vera-learn-more?hide_event_type_details=1&hide_gdpr_banner=1"
+              style={{ minWidth: "320px", height: "700px" }}
+            />
+          </div>
+
           {/* Contact form */}
-          {tab === "form" && (
+          <div style={{ display: tab === "form" ? "block" : "none" }}>
             <div className="max-w-[560px] pt-4">
               {submitted ? (
                 <div className="py-16 text-center">
@@ -209,16 +218,7 @@ export default function Contact() {
                 </form>
               )}
             </div>
-          )}
-
-          {/* Calendly embed */}
-          {tab === "call" && (
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/brettponters/vera-learn-more?hide_event_type_details=1&hide_gdpr_banner=1"
-              style={{ minWidth: "320px", height: "700px" }}
-            />
-          )}
+          </div>
         </Container>
       </section>
     </>
