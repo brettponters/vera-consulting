@@ -99,7 +99,7 @@ export default function Contact() {
               <button
                 type="button"
                 onClick={() => setTab("call")}
-                className={`rounded-full px-5 py-2 font-sans text-sm font-medium transition-all duration-150 ${
+                className={`rounded-full px-5 py-3 md:py-2 font-sans text-sm font-medium transition-all duration-150 ${
                   tab === "call"
                     ? "bg-white text-[var(--color-heading)] shadow-sm"
                     : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
@@ -110,7 +110,7 @@ export default function Contact() {
               <button
                 type="button"
                 onClick={() => setTab("form")}
-                className={`rounded-full px-5 py-2 font-sans text-sm font-medium transition-all duration-150 ${
+                className={`rounded-full px-5 py-3 md:py-2 font-sans text-sm font-medium transition-all duration-150 ${
                   tab === "form"
                     ? "bg-white text-[var(--color-heading)] shadow-sm"
                     : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
@@ -130,7 +130,7 @@ export default function Contact() {
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/brettponters/vera-learn-more?hide_event_type_details=1&hide_gdpr_banner=1"
-              style={{ minWidth: "320px", height: "700px" }}
+              style={{ minWidth: "100%", height: "700px" }}
             />
           </div>
 
@@ -162,7 +162,7 @@ export default function Contact() {
                       name="name"
                       type="text"
                       required
-                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-3 md:py-2.5 font-sans text-base md:text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
                     />
                   </div>
 
@@ -175,7 +175,7 @@ export default function Contact() {
                       name="email"
                       type="email"
                       required
-                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-3 md:py-2.5 font-sans text-base md:text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
                     />
                   </div>
 
@@ -187,7 +187,7 @@ export default function Contact() {
                       id="company"
                       name="company"
                       type="text"
-                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-3 md:py-2.5 font-sans text-base md:text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
                     />
                   </div>
 
@@ -200,7 +200,7 @@ export default function Contact() {
                       name="message"
                       rows={4}
                       required
-                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors resize-none"
+                      className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-3 md:py-2.5 font-sans text-base md:text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors resize-none"
                     />
                   </div>
 

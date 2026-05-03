@@ -33,7 +33,7 @@ export function Header() {
           : "bg-[var(--color-bg)]"
       }`}
     >
-      <div className="flex h-14 items-center gap-8 px-6 md:px-16">
+      <div className="flex h-14 items-center gap-3 md:gap-8 px-6 md:px-16">
         {/* Wordmark + acronym */}
         <Link
           href="/"
@@ -67,7 +67,7 @@ export function Header() {
         {/* Book a call */}
         <Link
           href="/contact"
-          className="ml-auto inline-flex items-center rounded-full bg-[var(--color-accent)] px-5 py-2.5 font-sans text-sm font-medium text-white no-underline transition-opacity duration-150 hover:opacity-90"
+          className="ml-auto inline-flex items-center rounded-full bg-[var(--color-accent)] px-5 py-3 md:py-2.5 font-sans text-sm font-medium text-white no-underline transition-opacity duration-150 hover:opacity-90"
         >
           Book a call
         </Link>

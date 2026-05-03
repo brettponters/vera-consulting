@@ -74,7 +74,7 @@ export default function GetStarted() {
       </header>
 
       <main className="mx-auto max-w-[1100px] px-6 md:px-10 py-12 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-start">
           {/* Left — pitch */}
           <div>
             <motion.h1
@@ -149,7 +149,7 @@ export default function GetStarted() {
                     name="name"
                     type="text"
                     required
-                    className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+                    className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-3 md:py-2.5 font-sans text-base md:text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
                   />
                 </div>
 
@@ -162,7 +162,7 @@ export default function GetStarted() {
                     name="email"
                     type="email"
                     required
-                    className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+                    className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-3 md:py-2.5 font-sans text-base md:text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
                   />
                 </div>
 
@@ -174,7 +174,7 @@ export default function GetStarted() {
                     id="company"
                     name="company"
                     type="text"
-                    className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+                    className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-3 md:py-2.5 font-sans text-base md:text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
                   />
                 </div>
 
@@ -187,7 +187,7 @@ export default function GetStarted() {
                     name="message"
                     rows={3}
                     required
-                    className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-2.5 font-sans text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors resize-none"
+                    className="w-full rounded-lg border border-[var(--color-hairline)] bg-white px-4 py-3 md:py-2.5 font-sans text-base md:text-sm text-[var(--color-body)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors resize-none"
                   />
                 </div>
 

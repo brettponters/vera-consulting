@@ -83,9 +83,9 @@ function TestimonialCard({ card }: { card: CardData }) {
     <article
       className="
         flex flex-col justify-between
-        w-[min(85vw,420px)]
+        w-[min(90vw,420px)]
         rounded-2xl border border-[var(--color-hairline)]
-        p-8
+        p-6 md:p-8
         bg-[var(--color-surface)]
       "
       style={{ minHeight: "240px" }}

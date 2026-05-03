@@ -56,7 +56,7 @@ export default function Integrations() {
 
           {/* Orbiting icons */}
           <div className="flex items-center justify-center">
-            <div className="relative" style={{ width: 380, height: 380 }}>
+            <div className="relative" style={{ width: "min(85vw, 380px)", height: "min(85vw, 380px)" }}>
               {/* Center label */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="h-20 w-20 rounded-full bg-[var(--color-surface)] border border-[var(--color-hairline)] flex items-center justify-center">
