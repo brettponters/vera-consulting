@@ -38,7 +38,7 @@ const PHASES = [
     number: "03",
     title: "Integrate",
     description:
-      "Your engineers are in the room for this. We write code together, set up guardrails and monitoring together, document everything together. That's not a feel-good philosophy — it's practical. When the engagement ends, your team doesn't need us to explain how the system works because they helped build it.",
+      "We don't hand off a codebase and disappear. We work alongside your team — writing code, setting up guardrails, documenting everything as we go. When the engagement ends, nobody needs a knowledge transfer because your engineers were part of the integration from day one.",
     deliverables: [
       "Production-ready AI systems",
       "Testing and evaluation pipelines",
