@@ -14,7 +14,7 @@ const PHASES = [
     number: "01",
     title: "Discover",
     description:
-      "Most failed AI projects have one thing in common: someone skipped this step. We sit down with your team — engineers, ops, compliance — and figure out what's actually going on. What does your data look like? What have you already tried? What would break if we got it wrong? By the end, you have a clear picture of what's realistic and what isn't.",
+      "We spend time with your team — engineers, ops, compliance — and learn how your business actually runs. We look at your data, your infrastructure, your regulatory situation, what you've tried before. We ask a lot of questions. By the end, we put together an honest assessment of what's feasible and what isn't.",
     deliverables: [
       "Technical and operational assessment",
       "Stakeholder interviews",
@@ -26,7 +26,7 @@ const PHASES = [
     number: "02",
     title: "Strategy",
     description:
-      "This is where the plan gets written — architecture, evaluation criteria, governance, timeline. But more importantly, this is where we agree on what \"done\" looks like. Every recommendation is scoped to what your team can actually maintain after we leave. If something doesn't make sense for your situation, it doesn't go in the plan.",
+      "We write the plan — architecture, evaluation criteria, governance, timeline. We define what success looks like together and scope everything to what your team can maintain long-term. You review it, we revise it, and nothing moves forward until we're both confident in it.",
     deliverables: [
       "AI strategy document",
       "Architecture and system design",
@@ -38,7 +38,7 @@ const PHASES = [
     number: "03",
     title: "Integrate",
     description:
-      "We work side by side with your engineers. Same codebase, same standups, same Slack channel. Guardrails, monitoring, documentation — all of it happens together. By the time we wrap up, your team already knows the system because they helped integrate it.",
+      "We join your team — same codebase, same standups, same channels. We write the code together, set up guardrails and monitoring together, and document everything as we go. Your engineers are part of the entire integration.",
     deliverables: [
       "Production-ready AI systems",
       "Testing and evaluation pipelines",
@@ -50,7 +50,7 @@ const PHASES = [
     number: "04",
     title: "Operate",
     description:
-      "AI in production isn't a set-it-and-forget-it situation. Models drift. Data changes. Usage patterns shift in ways nobody predicted. We keep an eye on what matters, catch problems early, and make adjustments so you're not finding out something broke from your customers.",
+      "After launch, we stay on. We monitor performance, watch for model drift and data shifts, and make adjustments over time. We check in quarterly to review how things are running and flag anything that needs attention.",
     deliverables: [
       "Performance monitoring dashboards",
       "Drift detection and alerting",
@@ -274,22 +274,17 @@ export default function HowWeWork() {
 
             <Reveal delay={0.12}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-                At most firms, the person who sells you the strategy
-                isn&rsquo;t the person who integrates it. So the plan
-                sounds great on paper but falls apart in production.
-                Here, the same people do both. The plan is realistic
-                because the people writing it are the ones who have
-                to make it work.
+                The same people who write the strategy are the ones
+                who integrate it. That way the plan reflects what&rsquo;s
+                actually possible, and the integration follows the plan.
               </p>
             </Reveal>
 
             <Reveal delay={0.18}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-10">
-                And when the engagement ends, your team runs the system.
-                Not us. That&rsquo;s the whole point — we&rsquo;re not
-                trying to create a dependency. Your engineers were in the
-                room the entire time. They know how it works because they
-                helped integrate it.
+                When the engagement ends, your team runs the system.
+                They were part of the whole process, so there&rsquo;s
+                no handoff gap. Everything is documented and tested.
               </p>
             </Reveal>
 
