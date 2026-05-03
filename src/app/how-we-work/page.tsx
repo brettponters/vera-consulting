@@ -14,7 +14,7 @@ const PHASES = [
     number: "01",
     title: "Discover",
     description:
-      "Before we recommend anything, we need to understand how your business actually runs. Your data, your team, your regulatory situation, what you've already tried. We spend real time here because most AI projects fail when someone skips this part.",
+      "Most failed AI projects have one thing in common: someone skipped this step. We sit down with your team — engineers, ops, compliance — and figure out what's actually going on. What does your data look like? What have you already tried? What would break if we got it wrong? By the end, you have a clear picture of what's realistic and what isn't.",
     deliverables: [
       "Technical and operational assessment",
       "Stakeholder interviews",
@@ -26,7 +26,7 @@ const PHASES = [
     number: "02",
     title: "Strategy",
     description:
-      "Once we understand the problem, we write the plan. Architecture, evaluation criteria, governance, timeline. Everything is backed by research and scoped to what your team can actually maintain. Nothing gets built until we agree on what success looks like.",
+      "This is where the plan gets written — architecture, evaluation criteria, governance, timeline. But more importantly, this is where we agree on what \"done\" looks like. Every recommendation is scoped to what your team can actually maintain after we leave. If something doesn't make sense for your situation, it doesn't go in the plan.",
     deliverables: [
       "AI strategy document",
       "Architecture and system design",
@@ -38,7 +38,7 @@ const PHASES = [
     number: "03",
     title: "Integrate",
     description:
-      "We write code alongside your engineers. Guardrails, monitoring, and documentation are part of the integration, not an afterthought. When we're done, your team knows the system inside and out because they helped integrate it.",
+      "Your engineers are in the room for this. We write code together, set up guardrails and monitoring together, document everything together. That's not a feel-good philosophy — it's practical. When the engagement ends, your team doesn't need us to explain how the system works because they helped build it.",
     deliverables: [
       "Production-ready AI systems",
       "Testing and evaluation pipelines",
@@ -50,7 +50,7 @@ const PHASES = [
     number: "04",
     title: "Operate",
     description:
-      "AI systems change over time. Models drift, data shifts, usage patterns evolve. We monitor what matters, flag what's degrading, and fix it before it becomes your problem.",
+      "AI in production isn't a set-it-and-forget-it situation. Models drift. Data changes. Usage patterns shift in ways nobody predicted. We keep an eye on what matters, catch problems early, and make adjustments so you're not finding out something broke from your customers.",
     deliverables: [
       "Performance monitoring dashboards",
       "Drift detection and alerting",
@@ -64,37 +64,37 @@ const WHAT_YOU_GET = [
   {
     label: "Strategy",
     items: [
-      "AI readiness assessment",
-      "Use case prioritization",
-      "Architecture design",
-      "Regulatory roadmap",
+      "A clear picture of what AI can and can't do for you",
+      "Prioritized use cases ranked by impact",
+      "Architecture that fits your existing stack",
+      "A regulatory roadmap so nothing surprises you",
     ],
   },
   {
-    label: "Implementation",
+    label: "Integration",
     items: [
-      "Production AI systems",
-      "Agent development",
-      "Evaluation frameworks",
-      "Infrastructure setup",
+      "AI systems running in production",
+      "Agents that work within your workflows",
+      "Evaluation frameworks so you know it's working",
+      "Infrastructure your team can maintain",
     ],
   },
   {
     label: "Governance",
     items: [
-      "Compliance audits",
-      "Risk assessment",
-      "Safety evaluation",
-      "Policy documentation",
+      "Compliance documentation that holds up to audit",
+      "Risk assessments for every system we touch",
+      "Safety evaluations with real benchmarks",
+      "Policies your legal team can actually use",
     ],
   },
   {
-    label: "Enablement",
+    label: "Ownership",
     items: [
-      "Team training",
-      "Knowledge transfer",
-      "Process documentation",
-      "Ongoing advisory",
+      "Your team trained on every system",
+      "Full knowledge transfer, nothing held back",
+      "Documentation that doesn't collect dust",
+      "Ongoing advisory if you want it",
     ],
   },
 ];
@@ -102,23 +102,23 @@ const WHAT_YOU_GET = [
 const FAQ = [
   {
     q: "How long does a typical engagement last?",
-    a: "It depends on scope. A focused strategy engagement runs 4-6 weeks. A full integration can be 3-6 months. We scope every project individually and give you a clear timeline upfront.",
+    a: "Strategy-only work usually runs 4–6 weeks. If we're integrating a system end-to-end, it's more like 3–6 months. We'll give you a clear timeline before anything starts.",
   },
   {
     q: "What industries do you work with?",
-    a: "Healthcare, finance, insurance, legal, enterprise operations. Industries where AI decisions carry real weight and there's no room to get it wrong.",
+    a: "Healthcare, finance, insurance, legal, enterprise operations — places where AI decisions have real consequences and you can't afford to get it wrong.",
   },
   {
     q: "How big is your team?",
-    a: "Small and senior. The people you talk to are the people who do the work. No bait and switch.",
+    a: "Small. Senior. The person on your first call is the person doing the work. That's the whole idea.",
   },
   {
     q: "What does pricing look like?",
-    a: "We work on project-based pricing, scoped to deliverables. No hourly billing, no open-ended retainers. You know what you're getting and what it costs before we start.",
+    a: "Project-based, scoped to deliverables. You'll know what you're paying and what you're getting before we start. No hourly billing, no open-ended retainers.",
   },
   {
     q: "Can you work with our existing team?",
-    a: "That's how we prefer it. We work alongside your engineers so when we leave, they know the system as well as we do.",
+    a: "That's the default. We sit with your engineers, not in a separate room. When we're done, they know the system because they helped integrate it.",
   },
 ];
 
@@ -156,9 +156,9 @@ export default function HowWeWork() {
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
-                We learn your business before we touch anything. We plan
-                before we integrate. We work with your team, not around them.
-                And we stick around after launch.
+                Every engagement follows the same structure. We wrote it
+                down so you can see exactly what happens, when, and what
+                you walk away with at each step.
               </p>
             </Reveal>
           </div>
@@ -231,7 +231,7 @@ export default function HowWeWork() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-12 md:mb-16 max-w-xl">
-              What you walk away with.
+              What&rsquo;s yours when we&rsquo;re done.
             </h2>
           </Reveal>
 
@@ -268,25 +268,28 @@ export default function HowWeWork() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-10">
-                Why we set it up this way.
+                Why it works this way.
               </h2>
             </Reveal>
 
             <Reveal delay={0.12}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-                A lot of AI consulting stops at the strategy deck. Others
-                jump straight to building without thinking it through.
-                We think you need both, and they need to come from the
-                same people.
+                At most firms, the person who sells you the strategy
+                isn&rsquo;t the person who integrates it. So the plan
+                sounds great on paper but falls apart in production.
+                Here, the same people do both. The plan is realistic
+                because the people writing it are the ones who have
+                to make it work.
               </p>
             </Reveal>
 
             <Reveal delay={0.18}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-10">
-                We back up what we recommend with actual research.
-                We document everything we integrate. And when the engagement
-                ends, your team should be able to run the system without
-                calling us. That&rsquo;s how we want it to work.
+                And when the engagement ends, your team runs the system.
+                Not us. That&rsquo;s the whole point — we&rsquo;re not
+                trying to create a dependency. Your engineers were in the
+                room the entire time. They know how it works because they
+                helped integrate it.
               </p>
             </Reveal>
 
@@ -297,11 +300,11 @@ export default function HowWeWork() {
                   Public Benefit Corporation
                 </p>
                 <p className="font-sans text-base leading-relaxed text-[var(--color-body)]">
-                  VERA is incorporated as a Public Benefit Corporation. A fixed
-                  percentage of every dollar we earn goes directly to
-                  independent AI safety research. This technology is powerful,
-                  and as it moves forward, we want to make sure AI stays
-                  aligned with human needs and used for genuine good.
+                  VERA is a Public Benefit Corporation. A fixed percentage
+                  of every dollar we earn goes to independent AI safety
+                  research. This technology is moving fast, and we think
+                  the people deploying it should also be funding the work
+                  to make sure it stays safe.
                 </p>
               </div>
             </Reveal>
@@ -348,13 +351,13 @@ export default function HowWeWork() {
           <div className="text-center max-w-[560px] mx-auto">
             <Reveal>
               <h2 className="font-sans font-semibold text-2xl md:text-3xl tracking-[-0.02em] text-[var(--color-heading)] mb-4">
-                Let&rsquo;s talk about what you&rsquo;re building.
+                Want to talk through your situation?
               </h2>
             </Reveal>
             <Reveal delay={0.05}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-8">
-                If it sounds like we can help, we&rsquo;ll say so. If not,
-                we&rsquo;ll tell you that too.
+                Book a call and we&rsquo;ll walk through where you are
+                and what might make sense.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
