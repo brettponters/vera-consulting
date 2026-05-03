@@ -38,7 +38,7 @@ const PHASES = [
     number: "03",
     title: "Integrate",
     description:
-      "We don't hand off a codebase and disappear. We work alongside your team — writing code, setting up guardrails, documenting everything as we go. When the engagement ends, nobody needs a knowledge transfer because your engineers were part of the integration from day one.",
+      "We work side by side with your engineers. Same codebase, same standups, same Slack channel. Guardrails, monitoring, documentation — all of it happens together. By the time we wrap up, your team already knows the system because they helped integrate it.",
     deliverables: [
       "Production-ready AI systems",
       "Testing and evaluation pipelines",
