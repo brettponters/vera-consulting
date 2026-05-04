@@ -64,10 +64,9 @@ export function Header() {
         {/* Nav links + CTA — right side */}
         <nav className="hidden md:flex items-center gap-6">
           {[
-            { label: "How We Think", href: "/how-we-think" },
             { label: "Our Work", href: "/our-work" },
+            { label: "How We Think", href: "/how-we-think" },
             { label: "Research", href: "/research" },
-            { label: "How We Work", href: "/how-we-work" },
           ].map((link) => (
             <Link
               key={link.label}
