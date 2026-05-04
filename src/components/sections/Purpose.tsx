@@ -26,26 +26,16 @@ export default function Purpose() {
 
           <Reveal delay={0.05}>
             <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-10">
-              AI is going to change how every industry works. The question is
-              whether the people building it care what happens after it ships.
+              AI is going to change how every industry works.
             </h2>
           </Reveal>
 
           <Reveal delay={0.12}>
-            <p className="font-sans text-lg leading-relaxed text-[var(--color-body)] mb-6">
-              This is why VERA exists.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.18}>
-            <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-              Most companies integrate are moving very quickly on AI and figuring out the consequences later. We believe that’s backwards. Especially when the systems are making real decisions with real consequences. We’d rather be proactive than reactive as we are proud to integrate artificial intelligence that scales through time.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.24}>
             <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-10">
-              AI that’s efficient, responsible, and ready for production will change the world, we help you understand and act on these unprecedented times.
+              Most companies are moving fast on AI and figuring out the
+              consequences later. We think that&rsquo;s backwards — especially
+              when these systems are making real decisions about real people.
+              VERA exists to help teams get AI right the first time.
             </p>
           </Reveal>
 

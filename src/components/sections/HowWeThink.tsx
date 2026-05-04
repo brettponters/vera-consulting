@@ -23,35 +23,28 @@ const pillars: Pillar[] = [
     number: "01",
     heading: "Research-grounded",
     paragraphs: [
-      "Every recommendation we make traces back to real research. A published paper, a benchmark, the technical gap between what models can do and what actually works in production. We read the research, test it, and only bring it to you when we know it holds up.",
-      "For you, that means the strategy we write is based on Artificial Intelligence fundamentals. When we tell you a particular model fits your use case, or that a certain architecture will scale, we want to have evidence it will hold up.",
-      "We stay current with what's happening in AI research every week to push innovation and help keep the foundation current in an ever moving market.",
+      "Every recommendation traces back to published research, tested benchmarks, or proven production patterns. When we say a model fits your use case or an architecture will scale, we have evidence for it.",
     ],
   },
   {
     number: "02",
     heading: "Responsibly powerful",
     paragraphs: [
-      "We believe AI is an extremely powerful tool and as it gets more powerful, capabilities will increase exponentially. Our goal is to provide reliability to that power. We focus on solving real operational problems and creating real value for your business.",
-      "But power without responsibility is a liability. Every system we integrate has guardrails, evaluation frameworks, and documentation.",
-      "You shouldn't have to choose between AI that works and AI that's safe. The whole point is building systems that earn the trust to be used at scale. That means they're capable enough to make a real difference and reliable enough to trust.",
+      "AI should be capable enough to make a real difference and reliable enough to trust. Every system we integrate ships with guardrails, evaluation frameworks, and documentation. You don't have to choose between AI that works and AI that's safe.",
     ],
   },
   {
     number: "03",
-    heading: "Transparency and integrity",
+    heading: "Transparent",
     paragraphs: [
-      "We believe that this technology will outgrow even what we can envision eventually, in every industry across the world. To this point, there are real risks here for business and even humanity. Our goal is to provide transparent and honest implantation on what and why certain use cases make sense.",
-      "This matters because AI systems make decisions that can affect real people, and the people responsible for those decisions need to be informed on the real risks and on a positive note massive opportunities in this field.",
+      "AI systems make decisions that affect real people. We're honest about what works, what doesn't, and where the real risks are — so you can make informed decisions about what to deploy and how.",
     ],
   },
   {
     number: "04",
-    heading: "Proactive AI",
+    heading: "Built to stay ahead",
     paragraphs: [
-      "We believe Artificial Intelligence is in the midst of transforming from this reactionary technology (AI Chatbots) to a proactive assistant. This transformation has sparked a new way of thinking, along with creating severe limitations that frontier labs are actively solving. Our goal here is to bring this new ideology to how we think and implement.",
-      "1. This means we help you develop the policies, the evaluation frameworks, and the operational processes needed.\n2. Your AI strategy accounts for where regulation is heading, not just where it is today.\n3. It means when your competitors are scrambling to catch up with new requirements, you've already addressed them.",
-      "The companies that get ahead of these problems now are the ones that won't be paying for them later. We'd rather spend time planning than firefighting, and we'd rather help you integrate something right the first time than fix it after it's in production.",
+      "AI is shifting from reactive tools to proactive systems, and regulation is following close behind. We help you build policies, evaluation frameworks, and operational processes that account for where things are heading — not just where they are today.",
     ],
   },
 ];

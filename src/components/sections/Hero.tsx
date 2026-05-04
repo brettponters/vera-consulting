@@ -103,12 +103,8 @@ export default function Hero() {
 
           <Reveal delay={0.55}>
             <p className="font-sans font-normal text-[var(--color-body)] text-lg md:text-xl leading-relaxed max-w-[680px] mb-10">
-              VERA is an AI strategy and implementation consulting company. We
-              believe that this transformative technology will create great
-              opportunity as well as fear. Our goal is to create trust and value
-              by helping teams leverage AI in a way that stays true to their
-              values, reflects the latest research, and delivers real, measurable
-              impact.
+              Strategy, integration, and governance for teams that want AI
+              done right. Research-grounded. Built to hold up in production.
             </p>
           </Reveal>
 
