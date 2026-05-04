@@ -103,8 +103,8 @@ export default function Hero() {
 
           <Reveal delay={0.55}>
             <p className="font-sans font-normal text-[var(--color-body)] text-lg md:text-xl leading-relaxed max-w-[680px] mb-10">
-              Strategy, integration, and governance for teams that want AI
-              done right. Research-grounded. Ready for the real world.
+              AI strategy, integration, and governance. Research-grounded
+              and built for your team.
             </p>
           </Reveal>
 
