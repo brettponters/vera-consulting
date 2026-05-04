@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/Button";
  */
 
 const H1_TEXT =
-  "We help companies integrate AI that's powerful, accountable, and designed to last.";
+  "AI that's powerful, accountable, and designed to last.";
 
 const H1_WORDS = H1_TEXT.split(" ");
 
