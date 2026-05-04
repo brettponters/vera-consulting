@@ -57,17 +57,16 @@ export function Header() {
             />
           </svg>
           <span>VERA</span>
-          <span className="hidden md:inline text-[10px] font-medium tracking-[0.08em] uppercase text-[var(--color-muted)]">
-            Value-Driven, Ethical, Research-Grounded AI
-          </span>
         </Link>
 
-        {/* Nav links — scroll to sections on homepage, link on subpages */}
+        <div className="flex-1" />
+
+        {/* Nav links + CTA — right side */}
         <nav className="hidden md:flex items-center gap-6">
           {[
-            { label: "How We Think", href: "/#how-we-think" },
-            { label: "Research", href: "/#research-backed" },
-            { label: "Our Work", href: "/#testimonials" },
+            { label: "How We Think", href: "/how-we-think" },
+            { label: "Our Work", href: "/our-work" },
+            { label: "Research", href: "/research" },
             { label: "How We Work", href: "/how-we-work" },
           ].map((link) => (
             <Link
@@ -80,12 +79,9 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex-1" />
-
-        {/* Book a call */}
         <Link
           href="/contact"
-          className="ml-auto inline-flex items-center rounded-full bg-[var(--color-accent)] px-5 py-3 md:py-2.5 font-sans text-sm font-medium text-white no-underline transition-opacity duration-150 hover:opacity-90"
+          className="ml-4 inline-flex items-center rounded-full bg-[var(--color-accent)] px-5 py-3 md:py-2.5 font-sans text-sm font-medium text-white no-underline transition-opacity duration-150 hover:opacity-90"
         >
           Book a call
         </Link>
