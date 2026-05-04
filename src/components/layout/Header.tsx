@@ -67,6 +67,7 @@ export function Header() {
           {[
             { label: "How We Think", href: "/#how-we-think" },
             { label: "Research", href: "/#research-backed" },
+            { label: "Our Work", href: "/#testimonials" },
             { label: "How We Work", href: "/how-we-work" },
           ].map((link) => (
             <Link
