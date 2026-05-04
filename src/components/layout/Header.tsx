@@ -57,6 +57,9 @@ export function Header() {
             />
           </svg>
           <span>VERA</span>
+          <span className="hidden md:inline text-[10px] font-medium tracking-[0.08em] uppercase text-[var(--color-muted)]">
+            Value-Driven, Ethical, Research-Grounded AI
+          </span>
         </Link>
 
         <div className="flex-1" />
