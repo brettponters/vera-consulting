@@ -62,6 +62,23 @@ export function Header() {
           </span>
         </Link>
 
+        {/* Nav links — scroll to sections on homepage, link on subpages */}
+        <nav className="hidden md:flex items-center gap-6">
+          {[
+            { label: "How We Think", href: "/#how-we-think" },
+            { label: "Research", href: "/#research-backed" },
+            { label: "How We Work", href: "/how-we-work" },
+          ].map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="font-sans text-sm text-[var(--color-body)] no-underline hover:text-[var(--color-heading)] transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
         <div className="flex-1" />
 
         {/* Book a call */}

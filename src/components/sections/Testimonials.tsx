@@ -37,6 +37,7 @@ const CARDS: CardData[] = [
 export default function Testimonials() {
   return (
     <section
+      id="testimonials"
       aria-label="Client testimonials"
       className="py-16 md:py-24 bg-[var(--color-bg)]"
     >

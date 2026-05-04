@@ -51,7 +51,7 @@ const pillars: Pillar[] = [
 
 export function HowWeThink() {
   return (
-    <section className="py-16 md:py-24 bg-[var(--color-surface)]">
+    <section id="how-we-think" className="py-16 md:py-24 bg-[var(--color-surface)]">
       <Container size="wide">
         <Reveal>
           <Eyebrow className="mb-4">How we think</Eyebrow>
