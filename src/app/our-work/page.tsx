@@ -62,11 +62,6 @@ export default function OurWork() {
               </motion.span>
             </h1>
 
-            <Reveal delay={0.4}>
-              <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
-                Real projects, real outcomes. Here&rsquo;s what we&rsquo;ve shipped.
-              </p>
-            </Reveal>
           </div>
         </Container>
       </section>
