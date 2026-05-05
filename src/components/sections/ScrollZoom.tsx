@@ -1,98 +1,95 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Container } from "@/components/ui/Container";
 
 /**
- * ScrollDraw — neural network.
- * Dots are always visible. Lines fade in as you scroll to the middle,
- * then fade back out as you scroll past.
+ * Interactive pillars — 4 cards you click/tap to expand.
+ * Shows the heading always, reveals the detail on interaction.
  */
 
-const LAYERS = [
-  [{ x: 40, y: 225 }, { x: 40, y: 275 }],
-  [{ x: 160, y: 130 }, { x: 160, y: 210 }, { x: 160, y: 290 }, { x: 160, y: 370 }],
-  [{ x: 300, y: 60 }, { x: 300, y: 140 }, { x: 300, y: 220 }, { x: 300, y: 300 }, { x: 300, y: 380 }, { x: 300, y: 440 }],
-  [{ x: 460, y: 35 }, { x: 460, y: 100 }, { x: 460, y: 165 }, { x: 460, y: 230 }, { x: 460, y: 295 }, { x: 460, y: 360 }, { x: 460, y: 425 }, { x: 460, y: 475 }],
-  [{ x: 620, y: 60 }, { x: 620, y: 140 }, { x: 620, y: 220 }, { x: 620, y: 300 }, { x: 620, y: 380 }, { x: 620, y: 440 }],
-  [{ x: 760, y: 130 }, { x: 760, y: 210 }, { x: 760, y: 290 }, { x: 760, y: 370 }],
-  [{ x: 900, y: 225 }, { x: 900, y: 275 }],
+const PILLARS = [
+  {
+    number: "01",
+    title: "Research-grounded",
+    detail:
+      "Every recommendation traces back to published research, tested benchmarks, or proven production patterns. When we say a model fits your use case or an architecture will scale, we have evidence for it.",
+  },
+  {
+    number: "02",
+    title: "Responsibly powerful",
+    detail:
+      "AI should be capable enough to make a real difference and reliable enough to trust. Every system we integrate ships with guardrails, evaluation frameworks, and documentation. You don't have to choose between AI that works and AI that's safe.",
+  },
+  {
+    number: "03",
+    title: "Transparent",
+    detail:
+      "AI systems make decisions that affect real people. We're honest about what works, what doesn't, and where the real risks are — so you can make informed decisions about what to deploy and how.",
+  },
+  {
+    number: "04",
+    title: "Built to stay ahead",
+    detail:
+      "AI is shifting from reactive tools to proactive systems, and regulation is following close behind. We help you build policies, evaluation frameworks, and operational processes that account for where things are heading — not just where they are today.",
+  },
 ];
 
-function getAllConnections() {
-  const connections: { x1: number; y1: number; x2: number; y2: number; opacity: number }[] = [];
-  for (let l = 0; l < LAYERS.length - 1; l++) {
-    for (const from of LAYERS[l]) {
-      for (const to of LAYERS[l + 1]) {
-        const dist = Math.sqrt((to.x - from.x) ** 2 + (to.y - from.y) ** 2);
-        const op = Math.max(0.08, 0.5 - (dist / 500) * 0.35);
-        connections.push({ x1: from.x, y1: from.y, x2: to.x, y2: to.y, opacity: op });
-      }
-    }
-  }
-  return connections;
-}
-
-const CONNECTIONS = getAllConnections();
-
 export default function ScrollZoom() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  // Lines: fade in → full at middle → fade out
-  const lineOpacity = useTransform(scrollYProgress, [0.15, 0.45, 0.55, 0.85], [0, 1, 1, 0]);
+  const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section
-      ref={ref}
-      className="relative py-8 md:py-12 flex items-center justify-center overflow-hidden bg-[var(--color-bg)]"
-    >
-      <svg
-        viewBox="0 0 940 510"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full max-w-[1000px] h-auto px-4"
-      >
-        {/* Connections — fade in/out on scroll */}
-        <motion.g style={{ opacity: lineOpacity }}>
-          {CONNECTIONS.map((conn, i) => (
-            <line
-              key={`c-${i}`}
-              x1={conn.x1}
-              y1={conn.y1}
-              x2={conn.x2}
-              y2={conn.y2}
-              stroke="#C97B3F"
-              strokeWidth="1.2"
-              opacity={conn.opacity}
-              strokeLinecap="round"
-            />
-          ))}
-        </motion.g>
-
-        {/* Nodes — always visible */}
-        {LAYERS.map((layer, l) =>
-          layer.map((node, n) => {
-            const isEdge = l === 0 || l === LAYERS.length - 1;
-            const isWidest = l === 3;
-            const size = isEdge ? 7 : isWidest ? 4.5 : 5.5;
-            const color = isWidest ? "#6B8775" : "#C97B3F";
+    <section className="py-16 md:py-24 bg-[var(--color-surface)]">
+      <Container size="wide">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {PILLARS.map((pillar, i) => {
+            const isOpen = active === i;
             return (
-              <circle
-                key={`n-${l}-${n}`}
-                cx={node.x}
-                cy={node.y}
-                r={size}
-                fill={color}
-              />
+              <motion.button
+                key={pillar.title}
+                type="button"
+                onClick={() => setActive(isOpen ? null : i)}
+                className="relative text-left rounded-xl border border-[var(--color-hairline)] bg-white p-6 md:p-8 transition-all duration-200 hover:shadow-md cursor-pointer w-full"
+                layout
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex items-baseline gap-4">
+                    <span className="font-mono text-xs tracking-[0.18em] text-[var(--color-accent)]">
+                      {pillar.number}
+                    </span>
+                    <h3 className="font-sans font-semibold text-lg md:text-xl text-[var(--color-heading)]">
+                      {pillar.title}
+                    </h3>
+                  </div>
+                  <span
+                    className="text-[var(--color-muted)] transition-transform duration-200 text-lg shrink-0 mt-1"
+                    style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }}
+                  >
+                    +
+                  </span>
+                </div>
+
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <p className="mt-4 pt-4 border-t border-[var(--color-hairline)] font-sans text-sm md:text-base leading-relaxed text-[var(--color-body)]">
+                        {pillar.detail}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.button>
             );
-          })
-        )}
-      </svg>
+          })}
+        </div>
+      </Container>
     </section>
   );
 }
