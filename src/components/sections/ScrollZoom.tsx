@@ -23,19 +23,19 @@ export default function ScrollZoom() {
   return (
     <section
       ref={ref}
-      className="relative py-24 md:py-40 bg-[#0F0F10] overflow-hidden"
+      className="relative py-24 md:py-40 bg-[var(--color-surface)] overflow-hidden"
     >
       <motion.div
         style={{ scale, opacity }}
         className="mx-auto max-w-[1000px] px-6 md:px-10 text-center"
       >
         <p
-          className="font-sans font-bold text-white leading-[1.1] tracking-[-0.03em]"
+          className="font-sans font-bold text-[var(--color-heading)] leading-[1.1] tracking-[-0.03em]"
           style={{ fontSize: "clamp(1.75rem, 5vw, 4rem)" }}
         >
           Most AI projects fail because someone skipped the part that matters.
         </p>
-        <p className="mt-6 font-sans text-base md:text-lg text-white/60 max-w-[540px] mx-auto leading-relaxed">
+        <p className="mt-6 font-sans text-base md:text-lg text-[var(--color-muted)] max-w-[540px] mx-auto leading-relaxed">
           We don&rsquo;t skip it.
         </p>
       </motion.div>
