@@ -14,7 +14,8 @@
   --color-sage:      #6B8775;
 
   /* Typography */
-  --font-sans: var(--font-geist);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-instrument);
 }
 
 /* ─── CSS custom properties (for non-Tailwind contexts) ─────────────────── */
@@ -53,7 +54,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   color: var(--color-heading);
   line-height: 1.15;
   font-weight: 600;

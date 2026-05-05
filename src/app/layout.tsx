@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { geist } from "./fonts";
+import { dmSans, instrumentSans } from "./fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { EditMode } from "@/components/ui/EditMode";
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" className={`${instrumentSans.variable} ${dmSans.variable}`}>
       <body>
         <Header />
         <main>{children}</main>
