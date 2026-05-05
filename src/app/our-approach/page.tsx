@@ -51,7 +51,7 @@ export default function HowWeThinkPage() {
         <Container size="wide" className="relative z-10">
           <div className="max-w-[760px]">
             <Reveal>
-              <Eyebrow className="mb-5">How we think &amp; work</Eyebrow>
+              <Eyebrow className="mb-5">Our approach</Eyebrow>
             </Reveal>
 
             <h1
