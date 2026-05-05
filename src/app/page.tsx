@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import IndustriesMarquee from "@/components/sections/IndustriesMarquee";
 import ScrollZoom from "@/components/sections/ScrollZoom";
 import WhatWeDo from "@/components/sections/WhatWeDo";
+import Testimonials from "@/components/sections/Testimonials";
 import { BookACall } from "@/components/sections/BookACall";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <IndustriesMarquee />
       <ScrollZoom />
       <WhatWeDo />
+      <Testimonials />
       <BookACall />
     </>
   );
