@@ -4,8 +4,8 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 /**
- * ScrollZoom — a bold statement that scales up as you scroll into it.
- * Creates a cinematic "zooming in" feel.
+ * ScrollStat — one massive number that scroll-reveals into view.
+ * Takes up the viewport. Makes you stop.
  */
 export default function ScrollZoom() {
   const ref = useRef<HTMLDivElement>(null);
@@ -15,30 +15,29 @@ export default function ScrollZoom() {
     offset: ["start end", "end start"],
   });
 
-  // Scale from 0.85 → 1 as it enters view
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.85, 1]);
-  // Fade in
-  const opacity = useTransform(scrollYProgress, [0, 0.35], [0, 1]);
+  const opacity = useTransform(scrollYProgress, [0.1, 0.35], [0, 1]);
+  const y = useTransform(scrollYProgress, [0.1, 0.4], [60, 0]);
+  const captionOpacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1]);
 
   return (
     <section
       ref={ref}
-      className="relative py-24 md:py-40 bg-[var(--color-surface)] overflow-hidden"
+      className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center bg-[var(--color-bg)]"
     >
-      <motion.div
-        style={{ scale, opacity }}
-        className="mx-auto max-w-[1000px] px-6 md:px-10 text-center"
-      >
-        <p
-          className="font-sans font-bold text-[var(--color-heading)] leading-[1.1] tracking-[-0.03em]"
-          style={{ fontSize: "clamp(1.75rem, 5vw, 4rem)" }}
+      <div className="text-center px-6">
+        <motion.p
+          style={{ opacity, y, fontSize: "clamp(6rem, 20vw, 14rem)" }}
+          className="font-sans font-bold text-[var(--color-heading)] tracking-[-0.04em] leading-none"
         >
-          Most AI projects fail because someone skipped the part that matters.
-        </p>
-        <p className="mt-6 font-sans text-base md:text-lg text-[var(--color-muted)] max-w-[540px] mx-auto leading-relaxed">
-          We don&rsquo;t skip it.
-        </p>
-      </motion.div>
+          42%
+        </motion.p>
+        <motion.p
+          style={{ opacity: captionOpacity }}
+          className="mt-6 font-sans text-base md:text-lg text-[var(--color-muted)] max-w-[480px] mx-auto"
+        >
+          of AI agents fail within 10 steps in production.
+        </motion.p>
+      </div>
     </section>
   );
 }
