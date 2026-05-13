@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VERA — AI Strategy Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #C97B3F;
+      --heading: #050507;
+      --body: #0F0F10;
+      --muted: #5C5C66;
+      --surface: #FAFAF7;
+      --hairline: #E6E6EA;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @page { size: letter; margin: 0; }
+
+    body {
+      font-family: 'Geist', -apple-system, 'SF Pro Display', system-ui, sans-serif;
+      color: var(--body);
+      background: white;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      padding: 0.4in 0.6in;
+      margin: 0 auto;
+      position: relative;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .page:last-child { page-break-after: avoid; }
+
+    /* ─── Page header ─── */
+    .ph {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 8px; border-bottom: 1px solid var(--hairline);
+      margin-bottom: 20px; flex-shrink: 0;
+    }
+    .ph-left { display: flex; align-items: center; gap: 7px; }
+    .ph-left svg { height: 14px; width: auto; }
+    .ph-word { font-weight: 700; font-size: 11px; color: var(--heading); letter-spacing: 0.06em; }
+    .ph-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--accent); }
+    .ph-right { font-size: 7.5px; font-weight: 500; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    /* ─── Page footer ─── */
+    .pf {
+      margin-top: auto; padding-top: 6px; border-top: 1px solid var(--hairline);
+      display: flex; justify-content: space-between;
+      font-size: 7px; color: var(--muted); letter-spacing: 0.04em;
+      text-transform: uppercase; flex-shrink: 0;
+    }
+
+    /* ─── Reusable ─── */
+    .eyebrow {
+      font-weight: 600; font-size: 8px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+    }
+    .rule { width: 28px; height: 2px; background: var(--accent); border: none; border-radius: 1px; margin-bottom: 14px; }
+
+    /* ═══════════ COVER ═══════════ */
+    .cover { background: white; position: relative; }
+
+    .cover-watermark {
+      position: absolute; top: -60px; right: -40px;
+      width: 480px; height: 600px; pointer-events: none; z-index: 0;
+    }
+
+    .cover-top {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 0.4in; position: relative; z-index: 1;
+    }
+    .cover-top svg { height: 24px; width: auto; }
+    .cover-top-word { font-weight: 700; font-size: 16px; color: var(--heading); letter-spacing: 0.06em; }
+    .cover-top-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+
+    .cover-body {
+      flex: 1; display: flex; flex-direction: column;
+      justify-content: center; position: relative; z-index: 1;
+    }
+    .cover-eyebrow {
+      font-weight: 600; font-size: 10px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+    }
+    .cover h1 {
+      font-weight: 700; font-size: 42px; color: var(--heading);
+      letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px;
+    }
+    .cover-desc {
+      font-size: 14px; line-height: 1.65; color: var(--muted);
+      max-width: 4.5in; margin-bottom: 40px;
+    }
+    .cover-meta { display: flex; gap: 40px; }
+    .cover-meta-item {
+      font-size: 9px; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .cover-meta-val {
+      font-size: 12px; font-weight: 600; color: var(--heading);
+      letter-spacing: 0; text-transform: none; margin-top: 3px;
+    }
+    .cover-bottom {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      border-top: 1px solid var(--hairline); padding-top: 14px;
+      position: relative; z-index: 1;
+    }
+    .cover-bottom-left { font-size: 9px; color: var(--muted); letter-spacing: 0.04em; }
+    .cover-bottom-right { font-size: 11px; font-weight: 600; color: var(--accent); }
+
+    /* ═══════════ CONTENT ═══════════ */
+
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .cols-asymmetric { display: grid; grid-template-columns: 3fr 2fr; gap: 28px; }
+
+    /* Large stat */
+    .big-stat { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--hairline); }
+    .big-stat:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .big-stat-num { font-weight: 700; font-size: 38px; color: var(--accent); letter-spacing: -0.03em; line-height: 1; }
+    .big-stat-label { font-size: 9.5px; font-weight: 500; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+    .big-stat-source { font-size: 7px; color: var(--muted); margin-top: 2px; font-style: italic; }
+
+    /* Section subhead */
+    .subhead {
+      font-weight: 600; font-size: 11px; color: var(--heading);
+      margin-bottom: 5px; margin-top: 12px; letter-spacing: -0.01em;
+    }
+    .subhead:first-child { margin-top: 0; }
+
+    /* Body text */
+    .bt { font-size: 10.5px; line-height: 1.6; color: var(--body); margin-bottom: 0; }
+
+    /* Numbered item */
+    .ni { padding: 18px 0; border-bottom: 1px solid var(--hairline); }
+    .ni:last-child { border-bottom: none; }
+    .ni-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+    .ni-num { font-weight: 700; font-size: 10px; color: var(--accent); letter-spacing: 0.06em; flex-shrink: 0; }
+    .ni-title { font-weight: 600; font-size: 13.5px; color: var(--heading); }
+    .ni-text { font-size: 11px; line-height: 1.55; color: var(--body); padding-left: 28px; }
+
+    /* Service */
+    .svc { padding: 16px 0; border-bottom: 1px solid var(--hairline); }
+    .svc:last-child { border-bottom: none; }
+    .svc-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 5px; }
+    .svc-num { font-weight: 700; font-size: 24px; color: var(--hairline); line-height: 1; flex-shrink: 0; }
+    .svc-title { font-weight: 600; font-size: 13px; color: var(--heading); }
+    .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .svc-desc { font-size: 10px; line-height: 1.55; color: var(--body); }
+    .svc-inc-label { font-size: 7px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+    .svc-inc { font-size: 9.5px; color: var(--body); line-height: 1.6; }
+
+    /* Process step */
+    .step { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+    .step:last-child { border-bottom: none; }
+    .step-num { font-weight: 700; font-size: 32px; color: var(--accent); line-height: 1; text-align: right; padding-top: 2px; }
+    .step-title { font-weight: 600; font-size: 15px; color: var(--heading); margin-bottom: 6px; }
+    .step-desc { font-size: 11.5px; line-height: 1.6; color: var(--body); margin-bottom: 8px; }
+    .step-detail-row { display: flex; flex-wrap: wrap; gap: 3px 14px; }
+    .step-detail { font-size: 9px; color: var(--muted); font-weight: 500; }
+
+    /* ─── Print / Screen ─── */
+    @media print { body { background: white; } }
+    @media screen {
+      body { background: #E8E8E8; padding: 40px 0; }
+      .page {
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        border-radius: 4px; background: white; margin-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ PAGE 1: COVER ═══════════ -->
+<div class="page cover">
+  <svg class="cover-watermark" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 100 0 L 200 380 L 300 0" stroke="#C97B3F" stroke-width="56"
+          stroke-linecap="round" stroke-linejoin="round" opacity="0.07" />
+  </svg>
+  <div class="cover-top">
+    <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 0 0 L 180 540 L 360 0" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="cover-top-word">VERA</span>
+    <span class="cover-top-dot"></span>
+  </div>
+  <div class="cover-body">
+    <div class="cover-eyebrow">Strategy Guide</div>
+    <h1>AI Strategy,<br/>Integration &<br/>Governance</h1>
+    <p class="cover-desc">A comprehensive guide to how we help companies adopt AI that's powerful, accountable, and designed to last. From risk assessment to policy development to hands-on execution.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item">Prepared by<div class="cover-meta-val">VERA Consulting</div></div>
+      <div class="cover-meta-item">Date<div class="cover-meta-val">May 2026</div></div>
+      <div class="cover-meta-item">Classification<div class="cover-meta-val">General Distribution</div></div>
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <span class="cover-bottom-left">AI Consulting &middot; Public Benefit Corporation</span>
+    <a href="https://veraconsulting.co" class="cover-bottom-right">veraconsulting.co</a>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 2: THE AI LANDSCAPE ═══════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="ph-left">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 L 180 540 L 360 0" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ph-word">VERA</span><span class="ph-dot"></span>
+    </div>
+    <span class="ph-right">AI Strategy Guide</span>
+  </div>
+
+  <div class="eyebrow">The AI Landscape</div>
+  <h2 style="font-size: 22px; font-weight: 700; color: var(--heading); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 6px;">The adoption is here. The infrastructure isn't.</h2>
+  <hr class="rule" />
+
+  <div class="cols-asymmetric">
+    <div style="display: flex; flex-direction: column; gap: 36px;">
+      <div>
+        <div class="subhead">Adoption has outpaced readiness</div>
+        <p class="bt">88% of organizations now use AI regularly in at least one business function. 92% of Fortune 500 companies have deployed generative AI across their operations. But only 25% have governance frameworks robust enough to match that pace.</p>
+      </div>
+      <div>
+        <div class="subhead">The governance gap is real</div>
+        <p class="bt">AI adoption has outrun AI governance by 58 percentage points — the widest enterprise adoption-to-governance gap on record. 78% of executives say they lack confidence their company could pass an independent AI governance audit within 90 days.</p>
+      </div>
+      <div>
+        <div class="subhead">Regulation is accelerating</div>
+        <p class="bt">The EU AI Act is in effect. U.S. states are passing AI-specific legislation. The SEC has issued disclosure guidance. NIST has published its AI Risk Management Framework. FTC enforcement actions are increasing. Companies that built without governance are retrofitting under pressure.</p>
+      </div>
+      <div>
+        <div class="subhead">The gap is widening</div>
+        <p class="bt">McKinsey identifies a small group of "AI high performers" (roughly 6% of companies) that attribute more than 5% of EBIT to AI. These organizations are 2.8x more likely to have fundamentally redesigned their workflows around AI, not just layered it on top.</p>
+      </div>
+      <div>
+        <div class="subhead">What this means for you</div>
+        <p class="bt">The question isn't whether to adopt AI. That decision has already been made. The question is whether your organization is structured to use it well, govern it properly, and adapt as everything changes. That's what VERA helps with.</p>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 36px;">
+      <div class="big-stat">
+        <div class="big-stat-num">88%</div>
+        <div class="big-stat-label">of organizations use AI regularly in at least one business function</div>
+        <div class="big-stat-source">McKinsey, 2026</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">92%</div>
+        <div class="big-stat-label">of Fortune 500 companies have deployed generative AI</div>
+        <div class="big-stat-source">Fortune, 2026</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">25%</div>
+        <div class="big-stat-label">have governance frameworks robust enough to match adoption pace</div>
+        <div class="big-stat-source">Grant Thornton, 2026</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">78%</div>
+        <div class="big-stat-label">of executives lack confidence they could pass an AI governance audit</div>
+        <div class="big-stat-source">Grant Thornton, 2026</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-num">$2.5T</div>
+        <div class="big-stat-label">global AI spending in 2026, up 44% year-over-year</div>
+        <div class="big-stat-source">Gartner, 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top: 2px solid var(--hairline); padding-top: 14px; margin-top: 42px;">
+    <div class="cols">
+      <div>
+        <div class="subhead" style="margin-top: 0;">Where the impact hits hardest</div>
+        <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin-bottom: 0;">Financial services, healthcare, legal, insurance, HR, manufacturing, and customer experience are seeing the fastest AI-driven transformation. Companies in regulated industries face the most pressure to get governance right before scaling. The organizations that move first on governance will set the standard for their industries.</p>
+      </div>
+      <div>
+        <div class="subhead" style="margin-top: 0;">The high performer gap</div>
+        <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin-bottom: 0;">Only 25% of organizations have moved at least 40% of their AI experiments into production. What separates the leaders: they redesigned workflows around AI rather than layering it onto existing processes. They invested in governance early, not after problems emerged. The gap between leaders and everyone else is accelerating.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>VERA Consulting</span>
+    <span>veraconsulting.co</span>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 3: KEY RISKS ═══════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="ph-left">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 L 180 540 L 360 0" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ph-word">VERA</span><span class="ph-dot"></span>
+    </div>
+    <span class="ph-right">AI Strategy Guide</span>
+  </div>
+
+  <div class="eyebrow">Key Risks</div>
+  <h2 style="font-size: 22px; font-weight: 700; color: var(--heading); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 6px;">Where AI adoption goes wrong.</h2>
+  <hr class="rule" />
+
+  <!-- Intro with stat callout -->
+  <div style="display: grid; grid-template-columns: 1fr 160px; gap: 24px; margin-bottom: 14px;">
+    <p class="bt" style="margin-bottom: 0;">Most AI failures aren't technical. They're organizational. These are the six areas where we see companies get caught off guard.</p>
+    <div style="text-align: right;">
+      <div style="font-weight: 700; font-size: 36px; color: var(--accent); letter-spacing: -0.03em; line-height: 1;">58pt</div>
+      <div style="font-size: 9px; color: var(--muted); margin-top: 4px; line-height: 1.4;">gap between AI adoption<br/>and governance readiness</div>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div>
+      <div class="ni">
+        <div class="ni-header"><span class="ni-num">01</span><span class="ni-title">Bias & Fairness</span></div>
+        <div class="ni-text">AI systems inherit and amplify biases from training data. In hiring, lending, healthcare, and insurance, this leads to discriminatory outcomes that create legal exposure and erode public trust.</div>
+      </div>
+      <div class="ni">
+        <div class="ni-header"><span class="ni-num">02</span><span class="ni-title">Hallucination & Accuracy</span></div>
+        <div class="ni-text">Large language models produce confident outputs that can be factually wrong. Without validation pipelines, incorrect information enters your workflows and corrupts downstream decision-making.</div>
+      </div>
+      <div class="ni">
+        <div class="ni-header"><span class="ni-num">03</span><span class="ni-title">Data Privacy & Security</span></div>
+        <div class="ni-text">AI creates new attack surfaces — from prompt injection to training data extraction — that traditional security frameworks weren't designed to address. Compliance with GDPR, CCPA, and HIPAA requires AI-specific controls.</div>
+      </div>
+    </div>
+    <div>
+      <div class="ni">
+        <div class="ni-header"><span class="ni-num">04</span><span class="ni-title">Regulatory Exposure</span></div>
+        <div class="ni-text">What's compliant today may not be compliant next quarter. The EU AI Act, state-level legislation, and FTC enforcement are accelerating. Retroactive compliance costs significantly more than building it in from the start.</div>
+      </div>
+      <div class="ni">
+        <div class="ni-header"><span class="ni-num">05</span><span class="ni-title">Workforce Disruption</span></div>
+        <div class="ni-text">Without a transition plan, AI adoption creates friction and talent gaps instead of productivity gains. Organizations that invest in change management see 3x higher adoption rates.</div>
+      </div>
+      <div class="ni">
+        <div class="ni-header"><span class="ni-num">06</span><span class="ni-title">Vendor Lock-in</span></div>
+        <div class="ni-text">Architecture decisions made today determine your flexibility for years. Committing to a single vendor without proper evaluation is expensive to undo and often requires rebuilding from scratch.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pull quote accent -->
+  <div style="display: flex; gap: 14px; align-items: stretch; margin: 24px 0 16px 0; padding: 0;">
+    <div style="width: 3px; background: var(--accent); border-radius: 2px; flex-shrink: 0;"></div>
+    <p style="font-size: 11px; font-weight: 500; font-style: italic; color: var(--heading); line-height: 1.5; margin: 0; padding: 4px 0;">"The companies that get AI right aren't the ones that move fastest. They're the ones that build the governance to sustain it."</p>
+  </div>
+
+  <div style="border-top: 2px solid var(--hairline); padding-top: 16px; margin-top: 0;">
+    <div class="cols">
+      <div>
+        <div class="subhead" style="margin-top: 0;">How we address these risks</div>
+        <p class="bt">We identify which risks are most relevant to your organization and build the governance, policies, and evaluation systems to manage them. Every assessment includes specific mitigation recommendations tied to your operations.</p>
+      </div>
+      <div>
+        <div class="subhead" style="margin-top: 0;">Regulatory frameworks we track</div>
+        <p class="bt">EU AI Act, NIST AI Risk Management Framework, state-level AI legislation (CO, IL, TX, CA), SEC AI disclosure guidance, FTC enforcement precedent, HIPAA AI provisions, SOC 2 AI controls, ISO/IEC 42001. Monitored continuously.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>VERA Consulting</span>
+    <span>veraconsulting.co</span>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 4: SERVICES ═══════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="ph-left">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 L 180 540 L 360 0" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ph-word">VERA</span><span class="ph-dot"></span>
+    </div>
+    <span class="ph-right">AI Strategy Guide</span>
+  </div>
+
+  <div class="eyebrow">Services</div>
+  <h2 style="font-size: 22px; font-weight: 700; color: var(--heading); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 6px;">What we offer.</h2>
+  <hr class="rule" />
+
+  <div class="svc">
+    <div class="svc-header"><span class="svc-num">01</span><span class="svc-title">AI Strategy</span></div>
+    <div class="svc-grid">
+      <p class="svc-desc">We assess what's feasible, map it to your infrastructure, and build the plan. Not a generic roadmap — a strategy built around your business, your constraints, and where AI is heading in 12, 24, and 36 months.</p>
+      <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Feasibility assessment, architecture planning, vendor evaluation, evaluation criteria, implementation timeline, resource planning</p></div>
+    </div>
+  </div>
+
+  <div class="svc">
+    <div class="svc-header"><span class="svc-num">02</span><span class="svc-title">AI Integration</span></div>
+    <div class="svc-grid">
+      <p class="svc-desc">AI woven into your workflows at a foundational level — not bolted on as a feature. We handle technical implementation, data pipelines, and change management so your team actually adopts it.</p>
+      <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Workflow design, system integration, data pipeline architecture, performance monitoring, change management, team onboarding</p></div>
+    </div>
+  </div>
+
+  <div class="svc">
+    <div class="svc-header"><span class="svc-num">03</span><span class="svc-title">AI Governance</span></div>
+    <div class="svc-grid">
+      <p class="svc-desc">Policies, evaluation frameworks, and operational processes designed for where regulation is heading — not just where it is today. Compliant now, adaptable as the landscape shifts.</p>
+      <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Acceptable use policies, data handling protocols, model evaluation criteria, bias testing procedures, incident response, vendor assessment, compliance mapping</p></div>
+    </div>
+  </div>
+
+  <div class="svc">
+    <div class="svc-header"><span class="svc-num">04</span><span class="svc-title">Training & Enablement</span></div>
+    <div class="svc-grid">
+      <p class="svc-desc">Hands-on training tailored to your industry, your tools, and the specific roles in your organization. From C-suite briefings to technical workshops on prompt engineering and tool evaluation.</p>
+      <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Executive AI briefings, team workshops, AI literacy programs, best practices documentation, ongoing enablement support</p></div>
+    </div>
+  </div>
+
+  <div class="svc" style="border-bottom: none;">
+    <div class="svc-header"><span class="svc-num">05</span><span class="svc-title">Policy Development</span></div>
+    <div class="svc-grid">
+      <p class="svc-desc">Standalone policy engagements — practical, enforceable, and aligned with current and emerging regulation. Policies your team can actually follow, not shelf documents that collect dust.</p>
+      <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Acceptable use policy, data governance policy, model evaluation standards, human oversight requirements, vendor management protocols</p></div>
+    </div>
+  </div>
+
+  <!-- Visual accent — key differentiators -->
+  <div style="display: flex; gap: 14px; align-items: stretch; margin: 12px 0 0 0; padding: 0;">
+    <div style="width: 3px; background: var(--accent); border-radius: 2px; flex-shrink: 0;"></div>
+    <p style="font-size: 10.5px; font-weight: 500; color: var(--heading); line-height: 1.55; margin: 0; padding: 4px 0;">Research-grounded recommendations &nbsp;&middot;&nbsp; No handoffs to junior teams &nbsp;&middot;&nbsp; Full documentation &amp; knowledge transfer &nbsp;&middot;&nbsp; 30-day post-engagement support</p>
+  </div>
+
+  <div style="border-top: 2px solid var(--hairline); padding-top: 14px; margin-top: 16px;">
+    <div class="cols">
+      <div>
+        <div class="subhead" style="margin-top: 0;">Our approach</div>
+        <p class="bt">Every recommendation traces back to published research, tested benchmarks, or proven production patterns. If something isn't a fit, we'll tell you before you spend a dollar on it.</p>
+      </div>
+      <div>
+        <div class="subhead" style="margin-top: 0;">Every engagement includes</div>
+        <p class="bt">Dedicated point of contact with direct access to senior consultants. Full documentation, complete knowledge transfer, and post-engagement support. We take a small number of engagements so each gets the attention it deserves.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>VERA Consulting</span>
+    <span>veraconsulting.co</span>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 5: PROCESS + CONTACT ═══════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="ph-left">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 L 180 540 L 360 0" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ph-word">VERA</span><span class="ph-dot"></span>
+    </div>
+    <span class="ph-right">AI Strategy Guide</span>
+  </div>
+
+  <div class="eyebrow">Process</div>
+  <h2 style="font-size: 22px; font-weight: 700; color: var(--heading); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 6px;">How an engagement works.</h2>
+  <hr class="rule" />
+  <!-- Intro with timeline sidebar -->
+  <div style="display: grid; grid-template-columns: 1fr 170px; gap: 28px; margin-bottom: 16px;">
+    <p class="bt" style="margin-bottom: 0;">Every engagement follows a structured, transparent process. You'll know what we're doing, why, and what you'll have at the end.</p>
+    <div style="border-left: 2px solid var(--accent); padding-left: 14px;">
+      <div style="font-size: 7px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Typical Timeline</div>
+      <div style="font-size: 9.5px; color: var(--body); line-height: 1.8;">
+        <div><span style="font-weight: 600;">Assessment</span> &mdash; 2-3 weeks</div>
+        <div><span style="font-weight: 600;">Scope of Work</span> &mdash; 1 week</div>
+        <div><span style="font-weight: 600;">Execution</span> &mdash; 4-12 weeks</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div>
+      <div class="step-title">Assessment</div>
+      <div class="step-desc">We start by understanding where you are — infrastructure, AI maturity, goals, and constraints. We evaluate what's working, what's not, and where AI can create real value. The strategy we build is only as good as our understanding of your reality.</div>
+      <div class="step-detail-row">
+        <span class="step-detail">Infrastructure review</span>
+        <span class="step-detail">Stakeholder interviews</span>
+        <span class="step-detail">Data readiness</span>
+        <span class="step-detail">Risk identification</span>
+        <span class="step-detail">Competitive landscape</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div>
+      <div class="step-title">Scope of Work</div>
+      <div class="step-desc">We define exactly what we'll deliver, when, and what success looks like. Every scope of work includes measurable success criteria. We typically present two or three options at different levels of depth so you can choose the engagement that fits your budget and timeline.</div>
+      <div class="step-detail-row">
+        <span class="step-detail">Defined deliverables</span>
+        <span class="step-detail">Timeline and milestones</span>
+        <span class="step-detail">Resource requirements</span>
+        <span class="step-detail">Success criteria</span>
+        <span class="step-detail">Investment summary</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" style="border-bottom: none;">
+    <div class="step-num">3</div>
+    <div>
+      <div class="step-title">Execution</div>
+      <div class="step-desc">We do the work — strategy, integration, governance, training, whatever the scope calls for. Regular updates, full documentation, no lock-in. When we're done, you own everything we built. Every engagement includes a 30-day post-completion support window.</div>
+      <div class="step-detail-row">
+        <span class="step-detail">Weekly check-ins</span>
+        <span class="step-detail">Progress reporting</span>
+        <span class="step-detail">Full documentation</span>
+        <span class="step-detail">Knowledge transfer</span>
+        <span class="step-detail">Post-engagement support</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vision + What to expect -->
+  <div style="border-top: 2px solid var(--hairline); margin-top: 16px; padding-top: 14px;">
+    <div class="cols">
+      <div>
+        <div class="eyebrow" style="margin-bottom: 6px;">Our Vision</div>
+        <p style="font-size: 10.5px; line-height: 1.55; font-style: italic; color: var(--heading);">"I started VERA because AI is going to change the workforce at an unprecedented pace, and many companies are not prepared for it. We believe in using AI to strengthen human capabilities and being transparent about both the risks and the opportunities ahead."</p>
+        <p style="font-size: 9px; font-weight: 600; color: var(--heading); margin-top: 6px;">Brett Ponters, Founder</p>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom: 6px;">What to expect</div>
+        <p class="bt">Direct access to senior consultants. No handoffs to junior teams. Transparent pricing with no hidden fees. Weekly progress reports. Everything we build, you own.</p>
+        <p class="bt" style="margin-top: 8px;">VERA is incorporated as a Public Benefit Corporation. A fixed percentage of every dollar we earn goes to independent AI safety research.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact strip -->
+  <div style="border-top: 1px solid var(--hairline); margin-top: 12px; padding-top: 12px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;">
+      <div style="padding-right: 20px;">
+        <div style="font-size: 7px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Contact</div>
+        <div style="font-size: 12px; font-weight: 600; color: var(--heading);">Brett Ponters</div>
+        <div style="font-size: 9px; color: var(--muted); margin-top: 1px;">Founder</div>
+      </div>
+      <div style="padding: 0 20px; border-left: 1px solid var(--hairline);">
+        <div style="font-size: 7px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Email &amp; Phone</div>
+        <a href="mailto:brett@veraconsulting.co" style="font-size: 11px; color: var(--accent); font-weight: 500;">brett@veraconsulting.co</a>
+        <div style="font-size: 10px; color: var(--body); margin-top: 2px;">561-900-8182</div>
+      </div>
+      <div style="padding-left: 20px; border-left: 1px solid var(--hairline);">
+        <div style="font-size: 7px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Web</div>
+        <a href="https://veraconsulting.co" style="font-size: 11px; color: var(--accent); font-weight: 600;">veraconsulting.co</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>VERA Consulting</span>
+    <span>veraconsulting.co</span>
+  </div>
+</div>
+
+</body>
+</html>
