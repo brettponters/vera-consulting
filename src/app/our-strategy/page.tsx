@@ -181,11 +181,6 @@ export default function OurStrategy() {
             <Reveal delay={0.1}>
               <div>
                 <Eyebrow className="mb-5">What to expect</Eyebrow>
-                <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] mb-6">
-                  Direct access to senior consultants. No handoffs to junior
-                  teams. Transparent pricing with no hidden fees. Weekly
-                  progress reports. Everything we build, you own.
-                </p>
                 <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)]">
                   VERA is incorporated as a Public Benefit Corporation. A fixed
                   percentage of every dollar we earn goes to independent AI
