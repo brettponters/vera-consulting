@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VERA — AI Strategy, Integration & Governance</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
+
+    :root {
+      --accent: #C97B3F;
+      --heading: #050507;
+      --body: #0F0F10;
+      --muted: #5C5C66;
+      --surface: #FAFAF7;
+      --hairline: #E6E6EA;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Geist', -apple-system, 'SF Pro Display', system-ui, sans-serif;
+      color: var(--body);
+      background: white;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      padding: 0.6in 0.7in;
+      margin: 0 auto;
+      position: relative;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page:last-child { page-break-after: avoid; }
+
+    /* ─── Header ─── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.22in;
+      padding-bottom: 0.1in;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo svg { height: 28px; width: auto; }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--heading);
+      letter-spacing: 0.06em;
+    }
+
+    .logo-dot {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-left: 6px;
+      position: relative;
+      top: -1px;
+    }
+
+    .logo-sub {
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 10px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .header-right a {
+      color: var(--body);
+      transition: color 0.15s;
+    }
+
+    .header-right a:hover {
+      color: var(--accent);
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      margin-bottom: 0.2in;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 30px;
+      color: var(--heading);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      max-width: 5.5in;
+      color: var(--body);
+    }
+
+    /* ─── Section titles ─── */
+    .section-title {
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    /* ─── Services grid ─── */
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 0.2in;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .service-card h3 {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--heading);
+      margin-bottom: 6px;
+    }
+
+    .service-card p {
+      font-size: 11px;
+      line-height: 1.55;
+      color: var(--body);
+    }
+
+    /* ─── Pillars ─── */
+    .pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 0.18in;
+    }
+
+    .pillar {
+      border: 1px solid var(--hairline);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .pillar-num {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 3px;
+    }
+
+    .pillar h4 {
+      font-weight: 600;
+      font-size: 12.5px;
+      color: var(--heading);
+      margin-bottom: 4px;
+    }
+
+    .pillar p {
+      font-size: 10px;
+      line-height: 1.5;
+      color: var(--body);
+    }
+
+    /* ─── Our Story ─── */
+    .story-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding-top: 0.15in;
+      margin-bottom: 0.15in;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .story-photo {
+      width: 95px;
+      height: 95px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .story-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transform: rotate(2deg) scale(1.05);
+    }
+
+    .story-photo span {
+      font-size: 9px;
+      color: var(--muted);
+    }
+
+    .story-text {
+      flex: 1;
+    }
+
+    .story-text p {
+      font-size: 11px;
+      line-height: 1.55;
+      color: var(--body);
+    }
+
+    /* ─── CTA ─── */
+    .cta {
+      margin-top: auto;
+      padding-top: 0.12in;
+      border-top: 1px solid var(--hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cta-left h3 {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--heading);
+      margin-bottom: 3px;
+    }
+
+    .cta-left p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .cta-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 10px 24px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-links {
+      text-align: right;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .cta-links a {
+      color: var(--body);
+    }
+
+    .cta-links .url {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--accent);
+    }
+
+    /* ─── Back page ─── */
+    .back-page {
+      background: var(--surface);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .back-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .back-wordmark {
+      font-weight: 700;
+      font-size: 42px;
+      color: var(--heading);
+      letter-spacing: 0.06em;
+    }
+
+    .back-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-left: 8px;
+      position: relative;
+      top: -2px;
+    }
+
+    .back-tagline {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .back-url {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--accent);
+      margin-top: 8px;
+    }
+
+    /* ─── Print tweaks ─── */
+    @media print {
+      body { background: white; }
+    }
+
+    /* ─── Screen preview ─── */
+    @media screen {
+      body {
+        background: #E8E8E8;
+        padding: 40px 0;
+      }
+      .page {
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        border-radius: 4px;
+        background: white;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0 0 L 180 540 L 360 0" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <div class="logo-text">VERA<span class="logo-dot"></span></div>
+        <div class="logo-sub">Value-Driven, Ethical, Research-Grounded AI</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <a href="https://veraconsulting.co">veraconsulting.co</a><br/>
+      <a href="mailto:brett@veraconsulting.co">brett@veraconsulting.co</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>AI that's powerful, accountable,<br/>and designed to last.</h1>
+    <p>VERA is an AI consulting firm. We help companies figure out where AI fits, integrate it into their operations, and make sure it holds up over time. Strategy, integration, and governance, done right.</p>
+  </div>
+
+  <!-- What we do -->
+  <div class="section-title">What we do</div>
+  <div class="services">
+    <div class="service-card">
+      <h3>Strategy</h3>
+      <p>We assess what's feasible, map it to your infrastructure, and write the plan. Architecture, evaluation criteria, governance, and timeline.</p>
+    </div>
+    <div class="service-card">
+      <h3>Integration</h3>
+      <p>We help AI integrate into your processes seamlessly. Foundationally built to scale through time.</p>
+    </div>
+    <div class="service-card">
+      <h3>Governance</h3>
+      <p>Policies, evaluation frameworks, and operational processes that account for where regulation is heading, not just where it is today.</p>
+    </div>
+  </div>
+
+  <!-- Pillars -->
+  <div class="section-title">What we hold to</div>
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <h4>Research-grounded</h4>
+      <p>Every recommendation traces back to published research, tested benchmarks, or proven production patterns.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <h4>Responsibly powerful</h4>
+      <p>AI that's capable enough to make a real difference and reliable enough to trust.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <h4>Transparent</h4>
+      <p>We're honest about what works, what doesn't, and where the real risks are so you can make informed decisions.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">04</div>
+      <h4>Built to stay ahead</h4>
+      <p>We plan for where AI and regulation are heading, not just where they are today.</p>
+    </div>
+  </div>
+
+  <!-- Our Story -->
+  <div class="story-section">
+    <div class="story-photo">
+      <img src="headshot.jpg" alt="Brett Ponters" />
+    </div>
+    <div class="story-text">
+      <div class="section-title" style="margin-bottom: 6px;">Our Vision</div>
+      <p>"I started VERA because AI is going to change the workforce at an unprecedented pace, and many companies are not prepared for it. We believe in using AI to strengthen human capabilities and being transparent about both the risks and the opportunities ahead."</p>
+      <p style="font-size: 10px; font-weight: 600; color: var(--heading); margin-top: 6px;">Brett Ponters, Founder</p>
+    </div>
+  </div>
+
+  <!-- CTA Footer -->
+  <div class="cta">
+    <div class="cta-left">
+      <h3>Let's talk about what AI can do for you.</h3>
+      <p>We take a small number of engagements. If you're serious about AI, we'd like to hear from you.</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-links">
+        <div><a href="https://veraconsulting.co" class="url">veraconsulting.co</a></div>
+        <div><a href="mailto:brett@veraconsulting.co">brett@veraconsulting.co</a></div>
+      </div>
+      <a href="mailto:brett@veraconsulting.co?subject=Interested%20in%20working%20with%20VERA" class="cta-button">Get in touch</a>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 — BACK -->
+<div class="page back-page">
+  <div class="back-content">
+    <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 140px; width: auto;">
+      <path d="M 0 0 L 180 540 L 360 0" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="back-wordmark">VERA<span class="back-dot"></span></span>
+    <span class="back-tagline">Value-Driven, Ethical, Research-Grounded AI</span>
+    <a href="https://veraconsulting.co" class="back-url">veraconsulting.co</a>
+  </div>
+</div>
+
+</body>
+</html>
