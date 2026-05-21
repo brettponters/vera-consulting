@@ -80,6 +80,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   .animate-marquee {
     animation: marquee linear infinite;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 }
 

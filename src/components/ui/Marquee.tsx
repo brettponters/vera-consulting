@@ -35,6 +35,10 @@ export function Marquee({
         <span className="hidden md:flex shrink-0">{children}</span>
         <span className="hidden md:flex shrink-0">{children}</span>
         <span className="hidden md:flex shrink-0">{children}</span>
+        <span className="hidden md:flex shrink-0">{children}</span>
+        <span className="hidden md:flex shrink-0">{children}</span>
+        <span className="hidden md:flex shrink-0">{children}</span>
+        <span className="hidden md:flex shrink-0">{children}</span>
       </div>
     </div>
   );

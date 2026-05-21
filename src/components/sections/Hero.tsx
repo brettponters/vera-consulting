@@ -28,15 +28,9 @@ export default function Hero() {
       }}
     >
       {/* Squiggle line — flows bottom-left → up → dip → top-right */}
-      <motion.div
+      <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0"
-        animate={{ y: [0, 10, 0] }}
-        transition={{
-          duration: 16,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
       >
         <svg
           viewBox="0 0 1440 700"
@@ -59,7 +53,7 @@ export default function Hero() {
             </filter>
           </defs>
         </svg>
-      </motion.div>
+      </div>
 
       <Container size="wide" className="relative z-10">
         <div className="max-w-[1040px]">

@@ -75,11 +75,11 @@ function RiskCard({
       onMouseLeave={() => setIsHovered(false)}
       className="relative cursor-pointer overflow-hidden rounded-2xl"
       animate={{
-        opacity: anyActive && !isActive ? 0.35 : 1,
+        opacity: anyActive && !isActive ? 0.4 : 1,
         scale: anyActive && !isActive ? 0.98 : 1,
-        filter: anyActive && !isActive ? "blur(1px)" : "blur(0px)",
       }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      style={{ willChange: "transform, opacity" }}
     >
       <div
         className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-500"
