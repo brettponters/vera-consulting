@@ -13,8 +13,8 @@
       --heading: #050507;
       --body: #0F0F10;
       --muted: #5C5C66;
-      --surface: #FAFAF7;
-      --hairline: #E6E6EA;
+      --surface: #F4EDE1;
+      --hairline: #E2D7C0;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,7 +23,7 @@
     body {
       font-family: 'Geist', -apple-system, 'SF Pro Display', system-ui, sans-serif;
       color: var(--body);
-      background: white;
+      background: var(--surface);
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
@@ -58,7 +58,7 @@
 
     /* ─── Page footer ─── */
     .pf {
-      margin-top: auto; padding-top: 6px; border-top: 1px solid var(--hairline);
+      padding-top: 6px; border-top: 1px solid var(--hairline);
       display: flex; justify-content: space-between;
       font-size: 7px; color: var(--muted); letter-spacing: 0.04em;
       text-transform: uppercase; flex-shrink: 0;
@@ -72,7 +72,7 @@
     .rule { width: 28px; height: 2px; background: var(--accent); border: none; border-radius: 1px; margin-bottom: 14px; }
 
     /* ═══════════ COVER ═══════════ */
-    .cover { background: white; position: relative; }
+    .cover { background: var(--surface); position: relative; }
 
     .cover-watermark {
       position: absolute; top: -60px; right: -40px;
@@ -171,12 +171,12 @@
     .step-detail { font-size: 9px; color: var(--muted); font-weight: 500; }
 
     /* ─── Print / Screen ─── */
-    @media print { body { background: white; } }
+    @media print { body { background: var(--surface); } }
     @media screen {
-      body { background: #E8E8E8; padding: 40px 0; }
+      body { background: #2A2520; padding: 40px 0; }
       .page {
-        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-        border-radius: 4px; background: white; margin-bottom: 40px;
+        box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+        border-radius: 4px; background: var(--surface); margin-bottom: 40px;
       }
     }
   </style>
@@ -279,7 +279,7 @@
     </div>
   </div>
 
-  <div style="border-top: 2px solid var(--hairline); padding-top: 14px; margin-top: 42px;">
+  <div style="border-top: 2px solid var(--hairline); padding-top: 14px; margin-top: auto;">
     <div class="cols">
       <div>
         <div class="subhead" style="margin-top: 0;">Where the impact hits hardest</div>
@@ -358,7 +358,7 @@
     <p style="font-size: 11px; font-weight: 500; font-style: italic; color: var(--heading); line-height: 1.5; margin: 0; padding: 4px 0;">"The companies that get AI right aren't the ones that move fastest. They're the ones that build the governance to sustain it."</p>
   </div>
 
-  <div style="border-top: 2px solid var(--hairline); padding-top: 16px; margin-top: 0;">
+  <div style="border-top: 2px solid var(--hairline); padding-top: 16px; margin-top: auto;">
     <div class="cols">
       <div>
         <div class="subhead" style="margin-top: 0;">How we address these risks</div>
@@ -437,7 +437,7 @@
     <p style="font-size: 10.5px; font-weight: 500; color: var(--heading); line-height: 1.55; margin: 0; padding: 4px 0;">Research-grounded recommendations &nbsp;&middot;&nbsp; No handoffs to junior teams &nbsp;&middot;&nbsp; Full documentation &amp; knowledge transfer &nbsp;&middot;&nbsp; 30-day post-engagement support</p>
   </div>
 
-  <div style="border-top: 2px solid var(--hairline); padding-top: 14px; margin-top: 16px;">
+  <div style="border-top: 2px solid var(--hairline); padding-top: 14px; margin-top: auto;">
     <div class="cols">
       <div>
         <div class="subhead" style="margin-top: 0;">Our approach</div>
@@ -528,7 +528,7 @@
   </div>
 
   <!-- Vision + What to expect -->
-  <div style="border-top: 2px solid var(--hairline); margin-top: 16px; padding-top: 14px;">
+  <div style="border-top: 2px solid var(--hairline); margin-top: auto; padding-top: 14px;">
     <div class="cols">
       <div>
         <div class="eyebrow" style="margin-bottom: 6px;">Our Vision</div>
@@ -552,9 +552,8 @@
         <div style="font-size: 9px; color: var(--muted); margin-top: 1px;">Founder</div>
       </div>
       <div style="padding: 0 20px; border-left: 1px solid var(--hairline);">
-        <div style="font-size: 7px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Email &amp; Phone</div>
+        <div style="font-size: 7px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Email</div>
         <a href="mailto:brett@veraconsulting.co" style="font-size: 11px; color: var(--accent); font-weight: 500;">brett@veraconsulting.co</a>
-        <div style="font-size: 10px; color: var(--body); margin-top: 2px;">561-900-8182</div>
       </div>
       <div style="padding-left: 20px; border-left: 1px solid var(--hairline);">
         <div style="font-size: 7px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Web</div>
