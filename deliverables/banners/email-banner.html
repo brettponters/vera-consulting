@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VERA — Email Banner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 600px; height: 160px; overflow: hidden; }
+    body {
+      font-family: 'Geist', -apple-system, system-ui, sans-serif;
+      background: #0E1B33;
+      color: #F5EFE4;
+      position: relative;
+      display: flex; align-items: center;
+      padding: 0 32px;
+    }
+
+    .watermark {
+      position: absolute; top: -40px; right: -30px;
+      width: 220px; height: 260px;
+      pointer-events: none; z-index: 0;
+    }
+
+    .content {
+      position: relative; z-index: 2;
+      display: flex; align-items: center; gap: 16px;
+    }
+
+    .v-mark svg {
+      height: 36px; width: auto;
+    }
+    .brand-word {
+      font-weight: 700; font-size: 30px;
+      letter-spacing: 0.04em; color: #F5EFE4;
+      line-height: 1;
+    }
+    .brand-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #E89464;
+      margin-top: 8px;
+    }
+
+    .divider {
+      width: 1px; height: 36px;
+      background: rgba(245, 239, 228, 0.18);
+      margin: 0 6px;
+    }
+
+    .tagline {
+      font-weight: 500; font-size: 13px;
+      color: #DCD5C6; line-height: 1.4;
+      letter-spacing: 0.01em;
+    }
+    .tagline strong { color: #E89464; font-weight: 600; }
+
+    .url {
+      position: absolute; bottom: 14px; right: 32px;
+      font-weight: 600; font-size: 11px;
+      color: #E89464;
+      letter-spacing: 0.04em;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <svg class="watermark" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 100 0 L 200 380 L 300 0" stroke="#E89464" stroke-width="56"
+          stroke-linecap="round" stroke-linejoin="round" opacity="0.10" />
+  </svg>
+
+  <div class="content">
+    <div class="v-mark">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0 0 L 180 540 L 360 0" stroke="#E89464" stroke-width="72"
+              stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <span class="brand-word">VERA</span>
+    <span class="brand-dot"></span>
+    <div class="divider"></div>
+    <div class="tagline">
+      AI <strong>Strategy</strong>, <strong>Integration</strong> &amp; <strong>Governance</strong>
+    </div>
+  </div>
+
+  <div class="url">veraconsulting.co</div>
+</body>
+</html>
