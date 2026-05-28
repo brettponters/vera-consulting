@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 const CANONICAL_URL = "https://veraconsulting.co/locations/boynton-beach";
 
 export const metadata: Metadata = {
-  title: "AI Consulting in Boynton Beach, FL, VERA",
+  title: "AI Consulting in Boynton Beach, FL",
   description:
     "VERA helps Boynton Beach clinics, family-owned businesses, and light manufacturers adopt AI that's powerful, accountable, and built to last.",
   alternates: {

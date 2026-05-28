@@ -8,7 +8,7 @@ const CANONICAL_PATH = "/locations/boca-raton";
 const CANONICAL_URL = `https://veraconsulting.co${CANONICAL_PATH}`;
 
 export const metadata: Metadata = {
-  title: "AI Consulting in Boca Raton, FL, VERA",
+  title: "AI Consulting in Boca Raton, FL",
   description:
     "VERA helps Boca Raton companies in healthcare, fintech, family offices, and professional services build AI strategy, integration, and foundation, done right from the start.",
   alternates: {

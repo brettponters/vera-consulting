@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 const CANONICAL_URL = "https://veraconsulting.co/locations/deerfield-beach";
 
 export const metadata: Metadata = {
-  title: "AI Consulting in Deerfield Beach, FL, VERA",
+  title: "AI Consulting in Deerfield Beach, FL",
   description:
     "VERA helps Deerfield Beach logistics, light industrial, and SMB operators put AI to work the right way, foundational, accountable, built to last from day one.",
   alternates: {

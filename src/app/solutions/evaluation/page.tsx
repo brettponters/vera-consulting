@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SolutionLayout } from "../_components/SolutionLayout";
 
 export const metadata: Metadata = {
-  title: "AI Evaluation Frameworks for Business Outcomes | VERA",
+  title: "AI Evaluation Frameworks for Business Outcomes",
   description:
     "LLM evaluation frameworks tied to business outcomes. Golden datasets, regression tests, LLM-as-judge, online monitoring for South Florida businesses running AI.",
   alternates: { canonical: "/solutions/evaluation" },

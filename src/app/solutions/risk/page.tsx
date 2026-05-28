@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "AI Risk Assessment & Red Teaming | VERA",
+  title: "AI Risk Assessment & Red Teaming",
   description:
     "Find prompt injection, PII leaks, hallucinations, jailbreaks, and silent failures before they reach a client. Mapped to NIST AI RMF and OWASP LLM Top 10.",
   alternates: { canonical: "/solutions/risk" },

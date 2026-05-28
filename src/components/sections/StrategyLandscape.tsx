@@ -52,10 +52,16 @@ function CountUp({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const [val, setVal] = useState(0);
+  const [val, setVal] = useState(to);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    if (!inView) return;
+    setHydrated(true);
+    setVal(0);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated || !inView) return;
     let raf = 0;
     const start = performance.now();
     const ms = duration * 1000;
@@ -67,7 +73,7 @@ function CountUp({
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [inView, to, duration]);
+  }, [hydrated, inView, to, duration]);
 
   return <span ref={ref}>{val.toFixed(decimals)}</span>;
 }
@@ -79,7 +85,7 @@ const COPY = [
   },
   {
     head: "The governance gap is real",
-    body: "AI adoption has outrun AI governance by 58 percentage points — the widest enterprise adoption-to-governance gap on record. 78% of executives say they lack confidence their company could pass an independent AI governance audit within 90 days.",
+    body: "AI adoption has outrun AI governance by 58 percentage points, the widest enterprise adoption-to-governance gap on record. 78% of executives say they lack confidence their company could pass an independent AI governance audit within 90 days.",
   },
   {
     head: "Regulation is accelerating",

@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SolutionLayout } from "../_components/SolutionLayout";
 
 export const metadata: Metadata = {
-  title: "AI Policy & Governance Consulting | VERA",
+  title: "AI Policy & Governance Consulting",
   description:
     "AI acceptable use policy and governance program for law firms, healthcare practices, financial advisors, and regulated South Florida businesses. Mapped to NIST AI RMF, ISO 42001, and the EU AI Act.",
   alternates: { canonical: "/solutions/policy" },

@@ -47,9 +47,6 @@ export default function IndustriesMarquee() {
                   >
                     ·
                   </span>
-                  {i === SOLUTIONS.length - 1 && (
-                    <span className="sr-only">end of solutions list</span>
-                  )}
                 </span>
               ))}
             </span>

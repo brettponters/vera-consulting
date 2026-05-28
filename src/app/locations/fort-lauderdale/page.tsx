@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 const CANONICAL_URL = "https://veraconsulting.co/locations/fort-lauderdale";
 
 export const metadata: Metadata = {
-  title: "AI Consulting in Fort Lauderdale, FL, VERA",
+  title: "AI Consulting in Fort Lauderdale, FL",
   description:
     "VERA helps Fort Lauderdale companies, marine, healthcare, hospitality, logistics, professional services, adopt AI that is foundational, accountable, and built right from the start.",
   alternates: {

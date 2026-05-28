@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SolutionLayout } from "../_components/SolutionLayout";
 
 export const metadata: Metadata = {
-  title: "AI Compliance Consulting in South Florida | VERA",
+  title: "AI Compliance Consulting in South Florida",
   description:
     "AI compliance audits, regulatory mapping, and audit-ready documentation for South Florida law firms, healthcare practices, and financial advisors. NIST AI RMF, ISO 42001, HIPAA, EU AI Act.",
   alternates: { canonical: "/solutions/compliance" },

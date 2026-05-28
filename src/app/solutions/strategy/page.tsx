@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "AI Strategy Consulting in South Florida | VERA",
+  title: "AI Strategy Consulting in South Florida",
   description:
     "AI strategy and roadmap consulting for South Florida law firms, real estate brokerages, and professional service businesses. Written plan, prioritized initiatives, real cost and success metrics.",
   alternates: { canonical: "/solutions/strategy" },

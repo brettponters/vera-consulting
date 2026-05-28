@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SolutionLayout } from "../_components/SolutionLayout";
 
 export const metadata: Metadata = {
-  title: "Custom AI Agents for Professional Businesses | VERA",
+  title: "Custom AI Agents for Professional Businesses",
   description:
     "Custom AI agents that run real workflows on a schedule or trigger. Built on Claude and MCP, evaluated, and supported. For South Florida businesses tired of chatbots that don't ship work.",
   alternates: { canonical: "/solutions/agents" },

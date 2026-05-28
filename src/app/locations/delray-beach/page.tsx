@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 const CANONICAL_URL = "https://veraconsulting.co/locations/delray-beach";
 
 export const metadata: Metadata = {
-  title: "AI Consulting in Delray Beach, FL, VERA",
+  title: "AI Consulting in Delray Beach, FL",
   description:
     "VERA helps Delray Beach businesses, from Atlantic Avenue boutiques to family offices and creative agencies, adopt AI that's built right, not bolted on.",
   alternates: {

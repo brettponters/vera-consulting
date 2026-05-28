@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SolutionLayout } from "../_components/SolutionLayout";
 
 export const metadata: Metadata = {
-  title: "1:1 AI Coaching, South Florida | VERA Consulting",
+  title: "1:1 AI Coaching, South Florida",
   description:
     "Private weekly AI coaching with a senior partner. Custom workflows around your real work. Boca Raton, Palm Beach, Broward, remote across South Florida.",
   alternates: { canonical: "/solutions/coaching" },

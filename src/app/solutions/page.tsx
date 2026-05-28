@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SOLUTIONS } from "./_data";
 
 export const metadata: Metadata = {
-  title: "AI Solutions for South Florida Businesses | VERA",
+  title: "AI Solutions for South Florida Businesses",
   description:
     "AI strategy, policy, coaching, training, custom agents, compliance, risk assessment, and evaluation. Eight ways VERA helps South Florida businesses put AI to work.",
   alternates: { canonical: "/solutions" },
