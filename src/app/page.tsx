@@ -4,7 +4,7 @@ import IndustriesMarquee from "@/components/sections/IndustriesMarquee";
 import ScrollZoom from "@/components/sections/ScrollZoom";
 import WhatWeDo from "@/components/sections/WhatWeDo";
 import { FounderVision } from "@/components/sections/FounderVision";
-import Testimonials from "@/components/sections/Testimonials";
+// import Testimonials from "@/components/sections/Testimonials";
 import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
@@ -38,7 +38,7 @@ export default function Home() {
       <ScrollZoom />
       <WhatWeDo />
       <FounderVision />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <SouthFlorida />
       <BookACall />
     </>
