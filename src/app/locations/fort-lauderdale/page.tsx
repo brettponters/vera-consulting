@@ -39,8 +39,9 @@ const SERVICES = [
     body: "We work alongside your IT, clinical, or operations staff to put systems into production. That means guardrails before go-live, monitoring once it's running, and documentation a new hire can read. For healthcare and port-logistics clients, integration is where most projects quietly fail. We treat it as the work, not the afterthought.",
   },
   {
-    title: "Foundation",
-    body: "Policy, oversight, vendor review, and the paper trail your auditors, board, or HIPAA officer will eventually ask for. We help Fort Lauderdale companies build the controls before regulators, insurers, or a bad incident force the conversation. Quiet, structural work that protects everything else you do.",
+    title: "Coaching",
+    body:
+      "1:1 AI fluency for Fort Lauderdale executives and leadership teams. Hands-on, weekly sessions paired to what your business actually does, so by the end of the engagement you can evaluate tools, set policy, and run the AI conversation in your own boardroom.",
   },
 ];
 
@@ -71,7 +72,7 @@ const jsonLd = {
       "@id": `${CANONICAL_URL}#business`,
       name: "VERA Consulting",
       description:
-        "AI strategy, integration, and foundation consulting for Fort Lauderdale companies.",
+        "AI strategy, integration, and coaching for Fort Lauderdale companies.",
       url: CANONICAL_URL,
       telephone: "+1-561-900-8182",
       priceRange: "$$$",
@@ -90,7 +91,7 @@ const jsonLd = {
         "@type": "City",
         name: "Fort Lauderdale, FL",
       },
-      serviceType: "AI Strategy, Integration, and Foundation Consulting",
+      serviceType: "AI Strategy, Integration, and Coaching Consulting",
       parentOrganization: { "@id": "https://veraconsulting.co/#org" },
     },
     {

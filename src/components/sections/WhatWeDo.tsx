@@ -15,9 +15,9 @@ const SERVICES = [
       "We work alongside your engineers to get AI systems into production. Guardrails, monitoring, and documentation included.",
   },
   {
-    title: "Foundation",
+    title: "Coaching",
     description:
-      "AI built right from the start. Architecture decisions, evaluation, safety, and the policies that make it stick. Designed for what's coming, not just what's here.",
+      "1:1 AI fluency for founders, executives, and leadership teams. Hands-on, weekly, paired to what your business actually does. Build conviction by the end, not slides.",
   },
 ];
 

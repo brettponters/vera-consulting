@@ -42,9 +42,9 @@ const SERVICES = [
       "We work alongside your operators or your existing tech partners to put AI into the workflows that matter, intake, ops, content, client service, with guardrails and documentation.",
   },
   {
-    title: "Foundation",
+    title: "Coaching",
     description:
-      "Policies, evaluation, and the boring paperwork that keeps you out of trouble. For family offices and professional services, this part isn't optional.",
+      "1:1 AI fluency for Delray Beach executives and leadership teams. Hands-on, weekly sessions paired to what your business actually does, so by the end of the engagement you can evaluate tools, set policy, and run the AI conversation in your own boardroom.",
   },
 ];
 
@@ -75,7 +75,7 @@ const jsonLd = {
       "@id": `${CANONICAL_URL}#business`,
       name: "VERA Consulting",
       description:
-        "AI strategy, integration, and foundation consulting for Delray Beach companies.",
+        "AI strategy, integration, and coaching for Delray Beach companies.",
       url: CANONICAL_URL,
       telephone: "+1-561-900-8182",
       priceRange: "$$$",
@@ -94,7 +94,7 @@ const jsonLd = {
         "@type": "City",
         name: "Delray Beach, FL",
       },
-      serviceType: "AI Strategy, Integration, and Foundation Consulting",
+      serviceType: "AI Strategy, Integration, and Coaching Consulting",
       parentOrganization: { "@id": "https://veraconsulting.co/#org" },
     },
     {

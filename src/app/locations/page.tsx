@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "South Florida AI Consulting, Service Area",
   description:
-    "VERA is a South Florida AI consulting practice serving Boca Raton, Delray Beach, Boynton Beach, Deerfield Beach, and Fort Lauderdale. Strategy, integration, and foundation for companies adopting AI.",
+    "VERA is a South Florida AI consulting practice serving Boca Raton, Delray Beach, Boynton Beach, Deerfield Beach, and Fort Lauderdale. Strategy, integration, and coaching for companies adopting AI.",
   alternates: {
     canonical: "/locations",
   },
@@ -25,7 +25,7 @@ const LOCATIONS: ReadonlyArray<LocationEntry> = [
     city: "Boca Raton",
     href: "/locations/boca-raton",
     blurb:
-      "We work with Boca Raton companies across financial services, healthcare, and technology, from family offices on Glades Road to growth-stage teams in the T-Rex corridor. Strategy, integration, and foundation, with on-site availability when the work calls for it.",
+      "We work with Boca Raton companies across financial services, healthcare, and technology, from family offices on Glades Road to growth-stage teams in the T-Rex corridor. Strategy, integration, and coaching, with on-site availability when the work calls for it.",
   },
   {
     city: "Delray Beach",
@@ -49,7 +49,7 @@ const LOCATIONS: ReadonlyArray<LocationEntry> = [
     city: "Fort Lauderdale",
     href: "/locations/fort-lauderdale",
     blurb:
-      "Fort Lauderdale is home to a growing set of mid-market companies in marine, real estate, healthcare, and professional services. We work with leadership teams there to put AI to work where it earns its keep, and to set up the foundation that keeps it accountable.",
+      "Fort Lauderdale is home to a growing set of mid-market companies in marine, real estate, healthcare, and professional services. We work with leadership teams there to put AI to work where it earns its keep, and to coach the people who own it long-term.",
   },
 ];
 
@@ -117,7 +117,7 @@ export default function LocationsPage() {
               VERA is a small, senior AI practice based in South Florida. We
               work with companies across Palm Beach and Broward counties that
               want to adopt AI seriously, with strategy, real implementation,
-              and the foundation to keep it accountable.
+              and the coaching to keep your team in command of it.
             </p>
           </div>
         </Container>

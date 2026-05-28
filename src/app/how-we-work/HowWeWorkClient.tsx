@@ -77,16 +77,16 @@ const WHAT_YOU_GET = [
       "AI systems running in production",
       "Agents that work within your workflows",
       "Evaluation frameworks so you know it's working",
-      "Infrastructure your team can maintain",
+      "Guardrails, monitoring, and policy documentation that holds up to audit",
     ],
   },
   {
-    label: "Foundation",
+    label: "Coaching",
     items: [
-      "Compliance documentation that holds up to audit",
-      "Risk assessments for every system we touch",
-      "Safety evaluations with real benchmarks",
-      "Policies your legal team can actually use",
+      "1:1 weekly working sessions tailored to your business",
+      "Frameworks for evaluating AI tools without getting sold",
+      "Practice on your real workflows, not toy examples",
+      "Conviction by the end of the engagement, not slides",
     ],
   },
   {

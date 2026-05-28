@@ -40,9 +40,9 @@ const SERVICES = [
       "We pair with whoever keeps your systems running, an in-house tech, a local MSP, a software vendor, and put AI into the tools you already use. Intake, scheduling, quoting, dispatch, billing. With guardrails and a paper trail.",
   },
   {
-    title: "Foundation",
+    title: "Coaching",
     body:
-      "For a Boynton clinic or family business, governance means clear rules for what AI can touch, what gets logged, and what stays human. We write the policy in plain language and train the team that has to live with it.",
+      "1:1 AI fluency for Boynton Beach executives and leadership teams. Hands-on, weekly sessions paired to what your business actually does, so by the end of the engagement you can evaluate tools, set policy, and run the AI conversation in your own boardroom.",
   },
 ];
 
@@ -73,7 +73,7 @@ const jsonLd = {
       "@id": `${CANONICAL_URL}#business`,
       name: "VERA Consulting",
       description:
-        "AI strategy, integration, and foundation consulting for Boynton Beach companies.",
+        "AI strategy, integration, and coaching for Boynton Beach companies.",
       url: CANONICAL_URL,
       telephone: "+1-561-900-8182",
       priceRange: "$$$",
@@ -92,7 +92,7 @@ const jsonLd = {
         "@type": "City",
         name: "Boynton Beach, FL",
       },
-      serviceType: "AI Strategy, Integration, and Foundation Consulting",
+      serviceType: "AI Strategy, Integration, and Coaching Consulting",
       parentOrganization: { "@id": "https://veraconsulting.co/#org" },
     },
     {

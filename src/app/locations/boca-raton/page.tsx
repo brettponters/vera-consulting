@@ -10,14 +10,14 @@ const CANONICAL_URL = `https://veraconsulting.co${CANONICAL_PATH}`;
 export const metadata: Metadata = {
   title: "AI Consulting in Boca Raton, FL",
   description:
-    "VERA helps Boca Raton companies in healthcare, fintech, family offices, and professional services build AI strategy, integration, and foundation, done right from the start.",
+    "VERA helps Boca Raton companies in healthcare, fintech, family offices, and professional services build AI strategy, integration, and coaching, done right from the start.",
   alternates: {
     canonical: CANONICAL_PATH,
   },
   openGraph: {
     title: "AI Consulting in Boca Raton, FL, VERA",
     description:
-      "AI strategy, integration, and foundation for Boca Raton companies. Built right, not bolted on.",
+      "AI strategy, integration, and coaching for Boca Raton companies. Built right, not bolted on.",
     type: "website",
     url: CANONICAL_URL,
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Consulting in Boca Raton, FL, VERA",
     description:
-      "AI strategy, integration, and foundation for Boca Raton companies. Built right, not bolted on.",
+      "AI strategy, integration, and coaching for Boca Raton companies. Built right, not bolted on.",
   },
 };
 
@@ -41,9 +41,9 @@ const PILLARS = [
       "Plans don't ship value; systems do. We work alongside your engineers, RevOps, and operations staff to put AI into the workflows that move the business, intake, underwriting review, client communications, reporting. Guardrails, logging, evals, and documentation aren't extras. They're how it survives an audit, a turnover, or a bad day.",
   },
   {
-    title: "Foundation",
+    title: "Coaching",
     body:
-      "For Boca businesses holding patient data, client assets, or privileged communications, governance isn't a compliance ribbon, it's the difference between a tool you can keep and one you have to rip out. We build the policy, oversight, and evaluation layer so leadership can sign off honestly, and so the next regulator or auditor finds work product, not silence.",
+      "1:1 AI fluency for Boca executives and leadership teams. Hands-on, weekly sessions paired to what your business actually does, so by the end of the engagement you can evaluate tools, set policy, and run the AI conversation in your own boardroom.",
   },
 ];
 
@@ -74,7 +74,7 @@ const jsonLd = {
       "@id": `${CANONICAL_URL}#business`,
       name: "VERA Consulting",
       description:
-        "AI strategy, integration, and foundation consulting for Boca Raton companies.",
+        "AI strategy, integration, and coaching for Boca Raton companies.",
       url: CANONICAL_URL,
       telephone: "+1-561-900-8182",
       priceRange: "$$$",
@@ -93,7 +93,7 @@ const jsonLd = {
         "@type": "City",
         name: "Boca Raton, FL",
       },
-      serviceType: "AI Strategy, Integration, and Foundation Consulting",
+      serviceType: "AI Strategy, Integration, and Coaching Consulting",
       parentOrganization: { "@id": "https://veraconsulting.co/#org" },
     },
     {

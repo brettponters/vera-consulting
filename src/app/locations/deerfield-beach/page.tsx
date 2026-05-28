@@ -40,9 +40,9 @@ const SERVICES = [
       "Hands-on implementation alongside your people. We connect AI into the warehouse software, the booking system, the spreadsheets that actually run the business. Guardrails, monitoring, and documentation are part of the work, not a phase-two promise.",
   },
   {
-    title: "Foundation",
+    title: "Coaching",
     description:
-      "Policies, risk reviews, and vendor due diligence so leadership can sign off with confidence. Useful whether you're an SMB with one tool or a distribution operator running AI across multiple sites along the I-95 corridor.",
+      "1:1 AI fluency for Deerfield Beach executives and leadership teams. Hands-on, weekly sessions paired to what your business actually does, so by the end of the engagement you can evaluate tools, set policy, and run the AI conversation in your own boardroom.",
   },
 ];
 
@@ -73,7 +73,7 @@ const jsonLd = {
       "@id": `${CANONICAL_URL}#business`,
       name: "VERA Consulting",
       description:
-        "AI strategy, integration, and foundation consulting for Deerfield Beach companies.",
+        "AI strategy, integration, and coaching for Deerfield Beach companies.",
       url: CANONICAL_URL,
       telephone: "+1-561-900-8182",
       priceRange: "$$$",
@@ -92,7 +92,7 @@ const jsonLd = {
         "@type": "City",
         name: "Deerfield Beach, FL",
       },
-      serviceType: "AI Strategy, Integration, and Foundation Consulting",
+      serviceType: "AI Strategy, Integration, and Coaching Consulting",
       parentOrganization: { "@id": "https://veraconsulting.co/#org" },
     },
     {

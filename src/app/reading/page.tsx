@@ -4,7 +4,7 @@ import ReadingClient from "./ReadingClient";
 export const metadata: Metadata = {
   title: "Reading",
   description:
-    "The research, papers, and writing shaping how VERA thinks about AI strategy, integration, and the foundations underneath.",
+    "The research, papers, and writing shaping how VERA thinks about AI strategy, integration, and coaching.",
   alternates: { canonical: "/reading" },
   openGraph: {
     title: "Reading, VERA on AI Research",
