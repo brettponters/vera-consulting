@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ─── Palette — white system ─────────────────────────────────────────────── */
+/* ─── Palette, white system ─────────────────────────────────────────────── */
 /* RAIN v3: white + charcoal + terracotta. Do not adjust without design review. */
 
 @theme {
@@ -67,10 +67,26 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 3px;
 }
 
-/* Marquee animation — desktop only */
+/* Marquee animation, desktop only */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+/* Workspace demo animations */
+@keyframes shimmer {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(420%); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
 }
 
 .animate-marquee {
@@ -95,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-/* Disable scroll-reveal animations on mobile — prevents flash/flicker */
+/* Disable scroll-reveal animations on mobile, prevents flash/flicker */
 @media (max-width: 767px) {
   .reveal-on-scroll {
     opacity: 1 !important;

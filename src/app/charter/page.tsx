@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Hairline } from "@/components/ui/Hairline";
+
+export const metadata: Metadata = {
+  title: "Charter",
+  description:
+    "VERA is a Public Benefit Corporation. A fixed share of revenue funds independent AI safety research. Read the charter.",
+  alternates: { canonical: "/charter" },
+  openGraph: {
+    title: "VERA Charter, Public Benefit Corporation",
+    description:
+      "A fixed share of revenue funds independent AI safety research. Read the charter.",
+    url: "https://veraconsulting.co/charter",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
+};
 
 export default function Charter() {
   return (
@@ -24,7 +40,7 @@ export default function Charter() {
             1. Purpose
           </h2>
           <p>
-            To provide AI consulting services that are research-grounded,
+            To provide AI consulting services that are research-backed,
             transparent, and accountable, while generating a positive impact on
             the safety and reliability of AI systems in production.
           </p>

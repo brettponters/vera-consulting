@@ -6,7 +6,7 @@ import { Hairline } from "@/components/ui/Hairline";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * HowWeThink — four pillars, fully expanded, editorial layout.
+ * HowWeThink, four pillars, fully expanded, editorial layout.
  *
  * Each pillar gets a number, heading, and multiple paragraphs of detail.
  * No accordion, no hiding. The reader sees everything.
@@ -21,7 +21,7 @@ interface Pillar {
 const pillars: Pillar[] = [
   {
     number: "01",
-    heading: "Research-grounded",
+    heading: "Research-backed",
     paragraphs: [
       "Every recommendation traces back to published research, tested benchmarks, or proven production patterns. When we say a model fits your use case or an architecture will scale, we have evidence for it.",
     ],
@@ -37,14 +37,14 @@ const pillars: Pillar[] = [
     number: "03",
     heading: "Transparent",
     paragraphs: [
-      "AI systems make decisions that affect real people. We're honest about what works, what doesn't, and where the real risks are — so you can make informed decisions about what to deploy and how.",
+      "AI systems make decisions that affect real people. We're honest about what works, what doesn't, and where the real risks are, so you can make informed decisions about what to deploy and how.",
     ],
   },
   {
     number: "04",
     heading: "Built to stay ahead",
     paragraphs: [
-      "AI is shifting from reactive tools to proactive systems, and regulation is following close behind. We help you build policies, evaluation frameworks, and operational processes that account for where things are heading — not just where they are today.",
+      "AI is shifting from reactive tools to proactive systems, and regulation is following close behind. We help you build policies, evaluation frameworks, and operational processes that account for where things are heading, not just where they are today.",
     ],
   },
 ];

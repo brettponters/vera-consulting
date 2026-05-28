@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "/how-we-work", label: "How we work" },
   { href: "/reading", label: "Reading" },
   { href: "/about", label: "About" },
+  { href: "/locations", label: "Service areas" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -22,10 +23,8 @@ const LEGAL_LINKS = [
  * Site footer.
  *
  * Hard-quoted PBC line (do not paraphrase):
- * "RAIN is a Public Benefit Corporation. A fixed percentage of net consulting
+ * "VERA is a Public Benefit Corporation. A fixed percentage of net consulting
  *  revenue is committed annually to independent AI safety and alignment research."
- *
- * RAIN is a chosen word. No acronym expansion anywhere in this file.
  */
 export function Footer() {
   const pathname = usePathname();

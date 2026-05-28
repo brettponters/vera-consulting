@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Hairline } from "@/components/ui/Hairline";
+
+export const metadata: Metadata = {
+  title: "Annual Benefit Report",
+  description:
+    "VERA is a Public Benefit Corporation. The first annual benefit report will be published at the end of our first fiscal year.",
+  alternates: { canonical: "/benefit-report" },
+  robots: { index: false, follow: true },
+};
 
 export default function BenefitReport() {
   return (

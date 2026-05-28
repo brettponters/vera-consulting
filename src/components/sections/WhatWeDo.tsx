@@ -7,7 +7,7 @@ const SERVICES = [
   {
     title: "Strategy",
     description:
-      "Figure out where AI fits in your business — and where it doesn't. Grounded in research, scoped to what your team can maintain.",
+      "Figure out where AI fits in your business, and where it doesn't. Grounded in research, scoped to what your team can maintain.",
   },
   {
     title: "Integration",
@@ -15,16 +15,22 @@ const SERVICES = [
       "We work alongside your engineers to get AI systems into production. Guardrails, monitoring, and documentation included.",
   },
   {
-    title: "Governance",
+    title: "Foundation",
     description:
-      "Compliance, risk assessment, safety evaluation, and policy documentation. Built for the regulations coming, not just the ones here now.",
+      "AI built right from the start. Architecture decisions, evaluation, safety, and the policies that make it stick. Designed for what's coming, not just what's here.",
   },
 ];
 
 export default function WhatWeDo() {
   return (
-    <section className="py-16 md:py-24 bg-[var(--color-bg)]">
+    <section
+      aria-labelledby="what-we-do-heading"
+      className="py-16 md:py-24 bg-[var(--color-bg)]"
+    >
       <Container size="wide">
+        <h2 id="what-we-do-heading" className="sr-only">
+          What we do
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {SERVICES.map((service, i) => (
             <Reveal key={service.title} delay={0.05 + i * 0.05}>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VERA — LinkedIn Cover (Pillars)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1584px; height: 396px; overflow: hidden; }
+    body {
+      font-family: 'Geist', -apple-system, system-ui, sans-serif;
+      background: #0E1B33;
+      color: #F5EFE4;
+      position: relative;
+    }
+
+    .top-row {
+      position: absolute; top: 36px; left: 460px; right: 56px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 2;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand svg { height: 32px; width: auto; }
+    .brand-word { font-weight: 700; font-size: 22px; letter-spacing: 0.06em; color: #F5EFE4; }
+    .brand-dot { width: 5px; height: 5px; border-radius: 50%; background: #E89464; margin-left: 2px; }
+    .eyebrow { font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #8B9BB4; }
+
+    .pillars {
+      position: absolute; top: 50%; left: 460px; right: 56px;
+      transform: translateY(-50%);
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      z-index: 2;
+    }
+    .pillar {
+      padding: 0 28px;
+      border-left: 1px solid rgba(245, 239, 228, 0.12);
+    }
+    .pillar:first-child { padding-left: 0; border-left: none; }
+
+    .pillar-num {
+      font-weight: 700; font-size: 11px; letter-spacing: 0.18em;
+      color: #E89464; margin-bottom: 10px;
+    }
+    .pillar-name {
+      font-weight: 700; font-size: 30px; letter-spacing: -0.02em;
+      color: #F5EFE4; line-height: 1.1; margin-bottom: 12px;
+    }
+    .pillar-desc {
+      font-weight: 500; font-size: 14px; color: #DCD5C6;
+      line-height: 1.45;
+    }
+
+    .bottom-row {
+      position: absolute; bottom: 36px; left: 460px; right: 56px;
+      display: flex; justify-content: flex-end;
+      z-index: 2;
+    }
+    .url { font-weight: 600; font-size: 15px; color: #E89464; letter-spacing: 0.02em; }
+  </style>
+</head>
+<body>
+  <div class="top-row">
+    <div class="brand">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0 0 L 180 540 L 360 0" stroke="#E89464" stroke-width="72" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span class="brand-word">VERA</span>
+      <span class="brand-dot"></span>
+    </div>
+    <div class="eyebrow">AI Consulting · Public Benefit Corporation</div>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <div class="pillar-name">Strategy</div>
+      <div class="pillar-desc">Map AI to your business, your constraints, and where the field is heading.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <div class="pillar-name">Integration</div>
+      <div class="pillar-desc">Woven into workflows at a foundational level — not bolted on as a feature.</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <div class="pillar-name">Governance</div>
+      <div class="pillar-desc">Compliant now, adaptable as the regulatory landscape shifts.</div>
+    </div>
+  </div>
+
+  <div class="bottom-row">
+    <div class="url">veraconsulting.co</div>
+  </div>
+</body>
+</html>

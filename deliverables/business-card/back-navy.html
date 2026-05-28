@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VERA, Business Card Back (Navy)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0E1B33;
+      --heading: #F5EFE4;
+      --muted: #8B9BB4;
+      --accent: #E89464;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @page { size: 3.5in 2in; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
+      background: var(--bg);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .card {
+      width: 3.5in;
+      height: 2in;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.08in;
+    }
+    svg.v-mark { height: 0.55in; width: auto; display: block; }
+    .wordmark-row { display: flex; align-items: center; gap: 5px; }
+    .wordmark-big {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: 0.1em;
+      line-height: 1;
+    }
+    .accent-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--accent); }
+    .tagline {
+      font-size: 4.5pt;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: -2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="stack">
+      <svg class="v-mark" viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0 0 L 180 540 L 360 0" stroke="#E89464" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="wordmark-row">
+        <span class="wordmark-big">VERA</span>
+        <span class="accent-dot"></span>
+      </div>
+      <span class="tagline">Value-Driven, Ethical, Research-Backed AI</span>
+    </div>
+  </div>
+</body>
+</html>

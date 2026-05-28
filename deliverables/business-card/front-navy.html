@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VERA, Business Card Front (Navy)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0E1B33;
+      --heading: #F5EFE4;
+      --body: #DCD5C6;
+      --muted: #8B9BB4;
+      --hairline: #1F2E4D;
+      --accent: #E89464;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @page { size: 3.5in 2in; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--body);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .card {
+      width: 3.5in;
+      height: 2in;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+    .watermark {
+      position: absolute;
+      right: -0.15in;
+      top: -0.2in;
+      height: 2.4in;
+      width: auto;
+      opacity: 0.10;
+      pointer-events: none;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0.2in 0.25in;
+    }
+    .brand-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.06in;
+    }
+    .wordmark {
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: 0.1em;
+    }
+    .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      position: relative;
+      top: -1px;
+    }
+    .acronym {
+      font-size: 5.5pt;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-top: 0.04in;
+    }
+    .person-name {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--heading);
+      letter-spacing: -0.015em;
+    }
+    .person-title {
+      font-size: 7pt;
+      color: var(--accent);
+      letter-spacing: 0.03em;
+      margin-top: 0.015in;
+    }
+    .divider {
+      width: 0.34in;
+      height: 1px;
+      background: var(--hairline);
+      margin-bottom: 0.06in;
+    }
+    .contact {
+      font-size: 6.5pt;
+      color: var(--body);
+      letter-spacing: 0.01em;
+    }
+    .contact-sep { color: var(--muted); margin: 0 0.07in; }
+    .pbc {
+      font-size: 5pt;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 0.05in;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <svg class="watermark" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 60 0 L 200 420 L 340 0" stroke="#E89464" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="content">
+      <div>
+        <div class="brand-row">
+          <span class="wordmark">VERA</span>
+          <span class="dot"></span>
+        </div>
+        <div class="acronym">Value-Driven, Ethical, Research-Backed AI</div>
+      </div>
+      <div>
+        <div class="person-name">Brett Ponters</div>
+        <div class="person-title">Founder</div>
+      </div>
+      <div>
+        <div class="divider"></div>
+        <div class="contact">
+          <span>brett@veraconsulting.co</span><span class="contact-sep">/</span><span>(561) 900-8182</span><span class="contact-sep">/</span><span>veraconsulting.co</span>
+        </div>
+        <div class="pbc">AI consulting &middot; Public Benefit Corporation</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

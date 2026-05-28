@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VERA, IG Profile Icon (A · ERA-tucked)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /*
+      Instagram profile icon, Form A: V-dominant VERA lockup.
+      Canvas 1080x1080. Navy bg matches existing brand token.
+      Large cream V with "ERA" set small, baseline-aligned with V tip.
+      Designed to read as one mark at 40px feed size and as a lockup at 110px profile size.
+    */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1080px; overflow: hidden; }
+    body {
+      background: #0E1B33;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Geist', -apple-system, system-ui, sans-serif;
+    }
+    svg.mark { width: 1080px; height: 1080px; display: block; }
+  </style>
+</head>
+<body>
+  <svg class="mark" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+    <!-- Big V, cap height ~500, stroke 100 -->
+    <path d="M 250 290 L 425 790 L 600 290"
+          fill="none" stroke="#F5EFE4" stroke-width="100"
+          stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" />
+    <!-- ERA tucked baseline-aligned with V tip -->
+    <text x="640" y="790"
+          font-family="Geist, sans-serif" font-weight="700"
+          font-size="220" letter-spacing="2"
+          fill="#F5EFE4">ERA</text>
+  </svg>
+</body>
+</html>

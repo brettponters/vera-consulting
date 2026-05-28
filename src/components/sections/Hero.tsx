@@ -5,29 +5,19 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-/**
- * Hero — capability-partner pitch.
- *
- * Background: a single flowing squiggle line that traces from
- * bottom-left → up → dips mid-section → rises to top-right.
- * Gently oscillates vertically on a slow loop for ambient depth.
- */
-
-const H1_TEXT =
-  "AI that's powerful, accountable, and designed to last.";
-
+const H1_TEXT = "AI that's powerful, accountable, and designed to last.";
 const H1_WORDS = H1_TEXT.split(" ");
 
 export default function Hero() {
   return (
     <section
       aria-label="Introduction"
-      className="relative pt-14 pb-10 md:pt-20 md:pb-16 overflow-hidden"
+      className="relative pt-14 pb-14 md:pt-20 md:pb-20 overflow-hidden"
       style={{
-        background: "linear-gradient(180deg, #FFFFFF 0%, #F5F4F1 25%, #F5F4F1 75%, #FFFFFF 100%)",
+        background:
+          "linear-gradient(180deg, #FFFFFF 0%, #F5F4F1 25%, #F5F4F1 75%, #FFFFFF 100%)",
       }}
     >
-      {/* Squiggle line — flows bottom-left → up → dip → top-right */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0"
@@ -57,7 +47,6 @@ export default function Hero() {
 
       <Container size="wide" className="relative z-10">
         <div className="max-w-[1040px]">
-          {/* Eyebrow with always-on live status dot */}
           <Reveal delay={0}>
             <div className="mb-5 flex items-center gap-2.5">
               <span className="relative inline-flex h-1.5 w-1.5 shrink-0">
@@ -70,7 +59,6 @@ export default function Hero() {
             </div>
           </Reveal>
 
-          {/* Word-staggered H1 */}
           <h1
             aria-label={H1_TEXT}
             className="font-sans font-bold text-[var(--color-heading)] leading-[1.05] tracking-[-0.02em] mb-8"
@@ -97,8 +85,8 @@ export default function Hero() {
 
           <Reveal delay={0.55}>
             <p className="font-sans font-normal text-[var(--color-body)] text-lg md:text-xl leading-relaxed max-w-[680px] mb-10">
-              AI strategy, integration, and governance. Research-grounded
-              and built for your team.
+              AI strategy, integration, and foundation. Research-backed and
+              built for your team.
             </p>
           </Reveal>
 

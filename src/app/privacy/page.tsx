@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Hairline } from "@/components/ui/Hairline";
+
+export const metadata: Metadata = {
+  title: "Privacy",
+  description:
+    "How VERA handles data, contact information, and client material. Plain-English privacy practices.",
+  alternates: { canonical: "/privacy" },
+};
 
 export default function Privacy() {
   return (

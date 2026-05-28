@@ -10,7 +10,7 @@ const STEPS = [
     number: "1",
     title: "Assessment",
     description:
-      "We start by understanding where you are — infrastructure, AI maturity, goals, and constraints. We evaluate what's working, what's not, and where AI can create real value. The strategy we build is only as good as our understanding of your reality.",
+      "We start by understanding where you are, infrastructure, AI maturity, goals, and constraints. We evaluate what's working, what's not, and where AI can create real value. The strategy we build is only as good as our understanding of your reality.",
     details: [
       "Infrastructure review",
       "Stakeholder interviews",
@@ -36,7 +36,7 @@ const STEPS = [
     number: "3",
     title: "Execution",
     description:
-      "We do the work — strategy, integration, governance, training, whatever the scope calls for. Regular updates, full documentation, no lock-in. When we're done, you own everything we built. Every engagement includes a 30-day post-completion support window.",
+      "We do the work, strategy, integration, foundation, training, whatever the scope calls for. Regular updates, full documentation, no lock-in. When we're done, you own everything we built. Every engagement includes a 30-day post-completion support window.",
     details: [
       "Weekly check-ins",
       "Progress reporting",
@@ -64,14 +64,21 @@ export function StrategyProcess() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-sans font-semibold text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] text-[var(--color-heading)] leading-[1.05] mb-6">
-                How an engagement works.
+                How we scope a strategy engagement.
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[560px]">
-                Every engagement follows a structured, transparent process.
-                You&rsquo;ll know what we&rsquo;re doing, why, and what
-                you&rsquo;ll have at the end.
+                Every engagement starts with an honest assessment, a scoped
+                proposal, and a defined execution plan. For the deeper
+                implementation phases, see{" "}
+                <a
+                  href="/how-we-work"
+                  className="text-[var(--color-accent)] underline underline-offset-2"
+                >
+                  how we work
+                </a>
+                .
               </p>
             </Reveal>
           </div>

@@ -22,10 +22,29 @@ render() {
     "file://$ROOT/deliverables/banners/$src" >/dev/null 2>&1
 }
 
-# LinkedIn personal cover
-render "linkedin-cover.html"  "linkedin-cover.png"  1584 396
+# LinkedIn personal cover — original navy with tagline
+render "linkedin-cover.html"          "linkedin-cover.png"          1584 396
+
+# LinkedIn cover variants
+render "linkedin-cover-cream.html"    "linkedin-cover-cream.png"    1584 396
+render "linkedin-cover-bold.html"     "linkedin-cover-bold.png"     1584 396
+render "linkedin-cover-pillars.html"  "linkedin-cover-pillars.png"  1584 396
+render "linkedin-cover-minimal.html"  "linkedin-cover-minimal.png"  1584 396
 
 # Email signature banner
-render "email-banner.html"    "email-banner.png"    600 160
+render "email-banner.html"            "email-banner.png"            600 160
+
+# Facebook page cover (1640x856) + matching profile icon (1080x1080)
+# Backgrounds match so the circular profile bubble blends into the cover.
+render "facebook-cover-cream.html"    "facebook-cover-cream.png"    1640 856
+render "facebook-cover-navy.html"     "facebook-cover-navy.png"     1640 856
+render "facebook-profile-cream.html"  "facebook-profile-cream.png"  1080 1080
+render "facebook-profile-navy.html"   "facebook-profile-navy.png"   1080 1080
+
+# Instagram profile icon, three V-lockup variants (1080x1080 source) + preview sheet
+render "ig-icon-a-tucked.html"        "ig-icon-a-tucked.png"        1080 1080
+render "ig-icon-b-twotone.html"       "ig-icon-b-twotone.png"       1080 1080
+render "ig-icon-c-stack.html"         "ig-icon-c-stack.png"         1080 1080
+render "ig-icon-preview.html"         "ig-icon-preview.png"         1600 1200
 
 echo "✓ Banners rendered in deliverables/banners/"

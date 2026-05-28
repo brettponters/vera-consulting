@@ -5,7 +5,7 @@ import { Marquee } from "@/components/ui/Marquee";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * Testimonials — horizontal marquee of quote cards.
+ * Testimonials, horizontal marquee of quote cards.
  *
  * Cards scroll continuously left-to-right like the industries strip,
  * but full-height quote cards instead of text. Pauses on hover.
@@ -23,7 +23,7 @@ const CARDS: CardData[] = [
   },
   {
     quote: "Coming soon.",
-    attribution: "Anonymized recaps from active engagements — Q3 2026.",
+    attribution: "Recaps from active engagements will publish here as they wrap.",
   },
   {
     quote: "Coming soon.",

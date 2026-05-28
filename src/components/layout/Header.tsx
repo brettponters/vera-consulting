@@ -38,7 +38,7 @@ export function Header() {
         <Link
           href="/"
           className="font-sans text-sm font-semibold tracking-wide text-[var(--color-heading)] no-underline flex items-center gap-3"
-          aria-label="VERA — home"
+          aria-label="VERA, home"
         >
           {/* V logo from business card */}
           <svg
@@ -58,18 +58,19 @@ export function Header() {
           </svg>
           <span>VERA</span>
           <span className="hidden md:inline text-[10px] font-medium tracking-[0.08em] uppercase text-[var(--color-muted)]">
-            Value-Driven, Ethical, Research-Grounded AI
+            Value-Driven, Ethical, Research-Backed AI
           </span>
         </Link>
 
         <div className="flex-1" />
 
-        {/* Nav links + CTA — right side */}
+        {/* Nav links + CTA, right side */}
         <nav className="hidden md:flex items-center gap-6">
           {[
             { label: "Our Work", href: "/our-work" },
             { label: "Our Strategy", href: "/our-strategy" },
-            { label: "Research", href: "/research" },
+            { label: "1:1 Coaching", href: "/coaching" },
+            { label: "AI Fundamentals", href: "/ai-fundamentals" },
           ].map((link) => (
             <Link
               key={link.label}

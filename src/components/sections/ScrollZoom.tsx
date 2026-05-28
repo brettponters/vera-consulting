@@ -2,37 +2,43 @@
 
 import { useState, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 
-/**
- * Interactive pillars — spotlight glow cards.
- * Clicked card expands smoothly in-place; others dim without jumping.
- */
+interface Pillar {
+  letter: string;
+  title: string;
+  detail: string;
+  href?: string;
+  hrefLabel?: string;
+}
 
-const PILLARS = [
+const PILLARS: Pillar[] = [
   {
-    number: "01",
-    title: "Research-grounded",
+    letter: "V",
+    title: "Value-Driven",
     detail:
-      "Every recommendation traces back to published research, tested benchmarks, or proven production patterns. When we say a model fits your use case or an architecture will scale, we have evidence for it.",
+      "Every engagement starts with the outcome your business actually needs, then we figure out whether AI is the right way to get there. If something else would work better, that's what we'll tell you. We don't pitch AI just because it's in our name.",
   },
   {
-    number: "02",
-    title: "Responsibly powerful",
+    letter: "E",
+    title: "Ethical",
     detail:
-      "AI should be capable enough to make a real difference and reliable enough to trust. Every system we integrate ships with guardrails, evaluation frameworks, and documentation. You don't have to choose between AI that works and AI that's safe.",
+      "Every AI system affects people who never agreed to it, your clients, employees, applicants, patients. We design for fairness, test for bias, protect privacy, and refuse to ship anything that fails those tests. If the right answer for a project is don't deploy, that's the answer we give.",
   },
   {
-    number: "03",
-    title: "Transparent",
+    letter: "R",
+    title: "Research-Backed",
     detail:
-      "AI systems make decisions that affect real people. We're honest about what works, what doesn't, and where the real risks are — so you can make informed decisions about what to deploy and how.",
+      "Every recommendation traces back to something concrete, published research, tested benchmarks, or production patterns we've watched hold up. When we say a model fits your work or an architecture will scale, we have the evidence for it and we'll show it to you. We don't repeat AI hype back to you.",
   },
   {
-    number: "04",
-    title: "Built to stay ahead",
+    letter: "A",
+    title: "AI",
     detail:
-      "AI is shifting from reactive tools to proactive systems, and regulation is following close behind. We help you build policies, evaluation frameworks, and operational processes that account for where things are heading — not just where they are today.",
+      "Most consultancies talk about AI. We work in it every day, in how we run VERA itself. That hands-on depth changes what we recommend, how we estimate, and what we tell you not to do. The clearest expression of how we think is in how we run an AI strategy engagement.",
+    href: "/our-strategy",
+    hrefLabel: "See how we run an AI Strategy engagement",
   },
 ];
 
@@ -42,7 +48,7 @@ function GlowCard({
   anyActive,
   onSelect,
 }: {
-  pillar: (typeof PILLARS)[number];
+  pillar: Pillar;
   isActive: boolean;
   anyActive: boolean;
   onSelect: () => void;
@@ -75,40 +81,35 @@ function GlowCard({
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       style={{ willChange: "transform, opacity" }}
     >
-      {/* Glow border effect */}
       <div
         className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-500"
         style={{
           opacity: isHovered && !isActive ? 0.8 : 0,
-          background: `radial-gradient(350px circle at ${mousePos.x}px ${mousePos.y}px, rgba(201, 123, 63, 0.12), transparent 60%)`,
+          background: "radial-gradient(350px circle at " + mousePos.x + "px " + mousePos.y + "px, rgba(201, 123, 63, 0.12), transparent 60%)",
         }}
       />
 
-      {/* Card surface */}
       <div
-        className={`relative h-full rounded-2xl border transition-all duration-500 ease-out ${
-          isActive
-            ? "border-[var(--color-accent)]/25 bg-white shadow-lg shadow-[var(--color-accent)]/5"
-            : "border-[var(--color-hairline)] bg-white hover:border-[var(--color-accent)]/15"
-        } p-7 md:p-9`}
+        className={"relative h-full rounded-2xl border transition-all duration-500 ease-out " + (isActive ? "border-[var(--color-accent)]/25 bg-white shadow-lg shadow-[var(--color-accent)]/5" : "border-[var(--color-hairline)] bg-white hover:border-[var(--color-accent)]/15") + " p-7 md:p-9"}
       >
-        {/* Large decorative number */}
         <span
-          className="absolute top-3 right-5 font-sans font-bold pointer-events-none select-none transition-all duration-700 ease-out"
+          className="absolute font-sans font-bold pointer-events-none select-none transition-all duration-700 ease-out leading-none"
           style={{
-            fontSize: isActive ? "8rem" : "5rem",
+            fontSize: isActive ? "clamp(5rem, 8vw, 8rem)" : "clamp(4rem, 6vw, 6rem)",
             color: "var(--color-accent)",
-            opacity: isActive ? 0.07 : 0.04,
+            opacity: isActive ? 0.08 : 0.06,
+            top: "0.75rem",
+            right: "1rem",
+            letterSpacing: "-0.03em",
           }}
         >
-          {pillar.number}
+          {pillar.letter}
         </span>
 
-        {/* Content */}
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-3">
             <span className="font-mono text-xs tracking-[0.18em] text-[var(--color-accent)]">
-              {pillar.number}
+              {pillar.letter}
             </span>
             <div
               className="h-px bg-[var(--color-accent)]/30 origin-left transition-all duration-700 ease-out"
@@ -144,15 +145,43 @@ function GlowCard({
                 >
                   {pillar.detail}
                 </motion.p>
+                {pillar.href && (
+                  <motion.div
+                    initial={{ y: 6, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -3, opacity: 0 }}
+                    transition={{ duration: 0.4, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                    className="mt-5"
+                  >
+                    <Link
+                      href={pillar.href}
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[var(--color-accent)] no-underline hover:opacity-80 transition-opacity"
+                    >
+                      {pillar.hrefLabel ?? "Learn more"}
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M2 7h10M8 3l4 4-4 4" />
+                      </svg>
+                    </Link>
+                  </motion.div>
+                )}
               </motion.div>
             )}
           </AnimatePresence>
         </div>
 
-        {/* Expand indicator */}
         <div
           className="absolute bottom-5 right-5 w-7 h-7 rounded-full border border-[var(--color-accent)]/15 flex items-center justify-center transition-all duration-500 ease-out"
-          style={{ transform: `rotate(${isActive ? 45 : 0}deg)` }}
+          style={{ transform: "rotate(" + (isActive ? 45 : 0) + "deg)" }}
         >
           <span className="text-[var(--color-accent)] text-sm leading-none">+</span>
         </div>

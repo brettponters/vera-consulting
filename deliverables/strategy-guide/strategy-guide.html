@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VERA — AI Strategy Guide</title>
+  <title>VERA, AI Strategy Guide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --accent: #C97B3F;
+      --accent-soft: rgba(201, 123, 63, 0.06);
+      --accent-tint: rgba(201, 123, 63, 0.22);
       --heading: #050507;
       --body: #0F0F10;
       --muted: #5C5C66;
-      --surface: #F4EDE1;
+      --surface: #FAF5EA;
       --hairline: #E2D7C0;
     }
 
@@ -33,7 +35,7 @@
     .page {
       width: 8.5in;
       height: 11in;
-      padding: 0.4in 0.6in;
+      padding: 0.4in 0.6in 0.6in 0.6in;
       margin: 0 auto;
       position: relative;
       page-break-after: always;
@@ -58,10 +60,15 @@
 
     /* ─── Page footer ─── */
     .pf {
-      padding-top: 6px; border-top: 1px solid var(--hairline);
+      position: absolute;
+      bottom: 0.4in;
+      left: 0.6in;
+      right: 0.6in;
+      padding-top: 10px;
+      border-top: 1px solid var(--hairline);
       display: flex; justify-content: space-between;
       font-size: 7px; color: var(--muted); letter-spacing: 0.04em;
-      text-transform: uppercase; flex-shrink: 0;
+      text-transform: uppercase;
     }
 
     /* ─── Reusable ─── */
@@ -119,7 +126,6 @@
     }
     .cover-bottom-left { font-size: 9px; color: var(--muted); letter-spacing: 0.04em; }
     .cover-bottom-right { font-size: 11px; font-weight: 600; color: var(--accent); }
-
     /* ═══════════ CONTENT ═══════════ */
 
     .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -143,7 +149,7 @@
     .bt { font-size: 10.5px; line-height: 1.6; color: var(--body); margin-bottom: 0; }
 
     /* Numbered item */
-    .ni { padding: 18px 0; border-bottom: 1px solid var(--hairline); }
+    .ni { padding: 14px 0; border-bottom: 1px solid var(--hairline); }
     .ni:last-child { border-bottom: none; }
     .ni-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
     .ni-num { font-weight: 700; font-size: 10px; color: var(--accent); letter-spacing: 0.06em; flex-shrink: 0; }
@@ -151,7 +157,7 @@
     .ni-text { font-size: 11px; line-height: 1.55; color: var(--body); padding-left: 28px; }
 
     /* Service */
-    .svc { padding: 16px 0; border-bottom: 1px solid var(--hairline); }
+    .svc { padding: 11px 0; border-bottom: 1px solid var(--hairline); }
     .svc:last-child { border-bottom: none; }
     .svc-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 5px; }
     .svc-num { font-weight: 700; font-size: 24px; color: var(--hairline); line-height: 1; flex-shrink: 0; }
@@ -162,7 +168,7 @@
     .svc-inc { font-size: 9.5px; color: var(--body); line-height: 1.6; }
 
     /* Process step */
-    .step { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+    .step { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--hairline); }
     .step:last-child { border-bottom: none; }
     .step-num { font-weight: 700; font-size: 32px; color: var(--accent); line-height: 1; text-align: right; padding-top: 2px; }
     .step-title { font-weight: 600; font-size: 15px; color: var(--heading); margin-bottom: 6px; }
@@ -198,7 +204,7 @@
   </div>
   <div class="cover-body">
     <div class="cover-eyebrow">Strategy Guide</div>
-    <h1>AI Strategy,<br/>Integration &<br/>Governance</h1>
+    <h1>AI Strategy,<br/>Integration &<br/>Foundation</h1>
     <p class="cover-desc">A comprehensive guide to how we help companies adopt AI that's powerful, accountable, and designed to last. From risk assessment to policy development to hands-on execution.</p>
     <div class="cover-meta">
       <div class="cover-meta-item">Prepared by<div class="cover-meta-val">VERA Consulting</div></div>
@@ -209,6 +215,299 @@
   <div class="cover-bottom">
     <span class="cover-bottom-left">AI Consulting &middot; Public Benefit Corporation</span>
     <a href="https://veraconsulting.co" class="cover-bottom-right">veraconsulting.co</a>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 2: OUTCOMES (1/2) ═══════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="ph-left">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 L 180 540 L 360 0" stroke="var(--accent)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ph-word">VERA</span><span class="ph-dot"></span>
+    </div>
+    <span class="ph-right">AI Strategy Guide</span>
+  </div>
+
+  <!-- Editorial header: eyebrow / H2 / opening / index ribbon -->
+  <div style="margin-top: 28px; margin-bottom: 14px;">
+    <div class="eyebrow">Outcomes &middot; Part 1 of 2</div>
+    <h2 style="font-size: 30px; font-weight: 700; color: var(--heading); letter-spacing: -0.025em; line-height: 1.05; margin-bottom: 8px;">What you actually<br/>get, in the first<br/>ninety days.</h2>
+    <hr class="rule" style="margin-bottom: 10px;" />
+    <p style="font-size: 10.5px; line-height: 1.55; color: var(--body); max-width: 4.6in; margin: 0;">Our goal is to get you through these unprecedented times with real outcomes and real understanding. Four wins owners feel almost immediately. The other four, the ones that build over the year, are on the next page.</p>
+  </div>
+
+  <!-- ─── 01 More leads: wide row, outline numeral + stat callout ─── -->
+  <div style="display: grid; grid-template-columns: 0.9in 1fr 1.7in; gap: 22px; align-items: start; padding: 18px 0 18px 0; border-top: 1px solid var(--hairline);">
+    <div>
+      <div style="font-size: 56px; font-weight: 700; color: transparent; -webkit-text-stroke: 1px var(--accent); letter-spacing: -0.04em; line-height: 0.9;">01</div>
+      <div style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-top: 6px;">Prospecting</div>
+    </div>
+    <div>
+      <h3 style="font-size: 18px; font-weight: 700; color: var(--heading); letter-spacing: -0.018em; line-height: 1.15; margin-bottom: 7px;">More leads in the pipeline.</h3>
+      <p style="font-size: 10.5px; line-height: 1.6; color: var(--body); margin: 0;">Most owners have a stack of leads they haven't touched in months. Past clients, sphere contacts, people who went quiet. AI works that list. It pulls who's likely buying now, drafts the message in your voice, and keeps the follow-up moving so nothing sits cold.</p>
+    </div>
+    <div style="border-left: 2px solid var(--accent); padding-left: 14px;">
+      <div style="font-weight: 700; font-size: 30px; color: var(--accent); letter-spacing: -0.035em; line-height: 0.95;">43%</div>
+      <div style="font-size: 8.5px; font-weight: 500; color: var(--muted); margin-top: 4px; line-height: 1.45; text-transform: uppercase; letter-spacing: 0.08em;">Of US businesses say<br/>AI lifted their revenue</div>
+      <div style="font-size: 9.5px; color: var(--heading); margin-top: 8px; font-weight: 500; line-height: 1.45;">No deals lost to silence.</div>
+      <div style="font-size: 7px; color: var(--muted); margin-top: 6px; font-style: italic; letter-spacing: 0.02em;">Intuit / QuickBooks AI Impact Report, 2026</div>
+    </div>
+  </div>
+
+  <!-- ─── 02 HERO: Hours back, every day, proportional week bar ─── -->
+  <div style="padding: 22px 0 24px 0; border-top: 1px solid var(--hairline); background: var(--accent-soft); margin: 0 -0.6in; padding-left: 0.6in; padding-right: 0.6in;">
+    <div style="display: grid; grid-template-columns: 0.9in 1fr; gap: 22px; align-items: start;">
+      <div>
+        <div style="font-size: 56px; font-weight: 700; color: var(--accent); letter-spacing: -0.04em; line-height: 0.9;">02</div>
+        <div style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-top: 6px;">The hook</div>
+      </div>
+      <div>
+        <h3 style="font-size: 22px; font-weight: 700; color: var(--heading); letter-spacing: -0.022em; line-height: 1.1; margin-bottom: 8px;">Hours back, every day.</h3>
+        <p style="font-size: 11px; line-height: 1.6; color: var(--body); margin: 0 0 16px 0; max-width: 5.2in;">Look at your last week. How many hours went to email triage, meeting notes, drafting the same kind of proposal for the fifth time? Most clients get five to ten hours back a week within the first month, on work that didn't need them in the first place.</p>
+
+        <!-- Proportional time bar: your week, today vs. with VERA -->
+        <div style="margin-top: 6px;">
+          <div style="display: grid; grid-template-columns: 0.55in 1fr; gap: 12px; align-items: center; margin-bottom: 6px;">
+            <div style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-align: right;">Today</div>
+            <div style="display: grid; grid-template-columns: 28fr 18fr 14fr 10fr 30fr; gap: 2px; height: 18px;">
+              <div style="background: var(--accent); opacity: 0.95;"></div>
+              <div style="background: var(--accent); opacity: 0.65;"></div>
+              <div style="background: var(--accent); opacity: 0.48;"></div>
+              <div style="background: var(--accent); opacity: 0.32;"></div>
+              <div style="background: var(--accent-tint);"></div>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 0.55in 1fr; gap: 12px; align-items: center; margin-bottom: 10px;">
+            <div style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); text-align: right;">With VERA</div>
+            <div style="display: grid; grid-template-columns: 10fr 8fr 6fr 4fr 72fr; gap: 2px; height: 18px;">
+              <div style="background: var(--accent); opacity: 0.95;"></div>
+              <div style="background: var(--accent); opacity: 0.65;"></div>
+              <div style="background: var(--accent); opacity: 0.48;"></div>
+              <div style="background: var(--accent); opacity: 0.32;"></div>
+              <div style="background: var(--accent-tint);"></div>
+            </div>
+          </div>
+          <!-- Legend -->
+          <div style="display: grid; grid-template-columns: 0.55in 1fr; gap: 12px; align-items: start;">
+            <div></div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 7.5px; color: var(--muted); letter-spacing: 0.04em;">
+              <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: var(--accent); opacity: 0.95;"></span>Inbox &amp; admin</span>
+              <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: var(--accent); opacity: 0.65;"></span>Meeting notes</span>
+              <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: var(--accent); opacity: 0.48;"></span>Proposals &amp; docs</span>
+              <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: var(--accent); opacity: 0.32;"></span>Follow-ups</span>
+              <span style="display: inline-flex; align-items: center; gap: 5px; color: var(--heading); font-weight: 600;"><span style="width: 8px; height: 8px; background: var(--accent-tint);"></span>The work you hired yourself to do</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--hairline); display: flex; align-items: baseline; gap: 18px;">
+          <div><span style="font-weight: 700; font-size: 20px; color: var(--accent); letter-spacing: -0.02em;">5&ndash;10 hrs</span><span style="font-size: 9px; color: var(--muted); margin-left: 8px;">a week back for frequent AI users</span></div>
+          <div style="font-size: 10px; color: var(--heading); font-weight: 500; font-style: italic;">Run your business instead of being run by it.</div>
+        </div>
+        <div style="margin-top: 6px; font-size: 7px; color: var(--muted); font-style: italic; letter-spacing: 0.02em;">Intuit / QuickBooks, 2026 &middot; 78% of US businesses say AI improved productivity (up from 46% in 2024)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 03 + 04: paired row with distinct treatments ─── -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; padding-top: 22px; border-top: 1px solid var(--hairline); margin-top: 0;">
+
+    <!-- 03 Customers feel heard: response-time before/after -->
+    <div>
+      <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;">
+        <span style="font-size: 28px; font-weight: 700; color: var(--accent); letter-spacing: -0.04em; line-height: 1;">03</span>
+        <span style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);">Service speed</span>
+      </div>
+      <h3 style="font-size: 15px; font-weight: 700; color: var(--heading); letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 7px;">Customers who feel heard.</h3>
+      <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin: 0 0 12px 0;">85% of small business owners using AI say it made their company more efficient. Faster replies, smarter follow-ups, the right thing said at the right time. AI does the heavy lift, in your voice, without replacing the relationship.</p>
+
+      <div style="margin-top: 4px;">
+        <div style="display: grid; grid-template-columns: 0.55in 1fr 0.55in; gap: 8px; align-items: center; margin-bottom: 5px;">
+          <div style="font-size: 8px; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; text-align: right;">Today</div>
+          <div style="height: 6px; background: var(--accent-tint); position: relative;"><div style="position: absolute; right: 0; top: 0; height: 100%; width: 100%; background: var(--accent); opacity: 0.55;"></div></div>
+          <div style="font-size: 10px; font-weight: 600; color: var(--body);">2 hrs</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.55in 1fr 0.55in; gap: 8px; align-items: center;">
+          <div style="font-size: 8px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; text-align: right;">With AI</div>
+          <div style="height: 6px; background: var(--accent-tint); position: relative;"><div style="position: absolute; left: 0; top: 0; height: 100%; width: 1.6%; background: var(--accent);"></div></div>
+          <div style="font-size: 10px; font-weight: 600; color: var(--accent);">2 min</div>
+        </div>
+        <div style="margin-top: 10px; font-size: 9.5px; color: var(--heading); font-weight: 500; line-height: 1.5;">500 customers, treated like 50.</div>
+        <div style="margin-top: 4px; font-size: 7px; color: var(--muted); font-style: italic; letter-spacing: 0.02em;">Goldman Sachs 10,000 Small Businesses Voices Survey, 2026</div>
+      </div>
+    </div>
+
+    <!-- 04 Decisions you can defend: pull-quote treatment -->
+    <div style="position: relative; padding-left: 18px;">
+      <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--accent);"></div>
+      <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;">
+        <span style="font-size: 28px; font-weight: 700; color: var(--accent); letter-spacing: -0.04em; line-height: 1;">04</span>
+        <span style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);">Judgment</span>
+      </div>
+      <h3 style="font-size: 15px; font-weight: 700; color: var(--heading); letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 7px;">Decisions you can defend.</h3>
+      <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin: 0 0 12px 0;">Right now, half your calls are gut. Some of them are good. Some of them aren't, and you find out 90 days later. AI brings real data into the room. Comps, scenarios, market shifts. Not to replace your judgment, to back it up.</p>
+      <div style="font-size: 13px; font-weight: 600; color: var(--heading); letter-spacing: -0.01em; line-height: 1.35; font-style: italic;">&ldquo;Evidence in hand, not gut alone.&rdquo;</div>
+    </div>
+
+  </div>
+
+  <div class="pf">
+    <span>VERA Consulting</span>
+    <span>veraconsulting.co</span>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 3: OUTCOMES (2/2) ═══════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="ph-left">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 L 180 540 L 360 0" stroke="var(--accent)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ph-word">VERA</span><span class="ph-dot"></span>
+    </div>
+    <span class="ph-right">AI Strategy Guide</span>
+  </div>
+
+  <!-- Editorial header (mirrors page 2 but inverted: index left, copy right) -->
+  <div style="margin-top: 28px; margin-bottom: 14px;">
+    <div class="eyebrow">Outcomes &middot; Part 2 of 2</div>
+    <h2 style="font-size: 30px; font-weight: 700; color: var(--heading); letter-spacing: -0.025em; line-height: 1.05; margin-bottom: 8px;">And what those<br/>wins turn into<br/>over the year.</h2>
+    <hr class="rule" style="margin-bottom: 10px;" />
+    <p style="font-size: 10.5px; line-height: 1.55; color: var(--body); max-width: 4.6in; margin: 0;">The first four show up fast. These four are what they grow into once AI is built into the way the business runs, not bolted on top.</p>
+  </div>
+
+  <!-- ─── 05 + 06: paired top band, opens the page ─── -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; padding-top: 18px; border-top: 1px solid var(--hairline);">
+
+    <!-- 05 Team gear: output ratio viz -->
+    <div>
+      <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;">
+        <span style="font-size: 28px; font-weight: 700; color: var(--accent); letter-spacing: -0.04em; line-height: 1;">05</span>
+        <span style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);">Team output</span>
+      </div>
+      <h3 style="font-size: 15px; font-weight: 700; color: var(--heading); letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 7px;">A team in a higher gear.</h3>
+      <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin: 0 0 12px 0;">Same headcount, more output. New hires ramp in days because AI carries the institutional knowledge. Your veterans stop spending afternoons on busywork and get back to the work you actually hired them for.</p>
+
+      <!-- Output ratio bar -->
+      <div>
+        <div style="display: grid; grid-template-columns: 0.55in 1fr; gap: 8px; align-items: center; margin-bottom: 5px;">
+          <div style="font-size: 8px; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; text-align: right;">Today</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px; height: 10px;">
+            <div style="background: var(--accent);"></div>
+            <div style="background: var(--accent-tint);"></div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.55in 1fr; gap: 8px; align-items: center;">
+          <div style="font-size: 8px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; text-align: right;">Year one</div>
+          <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 2px; height: 10px;">
+            <div style="background: var(--accent);"></div>
+            <div style="background: var(--accent-tint);"></div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.55in 1fr; gap: 8px; margin-top: 4px;">
+          <div></div>
+          <div style="display: flex; gap: 14px; font-size: 7.5px; color: var(--muted); letter-spacing: 0.04em;">
+            <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: var(--accent);"></span>Output</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: var(--accent-tint);"></span>Headcount</span>
+          </div>
+        </div>
+        <div style="margin-top: 10px; font-size: 9.5px; color: var(--heading); font-weight: 500; line-height: 1.5;">78% of US businesses say AI improved their productivity.</div>
+        <div style="margin-top: 4px; font-size: 7px; color: var(--muted); font-style: italic; letter-spacing: 0.02em;">Intuit / QuickBooks AI Impact Report, 2026 (up from 46% in 2024)</div>
+      </div>
+    </div>
+
+    <!-- 06 Margins: before/after stat block -->
+    <div style="position: relative; padding-left: 18px;">
+      <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--accent);"></div>
+      <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;">
+        <span style="font-size: 28px; font-weight: 700; color: var(--accent); letter-spacing: -0.04em; line-height: 1;">06</span>
+        <span style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);">Margin</span>
+      </div>
+      <h3 style="font-size: 15px; font-weight: 700; color: var(--heading); letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 7px;">Margins that don't depend on growth.</h3>
+      <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin: 0 0 12px 0;">You shouldn't have to add headcount to grow revenue. AI does the work three hires used to do. Cost to serve drops. Profit per customer goes up. The business gets worth more without getting bigger.</p>
+
+      <!-- 3 stats inline -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; padding-top: 8px; border-top: 1px solid var(--hairline);">
+        <div>
+          <div style="font-size: 22px; font-weight: 700; color: var(--accent); letter-spacing: -0.03em; line-height: 1;">88%</div>
+          <div style="font-size: 7.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; letter-spacing: 0.04em; text-transform: uppercase;">Orgs use AI in at<br/>least one function</div>
+        </div>
+        <div>
+          <div style="font-size: 22px; font-weight: 700; color: var(--accent); letter-spacing: -0.03em; line-height: 1;">72%</div>
+          <div style="font-size: 7.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; letter-spacing: 0.04em; text-transform: uppercase;">Use gen AI now<br/>(33% in 2024)</div>
+        </div>
+        <div>
+          <div style="font-size: 22px; font-weight: 700; color: var(--accent); letter-spacing: -0.03em; line-height: 1;">43%</div>
+          <div style="font-size: 7.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; letter-spacing: 0.04em; text-transform: uppercase;">Report a direct<br/>revenue lift</div>
+        </div>
+      </div>
+      <div style="margin-top: 8px; font-size: 7px; color: var(--muted); font-style: italic; letter-spacing: 0.02em;">McKinsey State of AI, Nov 2025 &middot; Intuit / QuickBooks, 2026</div>
+    </div>
+
+  </div>
+
+  <!-- ─── 07 HERO: Out-shipping the competition, compounding gap chart ─── -->
+  <div style="margin-top: 22px; padding: 22px 0 24px 0; border-top: 1px solid var(--hairline); background: var(--accent-soft); margin-left: -0.6in; margin-right: -0.6in; padding-left: 0.6in; padding-right: 0.6in;">
+    <div style="display: grid; grid-template-columns: 0.9in 1fr 2in; gap: 22px; align-items: start;">
+      <div>
+        <div style="font-size: 56px; font-weight: 700; color: var(--accent); letter-spacing: -0.04em; line-height: 0.9;">07</div>
+        <div style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-top: 6px;">The gap</div>
+      </div>
+      <div>
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--heading); letter-spacing: -0.022em; line-height: 1.1; margin-bottom: 8px;">Out-shipping the competition.</h3>
+        <p style="font-size: 10.5px; line-height: 1.6; color: var(--body); margin: 0 0 4px 0;">Your competitors are still in meetings about AI. You're already running things. The longer it's been working in your business, the harder it gets for anyone to catch up. Your team gets sharper, your data gets richer, your customers get used to what you give them.</p>
+        <div style="margin-top: 12px; font-size: 11px; color: var(--heading); font-weight: 600; font-style: italic; letter-spacing: -0.01em;">The gap doesn't shrink. It widens.</div>
+      </div>
+
+      <!-- Diverging-line chart: You vs. Competitors over months 0-12 -->
+      <div>
+        <svg viewBox="0 0 220 110" width="100%" height="110" style="display: block;">
+          <!-- Axis baseline -->
+          <line x1="0" y1="95" x2="220" y2="95" stroke="var(--hairline)" stroke-width="1"/>
+          <!-- Month ticks (light) -->
+          <line x1="0" y1="92" x2="0" y2="95" stroke="var(--hairline)" stroke-width="1"/>
+          <line x1="55" y1="92" x2="55" y2="95" stroke="var(--hairline)" stroke-width="1"/>
+          <line x1="110" y1="92" x2="110" y2="95" stroke="var(--hairline)" stroke-width="1"/>
+          <line x1="165" y1="92" x2="165" y2="95" stroke="var(--hairline)" stroke-width="1"/>
+          <line x1="220" y1="92" x2="220" y2="95" stroke="var(--hairline)" stroke-width="1"/>
+          <!-- Competitors: flat -->
+          <path d="M 0 70 Q 60 70 110 68 T 220 64" stroke="var(--muted)" stroke-width="1.4" fill="none" stroke-dasharray="3 3" stroke-linecap="round"/>
+          <!-- You: rising -->
+          <path d="M 0 72 Q 50 60 110 38 T 220 8" stroke="var(--accent)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <!-- End-point dots -->
+          <circle cx="220" cy="64" r="2.4" fill="var(--muted)"/>
+          <circle cx="220" cy="8" r="3" fill="var(--accent)"/>
+          <!-- Labels -->
+          <text x="0" y="108" font-family="Geist, sans-serif" font-size="6" fill="var(--muted)" letter-spacing="0.6">M0</text>
+          <text x="110" y="108" font-family="Geist, sans-serif" font-size="6" fill="var(--muted)" letter-spacing="0.6" text-anchor="middle">M6</text>
+          <text x="220" y="108" font-family="Geist, sans-serif" font-size="6" fill="var(--muted)" letter-spacing="0.6" text-anchor="end">M12</text>
+        </svg>
+        <div style="display: flex; gap: 14px; margin-top: 6px; font-size: 7.5px; color: var(--muted); letter-spacing: 0.04em;">
+          <span style="display: inline-flex; align-items: center; gap: 5px; color: var(--heading); font-weight: 600;"><span style="width: 12px; height: 2px; background: var(--accent);"></span>You</span>
+          <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 12px; height: 1px; background: var(--muted); border-top: 1px dashed var(--muted);"></span>Competitors</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 08 CLOSE: pull-quote, the emotional anchor ─── -->
+  <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--hairline); display: grid; grid-template-columns: 0.9in 1fr 1.4in; gap: 22px; align-items: end;">
+    <div>
+      <div style="font-size: 56px; font-weight: 700; color: transparent; -webkit-text-stroke: 1px var(--accent); letter-spacing: -0.04em; line-height: 0.9;">08</div>
+      <div style="font-size: 7.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-top: 6px;">The point</div>
+    </div>
+    <div>
+      <div style="font-size: 22px; font-weight: 700; color: var(--heading); letter-spacing: -0.022em; line-height: 1.15;">A business that runs <span style="color: var(--accent);">without you in the room.</span></div>
+      <p style="font-size: 10.5px; line-height: 1.6; color: var(--body); margin: 10px 0 0 0; max-width: 4in;">You take a Friday off and nothing breaks. You go on vacation and proposals still go out. The day-to-day runs on systems, not on your willpower. Most owners tell me this is the real reason they took AI seriously. Not because they care about AI, because they want their time back.</p>
+    </div>
+    <div style="font-size: 8.5px; line-height: 1.55; color: var(--muted); letter-spacing: 0.04em; border-left: 1px solid var(--hairline); padding-left: 14px;">
+      <div style="font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; font-size: 7.5px; margin-bottom: 6px;">Next</div>
+      The how. Landscape, risks, services, and the engagement model start on the next page.
+    </div>
+  </div>
+
+  <div class="pf">
+    <span>VERA Consulting</span>
+    <span>veraconsulting.co</span>
   </div>
 </div>
 
@@ -230,15 +529,15 @@
     <div style="display: flex; flex-direction: column; gap: 36px;">
       <div>
         <div class="subhead">Adoption has outpaced readiness</div>
-        <p class="bt">88% of organizations now use AI regularly in at least one business function. 92% of Fortune 500 companies have deployed generative AI across their operations. But only 25% have governance frameworks robust enough to match that pace.</p>
+        <p class="bt">88% of organizations now use AI regularly in at least one business function. 92% of Fortune 500 companies have deployed generative AI across their operations. But only 25% have moved those experiments into reliable production.</p>
       </div>
       <div>
-        <div class="subhead">The governance gap is real</div>
-        <p class="bt">AI adoption has outrun AI governance by 58 percentage points — the widest enterprise adoption-to-governance gap on record. 78% of executives say they lack confidence their company could pass an independent AI governance audit within 90 days.</p>
+        <div class="subhead">The foundation gap is wider</div>
+        <p class="bt">Most organizations have AI somewhere in the business but haven't built the infrastructure to scale it. Evaluation frameworks, monitoring, architecture decisions, and the policies that hold the work together. The gap between using AI and running AI as a system is what separates leaders from pilots that never ship.</p>
       </div>
       <div>
-        <div class="subhead">Regulation is accelerating</div>
-        <p class="bt">The EU AI Act is in effect. U.S. states are passing AI-specific legislation. The SEC has issued disclosure guidance. NIST has published its AI Risk Management Framework. FTC enforcement actions are increasing. Companies that built without governance are retrofitting under pressure.</p>
+        <div class="subhead">Foundation is the new differentiator</div>
+        <p class="bt">What used to set leaders apart was access to better models. That's increasingly a commodity. What separates them now is the foundation around the model, the evaluation systems, the integration patterns, the monitoring, the policies that make the work survive a quarter. Leaders are building this. Most are still shipping prototypes.</p>
       </div>
       <div>
         <div class="subhead">The gap is widening</div>
@@ -263,12 +562,12 @@
       </div>
       <div class="big-stat">
         <div class="big-stat-num">25%</div>
-        <div class="big-stat-label">have governance frameworks robust enough to match adoption pace</div>
+        <div class="big-stat-label">of organizations have moved AI experiments into production</div>
         <div class="big-stat-source">Grant Thornton, 2026</div>
       </div>
       <div class="big-stat">
         <div class="big-stat-num">78%</div>
-        <div class="big-stat-label">of executives lack confidence they could pass an AI governance audit</div>
+        <div class="big-stat-label">of executives lack confidence in their AI evaluation and oversight</div>
         <div class="big-stat-source">Grant Thornton, 2026</div>
       </div>
       <div class="big-stat">
@@ -279,15 +578,15 @@
     </div>
   </div>
 
-  <div style="border-top: 2px solid var(--hairline); padding-top: 14px; margin-top: auto;">
+  <div style="border-top: 2px solid var(--hairline); padding-top: 14px; margin-top: 24px;">
     <div class="cols">
       <div>
         <div class="subhead" style="margin-top: 0;">Where the impact hits hardest</div>
-        <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin-bottom: 0;">Financial services, healthcare, legal, insurance, HR, manufacturing, and customer experience are seeing the fastest AI-driven transformation. Companies in regulated industries face the most pressure to get governance right before scaling. The organizations that move first on governance will set the standard for their industries.</p>
+        <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin-bottom: 0;">Financial services, healthcare, legal, insurance, HR, manufacturing, and customer experience are seeing the fastest AI-driven shift. Firms in regulated sectors face the most pressure to build the foundation right before scaling. The ones that move first set the standard for their industries.</p>
       </div>
       <div>
         <div class="subhead" style="margin-top: 0;">The high performer gap</div>
-        <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin-bottom: 0;">Only 25% of organizations have moved at least 40% of their AI experiments into production. What separates the leaders: they redesigned workflows around AI rather than layering it onto existing processes. They invested in governance early, not after problems emerged. The gap between leaders and everyone else is accelerating.</p>
+        <p style="font-size: 10px; line-height: 1.55; color: var(--body); margin-bottom: 0;">Only 25% of organizations have moved at least 40% of their AI experiments into production. What separates the leaders: they redesigned workflows around AI rather than layering it onto existing processes. They built the foundation, architecture, evaluation, and operating habits, before they scaled. The gap between leaders and everyone else is accelerating.</p>
       </div>
     </div>
   </div>
@@ -317,7 +616,7 @@
     <p class="bt" style="margin-bottom: 0;">Most AI failures aren't technical. They're organizational. These are the six areas where we see companies get caught off guard.</p>
     <div style="text-align: right;">
       <div style="font-weight: 700; font-size: 36px; color: var(--accent); letter-spacing: -0.03em; line-height: 1;">58pt</div>
-      <div style="font-size: 9px; color: var(--muted); margin-top: 4px; line-height: 1.4;">gap between AI adoption<br/>and governance readiness</div>
+      <div style="font-size: 9px; color: var(--muted); margin-top: 4px; line-height: 1.4;">gap between AI adoption<br/>and foundation readiness</div>
     </div>
   </div>
 
@@ -333,7 +632,7 @@
       </div>
       <div class="ni">
         <div class="ni-header"><span class="ni-num">03</span><span class="ni-title">Data Privacy & Security</span></div>
-        <div class="ni-text">AI creates new attack surfaces — from prompt injection to training data extraction — that traditional security frameworks weren't designed to address. Compliance with GDPR, CCPA, and HIPAA requires AI-specific controls.</div>
+        <div class="ni-text">AI creates new attack surfaces, from prompt injection to training data extraction, that traditional security frameworks weren't designed to address. Compliance with GDPR, CCPA, and HIPAA requires AI-specific controls.</div>
       </div>
     </div>
     <div>
@@ -352,23 +651,81 @@
     </div>
   </div>
 
-  <!-- Pull quote accent -->
-  <div style="display: flex; gap: 14px; align-items: stretch; margin: 24px 0 16px 0; padding: 0;">
-    <div style="width: 3px; background: var(--accent); border-radius: 2px; flex-shrink: 0;"></div>
-    <p style="font-size: 11px; font-weight: 500; font-style: italic; color: var(--heading); line-height: 1.5; margin: 0; padding: 4px 0;">"The companies that get AI right aren't the ones that move fastest. They're the ones that build the governance to sustain it."</p>
+  <!-- Risk landscape matrix -->
+  <div style="margin: 12px 0 6px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px;">
+      <div style="font-size: 8px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);">Risk Landscape</div>
+      <div style="font-size: 8px; color: var(--muted); font-style: italic;">VERA Assessment &middot; positions plotted from published research</div>
+    </div>
+    <svg viewBox="0 0 620 170" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+      <!-- Off-white chart background (inside frame only) -->
+      <rect x="50" y="12" width="550" height="138" fill="#FAF8F3"/>
+      <!-- Quadrant tint: top-right (highest concern) -->
+      <rect x="325" y="12" width="275" height="69" fill="#C97B3F" opacity="0.07"/>
+      <!-- Frame -->
+      <rect x="50" y="12" width="550" height="138" fill="none" stroke="#1F2E4D" stroke-width="1"/>
+      <!-- Midlines -->
+      <line x1="325" y1="12" x2="325" y2="150" stroke="#1F2E4D" stroke-width="0.5" stroke-dasharray="2,3"/>
+      <line x1="50" y1="81" x2="600" y2="81" stroke="#1F2E4D" stroke-width="0.5" stroke-dasharray="2,3"/>
+
+      <!-- Quadrant labels (faint, in background) -->
+      <text x="487" y="22" fill="#C97B3F" font-size="6.5" font-weight="700" letter-spacing="0.1em" text-anchor="middle" opacity="0.7">CRITICAL</text>
+      <text x="187" y="22" fill="#F5EFE4" font-size="6.5" font-weight="700" letter-spacing="0.1em" text-anchor="middle" opacity="0.5">EMERGING</text>
+      <text x="487" y="146" fill="#F5EFE4" font-size="6.5" font-weight="700" letter-spacing="0.1em" text-anchor="middle" opacity="0.5">POLICY-BOUND</text>
+      <text x="187" y="146" fill="#F5EFE4" font-size="6.5" font-weight="700" letter-spacing="0.1em" text-anchor="middle" opacity="0.5">BASELINE</text>
+
+      <!-- Y axis -->
+      <text x="16" y="81" fill="#1F2E4D" font-size="7" font-weight="600" letter-spacing="0.12em" text-anchor="middle" transform="rotate(-90 16 81)">ORG IMPACT →</text>
+
+      <!-- X axis -->
+      <text x="325" y="166" fill="#1F2E4D" font-size="7" font-weight="600" letter-spacing="0.12em" text-anchor="middle">EXTERNAL EXPOSURE →</text>
+
+      <!-- Risk dots, positions sourced from published research -->
+
+      <!-- 01 Bias & Fairness, EU AI Act Annex III high-risk (hiring, credit, biometrics); 60%+ McKinsey relevance -->
+      <circle cx="470" cy="50" r="7" fill="#C97B3F"/>
+      <text x="470" y="53" fill="#FFFFFF" font-size="7" font-weight="700" text-anchor="middle">01</text>
+      <text x="470" y="70" fill="#1F2E4D" font-size="7" font-weight="600" text-anchor="middle">Bias &amp; Fairness</text>
+
+      <!-- 02 Hallucination, McKinsey 2026: 74% rate highly relevant (#1 risk); EU AI Act Article 15 accuracy + transparency -->
+      <circle cx="280" cy="28" r="7" fill="#C97B3F"/>
+      <text x="280" y="31" fill="#FFFFFF" font-size="7" font-weight="700" text-anchor="middle">02</text>
+      <text x="280" y="48" fill="#1F2E4D" font-size="7" font-weight="600" text-anchor="middle">Hallucination</text>
+
+      <!-- 03 Data Privacy, GDPR + EU AI Act Art. 10 + HIPAA; McKinsey 72% cybersecurity relevance -->
+      <circle cx="560" cy="38" r="7" fill="#C97B3F"/>
+      <text x="560" y="41" fill="#FFFFFF" font-size="7" font-weight="700" text-anchor="middle">03</text>
+      <text x="560" y="58" fill="#1F2E4D" font-size="7" font-weight="600" text-anchor="middle">Data Privacy</text>
+
+      <!-- 04 Regulatory Exposure, by definition very high reg; moderate direct business impact -->
+      <circle cx="540" cy="98" r="7" fill="#C97B3F"/>
+      <text x="540" y="101" fill="#FFFFFF" font-size="7" font-weight="700" text-anchor="middle">04</text>
+      <text x="540" y="118" fill="#1F2E4D" font-size="7" font-weight="600" text-anchor="middle">Regulatory</text>
+
+      <!-- 05 Workforce, Not AI-Act-specific; McKinsey 2026: declining concern (only 9% mitigating) -->
+      <circle cx="180" cy="98" r="7" fill="#C97B3F"/>
+      <text x="180" y="101" fill="#FFFFFF" font-size="7" font-weight="700" text-anchor="middle">05</text>
+      <text x="180" y="118" fill="#1F2E4D" font-size="7" font-weight="600" text-anchor="middle">Workforce</text>
+
+      <!-- 06 Vendor Lock-in, Not directly regulated; emerging concern via IP infringement risk -->
+      <circle cx="245" cy="125" r="7" fill="#C97B3F"/>
+      <text x="245" y="128" fill="#FFFFFF" font-size="7" font-weight="700" text-anchor="middle">06</text>
+      <text x="245" y="145" fill="#1F2E4D" font-size="7" font-weight="600" text-anchor="middle">Vendor Lock-in</text>
+    </svg>
+    <div style="font-size: 7px; color: var(--muted); margin-top: 8px; line-height: 1.5;">
+      <strong style="color: var(--heading); font-weight: 600;">Sources:</strong> McKinsey, <em>The State of AI</em> (2024, 2026) &middot; European Commission, <em>EU AI Act</em> (Regulation 2024/1689, Annex III high-risk classifications) &middot; Stanford HAI, <em>AI Index Report 2025</em> &middot; NIST <em>AI Risk Management Framework</em> (AI 100-1).
+    </div>
   </div>
 
-  <div style="border-top: 2px solid var(--hairline); padding-top: 16px; margin-top: auto;">
-    <div class="cols">
-      <div>
-        <div class="subhead" style="margin-top: 0;">How we address these risks</div>
-        <p class="bt">We identify which risks are most relevant to your organization and build the governance, policies, and evaluation systems to manage them. Every assessment includes specific mitigation recommendations tied to your operations.</p>
-      </div>
-      <div>
-        <div class="subhead" style="margin-top: 0;">Regulatory frameworks we track</div>
-        <p class="bt">EU AI Act, NIST AI Risk Management Framework, state-level AI legislation (CO, IL, TX, CA), SEC AI disclosure guidance, FTC enforcement precedent, HIPAA AI provisions, SOC 2 AI controls, ISO/IEC 42001. Monitored continuously.</p>
-      </div>
-    </div>
+  <!-- Pull quote accent -->
+  <div style="display: flex; gap: 14px; align-items: stretch; margin: 8px 0 10px 0; padding: 0;">
+    <div style="width: 3px; background: var(--accent); border-radius: 2px; flex-shrink: 0;"></div>
+    <p style="font-size: 10.5px; font-weight: 500; font-style: italic; color: var(--heading); line-height: 1.5; margin: 0; padding: 4px 0;">"The companies that get AI right aren't the ones that move fastest. They're the ones that build the foundation to sustain it."</p>
+  </div>
+
+  <div style="border-top: 2px solid var(--hairline); padding-top: 10px; margin-top: 10px;">
+    <div class="subhead" style="margin-top: 0;">How we address these risks</div>
+    <p class="bt" style="max-width: 5.5in;">We identify the risks most relevant to your business and design the evaluations, policies, and monitoring to manage them. Every assessment ends with mitigation steps tied to how you actually operate.</p>
   </div>
 
   <div class="pf">
@@ -394,7 +751,7 @@
   <div class="svc">
     <div class="svc-header"><span class="svc-num">01</span><span class="svc-title">AI Strategy</span></div>
     <div class="svc-grid">
-      <p class="svc-desc">We assess what's feasible, map it to your infrastructure, and build the plan. Not a generic roadmap — a strategy built around your business, your constraints, and where AI is heading in 12, 24, and 36 months.</p>
+      <p class="svc-desc">We assess what's feasible, map it to your infrastructure, and build the plan. Not a generic roadmap, a strategy built around your business, your constraints, and where AI is heading in 12, 24, and 36 months.</p>
       <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Feasibility assessment, architecture planning, vendor evaluation, evaluation criteria, implementation timeline, resource planning</p></div>
     </div>
   </div>
@@ -402,16 +759,16 @@
   <div class="svc">
     <div class="svc-header"><span class="svc-num">02</span><span class="svc-title">AI Integration</span></div>
     <div class="svc-grid">
-      <p class="svc-desc">AI woven into your workflows at a foundational level — not bolted on as a feature. We handle technical implementation, data pipelines, and change management so your team actually adopts it.</p>
+      <p class="svc-desc">AI woven into your workflows at a foundational level, not bolted on as a feature. We handle technical implementation, data pipelines, and change management so your team actually adopts it.</p>
       <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Workflow design, system integration, data pipeline architecture, performance monitoring, change management, team onboarding</p></div>
     </div>
   </div>
 
   <div class="svc">
-    <div class="svc-header"><span class="svc-num">03</span><span class="svc-title">AI Governance</span></div>
+    <div class="svc-header"><span class="svc-num">03</span><span class="svc-title">AI Foundation</span></div>
     <div class="svc-grid">
-      <p class="svc-desc">Policies, evaluation frameworks, and operational processes designed for where regulation is heading — not just where it is today. Compliant now, adaptable as the landscape shifts.</p>
-      <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Acceptable use policies, data handling protocols, model evaluation criteria, bias testing procedures, incident response, vendor assessment, compliance mapping</p></div>
+      <p class="svc-desc">AI built right from day one. Architecture decisions, evaluation systems, model selection, integration patterns, and the policies that make it last. Designed for where AI is heading, not just where it is.</p>
+      <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Architecture planning, evaluation frameworks, model selection criteria, monitoring and observability, policies and guardrails, vendor strategy</p></div>
     </div>
   </div>
 
@@ -423,29 +780,84 @@
     </div>
   </div>
 
-  <div class="svc" style="border-bottom: none;">
-    <div class="svc-header"><span class="svc-num">05</span><span class="svc-title">Policy Development</span></div>
-    <div class="svc-grid">
-      <p class="svc-desc">Standalone policy engagements — practical, enforceable, and aligned with current and emerging regulation. Policies your team can actually follow, not shelf documents that collect dust.</p>
-      <div><div class="svc-inc-label">Includes</div><p class="svc-inc">Acceptable use policy, data governance policy, model evaluation standards, human oversight requirements, vendor management protocols</p></div>
+  <div style="margin-top: 14px;">
+    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px;">
+      <div style="font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);">Engagement Options</div>
+      <div style="flex: 1; height: 1px; background: var(--hairline);"></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; align-items: start;">
+
+      <!-- 01 Retainer -->
+      <div style="padding: 0 20px 0 0; border-right: 1px solid var(--hairline);">
+        <div style="font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1; letter-spacing: -0.04em; margin-bottom: 5px;">01</div>
+        <div style="font-size: 8px; font-weight: 600; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 4px;">Ongoing</div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--heading); letter-spacing: -0.015em; margin-bottom: 8px;">Retainer</div>
+        <p style="font-size: 9.5px; line-height: 1.55; color: var(--body); margin: 0;">Ongoing monthly partnership. Direct access to Brett for strategy questions, policy reviews, vendor evaluations, and implementation guidance as they come up.</p>
+      </div>
+
+      <!-- 02 Audit, Roadmap & Training -->
+      <div style="padding: 0 20px; border-right: 1px solid var(--hairline);">
+        <div style="font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1; letter-spacing: -0.04em; margin-bottom: 5px;">02</div>
+        <div style="font-size: 8px; font-weight: 600; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 4px;">One-time</div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--heading); letter-spacing: -0.015em; margin-bottom: 8px;">Audit, Roadmap &amp; Training</div>
+        <p style="font-size: 9.5px; line-height: 1.55; color: var(--body); margin: 0;">One-time deep dive into current AI use, infrastructure, risks, and opportunities. Ends with a written audit, prioritized roadmap, leadership walk-through, and a half-day team training.</p>
+      </div>
+
+      <!-- 03 Project Build -->
+      <div style="padding: 0 0 0 20px;">
+        <div style="font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1; letter-spacing: -0.04em; margin-bottom: 5px;">03</div>
+        <div style="font-size: 8px; font-weight: 600; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 4px;">Scoped</div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--heading); letter-spacing: -0.015em; margin-bottom: 8px;">Project Build</div>
+        <p style="font-size: 9.5px; line-height: 1.55; color: var(--body); margin: 0;">Scoped delivery of a specific outcome. AI policy document, evaluation framework, custom integration, or training cohort. Fixed scope, fixed fee, defined success criteria.</p>
+      </div>
+
     </div>
   </div>
 
-  <!-- Visual accent — key differentiators -->
-  <div style="display: flex; gap: 14px; align-items: stretch; margin: 12px 0 0 0; padding: 0;">
-    <div style="width: 3px; background: var(--accent); border-radius: 2px; flex-shrink: 0;"></div>
-    <p style="font-size: 10.5px; font-weight: 500; color: var(--heading); line-height: 1.55; margin: 0; padding: 4px 0;">Research-grounded recommendations &nbsp;&middot;&nbsp; No handoffs to junior teams &nbsp;&middot;&nbsp; Full documentation &amp; knowledge transfer &nbsp;&middot;&nbsp; 30-day post-engagement support</p>
-  </div>
+  <!-- Time-allocation visual → bridge to page 5 -->
+  <div style="margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--hairline);">
+    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px;">
+      <div style="font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);">How an Engagement Unfolds</div>
+      <div style="flex: 1; height: 1px; background: var(--hairline);"></div>
+      <div style="font-size: 8px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">Process detail, page 5 &rarr;</div>
+    </div>
 
-  <div style="border-top: 2px solid var(--hairline); padding-top: 14px; margin-top: auto;">
-    <div class="cols">
+    <!-- Proportional time bar: ~3 wks : 1 wk : ~8 wks -->
+    <div style="display: grid; grid-template-columns: 3fr 1fr 7fr; gap: 3px; margin-bottom: 6px;">
+      <div style="height: 8px; background: var(--accent); opacity: 0.42; border-radius: 1px;"></div>
+      <div style="height: 8px; background: var(--accent); opacity: 0.7; border-radius: 1px;"></div>
+      <div style="height: 8px; background: var(--accent); border-radius: 1px;"></div>
+    </div>
+
+    <!-- Scale axis: tick marks aligned to bar -->
+    <div style="position: relative; height: 12px; margin-bottom: 14px;">
+      <div style="position: absolute; left: 0; top: 0; width: 1px; height: 4px; background: var(--hairline);"></div>
+      <div style="position: absolute; left: 0; top: 6px; font-size: 7px; color: var(--muted); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;">Wk 0</div>
+      <div style="position: absolute; left: calc(27.27% - 1.4%); top: 0; width: 1px; height: 4px; background: var(--hairline);"></div>
+      <div style="position: absolute; left: calc(27.27% - 1.4%); top: 6px; font-size: 7px; color: var(--muted); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transform: translateX(-50%);">Wk 3</div>
+      <div style="position: absolute; left: calc(36.36% - 1.4%); top: 0; width: 1px; height: 4px; background: var(--hairline);"></div>
+      <div style="position: absolute; left: calc(36.36% - 1.4%); top: 6px; font-size: 7px; color: var(--muted); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transform: translateX(-50%);">Wk 4</div>
+      <div style="position: absolute; right: 0; top: 0; width: 1px; height: 4px; background: var(--hairline);"></div>
+      <div style="position: absolute; right: 0; top: 6px; font-size: 7px; color: var(--muted); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;">Wk 12+</div>
+    </div>
+
+    <!-- Phase content -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;">
       <div>
-        <div class="subhead" style="margin-top: 0;">Our approach</div>
-        <p class="bt">Every recommendation traces back to published research, tested benchmarks, or proven production patterns. If something isn't a fit, we'll tell you before you spend a dollar on it.</p>
+        <div style="font-size: 7.5px; font-weight: 600; color: rgba(201, 123, 63, 0.6); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 4px;">Phase 01 &middot; 2-3 wks</div>
+        <div style="font-size: 13px; font-weight: 700; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 6px;">Assessment</div>
+        <div style="font-size: 9px; line-height: 1.55; color: var(--body);">Findings memo &middot; Risk landscape &middot; Maturity score</div>
       </div>
       <div>
-        <div class="subhead" style="margin-top: 0;">Every engagement includes</div>
-        <p class="bt">Dedicated point of contact with direct access to senior consultants. Full documentation, complete knowledge transfer, and post-engagement support. We take a small number of engagements so each gets the attention it deserves.</p>
+        <div style="font-size: 7.5px; font-weight: 600; color: rgba(201, 123, 63, 0.82); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 4px;">Phase 02 &middot; 1 wk</div>
+        <div style="font-size: 13px; font-weight: 700; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 6px;">Scope</div>
+        <div style="font-size: 9px; line-height: 1.55; color: var(--body);">Scope of work &middot; Success criteria &middot; Investment plan</div>
+      </div>
+      <div>
+        <div style="font-size: 7.5px; font-weight: 600; color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 4px;">Phase 03 &middot; 4-12 wks</div>
+        <div style="font-size: 13px; font-weight: 700; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 6px;">Execution</div>
+        <div style="font-size: 9px; line-height: 1.55; color: var(--body);">The work itself &middot; Full documentation &middot; Knowledge transfer &middot; 30-day support</div>
       </div>
     </div>
   </div>
@@ -486,7 +898,7 @@
     <div class="step-num">1</div>
     <div>
       <div class="step-title">Assessment</div>
-      <div class="step-desc">We start by understanding where you are — infrastructure, AI maturity, goals, and constraints. We evaluate what's working, what's not, and where AI can create real value. The strategy we build is only as good as our understanding of your reality.</div>
+      <div class="step-desc">We start by understanding where you are, infrastructure, AI maturity, goals, and constraints. We evaluate what's working, what's not, and where AI can create real value. The strategy we build is only as good as our understanding of your reality.</div>
       <div class="step-detail-row">
         <span class="step-detail">Infrastructure review</span>
         <span class="step-detail">Stakeholder interviews</span>
@@ -516,7 +928,7 @@
     <div class="step-num">3</div>
     <div>
       <div class="step-title">Execution</div>
-      <div class="step-desc">We do the work — strategy, integration, governance, training, whatever the scope calls for. Regular updates, full documentation, no lock-in. When we're done, you own everything we built. Every engagement includes a 30-day post-completion support window.</div>
+      <div class="step-desc">We do the work, strategy, integration, foundation, training, whatever the scope calls for. Regular updates, full documentation, no lock-in. When we're done, you own everything we built. Every engagement includes a 30-day post-completion support window.</div>
       <div class="step-detail-row">
         <span class="step-detail">Weekly check-ins</span>
         <span class="step-detail">Progress reporting</span>
@@ -527,24 +939,79 @@
     </div>
   </div>
 
-  <!-- Vision + What to expect -->
-  <div style="border-top: 2px solid var(--hairline); margin-top: auto; padding-top: 14px;">
-    <div class="cols">
-      <div>
-        <div class="eyebrow" style="margin-bottom: 6px;">Our Vision</div>
-        <p style="font-size: 10.5px; line-height: 1.55; font-style: italic; color: var(--heading);">"I started VERA because AI is going to change the workforce at an unprecedented pace, and many companies are not prepared for it. We believe in using AI to strengthen human capabilities and being transparent about both the risks and the opportunities ahead."</p>
-        <p style="font-size: 9px; font-weight: 600; color: var(--heading); margin-top: 6px;">Brett Ponters, Founder</p>
+  <!-- What you walk away with, visual card grid -->
+  <div style="border-top: 2px solid var(--hairline); margin-top: 18px; padding-top: 12px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px;">
+      <div class="eyebrow" style="margin: 0;">What you walk away with</div>
+      <div style="font-size: 8px; color: var(--muted); letter-spacing: 0.04em; font-style: italic;">Artifacts your team owns and runs without us</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;">
+      <!-- 1. Strategy -->
+      <div style="border: 1px solid var(--hairline); border-radius: 6px; padding: 12px 10px; background: rgba(255,255,255,0.4);">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 8px;">
+          <rect x="6" y="3" width="20" height="26" rx="1.5" stroke="#C97B3F" stroke-width="1.4"/>
+          <line x1="10" y1="10" x2="22" y2="10" stroke="#C97B3F" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="10" y1="14" x2="22" y2="14" stroke="#C97B3F" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="10" y1="18" x2="18" y2="18" stroke="#C97B3F" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="10" y1="22" x2="20" y2="22" stroke="#C97B3F" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size: 10px; font-weight: 700; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 3px;">Strategy</div>
       </div>
-      <div>
-        <div class="eyebrow" style="margin-bottom: 6px;">What to expect</div>
-        <p class="bt">Direct access to senior consultants. No handoffs to junior teams. Transparent pricing with no hidden fees. Weekly progress reports. Everything we build, you own.</p>
-        <p class="bt" style="margin-top: 8px;">VERA is incorporated as a Public Benefit Corporation. A fixed percentage of every dollar we earn goes to independent AI safety research.</p>
+      <!-- 2. Workflows -->
+      <div style="border: 1px solid var(--hairline); border-radius: 6px; padding: 12px 10px; background: rgba(255,255,255,0.4);">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 8px;">
+          <circle cx="7" cy="16" r="3.5" stroke="#C97B3F" stroke-width="1.4"/>
+          <circle cx="16" cy="8" r="3.5" stroke="#C97B3F" stroke-width="1.4"/>
+          <circle cx="25" cy="16" r="3.5" stroke="#C97B3F" stroke-width="1.4"/>
+          <circle cx="16" cy="24" r="3.5" stroke="#C97B3F" stroke-width="1.4"/>
+          <line x1="10" y1="14" x2="13" y2="10" stroke="#C97B3F" stroke-width="1.4"/>
+          <line x1="19" y1="10" x2="22" y2="14" stroke="#C97B3F" stroke-width="1.4"/>
+          <line x1="22" y1="18" x2="19" y2="22" stroke="#C97B3F" stroke-width="1.4"/>
+          <line x1="13" y1="22" x2="10" y2="18" stroke="#C97B3F" stroke-width="1.4"/>
+        </svg>
+        <div style="font-size: 10px; font-weight: 700; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 3px;">Workflows</div>
+      </div>
+      <!-- 3. Evaluation -->
+      <div style="border: 1px solid var(--hairline); border-radius: 6px; padding: 12px 10px; background: rgba(255,255,255,0.4);">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 8px;">
+          <line x1="5" y1="28" x2="28" y2="28" stroke="#C97B3F" stroke-width="1.4" stroke-linecap="round"/>
+          <rect x="7" y="20" width="4" height="8" stroke="#C97B3F" stroke-width="1.4"/>
+          <rect x="14" y="14" width="4" height="14" stroke="#C97B3F" stroke-width="1.4"/>
+          <rect x="21" y="8" width="4" height="20" stroke="#C97B3F" stroke-width="1.4"/>
+        </svg>
+        <div style="font-size: 10px; font-weight: 700; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 3px;">Evaluation</div>
+      </div>
+      <!-- 4. Policy -->
+      <div style="border: 1px solid var(--hairline); border-radius: 6px; padding: 12px 10px; background: rgba(255,255,255,0.4);">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 8px;">
+          <path d="M16 3 L26 6 L26 16 C26 22 22 27 16 29 C10 27 6 22 6 16 L6 6 Z" stroke="#C97B3F" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M12 15 L15 18 L21 12" stroke="#C97B3F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div style="font-size: 10px; font-weight: 700; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 3px;">Policy</div>
+      </div>
+      <!-- 5. Documentation -->
+      <div style="border: 1px solid var(--hairline); border-radius: 6px; padding: 12px 10px; background: rgba(255,255,255,0.4);">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 8px;">
+          <rect x="4" y="8" width="18" height="22" rx="1.5" stroke="#C97B3F" stroke-width="1.4"/>
+          <rect x="8" y="4" width="18" height="22" rx="1.5" stroke="#C97B3F" stroke-width="1.4" fill="rgba(255,255,255,0.6)"/>
+          <line x1="12" y1="11" x2="22" y2="11" stroke="#C97B3F" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="12" y1="15" x2="22" y2="15" stroke="#C97B3F" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="12" y1="19" x2="19" y2="19" stroke="#C97B3F" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size: 10px; font-weight: 700; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 3px;">Documentation</div>
       </div>
     </div>
   </div>
 
+  <!-- Vision (full width, "What to expect" removed) -->
+  <div style="border-top: 2px solid var(--hairline); margin-top: 20px; padding-top: 14px;">
+    <div class="eyebrow" style="margin-bottom: 6px;">Our Vision</div>
+    <p style="font-size: 10.5px; line-height: 1.55; font-style: italic; color: var(--heading); max-width: 5.5in;">"I started VERA because AI is going to change the workforce at an unprecedented pace, and many companies are not prepared for it. We believe in using AI to strengthen human capabilities and being transparent about both the risks and the opportunities ahead."</p>
+    <p style="font-size: 9px; font-weight: 600; color: var(--heading); margin-top: 6px;">Brett Ponters, Founder</p>
+  </div>
+
   <!-- Contact strip -->
-  <div style="border-top: 1px solid var(--hairline); margin-top: 12px; padding-top: 12px;">
+  <div style="border-top: 1px solid var(--hairline); margin-top: 28px; padding-top: 12px;">
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;">
       <div style="padding-right: 20px;">
         <div style="font-size: 7px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Contact</div>
@@ -565,6 +1032,21 @@
   <div class="pf">
     <span>VERA Consulting</span>
     <span>veraconsulting.co</span>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 6: BACK COVER ═══════════ -->
+<div class="page" style="align-items: center; justify-content: center; padding: 0;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 22px;">
+    <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 150px; width: auto;">
+      <path d="M 0 0 L 180 540 L 360 0" stroke="var(--accent)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="font-weight: 700; font-size: 44px; color: var(--heading); letter-spacing: 0.04em;">VERA</span>
+      <span style="display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); position: relative; top: 4px;"></span>
+    </div>
+    <span style="font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);">Value-Driven, Ethical, Research-Grounded AI</span>
+    <span style="font-weight: 600; font-size: 15px; color: var(--accent); margin-top: 6px;">veraconsulting.co</span>
   </div>
 </div>
 

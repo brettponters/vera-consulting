@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VERA — AI Strategy, Integration & Governance</title>
+  <title>VERA, AI Strategy, Integration & Coaching</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
 
@@ -109,6 +109,8 @@
       color: var(--accent);
     }
 
+
+
     /* ─── Hero ─── */
     .hero {
       margin-bottom: 0.2in;
@@ -143,62 +145,70 @@
     /* ─── Services grid ─── */
     .services {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 12px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 10px;
       margin-bottom: 0.2in;
     }
 
     .service-card {
       background: var(--surface);
       border-radius: 8px;
-      padding: 18px;
+      padding: 14px 13px;
     }
 
     .service-card h3 {
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--heading);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .service-card p {
-      font-size: 11px;
-      line-height: 1.55;
+      font-size: 10px;
+      line-height: 1.5;
       color: var(--body);
     }
 
-    /* ─── Pillars ─── */
+    /* ─── Outcomes (editorial) ─── */
     .pillars {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      column-gap: 36px;
+      row-gap: 0;
       margin-bottom: 0.18in;
     }
 
     .pillar {
-      border: 1px solid var(--hairline);
-      border-radius: 8px;
-      padding: 14px 16px;
+      padding: 20px 0 18px 0;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .pillar:nth-last-child(-n+2) {
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
     .pillar-num {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
       color: var(--accent);
-      margin-bottom: 3px;
+      line-height: 1;
+      margin-bottom: 10px;
     }
 
     .pillar h4 {
-      font-weight: 600;
-      font-size: 12.5px;
+      font-weight: 700;
+      font-size: 15px;
       color: var(--heading);
-      margin-bottom: 4px;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+      margin-bottom: 6px;
     }
 
     .pillar p {
-      font-size: 10px;
-      line-height: 1.5;
+      font-size: 10.5px;
+      line-height: 1.55;
       color: var(--body);
     }
 
@@ -207,7 +217,8 @@
       display: flex;
       align-items: flex-start;
       gap: 20px;
-      padding-top: 0.15in;
+      padding-top: 0.18in;
+      margin-top: auto;
       margin-bottom: 0.15in;
       border-top: 1px solid var(--hairline);
     }
@@ -273,18 +284,31 @@
     .cta-right {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
     }
 
-    .cta-button {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
+    .cta-qr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .cta-qr img {
+      width: 72px;
+      height: 72px;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .cta-qr-label {
+      font-size: 7.5px;
       font-weight: 600;
-      font-size: 12px;
-      padding: 10px 24px;
-      border-radius: 999px;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
     }
 
     .cta-links {
@@ -392,7 +416,7 @@
   <!-- Hero -->
   <div class="hero">
     <h1>AI that's powerful, accountable,<br/>and designed to last.</h1>
-    <p>VERA is an AI consulting firm. We help companies figure out where AI fits, integrate it into their operations, and make sure it holds up over time. Strategy, integration, and governance, done right.</p>
+    <p>VERA is an AI consulting firm. We help companies figure out where AI fits, integrate it into their operations, and make sure it holds up over time. Strategy, integration, and coaching, done right.</p>
   </div>
 
   <!-- What we do -->
@@ -400,47 +424,51 @@
   <div class="services">
     <div class="service-card">
       <h3>Strategy</h3>
-      <p>We assess what's feasible, map it to your infrastructure, and write the plan. Architecture, evaluation criteria, governance, and timeline.</p>
+      <p>Where AI fits, what to build, what to skip. A roadmap you can act on.</p>
     </div>
     <div class="service-card">
       <h3>Integration</h3>
-      <p>We help AI integrate into your processes seamlessly. Foundationally built to scale through time.</p>
+      <p>AI woven into the work your team already does.</p>
     </div>
     <div class="service-card">
-      <h3>Governance</h3>
-      <p>Policies, evaluation frameworks, and operational processes that account for where regulation is heading, not just where it is today.</p>
+      <h3>Foundation</h3>
+      <p>The architecture and policies underneath. Built to last through scale and regulation shifts.</p>
+    </div>
+    <div class="service-card">
+      <h3>1:1 AI Coaching</h3>
+      <p>Building AI fluency from the top down.</p>
     </div>
   </div>
 
-  <!-- Pillars -->
-  <div class="section-title">What we hold to</div>
+  <!-- Outcomes, dream-shaped -->
+  <div class="section-title">What you actually want</div>
   <div class="pillars">
     <div class="pillar">
       <div class="pillar-num">01</div>
-      <h4>Research-grounded</h4>
-      <p>Every recommendation traces back to published research, tested benchmarks, or proven production patterns.</p>
+      <h4>Make money from AI, not just spend on it.</h4>
+      <p>Revenue lift, margin compression, faster sales cycles. AI without a business case is a hobby.</p>
     </div>
     <div class="pillar">
       <div class="pillar-num">02</div>
-      <h4>Responsibly powerful</h4>
-      <p>AI that's capable enough to make a real difference and reliable enough to trust.</p>
+      <h4>Get your time back.</h4>
+      <p>AI handling the work that fills your calendar but doesn't move the needle. Your hours, back for the work only you can do.</p>
     </div>
     <div class="pillar">
       <div class="pillar-num">03</div>
-      <h4>Transparent</h4>
-      <p>We're honest about what works, what doesn't, and where the real risks are so you can make informed decisions.</p>
+      <h4>Stay ahead, not chase.</h4>
+      <p>While competitors thrash through vendor demos, you're shipping. While they pilot, you're operating.</p>
     </div>
     <div class="pillar">
       <div class="pillar-num">04</div>
-      <h4>Built to stay ahead</h4>
-      <p>We plan for where AI and regulation are heading, not just where they are today.</p>
+      <h4>Cut through the AI hype.</h4>
+      <p>10,000 AI vendors, 9,500 selling vapor. Know what's real, what isn't, and exactly where to spend.</p>
     </div>
   </div>
 
   <!-- Our Story -->
   <div class="story-section">
     <div class="story-photo">
-      <img src="headshot.jpg" alt="Brett Ponters" />
+      <img src="../assets/headshot-small.jpg" alt="Brett Ponters" />
     </div>
     <div class="story-text">
       <div class="section-title" style="margin-bottom: 6px;">Our Vision</div>
@@ -460,12 +488,15 @@
         <div><a href="https://veraconsulting.co" class="url">veraconsulting.co</a></div>
         <div><a href="mailto:brett@veraconsulting.co">brett@veraconsulting.co</a></div>
       </div>
-      <a href="mailto:brett@veraconsulting.co?subject=Interested%20in%20working%20with%20VERA" class="cta-button">Get in touch</a>
+      <div class="cta-qr">
+        <img src="../assets/qr-calendly.png" alt="Scan to book a call with Brett" />
+        <div class="cta-qr-label">Scan to book</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- PAGE 2 — BACK -->
+<!-- PAGE 2, BACK -->
 <div class="page back-page">
   <div class="back-content">
     <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 140px; width: auto;">

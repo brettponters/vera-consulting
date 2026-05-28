@@ -11,7 +11,7 @@ const SERVICES = [
     number: "01",
     title: "AI Strategy",
     description:
-      "We assess what's feasible, map it to your infrastructure, and build the plan. Not a generic roadmap — a strategy built around your business, your constraints, and where AI is heading in 12, 24, and 36 months.",
+      "We assess what's feasible, map it to your infrastructure, and build the plan. Not a generic roadmap, a strategy built around your business, your constraints, and where AI is heading in 12, 24, and 36 months.",
     includes: [
       "Feasibility assessment",
       "Architecture planning",
@@ -25,7 +25,7 @@ const SERVICES = [
     number: "02",
     title: "AI Integration",
     description:
-      "AI woven into your workflows at a foundational level — not bolted on as a feature. We handle technical implementation, data pipelines, and change management so your team actually adopts it.",
+      "AI woven into your workflows at a foundational level, not bolted on as a feature. We handle technical implementation, data pipelines, and change management so your team actually adopts it.",
     includes: [
       "Workflow design",
       "System integration",
@@ -37,9 +37,9 @@ const SERVICES = [
   },
   {
     number: "03",
-    title: "AI Governance",
+    title: "AI Foundation",
     description:
-      "Policies, evaluation frameworks, and operational processes designed for where regulation is heading — not just where it is today. Compliant now, adaptable as the landscape shifts.",
+      "Policies, evaluation frameworks, and operational processes designed for where regulation is heading, not just where it is today. Compliant now, adaptable as the landscape shifts.",
     includes: [
       "Acceptable use policies",
       "Data handling protocols",
@@ -66,7 +66,7 @@ const SERVICES = [
     number: "05",
     title: "Policy Development",
     description:
-      "Standalone policy engagements — practical, enforceable, and aligned with current and emerging regulation. Policies your team can actually follow, not shelf documents that collect dust.",
+      "Standalone policy engagements, practical, enforceable, and aligned with current and emerging regulation. Policies your team can actually follow, not shelf documents that collect dust.",
     includes: [
       "Acceptable use policy",
       "Data governance policy",
@@ -78,7 +78,7 @@ const SERVICES = [
 ];
 
 const DIFFERENTIATORS = [
-  "Research-grounded recommendations",
+  "Research-backed recommendations",
   "No handoffs to junior teams",
   "Full documentation & knowledge transfer",
   "30-day post-engagement support",

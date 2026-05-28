@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VERA, IG Profile Icon Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /*
+      Side-by-side preview of all three IG profile icon variants
+      at the actual sizes Instagram displays them (110px profile, 40px feed)
+      on both light (#FFFFFF) and dark (#000000) IG UI backgrounds.
+      Canvas: 1600 x 1200.
+    */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1600px; height: 1200px; overflow: hidden; }
+    body {
+      background: #FAFAF7;
+      font-family: 'Geist', -apple-system, system-ui, sans-serif;
+      color: #0F0F10;
+      padding: 56px 64px;
+    }
+
+    .header { margin-bottom: 40px; }
+    .title {
+      font-weight: 700; font-size: 28px;
+      letter-spacing: -0.01em; color: #050507;
+    }
+    .sub {
+      font-weight: 500; font-size: 14px;
+      color: #5C5C66; margin-top: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+    .col {
+      background: #FFFFFF;
+      border: 1px solid #E6E6EA;
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .col-label {
+      font-weight: 600; font-size: 11px;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: #C97B3F; margin-bottom: 6px;
+    }
+    .col-name {
+      font-weight: 700; font-size: 17px;
+      color: #050507; margin-bottom: 4px;
+      letter-spacing: -0.005em;
+    }
+    .col-desc {
+      font-size: 12px; color: #5C5C66;
+      line-height: 1.5; margin-bottom: 22px;
+    }
+
+    .sizes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .swatch {
+      border-radius: 12px;
+      padding: 22px 0 16px;
+      display: flex; flex-direction: column;
+      align-items: center;
+    }
+    .swatch.light { background: #FFFFFF; border: 1px solid #E6E6EA; }
+    .swatch.dark  { background: #000000; }
+
+    .circle-110 {
+      width: 110px; height: 110px; border-radius: 50%;
+      overflow: hidden; display: block;
+      margin-bottom: 10px;
+    }
+    .circle-40 {
+      width: 40px; height: 40px; border-radius: 50%;
+      overflow: hidden; display: block;
+      margin-bottom: 10px;
+    }
+
+    .swatch-label {
+      font-size: 10px; letter-spacing: 0.16em;
+      text-transform: uppercase; font-weight: 600;
+    }
+    .swatch.light .swatch-label { color: #5C5C66; }
+    .swatch.dark  .swatch-label { color: #A8A8B0; }
+
+    .row { display: flex; gap: 14px; align-items: center; margin-top: 14px; }
+
+    .footer {
+      margin-top: 36px;
+      font-size: 11px; color: #5C5C66;
+      letter-spacing: 0.02em;
+    }
+    .footer b { color: #050507; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title">VERA · Instagram profile icon options</div>
+    <div class="sub">Three variants at 110px (profile size) and 40px (feed thumb). Light and dark IG UI.</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- FORM A -->
+    <div class="col">
+      <div class="col-label">Option A</div>
+      <div class="col-name">V-dominant lockup</div>
+      <div class="col-desc">Big V with "ERA" tucked at baseline. Reads as a lockup at large sizes, as a V at small sizes.</div>
+
+      <div class="sizes">
+        <div class="swatch light">
+          <div class="circle-110">
+            <svg viewBox="0 0 1080 1080" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 250 290 L 425 790 L 600 290" fill="none" stroke="#F5EFE4" stroke-width="100" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <text x="640" y="790" font-family="Geist, sans-serif" font-weight="700" font-size="220" letter-spacing="2" fill="#F5EFE4">ERA</text>
+            </svg>
+          </div>
+          <div class="swatch-label">110 · light</div>
+        </div>
+        <div class="swatch dark">
+          <div class="circle-110">
+            <svg viewBox="0 0 1080 1080" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 250 290 L 425 790 L 600 290" fill="none" stroke="#F5EFE4" stroke-width="100" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <text x="640" y="790" font-family="Geist, sans-serif" font-weight="700" font-size="220" letter-spacing="2" fill="#F5EFE4">ERA</text>
+            </svg>
+          </div>
+          <div class="swatch-label">110 · dark</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="swatch light" style="flex:1;">
+          <div class="circle-40">
+            <svg viewBox="0 0 1080 1080" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 250 290 L 425 790 L 600 290" fill="none" stroke="#F5EFE4" stroke-width="100" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <text x="640" y="790" font-family="Geist, sans-serif" font-weight="700" font-size="220" letter-spacing="2" fill="#F5EFE4">ERA</text>
+            </svg>
+          </div>
+          <div class="swatch-label">40 · light</div>
+        </div>
+        <div class="swatch dark" style="flex:1;">
+          <div class="circle-40">
+            <svg viewBox="0 0 1080 1080" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 250 290 L 425 790 L 600 290" fill="none" stroke="#F5EFE4" stroke-width="100" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <text x="640" y="790" font-family="Geist, sans-serif" font-weight="700" font-size="220" letter-spacing="2" fill="#F5EFE4">ERA</text>
+            </svg>
+          </div>
+          <div class="swatch-label">40 · dark</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM B -->
+    <div class="col">
+      <div class="col-label">Option B</div>
+      <div class="col-name">Two-tone V</div>
+      <div class="col-desc">Single V monogram. Cream left, terracotta right. Strongest signature at 40px.</div>
+
+      <div class="sizes">
+        <div class="swatch light">
+          <div class="circle-110">
+            <svg viewBox="0 0 1080 1080" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 330 220 L 540 820" fill="none" stroke="#F5EFE4" stroke-width="130" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <path d="M 540 820 L 750 220" fill="none" stroke="#E89464" stroke-width="130" stroke-linejoin="miter" stroke-miterlimit="10"/>
+            </svg>
+          </div>
+          <div class="swatch-label">110 · light</div>
+        </div>
+        <div class="swatch dark">
+          <div class="circle-110">
+            <svg viewBox="0 0 1080 1080" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 330 220 L 540 820" fill="none" stroke="#F5EFE4" stroke-width="130" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <path d="M 540 820 L 750 220" fill="none" stroke="#E89464" stroke-width="130" stroke-linejoin="miter" stroke-miterlimit="10"/>
+            </svg>
+          </div>
+          <div class="swatch-label">110 · dark</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="swatch light" style="flex:1;">
+          <div class="circle-40">
+            <svg viewBox="0 0 1080 1080" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 330 220 L 540 820" fill="none" stroke="#F5EFE4" stroke-width="130" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <path d="M 540 820 L 750 220" fill="none" stroke="#E89464" stroke-width="130" stroke-linejoin="miter" stroke-miterlimit="10"/>
+            </svg>
+          </div>
+          <div class="swatch-label">40 · light</div>
+        </div>
+        <div class="swatch dark" style="flex:1;">
+          <div class="circle-40">
+            <svg viewBox="0 0 1080 1080" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 330 220 L 540 820" fill="none" stroke="#F5EFE4" stroke-width="130" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <path d="M 540 820 L 750 220" fill="none" stroke="#E89464" stroke-width="130" stroke-linejoin="miter" stroke-miterlimit="10"/>
+            </svg>
+          </div>
+          <div class="swatch-label">40 · dark</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM C -->
+    <div class="col">
+      <div class="col-label">Option C</div>
+      <div class="col-name">V + wordmark stack</div>
+      <div class="col-desc">V dominant, VERA wordmark below in cream with a terracotta dot. Most legible.</div>
+
+      <div class="sizes">
+        <div class="swatch light">
+          <div class="circle-110">
+            <svg viewBox="0 0 1080 1080" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 370 220 L 540 740 L 710 220" fill="none" stroke="#F5EFE4" stroke-width="110" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <text x="540" y="900" text-anchor="middle" font-family="Geist, sans-serif" font-weight="700" font-size="118" letter-spacing="10" fill="#F5EFE4">VERA</text>
+              <circle cx="852" cy="868" r="14" fill="#E89464"/>
+            </svg>
+          </div>
+          <div class="swatch-label">110 · light</div>
+        </div>
+        <div class="swatch dark">
+          <div class="circle-110">
+            <svg viewBox="0 0 1080 1080" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 370 220 L 540 740 L 710 220" fill="none" stroke="#F5EFE4" stroke-width="110" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <text x="540" y="900" text-anchor="middle" font-family="Geist, sans-serif" font-weight="700" font-size="118" letter-spacing="10" fill="#F5EFE4">VERA</text>
+              <circle cx="852" cy="868" r="14" fill="#E89464"/>
+            </svg>
+          </div>
+          <div class="swatch-label">110 · dark</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="swatch light" style="flex:1;">
+          <div class="circle-40">
+            <svg viewBox="0 0 1080 1080" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 370 220 L 540 740 L 710 220" fill="none" stroke="#F5EFE4" stroke-width="110" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <text x="540" y="900" text-anchor="middle" font-family="Geist, sans-serif" font-weight="700" font-size="118" letter-spacing="10" fill="#F5EFE4">VERA</text>
+              <circle cx="852" cy="868" r="14" fill="#E89464"/>
+            </svg>
+          </div>
+          <div class="swatch-label">40 · light</div>
+        </div>
+        <div class="swatch dark" style="flex:1;">
+          <div class="circle-40">
+            <svg viewBox="0 0 1080 1080" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1080" height="1080" fill="#0E1B33"/>
+              <path d="M 370 220 L 540 740 L 710 220" fill="none" stroke="#F5EFE4" stroke-width="110" stroke-linejoin="miter" stroke-miterlimit="10"/>
+              <text x="540" y="900" text-anchor="middle" font-family="Geist, sans-serif" font-weight="700" font-size="118" letter-spacing="10" fill="#F5EFE4">VERA</text>
+              <circle cx="852" cy="868" r="14" fill="#E89464"/>
+            </svg>
+          </div>
+          <div class="swatch-label">40 · dark</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Background <b>#0E1B33</b> (brand navy), mark <b>#F5EFE4</b> (cream), accent <b>#E89464</b> (terracotta). 1080×1080 source. IG renders circular.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VERA — LinkedIn Cover (Bold Statement)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1584px; height: 396px; overflow: hidden; }
+    body {
+      font-family: 'Geist', -apple-system, system-ui, sans-serif;
+      background: #0E1B33;
+      color: #F5EFE4;
+      position: relative;
+    }
+
+    .watermark-left { position: absolute; top: -60px; left: -120px; width: 460px; height: 560px; pointer-events: none; z-index: 0; }
+
+    .corner-rule { position: absolute; left: 56px; top: 56px; width: 64px; height: 3px; background: #E89464; z-index: 2; border-radius: 2px; }
+
+    .content {
+      position: absolute; top: 50%; left: 460px; right: 56px;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-weight: 600; font-size: 13px; letter-spacing: 0.22em;
+      text-transform: uppercase; color: #E89464; margin-bottom: 16px;
+    }
+
+    .headline {
+      font-weight: 700; font-size: 42px; color: #F5EFE4;
+      line-height: 1.15; letter-spacing: -0.025em; max-width: 1000px;
+    }
+    .headline .em { color: #E89464; }
+
+    .bottom-row {
+      position: absolute; bottom: 36px; left: 460px; right: 56px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 2;
+    }
+    .brand-mini { display: flex; align-items: center; gap: 10px; }
+    .brand-mini svg { height: 22px; width: auto; }
+    .brand-mini-word { font-weight: 700; font-size: 16px; letter-spacing: 0.06em; color: #F5EFE4; }
+    .brand-mini-dot { width: 4px; height: 4px; border-radius: 50%; background: #E89464; margin-left: 2px; }
+    .url { font-weight: 600; font-size: 16px; color: #E89464; letter-spacing: 0.02em; }
+  </style>
+</head>
+<body>
+  <svg class="watermark-left" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 100 0 L 200 380 L 300 0" stroke="#E89464" stroke-width="56" stroke-linecap="round" stroke-linejoin="round" opacity="0.09" />
+  </svg>
+  <div class="corner-rule"></div>
+
+  <div class="content">
+    <div class="eyebrow">AI Consulting · Public Benefit Corporation</div>
+    <div class="headline">
+      Helping companies adopt AI that's <span class="em">powerful</span>, <span class="em">accountable</span>, and <span class="em">designed to last</span>.
+    </div>
+  </div>
+
+  <div class="bottom-row">
+    <div class="brand-mini">
+      <svg viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0 0 L 180 540 L 360 0" stroke="#E89464" stroke-width="72" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span class="brand-mini-word">VERA</span>
+      <span class="brand-mini-dot"></span>
+    </div>
+    <div class="url">veraconsulting.co</div>
+  </div>
+</body>
+</html>

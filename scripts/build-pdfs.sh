@@ -24,5 +24,7 @@ render "strategy-guide/strategy-guide.html"      "strategy-guide.pdf"
 render "strategy-guide/strategy-guide-navy.html" "strategy-guide-navy.pdf"
 render "brochure/brochure.html"                  "brochure.pdf"
 render "one-pager/one-pager-digital.html"        "one-pager-digital.pdf"
+render "one-pager/one-pager-single.html"         "one-pager-single.pdf"
+render "one-pager/one-pager-realestate.html"     "one-pager-realestate.pdf"
 
 echo "✓ All PDFs regenerated in public/"

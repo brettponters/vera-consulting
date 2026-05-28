@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VERA, Facebook Profile Icon (Cream)</title>
+  <style>
+    /*
+      Facebook profile picture (cream).
+      Canvas: 1080 x 1080 px. Facebook crops to a circle for display.
+      Background matches facebook-cover-cream.html so the
+      circular profile bubble disappears into the banner when overlaid.
+    */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1080px; overflow: hidden; }
+    body {
+      background: #F4EDE1;
+      display: flex; align-items: center; justify-content: center;
+    }
+    /*
+      Hard-edge V mark.
+      stroke-linecap="butt" + stroke-linejoin="miter" gives flat,
+      angular line ends and a sharp apex, no rounded corners.
+    */
+    .mark {
+      width: 720px;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <svg class="mark" viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 0 0 L 180 540 L 360 0" stroke="#C97B3F" stroke-width="86"
+          stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" />
+  </svg>
+</body>
+</html>

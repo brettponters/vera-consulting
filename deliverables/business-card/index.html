@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VERA — Business Card</title>
+  <title>VERA, Business Card</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -211,9 +211,64 @@
       border: 1px solid var(--hairline);
     }
 
+    /* ── Back card (logo side) ── */
+    .card-back {
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-back-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .card-back svg.v-mark {
+      height: 96px;
+      width: auto;
+      display: block;
+    }
+    .card-back .wordmark-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-back .wordmark-big {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+    .card-back .accent-dot-big {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      position: relative;
+      top: 1px;
+    }
+    .card-back .tagline-small {
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: -4px;
+    }
+
     /* ── Print ── */
+    @page { size: 3.5in 2in; margin: 0; }
     @media print {
-      body { background: white; padding: 0; }
+      body {
+        background: white;
+        padding: 0;
+        gap: 0;
+        align-items: stretch;
+        justify-content: flex-start;
+        min-height: 0;
+      }
       h1, .actions { display: none; }
       .card {
         box-shadow: none;
@@ -222,6 +277,7 @@
         width: 3.5in;
         height: 2in;
       }
+      .card + .card { page-break-before: always; }
       .content { padding: 0.2in 0.25in; }
       .wordmark { font-size: 12pt; }
       .acronym { font-size: 5.5pt; }
@@ -231,6 +287,12 @@
       .contact-sep { font-size: 6.5pt; }
       .pbc { font-size: 5pt; }
       .watermark { right: -10px; top: -20px; width: 200px; height: 240px; }
+      .card-back-content { gap: 0.08in; }
+      .card-back svg.v-mark { height: 0.55in; }
+      .card-back .wordmark-row { gap: 5px; }
+      .card-back .wordmark-big { font-size: 10pt; letter-spacing: 0.1em; }
+      .card-back .tagline-small { font-size: 4.5pt; margin-top: -2px; }
+      .card-back .accent-dot-big { width: 3px; height: 3px; top: 0; }
     }
 
     @media (max-width: 720px) {
@@ -275,7 +337,7 @@
           <span class="wordmark">VERA</span>
           <span class="accent-dot"></span>
         </div>
-        <span class="acronym">Value-Driven, Ethical, Research-Grounded AI</span>
+        <span class="acronym">Value-Driven, Ethical, Research-Backed AI</span>
       </div>
 
       <div class="person">
@@ -294,6 +356,20 @@
         </div>
         <p class="pbc">AI consulting &middot; Public Benefit Corporation</p>
       </div>
+    </div>
+  </div>
+
+  <!-- Back of card: VERA logo -->
+  <div class="card card-back">
+    <div class="card-back-content">
+      <svg class="v-mark" viewBox="0 0 360 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0 0 L 180 540 L 360 0" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="wordmark-row">
+        <span class="wordmark-big">VERA</span>
+        <span class="accent-dot-big"></span>
+      </div>
+      <span class="tagline-small">Value-Driven, Ethical, Research-Backed AI</span>
     </div>
   </div>
 
@@ -317,7 +393,7 @@
   </div>
 
   <script>
-    const SVG_SOURCE = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" width="1050" height="600"><defs><style>text{font-family:-apple-system,'SF Pro Display','Segoe UI',system-ui,sans-serif}</style></defs><rect width="1050" height="600" rx="12" fill="#FFFFFF"/><rect x="0.5" y="0.5" width="1049" height="599" rx="12" fill="none" stroke="#E6E6EA" stroke-width="1"/><path d="M 660 -30 L 840 510 L 1020 -30" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.08"/><text x="68" y="100" font-size="58" font-weight="700" fill="#050507" letter-spacing="5">VERA</text><circle cx="278" cy="79" r="6.5" fill="#C97B3F"/><text x="68" y="132" font-size="20" font-weight="500" fill="#5C5C66" letter-spacing="0.6">Value-Driven, Ethical, Research-Grounded AI</text><text x="68" y="290" font-size="46" font-weight="600" fill="#050507" letter-spacing="-0.3">Brett Ponters</text><text x="68" y="326" font-size="28" font-weight="400" fill="#C97B3F" letter-spacing="0.5">Founder</text><rect x="68" y="380" width="48" height="1.5" rx="0.75" fill="#E6E6EA"/><text y="416" font-size="22" font-weight="400" letter-spacing="0.2"><tspan x="68" fill="#0F0F10">brett@veraconsulting.co</tspan><tspan fill="#D0D0D4" dx="14">/</tspan><tspan fill="#0F0F10" dx="14">(561) 900-8182</tspan><tspan fill="#D0D0D4" dx="14">/</tspan><tspan fill="#0F0F10" dx="14">veraconsulting.co</tspan></text><text x="68" y="530" font-size="17" font-weight="500" fill="#5C5C66" letter-spacing="1.6">AI CONSULTING · PUBLIC BENEFIT CORPORATION</text></svg>`;
+    const SVG_SOURCE = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" width="1050" height="600"><defs><style>text{font-family:-apple-system,'SF Pro Display','Segoe UI',system-ui,sans-serif}</style></defs><rect width="1050" height="600" rx="12" fill="#FFFFFF"/><rect x="0.5" y="0.5" width="1049" height="599" rx="12" fill="none" stroke="#E6E6EA" stroke-width="1"/><path d="M 660 -30 L 840 510 L 1020 -30" stroke="#C97B3F" stroke-width="72" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.08"/><text x="68" y="100" font-size="58" font-weight="700" fill="#050507" letter-spacing="5">VERA</text><circle cx="278" cy="79" r="6.5" fill="#C97B3F"/><text x="68" y="132" font-size="20" font-weight="500" fill="#5C5C66" letter-spacing="0.6">Value-Driven, Ethical, Research-Backed AI</text><text x="68" y="290" font-size="46" font-weight="600" fill="#050507" letter-spacing="-0.3">Brett Ponters</text><text x="68" y="326" font-size="28" font-weight="400" fill="#C97B3F" letter-spacing="0.5">Founder</text><rect x="68" y="380" width="48" height="1.5" rx="0.75" fill="#E6E6EA"/><text y="416" font-size="22" font-weight="400" letter-spacing="0.2"><tspan x="68" fill="#0F0F10">brett@veraconsulting.co</tspan><tspan fill="#D0D0D4" dx="14">/</tspan><tspan fill="#0F0F10" dx="14">(561) 900-8182</tspan><tspan fill="#D0D0D4" dx="14">/</tspan><tspan fill="#0F0F10" dx="14">veraconsulting.co</tspan></text><text x="68" y="530" font-size="17" font-weight="500" fill="#5C5C66" letter-spacing="1.6">AI CONSULTING · PUBLIC BENEFIT CORPORATION</text></svg>`;
 
     function downloadImage(format) {
       const w = 1050, h = 600, scale = 6;
