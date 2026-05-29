@@ -6,7 +6,7 @@ import WhatWeDo from "@/components/sections/WhatWeDo";
 import { AIRoadmap } from "@/components/sections/AIRoadmap";
 import { FounderVision } from "@/components/sections/FounderVision";
 // import Testimonials from "@/components/sections/Testimonials";
-import { SouthFlorida } from "@/components/sections/SouthFlorida";
+// import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ export default function Home() {
       <AIRoadmap />
       <FounderVision />
       {/* <Testimonials /> */}
-      <SouthFlorida />
+      {/* <SouthFlorida /> */}
       <BookACall />
     </>
   );

@@ -16,14 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const mainRoutes: MetadataRoute.Sitemap = [
     "/about",
-    "/outcomes",
     "/how-we-work",
     "/our-strategy",
     "/our-work",
     "/ai-fundamentals",
     "/reading",
     "/coaching",
-    "/for-real-estate",
     "/solutions",
     "/contact",
     "/get-started",
@@ -50,20 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  const locationRoutes: MetadataRoute.Sitemap = [
-    "/locations",
-    "/locations/boca-raton",
-    "/locations/delray-beach",
-    "/locations/boynton-beach",
-    "/locations/deerfield-beach",
-    "/locations/fort-lauderdale",
-  ].map((path) => ({
-    url: `${BASE_URL}${path}`,
-    lastModified,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
-
   const thinOrLegal: MetadataRoute.Sitemap = [
     "/charter",
     "/benefit-report",
@@ -75,11 +59,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
-  return [
-    ...homepage,
-    ...mainRoutes,
-    ...solutionRoutes,
-    ...locationRoutes,
-    ...thinOrLegal,
-  ];
+  return [...homepage, ...mainRoutes, ...solutionRoutes, ...thinOrLegal];
 }

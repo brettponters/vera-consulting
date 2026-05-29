@@ -174,15 +174,7 @@ export default function CoachingPage() {
           </ul>
 
           <p className="mt-10 font-sans text-[var(--color-muted)] text-sm md:text-[15px] leading-relaxed max-w-[680px]">
-            If you're a South Florida real estate agent or brokerage,{" "}
-            <Link
-              href="/for-real-estate"
-              className="text-[var(--color-accent)] no-underline hover:underline"
-            >
-              the vertical page
-            </Link>{" "}
-            covers the workflows we ship for that business specifically. For
-            a longer read on how the coaching engagement runs, see the{" "}
+            For a longer read on how the coaching engagement runs, see the{" "}
             <Link
               href="/coaching"
               className="text-[var(--color-accent)] no-underline hover:underline"
