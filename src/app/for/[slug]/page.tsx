@@ -28,6 +28,7 @@ export async function generateMetadata({
     title: v.metaTitle,
     description: v.metaDescription,
     alternates: { canonical: `/for/${slug}` },
+    keywords: [v.primaryKeyword, ...v.secondaryKeywords],
     openGraph: {
       title: v.metaTitle,
       description: v.metaDescription,
@@ -54,7 +55,7 @@ export default async function ForVerticalPage({
 
   const canonicalUrl = `https://veraconsulting.co/for/${slug}`;
 
-  // Adjacent verticals for cross-linking (previous and next two in the list).
+  // Adjacent verticals for cross-linking.
   const idx = VERTICALS.findIndex((x) => x.slug === slug);
   const adjacent = [
     VERTICALS[(idx - 1 + VERTICALS.length) % VERTICALS.length],
@@ -112,6 +113,8 @@ export default async function ForVerticalPage({
     ],
   };
 
+  const labelLower = v.marqueeLabel.toLowerCase();
+
   return (
     <>
       <script
@@ -125,7 +128,7 @@ export default async function ForVerticalPage({
         <Container size="wide" className="relative z-10">
           <div className="max-w-[920px]">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-5">
-              Built for {v.marqueeLabel.toLowerCase()}
+              Built for {labelLower}
             </p>
             <h1
               className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-8"
@@ -148,8 +151,43 @@ export default async function ForVerticalPage({
         </Container>
       </section>
 
-      {/* Pain points */}
+      {/* Opening essay */}
       <section className="py-16 md:py-24 bg-[var(--color-surface)]">
+        <Container size="wide">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+            <div className="md:col-span-3">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-3">
+                The read
+              </p>
+              <p className="font-sans font-black text-[var(--color-heading)] text-base md:text-lg tracking-[-0.01em] leading-snug">
+                A practitioner&rsquo;s view of what AI actually changes for {labelLower}.
+              </p>
+            </div>
+            <div className="md:col-span-9 md:col-start-4">
+              <div className="max-w-[680px] space-y-6">
+                {v.openingEssay.map((para, i) => (
+                  <p
+                    key={i}
+                    className="font-sans text-[var(--color-body)] text-lg md:text-[1.2rem] leading-relaxed"
+                    style={{
+                      fontWeight: i === 0 ? 500 : 400,
+                    }}
+                  >
+                    {i === 0 ? (
+                      <span className="font-sans font-semibold">{para}</span>
+                    ) : (
+                      para
+                    )}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* What eats your week (pain points, editorial list with hairlines) */}
+      <section className="py-16 md:py-24 bg-[var(--color-bg)]">
         <Container size="wide">
           <div className="max-w-[820px] mb-10 md:mb-14">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-3">
@@ -162,26 +200,67 @@ export default async function ForVerticalPage({
               The drag is real. The fix is workflow, not effort.
             </h2>
           </div>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 list-none m-0 p-0">
+          <ul className="max-w-[920px] list-none m-0 p-0 border-t border-[var(--color-hairline)]">
             {v.painPoints.map((p, i) => (
               <li
                 key={p}
-                className="flex items-start gap-4 font-sans font-medium text-[var(--color-body)] text-base md:text-lg leading-snug"
+                className="flex items-start gap-6 md:gap-10 py-5 md:py-6 border-b border-[var(--color-hairline)]"
               >
                 <span
-                  className="font-mono text-[10px] font-semibold tracking-[0.22em] mt-1 shrink-0"
+                  className="font-mono text-[10px] font-semibold tracking-[0.22em] pt-1 shrink-0 w-12"
                   style={{ color: "var(--color-accent)" }}
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span>{p}</span>
+                <span className="font-sans font-medium text-[var(--color-body)] text-base md:text-lg leading-snug">
+                  {p}
+                </span>
               </li>
             ))}
           </ul>
         </Container>
       </section>
 
-      {/* Workflows */}
+      {/* What changes (before/after vignettes) */}
+      <section className="py-16 md:py-24 bg-[var(--color-surface)]">
+        <Container size="wide">
+          <div className="max-w-[820px] mb-10 md:mb-14">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-3">
+              What changes
+            </p>
+            <h2
+              className="font-sans font-black text-[var(--color-heading)] tracking-[-0.03em] leading-[1.05]"
+              style={{ fontSize: "clamp(1.875rem, 3.5vw, 2.75rem)" }}
+            >
+              Specific moments in your week, after.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14">
+            {v.whatChanges.map((c, i) => (
+              <div
+                key={c.heading}
+                className={`md:col-span-6 ${
+                  i % 2 === 1 ? "md:col-start-7" : ""
+                }`}
+              >
+                <div className="space-y-4">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold">
+                    {String(i + 1).padStart(2, "0")} / {v.whatChanges.length.toString().padStart(2, "0")}
+                  </p>
+                  <h3 className="font-sans font-black text-[var(--color-heading)] text-2xl md:text-3xl tracking-[-0.02em] leading-tight">
+                    {c.heading}
+                  </h3>
+                  <p className="font-sans text-[var(--color-body)] text-base md:text-lg leading-relaxed">
+                    {c.body}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* What we ship (workflows) */}
       <section className="py-16 md:py-24 bg-[var(--color-bg)]">
         <Container size="wide">
           <div className="max-w-[820px] mb-10 md:mb-14">
@@ -192,7 +271,7 @@ export default async function ForVerticalPage({
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.03em] leading-[1.05]"
               style={{ fontSize: "clamp(1.875rem, 3.5vw, 2.75rem)" }}
             >
-              Six workflows for {v.marqueeLabel.toLowerCase()}.
+              The workflows we build for {labelLower}.
             </h2>
           </div>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 list-none m-0 p-0">
@@ -222,12 +301,81 @@ export default async function ForVerticalPage({
         </Container>
       </section>
 
-      {/* FAQ */}
+      {/* How we actually work */}
       <section className="py-16 md:py-24 bg-[var(--color-surface)]">
+        <Container size="wide">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+            <div className="md:col-span-4">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-3">
+                The engagement
+              </p>
+              <h2
+                className="font-sans font-black text-[var(--color-heading)] tracking-[-0.03em] leading-[1.05]"
+                style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}
+              >
+                How we actually work with {labelLower}.
+              </h2>
+            </div>
+            <div className="md:col-span-7 md:col-start-6">
+              <div className="max-w-[640px] space-y-6">
+                {v.howWeWork.map((para, i) => (
+                  <p
+                    key={i}
+                    className="font-sans text-[var(--color-body)] text-base md:text-lg leading-relaxed"
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Anecdote (optional) */}
+      {v.anecdote && (
+        <section className="py-16 md:py-24 bg-[var(--color-bg)]">
+          <Container size="wide">
+            <div className="max-w-[820px]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-6">
+                One we did
+              </p>
+              <div className="space-y-6 border-l-2 border-[var(--color-navy)] pl-8 md:pl-10">
+                <p className="font-sans text-[var(--color-body)] text-lg md:text-xl leading-relaxed">
+                  {v.anecdote.setup}
+                </p>
+                <p className="font-sans text-[var(--color-body)] text-lg md:text-xl leading-relaxed">
+                  {v.anecdote.turn}
+                </p>
+                <p className="font-sans italic font-semibold text-[var(--color-heading)] text-xl md:text-2xl leading-snug tracking-[-0.01em]">
+                  {v.anecdote.line}
+                </p>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* What this is not */}
+      <section className="py-16 md:py-24 bg-[var(--color-surface)]">
+        <Container size="wide">
+          <div className="max-w-[820px]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-6">
+              What this is not
+            </p>
+            <p className="font-sans text-[var(--color-heading)] text-xl md:text-2xl leading-snug tracking-[-0.01em] font-medium">
+              {v.whatThisIsNot}
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-24 bg-[var(--color-bg)]">
         <Container size="wide">
           <div className="max-w-[820px] mb-10 md:mb-14">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-3">
-              Questions {v.marqueeLabel.toLowerCase()} ask
+              Questions {labelLower} ask
             </p>
             <h2
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.03em] leading-[1.05]"
@@ -252,7 +400,7 @@ export default async function ForVerticalPage({
       </section>
 
       {/* Adjacent verticals */}
-      <section className="py-16 md:py-24 bg-[var(--color-bg)]">
+      <section className="py-16 md:py-24 bg-[var(--color-surface)]">
         <Container size="wide">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-5">
             Also for
@@ -262,7 +410,7 @@ export default async function ForVerticalPage({
               <li key={a.slug}>
                 <Link
                   href={`/for/${a.slug}`}
-                  className="block p-6 md:p-7 rounded-xl border border-[var(--color-hairline)] bg-[var(--color-surface)] no-underline hover:border-[var(--color-accent)] transition-colors"
+                  className="block p-6 md:p-7 rounded-xl border border-[var(--color-hairline)] bg-[var(--color-bg)] no-underline hover:border-[var(--color-accent)] transition-colors"
                 >
                   <p className="font-sans font-black text-[var(--color-heading)] text-lg tracking-[-0.01em] mb-1">
                     {a.marqueeLabel}
@@ -278,7 +426,7 @@ export default async function ForVerticalPage({
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 bg-[var(--color-surface)]">
+      <section className="py-16 md:py-24 bg-[var(--color-bg)]">
         <Container size="wide">
           <div className="max-w-[760px]">
             <h2

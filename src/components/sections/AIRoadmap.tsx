@@ -566,7 +566,7 @@ export function AIRoadmap() {
       aria-labelledby="ai-capabilities-heading"
       className="relative bg-[var(--color-bg)] overflow-hidden"
     >
-      {/* Scroll progress rail. Fixed to the right edge of the viewport,
+      {/* Scroll progress rail. Fixed to the left edge of the viewport,
           vertically centered, only visible while the section is in view.
           Each dot is clickable to jump to that band. */}
       <AnimatePresence>
@@ -574,11 +574,11 @@ export function AIRoadmap() {
           <motion.nav
             key="scroll-rail"
             aria-label="Capability progress"
-            initial={{ opacity: 0, x: 8 }}
+            initial={{ opacity: 0, x: -8 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 8 }}
+            exit={{ opacity: 0, x: -8 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden lg:flex fixed right-5 xl:right-7 top-1/2 -translate-y-1/2 z-30 flex-col items-center gap-3"
+            className="hidden lg:flex fixed left-5 xl:left-7 top-1/2 -translate-y-1/2 z-30 flex-col items-center gap-3"
           >
             {CAPABILITIES.map((cap, i) => {
               const isActive = i === activeIndex;
@@ -606,7 +606,7 @@ export function AIRoadmap() {
                   />
                   {/* Number label, fades in on hover */}
                   <span
-                    className="absolute right-full mr-3 font-mono text-[10px] font-semibold tracking-[0.22em] opacity-0 group-hover:opacity-100 transition-opacity duration-150 whitespace-nowrap"
+                    className="absolute left-full ml-3 font-mono text-[10px] font-semibold tracking-[0.22em] opacity-0 group-hover:opacity-100 transition-opacity duration-150 whitespace-nowrap"
                     style={{ color: "var(--color-muted)" }}
                   >
                     {cap.num} · {cap.title}
