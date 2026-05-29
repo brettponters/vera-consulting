@@ -1,22 +1,15 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Marquee } from "@/components/ui/Marquee";
+import { VERTICALS } from "@/data/verticals";
 
 /**
  * IndustriesMarquee, thin strip directly below Hero.
  * Mobile: swipeable. Desktop: animated marquee.
  *
- * RE investor verticals. Reinforces the H1's ICP framing at a glance.
+ * Each item links to its vertical landing page at /for/[slug]
+ * for the programmatic SEO play.
  */
-const VERTICALS = [
-  "Executive coaches",
-  "Life coaches",
-  "Marketing consultants",
-  "SEO consultants",
-  "Brand consultants",
-  "Social media managers",
-  "Independent agencies",
-];
-
 export default function IndustriesMarquee() {
   return (
     <section
@@ -34,13 +27,16 @@ export default function IndustriesMarquee() {
           >
             Built for
           </p>
-          <Marquee duration={70} pauseOnHover className="min-w-0">
+          <Marquee duration={90} pauseOnHover className="min-w-0">
             <span className="flex items-center whitespace-nowrap px-4 md:px-6">
               {VERTICALS.map((v) => (
-                <span key={v} className="flex items-center">
-                  <span className="font-sans font-medium text-base md:text-lg text-[var(--color-body)]">
-                    {v}
-                  </span>
+                <span key={v.slug} className="flex items-center">
+                  <Link
+                    href={`/for/${v.slug}`}
+                    className="font-sans font-medium text-base md:text-lg text-[var(--color-body)] hover:text-[var(--color-accent)] transition-colors no-underline"
+                  >
+                    {v.marqueeLabel}
+                  </Link>
                   <span
                     className="mx-3 md:mx-4 text-[var(--color-accent)]"
                     aria-hidden="true"

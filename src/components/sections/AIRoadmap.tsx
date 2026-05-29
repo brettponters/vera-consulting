@@ -1,7 +1,13 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { Container } from "@/components/ui/Container";
 
 interface Capability {
@@ -534,18 +540,84 @@ function CapabilityBand({
 export function AIRoadmap() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
+  const [activeId, setActiveId] = useState<string>(CAPABILITIES[0].id);
+  const [railVisible, setRailVisible] = useState(false);
 
-  // Bands still report when they cross the reading line so we can extend the
-  // pattern later (e.g., URL hash sync). Today it's a no-op.
-  function handleBandEnter(_id: string) {
-    // intentionally empty - reserved for future scroll-driven affordances
+  function handleBandEnter(id: string) {
+    setActiveId(id);
   }
+
+  // Show the side rail only while the AIRoadmap section is actually in view.
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setRailVisible(entry.isIntersecting),
+      { rootMargin: "-15% 0% -15% 0%" },
+    );
+    obs.observe(node);
+    return () => obs.disconnect();
+  }, []);
+
+  const activeIndex = CAPABILITIES.findIndex((c) => c.id === activeId);
 
   return (
     <section
       aria-labelledby="ai-capabilities-heading"
       className="relative bg-[var(--color-bg)] overflow-hidden"
     >
+      {/* Scroll progress rail. Fixed to the right edge of the viewport,
+          vertically centered, only visible while the section is in view.
+          Each dot is clickable to jump to that band. */}
+      <AnimatePresence>
+        {railVisible && (
+          <motion.nav
+            key="scroll-rail"
+            aria-label="Capability progress"
+            initial={{ opacity: 0, x: 8 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 8 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden lg:flex fixed right-5 xl:right-7 top-1/2 -translate-y-1/2 z-30 flex-col items-center gap-3"
+          >
+            {CAPABILITIES.map((cap, i) => {
+              const isActive = i === activeIndex;
+              return (
+                <a
+                  key={cap.id}
+                  href={`#cap-${cap.id}`}
+                  aria-label={`Go to ${cap.title}`}
+                  className="group relative flex items-center"
+                  style={{ padding: "4px 0" }}
+                >
+                  <motion.span
+                    className="block rounded-full"
+                    animate={{
+                      width: isActive ? 14 : 6,
+                      height: isActive ? 14 : 6,
+                      backgroundColor: isActive
+                        ? "var(--color-accent)"
+                        : "var(--color-hairline)",
+                    }}
+                    transition={{
+                      duration: 0.3,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                  />
+                  {/* Number label, fades in on hover */}
+                  <span
+                    className="absolute right-full mr-3 font-mono text-[10px] font-semibold tracking-[0.22em] opacity-0 group-hover:opacity-100 transition-opacity duration-150 whitespace-nowrap"
+                    style={{ color: "var(--color-muted)" }}
+                  >
+                    {cap.num} · {cap.title}
+                  </span>
+                </a>
+              );
+            })}
+          </motion.nav>
+        )}
+      </AnimatePresence>
+
       <div ref={sectionRef}>
         <Container size="wide">
           {/* Opening. The headline + the promise. No index framing. The

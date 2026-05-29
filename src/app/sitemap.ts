@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getAllSlugs } from "@/data/verticals";
 
 const BASE_URL = "https://veraconsulting.co";
 
@@ -59,5 +60,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
-  return [...homepage, ...mainRoutes, ...solutionRoutes, ...thinOrLegal];
+  // Programmatic vertical landing pages: /for/[slug] + index at /for
+  const verticalRoutes: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/for`, lastModified, changeFrequency: "weekly", priority: 0.85 },
+    ...getAllSlugs().map((slug) => ({
+      url: `${BASE_URL}/for/${slug}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    })),
+  ];
+
+  return [
+    ...homepage,
+    ...mainRoutes,
+    ...verticalRoutes,
+    ...solutionRoutes,
+    ...thinOrLegal,
+  ];
 }
