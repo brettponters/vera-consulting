@@ -42,7 +42,7 @@ export default function Contact() {
         body: JSON.stringify({
           name: data.name,
           email: data.email,
-          company: data.company || "—",
+          company: data.company || "-",
           message: data.message,
           _subject: `New VERA contact: ${data.name}`,
           _template: "table",
@@ -93,7 +93,7 @@ export default function Contact() {
             </h1>
           </div>
 
-          {/* Tabs — Book a call first */}
+          {/* Tabs, Book a call first */}
           <Reveal delay={0.3}>
             <div className="flex gap-1 mt-6 bg-[var(--color-surface)] rounded-full p-1 w-fit border border-[var(--color-hairline)]">
               <button
@@ -125,11 +125,11 @@ export default function Contact() {
 
       <section className="pb-16 md:pb-24 bg-[var(--color-bg)]">
         <Container size="wide">
-          {/* Calendly — always in DOM so the script can initialize it */}
+          {/* Calendly, always in DOM so the script can initialize it */}
           <div style={{ display: tab === "call" ? "block" : "none" }}>
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/brettponters/vera-learn-more?hide_event_type_details=1&hide_gdpr_banner=1"
+              data-url="https://calendly.com/brett-veraconsulting/30min?hide_event_type_details=1&hide_gdpr_banner=1"
               style={{ minWidth: "100%", height: "700px" }}
             />
           </div>

@@ -162,14 +162,14 @@ export default function OurStrategyClient() {
                   <div className="w-[3px] bg-[var(--color-accent)] rounded-sm shrink-0" />
                   <div>
                     <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed mb-5">
-                      &ldquo;As a former RE agent, I started VERA because AI
-                      is going to change real estate at an unprecedented
-                      pace, and many professionals are not prepared for it.
-                      We believe in using AI to strengthen what people
-                      already do well, picking the workflows worth building
-                      instead of the ten that look good in a deck, and being
-                      honest about both the risks and the opportunities
-                      ahead.&rdquo;
+                      &ldquo;I started VERA because AI is going to change
+                      knowledge work at an unprecedented pace, and the
+                      people whose businesses run on what they know are the
+                      ones with the most to gain and the most to lose. We
+                      use AI to strengthen what people already do well, pick
+                      the workflows worth building instead of the ten that
+                      look good in a deck, and stay honest about both the
+                      risks and the opportunities ahead.&rdquo;
                     </p>
                     <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
                       Brett Ponters

@@ -11,7 +11,7 @@ declare global {
 }
 
 const CALENDLY_URL =
-  "https://calendly.com/brettponters/coagent-learn-more?hide_gdpr_banner=1";
+  "https://calendly.com/brett-veraconsulting/30min?hide_gdpr_banner=1";
 
 /**
  * Loads the Calendly widget script once and exposes openCalendly().
