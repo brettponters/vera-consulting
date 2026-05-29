@@ -46,7 +46,7 @@ export function SouthFlorida() {
                   </Link>
                   {i < LOCATIONS.length - 1 && (
                     <span
-                      className="ml-5 text-[var(--color-hairline)]"
+                      className="ml-5 text-[var(--color-navy)]"
                       aria-hidden="true"
                     >
                       ·

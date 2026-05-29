@@ -6,11 +6,12 @@
 @theme {
   --color-bg:        #FFFFFF;
   --color-surface:   #FAFAF7;
-  --color-body:      #0F0F10;
-  --color-heading:   #050507;
-  --color-muted:     #5C5C66;
+  --color-body:      #000000;
+  --color-heading:   #000000;
+  --color-muted:     #1A1A1A;
   --color-hairline:  #E6E6EA;
   --color-accent:    #C97B3F;
+  --color-navy:      #0E1B33;
   --color-sage:      #6B8775;
 
   /* Typography */
@@ -23,11 +24,12 @@
 :root {
   --color-bg:       #FFFFFF;
   --color-surface:  #FAFAF7;
-  --color-body:     #0F0F10;
-  --color-heading:  #050507;
-  --color-muted:    #5C5C66;
+  --color-body:     #000000;
+  --color-heading:  #000000;
+  --color-muted:    #1A1A1A;
   --color-hairline: #E6E6EA;
   --color-accent:   #C97B3F;
+  --color-navy:     #0E1B33;
   --color-sage:     #6B8775;
 }
 

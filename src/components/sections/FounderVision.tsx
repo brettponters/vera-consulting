@@ -40,7 +40,7 @@ export function FounderVision() {
 
               {/* Quote + attribution column */}
               <div className="flex gap-5 items-stretch flex-1 min-w-0">
-                <div className="w-[3px] bg-[var(--color-accent)] rounded-sm shrink-0" />
+                <div className="w-[3px] bg-[var(--color-navy)] rounded-sm shrink-0" />
                 <div>
                   <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed mb-6">
                     &ldquo;I started VERA because AI is going to change the

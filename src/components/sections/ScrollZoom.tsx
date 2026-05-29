@@ -121,8 +121,8 @@ function GlowCard({
           </div>
 
           <h3
-            className="font-sans font-semibold text-[var(--color-heading)] transition-all duration-500 ease-out"
-            style={{ fontSize: isActive ? "1.5rem" : "1.2rem" }}
+            className="font-sans font-black text-[var(--color-heading)] transition-all duration-500 ease-out tracking-[-0.02em] leading-tight"
+            style={{ fontSize: isActive ? "2rem" : "1.625rem" }}
           >
             {pillar.title}
           </h3>
@@ -137,7 +137,7 @@ function GlowCard({
                 className="overflow-hidden"
               >
                 <motion.p
-                  className="mt-5 font-sans text-[15px] md:text-base leading-[1.7] text-[var(--color-body)]"
+                  className="mt-5 font-sans font-medium text-base md:text-lg leading-[1.6] text-[var(--color-body)]"
                   initial={{ y: 8, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -5, opacity: 0 }}

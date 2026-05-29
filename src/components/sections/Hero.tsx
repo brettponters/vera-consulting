@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       aria-label="Introduction"
-      className="relative pt-14 pb-14 md:pt-20 md:pb-20 overflow-hidden"
+      className="relative pt-14 pb-8 md:pt-20 md:pb-12 overflow-hidden"
       style={{
         background:
           "linear-gradient(180deg, #FFFFFF 0%, #F5F4F1 25%, #F5F4F1 75%, #FFFFFF 100%)",
@@ -61,8 +61,8 @@ export default function Hero() {
 
           <h1
             aria-label={H1_TEXT}
-            className="font-sans font-bold text-[var(--color-heading)] leading-[1.05] tracking-[-0.02em] mb-8"
-            style={{ fontSize: "clamp(2.25rem, 5vw, 4.75rem)" }}
+            className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
+            style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)" }}
           >
             {H1_WORDS.map((word, i) => (
               <motion.span
@@ -84,7 +84,7 @@ export default function Hero() {
           </h1>
 
           <Reveal delay={0.55}>
-            <p className="font-sans font-normal text-[var(--color-body)] text-lg md:text-xl leading-relaxed max-w-[680px] mb-10">
+            <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[760px] mb-12">
               AI strategy, integration, and coaching. Research-backed and
               built for your team.
             </p>

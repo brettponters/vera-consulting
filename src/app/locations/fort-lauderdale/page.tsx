@@ -143,8 +143,8 @@ export default function FortLauderdalePage() {
           <div className="max-w-[820px]">
             <Eyebrow className="mb-5">Fort Lauderdale, Florida</Eyebrow>
             <h1
-              className="font-sans font-bold text-[var(--color-heading)] leading-[1.05] tracking-[-0.02em] mb-8"
-              style={{ fontSize: "clamp(2rem, 4.8vw, 3.75rem)" }}
+              className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
               AI built for a city that runs on yachts, hospitals, container
               cranes, and hotel keys.

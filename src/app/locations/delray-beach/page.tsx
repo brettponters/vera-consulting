@@ -152,7 +152,7 @@ export default function DelrayBeachPage() {
             <Eyebrow className="mb-5">Delray Beach, Florida</Eyebrow>
 
             <h1
-              className="font-sans font-bold text-[var(--color-heading)] leading-[1.05] tracking-[-0.02em] mb-8"
+              className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
               style={{ fontSize: "clamp(2.25rem, 5.2vw, 4rem)" }}
             >
               AI consulting for Delray Beach businesses that want to build it

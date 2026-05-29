@@ -34,11 +34,11 @@ export default function WhatWeDo() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {SERVICES.map((service, i) => (
             <Reveal key={service.title} delay={0.05 + i * 0.05}>
-              <div className="p-6 md:p-8 rounded-xl border border-[var(--color-hairline)] bg-[var(--color-surface)] h-full">
-                <h3 className="font-sans font-semibold text-lg text-[var(--color-heading)] mb-3">
+              <div className="p-8 md:p-10 rounded-xl border border-[var(--color-hairline)] bg-[var(--color-surface)] h-full">
+                <h3 className="font-sans font-black text-2xl md:text-3xl text-[var(--color-heading)] mb-4 tracking-[-0.02em]">
                   {service.title}
                 </h3>
-                <p className="font-sans text-sm leading-relaxed text-[var(--color-body)]">
+                <p className="font-sans font-medium text-base md:text-lg leading-snug text-[var(--color-body)]">
                   {service.description}
                 </p>
               </div>

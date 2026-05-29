@@ -107,8 +107,8 @@ export default function LocationsPage() {
             <Eyebrow className="mb-5">South Florida</Eyebrow>
 
             <h1
-              className="font-sans font-bold text-[var(--color-heading)] leading-[1.05] tracking-[-0.02em] mb-8"
-              style={{ fontSize: "clamp(2rem, 4.5vw, 3.75rem)" }}
+              className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
               AI consulting, anchored in South Florida.
             </h1>

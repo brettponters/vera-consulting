@@ -46,8 +46,8 @@ export default function OurWorkClient() {
             </Reveal>
 
             <h1
-              className="font-sans font-bold text-[var(--color-heading)] leading-[1.05] tracking-[-0.02em] mb-6"
-              style={{ fontSize: "clamp(2rem, 4.5vw, 3.75rem)" }}
+              className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-8"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
               <motion.span
                 initial={{ opacity: 0, y: 16 }}

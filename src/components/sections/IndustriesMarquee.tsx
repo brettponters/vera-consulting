@@ -29,7 +29,7 @@ export default function IndustriesMarquee() {
           </p>
           <Marquee duration={70} pauseOnHover className="min-w-0">
             <span className="flex items-center whitespace-nowrap px-4 md:px-6">
-              {SOLUTIONS.map((s, i) => (
+              {SOLUTIONS.map((s) => (
                 <span key={s.slug} className="flex items-center">
                   <Link
                     href={

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container } from "@/components/ui/Container";
-import { Hairline } from "@/components/ui/Hairline";
 
 const NAV_LINKS = [
   { href: "/how-we-work", label: "How we work" },
@@ -34,16 +33,21 @@ export function Footer() {
   if (pathname === "/get-started") return null;
 
   return (
-    <footer className="bg-[var(--color-surface)]">
-      <Hairline variant="full" />
+    <footer style={{ backgroundColor: "var(--color-navy)" }}>
       <Container size="wide">
         <div className="py-12 md:py-16 space-y-8">
           {/* Wordmark + PBC statement */}
           <div className="space-y-3 max-w-[560px]">
-            <p className="font-sans text-sm font-semibold text-[var(--color-heading)]">
+            <p
+              className="font-sans text-sm font-semibold"
+              style={{ color: "#F5EFE4" }}
+            >
               VERA
             </p>
-            <p className="font-sans text-sm leading-relaxed text-[var(--color-muted)]">
+            <p
+              className="font-sans text-sm leading-relaxed"
+              style={{ color: "#8B9BB4" }}
+            >
               VERA is a Public Benefit Corporation. A fixed percentage of net
               consulting revenue is committed annually to independent AI safety
               and alignment research.
@@ -59,7 +63,8 @@ export function Footer() {
                   <li key={href}>
                     <Link
                       href={href}
-                      className="font-sans text-sm text-[var(--color-muted)] no-underline transition-colors duration-150 hover:text-[var(--color-body)]"
+                      className="font-sans text-sm no-underline transition-colors duration-150 hover:opacity-100"
+                      style={{ color: "#DCD5C6" }}
                     >
                       {label}
                     </Link>
@@ -75,7 +80,8 @@ export function Footer() {
                   <li key={href}>
                     <Link
                       href={href}
-                      className="font-sans text-xs text-[var(--color-muted)] no-underline transition-colors duration-150 hover:text-[var(--color-body)]"
+                      className="font-sans text-xs no-underline transition-colors duration-150"
+                      style={{ color: "#8B9BB4" }}
                     >
                       {label}
                     </Link>
@@ -86,7 +92,7 @@ export function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="font-sans text-xs text-[var(--color-muted)]">
+          <p className="font-sans text-xs" style={{ color: "#8B9BB4" }}>
             &copy; {year} VERA
           </p>
         </div>
