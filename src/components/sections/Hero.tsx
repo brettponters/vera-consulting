@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-const H1_TEXT = "AI that's powerful, accountable, and designed to last.";
+const H1_TEXT = "AI Consulting for Solo Entrepreneurs.";
 const H1_WORDS = H1_TEXT.split(" ");
 
 export default function Hero() {
@@ -54,7 +54,7 @@ export default function Hero() {
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
               </span>
               <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
-                AI consulting · Public Benefit Corporation
+                AI Consulting · Public Benefit Corporation
               </p>
             </div>
           </Reveal>
@@ -85,8 +85,8 @@ export default function Hero() {
 
           <Reveal delay={0.55}>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[760px] mb-12">
-              AI strategy, integration, and coaching. Research-backed and
-              built for your team.
+              For coaches, consultants, marketing pros, and solo experts
+              whose business runs on what they know.
             </p>
           </Reveal>
 

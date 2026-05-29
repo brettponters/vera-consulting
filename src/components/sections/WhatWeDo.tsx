@@ -5,19 +5,19 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const SERVICES = [
   {
+    title: "Coaching",
+    description:
+      "1:1 weekly sessions on your real clients, your real content, your real proposals. You get fluent in AI on your actual work, not toy examples. The fastest path to taking bigger work.",
+  },
+  {
     title: "Strategy",
     description:
-      "Figure out where AI fits in your business, and where it doesn't. Grounded in research, scoped to what your team can maintain.",
+      "We pick the three to five AI workflows that actually move your business. Everything else gets cut so you can ship the ones that matter.",
   },
   {
     title: "Integration",
     description:
-      "We work alongside your engineers to get AI systems into production. Guardrails, monitoring, and documentation included.",
-  },
-  {
-    title: "Coaching",
-    description:
-      "1:1 AI fluency for founders, executives, and leadership teams. Hands-on, weekly, paired to what your business actually does. Build conviction by the end, not slides.",
+      "AI wired into the tools you already run. Notion, HubSpot, ConvertKit, Stripe, Beehiiv, whatever the stack is. Working output in three weeks, not three quarters.",
   },
 ];
 

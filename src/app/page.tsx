@@ -3,20 +3,21 @@ import Hero from "@/components/sections/Hero";
 import IndustriesMarquee from "@/components/sections/IndustriesMarquee";
 import ScrollZoom from "@/components/sections/ScrollZoom";
 import WhatWeDo from "@/components/sections/WhatWeDo";
+import { AIRoadmap } from "@/components/sections/AIRoadmap";
 import { FounderVision } from "@/components/sections/FounderVision";
 // import Testimonials from "@/components/sections/Testimonials";
 import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "AI Strategy, Integration & Coaching | VERA, South Florida",
+  title: "AI Consulting for Coaches and Consultants | VERA",
   description:
-    "VERA is a senior AI consulting practice based in South Florida. Strategy, integration, and coaching for companies adopting AI. Serving Boca Raton, Delray Beach, Boynton Beach, Deerfield Beach, and Fort Lauderdale.",
+    "AI strategy, integration, and coaching for solo experts whose businesses run on what they know. Built for coaches, consultants, marketing pros, and agencies.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "AI Strategy, Integration & Coaching | VERA, South Florida",
+    title: "AI Consulting for Coaches and Consultants | VERA",
     description:
-      "Senior AI consulting for South Florida companies. Strategy, integration, and coaching, done right from the start.",
+      "AI strategy, integration, and coaching for solo experts. Built for coaches, consultants, marketing pros, and agencies whose business runs on what they know.",
     type: "website",
     url: "https://veraconsulting.co",
     siteName: "VERA",
@@ -24,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Strategy, Integration & Coaching | VERA, South Florida",
+    title: "AI Consulting for Coaches and Consultants | VERA",
     description:
-      "Senior AI consulting for South Florida companies. Strategy, integration, and coaching, done right.",
+      "AI strategy, integration, and coaching for coaches, consultants, marketing pros, and agencies.",
   },
 };
 
@@ -37,6 +38,7 @@ export default function Home() {
       <IndustriesMarquee />
       <ScrollZoom />
       <WhatWeDo />
+      <AIRoadmap />
       <FounderVision />
       {/* <Testimonials /> */}
       <SouthFlorida />

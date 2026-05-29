@@ -7,8 +7,8 @@ import "./globals.css";
 
 const SITE_URL = "https://veraconsulting.co";
 const SITE_DESCRIPTION =
-  "VERA helps companies adopt AI that's powerful, accountable, and designed to last. Strategy, integration, and coaching, done right.";
-const DEFAULT_TITLE = "VERA, AI Strategy, Integration & Coaching";
+  "AI coaching for coaches, consultants, and solo experts whose business runs on what they know. Get fluent. Take bigger work. Grow without hiring.";
+const DEFAULT_TITLE = "VERA, AI Coaching for Coaches and Consultants";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -64,7 +64,8 @@ const organizationJsonLd = {
     "Fort Lauderdale",
     "South Florida",
   ],
-  serviceType: "AI Strategy, Integration, and Coaching Consulting",
+  serviceType:
+    "AI Coaching, Strategy, and Integration for Coaches, Consultants, and Solo Experts",
   sameAs: [],
 };
 
