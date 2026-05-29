@@ -4,8 +4,8 @@ export const FAQ = [
     a: "Strategy-only work usually runs 4–6 weeks. If we're integrating a system end-to-end, it's more like 3–6 months. We'll give you a clear timeline before anything starts.",
   },
   {
-    q: "What industries do you work with?",
-    a: "Healthcare, finance, insurance, legal, enterprise operations, places where AI decisions have real consequences and you can't afford to get it wrong.",
+    q: "Who do you work with?",
+    a: "Coaches, consultants, marketing pros, SEO consultants, brand strategists, social media managers, independent agency owners, and fractional execs. Solo experts whose business runs on what they know.",
   },
   {
     q: "How big is your team?",
@@ -16,7 +16,7 @@ export const FAQ = [
     a: "Project-based, scoped to deliverables. You'll know what you're paying and what you're getting before we start. No hourly billing, no open-ended retainers.",
   },
   {
-    q: "Can you work with our existing team?",
-    a: "That's the default. We sit with your engineers, not in a separate room. When we're done, they know the system because they helped integrate it.",
+    q: "Can you work with my VA or contractor?",
+    a: "That's the default. If someone else operates parts of your practice with you, we bring them into the build so they're not guessing how to use it after we leave.",
   },
 ];

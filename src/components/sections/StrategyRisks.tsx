@@ -23,7 +23,7 @@ const RISKS = [
     number: "03",
     title: "Data Privacy & Security",
     detail:
-      "AI creates new attack surfaces — from prompt injection to training data extraction — that traditional security frameworks weren't designed to address. Compliance with GDPR, CCPA, and HIPAA requires AI-specific controls.",
+      "AI creates new attack surfaces (prompt injection, training data extraction, leakage through shared chats) that older security habits weren't designed to address. Client data, contracts, and intake notes pasted into the wrong tool can break confidentiality before you notice. GDPR, CCPA, and HIPAA still apply.",
   },
   {
     number: "04",
@@ -33,9 +33,9 @@ const RISKS = [
   },
   {
     number: "05",
-    title: "Workforce Disruption",
+    title: "Generic Output",
     detail:
-      "Without a transition plan, AI adoption creates friction and talent gaps instead of productivity gains. Organizations that invest in change management see 3x higher adoption rates.",
+      "If your work starts sounding like every other consultant running the same prompts on the same model, the thing your clients hired you for thins out. The risk for a solo practice is not that AI replaces you, it's that it quietly flattens your voice and your point of view into something interchangeable.",
   },
   {
     number: "06",
@@ -186,9 +186,9 @@ export function StrategyRisks() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[560px] mt-6">
-                Most AI failures aren&rsquo;t technical. They&rsquo;re
-                organizational. These are the six areas where we see companies
-                get caught off guard.
+                Most AI failures aren&rsquo;t technical. They&rsquo;re about
+                judgment. These are the six places we see solo practices and
+                small teams get caught off guard.
               </p>
             </Reveal>
           </div>
@@ -221,9 +221,9 @@ export function StrategyRisks() {
           <div className="flex gap-4 items-stretch mt-16 max-w-[820px] mx-auto">
             <div className="w-[3px] bg-[var(--color-accent)] rounded-sm shrink-0" />
             <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed py-1">
-              &ldquo;The companies that get AI right aren&rsquo;t the ones that
-              move fastest. They&rsquo;re the ones that build the governance to
-              sustain it.&rdquo;
+              &ldquo;The solo experts who get AI right aren&rsquo;t the ones
+              moving fastest. They&rsquo;re the ones who keep their judgment
+              and their voice intact while everyone else outsources both.&rdquo;
             </p>
           </div>
         </Reveal>

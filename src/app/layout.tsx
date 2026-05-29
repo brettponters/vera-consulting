@@ -56,14 +56,7 @@ const organizationJsonLd = {
     latitude: 26.3683,
     longitude: -80.1289,
   },
-  areaServed: [
-    "Boca Raton",
-    "Delray Beach",
-    "Boynton Beach",
-    "Deerfield Beach",
-    "Fort Lauderdale",
-    "South Florida",
-  ],
+  areaServed: "United States",
   serviceType:
     "AI Coaching, Strategy, and Integration for Coaches, Consultants, and Solo Experts",
   sameAs: [],

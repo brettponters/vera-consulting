@@ -15,7 +15,7 @@ const CASE_STUDIES = [
     title: "CoAgent",
     subtitle: "An AI assistant that actually keeps your data private.",
     problem:
-      "Professionals in real estate, legal, and finance were stuck. They wanted AI to handle the busywork, email triage, scheduling, follow-ups, but every tool on the market required sending sensitive client data to someone else's servers. That's not an option when you're handling contracts, medical records, or deal flow.",
+      "Solo consultants, coaches, agency owners, and fractional execs were stuck. They wanted AI to handle the busywork, email triage, scheduling, follow-ups, but every tool on the market required sending sensitive client data to someone else's servers. That's not an option when you're handling client briefs, contracts, and strategy work clients trust you to keep private.",
     solution:
       "We built an AI agent that runs entirely on the user's machine. It connects to their email, calendar, Slack, and CRM, monitors everything in real-time, handles routine tasks automatically, and asks for permission before doing anything high-stakes. No cloud database. No third-party data pipeline. Their data never leaves their device.",
     details: [

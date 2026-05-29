@@ -80,20 +80,20 @@ function CountUp({
 
 const COPY = [
   {
-    head: "Adoption has outpaced readiness",
-    body: "88% of organizations now use AI regularly in at least one business function. 92% of Fortune 500 companies have deployed generative AI across their operations. But only 25% have governance frameworks robust enough to match that pace.",
+    head: "AI is already in your clients' world",
+    body: "88% of organizations now use AI in at least one business function. The Fortune 500 has standardized on it. Your clients are reading the same headlines you are, and they are starting to ask what you are doing with it. The bar for a solo expert has moved.",
   },
   {
-    head: "The governance gap is real",
-    body: "AI adoption has outrun AI governance by 58 percentage points, the widest enterprise adoption-to-governance gap on record. 78% of executives say they lack confidence their company could pass an independent AI governance audit within 90 days.",
+    head: "Most of it is shallow",
+    body: "Adoption raced ahead of judgment. Only a quarter of teams using AI have any real frame for how they use it, and roughly three quarters of the people running them admit they could not defend their AI practice if a client asked. That gap is the opening. The solo experts who think carefully about how they use AI look very different from the ones bolting it on.",
   },
   {
-    head: "Regulation is accelerating",
-    body: "The EU AI Act is in effect. U.S. states are passing AI-specific legislation. The SEC has issued disclosure guidance. NIST has published its AI Risk Management Framework. Companies that built without governance are retrofitting under pressure.",
+    head: "Regulation is catching up",
+    body: "The EU AI Act is in effect. U.S. states are passing AI-specific laws. NIST has published its AI Risk Management Framework. None of this targets solo practices directly, but the standards your clients sign contracts under are tightening. Knowing what is coming is part of looking like a serious professional.",
   },
   {
-    head: "The gap is widening",
-    body: "McKinsey identifies a small group of AI high performers (roughly 6% of companies) that attribute more than 5% of EBIT to AI. These organizations are 2.8x more likely to have fundamentally redesigned their workflows around AI, not just layered it on top.",
+    head: "Small bets, big difference",
+    body: "Global AI spending is $2.5 trillion and climbing 44% a year. Most of that is being spent badly. For a one-person practice, the question is not how much to spend. It is which two or three workflows, used well, change how much work you can take on without hiring.",
   },
 ];
 

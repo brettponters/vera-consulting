@@ -4,24 +4,24 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "1:1 AI Coaching for Business Leaders | VERA",
+  title: "1:1 AI Coaching for Coaches, Consultants, and Solo Experts | VERA",
   description:
-    "Private weekly AI coaching for business leaders and entrepreneurs. Custom workflows built around how you actually run your business. South Florida and remote.",
+    "Private weekly 1:1 AI coaching for coaches, consultants, marketing pros, and solo experts whose business runs on what they know. Custom workflows built around how you actually run your practice. Remote.",
   alternates: {
     canonical: "/coaching",
   },
   openGraph: {
-    title: "1:1 AI Coaching for Business Leaders | VERA",
+    title: "1:1 AI Coaching for Coaches, Consultants, and Solo Experts | VERA",
     description:
-      "Private weekly AI coaching for business leaders and entrepreneurs. Custom workflows around your real work.",
+      "Private weekly 1:1 AI coaching for solo experts. Custom workflows around the real work of running your practice.",
     type: "website",
     url: "https://veraconsulting.co/coaching",
   },
   twitter: {
     card: "summary_large_image",
-    title: "1:1 AI Coaching for Business Leaders | VERA",
+    title: "1:1 AI Coaching for Coaches, Consultants, and Solo Experts | VERA",
     description:
-      "Private weekly AI coaching for business leaders and entrepreneurs.",
+      "Private weekly 1:1 AI coaching for coaches, consultants, and solo experts.",
   },
 };
 
@@ -51,17 +51,18 @@ export default function CoachingPage() {
               className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.03em] leading-[0.98]"
               style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)" }}
             >
-              1:1 AI coaching for business leaders and entrepreneurs.
+              1:1 AI coaching for coaches, consultants, and solo experts.
             </h1>
 
             <p
               className="font-sans text-[var(--color-body)] leading-relaxed max-w-[680px]"
               style={{ fontSize: "clamp(1.0625rem, 1.4vw, 1.25rem)" }}
             >
-              Private weekly sessions with a senior partner, built around how
-              you specifically run your business. We design the AI workflows
-              for the parts of your week that take hours, proposals, briefs,
-              follow-ups, status updates, intake notes, and you keep them.
+              Private weekly sessions, 1:1 with the founder, no handoff to
+              anyone else. Built around how you specifically run your
+              practice. We design the AI workflows for the parts of your week
+              that take hours, proposals, briefs, follow-ups, status updates,
+              intake notes, and you keep them.
             </p>
 
             <div>
@@ -145,14 +146,14 @@ export default function CoachingPage() {
             >
               all solutions
             </Link>
-            . Real estate agents and brokerages, the{" "}
+            . For workflows specific to your line of work, see the{" "}
             <Link
-              href="/for-real-estate"
+              href="/for"
               className="text-[var(--color-accent)] no-underline hover:underline"
             >
-              vertical page
-            </Link>{" "}
-            covers the workflows we build for that business specifically.
+              vertical pages
+            </Link>
+            .
           </p>
         </Container>
       </section>
@@ -190,7 +191,7 @@ export default function CoachingPage() {
             <div className="pt-8 flex flex-col items-center gap-2">
               <span className="h-px w-10 bg-[var(--color-hairline)]" />
               <p className="font-sans text-[10px] uppercase tracking-[0.28em] text-[var(--color-muted)] font-semibold">
-                Brett Ponters, VERA
+                VERA
               </p>
             </div>
           </div>

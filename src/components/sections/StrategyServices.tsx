@@ -25,14 +25,14 @@ const SERVICES = [
     number: "02",
     title: "AI Integration",
     description:
-      "AI woven into your workflows at a foundational level, not bolted on as a feature. We handle technical implementation, data pipelines, and change management so your team actually adopts it.",
+      "AI built into the workflows you already run, not bolted on as a feature. We design the integration, wire the tools, and walk you (and any VA or contractor you work with) through the handoff so it actually gets used after we leave.",
     includes: [
       "Workflow design",
-      "System integration",
-      "Data pipeline architecture",
+      "Tool and data integration",
+      "Prompt and template libraries",
       "Performance monitoring",
-      "Change management",
-      "Team onboarding",
+      "Handoff to VAs and contractors",
+      "Personal onboarding",
     ],
   },
   {
@@ -53,11 +53,12 @@ const SERVICES = [
     number: "04",
     title: "Training & Enablement",
     description:
-      "Hands-on training tailored to your industry, your tools, and the specific roles in your organization. From C-suite briefings to technical workshops on prompt engineering and tool evaluation.",
+      "1:1 fluency sessions built around your actual work, your tools, and the way you think. Personal AI literacy for the founder, with small-team workshops available when you have contractors or a VA who need to operate the same workflows.",
     includes: [
-      "Executive AI briefings",
-      "Team workshops",
-      "AI literacy programs",
+      "1:1 fluency sessions",
+      "Personal AI literacy",
+      "Prompt engineering for your work",
+      "Small-team workshops (when needed)",
       "Best practices documentation",
       "Ongoing enablement",
     ],
@@ -66,13 +67,13 @@ const SERVICES = [
     number: "05",
     title: "Policy Development",
     description:
-      "Standalone policy engagements, practical, enforceable, and aligned with current and emerging regulation. Policies your team can actually follow, not shelf documents that collect dust.",
+      "Simple, practical policies for a solo practice. Worth doing when you handle sensitive client information, when contractors or VAs touch your AI stack, or when a client starts asking how you use AI before they sign. Aligned with current and emerging regulation, written so you can actually follow them.",
     includes: [
       "Acceptable use policy",
-      "Data governance policy",
+      "Client data handling",
+      "Contractor and VA guidelines",
       "Model evaluation standards",
       "Human oversight requirements",
-      "Vendor management protocols",
     ],
   },
 ];

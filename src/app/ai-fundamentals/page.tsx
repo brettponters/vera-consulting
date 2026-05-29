@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/Button";
 import { Timeline } from "./Timeline";
 
 export const metadata: Metadata = {
-  title: "AI Fundamentals for Business Leaders",
+  title: "AI Fundamentals for Solo Experts and Consultants",
   description:
-    "An explainer on AI for business leaders. Covers how language models work, why AI keeps getting better, the kinds of AI you meet today, where things are heading, and what each part means for a business.",
+    "A long-form explainer on AI for coaches, consultants, and solo experts who need to make real decisions about it. How language models work, why AI keeps getting better, the kinds of AI you meet today, where things are heading, and what each part means for your practice.",
   alternates: { canonical: "/ai-fundamentals" },
   openGraph: {
-    title: "AI Fundamentals for Business Leaders",
+    title: "AI Fundamentals for Solo Experts and Consultants",
     description:
-      "An explainer on AI for business leaders. How language models work, why AI keeps getting better, the kinds of AI you meet today, where things are heading, and what each part means for a business.",
+      "An explainer on AI for coaches, consultants, and solo experts. How language models work, why AI keeps getting better, the kinds of AI you meet today, where things are heading, and what each part means for your practice.",
     type: "website",
     url: "https://veraconsulting.co/ai-fundamentals",
     siteName: "VERA",
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Fundamentals for Business Leaders",
+    title: "AI Fundamentals for Solo Experts and Consultants",
     description:
-      "An explainer on AI for business leaders. How language models work, why AI keeps getting better, where things are heading, and what each part means for a business.",
+      "An explainer on AI for coaches, consultants, and solo experts. How language models work, why AI keeps getting better, where things are heading, and what each part means for your practice.",
   },
 };
 
@@ -1020,7 +1020,7 @@ export default function FoundationsPage() {
         <Container size="wide">
           <div className="max-w-[900px]">
             <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] mb-5">
-              For business leaders
+              For solo experts
             </span>
             <h1
               className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.035em] leading-[0.96]"
@@ -1496,7 +1496,7 @@ export default function FoundationsPage() {
 
       <Bridge>
         Whether or not we ever reach those rungs, the near-term implications
-        for operators are the same. The short view is mostly about which
+        for solo experts are the same. The short view is mostly about which
         parts of the work change first.
       </Bridge>
 
@@ -2022,8 +2022,8 @@ export default function FoundationsPage() {
               Want to talk through how this applies to your business?
             </h2>
             <SectionLead>
-              We work with operators on what to build, what to buy, and what to
-              ignore. Start with a call.
+              We work with solo experts on what to build, what to buy, and what
+              to ignore. Start with a call.
             </SectionLead>
             <Button href="/coaching" variant="filled" size="lg" arrow>
               Talk to us

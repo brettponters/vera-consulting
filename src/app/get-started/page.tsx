@@ -29,7 +29,7 @@ export default function GetStarted() {
         body: JSON.stringify({
           name: data.name,
           email: data.email,
-          company: data.company || "—",
+          company: data.company || "-",
           message: data.message,
           _subject: `New VERA lead: ${data.name}`,
           _template: "table",
@@ -49,7 +49,7 @@ export default function GetStarted() {
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
-      {/* Minimal header — logo only, no nav distractions */}
+      {/* Minimal header, logo only, no nav distractions */}
       <header className="flex h-14 items-center px-6 md:px-16 border-b border-[var(--color-hairline)]">
         <Link
           href="/"
@@ -75,7 +75,7 @@ export default function GetStarted() {
 
       <main className="mx-auto max-w-[1100px] px-6 md:px-10 py-12 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-start">
-          {/* Left — pitch */}
+          {/* Left, pitch */}
           <div>
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
@@ -84,7 +84,7 @@ export default function GetStarted() {
               className="font-sans font-bold text-[var(--color-heading)] leading-[1.08] tracking-[-0.02em] mb-6"
               style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
             >
-              Get AI working for your business — the right way.
+              Get AI working for your practice, the right way.
             </motion.h1>
 
             <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] mb-8">
@@ -118,7 +118,7 @@ export default function GetStarted() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right, form */}
           <div className="rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] p-6 md:p-8">
             {submitted ? (
               <div className="py-12 text-center">
