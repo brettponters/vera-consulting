@@ -1144,6 +1144,11 @@ export const VERTICALS: Vertical[] = [
       "Stack stays as is. Excel, Google Sheets, PowerPoint, Keynote, Figma, Notion. We integrate. We do not ask you to switch the tools your clients expect.",
       "One thing worth saying about how we handle source material. Most strategy engagements rely on a research base that is part proprietary client data, part purchased market data, and part open-source signals from filings, earnings calls, and industry reports. We help you build a research library that respects the licensing terms of the purchased sources, keeps the client data in their tenant, and structures the open-source layer so it is queryable across engagements. The result is that your fifth engagement in a sector starts with category fluency you did not have to rebuild. That fluency is what your clients are actually paying for.",
     ],
+    anecdote: {
+      setup: "A solo strategy consultant was bidding on a market entry engagement against a boutique firm with eight associates. The deliverable expectation was three weeks of research and a recommendation deck.",
+      turn: "We built him a research synthesis workflow and a deck production system in the four weeks before the engagement started. He delivered the work himself in the three-week timeline with a deck the client compared favorably to the boutique firm they had used the prior year.",
+      line: "He has run two more engagements at the same client since, at rates the boutique firm would have charged.",
+    },
     whatThisIsNot: "This is not a deck factory. We do not ghostwrite strategy decks under your name. We do not interview your clients for you. We do not make the strategic call. If you want a managed-services engagement where the deliverables ship without you in the seat, that is a different vendor. The work we ship is the operating layer that makes your judgment more available to the client by removing everything around it that does not require you.",
     faq: [
       {

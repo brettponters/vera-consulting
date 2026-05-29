@@ -82,9 +82,10 @@ export default function OurStrategyClient() {
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[660px] mb-10">
-                A comprehensive guide to how we help companies adopt AI
-                that&rsquo;s powerful, accountable, and designed to last. From
-                risk assessment to policy development to hands-on execution.
+                A comprehensive guide to how we help solo experts and
+                practices adopt AI that&rsquo;s powerful, accountable, and
+                designed to last. From assessment to policy to hands-on
+                execution.
               </p>
             </Reveal>
 

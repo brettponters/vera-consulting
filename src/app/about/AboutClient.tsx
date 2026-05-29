@@ -43,9 +43,9 @@ export default function AboutClient() {
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
-                VERA exists because the companies doing serious work with AI
-                need people in the room who have read the papers and shipped
-                the systems. That&rsquo;s what we do.
+                VERA exists because the people doing serious work with AI need
+                someone in the room who has read the papers and shipped the
+                systems. That&rsquo;s what we do.
               </p>
             </Reveal>
           </div>
@@ -68,11 +68,11 @@ export default function AboutClient() {
 
             <Reveal delay={0.12}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-                I started VERA because the companies I want to work with
+                I started VERA because the people I want to work with
                 don&rsquo;t need another vendor. They need someone who
                 understands the research, has built the systems, and will tell
                 them the truth about what AI can and can&rsquo;t do for their
-                business right now.
+                practice right now.
               </p>
             </Reveal>
 
@@ -80,7 +80,7 @@ export default function AboutClient() {
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
                 Before VERA, I spent years inside engineering and product teams
                 shipping AI into production. I saw the same pattern over and
-                over: companies spending on AI without understanding what they
+                over: practices spending on AI without understanding what they
                 were buying, consultants selling strategies they couldn&rsquo;t
                 implement, and teams left holding systems nobody documented.
               </p>

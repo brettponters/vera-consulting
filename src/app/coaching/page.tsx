@@ -87,15 +87,14 @@ export default function CoachingPage() {
                 className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.02em] leading-tight"
                 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2rem)" }}
               >
-                Owners and operators who want personal AI fluency, not a company-wide rollout.
+                Solo experts who want personal AI fluency, not a team-wide rollout.
               </h2>
               <p className="font-sans text-[var(--color-body)] text-base md:text-[17px] leading-relaxed max-w-[640px]">
-                Business leaders, entrepreneurs, founders, and owner-operators
-                across South Florida. Real estate agents and brokerage owners,
-                solo attorneys and managing partners, financial advisors,
-                healthcare practice owners, marketing agency principals, and
-                the operator on a larger team who's going to lead the rest of
-                the company through AI.
+                Coaches, consultants, marketing pros, SEO consultants, brand
+                strategists, social media managers, independent agency owners,
+                and the solo experts whose business runs on what they know.
+                Personal fluency in AI applied to your actual practice, not a
+                generic curriculum.
               </p>
             </div>
           </div>
