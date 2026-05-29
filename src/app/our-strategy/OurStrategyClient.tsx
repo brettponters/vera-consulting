@@ -62,7 +62,8 @@ export default function OurStrategyClient() {
                 }}
                 className="block"
               >
-                AI Strategy,
+                Coaching, Strategy{" "}
+                <span className="text-[var(--color-accent)]">&amp;</span>
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 24 }}
@@ -74,18 +75,16 @@ export default function OurStrategyClient() {
                 }}
                 className="block"
               >
-                Integration{" "}
-                <span className="text-[var(--color-accent)]">&amp;</span>{" "}
-                Foundation.
+                Integration.
               </motion.span>
             </h1>
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[660px] mb-10">
-                A comprehensive guide to how we help solo experts and
-                practices adopt AI that&rsquo;s powerful, accountable, and
-                designed to last. From assessment to policy to hands-on
-                execution.
+                How we help solo experts and practices get fluent in AI on
+                the work they already do. Three things: weekly 1:1
+                coaching, a strategy for which workflows are worth
+                building, and the integration to actually ship them.
               </p>
             </Reveal>
 

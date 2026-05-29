@@ -36,7 +36,7 @@ const STEPS = [
     number: "3",
     title: "Execution",
     description:
-      "We do the work, strategy, integration, foundation, training, whatever the scope calls for. Regular updates, full documentation, no lock-in. When we're done, you own everything we built. Every engagement includes a 30-day post-completion support window.",
+      "We do the work, coaching, strategy, integration, whatever the scope calls for. Regular updates, full documentation, no lock-in. When we're done, you own everything we built. Every engagement includes a 30-day post-completion support window.",
     details: [
       "Weekly check-ins",
       "Progress reporting",
