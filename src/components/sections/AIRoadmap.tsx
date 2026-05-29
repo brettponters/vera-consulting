@@ -428,29 +428,6 @@ function CapabilityBand({
               </motion.p>
             </div>
 
-            {/* THE THOUGHT */}
-            <div className="mb-7 md:mb-9">
-              <p
-                className="font-mono text-[10px] uppercase tracking-[0.28em] text-[var(--color-muted)] opacity-70 m-0 mb-3"
-              >
-                The thought
-              </p>
-              <motion.p
-                initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-                transition={{
-                  duration: 0.6,
-                  ease: [0.22, 1, 0.36, 1],
-                  delay: 0.05,
-                }}
-                className="font-sans font-medium text-[var(--color-body)] leading-[1.45] m-0"
-                style={{ fontSize: "clamp(1.0625rem, 1.15vw, 1.1875rem)" }}
-              >
-                {cap.detail}
-              </motion.p>
-            </div>
-
             {/* IN PRACTICE */}
             <div className="mb-7 md:mb-9">
               <p
