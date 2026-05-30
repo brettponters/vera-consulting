@@ -33,10 +33,10 @@ export function Reveal({
     <motion.div
       ref={ref}
       className={`reveal-on-scroll ${className}`}
-      initial={{ opacity: 0, y: 12 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+      initial={{ y: 8 }}
+      animate={inView ? { y: 0 } : { y: 8 }}
       transition={{
-        duration: 0.6,
+        duration: 0.45,
         ease: [0.22, 1, 0.36, 1],
         delay,
       }}

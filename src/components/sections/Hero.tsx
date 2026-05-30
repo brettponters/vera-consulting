@@ -68,11 +68,11 @@ export default function Hero() {
               <motion.span
                 key={`${word}-${i}`}
                 aria-hidden="true"
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ y: 10 }}
+                animate={{ y: 0 }}
                 transition={{
-                  duration: 0.55,
-                  delay: 0.15 + i * 0.045,
+                  duration: 0.4,
+                  delay: 0.05 + i * 0.03,
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 className="inline-block whitespace-pre"
