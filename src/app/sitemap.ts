@@ -23,7 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ai-fundamentals",
     "/reading",
     "/coaching",
-    "/solutions",
     "/contact",
     "/get-started",
   ].map((path) => ({
@@ -31,22 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: "monthly",
     priority: 0.8,
-  }));
-
-  const solutionRoutes: MetadataRoute.Sitemap = [
-    "/solutions/strategy",
-    "/solutions/policy",
-    "/solutions/coaching",
-    "/solutions/training",
-    "/solutions/agents",
-    "/solutions/compliance",
-    "/solutions/risk",
-    "/solutions/evaluation",
-  ].map((path) => ({
-    url: `${BASE_URL}${path}`,
-    lastModified,
-    changeFrequency: "monthly",
-    priority: 0.75,
   }));
 
   const thinOrLegal: MetadataRoute.Sitemap = [
@@ -75,7 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...homepage,
     ...mainRoutes,
     ...verticalRoutes,
-    ...solutionRoutes,
     ...thinOrLegal,
   ];
 }

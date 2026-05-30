@@ -132,21 +132,7 @@ export default function CoachingPage() {
       <section className="bg-[var(--color-bg)] py-16 md:py-20 border-t border-[var(--color-hairline)]">
         <Container size="wide">
           <p className="font-sans text-[var(--color-muted)] text-sm md:text-[15px] leading-relaxed max-w-[760px]">
-            If you want the team version instead of 1:1, see{" "}
-            <Link
-              href="/solutions/training"
-              className="text-[var(--color-accent)] no-underline hover:underline"
-            >
-              AI Training
-            </Link>
-            . For the full solutions catalog, see{" "}
-            <Link
-              href="/solutions"
-              className="text-[var(--color-accent)] no-underline hover:underline"
-            >
-              all solutions
-            </Link>
-            . For workflows specific to your line of work, see the{" "}
+            For workflows specific to your line of work, see the{" "}
             <Link
               href="/for"
               className="text-[var(--color-accent)] no-underline hover:underline"
