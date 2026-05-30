@@ -130,27 +130,27 @@ function GlowCard({
           <AnimatePresence>
             {isActive && (
               <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                initial={{ height: 0 }}
+                animate={{ height: "auto" }}
+                exit={{ height: 0 }}
+                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 className="overflow-hidden"
               >
                 <motion.p
                   className="mt-5 font-sans font-medium text-base md:text-lg leading-[1.6] text-[var(--color-body)]"
-                  initial={{ y: 8, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -5, opacity: 0 }}
-                  transition={{ duration: 0.4, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+                  initial={{ y: 8 }}
+                  animate={{ y: 0 }}
+                  exit={{ y: -5 }}
+                  transition={{ duration: 0.3, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
                 >
                   {pillar.detail}
                 </motion.p>
                 {pillar.href && (
                   <motion.div
-                    initial={{ y: 6, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -3, opacity: 0 }}
-                    transition={{ duration: 0.4, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                    initial={{ y: 6 }}
+                    animate={{ y: 0 }}
+                    exit={{ y: -3 }}
+                    transition={{ duration: 0.3, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                     className="mt-5"
                   >
                     <Link
