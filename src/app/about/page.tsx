@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AboutClient from "./AboutClient";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: { absolute: "About VERA, Founder-Led Agentic AI Coaching" },
   description:
     "VERA is a small, senior AI consulting practice. Research-first strategy, hands-on integration, and 1:1 coaching. Public Benefit Corporation.",
   alternates: { canonical: "/about" },

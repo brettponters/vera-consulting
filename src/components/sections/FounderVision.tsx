@@ -19,7 +19,7 @@ export function FounderVision() {
               <div
                 className="relative w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shrink-0 ring-1 ring-[var(--color-hairline)] bg-[var(--color-bg)]"
                 role="img"
-                aria-label="Brett Ponters, Founder of VERA Consulting"
+                aria-label="Founder of VERA Consulting"
               >
                 <div
                   aria-hidden="true"
@@ -45,7 +45,7 @@ export function FounderVision() {
                   <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed mb-6">
                     &ldquo;I started VERA because AI is going to change
                     knowledge work at an unprecedented pace, and the people
-                    whose businesses run on what they know are the ones with
+                    whose businesses run on trust are the ones with
                     the most to gain. We believe in using AI to strengthen
                     what people already do well, picking the workflows worth
                     building instead of the ten that look good in a deck, and
@@ -53,10 +53,10 @@ export function FounderVision() {
                     ahead.&rdquo;
                   </p>
                   <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
-                    Brett Ponters
+                    Founder, VERA Consulting
                   </div>
                   <div className="font-sans text-xs text-[var(--color-muted)] mt-0.5">
-                    Founder, VERA Consulting
+                    Public Benefit Corporation
                   </div>
                 </div>
               </div>

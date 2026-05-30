@@ -7,8 +7,8 @@ import "./globals.css";
 
 const SITE_URL = "https://veraconsulting.co";
 const SITE_DESCRIPTION =
-  "AI coaching for coaches, consultants, and solo experts whose business runs on what they know. Get fluent. Take bigger work. Grow without hiring.";
-const DEFAULT_TITLE = "VERA, AI Coaching for Coaches and Consultants";
+  "Agentic AI coaching, strategy, and integration for coaches, consultants, marketing pros, and solo experts whose business runs on trust. Boca Raton, FL.";
+const DEFAULT_TITLE = "VERA, Agentic AI for Coaches and Consultants";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "ProfessionalService"],
+  "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
   "@id": `${SITE_URL}/#org`,
   name: "VERA Consulting",
   description: SITE_DESCRIPTION,
@@ -49,6 +49,7 @@ const organizationJsonLd = {
     "@type": "PostalAddress",
     addressLocality: "Boca Raton",
     addressRegion: "FL",
+    postalCode: "33431",
     addressCountry: "US",
   },
   geo: {
@@ -56,9 +57,13 @@ const organizationJsonLd = {
     latitude: 26.3683,
     longitude: -80.1289,
   },
-  areaServed: "United States",
-  serviceType:
-    "AI Coaching, Strategy, and Integration for Coaches, Consultants, and Solo Experts",
+  areaServed: [
+    { "@type": "City", name: "Boca Raton" },
+    { "@type": "City", name: "Delray Beach" },
+    { "@type": "AdministrativeArea", name: "Palm Beach County" },
+  ],
+  openingHours: "Mo-Fr 09:00-17:00",
+  serviceType: "Agentic AI Coaching and Consulting",
   sameAs: [],
 };
 

@@ -1,67 +1,96 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Hairline } from "@/components/ui/Hairline";
+import { LOCATIONS } from "@/data/locations";
 
-const LOCATIONS = [
-  { slug: "boca-raton", label: "Boca Raton" },
-  { slug: "delray-beach", label: "Delray Beach" },
-  { slug: "boynton-beach", label: "Boynton Beach" },
-  { slug: "deerfield-beach", label: "Deerfield Beach" },
-  { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+interface AreaRow {
+  label: string;
+  blurb: string;
+  href: string;
+}
+
+// Five local city pages carry the local SEO; the sixth row is national reach
+// over Google Meet so the section reads as "based here, working everywhere."
+const ROWS: AreaRow[] = [
+  ...LOCATIONS.map((loc) => ({
+    label: loc.city,
+    blurb: loc.blurb,
+    href: `/locations/${loc.slug}`,
+  })),
+  {
+    label: "Across the U.S.",
+    blurb:
+      "Not in South Florida? Most of the work runs over Google Meet, so we coach solo experts anywhere in the country.",
+    href: "/contact",
+  },
 ];
 
 export function SouthFlorida() {
   return (
     <section
-      aria-label="South Florida service area"
+      aria-label="Service area"
       className="bg-[var(--color-bg)] py-16 md:py-20"
     >
       <Hairline variant="full" />
       <Container size="wide">
-        <div className="pt-16 md:pt-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-[720px] space-y-5">
+        <div className="pt-16 md:pt-20">
+          <div className="max-w-[720px] space-y-5 mb-10 md:mb-14">
             <p className="font-sans text-xs uppercase tracking-[0.14em] text-[var(--color-accent)]">
-              South Florida
+              Where we work
             </p>
             <h2
               className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.02em] leading-tight"
               style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)" }}
             >
-              Built here. Working with companies across the region.
+              Based in Boca Raton. Working with solo experts across the United
+              States.
             </h2>
             <p className="font-sans text-[var(--color-muted)] text-base leading-relaxed">
-              VERA works with companies throughout South Florida.
+              In person around South Florida, and over Google Meet anywhere in
+              the country, so distance is never the reason something stalls.
             </p>
-            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1 list-none m-0 p-0">
-              {LOCATIONS.map((loc, i) => (
+          </div>
+
+          <ul className="list-none m-0 p-0 border-t border-[var(--color-hairline)]">
+            {ROWS.map((row, i) => {
+              const alignRight = i % 2 === 1;
+              return (
                 <li
-                  key={loc.slug}
-                  className="flex items-center font-sans text-sm"
+                  key={row.href}
+                  className="border-b border-[var(--color-hairline)]"
                 >
                   <Link
-                    href={`/locations/${loc.slug}`}
-                    className="text-[var(--color-heading)] hover:text-[var(--color-accent)] transition-colors no-underline"
+                    href={row.href}
+                    className={`group flex py-6 md:py-8 no-underline ${
+                      alignRight ? "md:justify-end" : "md:justify-start"
+                    }`}
                   >
-                    {loc.label}
-                  </Link>
-                  {i < LOCATIONS.length - 1 && (
-                    <span
-                      className="ml-5 text-[var(--color-navy)]"
-                      aria-hidden="true"
+                    <div
+                      className={`max-w-[460px] ${
+                        alignRight ? "md:text-right" : "md:text-left"
+                      }`}
                     >
-                      ·
-                    </span>
-                  )}
+                      <p className="font-sans font-semibold text-[var(--color-heading)] text-xl md:text-2xl tracking-[-0.01em] mb-1.5 transition-colors group-hover:text-[var(--color-accent)]">
+                        {row.label}
+                      </p>
+                      <p className="font-sans text-sm md:text-[15px] text-[var(--color-muted)] leading-snug">
+                        {row.blurb}
+                      </p>
+                    </div>
+                  </Link>
                 </li>
-              ))}
-            </ul>
+              );
+            })}
+          </ul>
+
+          <div className="mt-10">
+            <Link
+              href="/locations"
+              className="font-sans text-sm font-medium text-[var(--color-accent)] no-underline hover:underline"
+            >
+              All service areas →
+            </Link>
           </div>
-          <Link
-            href="/locations"
-            className="font-sans text-sm font-medium text-[var(--color-accent)] no-underline hover:underline self-start md:self-end"
-          >
-            Service areas →
-          </Link>
         </div>
       </Container>
     </section>

@@ -6,18 +6,18 @@ import WhatWeDo from "@/components/sections/WhatWeDo";
 import { AIRoadmap } from "@/components/sections/AIRoadmap";
 import { FounderVision } from "@/components/sections/FounderVision";
 // import Testimonials from "@/components/sections/Testimonials";
-// import { SouthFlorida } from "@/components/sections/SouthFlorida";
+import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "AI Consulting for Coaches and Consultants | VERA",
+  title: "Agentic AI for Coaches and Consultants | VERA Consulting",
   description:
-    "AI strategy, integration, and coaching for solo experts whose businesses run on what they know. Built for coaches, consultants, marketing pros, and agencies.",
+    "Agentic AI coaching, strategy, and integration for coaches, consultants, marketing pros, and solo experts whose business runs on trust. Boca Raton, FL.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "AI Consulting for Coaches and Consultants | VERA",
+    title: "Agentic AI for Coaches and Consultants | VERA Consulting",
     description:
-      "AI strategy, integration, and coaching for solo experts. Built for coaches, consultants, marketing pros, and agencies whose business runs on what they know.",
+      "Agentic AI coaching, strategy, and integration for coaches, consultants, marketing pros, and solo experts whose business runs on trust.",
     type: "website",
     url: "https://veraconsulting.co",
     siteName: "VERA",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Consulting for Coaches and Consultants | VERA",
+    title: "Agentic AI for Coaches and Consultants | VERA Consulting",
     description:
-      "AI strategy, integration, and coaching for coaches, consultants, marketing pros, and agencies.",
+      "Agentic AI coaching, strategy, and integration for coaches, consultants, marketing pros, and solo experts whose business runs on trust.",
   },
 };
 
@@ -41,7 +41,7 @@ export default function Home() {
       <AIRoadmap />
       <FounderVision />
       {/* <Testimonials /> */}
-      {/* <SouthFlorida /> */}
+      <SouthFlorida />
       <BookACall />
     </>
   );

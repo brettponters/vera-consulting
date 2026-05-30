@@ -5,7 +5,7 @@ export const FAQ = [
   },
   {
     q: "Who do you work with?",
-    a: "Coaches, consultants, marketing pros, SEO consultants, brand strategists, social media managers, independent agency owners, and fractional execs. Solo experts whose business runs on what they know.",
+    a: "Coaches, consultants, marketing pros, SEO consultants, brand strategists, social media managers, independent agency owners, and fractional execs. Solo experts whose business runs on trust.",
   },
   {
     q: "How big is your team?",

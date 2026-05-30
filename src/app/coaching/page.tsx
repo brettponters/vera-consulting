@@ -4,14 +4,14 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "1:1 AI Coaching for Coaches, Consultants, and Solo Experts | VERA",
+  title: "1:1 AI Coaching for Coaches and Consultants",
   description:
-    "Private weekly 1:1 AI coaching for coaches, consultants, marketing pros, and solo experts whose business runs on what they know. Custom workflows built around how you actually run your practice. Remote.",
+    "Private weekly 1:1 AI coaching for coaches, consultants, marketing pros, and solo experts whose business runs on trust. Custom workflows built around how you actually run your practice. Remote.",
   alternates: {
     canonical: "/coaching",
   },
   openGraph: {
-    title: "1:1 AI Coaching for Coaches, Consultants, and Solo Experts | VERA",
+    title: "1:1 AI Coaching for Coaches and Consultants | VERA",
     description:
       "Private weekly 1:1 AI coaching for solo experts. Custom workflows around the real work of running your practice.",
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "1:1 AI Coaching for Coaches, Consultants, and Solo Experts | VERA",
+    title: "1:1 AI Coaching for Coaches and Consultants | VERA",
     description:
       "Private weekly 1:1 AI coaching for coaches, consultants, and solo experts.",
   },
@@ -93,7 +93,7 @@ export default function CoachingPage() {
               <p className="font-sans text-[var(--color-body)] text-base md:text-[17px] leading-relaxed max-w-[640px]">
                 Coaches, consultants, marketing pros, SEO consultants, brand
                 strategists, social media managers, independent agency owners,
-                and the solo experts whose business runs on what they know.
+                and the solo experts whose business runs on trust.
                 Personal fluency in AI applied to your actual practice, not a
                 generic curriculum.
               </p>

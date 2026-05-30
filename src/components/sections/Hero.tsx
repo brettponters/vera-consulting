@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-const H1_TEXT = "AI Consulting for Solo Entrepreneurs.";
+const H1_TEXT = "Agentic AI Coaching for Solopreneurs.";
 const H1_WORDS = H1_TEXT.split(" ");
 
 export default function Hero() {

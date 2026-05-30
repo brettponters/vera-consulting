@@ -60,10 +60,10 @@ export default function Privacy() {
           <p>
             If you have questions about this policy, email us at{" "}
             <a
-              href="mailto:hello@vera.ai"
+              href="mailto:brett@veraconsulting.co"
               className="text-[var(--color-accent)] underline underline-offset-4"
             >
-              hello@vera.ai
+              brett@veraconsulting.co
             </a>
             .
           </p>

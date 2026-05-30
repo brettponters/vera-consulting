@@ -163,7 +163,7 @@ export default function OurStrategyClient() {
                     <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed mb-5">
                       &ldquo;I started VERA because AI is going to change
                       knowledge work at an unprecedented pace, and the
-                      people whose businesses run on what they know are the
+                      people whose businesses run on trust are the
                       ones with the most to gain and the most to lose. We
                       use AI to strengthen what people already do well, pick
                       the workflows worth building instead of the ten that
@@ -171,10 +171,10 @@ export default function OurStrategyClient() {
                       risks and the opportunities ahead.&rdquo;
                     </p>
                     <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
-                      Brett Ponters
+                      Founder, VERA Consulting
                     </div>
                     <div className="font-sans text-xs text-[var(--color-muted)] mt-0.5">
-                      Founder, VERA Consulting
+                      Public Benefit Corporation
                     </div>
                   </div>
                 </div>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import OurWorkClient from "./OurWorkClient";
 
 export const metadata: Metadata = {
-  title: "Our Work",
+  title: "AI Coaching and Consulting Case Studies",
   description:
     "Selected engagements and case patterns: AI strategy, integration, and coaching. What we've built and what it produced.",
   alternates: { canonical: "/our-work" },

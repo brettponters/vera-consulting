@@ -6,7 +6,7 @@ import { VERTICALS } from "@/data/verticals";
 export const metadata: Metadata = {
   title: "AI Consulting by Vertical",
   description:
-    "AI consulting and coaching for coaches, consultants, marketing pros, agencies, and the solo experts whose business runs on what they know.",
+    "AI consulting and coaching for coaches, consultants, marketing pros, agencies, and the solo experts whose business runs on trust.",
   alternates: { canonical: "/for" },
   openGraph: {
     title: "AI Consulting by Vertical, VERA",
@@ -45,7 +45,7 @@ const jsonLd = {
         "@type": "ListItem",
         position: i + 1,
         name: v.marqueeLabel,
-        url: `https://veraconsulting.co/for/${v.slug}`,
+        item: `https://veraconsulting.co/for/${v.slug}`,
       })),
     },
   ],
@@ -73,7 +73,7 @@ export default function ForIndexPage() {
               Pick your practice.
             </h1>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[760px]">
-              We work with solo experts whose business runs on what they know.
+              We work with solo experts whose business runs on trust.
               Find the workflows that fit yours.
             </p>
           </div>
