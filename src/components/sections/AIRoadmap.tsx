@@ -224,6 +224,7 @@ function VideoPlaceholder({
           }}
           src={`https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&playlist=${youtubeId}&disablekb=1&fs=0&iv_load_policy=3&rel=0&playsinline=1&start=8&end=58`}
           title={`${title} demo`}
+          loading="lazy"
           allow="autoplay; encrypted-media; picture-in-picture"
           referrerPolicy="strict-origin-when-cross-origin"
         />

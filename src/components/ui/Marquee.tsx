@@ -29,7 +29,7 @@ export function Marquee({
     setMounted(true);
   }, []);
 
-  const clones = mounted ? Array.from({ length: 7 }) : [];
+  const clones = mounted ? Array.from({ length: 2 }) : [];
 
   return (
     <div
