@@ -27,7 +27,7 @@ export default function IndustriesMarquee() {
           >
             Built for
           </p>
-          <Marquee duration={90} pauseOnHover className="min-w-0">
+          <Marquee duration={140} pauseOnHover className="min-w-0">
             <span className="flex items-center whitespace-nowrap px-4 md:px-6">
               {VERTICALS.map((v) => (
                 <span key={v.slug} className="flex items-center">
