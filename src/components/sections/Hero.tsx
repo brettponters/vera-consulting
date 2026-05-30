@@ -85,8 +85,8 @@ export default function Hero() {
 
           <Reveal delay={0.55}>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[760px] mb-12">
-              For coaches, consultants, marketing pros, and solo experts
-              whose business runs on what they know.
+              Agentic AI for coaches, consultants, marketing pros, and
+              solo experts whose business runs on what they know.
             </p>
           </Reveal>
 
