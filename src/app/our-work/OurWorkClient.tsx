@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/Button";
 
 const CASE_STUDIES = [
   {
-    tag: "AI Agent · Full Product Build",
+    tag: "Agentic AI · Full Product Build",
     title: "CoAgent",
     subtitle: "An AI assistant that actually keeps your data private.",
     problem:

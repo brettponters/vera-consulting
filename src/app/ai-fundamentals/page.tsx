@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/Button";
 import { Timeline } from "./Timeline";
 
 export const metadata: Metadata = {
-  title: "AI Fundamentals for Solo Experts and Consultants",
+  title: "AI Fundamentals for Consultants: Agentic AI Explained",
   description:
-    "A long-form explainer on AI for coaches, consultants, and solo experts who need to make real decisions about it. How language models work, why AI keeps getting better, the kinds of AI you meet today, where things are heading, and what each part means for your practice.",
+    "A long-form explainer on AI for coaches, consultants, and solo experts who need to make real decisions about it. How language models work, why AI keeps getting better, what agentic AI actually is, where things are heading, and what each part means for your practice.",
   alternates: { canonical: "/ai-fundamentals" },
   openGraph: {
     title: "AI Fundamentals for Solo Experts and Consultants",

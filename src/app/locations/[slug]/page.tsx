@@ -29,8 +29,8 @@ export async function generateMetadata({
   const loc = getLocationBySlug(slug);
   if (!loc) return {};
   const url = `https://veraconsulting.co/locations/${slug}`;
-  const title = `AI Coaching in ${loc.city}, ${loc.state}`;
-  const description = `Agentic AI coaching, strategy, and integration for ${loc.city} coaches, consultants, marketing pros, and solo experts. Built around your practice, with guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
+  const title = `AI Consultant in ${loc.city}, ${loc.state}`;
+  const description = `AI consultant in ${loc.city}: agentic AI coaching, automation, strategy, and integration for ${loc.city} coaches, consultants, marketing pros, and solo experts. Built around your practice, with guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
   return {
     title,
     description,
@@ -40,6 +40,7 @@ export async function generateMetadata({
       `${loc.city} AI consultant`,
       `AI coach ${loc.city}`,
       `agentic AI ${loc.city}`,
+      `AI automation ${loc.city}`,
       `AI consulting ${loc.city}`,
       `AI for consultants ${loc.city}`,
       `AI for coaches ${loc.city}`,
@@ -167,7 +168,7 @@ export default async function LocationPage({
               className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
-              Agentic AI coaching in {loc.city}.
+              Agentic AI consulting in {loc.city}.
             </h1>
             <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[680px] mb-10">
               {loc.heroIntro}

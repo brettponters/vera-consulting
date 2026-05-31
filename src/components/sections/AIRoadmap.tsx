@@ -25,7 +25,7 @@ const CAPABILITIES: Capability[] = [
     id: "marketing",
     num: "01",
     title: "Content & marketing",
-    teaser: "Newsletters, posts, courses, and sales pages in your voice.",
+    teaser: "AI drafts your newsletters, posts, courses, and sales pages in your voice.",
     detail:
       "AI agents draft your newsletter, LinkedIn, course outlines, and sales pages from your voice notes and frameworks. You ship more without diluting the voice clients hired you for.",
     examples: [
@@ -39,7 +39,7 @@ const CAPABILITIES: Capability[] = [
     id: "deals",
     num: "02",
     title: "Sales & lead gen",
-    teaser: "Finding leads, discovery prep, qualification, objections.",
+    teaser: "AI finds leads, preps discovery, and scores qualification.",
     detail:
       "Lead lists pulled from your niche, pre-call research on the prospect, qualification scoring from form fills, objection handling drafts. You fill the pipeline and show up to every call with conviction.",
     examples: [
@@ -54,7 +54,7 @@ const CAPABILITIES: Capability[] = [
     id: "market-research",
     num: "03",
     title: "Client research & briefs",
-    teaser: "Industry briefs in 30 minutes, not three days.",
+    teaser: "AI research briefs in 30 minutes, not three days.",
     detail:
       "Industry breakdowns, competitor analysis, market sizing, regulatory primers. Pulled from public data and synthesized in your voice. Walk into the call already smart on their world.",
     examples: [
@@ -69,7 +69,7 @@ const CAPABILITIES: Capability[] = [
     id: "tax",
     num: "04",
     title: "Operations & admin",
-    teaser: "CRM, calendar, invoicing, project ops.",
+    teaser: "AI handles CRM, calendar, invoicing, and project ops.",
     detail:
       "CRM auto-fill, calendar prep, invoicing reminders, project status reports, inbox triage. The drudgery handled before you even open the app.",
     examples: [
@@ -84,7 +84,7 @@ const CAPABILITIES: Capability[] = [
     id: "comms",
     num: "05",
     title: "Client communications",
-    teaser: "Recaps, follow-ups, sequences in your voice.",
+    teaser: "AI recaps, follow-ups, and sequences in your voice.",
     detail:
       "Meeting recaps from transcripts, client follow-ups in your tone, day 1, 3, 7, 14, 30 sequences for the leads you would otherwise forget. Hot replies route straight to you.",
     examples: [
@@ -99,7 +99,7 @@ const CAPABILITIES: Capability[] = [
     id: "negotiation",
     num: "06",
     title: "Proposals & pitches",
-    teaser: "Custom proposals, decks, and scope docs in minutes.",
+    teaser: "AI builds custom proposals, decks, and scope docs in minutes.",
     detail:
       "Custom proposals built from your standards, the client's brief, and your last twenty wins. SOWs that match how you actually scope. Pitch decks in your visual language. Pricing options you can defend.",
     examples: [
@@ -491,6 +491,9 @@ export function AIRoadmap() {
                 You don&apos;t need all six. You need the right three for
                 <span style={{ color: "var(--color-accent)" }}> your </span>
                 week.
+              </p>
+              <p className="mt-5 font-sans text-[var(--color-body)] text-base md:text-lg leading-relaxed max-w-[620px]">
+                We build the AI workflows. You keep running the business.
               </p>
             </div>
           </div>

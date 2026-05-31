@@ -88,14 +88,15 @@ export default function CoachingPage() {
                 className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.02em] leading-tight"
                 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2rem)" }}
               >
-                Solo experts who want personal AI fluency, not a team-wide rollout.
+                Solo experts who want personal AI coaching, not a team-wide rollout.
               </h2>
               <p className="font-sans text-[var(--color-body)] text-base md:text-[17px] leading-relaxed max-w-[640px]">
                 Coaches, consultants, marketing pros, SEO consultants, brand
                 strategists, social media managers, independent agency owners,
                 and the solo experts whose business runs on trust.
                 Personal fluency in AI applied to your actual practice, not a
-                generic curriculum.
+                generic curriculum. We design the workflows for you. You
+                don&rsquo;t configure tools.
               </p>
             </div>
           </div>

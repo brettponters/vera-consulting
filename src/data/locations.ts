@@ -130,7 +130,7 @@ export const LOCATIONS: Location[] = [
       "Hiring a Deerfield Beach AI consultant who works 1:1 means the build matches your practice. We find the one or two workflows worth automating, proposals, follow-ups, content, recaps, set them up with guardrails, and coach you until you can run and adjust them yourself. Agentic AI is the engine: it carries a task through several steps on its own rather than waiting on you for each one.",
       "We are close enough to meet in person when it speeds things up, and we run the weekly sessions over Google Meet otherwise. You end up with AI workflows you understand and own, set up with the guardrails a trust-based practice needs, whether your clients are in Broward, Palm Beach, or anywhere else.",
     ],
-    nearby: ["The Cove", "Hillsboro", "Lighthouse Point", "Pompano Beach"],
+    nearby: ["The Cove", "Hillsboro", "Lighthouse Point", "Pompano Beach", "Fort Lauderdale"],
     faqExtra: [
       {
         q: "Do you offer AI coaching and consulting in Deerfield Beach?",

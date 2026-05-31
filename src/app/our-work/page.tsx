@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import OurWorkClient from "./OurWorkClient";
 
 export const metadata: Metadata = {
-  title: "AI Coaching and Consulting Case Studies",
+  title: "Agentic AI Case Studies",
   description:
-    "Selected engagements and case patterns: AI strategy, integration, and coaching. What we've built and what it produced.",
+    "Agentic AI case studies and builds for solo experts: AI agents, automation, strategy, and integration. What we've built and what it produced.",
   alternates: { canonical: "/our-work" },
   openGraph: {
     title: "Our Work, VERA Engagements & Case Patterns",
