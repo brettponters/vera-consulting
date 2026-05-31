@@ -3,6 +3,7 @@ import { dmSans, instrumentSans } from "./fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { EditMode } from "@/components/ui/EditMode";
+import { MotionGuard } from "@/components/MotionGuard";
 import "./globals.css";
 
 const SITE_URL = "https://veraconsulting.co";
@@ -84,10 +85,12 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <EditMode />
+        <MotionGuard>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <EditMode />
+        </MotionGuard>
       </body>
     </html>
   );
