@@ -3,6 +3,28 @@ import { Container } from "@/components/ui/Container";
 import { Hairline } from "@/components/ui/Hairline";
 import { Button } from "@/components/ui/Button";
 import { Timeline } from "./Timeline";
+import { FaqBlock, buildFaqJsonLd, type FaqItem } from "@/components/ui/FaqBlock";
+
+const AGENTIC_FAQ: FaqItem[] = [
+  {
+    q: "What is agentic AI?",
+    a: "Agentic AI is software that takes a goal and works through the steps to reach it, instead of answering one prompt at a time. An assistant waits for instructions. An agent plans, uses your tools to do real work, and follows through, checking in when something needs your call.",
+  },
+  {
+    q: "How is an AI agent different from a chatbot?",
+    a: "A chatbot responds to one message and forgets the goal between turns. An agent holds the goal, breaks it into steps, uses your tools, and reports back. The chatbot drafts the email. The agent reads the thread, drafts the reply, schedules the follow-up, and queues anything risky for your approval.",
+  },
+  {
+    q: "What does an agentic AI consultant do?",
+    a: "An agentic AI consultant works out which parts of your week are worth automating, builds the agents and workflows to do them, and sets the guardrails so you stay in control. At VERA that means building on your real business, not a generic demo, and handing you something you own.",
+  },
+  {
+    q: "Is agentic AI safe to use with client data?",
+    a: "It can be, if it is built that way. The risk is sending sensitive data to third-party servers. We build with guardrails, human approval for high-stakes actions, and setups that keep client data where it belongs. That is the difference between a system you can defend to a client and one you cannot.",
+  },
+];
+
+const faqJsonLd = buildFaqJsonLd(AGENTIC_FAQ);
 
 export const metadata: Metadata = {
   title: "AI Fundamentals for Consultants: Agentic AI Explained",
@@ -1015,6 +1037,11 @@ export default function FoundationsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* ── Hero ───────────────────────────────────────── */}
       <section className="bg-[var(--color-surface)] pt-28 pb-16 md:pt-40 md:pb-24">
         <Container size="wide">
@@ -2006,6 +2033,14 @@ export default function FoundationsPage() {
           <Timeline />
         </Container>
       </section>
+
+      {/* ── FAQ (definitional, citation-targeted) ──────── */}
+      <FaqBlock
+        items={AGENTIC_FAQ}
+        eyebrow="The short answers"
+        heading="Agentic AI, in plain terms."
+        bg="bg-[var(--color-bg)]"
+      />
 
       {/* ── Closing CTA ────────────────────────────────── */}
       <section className="bg-[var(--color-surface)] py-24 md:py-32 border-t border-[var(--color-hairline)] relative overflow-hidden">

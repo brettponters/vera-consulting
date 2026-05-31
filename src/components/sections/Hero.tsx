@@ -87,8 +87,8 @@ export default function Hero() {
           <Reveal delay={0.55}>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[640px] mb-2">
               We believe this revolutionary technology can bring you more
-              clients, lower costs, and wider reach, without ever costing you
-              your authenticity.
+              clients, lower costs, and wider reach, without ever losing what
+              makes you&hellip; you.
             </p>
           </Reveal>
         </div>

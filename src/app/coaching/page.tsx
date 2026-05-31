@@ -2,6 +2,32 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { FaqBlock, buildFaqJsonLd, type FaqItem } from "@/components/ui/FaqBlock";
+
+const COACHING_FAQ: FaqItem[] = [
+  {
+    q: "What is 1:1 AI coaching?",
+    a: "Private weekly sessions where we build AI into your actual practice, not a course and not a generic curriculum. We take the parts of your week that eat hours, proposals, briefs, follow-ups, intake, and design the workflows that handle them with you, on your real work.",
+  },
+  {
+    q: "Who is it for?",
+    a: "Solo experts whose business runs on trust: coaches, consultants, marketing and SEO pros, brand strategists, social media managers, and agency owners. People who want personal fluency in AI applied to how they actually work, not a team-wide rollout.",
+  },
+  {
+    q: "Is it remote or in person?",
+    a: "Remote, over Google Meet, with real responses between sessions. If you are near Boca Raton we can meet in person for the first session and the parts that go faster face to face.",
+  },
+  {
+    q: "What does it cost?",
+    a: "A monthly retainer, covered on the intro call once we know what you are trying to do. The call is twenty minutes and there is no pressure.",
+  },
+  {
+    q: "How long is the commitment?",
+    a: "Three months to start, then ongoing if it is working. By the end you are running the workflows yourself.",
+  },
+];
+
+const faqJsonLd = buildFaqJsonLd(COACHING_FAQ);
 
 export const metadata: Metadata = {
   title: "1:1 AI Coaching for Coaches and Consultants",
@@ -28,6 +54,11 @@ export const metadata: Metadata = {
 export default function CoachingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* HERO */}
       <section className="bg-[var(--color-bg)] relative overflow-hidden pt-24 pb-24 md:pt-32 md:pb-32">
         <div
@@ -144,6 +175,14 @@ export default function CoachingPage() {
           </p>
         </Container>
       </section>
+
+      {/* FAQ */}
+      <FaqBlock
+        items={COACHING_FAQ}
+        eyebrow="Common questions"
+        heading="What people ask before the first call."
+        bg="bg-[var(--color-surface)]"
+      />
 
       {/* CTA */}
       <section className="bg-[var(--color-bg)] py-28 md:py-36 relative overflow-hidden border-t border-[var(--color-hairline)]">

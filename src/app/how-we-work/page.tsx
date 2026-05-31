@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HowWeWorkClient from "./HowWeWorkClient";
 import { FAQ } from "./faq";
+import { PHASES } from "./phases";
 
 export const metadata: Metadata = {
   title: "How We Work",
@@ -30,6 +31,23 @@ const faqJsonLd = {
   })),
 };
 
+// HowTo schema for the engagement process. Answer engines extract numbered
+// procedures as authoritative "how does an AI consulting engagement work"
+// references (AEO).
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How a VERA AI consulting engagement works",
+  description:
+    "The four phases of a VERA agentic AI engagement: discover, strategy, integrate, operate.",
+  step: PHASES.map((phase, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    name: phase.title,
+    text: phase.description,
+  })),
+};
+
 export default function HowWeWorkPage() {
   return (
     <>
@@ -37,6 +55,11 @@ export default function HowWeWorkPage() {
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
       <HowWeWorkClient />
     </>

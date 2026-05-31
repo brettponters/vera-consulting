@@ -7,24 +7,32 @@ import { Hairline } from "@/components/ui/Hairline";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-/* ─── Case Studies ─── */
+/* ─── CoAgent: the change, in plain terms ─── */
 
-const CASE_STUDIES = [
+const BEFORE = [
+  "Your morning starts with 80 emails, three reschedules, and four follow-ups you will forget by noon.",
+  "AI could take most of it, but every tool wanted your clients' private data on its servers. Off the table.",
+  "So you did it all by hand, and the real work waited until the afternoon.",
+];
+
+const AFTER = [
+  "It is handled before you sit down. The inbox is triaged, replies are drafted, the meetings are moved.",
+  "Four things need your yes. You approve them in a minute and start the work only you can do.",
+  "And none of it left your laptop. Your clients' data never touched someone else's cloud.",
+];
+
+const MEANS_FOR_YOU = [
   {
-    tag: "Agentic AI · Full Product Build",
-    title: "CoAgent",
-    subtitle: "An AI assistant that actually keeps your data private.",
-    problem:
-      "Solo consultants, coaches, agency owners, and fractional execs were stuck. They wanted AI to handle the busywork, email triage, scheduling, follow-ups, but every tool on the market required sending sensitive client data to someone else's servers. That's not an option when you're handling client briefs, contracts, and strategy work clients trust you to keep private.",
-    solution:
-      "We built an AI agent that runs entirely on the user's machine. It connects to their email, calendar, Slack, and CRM, monitors everything in real-time, handles routine tasks automatically, and asks for permission before doing anything high-stakes. No cloud database. No third-party data pipeline. Their data never leaves their device.",
-    details: [
-      "Multi-LLM architecture, routes to the best model for each task",
-      "9 live integrations via Model Context Protocol",
-      "Desktop + mobile with team sync",
-      "Human-in-the-loop approval for sensitive actions",
-      "In production, actively used, cross-platform",
-    ],
+    title: "Get your mornings back",
+    body: "The repetitive hour that opens your day, triage, scheduling, follow-ups, runs before you wake up. You start on the work that pays.",
+  },
+  {
+    title: "Stop dropping the ball",
+    body: "Follow-ups, renewals, the lead from Tuesday. The agent catches what falls through the cracks, so a forgotten reply stops costing you the deal.",
+  },
+  {
+    title: "Keep your clients' trust",
+    body: "Everything runs on your own machine. The data clients trust you with never leaves it. That is the difference between a demo and something you can actually use.",
   },
 ];
 
@@ -33,103 +41,155 @@ export default function OurWorkClient() {
     <>
       {/* Hero */}
       <section
-        className="relative pt-14 pb-8 md:pt-20 md:pb-12 overflow-hidden"
+        className="relative pt-14 pb-10 md:pt-20 md:pb-14 overflow-hidden"
         style={{
           background:
             "linear-gradient(180deg, #FFFFFF 0%, #F5F4F1 25%, #F5F4F1 75%, #FFFFFF 100%)",
         }}
       >
         <Container size="wide" className="relative z-10">
-          <div className="max-w-[760px]">
+          <div className="max-w-[820px]">
             <Reveal>
               <Eyebrow className="mb-5">Our work</Eyebrow>
             </Reveal>
 
             <h1
-              className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-8"
+              className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-6"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
               <motion.span
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.55,
-                  delay: 0.1,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
+                transition={{ duration: 0.55, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               >
                 Things we&rsquo;ve built.
               </motion.span>
             </h1>
 
+            <Reveal delay={0.2}>
+              <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
+                Real AI, shipped to production, and what it actually changed for
+                the people using it.
+              </p>
+            </Reveal>
           </div>
         </Container>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-16 md:py-24 bg-[var(--color-bg)]">
+      {/* CoAgent */}
+      <section className="py-12 md:py-20 bg-[var(--color-bg)]">
         <Container size="wide">
-          {CASE_STUDIES.map((study, i) => (
-            <Reveal key={study.title} delay={0.05 + i * 0.05}>
-              <article className="mb-16 last:mb-0">
-                <Hairline className="mb-10" />
-
-                {/* Tag */}
-                <p className="font-sans text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-accent)] mb-4">
-                  {study.tag}
+          {/* Header: logo + name + status */}
+          <Reveal>
+            <Hairline className="mb-10" />
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6 mb-8">
+              <img
+                src="/coagent-logo.png"
+                alt="CoAgent logo"
+                width={72}
+                height={72}
+                className="h-16 w-16 md:h-[72px] md:w-[72px] rounded-2xl shrink-0"
+              />
+              <div className="flex-1 min-w-0">
+                <p className="font-sans text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-accent)] mb-2">
+                  An AI agent we designed, built, and shipped
                 </p>
-
-                {/* Title + subtitle */}
-                <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] mb-2">
-                  {study.title}
+                <h2 className="font-sans font-bold text-3xl md:text-5xl tracking-[-0.02em] text-[var(--color-heading)] leading-none">
+                  CoAgent
                 </h2>
-                <p className="font-sans text-lg text-[var(--color-muted)] mb-10">
-                  {study.subtitle}
+              </div>
+              <span
+                className="self-start sm:self-center shrink-0 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 font-sans text-xs font-semibold"
+                style={{
+                  borderColor: "var(--color-hairline)",
+                  color: "var(--color-muted)",
+                }}
+              >
+                <span
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ backgroundColor: "var(--color-sage)" }}
+                />
+                In production
+              </span>
+            </div>
+
+            <p
+              className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.01em] leading-snug max-w-[760px] mb-14"
+              style={{ fontSize: "clamp(1.375rem, 2.6vw, 2.125rem)" }}
+            >
+              We gave a busy solo operator their mornings back, without their
+              clients&rsquo; data ever leaving their laptop.
+            </p>
+          </Reveal>
+
+          {/* The shift: before / after */}
+          <Reveal delay={0.05}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--color-hairline)] rounded-2xl overflow-hidden border border-[var(--color-hairline)]">
+              {/* Before */}
+              <div className="bg-[var(--color-surface)] p-7 md:p-9">
+                <p className="font-mono text-[10px] uppercase tracking-[0.24em] font-semibold text-[var(--color-muted)] mb-6">
+                  Before
                 </p>
-
-                {/* Two-column: Problem + Solution */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mb-10">
-                  <div>
-                    <p className="font-sans text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-muted)] mb-3">
-                      The problem
+                <div className="flex flex-col gap-4">
+                  {BEFORE.map((line) => (
+                    <p
+                      key={line}
+                      className="font-sans text-[15px] md:text-base leading-relaxed text-[var(--color-muted)]"
+                    >
+                      {line}
                     </p>
-                    <p className="font-sans text-base leading-relaxed text-[var(--color-body)]">
-                      {study.problem}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-sans text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-muted)] mb-3">
-                      What we did
-                    </p>
-                    <p className="font-sans text-base leading-relaxed text-[var(--color-body)]">
-                      {study.solution}
-                    </p>
-                  </div>
+                  ))}
                 </div>
+              </div>
+              {/* After */}
+              <div className="bg-[var(--color-bg)] p-7 md:p-9">
+                <p className="font-mono text-[10px] uppercase tracking-[0.24em] font-semibold mb-6" style={{ color: "var(--color-accent)" }}>
+                  After
+                </p>
+                <div className="flex flex-col gap-4">
+                  {AFTER.map((line) => (
+                    <p
+                      key={line}
+                      className="font-sans text-[15px] md:text-base leading-relaxed text-[var(--color-heading)] font-medium"
+                    >
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Reveal>
 
-                {/* Details */}
-                <div className="max-w-[640px]">
-                  <p className="font-sans text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-muted)] mb-3">
-                    The details
+          {/* What this means for you */}
+          <Reveal>
+            <h3
+              className="font-sans font-black text-[var(--color-heading)] tracking-[-0.025em] leading-tight mt-16 md:mt-20 mb-8 max-w-[760px]"
+              style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
+            >
+              What that means for{" "}
+              <span style={{ color: "var(--color-accent)" }}>your</span> business.
+            </h3>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            {MEANS_FOR_YOU.map((m, i) => (
+              <Reveal key={m.title} delay={0.05 * i}>
+                <div className="border-t-2 pt-5" style={{ borderColor: "var(--color-accent)" }}>
+                  <h4 className="font-sans font-semibold text-lg md:text-xl text-[var(--color-heading)] mb-3 tracking-[-0.01em]">
+                    {m.title}
+                  </h4>
+                  <p className="font-sans text-[15px] leading-relaxed text-[var(--color-body)]">
+                    {m.body}
                   </p>
-                  <div className="flex flex-col gap-2">
-                    {study.details.map((item) => (
-                      <p key={item} className="font-sans text-sm text-[var(--color-body)] flex items-start gap-2">
-                        <span className="text-[var(--color-accent)] mt-0.5 shrink-0">&bull;</span>
-                        {item}
-                      </p>
-                    ))}
-                  </div>
                 </div>
-              </article>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
 
           {/* More coming */}
-          <Reveal delay={0.2}>
-            <Hairline className="mb-10" />
+          <Reveal delay={0.1}>
+            <Hairline className="mt-16 mb-8" />
             <p className="font-sans text-base text-[var(--color-muted)] italic">
-              More case studies coming as engagements complete and clients agree to be named.
+              More stories as engagements complete and clients agree to be named.
             </p>
           </Reveal>
         </Container>
@@ -141,12 +201,13 @@ export default function OurWorkClient() {
           <div className="text-center max-w-[560px] mx-auto">
             <Reveal>
               <h2 className="font-sans font-semibold text-2xl md:text-3xl tracking-[-0.02em] text-[var(--color-heading)] mb-4">
-                Want to be next?
+                Want this for your business?
               </h2>
             </Reveal>
             <Reveal delay={0.05}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-8">
-                Tell us what you&rsquo;re working on. We&rsquo;ll tell you if we can help.
+                Tell us what eats your week. We&rsquo;ll tell you what we&rsquo;d
+                build to take it off your plate.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
