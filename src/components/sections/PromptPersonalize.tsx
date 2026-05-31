@@ -72,6 +72,7 @@ export function PromptPersonalize() {
   const [steps, setSteps] = useState<string[]>([]);
   const [waitIndex, setWaitIndex] = useState(0);
   const [profileStep, setProfileStep] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const reduce = useReducedMotion();
 
@@ -94,6 +95,18 @@ export function PromptPersonalize() {
     offset: ["start end", "center center"],
   });
   const width = useTransform(scrollYProgress, [0, 1], ["88%", "100%"]);
+
+  // Only run the scroll-driven width animation on desktop. Animating width
+  // reflows every frame, which janks badly on phones; mobile gets a static
+  // full-width panel instead.
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  const animateWidth = isDesktop && !reduce;
 
   useEffect(() => {
     if (phase !== "loading" || steps.length) return;
@@ -220,16 +233,17 @@ export function PromptPersonalize() {
     >
       <motion.div
         style={
-          reduce
-            ? { background: ORANGE_GRADIENT, borderRadius: 28 }
-            : { background: ORANGE_GRADIENT, width, borderRadius: 28 }
+          animateWidth
+            ? { background: ORANGE_GRADIENT, width, borderRadius: 28 }
+            : { background: ORANGE_GRADIENT, borderRadius: 28 }
         }
-        className={`relative mx-auto overflow-hidden ${reduce ? "w-full" : ""}`}
+        className={`relative mx-auto overflow-hidden ${animateWidth ? "" : "w-full"}`}
       >
-        {/* Atmosphere: subtle grain + faint brand mark (no glossy light) */}
+        {/* Atmosphere: subtle grain + faint brand mark. Desktop only, the
+            blend mode is costly to paint on mobile during scroll. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-0 opacity-[0.07] mix-blend-overlay"
+          className="pointer-events-none absolute inset-0 z-0 opacity-[0.07] mix-blend-overlay hidden md:block"
           style={{
             backgroundImage:
               "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
@@ -239,7 +253,7 @@ export function PromptPersonalize() {
         <svg
           aria-hidden="true"
           viewBox="0 0 360 540"
-          className="pointer-events-none absolute z-0 -bottom-[14%] -right-[3%] h-[125%] w-auto"
+          className="pointer-events-none absolute z-0 -bottom-[14%] -right-[3%] h-[125%] w-auto hidden md:block"
           fill="none"
         >
           <path
