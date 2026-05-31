@@ -88,7 +88,8 @@ export default function ContactClient() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                Let&rsquo;s talk.
+                Let&rsquo;s talk
+                <span style={{ color: "var(--color-accent)" }}>.</span>
               </motion.span>
             </h1>
           </div>

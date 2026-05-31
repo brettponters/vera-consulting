@@ -70,9 +70,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Marquee animation, desktop only */
+/* Track renders 3 copies (1 + 2 clones); translate exactly one copy width
+   (-33.3333%) so the loop is seamless. Keep in sync with the clone count in
+   Marquee.tsx. */
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(-33.3333%); }
 }
 
 /* Workspace demo animations */
