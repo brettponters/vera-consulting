@@ -348,15 +348,14 @@ function CapabilityBand({
                       delay: 0.05 + i * 0.07,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="border-b border-[var(--color-hairline)] py-3 flex items-start gap-4"
+                    className="border-b border-[var(--color-hairline)] py-3 flex items-start gap-3"
                   >
                     <span
-                      className="font-mono text-[10px] tracking-[0.22em] font-semibold mt-1 shrink-0"
-                      style={{ color: "var(--color-accent)" }}
-                    >
-                      {cap.num}.{String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="font-sans font-semibold text-[var(--color-heading)] text-[14.5px] md:text-[15px] leading-snug">
+                      aria-hidden="true"
+                      className="mt-[10px] h-[6px] w-[6px] rounded-full shrink-0"
+                      style={{ backgroundColor: "var(--color-accent)" }}
+                    />
+                    <span className="font-sans font-semibold text-[var(--color-heading)] text-[15px] md:text-[16px] leading-snug">
                       {ex}
                     </span>
                   </motion.li>
