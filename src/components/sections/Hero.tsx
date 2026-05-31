@@ -86,9 +86,9 @@ export default function Hero() {
 
           <Reveal delay={0.55}>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[640px] mb-2">
-              We believe this revolutionary technology can scale your business
-              (client acquisition, reduce spending, extending business reach)
-              without ever costing you your authenticity.
+              We believe this revolutionary technology can scale your business,
+              more clients, lower costs, wider reach, without ever costing you
+              your authenticity.
             </p>
           </Reveal>
         </div>
