@@ -264,7 +264,7 @@ export function PromptPersonalize() {
           />
         </svg>
 
-        <div className="relative z-10 min-h-[88vh] flex items-center py-24 md:py-32">
+        <div className="relative z-10 min-h-[calc(100svh-3.5rem)] flex items-center py-16 md:py-24">
           <Container size="wide">
             <div className="max-w-[860px]">
               <h2
