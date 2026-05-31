@@ -4,8 +4,8 @@
 /* RAIN v3: white + charcoal + terracotta. Do not adjust without design review. */
 
 @theme {
-  --color-bg:        #FFFFFF;
-  --color-surface:   #FAFAF7;
+  --color-bg:        #F8F6F1;
+  --color-surface:   #F1EDE5;
   --color-body:      #000000;
   --color-heading:   #000000;
   --color-muted:     #1A1A1A;
@@ -22,8 +22,8 @@
 /* ─── CSS custom properties (for non-Tailwind contexts) ─────────────────── */
 
 :root {
-  --color-bg:       #FFFFFF;
-  --color-surface:  #FAFAF7;
+  --color-bg:       #F8F6F1;
+  --color-surface:  #F1EDE5;
   --color-body:     #000000;
   --color-heading:  #000000;
   --color-muted:    #1A1A1A;

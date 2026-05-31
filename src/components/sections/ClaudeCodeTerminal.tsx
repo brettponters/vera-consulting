@@ -6,7 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
  * Claude Code terminal animation.
  *
  * Replays a short, real-feeling Claude Code session that does work
- * relevant to VERA's wedge audience (real-estate listing copy).
+ * relevant to VERA's audience (a solo consultant's proposal workflow).
  * Modeled on the actual CLI's visual conventions: ASCII welcome
  * banner, "> " user prompt, streamed assistant response, tool calls
  * rendered as dim chevroned lines, and a blinking caret.
@@ -31,7 +31,7 @@ const BANNER: Line[] = [
   { kind: "banner", text: "│                                                           │" },
   { kind: "banner", text: "│   ✻ Welcome to Claude Code                                │" },
   { kind: "banner", text: "│                                                           │" },
-  { kind: "banner", text: "│   /vera/real-estate-workflows                             │" },
+  { kind: "banner", text: "│   /vera/client-workflows                                  │" },
   { kind: "banner", text: "│   model: claude-opus-4-7                                  │" },
   { kind: "banner", text: "│                                                           │" },
   { kind: "banner", text: "╰───────────────────────────────────────────────────────────╯" },
@@ -42,48 +42,46 @@ const TRANSCRIPT: Line[] = [
   ...BANNER,
   {
     kind: "user",
-    text: "draft listing copy for 1240 NW 2nd Ave in my voice",
+    text: "turn my discovery call notes into a scoped proposal in my voice",
     type: "type",
   },
   { kind: "blank" },
   {
     kind: "assistant",
-    text: "On it. Pulling the property and recent comps.",
+    text: "On it. Reading the call notes and your proposal template.",
   },
   { kind: "blank" },
-  { kind: "tool", text: "⏵ read_file  properties/1240-nw-2nd.json" },
-  { kind: "tool-result", text: "   3 bed · 2 ba · 1,820 sqft · built 1962 · pool · corner lot" },
+  { kind: "tool", text: "⏵ read_file  calls/acme-discovery.md" },
+  { kind: "tool-result", text: "   solo brand strategist · wants AI for proposals, content, recaps" },
   { kind: "blank" },
-  { kind: "tool", text: "⏵ search_mls  area=delray-east  type=single-family  beds=3  sold<=90d" },
-  { kind: "tool-result", text: "   7 comps found · median $645K · DOM avg 18d" },
+  { kind: "tool", text: "⏵ read_file  templates/proposal.md" },
+  { kind: "tool-result", text: "   3 tiers · scope · deliverables · flat monthly fee" },
   { kind: "blank" },
   {
     kind: "output-block",
     text:
-      "  ## 1240 NW 2nd Ave · Delray Beach\n" +
-      "  Listing package for MLS\n" +
+      "  ## Acme Strategy · AI Workflow Build\n" +
+      "  Proposal, drafted in your voice\n" +
       "\n" +
-      "  Mid-century ranch on a quiet Delray corner, three blocks from\n" +
-      "  the beach path. Three bedrooms, two baths, an updated kitchen,\n" +
-      "  and a pool the previous owners actually used. The kind of house\n" +
-      "  that doesn't try too hard.\n" +
+      "  A focused build for a solo brand strategist who wants AI on the\n" +
+      "  parts of the week that scale badly, without losing the personal\n" +
+      "  touch clients pay for.\n" +
       "\n" +
-      "  ### What stands out\n" +
-      "  •  Corner lot, mature landscaping, fully fenced backyard\n" +
-      "  •  Original terrazzo floors throughout\n" +
-      "  •  2023 roof, 2024 impact windows, 2022 HVAC\n" +
-      "  •  Walking distance to Atlantic Ave and the beach path\n" +
+      "  ### What we'd build first\n" +
+      "  •  Proposals, drafted from a call in minutes, in your voice\n" +
+      "  •  Client recaps and follow-ups sent the same hour\n" +
+      "  •  A first-draft pipeline for the weekly newsletter\n" +
       "\n" +
-      "  ### Pricing read\n" +
-      "  7 comparable sales in the last 90 days. Median $645K, 18 day\n" +
-      "  average DOM. Recommended list: $679K. Defensible on the lot,\n" +
-      "  the pool, and the recent capital improvements.\n" +
+      "  ### How it runs\n" +
+      "  Weekly 1:1 while we build. Guardrails and docs so the workflows\n" +
+      "  are yours, with no dependency on us after handoff.\n" +
       "\n" +
-      "  ### Open house\n" +
-      "  Sunday, 1 to 3pm. Light refreshments. Bring your buyers.",
+      "  ### Investment\n" +
+      "  Flat monthly retainer, covered on the intro call. No hourly\n" +
+      "  meter, no surprise change orders.",
   },
   { kind: "blank" },
-  { kind: "status", text: "✓ ready to send  ·  saved to drafts/1240-nw-2nd-listing.md  ·  4.8s  ·  $0.05" },
+  { kind: "status", text: "✓ ready to send  ·  saved to drafts/acme-proposal.md  ·  5.1s  ·  $0.06" },
 ];
 
 const TIMINGS = {
@@ -260,7 +258,7 @@ export function ClaudeCodeTerminal() {
           className="ml-3 font-mono text-[11px]"
           style={{ color: "#8B9BB4", letterSpacing: "0.04em" }}
         >
-          claude  ·  ~/vera/real-estate-workflows
+          claude  ·  ~/vera/client-workflows
         </span>
         <span
           className="ml-auto font-mono text-[10px]"

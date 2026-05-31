@@ -30,13 +30,13 @@ export function ClaudeCodeDemo() {
               className="font-sans font-semibold tracking-[-0.02em] leading-tight text-[var(--color-heading)] mb-5"
               style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)" }}
             >
-              We work in Claude Code, every day.
+              Agentic AI, doing the real work.
             </h2>
             <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[640px] mb-10">
-              Not slideware. The same terminal tool Anthropic engineers use,
-              running real work against real codebases, docs, and data.
-              Strategy is what we plan. Claude Code is where the plan gets
-              built.
+              Not slideware. This is an agent turning a discovery call into a
+              finished proposal, in your voice, in seconds. The same kind of
+              workflow we build around your week, your clients, and your
+              content, then hand you the keys.
             </p>
           </Reveal>
 

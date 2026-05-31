@@ -29,8 +29,8 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 transition-all duration-200 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md"
-          : "bg-[var(--color-bg)]"
+          ? "bg-[rgba(248,246,241,0.9)] backdrop-blur-md"
+          : "bg-transparent"
       }`}
     >
       <div className="flex h-14 items-center gap-3 md:gap-8 px-6 md:px-16">
@@ -90,8 +90,12 @@ export function Header() {
         </Link>
       </div>
 
-      {/* Bottom hairline */}
-      <div className="border-b border-[var(--color-hairline)]" />
+      {/* Bottom hairline, only once scrolled so it doesn't cut across the hero */}
+      <div
+        className={`border-b ${
+          scrolled ? "border-[var(--color-hairline)]" : "border-transparent"
+        }`}
+      />
     </header>
   );
 }

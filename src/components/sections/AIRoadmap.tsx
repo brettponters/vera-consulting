@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import {
-  AnimatePresence,
   motion,
   useReducedMotion,
   useScroll,
@@ -33,21 +32,20 @@ const CAPABILITIES: Capability[] = [
       "Newsletter drafts in 10 minutes",
       "LinkedIn posts in your tone",
       "Course modules from frameworks",
-      "Sales page rewrites",
     ],
     youtubeId: "0vZ_UVLhSQQ",
   },
   {
     id: "deals",
     num: "02",
-    title: "Sales & enrollment",
-    teaser: "Discovery prep, qualification, objection handling.",
+    title: "Sales & lead gen",
+    teaser: "Finding leads, discovery prep, qualification, objections.",
     detail:
-      "Pre-call research on the prospect, qualification scoring from form fills, custom discovery questions, objection handling drafts. You show up to every discovery call with conviction.",
+      "Lead lists pulled from your niche, pre-call research on the prospect, qualification scoring from form fills, objection handling drafts. You fill the pipeline and show up to every call with conviction.",
     examples: [
+      "Lead lists from your niche",
       "Pre-call prospect research",
       "Qualification scoring",
-      "Discovery question sets",
       "Objection handling drafts",
     ],
     youtubeId: "UAmKyyZ-b9E",
@@ -83,23 +81,8 @@ const CAPABILITIES: Capability[] = [
     youtubeId: "_jjSS0qGFbI",
   },
   {
-    id: "analysis",
-    num: "05",
-    title: "Insights from your work",
-    teaser: "The patterns across your last 30 clients you can't quite see.",
-    detail:
-      "Client survey synthesis, performance reports, what is working across your book. Your last six months of conversations turned into the next six months of content and frameworks.",
-    examples: [
-      "Client survey synthesis",
-      "Outcome reports",
-      "Pattern recognition across clients",
-      "Quarterly insights digest",
-    ],
-    youtubeId: "Y6wiWlcH5jM",
-  },
-  {
     id: "comms",
-    num: "06",
+    num: "05",
     title: "Client communications",
     teaser: "Recaps, follow-ups, sequences in your voice.",
     detail:
@@ -113,23 +96,8 @@ const CAPABILITIES: Capability[] = [
     youtubeId: "rBJnWMD0Pho",
   },
   {
-    id: "operations",
-    num: "07",
-    title: "Coaching playbooks",
-    teaser: "Session prep, accountability, integration plans.",
-    detail:
-      "Pre-session briefs from client history, accountability check-ins, integration plans, frameworks tailored per client. Your IP turned into repeatable playbooks you can run at scale.",
-    examples: [
-      "Pre-session client briefs",
-      "Accountability check-ins",
-      "Integration and homework plans",
-      "Custom client playbooks",
-    ],
-    youtubeId: "GJ5jTgcbRHA",
-  },
-  {
     id: "negotiation",
-    num: "08",
+    num: "06",
     title: "Proposals & pitches",
     teaser: "Custom proposals, decks, and scope docs in minutes.",
     detail:
@@ -142,39 +110,7 @@ const CAPABILITIES: Capability[] = [
     ],
     youtubeId: "fOxC44g8vig",
   },
-  {
-    id: "compliance",
-    num: "09",
-    title: "Brand voice consistency",
-    teaser: "Your voice, on every channel, every time.",
-    detail:
-      "A trained voice model that drafts content matching your actual cadence, opinions, and turns of phrase. Across LinkedIn, newsletter, client docs, and sales calls. Consistent without sounding like AI wrote it.",
-    examples: [
-      "Voice training from your archive",
-      "LinkedIn that sounds like you",
-      "Email follow-ups in your tone",
-      "Client docs in your style",
-    ],
-    youtubeId: "VHsp6Hp7Stw",
-  },
 ];
-
-/**
- * The provocation that opens each band. Phrased as the question an operator
- * is already asking themselves, Brett's voice, plain, no marketing varnish.
- * Same order as CAPABILITIES.
- */
-const PROVOCATIONS: Record<string, string> = {
-  "marketing": "When was the last time you posted twice in a week?",
-  "deals": "Which discovery call had you flat-footed last week?",
-  "market-research": "How long does it take you to get smart on a new client's industry?",
-  "tax": "How many hours a week go to admin you do not even like?",
-  "analysis": "What pattern is hiding across your last 30 clients?",
-  "comms": "Who replied to that prospect at 11pm? Nobody.",
-  "operations": "What if every session walked in with the right context?",
-  "negotiation": "How many proposals are sitting half-written in your drafts?",
-  "compliance": "Does your LinkedIn sound like you, or like a stranger?",
-};
 
 /**
  * The "after" / consequence line that closes each band. The point of the
@@ -185,11 +121,8 @@ const CONSEQUENCES: Record<string, string> = {
   "deals": "You stop reading their LinkedIn five minutes before the call.",
   "market-research": "You stop charging for prep time you can not bill.",
   "tax": "You stop spending Sunday on admin.",
-  "analysis": "You stop guessing what is actually working.",
   "comms": "You stop being the bottleneck in your own inbox.",
-  "operations": "You stop winging it on session four.",
   "negotiation": "You stop losing deals because the proposal did not go out.",
-  "compliance": "You stop sounding like a different person on every channel.",
 };
 
 /**
@@ -288,12 +221,10 @@ function VideoPlaceholder({
 
 function CapabilityBand({
   cap,
-  onEnter,
   isLast,
   index,
 }: {
   cap: Capability;
-  onEnter: (id: string) => void;
   isLast: boolean;
   index: number;
 }) {
@@ -308,28 +239,6 @@ function CapabilityBand({
     offset: ["start end", "end start"],
   });
   const numeralY = useTransform(scrollYProgress, [0, 1], ["6%", "-6%"]);
-
-  // Fire onEnter when the band reaches the middle of the viewport. This is
-  // what drives the fixed left-rail counter, not visibility, but "you are
-  // currently reading this one."
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) onEnter(cap.id);
-        }
-      },
-      {
-        // Trigger when the band is in the middle 40% of the viewport.
-        rootMargin: "-35% 0% -50% 0%",
-        threshold: 0,
-      },
-    );
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, [cap.id, onEnter]);
 
   // Suppress the unused scroll-progress motion value (the giant numeral
   // backdrop moved into the video placeholder column).
@@ -350,26 +259,14 @@ function CapabilityBand({
         >
           {/* CONTENT column */}
           <div className="lg:col-span-6">
-            {/* Provocation */}
+            {/* Band marker */}
             <div className="border-t border-[var(--color-hairline)] pt-5 md:pt-6 mb-6 md:mb-8">
-              <div className="flex items-baseline gap-5 md:gap-7 flex-wrap">
-                <span
-                  className="font-mono text-[11px] font-semibold tracking-[0.28em] shrink-0"
-                  style={{ color: "var(--color-accent)" }}
-                >
-                  {cap.num}
-                </span>
-                <motion.p
-                  initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-15% 0px -15% 0px" }}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="font-sans italic font-light text-[var(--color-muted)] leading-[1.2] m-0"
-                  style={{ fontSize: "clamp(1.0625rem, 1.5vw, 1.5rem)" }}
-                >
-                  {PROVOCATIONS[cap.id]}
-                </motion.p>
-              </div>
+              <span
+                className="font-mono text-[11px] font-semibold tracking-[0.28em]"
+                style={{ color: "var(--color-accent)" }}
+              >
+                {cap.num}
+              </span>
             </div>
 
             {/* Title + teaser */}
@@ -435,13 +332,8 @@ function CapabilityBand({
               </motion.p>
             </div>
 
-            {/* IN PRACTICE */}
+            {/* What it does */}
             <div className="mb-7 md:mb-9">
-              <p
-                className="font-mono text-[10px] uppercase tracking-[0.28em] text-[var(--color-muted)] opacity-70 m-0 mb-3"
-              >
-                In practice
-              </p>
               <ul className="list-none m-0 p-0 grid grid-cols-1 sm:grid-cols-2 gap-x-8">
                 {cap.examples.map((ex, i) => (
                   <motion.li
@@ -539,94 +431,21 @@ function CapabilityBand({
 }
 
 export function AIRoadmap() {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
-  const [activeId, setActiveId] = useState<string>(CAPABILITIES[0].id);
-  const [railVisible, setRailVisible] = useState(false);
-
-  function handleBandEnter(id: string) {
-    setActiveId(id);
-  }
-
-  // Show the side rail only while the AIRoadmap section is actually in view.
-  useEffect(() => {
-    const node = sectionRef.current;
-    if (!node) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => setRailVisible(entry.isIntersecting),
-      { rootMargin: "-15% 0% -15% 0%" },
-    );
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, []);
-
-  const activeIndex = CAPABILITIES.findIndex((c) => c.id === activeId);
 
   return (
     <section
       aria-labelledby="ai-capabilities-heading"
       className="relative bg-[var(--color-bg)] overflow-hidden"
     >
-      {/* Scroll progress rail. Fixed to the left edge of the viewport,
-          vertically centered, only visible while the section is in view.
-          Each dot is clickable to jump to that band. */}
-      <AnimatePresence>
-        {railVisible && (
-          <motion.nav
-            key="scroll-rail"
-            aria-label="Capability progress"
-            initial={{ opacity: 0, x: -8 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -8 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden lg:flex fixed left-5 xl:left-7 top-1/2 -translate-y-1/2 z-30 flex-col items-center gap-3"
-          >
-            {CAPABILITIES.map((cap, i) => {
-              const isActive = i === activeIndex;
-              return (
-                <a
-                  key={cap.id}
-                  href={`#cap-${cap.id}`}
-                  aria-label={`Go to ${cap.title}`}
-                  className="group relative flex items-center"
-                  style={{ padding: "4px 0" }}
-                >
-                  <motion.span
-                    className="block rounded-full"
-                    animate={{
-                      width: isActive ? 14 : 6,
-                      height: isActive ? 14 : 6,
-                      backgroundColor: isActive
-                        ? "var(--color-accent)"
-                        : "var(--color-hairline)",
-                    }}
-                    transition={{
-                      duration: 0.3,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                  />
-                  {/* Number label, fades in on hover */}
-                  <span
-                    className="absolute left-full ml-3 font-mono text-[10px] font-semibold tracking-[0.22em] opacity-0 group-hover:opacity-100 transition-opacity duration-150 whitespace-nowrap"
-                    style={{ color: "var(--color-muted)" }}
-                  >
-                    {cap.num} · {cap.title}
-                  </span>
-                </a>
-              );
-            })}
-          </motion.nav>
-        )}
-      </AnimatePresence>
-
-      <div ref={sectionRef}>
+      <div>
         <Container size="wide">
           {/* Opening. The headline + the promise. No index framing. The
               tone should land as helpful, not archival. */}
           <div className="pt-16 md:pt-24 lg:pt-28 pb-6 md:pb-10">
             <p
               className="font-mono text-[10px] uppercase tracking-[0.28em] font-semibold mb-5 md:mb-7"
-              style={{ color: "var(--color-accent)" }}
+              style={{ color: "var(--color-navy)" }}
             >
               What AI does for you
             </p>
@@ -640,30 +459,13 @@ export function AIRoadmap() {
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.035em] leading-[0.92] m-0 max-w-[1100px]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 6rem)" }}
             >
-              Here&apos;s where AI{" "}
-              <span className="italic font-light">actually</span> moves the
-              week
+              Do only the work you{" "}
+              <span className="italic font-light">want</span> to
               <span aria-hidden="true" style={{ color: "var(--color-accent)" }}>
                 .
               </span>
             </motion.h2>
 
-            <motion.p
-              initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-              transition={{
-                duration: 0.6,
-                ease: [0.22, 1, 0.36, 1],
-                delay: 0.1,
-              }}
-              className="font-sans font-medium text-[var(--color-body)] leading-snug m-0 mt-5 md:mt-7 max-w-[760px]"
-              style={{ fontSize: "clamp(1.0625rem, 1.3vw, 1.25rem)" }}
-            >
-              Nine places where the work is already being done by software, if
-              you point it at the right thing. Read what catches your eye. The
-              three that hit hardest are usually where we start.
-            </motion.p>
           </div>
 
           {/* The vertical reading column. 9 bands, full width, read top to
@@ -673,7 +475,6 @@ export function AIRoadmap() {
               <CapabilityBand
                 key={cap.id}
                 cap={cap}
-                onEnter={handleBandEnter}
                 isLast={i === CAPABILITIES.length - 1}
                 index={i}
               />
@@ -688,7 +489,7 @@ export function AIRoadmap() {
                 className="font-sans font-black text-[var(--color-heading)] tracking-[-0.025em] leading-[1.05] m-0"
                 style={{ fontSize: "clamp(1.5rem, 2.6vw, 2.5rem)" }}
               >
-                You don&apos;t need all nine. You need the right three for
+                You don&apos;t need all six. You need the right three for
                 <span style={{ color: "var(--color-accent)" }}> your </span>
                 week.
               </p>

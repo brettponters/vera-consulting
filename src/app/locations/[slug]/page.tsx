@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import {
   LOCATIONS,
   LOCATION_PILLARS,
+  LOCATION_USE_CASES,
   getLocationBySlug,
   getAllLocationSlugs,
   getLocationFaq,
@@ -29,7 +30,7 @@ export async function generateMetadata({
   if (!loc) return {};
   const url = `https://veraconsulting.co/locations/${slug}`;
   const title = `AI Coaching in ${loc.city}, ${loc.state}`;
-  const description = `Agentic AI coaching, strategy, and integration for ${loc.city} coaches, consultants, marketing pros, and solo experts. In person or over Google Meet.`;
+  const description = `Agentic AI coaching, strategy, and integration for ${loc.city} coaches, consultants, marketing pros, and solo experts. Built around your practice, with guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
   return {
     title,
     description,
@@ -39,6 +40,10 @@ export async function generateMetadata({
       `${loc.city} AI consultant`,
       `AI coach ${loc.city}`,
       `agentic AI ${loc.city}`,
+      `AI consulting ${loc.city}`,
+      `AI for consultants ${loc.city}`,
+      `AI for coaches ${loc.city}`,
+      `${loc.region} AI consultant`,
     ],
     openGraph: {
       title: `${title}, VERA`,
@@ -192,6 +197,10 @@ export default async function LocationPage({
                 <p key={i}>{para}</p>
               ))}
             </div>
+            <p className="mt-8 font-sans text-sm text-[var(--color-muted)] leading-relaxed">
+              Serving {loc.city} and nearby, including {loc.nearby.join(", ")},
+              across {loc.region}, plus fully remote over Google Meet.
+            </p>
           </div>
         </Container>
       </section>
@@ -223,8 +232,44 @@ export default async function LocationPage({
         </Container>
       </section>
 
-      {/* FAQ */}
+      {/* What we build */}
       <section className="py-16 md:py-24 bg-[var(--color-bg)]">
+        <Container size="wide">
+          <div className="max-w-[760px] mb-12 md:mb-16">
+            <Eyebrow className="mb-5">What we build</Eyebrow>
+            <h2 className="font-sans font-semibold text-2xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight">
+              The agentic AI workflows we build for {loc.city} solo experts.
+            </h2>
+          </div>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 list-none m-0 p-0">
+            {LOCATION_USE_CASES.map((uc, i) => (
+              <li key={uc.title} className="space-y-3">
+                <div
+                  className="h-px w-12"
+                  style={{ backgroundColor: "var(--color-navy)" }}
+                />
+                <div className="flex items-baseline gap-3">
+                  <span
+                    className="font-mono text-[10px] font-semibold tracking-[0.22em]"
+                    style={{ color: "var(--color-accent)" }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="font-sans font-semibold text-[var(--color-heading)] text-lg md:text-xl tracking-[-0.01em] leading-snug">
+                    {uc.title}
+                  </h3>
+                </div>
+                <p className="font-sans text-[var(--color-body)] text-[15px] md:text-base leading-snug">
+                  {uc.body}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-24 bg-[var(--color-surface)]">
         <Container size="wide">
           <div className="max-w-[760px]">
             <Eyebrow className="mb-5">FAQ</Eyebrow>
@@ -249,7 +294,7 @@ export default async function LocationPage({
       </section>
 
       {/* Other areas */}
-      <section className="py-16 md:py-24 bg-[var(--color-surface)]">
+      <section className="py-16 md:py-24 bg-[var(--color-bg)]">
         <Container size="wide">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-5">
             Also serving

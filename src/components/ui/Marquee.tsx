@@ -8,6 +8,8 @@ interface MarqueeProps {
   duration?: number;
   /** Pause animation on mouse hover (desktop). Default: true */
   pauseOnHover?: boolean;
+  /** Reverse direction (scroll right instead of left). Default: false */
+  reverse?: boolean;
   className?: string;
 }
 
@@ -21,6 +23,7 @@ export function Marquee({
   children,
   duration = 30,
   pauseOnHover = true,
+  reverse = false,
   className = "",
 }: MarqueeProps) {
   const [mounted, setMounted] = useState(false);
@@ -39,7 +42,10 @@ export function Marquee({
         className={`flex w-max animate-marquee ${
           pauseOnHover ? "md:hover:[animation-play-state:paused]" : ""
         }`}
-        style={{ animationDuration: `${duration}s` }}
+        style={{
+          animationDuration: `${duration}s`,
+          animationDirection: reverse ? "reverse" : undefined,
+        }}
       >
         <span className="flex shrink-0">{children}</span>
         {clones.map((_, i) => (

@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-const H1_TEXT = "Agentic AI Coaching for Solopreneurs.";
+const H1_TEXT = "Agentic AI Solutions for Solopreneurs.";
 const H1_WORDS = H1_TEXT.split(" ");
 
 export default function Hero() {
@@ -15,7 +15,7 @@ export default function Hero() {
       className="relative pt-14 pb-8 md:pt-20 md:pb-12 overflow-hidden"
       style={{
         background:
-          "linear-gradient(180deg, #FFFFFF 0%, #F5F4F1 25%, #F5F4F1 75%, #FFFFFF 100%)",
+          "linear-gradient(180deg, #F8F6F1 0%, #F1EDE5 45%, #F1EDE5 72%, #F8F6F1 100%)",
       }}
     >
       <div
@@ -48,13 +48,9 @@ export default function Hero() {
       <Container size="wide" className="relative z-10">
         <div className="max-w-[1040px]">
           <Reveal delay={0}>
-            <div className="mb-5 flex items-center gap-2.5">
-              <span className="relative inline-flex h-1.5 w-1.5 shrink-0">
-                <span className="absolute inset-0 rounded-full bg-[var(--color-accent)] opacity-75 animate-ping" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
-              </span>
+            <div className="mb-5">
               <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
-                AI Consulting · Public Benefit Corporation
+                Agentic AI · Public Benefit Corporation
               </p>
             </div>
           </Reveal>
@@ -76,6 +72,11 @@ export default function Hero() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 className="inline-block whitespace-pre"
+                style={
+                  word.startsWith("Solopreneurs")
+                    ? { color: "var(--color-accent)" }
+                    : undefined
+                }
               >
                 {word}
                 {i < H1_WORDS.length - 1 ? " " : ""}
@@ -84,21 +85,10 @@ export default function Hero() {
           </h1>
 
           <Reveal delay={0.55}>
-            <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[760px] mb-12">
-              Agentic AI for coaches, consultants, marketing pros, and
-              solo experts whose business runs on trust.
+            <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[640px] mb-2">
+              We put AI on the busywork, never on the trust your business runs
+              on.
             </p>
-          </Reveal>
-
-          <Reveal delay={0.7}>
-            <div className="flex flex-wrap items-center gap-4">
-              <Button href="/contact" variant="filled" size="md" arrow>
-                Book a call
-              </Button>
-              <Button href="/how-we-work" variant="ghost" size="md" arrow>
-                See how we work
-              </Button>
-            </div>
           </Reveal>
         </div>
       </Container>

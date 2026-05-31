@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import IndustriesMarquee from "@/components/sections/IndustriesMarquee";
-import ScrollZoom from "@/components/sections/ScrollZoom";
-import WhatWeDo from "@/components/sections/WhatWeDo";
+import { PromptPersonalize } from "@/components/sections/PromptPersonalize";
 import { AIRoadmap } from "@/components/sections/AIRoadmap";
 import { FounderVision } from "@/components/sections/FounderVision";
 // import Testimonials from "@/components/sections/Testimonials";
@@ -36,8 +35,7 @@ export default function Home() {
     <>
       <Hero />
       <IndustriesMarquee />
-      <ScrollZoom />
-      <WhatWeDo />
+      <PromptPersonalize />
       <AIRoadmap />
       <FounderVision />
       {/* <Testimonials /> */}
