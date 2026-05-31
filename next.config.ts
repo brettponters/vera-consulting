@@ -13,6 +13,18 @@ const nextConfig: NextConfig = {
         destination: '/our-strategy',
         permanent: true,
       },
+      // Old indexed URLs that now 404. 301 them to the closest live page so
+      // Google passes their ranking signal forward instead of dropping it.
+      {
+        source: '/research',
+        destination: '/reading',
+        permanent: true,
+      },
+      {
+        source: '/solutions',
+        destination: '/our-strategy',
+        permanent: true,
+      },
     ];
   },
 };
