@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import {
   motion,
   useReducedMotion,
@@ -16,8 +16,8 @@ interface Capability {
   teaser: string;
   detail: string;
   examples: string[];
-  videoUrl?: string;
-  youtubeId?: string;
+  /** Alt text for the per-band Claude product frame in /public/capabilities. */
+  frameAlt: string;
 }
 
 const CAPABILITIES: Capability[] = [
@@ -34,7 +34,8 @@ const CAPABILITIES: Capability[] = [
       "Neighborhood guides",
       "Your monthly newsletter, drafted",
     ],
-    youtubeId: "0vZ_UVLhSQQ",
+    frameAlt:
+      "Claude drafting a business document alongside the chat, writing the copy for you",
   },
   {
     id: "deals",
@@ -49,7 +50,8 @@ const CAPABILITIES: Capability[] = [
       "Past-client check-ins for referrals",
       "Routes hot leads to you",
     ],
-    youtubeId: "UAmKyyZ-b9E",
+    frameAlt:
+      "Claude working through a task checklist to follow up and knock items off the list",
   },
   {
     id: "market-research",
@@ -64,7 +66,8 @@ const CAPABILITIES: Capability[] = [
       "Code and compliance research",
       "Listing-appointment brief",
     ],
-    youtubeId: "R-KJgjIrh24",
+    frameAlt:
+      "Claude completing deep research, citing 540 sources, and writing the brief",
   },
   {
     id: "tax",
@@ -79,7 +82,8 @@ const CAPABILITIES: Capability[] = [
       "Code and compliance flags",
       "Tracks every deadline",
     ],
-    youtubeId: "_jjSS0qGFbI",
+    frameAlt:
+      "Claude reviewing and redlining a contract with tracked changes and a flagged action item",
   },
   {
     id: "negotiation",
@@ -94,7 +98,8 @@ const CAPABILITIES: Capability[] = [
       "Reminders to all sides",
       "Showing feedback summarized",
     ],
-    youtubeId: "fOxC44g8vig",
+    frameAlt:
+      "Claude managing a weekly calendar of scheduled appointments and meetings",
   },
   {
     id: "comms",
@@ -109,7 +114,8 @@ const CAPABILITIES: Capability[] = [
       "Nobody falls through the cracks",
       "Smooth onboarding for new clients",
     ],
-    youtubeId: "rBJnWMD0Pho",
+    frameAlt:
+      "Claude answering in a conversation, ready to help the moment a question lands",
   },
 ];
 
@@ -131,103 +137,32 @@ const CONSEQUENCES: Record<string, string> = {
  * vertical scroll. Reveals itself when it crosses into view. Sets the
  * active id on the parent so the side rail reflects where you are.
  */
-function VideoPlaceholder({
+function CapabilityFrame({
+  id,
   title,
-  videoUrl,
-  youtubeId,
+  frameAlt,
 }: {
+  id: string;
   title: string;
-  videoUrl?: string;
-  youtubeId?: string;
+  frameAlt: string;
 }) {
-  // Click-to-play facade: show the thumbnail, only load the YouTube player on
-  // a real click. A user gesture keeps YouTube from throwing its "confirm
-  // you're not a bot" challenge, and only one player loads at a time.
-  const [playing, setPlaying] = useState(false);
+  // A still frame from a Claude (Anthropic) product demo, chosen to match the
+  // band's topic. One image per band, served locally from /public/capabilities.
   return (
     <div className="relative w-full overflow-hidden rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] aspect-video">
-      {/* Clicked YouTube iframe > thumbnail facade > mp4 video > play mock.
-          The iframe is oversized so player chrome is cropped outside the
-          aspect-video frame. */}
-      {youtubeId && playing ? (
-        <iframe
-          className="absolute pointer-events-none"
-          style={{
-            top: "-15%",
-            left: "-15%",
-            width: "130%",
-            height: "130%",
-          }}
-          src={`https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&playlist=${youtubeId}&disablekb=1&fs=0&iv_load_policy=3&rel=0&playsinline=1&start=8&end=58`}
-          title={`${title} demo`}
-          loading="lazy"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          referrerPolicy="strict-origin-when-cross-origin"
-        />
-      ) : youtubeId ? (
-        <button
-          type="button"
-          onClick={() => setPlaying(true)}
-          aria-label={`Play ${title} demo`}
-          className="group absolute inset-0 h-full w-full cursor-pointer"
-        >
-          <img
-            src={`https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`}
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <span className="absolute inset-0 flex items-center justify-center">
-            <span
-              className="flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full border-2 transition-transform duration-200 group-hover:scale-105"
-              style={{
-                borderColor: "var(--color-accent)",
-                backgroundColor: "rgba(255,255,255,0.78)",
-              }}
-            >
-              <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" className="md:h-7 md:w-7">
-                <path d="M5 3 L19 11 L5 19 Z" fill="var(--color-accent)" />
-              </svg>
-            </span>
-          </span>
-        </button>
-      ) : videoUrl ? (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover"
-          src={videoUrl}
-        />
-      ) : (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div
-            className="flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full border-2"
-            style={{
-              borderColor: "var(--color-accent)",
-              backgroundColor: "rgba(255,255,255,0.6)",
-            }}
-          >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 22 22"
-              aria-hidden="true"
-              className="md:h-7 md:w-7"
-            >
-              <path d="M5 3 L19 11 L5 19 Z" fill="var(--color-accent)" />
-            </svg>
-          </div>
-        </div>
-      )}
+      <img
+        src={`/capabilities/${id}.jpg`}
+        alt={frameAlt}
+        loading="lazy"
+        width={1280}
+        height={720}
+        className="absolute inset-0 h-full w-full object-cover"
+      />
 
-      {/* Footer label, sits on a subtle gradient so it stays legible over
-          any video frame. */}
+      {/* Footer caption, sits on a subtle gradient so it stays legible over
+          the frame. */}
       <div
-        className="pointer-events-none absolute bottom-0 left-0 right-0 px-4 md:px-5 pt-8 pb-3 md:pb-4 flex items-baseline justify-between gap-3"
+        className="pointer-events-none absolute bottom-0 left-0 right-0 px-4 md:px-5 pt-8 pb-3 md:pb-4"
         style={{
           background:
             "linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0))",
@@ -237,13 +172,7 @@ function VideoPlaceholder({
           className="font-mono text-[10px] uppercase tracking-[0.22em] font-semibold"
           style={{ color: "#F5EFE4" }}
         >
-          Demo · {title}
-        </span>
-        <span
-          className="font-mono text-[10px] uppercase tracking-[0.22em] font-semibold"
-          style={{ color: "#E89464" }}
-        >
-          {videoUrl || youtubeId ? "Preview" : "Coming"}
+          {title}
         </span>
       </div>
     </div>
@@ -420,7 +349,7 @@ function CapabilityBand({
             </motion.div>
           </div>
 
-          {/* VIDEO column, vertically centered, breaks past the container to
+          {/* FRAME column, vertically centered, breaks past the container to
               sit toward the outer edge without crowding it. */}
           <div
             className={`lg:col-span-6 lg:self-center ${
@@ -442,10 +371,10 @@ function CapabilityBand({
                   delay: 0.08,
                 }}
               >
-                <VideoPlaceholder
+                <CapabilityFrame
+                  id={cap.id}
                   title={cap.title}
-                  videoUrl={cap.videoUrl}
-                  youtubeId={cap.youtubeId}
+                  frameAlt={cap.frameAlt}
                 />
               </motion.div>
             </div>
