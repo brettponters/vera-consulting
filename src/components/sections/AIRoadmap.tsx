@@ -22,8 +22,24 @@ interface Capability {
 
 const CAPABILITIES: Capability[] = [
   {
-    id: "marketing",
+    id: "comms",
     num: "01",
+    title: "Client experience",
+    teaser: "An agent that knows each client's situation and answers every one personally, so each gets a message built for them, not the same handout everyone else got.",
+    detail:
+      "The agent researches each client and prospect, where they live, where they're moving from, what they're actually trying to solve, then uses it to answer every question the moment it lands and to send material made for them: the relocation guide for the out-of-state buyer, the equity breakdown for the move-up seller, the first-timer walkthrough for the renter. All in your voice, at the scale of your whole database, so each one feels personally handled even when you are juggling a dozen deals.",
+    examples: [
+      "Instant, personal answers in your voice",
+      "Researches each client and prospect",
+      "Personalized outreach, not generic blasts",
+      "Nobody falls through the cracks",
+    ],
+    frameAlt:
+      "Claude answering in a conversation, ready to help the moment a question lands",
+  },
+  {
+    id: "marketing",
+    num: "02",
     title: "Content & marketing",
     teaser: "An agent that writes your listing copy, social posts, and newsletter in your voice.",
     detail:
@@ -36,22 +52,6 @@ const CAPABILITIES: Capability[] = [
     ],
     frameAlt:
       "Claude drafting a business document alongside the chat, writing the copy for you",
-  },
-  {
-    id: "deals",
-    num: "02",
-    title: "Client follow-ups",
-    teaser: "An agent that answers new leads in minutes and keeps your whole sphere warm while you're out.",
-    detail:
-      "The agent responds to new leads in minutes, nudges the slow ones on a schedule you set, re-engages the ones who went cold, and keeps your past clients and sphere warm with personal check-ins and referral asks. It scores who is ready and routes the hot ones straight to you, while you're at a showing.",
-    examples: [
-      "Answers new leads in minutes",
-      "Re-engages leads who went cold",
-      "Past-client check-ins for referrals",
-      "Routes hot leads to you",
-    ],
-    frameAlt:
-      "Claude working through a task checklist to follow up and knock items off the list",
   },
   {
     id: "market-research",
@@ -70,8 +70,24 @@ const CAPABILITIES: Capability[] = [
       "Claude completing deep research, citing 540 sources, and writing the brief",
   },
   {
-    id: "tax",
+    id: "deals",
     num: "04",
+    title: "Client follow-ups",
+    teaser: "An agent that answers new leads in minutes and keeps your whole sphere warm while you're out.",
+    detail:
+      "The agent responds to new leads in minutes, nudges the slow ones on a schedule you set, re-engages the ones who went cold, and keeps your past clients and sphere warm with personal check-ins and referral asks. It scores who is ready and routes the hot ones straight to you, while you're at a showing.",
+    examples: [
+      "Answers new leads in minutes",
+      "Re-engages leads who went cold",
+      "Past-client check-ins for referrals",
+      "Routes hot leads to you",
+    ],
+    frameAlt:
+      "Claude working through a task checklist to follow up and knock items off the list",
+  },
+  {
+    id: "tax",
+    num: "05",
     title: "Contracts & compliance",
     teaser: "It preps the contracts, chases the signatures, and flags the compliance before it bites you.",
     detail:
@@ -87,7 +103,7 @@ const CAPABILITIES: Capability[] = [
   },
   {
     id: "negotiation",
-    num: "05",
+    num: "06",
     title: "Showings & scheduling",
     teaser: "An agent that books showings, builds your route, and chases the feedback after, on its own.",
     detail:
@@ -100,22 +116,6 @@ const CAPABILITIES: Capability[] = [
     ],
     frameAlt:
       "Claude managing a weekly calendar of scheduled appointments and meetings",
-  },
-  {
-    id: "comms",
-    num: "06",
-    title: "Client experience",
-    teaser: "An agent that answers every client personally, the moment they reach out, so you can take on more and never drop the touch.",
-    detail:
-      "The agent fields every client question the moment it lands and answers in your voice, so each one feels personally handled even when you are juggling a dozen deals. That is how you take on more clients without any of them slipping through the cracks.",
-    examples: [
-      "Instant answers to client questions",
-      "Personal replies in your voice",
-      "Nobody falls through the cracks",
-      "Smooth onboarding for new clients",
-    ],
-    frameAlt:
-      "Claude answering in a conversation, ready to help the moment a question lands",
   },
 ];
 
@@ -427,7 +427,7 @@ export function AIRoadmap() {
 
           </div>
 
-          {/* The vertical reading column. 9 bands, full width, read top to
+          {/* The vertical reading column. Six bands, full width, read top to
               bottom. */}
           <div>
             {CAPABILITIES.map((cap, i) => (
