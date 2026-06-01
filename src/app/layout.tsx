@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { dmSans, instrumentSans } from "./fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -91,6 +92,14 @@ export default function RootLayout({
           <Footer />
           <EditMode />
         </MotionGuard>
+        {/* Leadsy.ai visitor identification tag (third-party, sitewide). */}
+        <Script
+          id="vtag-ai-js"
+          src="https://r2.leadsy.ai/tag.js"
+          strategy="afterInteractive"
+          data-pid="17mA3UGaLZpcPQL37"
+          data-version="062024"
+        />
       </body>
     </html>
   );
