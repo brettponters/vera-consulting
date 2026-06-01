@@ -29,22 +29,22 @@ export async function generateMetadata({
   const loc = getLocationBySlug(slug);
   if (!loc) return {};
   const url = `https://veraconsulting.co/locations/${slug}`;
-  const title = `AI Consultant in ${loc.city}, ${loc.state}`;
-  const description = `AI consultant in ${loc.city}: agentic AI coaching, automation, strategy, and integration for ${loc.city} real estate agents, teams, and brokers. Built around your practice, with Fair Housing and client-data guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
+  const title = `AI for Real Estate Agents in ${loc.city}, ${loc.state}`;
+  const description = `AI tools, coaching, and training for ${loc.city} real estate agents, teams, and brokers. Learn how to use AI and ChatGPT for lead generation, listings, follow-ups, and research, with Fair Housing and client-data guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
   return {
     title,
     description,
     alternates: { canonical: `/locations/${slug}` },
     keywords: [
-      `${loc.city} AI coaching`,
-      `${loc.city} AI consultant`,
+      `AI tools for real estate agents ${loc.city}`,
       `AI for realtors ${loc.city}`,
-      `real estate agent AI ${loc.city}`,
-      `agentic AI ${loc.city}`,
-      `AI automation ${loc.city}`,
-      `AI consulting ${loc.city}`,
-      `AI consultant ${loc.city}`,
-      `${loc.region} AI consultant`,
+      `ChatGPT for real estate agents ${loc.city}`,
+      `real estate AI ${loc.city}`,
+      `AI training for realtors ${loc.city}`,
+      `AI coaching for real estate agents ${loc.city}`,
+      `${loc.city} real estate lead generation AI`,
+      `how to use AI in real estate ${loc.city}`,
+      `${loc.region} AI for real estate agents`,
     ],
     openGraph: {
       title: `${title}, VERA`,
@@ -168,7 +168,7 @@ export default async function LocationPage({
               className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
-              Agentic AI consulting in {loc.city}.
+              AI for real estate agents in {loc.city}.
             </h1>
             <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[680px] mb-10">
               {loc.heroIntro}

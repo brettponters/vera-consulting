@@ -9,8 +9,8 @@ import "./globals.css";
 
 const SITE_URL = "https://veraconsulting.co";
 const SITE_DESCRIPTION =
-  "Agentic AI for real estate agents: coaching, strategy, and integration that puts AI on the busywork, follow-ups, listings, research, and contracts, without losing the client relationships. Boca Raton, FL.";
-const DEFAULT_TITLE = "VERA, Agentic AI for Real Estate Agents";
+  "AI tools, coaching, and training for real estate agents. Learn how to use AI and ChatGPT for lead generation, listings, follow-ups, and market research, without losing the client relationships. Boca Raton, FL.";
+const DEFAULT_TITLE = "VERA, AI Tools & Coaching for Real Estate Agents";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -42,7 +42,7 @@ const organizationJsonLd = {
   "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
   "@id": `${SITE_URL}/#org`,
   name: "VERA Consulting",
-  description: "Agentic AI for real estate agents: coaching, strategy, and integration that puts AI on the busywork, follow-ups, listings, research, and contracts, without losing the client relationships. Founder-led. Boca Raton, FL.",
+  description: "AI tools, coaching, and training for real estate agents. Learn how to use AI and ChatGPT for lead generation, listings, follow-ups, and market research, without losing the client relationships. Boca Raton, FL.",
   url: SITE_URL,
   email: "brett@veraconsulting.co",
   telephone: "+1-561-900-8182",
@@ -65,7 +65,7 @@ const organizationJsonLd = {
     { "@type": "AdministrativeArea", name: "Palm Beach County" },
   ],
   openingHours: "Mo-Fr 09:00-17:00",
-  serviceType: "Agentic AI for Real Estate Agents",
+  serviceType: "AI consulting, coaching, and training for real estate agents",
   sameAs: [],
 };
 

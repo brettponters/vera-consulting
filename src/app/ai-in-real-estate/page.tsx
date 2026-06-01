@@ -9,12 +9,12 @@ import { CapabilityCards } from "./CapabilityCards";
 const SITE_URL = "https://veraconsulting.co";
 
 export const metadata: Metadata = {
-  title: "AI in Real Estate: What Agents Actually Use It For",
+  title: "How to Use AI in Real Estate: A Guide for Agents",
   description:
-    "A plain guide to AI in real estate for agents. What's actually changing, what agents really use it for, the Fair Housing and data risks, and where to start. Written for people who close deals, not write code.",
+    "How to use AI in real estate, in plain English for agents. What AI tools actually do, how to use ChatGPT for listings and lead follow-up, the Fair Housing and data risks, and where to start. Written for people who close deals, not write code.",
   alternates: { canonical: "/ai-in-real-estate" },
   openGraph: {
-    title: "AI in Real Estate: A Practical Guide for Agents",
+    title: "How to Use AI in Real Estate: A Guide for Agents",
     description:
       "What's real, what's hype, and where AI earns its place in a real estate business. Agentic AI explained for agents, with the Fair Housing and client-data guardrails that matter.",
     type: "article",
