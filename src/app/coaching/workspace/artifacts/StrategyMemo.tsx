@@ -120,7 +120,7 @@ const PRIORITIES = [
     title: "Land three coaching engagements by April 1",
     rationale:
       "Two from the warm network, one from inbound. Each one becomes a case-ready reference by June. Anything outside this bucket waits.",
-    owner: "Brett",
+    owner: "VERA",
     metric: "3 signed by Apr 1",
     due: "Apr 1",
   },
@@ -129,7 +129,7 @@ const PRIORITIES = [
     title: "Ask eight past clients for intros",
     rationale:
       "Replaces the “referral motion” we’ve been talking about for a year. One conversation a week, written follow-up the same day, tracked in the CRM.",
-    owner: "Brett",
+    owner: "VERA",
     metric: "8 conversations",
     due: "rolling",
   },

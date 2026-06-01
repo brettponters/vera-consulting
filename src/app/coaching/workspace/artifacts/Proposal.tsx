@@ -114,7 +114,7 @@ export function ProposalArtifact() {
 
       {/* Signature block */}
       <footer className="grid grid-cols-2 gap-x-6 pt-5 border-t border-[var(--color-hairline)]">
-        <SignatureSlot name="Brett Ponters" role="VERA Consulting" signed />
+        <SignatureSlot name="VERA Consulting" role="Your AI partner" signed />
         <SignatureSlot name="Hank Marlin" role="Marlin Industries" />
       </footer>
 
@@ -152,7 +152,7 @@ function SignatureSlot({
               fontSize: "20px",
             }}
           >
-            Brett Ponters
+            VERA Consulting
           </span>
         )}
       </div>

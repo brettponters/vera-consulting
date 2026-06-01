@@ -30,7 +30,7 @@ VERA Consulting is an agentic-AI consultancy built specifically for real estate 
 
 Important distinction: VERA does not do an agent's day-to-day work for them, and the ongoing work is done by the AI agents VERA helps put in place, not by VERA staff. VERA's job is to get the agent there and hand them something they own.
 
-VERA is a Public Benefit Corporation. It is founder-led (Brett Ponters). It works with agents in person around South Florida and remotely anywhere over Google Meet.
+VERA is a Public Benefit Corporation. It is founder-led. It works with agents in person around South Florida and remotely anywhere over Google Meet.
 
 ## What "agentic AI" means here
 

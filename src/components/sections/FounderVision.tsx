@@ -3,61 +3,34 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * Homepage founder vision block. Photo on the left, "Our vision" quote on the right.
- * Photo file expected at /public/brett.jpg.
+ * Homepage vision block. "Our vision" quote, presented without a founder
+ * photo or name for now (de-personalized at the owner's request).
  */
 export function FounderVision() {
   return (
     <section className="py-20 md:py-28 bg-[var(--color-surface)]">
       <Container size="wide">
-        <div className="max-w-[960px] mx-auto">
+        <div className="max-w-[820px] mx-auto">
           <Reveal>
             <Eyebrow className="mb-6">Our vision</Eyebrow>
-            <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
-              {/* Photo column. Frame stays upright; the image inside
-                  is rotated for editorial energy. */}
-              <div
-                className="relative w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shrink-0 ring-1 ring-[var(--color-hairline)] bg-[var(--color-bg)]"
-                role="img"
-                aria-label="Founder of VERA Consulting"
-              >
-                <div
-                  aria-hidden="true"
-                  className="absolute"
-                  style={{
-                    top: "-1%",
-                    left: "-7%",
-                    width: "114%",
-                    height: "114%",
-                    backgroundImage: "url('/brett.jpg')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center 22%",
-                    transform: "rotate(2deg)",
-                    transformOrigin: "center center",
-                  }}
-                />
-              </div>
-
-              {/* Quote + attribution column */}
-              <div className="flex gap-5 items-stretch flex-1 min-w-0">
-                <div className="w-[3px] bg-[var(--color-navy)] rounded-sm shrink-0" />
-                <div>
-                  <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed mb-6">
-                    &ldquo;I started VERA because AI is going to change
-                    knowledge work at an unprecedented pace, and the people
-                    whose businesses run on trust are the ones with
-                    the most to gain. We believe in using AI to strengthen
-                    what people already do well, picking the workflows worth
-                    building instead of the ten that look good in a deck, and
-                    being honest about both the risks and the opportunities
-                    ahead.&rdquo;
-                  </p>
-                  <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
-                    Founder, VERA Consulting
-                  </div>
-                  <div className="font-sans text-xs text-[var(--color-muted)] mt-0.5">
-                    Public Benefit Corporation
-                  </div>
+            <div className="flex gap-5 items-stretch">
+              <div className="w-[3px] bg-[var(--color-navy)] rounded-sm shrink-0" />
+              <div>
+                <p className="font-sans italic text-xl md:text-2xl text-[var(--color-heading)] leading-relaxed mb-6">
+                  &ldquo;We started VERA because AI is going to change
+                  knowledge work at an unprecedented pace, and the people
+                  whose businesses run on trust are the ones with
+                  the most to gain. We believe in using AI to strengthen
+                  what people already do well, picking the workflows worth
+                  building instead of the ten that look good in a deck, and
+                  being honest about both the risks and the opportunities
+                  ahead.&rdquo;
+                </p>
+                <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
+                  VERA Consulting
+                </div>
+                <div className="font-sans text-xs text-[var(--color-muted)] mt-0.5">
+                  Public Benefit Corporation
                 </div>
               </div>
             </div>
