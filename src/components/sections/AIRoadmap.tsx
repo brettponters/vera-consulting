@@ -6,7 +6,6 @@ import {
   useReducedMotion,
   useScroll,
   useTransform,
-  useInView,
 } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 
@@ -101,13 +100,13 @@ const CAPABILITIES: Capability[] = [
     id: "comms",
     num: "06",
     title: "Client experience",
-    teaser: "An agent that answers client questions instantly and keeps everyone updated, so you look like a pro.",
+    teaser: "An agent that answers every client personally, the moment they reach out, so you can take on more and never drop the touch.",
     detail:
-      "The agent answers client questions the moment they come in, sends proactive 'here is exactly where your deal stands' updates at every step, and turns out polished recaps and reports. Every client feels like your only client, even when you have twelve deals going.",
+      "The agent fields every client question the moment it lands and answers in your voice, so each one feels personally handled even when you are juggling a dozen deals. That is how you take on more clients without any of them slipping through the cracks.",
     examples: [
       "Instant answers to client questions",
-      "Proactive deal-status updates",
-      "Polished recaps and reports",
+      "Personal replies in your voice",
+      "Nobody falls through the cracks",
       "Smooth onboarding for new clients",
     ],
     youtubeId: "rBJnWMD0Pho",
@@ -123,7 +122,7 @@ const CONSEQUENCES: Record<string, string> = {
   "deals": "You stop leaving money on the table to slow follow-up.",
   "market-research": "You stop losing the listing to the agent who prepped harder.",
   "tax": "You stop doing the admin you got into real estate to avoid.",
-  "comms": "Every client feels like your only one.",
+  "comms": "More clients, and every one feels like your only one.",
   "negotiation": "You stop playing scheduler all day.",
 };
 
@@ -136,13 +135,10 @@ function VideoPlaceholder({
   title,
   videoUrl,
   youtubeId,
-  play,
 }: {
   title: string;
   videoUrl?: string;
   youtubeId?: string;
-  /** Only mount the player when its band is on screen; unmount frees memory. */
-  play: boolean;
 }) {
   return (
     <div className="relative w-full overflow-hidden rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] aspect-video">
@@ -151,7 +147,7 @@ function VideoPlaceholder({
           watermark, end-of-video suggestions) gets cropped outside the
           aspect-video frame. Pointer events off so hover overlays don't
           trigger. */}
-      {youtubeId && play ? (
+      {youtubeId ? (
         <iframe
           className="absolute pointer-events-none"
           style={{
@@ -166,7 +162,7 @@ function VideoPlaceholder({
           allow="autoplay; encrypted-media; picture-in-picture"
           referrerPolicy="strict-origin-when-cross-origin"
         />
-      ) : videoUrl && play ? (
+      ) : videoUrl ? (
         <video
           autoPlay
           muted
@@ -236,12 +232,6 @@ function CapabilityBand({
   const ref = useRef<HTMLElement>(null);
   const prefersReducedMotion = useReducedMotion();
   const reversed = index % 2 === 1;
-
-  // Only the band on screen plays its video; it unmounts when scrolled away so
-  // memory frees instead of six YouTube players living at once. Off entirely
-  // for reduced motion / mobile.
-  const inView = useInView(ref, { margin: "-25% 0px -25% 0px" });
-  const playVideo = inView && !prefersReducedMotion;
 
   // Track scroll progress through this individual band so the giant numeral
   // can drift on its own while you read it.
@@ -426,7 +416,6 @@ function CapabilityBand({
                   title={cap.title}
                   videoUrl={cap.videoUrl}
                   youtubeId={cap.youtubeId}
-                  play={playVideo}
                 />
               </motion.div>
             </div>
