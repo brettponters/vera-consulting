@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {
   motion,
   useReducedMotion,
@@ -140,14 +140,16 @@ function VideoPlaceholder({
   videoUrl?: string;
   youtubeId?: string;
 }) {
+  // Click-to-play facade: show the thumbnail, only load the YouTube player on
+  // a real click. A user gesture keeps YouTube from throwing its "confirm
+  // you're not a bot" challenge, and only one player loads at a time.
+  const [playing, setPlaying] = useState(false);
   return (
     <div className="relative w-full overflow-hidden rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] aspect-video">
-      {/* Render order: YouTube iframe > mp4 video > play-button mock.
-          For YouTube, oversize the iframe so the player chrome (title bar,
-          watermark, end-of-video suggestions) gets cropped outside the
-          aspect-video frame. Pointer events off so hover overlays don't
-          trigger. */}
-      {youtubeId ? (
+      {/* Clicked YouTube iframe > thumbnail facade > mp4 video > play mock.
+          The iframe is oversized so player chrome is cropped outside the
+          aspect-video frame. */}
+      {youtubeId && playing ? (
         <iframe
           className="absolute pointer-events-none"
           style={{
@@ -162,6 +164,34 @@ function VideoPlaceholder({
           allow="autoplay; encrypted-media; picture-in-picture"
           referrerPolicy="strict-origin-when-cross-origin"
         />
+      ) : youtubeId ? (
+        <button
+          type="button"
+          onClick={() => setPlaying(true)}
+          aria-label={`Play ${title} demo`}
+          className="group absolute inset-0 h-full w-full cursor-pointer"
+        >
+          <img
+            src={`https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <span className="absolute inset-0 flex items-center justify-center">
+            <span
+              className="flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full border-2 transition-transform duration-200 group-hover:scale-105"
+              style={{
+                borderColor: "var(--color-accent)",
+                backgroundColor: "rgba(255,255,255,0.78)",
+              }}
+            >
+              <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" className="md:h-7 md:w-7">
+                <path d="M5 3 L19 11 L5 19 Z" fill="var(--color-accent)" />
+              </svg>
+            </span>
+          </span>
+        </button>
       ) : videoUrl ? (
         <video
           autoPlay
@@ -197,7 +227,7 @@ function VideoPlaceholder({
       {/* Footer label, sits on a subtle gradient so it stays legible over
           any video frame. */}
       <div
-        className="absolute bottom-0 left-0 right-0 px-4 md:px-5 pt-8 pb-3 md:pb-4 flex items-baseline justify-between gap-3"
+        className="pointer-events-none absolute bottom-0 left-0 right-0 px-4 md:px-5 pt-8 pb-3 md:pb-4 flex items-baseline justify-between gap-3"
         style={{
           background:
             "linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0))",
