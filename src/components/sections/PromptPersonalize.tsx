@@ -9,20 +9,19 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import { Container } from "@/components/ui/Container";
-import { painsFor } from "@/data/painPoints";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
 const BUSINESS_EXAMPLES = [
-  "yourbusiness.com",
-  "your business name",
-  "your website",
-  "your LinkedIn",
+  "your name",
+  "your brokerage",
+  "yourrealty.com",
+  "your Zillow profile",
 ];
 const PAIN_EXAMPLES = [
-  "my marketing isn’t the best",
-  "I’m drowning in admin",
   "leads keep going cold",
-  "proposals take forever",
+  "listings eat my weekends",
+  "showings are a scheduling mess",
+  "I forget to follow up",
 ];
 
 /**
@@ -62,12 +61,10 @@ const DARK = "#241A0C";
 export function PromptPersonalize() {
   const [business, setBusiness] = useState("");
   const [pain, setPain] = useState("");
-  const [customMode, setCustomMode] = useState(false);
   const [customPain, setCustomPain] = useState("");
   const [phase, setPhase] = useState<Phase>("idle");
   const [profile, setProfile] = useState("");
   const [profileLines, setProfileLines] = useState<string[]>([]);
-  const [generatedPains, setGeneratedPains] = useState<string[]>([]);
   const [result, setResult] = useState<Result | null>(null);
   const [steps, setSteps] = useState<string[]>([]);
   const [waitIndex, setWaitIndex] = useState(0);
@@ -83,7 +80,7 @@ export function PromptPersonalize() {
     : `e.g. ${bizExample}`;
   const painExample = useTypewriter(
     PAIN_EXAMPLES,
-    !reduce && customMode && customPain === "",
+    !reduce && phase === "pain" && customPain === "",
   );
   const painPlaceholder = reduce
     ? `e.g. ${PAIN_EXAMPLES[0]}`
@@ -129,12 +126,10 @@ export function PromptPersonalize() {
   }, [phase]);
 
   // Look the business up once: Haiku reads their site (or infers from the name)
-  // and returns a profile + tailored pains. The profile is reused by solve().
-  // Falls back to hardcoded archetype pains if the lookup fails.
+  // and returns a short profile. The profile is reused by solve() so the answer
+  // is grounded without searching again. The visitor then types their own pain.
   async function goToPain() {
     if (business.trim().length < 2) return;
-    setCustomMode(false);
-    setGeneratedPains([]);
     setProfile("");
     setProfileLines([]);
     setPhase("profiling");
@@ -165,11 +160,7 @@ export function PromptPersonalize() {
       if (i !== -1 && j > i) {
         const data = JSON.parse(buf.slice(i, j + 1)) as {
           profile?: string;
-          pains?: string[];
         };
-        if (Array.isArray(data.pains) && data.pains.length) {
-          setGeneratedPains(data.pains.slice(0, 6));
-        }
         if (typeof data.profile === "string") setProfile(data.profile);
       }
     } catch {
@@ -271,14 +262,14 @@ export function PromptPersonalize() {
                 className="font-sans font-black leading-[1.0] tracking-[-0.035em]"
                 style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)", color: INK }}
               >
-                See what VERA can do for your business.
+                See what VERA can do for your real estate business.
               </h2>
               <p
                 className="mt-5 font-sans text-lg md:text-xl leading-relaxed max-w-[600px]"
                 style={{ color: INK_DIM }}
               >
-                Drop your website or business name, pick your bottleneck, and
-                see exactly what we&rsquo;d take off your plate.
+                Drop your name, brokerage, or site, pick what&rsquo;s eating
+                your week, and see exactly what we&rsquo;d take off your plate.
               </p>
 
               {/* Step 1, business input */}
@@ -363,105 +354,71 @@ export function PromptPersonalize() {
                   transition={{ duration: 0.4, ease: EASE }}
                   className="mt-10 md:mt-12"
                 >
-                  {!customMode ? (
-                    <>
-                      {profile && (
-                        <p
-                          className="font-mono text-[10px] uppercase tracking-[0.24em] font-semibold mb-3"
-                          style={{ color: INK_FAINT }}
-                        >
-                          Read your site: <span className="normal-case tracking-normal">{profile}</span>
-                        </p>
-                      )}
-                      <p
-                        className="font-sans font-semibold text-lg md:text-xl mb-5"
-                        style={{ color: INK }}
-                      >
-                        What&rsquo;s eating your week? Pick one, or name your own.
-                      </p>
-                      <div className="flex flex-wrap gap-3">
-                        {(generatedPains.length ? generatedPains : painsFor(business)).map((p) => (
-                          <button
-                            key={p}
-                            type="button"
-                            onClick={() => solve(p)}
-                            className="font-sans text-sm md:text-base rounded-full px-5 py-3 border transition-colors text-left hover:bg-[rgba(255,255,255,0.10)]"
-                            style={{ color: INK, borderColor: "rgba(255,255,255,0.35)" }}
-                          >
-                            {p}
-                          </button>
-                        ))}
-                        <button
-                          type="button"
-                          onClick={() => setCustomMode(true)}
-                          className="font-sans text-sm md:text-base rounded-full px-5 py-3 border border-dashed transition-colors text-left hover:bg-[rgba(255,255,255,0.10)]"
-                          style={{ color: INK_DIM, borderColor: "rgba(255,255,255,0.35)" }}
-                        >
-                          Something else&hellip;
-                        </button>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="flex items-center justify-between mb-5 gap-4">
-                        <p
-                          className="font-sans font-semibold text-lg md:text-xl"
-                          style={{ color: INK }}
-                        >
-                          Name your pain point.
-                        </p>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setCustomMode(false);
-                            setCustomPain("");
-                          }}
-                          className="shrink-0 font-sans text-sm underline underline-offset-4"
-                          style={{ color: INK_FAINT }}
-                        >
-                          back
-                        </button>
-                      </div>
-                      <div
-                        className="flex items-center gap-3 rounded-2xl pl-5 pr-2 py-2 border transition-colors focus-within:border-[rgba(255,255,255,0.65)]"
-                        style={{ borderColor: "rgba(255,255,255,0.30)" }}
-                      >
-                        <input
-                          type="text"
-                          value={customPain}
-                          onChange={(e) => setCustomPain(e.target.value)}
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter" && customPain.trim().length >= 2) {
-                              solve(customPain.trim());
-                            }
-                          }}
-                          maxLength={140}
-                          autoFocus
-                          aria-label="Name your pain point"
-                          placeholder={painPlaceholder}
-                          className="flex-1 min-w-0 bg-transparent font-sans outline-none placeholder:text-[rgba(255,255,255,0.55)] py-2"
-                          style={{
-                            fontSize: "clamp(1.125rem, 2.2vw, 1.625rem)",
-                            color: INK,
-                          }}
-                        />
-                        <button
-                          type="button"
-                          onClick={() => {
-                            if (customPain.trim().length >= 2) solve(customPain.trim());
-                          }}
-                          disabled={customPain.trim().length < 2}
-                          aria-label="Get my fix"
-                          className="shrink-0 flex h-11 w-11 md:h-12 md:w-12 items-center justify-center rounded-full transition-opacity hover:opacity-90 disabled:opacity-30"
-                          style={{ backgroundColor: "#FFFFFF", color: "#241A0C" }}
-                        >
-                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                            <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
-                        </button>
-                      </div>
-                    </>
+                  {profile && (
+                    <p
+                      className="font-mono text-[10px] uppercase tracking-[0.24em] font-semibold mb-3"
+                      style={{ color: INK_FAINT }}
+                    >
+                      Read your site: <span className="normal-case tracking-normal">{profile}</span>
+                    </p>
                   )}
+                  <div className="flex items-center justify-between mb-5 gap-4">
+                    <p
+                      className="font-sans font-semibold text-lg md:text-xl"
+                      style={{ color: INK }}
+                    >
+                      What&rsquo;s eating your week? Tell us in your words.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setCustomPain("");
+                        setPhase("idle");
+                      }}
+                      className="shrink-0 font-sans text-sm underline underline-offset-4"
+                      style={{ color: INK_FAINT }}
+                    >
+                      back
+                    </button>
+                  </div>
+                  <div
+                    className="flex items-center gap-3 rounded-2xl pl-5 pr-2 py-2 border transition-colors focus-within:border-[rgba(255,255,255,0.65)]"
+                    style={{ borderColor: "rgba(255,255,255,0.30)" }}
+                  >
+                    <input
+                      type="text"
+                      value={customPain}
+                      onChange={(e) => setCustomPain(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" && customPain.trim().length >= 2) {
+                          solve(customPain.trim());
+                        }
+                      }}
+                      maxLength={140}
+                      autoFocus
+                      aria-label="What's eating your week?"
+                      placeholder={painPlaceholder}
+                      className="flex-1 min-w-0 bg-transparent font-sans outline-none placeholder:text-[rgba(255,255,255,0.55)] py-2"
+                      style={{
+                        fontSize: "clamp(1.125rem, 2.2vw, 1.625rem)",
+                        color: INK,
+                      }}
+                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (customPain.trim().length >= 2) solve(customPain.trim());
+                      }}
+                      disabled={customPain.trim().length < 2}
+                      aria-label="Get my fix"
+                      className="shrink-0 flex h-11 w-11 md:h-12 md:w-12 items-center justify-center rounded-full transition-opacity hover:opacity-90 disabled:opacity-30"
+                      style={{ backgroundColor: "#FFFFFF", color: "#241A0C" }}
+                    >
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
                 </motion.div>
               )}
 
@@ -535,7 +492,7 @@ export function PromptPersonalize() {
                       <div className="mt-9 flex flex-col">
                         {[
                           { label: "What it's costing you", body: result.cost },
-                          { label: "The other side", body: result.after },
+                          { label: "What you'd get back", body: result.after },
                         ].map((row, i) => (
                           <motion.div
                             key={row.label}
@@ -611,14 +568,13 @@ export function PromptPersonalize() {
                       <button
                         type="button"
                         onClick={() => {
-                          setCustomMode(false);
                           setCustomPain("");
                           setPhase("pain");
                         }}
                         className="mt-4 font-sans text-sm font-semibold underline underline-offset-4"
                         style={{ color: INK }}
                       >
-                        Pick again
+                        Try again
                       </button>
                     </motion.div>
                   )}

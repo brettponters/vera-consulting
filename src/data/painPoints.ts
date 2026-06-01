@@ -1,13 +1,13 @@
 /**
- * Job-specific pain points for the "See what VERA can do" personalizer.
+ * Real estate pain points for the "See what VERA can do" personalizer.
  *
- * When a visitor types their business, we match it to an archetype and show
- * pains specific to that field, so the menu feels seen without any AI cost.
- * Each archetype's pains are written to generalize across most people in it.
- * No match falls back to GENERIC_PAINS.
+ * VERA's ICP is real estate professionals. When a visitor types their name,
+ * brokerage, or site, we match it to a real estate niche and show pains
+ * specific to it, so the menu feels seen without any AI cost. No match falls
+ * back to GENERIC_PAINS (the everyday agent set).
  *
- * Matching is first-hit by keyword, so order MORE specific archetypes before
- * broader ones (e.g. "real estate" before "marketing").
+ * Matching is first-hit by keyword, so order MORE specific niches before
+ * broader ones.
  */
 
 export interface JobPains {
@@ -16,121 +16,72 @@ export interface JobPains {
   pains: string[];
 }
 
+// Default: the everyday residential agent.
 export const GENERIC_PAINS: string[] = [
-  "Admin and follow-up eat my week",
-  "My content and marketing are inconsistent",
-  "Finding and qualifying leads is slow",
-  "Proposals and scoping take too long",
-  "Client research and prep takes forever",
-  "I'm the bottleneck in every conversation",
+  "Following up with leads before they go cold",
+  "Listing descriptions and marketing eat my time",
+  "Scheduling showings and tours is all manual",
+  "Staying top of mind with past clients slips",
+  "Transaction paperwork and coordination pile up",
+  "Pulling comps and CMAs takes too long",
 ];
 
 const JOB_PAINS: JobPains[] = [
   {
-    keywords: ["real estate", "real-estate", "realtor", "realty", "broker"],
+    keywords: ["luxury", "high-end", "estate agent", "luxury homes"],
     pains: [
-      "Following up with leads is slow",
-      "Listing copy and marketing eat my time",
-      "Showings and paperwork are all manual",
-      "Staying top of mind with past clients slips",
-      "Qualifying buyers takes too long",
+      "High-touch client comms eat my evenings",
+      "Bespoke listing marketing takes forever",
+      "Coordinating private showings is all manual",
+      "Staying close to my HNW sphere slips",
+      "Following up after every showing is slow",
     ],
   },
   {
-    keywords: ["coach", "coaching"],
+    keywords: ["commercial", "cre", "industrial", "retail lease", "office space"],
     pains: [
-      "No-shows and reschedules wreck my calendar",
-      "Session recaps and follow-ups take hours",
-      "My content is inconsistent between clients",
-      "Discovery calls don't reliably convert",
-      "Onboarding new clients is all manual",
+      "Lease and financial analysis eats my week",
+      "Tenant and buyer research takes forever",
+      "Drafting LOIs and proposals is slow",
+      "Market reports pull me off deals",
+      "Pipeline follow-up slips through the cracks",
     ],
   },
   {
-    keywords: ["therapist", "therapy", "counselor", "counsel", "psycholog", "social work"],
+    keywords: ["property management", "property manager", "rentals", "landlord", "leasing"],
     pains: [
-      "Notes and admin eat my evenings",
-      "Intake and scheduling is all manual",
-      "Referral follow-up slips",
-      "Repetitive client questions take time",
-      "Keeping notes consistent is stressful",
+      "Tenant comms and maintenance requests pile up",
+      "Chasing late rent eats my week",
+      "Owner reporting takes too long",
+      "Marketing vacancies is all manual",
+      "Lease renewals slip through the cracks",
     ],
   },
   {
-    keywords: ["trainer", "fitness", "gym", "yoga", "pilates", "nutrition", "wellness", "dietitian"],
+    keywords: ["team", "group", "realty group", "brokerage", "broker"],
     pains: [
-      "Client check-ins and programming take hours",
-      "No-shows and scheduling are a mess",
-      "My posting is inconsistent",
-      "Intake and onboarding is manual",
-      "Following up with leads is slow",
+      "Routing leads to the right agent is manual",
+      "Onboarding new agents takes forever",
+      "Transaction coordination at scale is chaos",
+      "Marketing is inconsistent across the team",
+      "Reporting to agents eats my week",
     ],
   },
   {
-    keywords: ["accountant", "accounting", "bookkeep", "cpa", "tax prep", "tax service", "payroll"],
+    keywords: ["new construction", "builder", "developer", "new homes", "spec home"],
     pains: [
-      "Chasing client documents eats my week",
-      "Repetitive client questions take time",
-      "Onboarding and intake is manual",
-      "Reporting and reconciliations are slow",
-      "Following up on invoices slips",
-    ],
-  },
-  {
-    keywords: ["lawyer", "attorney", "legal", "law firm", "paralegal"],
-    pains: [
-      "Drafting routine docs takes too long",
-      "Client intake and follow-up is manual",
-      "Research and prep eats billable hours",
-      "Chasing documents and signatures is slow",
-      "Repetitive client questions take time",
-    ],
-  },
-  {
-    keywords: ["copywriter", "copywriting", "ghostwriter", "content writer", "writer"],
-    pains: [
-      "Finding and pitching clients is slow",
-      "Research and first drafts take forever",
-      "Invoicing and admin pull me off the work",
-      "Repurposing work into marketing is tedious",
-      "Following up with leads slips",
-    ],
-  },
-  {
-    keywords: ["design", "designer", "branding", "creative", "studio", "photograph", "videograph"],
-    pains: [
-      "Scoping and quoting takes forever",
-      "Revisions and feedback are chaos",
-      "Proposals pull me off the work",
-      "Marketing my own studio comes last",
-      "Client onboarding is all manual",
-    ],
-  },
-  {
-    keywords: ["consultant", "consulting", "advisor", "advisory", "fractional", "strategist"],
-    pains: [
-      "Proposals and SOWs take days",
-      "Client research and prep eats billable time",
-      "Lead follow-up slips through the cracks",
-      "Turning calls into deliverables is slow",
-      "I'm the bottleneck on every project",
-    ],
-  },
-  {
-    keywords: ["agency", "marketing", "marketer", "seo", "ads", "social media", "content", "pr ", "publicist"],
-    pains: [
-      "Content output is inconsistent",
-      "Client reporting eats a full day",
-      "Outreach and lead gen is manual",
-      "Repurposing across channels is tedious",
-      "Client onboarding takes too long",
+      "Keeping buyers updated on build timelines is manual",
+      "Spec and option sheets take forever",
+      "Lender and title coordination is slow",
+      "Following up with model-home visitors slips",
+      "Marketing each release eats my time",
     ],
   },
 ];
 
 /**
- * Returns pain points tailored to the visitor's business, or the generic set
- * when nothing matches. Always returns a non-empty list.
+ * Returns pain points tailored to the visitor's real estate niche, or the
+ * everyday-agent set when nothing matches. Always returns a non-empty list.
  */
 export function painsFor(business: string): string[] {
   const text = business.toLowerCase();

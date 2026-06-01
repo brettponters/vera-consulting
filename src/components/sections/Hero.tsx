@@ -5,8 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-const H1_TEXT = "Agentic AI Solutions for Solopreneurs.";
-const H1_WORDS = H1_TEXT.split(" ");
+const LINE_ONE_WORDS = "Agentic AI Solutions".split(" ");
 
 export default function Hero() {
   return (
@@ -56,32 +55,38 @@ export default function Hero() {
           </Reveal>
 
           <h1
-            aria-label={H1_TEXT}
+            aria-label="Agentic AI Solutions for Realtors."
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
             style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)" }}
           >
-            {H1_WORDS.map((word, i) => (
-              <motion.span
-                key={`${word}-${i}`}
-                aria-hidden="true"
-                initial={{ y: 10 }}
-                animate={{ y: 0 }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.05 + i * 0.03,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="inline-block whitespace-pre"
-                style={
-                  word.startsWith("Solopreneurs")
-                    ? { color: "var(--color-accent)" }
-                    : undefined
-                }
-              >
-                {word}
-                {i < H1_WORDS.length - 1 ? " " : ""}
-              </motion.span>
-            ))}
+            <span aria-hidden="true" className="block">
+              {LINE_ONE_WORDS.map((word, i) => (
+                <motion.span
+                  key={`${word}-${i}`}
+                  initial={{ y: 10 }}
+                  animate={{ y: 0 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: 0.05 + i * 0.03,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="inline-block whitespace-pre"
+                >
+                  {word}
+                  {i < LINE_ONE_WORDS.length - 1 ? " " : ""}
+                </motion.span>
+              ))}
+            </span>
+            <motion.span
+              aria-hidden="true"
+              initial={{ y: 10 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.4, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
+              className="block"
+            >
+              for{" "}
+              <span style={{ color: "var(--color-accent)" }}>Realtors.</span>
+            </motion.span>
           </h1>
 
           <Reveal delay={0.55}>

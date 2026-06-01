@@ -46,1709 +46,641 @@ export interface Vertical {
 }
 
 export const VERTICALS: Vertical[] = [
-  {
-    slug: "executive-coaches",
-    marqueeLabel: "Executive coaches",
-    h1: "AI Consulting for Executive Coaches.",
-    metaTitle: "AI Consulting for Executive Coaches | VERA",
+{
+    slug: "listing-agents",
+    marqueeLabel: "Listing agents",
+    h1: "AI for Listing Agents.",
+    metaTitle: "AI for Listing Agents | VERA",
     metaDescription:
-      "AI for executive coaches who want depth in the room and structure outside it. Prep, recaps, accountability, content, IP.",
+      "AI for listing agents who want to win more listings, launch faster, and keep sellers informed without burning Friday night on follow-up.",
     intro:
-      "Your edge is the quality of the room you create. AI is the quiet back office that handles the prep, the recap, and the long tail of follow-through, so the hours you sell stay where the value is.",
-    openingEssay: [
-      "Most executive coaches we talk to are running a practice that depends on one person being sharp for eight ninety-minute sessions a week. The work that happens in those rooms is the asset. Everything around it, the prep doc, the recap, the commitments tracker, the LinkedIn post about the framework that just landed with a CRO, is structural overhead. It is also the work that decides whether you spend Friday catching up on Thursday or actually closing the next retainer.",
-      "The honest read on AI for coaching is that most of it is being sold poorly. The pitch is usually a chatbot that pretends to coach, which misreads the work entirely. Coaching is presence. A model cannot do presence. What a model can do is read the last six months of Chris's transcripts at six in the morning and tell you that he keeps stating the same boundary with his board and never enforcing it. That is preparation. That is the work that makes you sharper in the room.",
-      "The coaches who win the next five years are the ones who treat AI as the back office. Not a co-coach. A second brain that knows every framework you have ever written, every client you have ever coached, every commitment that has ever been made, and surfaces the right piece of it the morning you need it. The session itself stays human and stays priced like the scarce thing it is.",
-      "The hard part is the build. You cannot buy this off a shelf. Coach Accountable will not do it. ChatGPT alone will not do it. The work is to take your method, your voice, your roster, and your week, and wire AI into the seams where it actually relieves you. That is what we do.",
-      "One more thing worth saying out loud. Coaches who have tried AI and bounced off it almost always tried it as a content shortcut. They prompted GPT to write a LinkedIn post about a session theme. The post landed flat, sounded like AI, and they decided AI was not for coaches. The mistake was in the entry point, not in the technology. The right entry point is the prep doc and the recap. Get those right and your week changes. The content question can wait two weeks. The content gets easier once the voice model is trained on a real body of your writing instead of a system prompt.",
-    ],
+      "Winning the listing is only the start. The work that follows, the copy, the coordination, the seller updates, the showing feedback, the next FSBO outreach, is what decides whether you can carry twelve listings without dropping one.",
     painPoints: [
-      "Session prep eats the morning you could spend with the next client",
-      "Recaps and commitments pile up after every block and the cleanup runs into the weekend",
-      "Thought leadership keeps getting pushed because the energy is in the room, not on the post",
-      "Your frameworks live in your head and a few Apple Notes files, not in any system anyone else can run",
-      "Discovery calls land in cracks of the week with no prep window",
-      "Renewals get pitched on instinct because there is no time to write the case for the next twelve months",
-    ],
-    whatChanges: [
-      {
-        heading: "Monday morning",
-        body: "You sit down at 7:45 with a coffee and a brief for the 8:00. Last session in two paragraphs. Open commitments. The thing they said they would think about. One question you might open with. You wrote none of it. You only read it.",
-      },
-      {
-        heading: "The Thursday block",
-        body: "Three back-to-back sessions used to mean three rushed recaps written between Friday and Sunday. Now the recap is drafted by the time you stand up. You spend ten minutes editing each one into your voice. The client has it before dinner.",
-      },
-      {
-        heading: "The LinkedIn post you never wrote",
-        body: "A framework you used in a session on Tuesday becomes a 220-word post by Wednesday morning, drafted from your transcript notes, in your cadence. You publish two a week without sitting down to write either of them from scratch.",
-      },
-      {
-        heading: "The renewal conversation",
-        body: "Six months of commitments, themes, and wins land in a one-page narrative the day before the renewal call. The client sees the arc. You stop pricing the next year on instinct.",
-      },
-      {
-        heading: "The keynote on Friday",
-        body: "Invited to speak at a leadership offsite. The talk used to take a Sunday to outline. Now your IP library surfaces the three frameworks that fit this audience, the story you have told before that lands here, and a draft of the opening. You spend the Sunday refining, not building.",
-      },
+      "Writing listing descriptions for every property eats the evening before launch",
+      "CMA prep and pricing narratives for seller presentations take ninety minutes that could be a showing",
+      "Seller update calls pile up all week and the communication gaps show in the reviews",
+      "Showing feedback arrives in drips across ShowingTime, text, and email and never gets synthesized before Sunday",
+      "FSBO and expired outreach sequences are always almost built but never actually running",
+      "Coordinating photographers, stagers, and sign installers is a scheduling job that falls entirely on you",
     ],
     workflows: [
       {
-        title: "Pre-session briefs",
-        body: "Last session, current themes, open commitments, and one question to consider opening with. Drafted from your transcripts and notes, ready before your first call.",
+        title: "Listing description drafts",
+        body: "Property notes and MLS data in, a clean draft in your voice ready to edit in minutes. Output goes through your review before MLS input, keeping Fair Housing compliance where it belongs: with you.",
       },
       {
-        title: "Recap and commitment capture",
-        body: "Session transcript to a recap your client will actually read, plus a commitments log that travels with them across sessions.",
+        title: "CMA narrative and pricing story",
+        body: "Comparable sales, list-to-sale ratios, and days-on-market pulled into a seller-ready pricing narrative before the appointment. The conversation leads with evidence, not instinct.",
       },
       {
-        title: "Mid-cycle accountability",
-        body: "Wednesday check-ins drafted in your tone. Hot replies route to you. The middle-of-the-week pulse you used to forget.",
+        title: "Weekly seller reports",
+        body: "Showing traffic, online views, market context, and your commentary in a branded email that goes out every Monday morning. Sellers stop calling to ask what is happening.",
       },
       {
-        title: "Voice-trained content engine",
-        body: "Your frameworks and session insights into LinkedIn posts, newsletter drafts, and keynote material that read like you wrote them.",
+        title: "Showing feedback synthesis",
+        body: "Feedback from ShowingTime, email, and text collapsed into a single summary you can forward to the seller or use in a price-reduction conversation. Done by Thursday, not Sunday.",
       },
       {
-        title: "Per-client playbook",
-        body: "Your methodology applied to a single client's context. A living doc you can show them on the renewal call.",
+        title: "FSBO and expired outreach sequences",
+        body: "Multi-touch sequences in your voice, timed and personalized to the property and the owner's situation. Built once, running against your farm list every week.",
       },
       {
-        title: "Discovery prep and scoring",
-        body: "Prospect background, qualification scoring, and the three questions to ask first. Drafted from a fifteen-minute LinkedIn pull.",
+        title: "Listing appointment packet",
+        body: "Your marketing plan, pricing story, bio, and testimonials assembled into a polished leave-behind specific to the address and the seller's situation. No more printing the generic version.",
       },
       {
-        title: "Renewal narratives",
-        body: "Six months of work into a one-page story for the renewal conversation. Wins, themes, and the case for what is next.",
+        title: "Launch coordination checklist",
+        body: "Photographer, stager, sign installer, MLS input, Zillow syndication, social media, and showing availability in one tracked workflow per listing. Nothing falls through.",
+      },
+      {
+        title: "Follow-up and referral engine",
+        body: "Post-closing follow-up sequence and anniversary touches drafted in your voice and queued in Follow Up Boss or kvCORE. The referral conversation starts before they forget your name.",
+      },
+    ],
+    faq: [
+      {
+        q: "How can AI help listing agents?",
+        a: "The highest-impact uses are the ones that recur on every listing: description drafts, CMA narratives, seller update emails, and showing feedback summaries. Each one takes thirty to ninety minutes by hand. With a trained workflow, each one takes five to fifteen minutes to review and approve. Across a twelve-listing inventory that is a real workweek recovered.",
+      },
+      {
+        q: "Does AI-drafted listing copy create Fair Housing risk?",
+        a: "Only if you skip the review step, which you should never skip regardless of how the copy was produced. We train output on language you have already approved, and the final copy goes through you before MLS submission. The agent is the publisher of record. AI speeds up the draft. The compliance review stays human.",
+      },
+      {
+        q: "Is my client data and MLS data kept private?",
+        a: "Everything runs in your tenant with zero-retention configuration. MLS data, seller contact details, and property information do not train public models and do not leave a shared environment. We work under NDA and treat the data as if the brokerage compliance officer is reading the audit log.",
+      },
+      {
+        q: "Do I own the workflows and content, or is it locked into VERA?",
+        a: "You own everything. The sequences live in your Follow Up Boss, kvCORE, or BoldTrail account. The templates live in your Google Docs or Notion. The voice model is trained on your writing. At the end of the engagement you have a documented operating system your team or TC can run without us.",
+      },
+      {
+        q: "What does the engagement actually look like?",
+        a: "Weekly working sessions on your real listings and your real farm. Not a course, not a sandbox. We build the description workflow on the listing you are launching next week. Seller reports go live on your current inventory within the first three weeks. Eight to twelve weeks and you are running it without us.",
+      },
+      {
+        q: "What if I have a transaction coordinator or buyer's agent on my team?",
+        a: "The workflows integrate naturally. Your TC gets the launch checklist. Your buyer's agent can use a version of the outreach sequences for sphere follow-up. We document everything so the whole team can run it, not just you.",
+      },
+    ],
+    openingEssay: [
+      "Most listing agents we talk to are running a production machine that depends on one person holding every thread. The photographer is scheduled, the stager has a walk-through, ShowingTime is live, the seller wants an update, and there are three expired listings in the farm who have not heard from you in two weeks. None of that is slow work. All of it is work that only you can drop.",
+      "The honest picture of where AI fits in a listing practice is not glamorous. It is not some breakthrough in property valuation or a replacement for your market knowledge. It is the part of the week that lives between appointments. The listing description draft that takes you thirty-five minutes to write because you want it to be right. The CMA narrative for the seller presentation that takes ninety minutes to pull together. The showing feedback summary you mean to send by Friday but it is now Sunday. The expired outreach sequence that would absolutely work if you ever had two hours to build it.",
+      "Listing descriptions deserve a specific word. AI-drafted copy for a listing requires the same review you would give any other marketing piece, because generic language about 'spacious,' 'light-filled,' and 'perfect for entertaining' is exactly what Fair Housing attorneys read looking for substituted code. VERA trains on descriptions you have already approved and reviewed, produces output you edit before it publishes, and flags language patterns worth scrutiny. The draft is faster. The liability discipline stays with you. That is the right division of labor.",
+      "The agents who close more listings in the next two years are not the ones with the most charm or the biggest ad spend. They are the ones who can service the listings they already have at a level that generates referrals, respond to FSBOs and expireds before a competitor does, and show up to every listing appointment with a pricing narrative and a marketing plan that does not look like every other agent's packet. AI is how you do all three without adding hours to the week.",
+      "There is also a seller communication problem worth naming. Sellers are anxious. The market moved while their home has been listed. Showing traffic dropped. They are reading Zillow every morning and wondering why you have not called. Most listing agents are not bad at client communication. They are busy. The agent who sends a weekly showing traffic summary and a market-context note every Monday at 9 AM, without writing it every Monday at 9 AM, is the agent whose sellers stay calm and whose reviews mention responsiveness. That is a solvable problem.",
+    ],
+    whatChanges: [
+      {
+        heading: "The day before launch",
+        body: "You used to spend the evening writing the listing description, pulling comps for the MLS notes, and building the social post from scratch. Now you open a draft at 6:30 PM that has the copy, the key features pulled from your showing notes, and the Instagram caption ready to edit. You are done by 7:15.",
+      },
+      {
+        heading: "The seller update call you were dreading",
+        body: "Showing traffic is down. The seller is reading Zillow at 11 PM and your voicemail is full. Instead of a reactive call, she already has your Monday morning email: showing count, feedback summary, active comparable movement, and your read on what it means. The call becomes a strategy conversation instead of damage control.",
+      },
+      {
+        heading: "The listing appointment on Thursday",
+        body: "You used to arrive with the same printed CMA packet every other agent brings. Now you arrive with a pricing narrative tied to this specific property and this specific seller's timeline, a marketing plan with the actual channels and approximate timelines named, and a leave-behind that has your recent sold data for this zip code. The appointment goes differently.",
+      },
+      {
+        heading: "The expired follow-up that finally runs",
+        body: "There are fourteen expireds in your farm from the last six months. You know them by address. You have never reached all of them in a week. The sequence is now drafted, personalized to their original list price and days on market, and running in Follow Up Boss. Three replied this month.",
+      },
+      {
+        heading: "The Sunday night catch-up that disappeared",
+        body: "Showing feedback from the week was scattered across ShowingTime notifications, two text messages, and a voicemail. Summarizing it for the seller used to be Sunday evening. Now it is Thursday afternoon, in your inbox as a draft, ready to send or forward with one edit.",
       },
     ],
     howWeWork: [
-      "Engagements are weekly working sessions on your actual clients and your actual content. Not a sandbox. Not a course. We sit down for ninety minutes, we pick the workflow that hurts most, and we build it on your roster.",
-      "The first three weeks usually ship pre-session briefs and a recap workflow, because that is where most coaches feel the relief fastest. Weeks four through eight move into content and renewals. By week ten you are running the engine without us and your VA or chief of staff is the second pair of hands.",
-      "Everything sits in your stack. Coach Accountable, Notion, Otter or Fathom, Gmail, LinkedIn. We do not ask you to migrate. We wire the AI into the tools you already pay for.",
+      "We start with the workflow that runs on every listing, which for most listing agents is the description draft and the weekly seller report. We build both on a listing you have active right now, not a hypothetical property. By the end of week two you have seen the output on real copy and real seller data.",
+      "Weeks three through six add the CMA narrative, the showing feedback synthesis, and the FSBO and expired outreach sequences. We wire these into the tools you already use. Follow Up Boss, kvCORE, BoldTrail, ShowingTime, your MLS, Canva, BombBomb. We do not ask you to migrate to a new platform. The AI sits in the gaps in your current stack.",
+      "By week ten you have a documented operating system your transaction coordinator or buyers agent can run. The workflows live in your accounts. The voice model is trained on your writing. At the end of the engagement you are running it and we are not the bottleneck.",
     ],
-    whatThisIsNot: "This is not a content factory. We do not ship 200 posts a month under your name. We do not write coaching for you. If you want a virtual coach product, an AI co-host on your podcast, or someone to run your business while you take a year off, this is not it. We work with practitioners who still want to be the practitioner and are looking for the structural support to stop being the bottleneck.",
-    anecdote: {
-      setup: "A coach we work with runs eight sessions a week with C-suite clients. Average session fee, $2,200. Pre-VERA, she spent three hours every Sunday catching up on recaps and pre-session prep.",
-      turn: "We built her a brief generator and a recap drafter wired to Otter and Notion. Sunday went from three hours to forty minutes. She used the recovered time to draft a leadership newsletter that now has 4,800 subscribers.",
-      line: "The real win was not the time saved. It was the new asset she could finally build because the time was there.",
-    },
-    faq: [
-      {
-        q: "Will AI replace the coaching itself?",
-        a: "No. The work in the room is yours. AI handles the work outside the room so you can be fully in during sessions and not running on fumes by the third one of the day.",
-      },
-      {
-        q: "Does it actually sound like me?",
-        a: "Yes, with the right setup. We train a voice model on your past writing, transcripts, and posts. First-pass drafts land close enough that you edit on the margin instead of rewriting. The wrong way to do this is a prompt template, which is why most coaches who tried ChatGPT alone gave up.",
-      },
-      {
-        q: "What does an engagement look like?",
-        a: "Weekly ninety-minute working sessions on your real clients and real content. Eight to twelve weeks. You leave running the workflows yourself with a documented playbook for your VA or chief of staff.",
-      },
-      {
-        q: "Is my client data safe?",
-        a: "We work in your tenant with zero-retention configurations. Client transcripts do not train public models. We sign NDAs and treat every engagement as if the audit is tomorrow.",
-      },
-      {
-        q: "What if I am not technical?",
-        a: "Most of our coaches are not. The engagement is built around the tools you already use and the hours you already work. If you can run Coach Accountable and write a Substack post, you can run this.",
-      },
-    ],
-    primaryKeyword: "ai for executive coaches",
+    whatThisIsNot: "This is not an IDX lead generation platform. We are not running ads for you. We are not replacing your MLS or your CRM. We do not write offers, negotiate contracts, or provide legal or compliance advice. If you want a virtual assistant service that manages your calendar and answers calls, this is not it. What we build is the operating layer for the listing side of your business, the copy, the communication, the outreach, the prep, so the agent in front of the seller is the best version of you.",
+    primaryKeyword: "ai for listing agents",
     secondaryKeywords: [
-      "executive coach session prep workflow",
-      "ai tools for executive coaches",
-      "executive coaching automation",
-      "ai recap for coaching sessions",
-      "executive coach content engine",
+      "ai listing description writer for realtors",
+      "listing agent automation",
+      "seller update email automation real estate",
+      "cma narrative ai real estate",
+      "fsbo expired outreach ai",
+      "showing feedback summary tool",
+      "listing agent workflow tools",
+      "real estate listing marketing ai",
     ],
   },
 
-  {
-    slug: "leadership-coaches",
-    marqueeLabel: "Leadership coaches",
-    h1: "AI Consulting for Leadership Coaches.",
-    metaTitle: "AI Consulting for Leadership Coaches | VERA",
+{
+    slug: "buyers-agents",
+    marqueeLabel: "Buyer's agents",
+    h1: "AI for Buyer's Agents.",
+    metaTitle: "AI for Buyer's Agents | VERA",
     metaDescription:
-      "AI for leadership coaches running team-level practices. 360 synthesis, team session prep, framework libraries, sponsor reporting.",
+      "AI for buyer's agents who want to win more offers and lose fewer leads. Speed-to-lead, tour sheets, buyer education, and offer prep.",
     intro:
-      "Leadership work moves between the individual and the team, and AI keeps both threads warm. Per-person notes, team-level themes, frameworks you write once and use forever.",
+      "The lead that goes unanswered for two hours is already talking to someone else. AI closes that gap, writes the property summaries, builds the tour sheets, and keeps not-ready-yet buyers warm for months. You stay on the deals.",
     openingEssay: [
-      "Leadership coaching is two practices in one body. There is the one-to-one coaching with the leader you are developing, and there is the team-level work where you are reading dynamics, synthesizing feedback from eight to twelve people, and translating it back into something actionable. Each one is hard. Doing both at the cadence your retainers expect is what burns leadership coaches out.",
-      "The 360 is the most obvious place this breaks. You interview a dozen stakeholders, you read through survey responses, and you sit down to write a synthesis that has to read like a human wrote it and has to be psychologically safe for the executive on the other end. The good ones take a week. The fast ones read like a survey report. Neither outcome is the work you want to be doing.",
-      "Where AI helps is not in writing the synthesis for you. It helps by reading every transcript, surfacing the recurring language, flagging the contradictions, and giving you a draft of the themes that you then bring your judgment to. You are still the one who decides what to say. You are not the one staring at twelve interview transcripts at midnight trying to remember which VP said the word visibility.",
-      "The same logic applies to team sessions. Your prep doubles when you have to write per-person notes and a group-level read. AI can do the per-person layer from your own previous notes and the team's last session. You spend your prep window on the read that actually requires you in the chair.",
-      "There is a piece most leadership coaches we work with do not see at first. Your framework library is an asset that compounds. Every engagement you have ever run has added a couple of useful adaptations to a model, a new way of framing a conversation, a workshop exercise that landed. Most of that work lives in scattered Keynote files, Google Docs, and your head. When it gets pulled into a queryable system, the next engagement starts at a different baseline. The framework you spent three years refining for one client becomes available the morning you need it for another. The strategic call that used to take preparation becomes a question of which proven adaptation fits this room.",
+      "Buyer representation is a timing game at the top and a patience game at the bottom. At the top you have the active buyer who needs a showing scheduled today, a tour sheet by tomorrow, and an offer drafted before the weekend. At the bottom you have the buyer who is six months out, still deciding on the neighborhood, still getting pre-approved, still not ready. Both buyers need you. Only one of them urgently. The week breaks when you try to run both at the same cadence.",
+      "The speed-to-lead problem in buyer's agent work is real and it is not about being lazy. It is about the math. You are on a listing tour when a Zillow Premier Agent lead comes in at 11:15 on a Tuesday. By the time you are back in the car, it is 12:45. The national average response time for real estate leads is somewhere above an hour. The conversion advantage for agents who respond in five minutes versus thirty is documented everywhere. The gap is not effort, it is capacity. You are not sitting at a desk with an inbox.",
+      "Matching buyers to inventory is the other side of the coin. Most buyer's agents we talk to carry twenty to thirty active searches at any given point. Some of those buyers have been in your database since February. They want a three-bed in a specific school zone, under $620K, and they want to know when something hits before the Zillow alert. That matchmaking work, pulling new MLS listings each morning, running them against the buyer's criteria, and writing a property summary the buyer can actually read, is forty-five minutes to an hour of daily work that compounds across a roster. AI does that between 6:00 and 7:00 AM so when you open your coffee you are sending matches, not building them.",
+      "The offer-writing season is where the real pressure lives. You have a buyer who wants to move. The market is moving. The listing went active on Thursday. You need a comparative market analysis pulled, a net sheet drafted, the offer terms researched, and a decision framework ready for your buyer's call at 5:30 PM. That sequence used to take the whole afternoon. With the right workflows in Follow Up Boss and your MLS, it takes ninety minutes and you are still in front of it before dinner.",
+      "The buyers who are not ready yet are the ones most agents handle worst, not because they do not care but because the drip infrastructure is built for volume and not for actual follow-through. A buyer who said six months ago that they need a good school and a garage gets a market update email the same week as every other person in the database. What they should be getting is a message that says a house with a rated elementary school and a two-car garage just came on at $585K, and here is why the seller's days on market might mean you have a negotiating window. That is the message that converts. AI writes it. You send it.",
     ],
     painPoints: [
-      "360 synthesis takes a week and the first draft still reads like a survey report",
-      "Team session prep is per-person notes plus a team-level read and the math doubles every time",
-      "Frameworks get reinvented every engagement because they live in three Google Docs and a Keynote file",
-      "Sponsor reporting to HR is the unpaid work between renewals and it always slips",
-      "Sales calls land between sessions with no prep window",
-      "Group exercises and assessments are templated but customizing them per client is manual every time",
-    ],
-    whatChanges: [
-      {
-        heading: "The 360 turnaround",
-        body: "Interviews finish Friday. Sunday night you have a draft synthesis on your desk with themes pulled directly from interview language, contradictions flagged, and quotes attributed. Monday is editing. The leader has it by Wednesday instead of the following Tuesday.",
-      },
-      {
-        heading: "Team session prep",
-        body: "You used to spend an hour rebuilding context per person before a team off-site. Now you open one document that has the per-person notes, the team-level pattern from the last three sessions, and the warm-up exercise tuned to where they are right now.",
-      },
-      {
-        heading: "The sponsor report",
-        body: "Quarterly reports to the HR partner used to be a Saturday job nobody wanted. They are now drafted from your session notes in your tone, ready to edit on Friday afternoon.",
-      },
+      "Leads from Zillow Premier Agent and kvCORE go cold in under an hour when you are in a showing",
+      "Matching twenty-plus active buyers to new MLS inventory every morning takes the first hour of every day",
+      "Tour sheets and property summaries are built by hand before every showing appointment",
+      "Not-ready-yet buyers get generic drip and fall out of the pipeline before they are ready to act",
+      "Offer-writing prep, pulling comps, drafting a net sheet, researching the seller, takes most of the afternoon before a competitive deadline",
+      "Post-close follow-up and referral asks get skipped because there is always an active deal that is louder",
     ],
     workflows: [
       {
-        title: "360 synthesis engine",
-        body: "Interview transcripts and survey data into a draft synthesis with themes, contradictions, and attributed quotes. Built in your structure, not a survey-tool default.",
+        title: "Speed-to-lead response",
+        body: "New lead hits from Zillow Premier Agent, Sierra Interactive, or kvCORE. An AI-drafted initial message goes out in under two minutes in your voice with a specific property reference. You see the hot reply. Silence gets a follow-up the next morning.",
       },
       {
-        title: "Team session prep",
-        body: "Per-person notes and team-level themes in one document, ready before the prep call with the sponsor.",
+        title: "Daily buyer-to-inventory matching",
+        body: "New MLS actives pulled each morning against every buyer's saved criteria. Property summaries written in plain language with the details that matter for that buyer's specific situation. In your Follow Up Boss inbox by 6:30 AM, ready to send.",
       },
       {
-        title: "Framework library",
-        body: "Your IP made queryable. Plug any client's context in and pull the relevant frameworks with the right examples already swapped in.",
+        title: "Tour sheet builder",
+        body: "Showing appointments confirmed. Property notes, neighborhood comps, school ratings, HOA details, and the three questions to ask during the walkthrough pulled into a single PDF per property. Ready before you leave the driveway.",
       },
       {
-        title: "Sponsor reporting",
-        body: "Quarterly reports drafted from your session notes for HR and the executive sponsor. In your tone, not a template.",
+        title: "Offer prep package",
+        body: "Listing history, recent solds within a half-mile, days on market, seller disclosure notes, and a draft net sheet organized before the 5:30 PM buyer call. The decision conversation starts with data, not with you scrambling to pull it.",
       },
       {
-        title: "Team assessment customization",
-        body: "Your standard assessments tailored to the company language, industry, and the named dynamics in the team. The DiSC report nobody complains is generic.",
+        title: "Not-ready-yet buyer nurture",
+        body: "Buyers who are six to twelve months out get specific, personalized market updates in your voice when something relevant hits. Not a generic newsletter. A message that says this property matches three of your four criteria and here is why this week matters.",
       },
       {
-        title: "Renewal and expansion",
-        body: "The case for the next twelve months drafted from the work you actually did this year. Specific to this leader, this team, this sponsor.",
+        title: "Buyer education sequence",
+        body: "Pre-approval, inspection, appraisal, title, closing costs, all of it explained in a sequence timed to where the buyer is in the process. Written in your voice. Reduces the three AM anxiety text and the repeat questions that eat your Thursday afternoon.",
       },
       {
-        title: "Discovery and qualification",
-        body: "Inbound triage, qualification scoring, and a prep doc for the discovery call. Drafted before the call hits the calendar.",
+        title: "Lender and title follow-up",
+        body: "Conditions outstanding, appraisal ordered, clear to close pending, tracked and nudged without you being the relay. DocuSign links chased, Dotloop packages organized, the closing coordinator cc'd on the right thread at the right time.",
       },
       {
-        title: "Group exercise design",
-        body: "Standard exercises adapted to the company's language, industry, and team dynamics in minutes. The off-site stops feeling templated.",
+        title: "Post-close and referral cadence",
+        body: "Thirty-day, ninety-day, and one-year check-ins drafted in your voice and scheduled before the keys hand off. The referral ask goes out at the moment the client is most likely to give you one, not when you remember to send it.",
+      },
+    ],
+    faq: [
+      {
+        q: "How can AI help buyer's agents specifically?",
+        a: "The highest-value applications are speed-to-lead response, daily MLS matching and property summaries, tour sheet preparation, and offer-writing prep. Those four workflows cover the parts of the week where buyer's agents lose the most time and miss the most conversions. AI does not replace your judgment on the offer strategy or your relationship with the buyer. It does the structural work that eats the hours around those things.",
+      },
+      {
+        q: "Can AI actually respond to leads fast enough to make a difference?",
+        a: "Yes. A workflow wired to your CRM, whether that is Follow Up Boss, kvCORE, or Sierra Interactive, can get a personalized first message out in under two minutes. The message references the specific property the lead inquired about and is drafted in your voice. You see the hot reply and handle the conversation. The leads that go cold are the ones nobody answers in the first thirty minutes. That window is now covered.",
+      },
+      {
+        q: "What happens to client data when AI is involved?",
+        a: "We work inside your tenant with zero-retention configurations on the underlying models. Buyer criteria, contact information, and transaction details do not train public AI systems. We sign NDAs and the data architecture is designed to match what a real estate brokerage would need to show a compliance review. If your brokerage has a specific data handling policy, we configure to it.",
+      },
+      {
+        q: "What does an engagement cost and who owns the workflows?",
+        a: "Engagements are monthly retainers scoped on the discovery call. You own every workflow we build. The automations live in your CRM, your MLS connection, and your existing tools. If you stop working with us, the system keeps running. We document everything so you or a transaction coordinator can maintain it without us.",
+      },
+      {
+        q: "What if I am already using BombBomb video or a drip campaign in kvCORE?",
+        a: "We integrate with what you have. BombBomb stays for the relationship touches that benefit from video. The AI layer handles the written follow-up, the property matching, and the off-hours response. The drip campaigns in kvCORE get replaced or augmented with personalized triggers instead of time-based generic sequences. The tool stays. The logic gets smarter.",
+      },
+      {
+        q: "Does this work for a solo buyer's agent or only a team?",
+        a: "It works for both, but solo agents usually see the fastest relief because the cap on their business is entirely their personal time. The workflows that cover speed-to-lead and daily MLS matching tend to pay back inside the first month on time savings alone. Teams get additional leverage when the buyer intake, education sequences, and post-close cadence are standardized across agents.",
+      },
+    ],
+    whatChanges: [
+      {
+        heading: "Tuesday at 11:15 AM",
+        body: "A new Zillow Premier Agent lead comes in while you are walking through a property with another buyer. By 11:17, the lead has a message from you referencing the specific listing they asked about and asking when they want to see it. You read the reply at 12:45. The lead did not go to voicemail.",
+      },
+      {
+        heading: "Wednesday morning at 6:30",
+        body: "You open Follow Up Boss and there are eleven buyer-match messages ready to send. Each one names a specific new listing against that buyer's saved criteria, with a two-paragraph property summary and a note about why this one fits better or worse than the last thing you showed them. You review, edit two of them, and send all eleven before your first coffee is cold.",
+      },
+      {
+        heading: "Thursday before the offer deadline",
+        body: "Your buyer wants to move on the listing that went active Monday. You open the offer prep package at 3:00 PM. Comps from the last ninety days within a half-mile. Seller's original list price, price reductions, days on market. A draft net sheet. The questions worth asking your buyer at 5:30. You are ready. The offer goes in by 7:00 PM.",
+      },
+      {
+        heading: "The buyer from February",
+        body: "She said she was not ready until fall. Generic drip would have kept her on a list she ignores. Instead, when a three-bed with a rated school comes on in her target zip at $608K on a slow week, she gets a message in your voice explaining why this week might be the one to move. She calls you. You have a showing scheduled before noon.",
+      },
+      {
+        heading: "Thirty days after closing",
+        body: "The Garcias moved in three weeks ago. You have not thought about a follow-up yet because you have two offers pending and a new buyer consultation tomorrow. At 9:00 AM the thirty-day check-in sends itself. They reply with three names of people from their office who are looking. You did not remember to ask. The system did.",
       },
     ],
     howWeWork: [
-      "We start with the workflow you bleed the most hours into, which for most leadership coaches is either 360 synthesis or team session prep. We build it on a current engagement. Not a sandbox. Your actual client, your actual interviews.",
-      "By week four you have a synthesis workflow that cuts the 360 timeline from a week to two days and a team prep doc that takes thirty minutes to finalize instead of three hours. Weeks five through ten move into framework systematization and sponsor reporting. By week twelve you have a documented operating system your team or a contractor can run.",
-      "Tooling stays yours. We work in Notion or Coda for the framework library, your existing assessment platform, and Zoom or Riverside for the recordings. Data lives in your tenant under NDA.",
-      "There is one process detail worth flagging. We work in your tenant or your client's tenant, not in a VERA-hosted environment, which means the data and the workflows belong to you at the end of the engagement. We also document everything so the system can survive a transition off our engagement. Most coaches find the structure more comfortable than the typical agency lock-in where the workflow stops working when the relationship ends.",
+      "We start with the workflow that is bleeding the most time, which for most buyer's agents is either speed-to-lead coverage or daily MLS matching. We build the first workflow against your actual CRM, your actual incoming leads, and your actual active buyers. Not a demo environment. The first week you see it run on real leads.",
+      "By week four you have the lead response and the morning match reports running. Weeks five through eight wire the tour sheet builder and the offer prep package. The buyer education sequence and the post-close cadence ship in weeks nine through twelve. You leave the engagement with a documented operating system your TC or buyer's specialist can run.",
+      "Tooling stays where it is. Follow Up Boss, kvCORE, BoldTrail, Sierra Interactive, your MLS connection, DocuSign, Dotloop. We integrate against what you already pay for. We do not ask you to migrate your database or learn a new platform. The AI layer wraps around the tools your brokerage already supports.",
     ],
-    whatThisIsNot: "This is not a 360 platform. We are not selling you BetterUp. We are not going to wrap your IP into a SaaS and sell it. We do not coach the executives ourselves. If you want a software product, this is not it. If you want an AI-powered leadership development platform you can resell, we can have that conversation, but the work we ship in our standard engagement is the operating system for your practice, not a product.",
-    anecdote: {
-      setup: "A leadership coach running an off-site for a sixteen-person executive team had two weeks to synthesize 360 interviews from twelve stakeholders, build a team-level read, and prep individual conversations with each VP.",
-      turn: "We built the synthesis workflow against her actual interview transcripts in week one of our engagement. The draft synthesis came in on Sunday night with attributed themes and the three contradictions worth surfacing in the off-site.",
-      line: "She delivered the off-site on a workload that used to require an associate she had not hired in two years.",
-    },
-    faq: [
-      {
-        q: "Can AI handle sensitive 360 feedback safely?",
-        a: "Yes, with the right setup. We work in your tenant with zero-retention configurations and signed NDAs. Transcripts and interview data do not train public models and do not leave your control.",
-      },
-      {
-        q: "How does this fit with my existing platform?",
-        a: "We integrate with Coach Accountable, BetterUp Manage, EZRA, or whatever you run. We do not ask you to migrate. The workflow wraps the platform you already pay for.",
-      },
-      {
-        q: "What is the typical engagement cadence?",
-        a: "Weekly ninety-minute working sessions over eight to twelve weeks. By week three you have a real workflow shipping on a live engagement. By week eight your team or VA can run the operating cadence.",
-      },
-      {
-        q: "Can this work for a small team of coaches, not just solo?",
-        a: "Yes. Most of the value for a small team is in the shared framework library and the sponsor reporting layer. Newer coaches ramp faster on a documented operating system.",
-      },
-      {
-        q: "How do you handle data from corporate clients with their own security teams?",
-        a: "We use enterprise tenants with audit trails. Most procurement teams approve the setup quickly because it does not introduce a new SaaS into their stack. If your clients require a SOC 2 vendor, we map to a partner platform that has one.",
-      },
-    ],
-    primaryKeyword: "ai for leadership coaches",
+    whatThisIsNot:
+      "This is not a lead generation service. We do not buy you leads. We do not run your ads. We do not coach you on negotiation or help you script a listing presentation. If you want a dialer, an ISA, or a coaching program, this is not it. What we build is the operational layer that stops the leads you are already paying for from going cold, and stops the hours between showings from being eaten by work a well-designed system can do for you.",
+    primaryKeyword: "ai for buyer's agents",
     secondaryKeywords: [
-      "360 feedback synthesis ai",
-      "leadership coaching automation",
-      "ai tools for leadership development",
-      "team session prep ai",
-      "leadership coach framework library",
+      "ai tools for buyer's agents",
+      "real estate lead follow-up automation",
+      "mls buyer matching ai",
+      "buyer agent tour sheet automation",
+      "real estate offer prep ai",
+      "buyer nurture sequence real estate",
+      "follow up boss ai integration",
+      "kvcore ai workflow buyer agent",
     ],
   },
 
-  {
-    slug: "life-coaches",
-    marqueeLabel: "Life coaches",
-    h1: "AI Consulting for Life Coaches.",
-    metaTitle: "AI Consulting for Life Coaches | VERA",
+{
+    slug: "luxury-agents",
+    marqueeLabel: "Luxury agents",
+    h1: "AI for Luxury Real Estate Agents.",
+    metaTitle: "AI for Luxury Real Estate Agents | VERA",
     metaDescription:
-      "AI for life coaches who want to spend more hours coaching and fewer hours on admin, content, and the between-session work.",
+      "AI for luxury real estate agents who protect client relationships while running a high-touch practice. Back office, not a client-facing replacement.",
     intro:
-      "The hardest part of running a life coaching practice is everything that is not coaching. AI takes the rest. Notes, follow-up, content, the work that keeps your week from running you.",
+      "Your clients expect white-glove service and absolute discretion. AI is the back office that makes both possible at the cadence your portfolio demands, without turning you into an administrator.",
     openingEssay: [
-      "Most life coaches we meet are running a one-person business that feels like four. There is the coaching itself, which is the part you love. Then there is the content, which you keep promising yourself you will get to. Then there is the admin layer, the intake forms, the contracts, the Stripe links, the welcome emails. And then there is the follow-up between sessions, the part of the work that quietly decides whether the client renews.",
-      "The trap most coaches fall into with AI is treating it like a faster way to write social media posts. It is, but that is the smallest piece of what is possible. The bigger move is treating AI as the back-office partner that holds the whole client lifecycle. Discovery call goes well. The proposal drafts itself in your voice that night. The client signs. The intake form gets parsed into a starter brief for session one. Session one happens. The recap and the homework go out by morning. Wednesday check-in is drafted on Tuesday for you to send with a one-line edit.",
-      "Every one of those steps is small. You have probably even built parts of it manually in Notion or Dubsado. The shift is wiring them together so the client experience feels like working with a coach who has a chief of staff, when actually it is just you.",
-      "The brand voice question is the one most coaches worry about. The honest answer is that ChatGPT alone will flatten you. A trained voice model on your actual writing, with a workflow that keeps you in the editing seat, will not. The clients we work with consistently say the messages feel more like their coach, not less. The difference is the time you got back to be present with them when it counted.",
-      "There is one more piece worth saying. Most life coaches are running their business on the same energy that runs their coaching, which is finite. When the back office consumes that energy through Sunday evenings, by Wednesday you are coaching from a depleted reserve. The clients can tell. The energy you save by not writing recaps by hand is not just convenience. It is the difference between showing up to the Thursday session ready to be present and showing up tired. The honest case for AI in a coaching practice is partly about hours and partly about which version of you the client gets.",
+      "Luxury real estate is a relationship business that runs on trust, timing, and a reputation you have spent years earning. The clients you serve are sophisticated. They have options. They chose you because you know the market, you know the right people, and you handle everything without making them feel like a transaction. None of that changes when you add AI to the back office. What changes is how much of your week is left over to be the agent they hired.",
+      "The structural problem in a high-end residential practice is that the service standard is higher, but the operational support is often the same as any other agent. You are writing bespoke listing narratives for properties that deserve them. You are preparing market briefs sophisticated enough that a CEO will actually read them. You are coordinating private showings with discretion, managing a sphere of HNW contacts who expect personalized touchpoints, and following up after every interaction in a way that feels personal because it is. All of that done by hand, across a roster of active clients, is a week that disappears before Thursday.",
+      "Where AI fits in luxury is not where it fits in volume real estate. The pitch about automating client communication is the wrong framing here. Your clients are not getting a templated email sequence. AI is for the work they never see: the listing brief drafted before you present it, the comp analysis formatted to match the level of your buyer, the pre-showing memo so you walk in prepared, the sphere follow-up queued and personalized to each relationship, the property narrative polished before it goes to the marketing team.",
+      "The agents who win the next five years in luxury are not the ones who use AI to replace the white-glove experience. They are the ones who use it to extend their capacity without diluting it. The tenth sphere touchpoint of the week lands because there was infrastructure to support it. The listing narrative is better because you had the preparation time to edit it instead of writing it from scratch at midnight. The showing goes well because your prep doc was waiting for you at 7:30 AM.",
+      "The hard part is building the right system. A generic CRM workflow will not do it. ChatGPT with a prompt will not do it. The work is to take your specific practice, your sphere, your voice, your markets, and your workflow, and wire AI into the exact seams where it relieves pressure without touching the client relationship itself. That is what we build.",
     ],
     painPoints: [
-      "Session notes and follow-up eat the time you should be with the next client",
-      "Content for your audience never gets shipped consistently because the energy goes to clients first",
-      "Onboarding is the same Dubsado checklist done by hand every time and it still has gaps",
-      "Discovery calls happen with no prep window and the proposal goes out three days later",
-      "The Wednesday check-in you meant to send slips into Friday and then it does not go at all",
+      "Listing narratives for high-end properties take hours to write well and every property deserves a different one",
+      "Sphere maintenance for HNW relationships slips when transactions get busy, and slippage costs referrals",
+      "Market and comp briefs for sophisticated buyers take research time that competes with showing schedules",
+      "Pre-showing prep is either rushed or nonexistent because the day filled up",
+      "Coordinating private showings, NDA exchanges, and discretion logistics is manual and scattered across email and text",
+      "Thought-leadership content and personal brand posts keep getting pushed because active listings come first",
     ],
     whatChanges: [
       {
-        heading: "The Tuesday recap",
-        body: "Session ends at 11:00. Lunch happens. By 1:30 you open Notion and there is a draft recap, the three commitments your client made, and the journaling prompt for the week. You spend eight minutes editing. It is in their inbox by two.",
+        heading: "The listing narrative",
+        body: "New listing goes live Friday. You used to spend Wednesday evening writing the property story from scratch, pulling adjectives out of thin air at 10 PM. Now you open a draft at 8 AM Thursday that captures the architectural provenance, the lifestyle angle, and the neighborhood context, all in your voice. You spend an hour editing. The narrative goes to the marketing team by noon.",
       },
       {
-        heading: "The Wednesday check-in",
-        body: "The mid-week pulse you used to forget gets sent every week now. Drafted from the recap, written in your voice, with a single question that lands. Hot replies route to you. Everything else stays out of your inbox.",
+        heading: "The sphere touchpoint",
+        body: "There are fourteen people in your top-tier sphere who have not heard from you in six weeks because two listings consumed the month. On Sunday morning you review a queue of personalized touchpoint drafts, each one tied to something specific about that relationship, a market move they would care about, an off-market they might know someone for, a follow-up on the conversation you had in March. You approve, edit lightly, and send. Done before the weekend is over.",
       },
       {
-        heading: "The newsletter you stopped writing",
-        body: "Two hundred subscribers used to wait three months between newsletters. Now you publish every other Sunday from a workflow that pulls your session themes, your reading list, and one client story you have anonymized.",
+        heading: "The buyer brief",
+        body: "Sophisticated buyer flying in from New York for Tuesday showings. The comp analysis and neighborhood brief used to take a Sunday to assemble. Now you open a formatted brief Monday morning, review it for accuracy, add your own read on the one comp that needs context, and send it before lunch. The buyer arrives prepared. The Tuesday goes better.",
       },
       {
-        heading: "Sunday evening",
-        body: "Used to be the catch-up window for the week's recaps and the Monday prep. Now Sunday is yours. Monday's brief is on your desk by 8 AM, drafted while you slept.",
+        heading: "Pre-showing prep",
+        body: "Showing at a 12-million-dollar property at 11:00 AM. You used to walk in with notes in your head and hope nothing slipped. Now there is a one-page prep document on your phone at 10:15: property history, seller situation, the three questions the buyer asked last week, and one thing worth pointing out that is not on the listing sheet. The showing is sharper.",
+      },
+      {
+        heading: "The personal brand post",
+        body: "You have market opinions worth sharing and a following that has been quiet for two months. A transaction insight from the week becomes a polished LinkedIn post on Thursday morning, drafted from your notes in your voice, ready to publish with five minutes of editing. You do not have to choose between being present for clients and being visible in the market.",
       },
     ],
     workflows: [
       {
-        title: "Session recaps in your voice",
-        body: "Transcript to a recap your client will read on the train home. Themes, commitments, and the journaling prompt, ready in the time it takes to grab lunch.",
+        title: "Listing narrative drafts",
+        body: "Property details, architectural notes, and your past listing copy feed a draft narrative for each new listing. In your voice, specific to the property, ready to edit, not to write from scratch.",
       },
       {
-        title: "Mid-week check-ins",
-        body: "Wednesday accountability messages in your tone, drafted from the recap. You approve, AI sends. Replies that need you come to you.",
+        title: "Sphere touchpoint queue",
+        body: "Your Follow Up Boss or kvCORE contacts, their history, and recent market activity feed a weekly queue of personalized outreach drafts. You review, approve, and send. The relationship stays warm without the Sunday morning scramble.",
       },
       {
-        title: "Content engine",
-        body: "Newsletter, Instagram, and LinkedIn drafted from your session insights and your reading. Voice-trained on your past three years of writing.",
+        title: "Buyer market and comp briefs",
+        body: "MLS data, recent sales, and neighborhood context into a formatted brief your most sophisticated buyers will read. Styled to match the level of the conversation.",
       },
       {
-        title: "Onboarding flow",
-        body: "Discovery call to signed contract to a starter brief for session one. Welcome email, calendar invites, and the workbook all parsed and ready before they show up.",
+        title: "Pre-showing prep documents",
+        body: "Property history, seller notes, buyer questions from the CRM, and one or two talking points assembled into a one-page brief the morning of the showing. Ready on your phone before you leave.",
       },
       {
-        title: "Program design",
-        body: "Your methodology turned into a structured ninety-day program with frameworks, homework, and a sequence the client can see.",
+        title: "Private showing coordination",
+        body: "Scheduling, NDA logistics, and discretion notes organized in one thread. No more piecing together who confirmed what across three email chains and a text thread.",
       },
       {
-        title: "Proposal and follow-up",
-        body: "Discovery call recap and a custom proposal in your voice within twelve hours. The follow-up cadence that closes warm leads without you watching the inbox.",
+        title: "Thought-leadership content",
+        body: "Your market read, your recent transactions, and your opinions on what is moving drafted into LinkedIn posts, newsletter pieces, and event talking points. Voice-trained on your past writing so it reads like you, not like AI.",
+      },
+      {
+        title: "Referral source follow-up",
+        body: "Attorneys, financial advisors, concierge firms, and past clients who send referrals get consistent, personalized follow-up after every transaction close. The relationship that drives your next deal gets the attention it earns.",
+      },
+      {
+        title: "Listing presentation prep",
+        body: "Seller profile, property context, recent comps, and your positioning pulled into a presentation brief before the listing appointment. You walk in prepared to earn the listing, not to read slides.",
+      },
+    ],
+    faq: [
+      {
+        q: "How can AI help luxury real estate agents?",
+        a: "AI handles the back office, not the client relationship. Listing narratives, market briefs, showing prep, sphere touchpoints, and content all take preparation time that competes with your showing schedule. AI drafts the preparation work so you arrive ready, follow up consistently, and publish content you have been putting off, without delegating the judgment or the voice.",
+      },
+      {
+        q: "Does this make me sound like a robot to high-end clients?",
+        a: "Only if the voice training is skipped. We train models on your past listing copy, emails, and posts. The drafts land in your cadence and your specifics. You stay in the editing seat. Nothing goes to a client unreviewed. The agents we work with consistently say the communication feels more like them, not less, because the volume of thoughtful outreach actually increases.",
+      },
+      {
+        q: "My clients expect discretion. How do you handle confidentiality?",
+        a: "We work in your tenant with zero-retention configurations. Client data, property details, and relationship notes do not train public models. We sign NDAs and configure every workflow as if the data is under strict privacy rules, because in luxury real estate it is. No client information touches a shared environment.",
+      },
+      {
+        q: "What does an engagement cost and who owns the workflows?",
+        a: "Engagements are retainer-based, scoped on the discovery call. There are no per-seat surprises and no subscription that keeps running after we are done. Everything we build sits in your stack, in your Follow Up Boss or kvCORE account, in your Notion, in your email tool. You own it. If you end the engagement, the workflows keep working because they live in your tenant, not ours.",
+      },
+      {
+        q: "I already have a transaction coordinator. How does this fit?",
+        a: "AI and a TC solve different problems. Your TC handles the transaction pipeline. AI handles the relationship and marketing layer that happens before and after the transaction: sphere maintenance, content, listing narratives, comp briefs, showing prep. Most agents find the two complement each other well, and some TCs become the second pair of hands running the AI workflows.",
+      },
+      {
+        q: "Which CRMs and tools does this work with?",
+        a: "We integrate with Follow Up Boss, kvCORE, and most high-end CRM platforms. We work with the MLS export formats you already pull, DocuSign for transaction coordination, and your existing email and calendar stack. We do not ask you to migrate anything.",
       },
     ],
     howWeWork: [
-      "Engagements are weekly working sessions on your real clients and your real week. We do not teach AI in the abstract. We build the workflow you most need next, on the client you have right now.",
-      "Most coaches see a recap and check-in workflow shipped in the first three weeks. From there we move into content and onboarding, depending on which one is hurting more. Twelve weeks in, you are running the engine, you have a documented playbook, and your VA or yourself can keep it going without us.",
-      "The stack stays simple. Dubsado, Calendly, Notion, your email tool, your scheduler. We wire AI into the seams. You do not migrate.",
+      "Engagements start with a working session on your actual listings and your actual sphere, not a demo environment. We pick the workflow where you feel the most friction, which for most luxury agents is either listing narrative prep or sphere maintenance, and build it against your real data in the first two weeks.",
+      "The first four to six weeks typically ship a listing narrative workflow, a sphere touchpoint queue, and a buyer brief template. Weeks seven through twelve move into showing prep, content, and referral source follow-up, depending on what the practice needs. By week twelve you are running the system with your TC or assistant, and there is a documented playbook for them to maintain it without us.",
+      "Everything stays in your stack. Follow Up Boss or kvCORE for the sphere layer, your MLS access for comp briefs, your existing email client, Canva or your design workflow for listing marketing. We wire AI into the seams of what you already pay for. No new platform to learn, no migration to execute.",
     ],
-    whatThisIsNot: "This is not a coaching course. We are not going to teach you how to coach. We are not going to ghostwrite a book for you. If you want someone to take your IP and turn it into a product line you sell while you sleep, that is a different engagement and a different price. What we ship here is the operating layer that lets you keep coaching the way you coach, with more breathing room and a content presence you do not have to feel guilty about.",
-    anecdote: {
-      setup: "A life coach with fourteen weekly clients had not published a newsletter in eight months. Her Dubsado inbox was thirty-three new inquiries deep. Her own coach kept asking when she was going to write the book she had been talking about for two years.",
-      turn: "We started with recaps and check-ins, then trained her voice model and shipped a content workflow. By the end of the engagement she was publishing every other Sunday and her inbox was current within twenty-four hours.",
-      line: "The book is now eleven chapters in. She wrote them in the time the workflow gave her back, not in time she did not have.",
-    },
-    faq: [
-      {
-        q: "I am not technical. Will this work for me?",
-        a: "Yes. Most life coaches we work with are not technical. The engagement is built around the tools you already use, Dubsado, Calendly, Stripe, Notion. We meet you where you are.",
-      },
-      {
-        q: "How is this different from hiring a VA?",
-        a: "A VA does what you assign. AI does the work you have not gotten around to assigning. Together they are very strong. Alone, AI is faster and cheaper to start with, and it never forgets the Wednesday check-in.",
-      },
-      {
-        q: "What does this cost?",
-        a: "Engagements start at four-figure monthly retainers and scale with the depth of integration you want. We scope on the discovery call so the number is not a surprise.",
-      },
-      {
-        q: "Will my clients feel like they are getting AI instead of me?",
-        a: "Not if the voice training is done right. The drafts hold your cadence and your specifics. You stay in the editing seat. Clients consistently say the new cadence feels like they got more of their coach, not less.",
-      },
-      {
-        q: "What about confidentiality?",
-        a: "We work under NDA with zero-retention configurations. Client transcripts and notes do not train public models. The setup respects the trust your clients gave you.",
-      },
-    ],
-    primaryKeyword: "ai for life coaches",
+    whatThisIsNot: "This is not a client communication bot and it is not a replacement for the white-glove experience your clients are paying for. We do not send emails on your behalf without your review. We do not auto-respond to HNW clients. We do not run your showing schedule or your transaction pipeline. If you want a chatbot that talks to prospects on your website, that is a different product and a different conversation. What we build is the preparation and relationship infrastructure that lets you keep delivering the level of service you are known for, at a volume that would otherwise require a full team behind you.",
+    primaryKeyword: "ai for luxury real estate agents",
     secondaryKeywords: [
-      "ai tools for life coaches",
-      "life coach automation",
-      "session recap ai",
-      "life coach content engine",
-      "coaching practice operating system",
+      "luxury real estate agent ai tools",
+      "ai listing narrative real estate",
+      "high-end real estate agent automation",
+      "sphere of influence ai real estate",
+      "luxury agent market brief ai",
+      "hnw client relationship management ai",
+      "real estate personal brand ai content",
+      "luxury real estate showing prep ai",
     ],
   },
 
-  {
-    slug: "business-coaches",
-    marqueeLabel: "Business coaches",
-    h1: "AI Consulting for Business Coaches.",
-    metaTitle: "AI Consulting for Business Coaches | VERA",
+{
+    slug: "commercial-agents",
+    marqueeLabel: "Commercial agents",
+    h1: "AI for Commercial Real Estate Agents.",
+    metaTitle: "AI for Commercial Real Estate Agents | VERA",
     metaDescription:
-      "AI for business coaches working with founders and CEOs. P&L digests, accountability tracking, mastermind content, sales prep.",
+      "AI for commercial real estate agents who want faster deal analysis, deeper prospect research, and pipelines that actually close. Built for CRE.",
     intro:
-      "Your clients are running real businesses. You move fast between strategy, finance, and team. AI keeps every thread current so you can stay in the work that pays.",
+      "Commercial real estate runs on analysis, research, and long-cycle nurture. AI compresses the prep, drafts the documents, and keeps every prospect warm while you are closing the deal in front of you.",
     openingEssay: [
-      "Business coaches play a strange position. The client is paying for someone who can read a P&L on Monday, run a hard team conversation on Tuesday, and prep a sales call on Wednesday, all while staying ahead of where their business actually is. That demand pattern does not grow linearly. The fifth client is twice as hard to add as the third, because you are now context-switching across five sets of numbers and five sets of priorities every Sunday night.",
-      "The most expensive part of business coaching is the prep. Pulling the numbers from QuickBooks, comparing them to the dashboard the client built in Notion, remembering what they committed to at the last session, and showing up with a sharp question instead of a generic check-in. Most coaches we meet are doing this for forty to sixty minutes per client per week, which is the same as adding a part-time analyst job to your week without billing for it.",
-      "The shift with AI is not in the coaching itself. The shift is that the prep window collapses. You open a brief at 7:30 on Monday and the P&L delta, the dashboard read, the open commitments from last session, and the one question worth opening with are all there. You spent fifteen minutes reading it instead of an hour building it. The compounding effect across a roster of eight clients is one full day a week back in your calendar.",
-      "The second shift is in your IP. Every business coach has a method. Most of them have never written it down in a way that survives beyond their head. The frameworks live in Keynote files from three years ago, a couple of Notion pages, and a Google Doc someone shared. AI is what makes the work of writing it down feasible, so the method becomes a playbook your team can run, your clients can hold onto, and your masterminds can be built from.",
-      "There is a third shift that matters for business coaches specifically, which is the way clients renew. Most business coaching renewals happen on instinct, in a hallway conversation after the third quarter ended well. The good ones come with a real narrative. The hard reality is that most coaches do not have the time to write the narrative, so they price the next year on a feeling rather than a case. AI changes this by drafting the renewal narrative from the actual commitments, the dashboard movement, and the wins of the last twelve months. The conversation gets sharper. The price holds. The retainer extends.",
+      "The CRE week has a structural problem. The work that wins deals, tenant research, comp analysis, cap rate modeling, submarket reports, takes the same hours as the deals themselves. By the time you have analyzed the rent roll on the industrial flex you are trying to sell and drafted the offering memorandum, the three warm prospects you should have called on Tuesday are cold. The math does not improve by working later. It improves by changing which parts of the prep you do by hand.",
+      "Most of what a commercial agent does before a pitch is research and synthesis. CoStar pull, LoopNet cross-reference, Crexi comp check, Excel model for the NOI summary, draft of the LOI, market narrative for the submarket. A good analyst can do all of that in four hours for a single deal. An experienced broker does it in two. With a well-built AI workflow, the first pass of every piece of that is on your screen in thirty minutes and you spend the next hour making it sharp. The strategic calls, the relationship calls, the calls that move a deal, are what fill the rest of the day.",
+      "The pipeline problem is the one most CRE brokers feel the most and fix the least. Commercial sales cycles run six to eighteen months. A prospect you qualify in January may not be ready to transact until Q3. Staying present across a sixty-name pipeline without spamming and without going silent is the craft. Most brokers do it on instinct, which means the ones who got a call this week stayed warm and the twenty who did not are quietly moving toward a competitor. AI makes it possible to run a disciplined outreach cadence across every name in the pipeline without spending the morning writing emails.",
+      "The document problem is quieter but it eats real hours. Offering memorandums, LOIs, proposals, market reports. These are documents that need to be specific, accurate, and well-written. They also follow predictable structures and are built from information you already have. The broker who can turn a full OM around in a day instead of three days has a real competitive edge on deals where the seller wants to move fast. The broker who consistently delivers submarket reports that read like they were written by a research analyst, not pulled from a CoStar PDF, is the one who gets called first on off-market listings.",
+      "The honest version of AI for commercial real estate is not that it replaces the judgment. Cap rate interpretation, reading a market cycle, knowing when a tenant credit is shakier than the rent roll shows, that is yours. What AI replaces is the hours of structured work between the judgment calls. The research pull. The first draft. The email that needed to go out yesterday. The pipeline follow-up that slipped to next week. Get those right and your week looks different.",
     ],
     painPoints: [
-      "Reviewing client financials before every session takes the hour you do not have",
-      "Action items between sessions get lost across email, text, and Slack",
-      "Mastermind content takes a full day to produce after every group call",
-      "Sales decks and proposals look identical to every other business coach in the inbox",
-      "Discovery calls land cold because the prep window collapsed",
-      "Your IP lives in Keynote files nobody else can find",
-    ],
-    whatChanges: [
-      {
-        heading: "The Monday brief",
-        body: "Open the dashboard at 7:30. The P&L delta from last month, the three KPIs trending wrong, the commitments from last session, and one question that cuts to it. Fifteen minutes to read. Hour saved per client.",
-      },
-      {
-        heading: "The mastermind recap",
-        body: "Group call ends at 11:30. By 4:00 every member has a personalized recap of their hot seat, the action items, and the relevant frameworks from the other members' sessions. You ate lunch.",
-      },
-      {
-        heading: "The proposal that closes",
-        body: "Discovery on Tuesday. Custom proposal in their inbox by Wednesday morning, built from your standards, the brief, and your last twenty wins. The follow-up cadence runs without you watching.",
-      },
+      "Pulling CoStar comps, modeling NOI, and building the financial narrative for a single deal takes half a day",
+      "Offering memoranda and proposals take three days to produce and the first draft is still half-wrong",
+      "Pipeline nurture across long-cycle prospects falls apart because there is no time to write sixty personalized touchpoints",
+      "Tenant and buyer prospect research before a pitch is always shallower than it should be",
+      "Submarket reports read like CoStar exports because there is no time to turn the data into a narrative",
+      "LOIs and lease summaries get drafted on Friday night because the week ran out",
     ],
     workflows: [
       {
-        title: "P&L and KPI digests",
-        body: "QuickBooks, Xero, and the client's dashboard into a one-page brief before every session. Trends, deltas, and the questions to ask.",
+        title: "Financial analysis briefs",
+        body: "Cap rate, NOI, rent roll summary, and the key risk flags for a deal, drafted from the inputs you already have in Excel or Argus. The first pass is ready before the client meeting.",
       },
       {
-        title: "Action item tracker",
-        body: "What got committed, what got done, what slipped. Across every client, queryable in one place.",
+        title: "Offering memorandum drafts",
+        body: "Property description, financial summary, market narrative, and tenant overview into a structured OM draft. You spend the time editing the details, not building the scaffold.",
       },
       {
-        title: "Mastermind operations",
-        body: "Hot seats and group calls into per-member recaps and shareable lesson docs by end of day.",
+        title: "LOI and proposal drafts",
+        body: "Deal terms and context into a first-draft LOI or proposal in your format. Reviewed and sent the same day the deal conversation happens.",
       },
       {
-        title: "Custom playbooks",
-        body: "Your operating frameworks turned into per-client playbooks that update with their actual data.",
+        title: "Submarket and market reports",
+        body: "CoStar and LoopNet data pulled into a narrative market report your client will actually read. Vacancy trends, absorption, notable transactions, and the outlook in your voice.",
       },
       {
-        title: "Sales engine",
-        body: "Discovery prep, custom proposals, and a follow-up cadence that closes warm leads without daily babysitting.",
+        title: "Prospect research briefs",
+        body: "Tenant or buyer background, business profile, likely real estate needs, and the three things worth knowing before the first call. Ready before you pick up the phone.",
       },
       {
-        title: "Course and IP systemization",
-        body: "Your methodology turned into a structured program you can sell asynchronously or hand to a junior coach.",
+        title: "Pipeline nurture cadence",
+        body: "Sixty-name pipeline with a personalized outreach sequence per contact. Market updates, deal alerts, and check-ins drafted in your voice and timed to the prospect's cycle stage.",
       },
       {
-        title: "Renewal narratives",
-        body: "The case for the next twelve months built from the wins you actually delivered. No more pricing on instinct.",
+        title: "Comp summaries",
+        body: "CoStar, LoopNet, and Crexi searches synthesized into a clean comp summary with the relevant data points flagged. The spreadsheet your client asks for is ready, not in progress.",
+      },
+      {
+        title: "Deal timeline and follow-up tracker",
+        body: "Open deals, next steps, and follow-up timing across your active book. Drafted from your CRM notes so nothing slips between the site tour and the LOI.",
+      },
+    ],
+    faq: [
+      {
+        q: "How can AI help commercial real estate agents?",
+        a: "The highest-value areas are financial analysis prep, document drafting, prospect research, and pipeline nurture. AI compresses the structured work between judgment calls. You still read the deal and know the market. AI does the rent roll summary, the OM draft, the comp synthesis, and the outreach email that needed to go out Tuesday. Most CRE brokers get four to eight hours a week back in the first month.",
+      },
+      {
+        q: "Will AI make my cap rate and NOI analysis less accurate?",
+        a: "The inputs determine the accuracy, not the AI layer. We build the workflow against your actual numbers from Excel or Argus. The AI structures and narrates the analysis; it does not source the figures. You review every output before it goes to a client. The risk of error goes down, not up, because the workflow makes it harder to transpose a number or miss a line item in the summary.",
+      },
+      {
+        q: "How is client and deal data handled?",
+        a: "Your data stays in your environment. We work in your tenant with zero-retention configurations. Deal financials, tenant information, and prospect data do not train public models and do not leave the tools you already control. We sign NDAs and treat every engagement as if the audit is next week.",
+      },
+      {
+        q: "What does this cost and who owns the workflows we build?",
+        a: "Engagements are monthly retainers scoped on the discovery call. Everything we build runs in your stack, your CoStar account, your CRM, your cloud storage. When the engagement ends, the workflows are yours. There is no proprietary platform, no per-seat license, no lock-in. You own the operating system.",
+      },
+      {
+        q: "Does this work with CoStar, LoopNet, and my CRM?",
+        a: "Yes. We build against CoStar exports, LoopNet data pulls, and Crexi outputs. We integrate with the CRM you use, whether that is Salesforce, HubSpot, ClientLook, or a custom setup. We do not ask you to migrate or replace tools you already pay for.",
+      },
+      {
+        q: "I work on long sales cycles. How does AI help with a deal that takes twelve months to close?",
+        a: "Long cycles are where the pipeline nurture workflow matters most. We build a contact cadence that keeps every prospect in your pipeline touched at the right interval with something specific, a submarket update, a relevant comp, a deal alert, not a generic check-in. The broker who stays present across the full cycle wins the deal when the tenant finally moves. AI makes it possible to stay present across sixty names without writing sixty emails by hand every month.",
+      },
+    ],
+    whatChanges: [
+      {
+        heading: "Tuesday morning before the pitch",
+        body: "You have a meeting at 10:00 with a prospect who owns two office buildings and might list one. You open the brief at 8:30. Building address, recent comps in the submarket, estimated cap rate range, tenant credit summary, and the three things worth knowing about the owner's portfolio. You wrote none of it. You read it in fifteen minutes and walked in sharp.",
+      },
+      {
+        heading: "The offering memorandum",
+        body: "Industrial flex listing signs Thursday. The seller wants the OM out Monday. Used to mean a weekend. Now it means Friday afternoon drafting the property narrative and financial summary into the workflow, Saturday morning reviewing the output, Monday morning sending a polished document. The weekend is still mostly yours.",
+      },
+      {
+        heading: "The pipeline that stayed warm",
+        body: "You have forty-three prospects in various stages of a six-to-eighteen-month cycle. Most of them have not heard from you since last quarter. The workflow runs a monthly outreach cadence against each one with a market note or a comp that is actually relevant to their asset class. Three of them respond in the next thirty days. One schedules a call.",
+      },
+      {
+        heading: "The submarket report your client forwarded",
+        body: "You sent a quarterly industrial submarket report last month. Two paragraphs of narrative, absorption data, three notable transactions, and an outlook paragraph in your voice. Your client forwarded it to two colleagues. One of them called you the following week about a building they need to sell.",
+      },
+      {
+        heading: "The LOI that closed the site tour",
+        body: "Site tour on Wednesday. Tenant says they want to move forward. You draft the LOI on the drive back, review it over dinner, send it Thursday morning. The competing broker sent theirs Friday afternoon. You had the deal in hand before the weekend.",
       },
     ],
     howWeWork: [
-      "We start with the P&L and KPI digest workflow because for business coaches it usually produces the fastest visible relief. We build it on a real client, with a real dashboard, on a real Monday morning.",
-      "By week six you have the dashboard digest, an action item tracker that spans your roster, and a working draft of one client playbook. Weeks seven through twelve move into mastermind ops or sales, depending on which one is currently bleeding most. You leave with a documented operating system.",
-      "Tooling stays in your stack. QuickBooks, Xero, Notion, ClickUp, Asana, your CRM. We integrate. We do not migrate.",
-      "The pricing structure is a flat monthly retainer for the coaching engagement, plus an implementation fee for the workflows we build in your tenant. We are explicit about both numbers on the first call. There are no surprise integration fees, no per-seat licensing surprises, no upsell when you hit a workflow you did not know you needed. The economics are sized so that the workflow pays back inside the first sixty to ninety days for most business coaches with five or more retainers.",
+      "Engagements start with the workflow that is costing you the most hours right now. For most CRE brokers that is either the financial analysis brief or the offering memorandum, because those are the documents that determine whether you win the listing. We build the workflow on a real deal in your active book, with your CoStar data and your deal terms. Not a sandbox. Not a template exercise. You see it work on something live before we build anything else.",
+      "By week four you have a financial analysis brief workflow and an OM draft workflow running on real listings. Weeks five through eight wire the prospect research brief and the pipeline nurture cadence against your CRM. By week twelve you have a documented operating system that runs on CoStar, your CRM, your cloud drive, and your email client. Nothing requires a new platform. Your existing stack gets smarter.",
+      "We work with your tools. CoStar exports, LoopNet pulls, Crexi data, Excel and Argus models, Salesforce or HubSpot or ClientLook, DocuSign for the signature workflow. The AI layer sits between the data you already pull and the documents you already deliver. If you have a specific tool your market uses that is not on that list, bring it to the discovery call and we will tell you within a week whether we can wire to it.",
     ],
-    whatThisIsNot: "This is not bookkeeping. We do not touch your clients' books. We do not file taxes. We do not give legal or financial advice. We do not coach your clients for you. If you want a fractional CFO product or a managed-services agency that runs the back office for your clients, that is a different conversation. What we build here is the system that lets you stay the coach without drowning in the prep.",
-    anecdote: {
-      setup: "A business coach with eleven retainers spent six hours every Sunday pulling numbers and writing pre-session briefs. He had not taken a Sunday off in eighteen months.",
-      turn: "We wired QuickBooks and his client dashboards into a digest workflow that drafts the brief on Sunday morning. He edits for thirty minutes after church. Done.",
-      line: "The Sunday he got back was worth more than the retainer fee he is paying us.",
-    },
-    faq: [
-      {
-        q: "Will this work with QuickBooks or Xero?",
-        a: "Yes. We pull from QuickBooks, Xero, and most accounting platforms. We do not touch the books, we only read them.",
-      },
-      {
-        q: "How do you handle client confidentiality?",
-        a: "Each engagement runs under NDA. Client data sits in your tenant or a dedicated isolated environment. It does not train third-party models.",
-      },
-      {
-        q: "Can this work for a team of coaches?",
-        a: "Yes. The playbooks and frameworks we build with you become the operating system your team runs. Newer coaches ramp faster on it and consistency goes up across clients.",
-      },
-      {
-        q: "What if my clients are in different industries?",
-        a: "The digest workflow handles industry differences with prompt configuration per client. The framework library does not need to change. Most coaches with mixed rosters find the AI layer actually surfaces patterns across industries they would not have spotted manually.",
-      },
-      {
-        q: "How fast does it pay back?",
-        a: "Most business coaches see the prep workflow pay back inside the first month on time savings alone. The harder ROI is the second-order win, which is usually a renewal that almost slipped getting closed because the narrative finally got written.",
-      },
-    ],
-    primaryKeyword: "ai for business coaches",
+    whatThisIsNot: "This is not a CoStar replacement, a valuation tool, or a transaction management platform. We do not underwrite deals for you, give legal advice, or review contracts. We do not run your business while you golf. If you want a managed-services shop that sends emails under your name without your involvement, this is not it. The brokers we work with are serious practitioners who want to stay close to every deal and every client relationship. What we build is the structural support that lets you stay in those relationships without the prep work eating the week.",
+    primaryKeyword: "ai for commercial real estate agents",
     secondaryKeywords: [
-      "ai tools for business coaches",
-      "business coach automation",
-      "client p&l digest ai",
-      "mastermind operations automation",
-      "business coaching playbooks",
+      "ai for commercial real estate brokers",
+      "commercial real estate agent automation",
+      "cre offering memorandum ai",
+      "ai for cap rate and noi analysis",
+      "commercial real estate pipeline management",
+      "ai lease and financial analysis cre",
+      "commercial real estate prospect research ai",
+      "costar ai workflow for brokers",
     ],
   },
 
-  {
-    slug: "sales-coaches",
-    marqueeLabel: "Sales coaches",
-    h1: "AI Consulting for Sales Coaches.",
-    metaTitle: "AI Consulting for Sales Coaches | VERA",
-    metaDescription:
-      "AI for sales coaches. Call analysis, objection libraries, deal review prep, rep development plans, and content that fills the pipeline.",
-    intro:
-      "You teach reps to find the win. AI hears every call you do not, surfaces the patterns you would have caught live, and turns your IP into a content machine.",
-    openingEssay: [
-      "Sales coaching is one of the few practices where the raw data is already there and almost no one is using it. Gong, Chorus, Salesloft, Outreach, all of these systems have been recording calls for years. The reps know it. The managers know it. Almost no coach has the time to actually listen to enough of them to coach from evidence instead of vibes.",
-      "The math is brutal. A team of twenty reps generates roughly four hundred customer-facing calls a week. To coach from that data you would need to listen to a meaningful sample, take notes, and bring something specific into your one-to-ones. Nobody has the hours. So coaching happens from the deals managers flag, the pipeline reviews, and the gut sense of what is working. The data sits unused and the coaching stays generic.",
-      "AI changes the math. You can read every transcript at scale, surface the patterns that distinguish your top reps from your bottom quartile, and walk into a one-to-one with the actual moments that went wrong on Becca's last three opportunities. Not a vague nudge about discovery, the literal exchange where she answered a question instead of asking the next one. This is the shift. From coaching on impression to coaching on evidence.",
-      "The second shift is in your IP. Most sales coaches we work with have a methodology and a deck and maybe a workbook, and that is the extent of the productized version of their work. There is a ten-times-bigger asset hiding in the calls and the talk tracks you have built over years, and AI is the lever for turning that into a library that scales beyond your time on the road.",
-      "There is also a coaching-on-coaching problem worth naming. The reps you coach are getting AI sales coaching whether you build it or not. Tools like Second Nature and AI roleplay platforms are showing up in their day. If your work is not integrated with that layer, the rep gets pulled between two competing models of what good selling looks like. The version of your engagement that wins is the one where the rep's AI tools and your coaching are speaking the same playbook. Your IP gets installed into the tool. The tool stops being the noise it currently is and starts reinforcing the work you are doing in the one-to-one.",
-    ],
-    anecdote: {
-      setup: "A sales coach working with a Series C SaaS company was running weekly group coaching for fourteen AEs across two teams. He listened to maybe four percent of their calls and coached from the manager's flagged deals.",
-      turn: "We built him a call analysis layer wired to Gong that surfaced the discovery patterns and the objection moments per rep, per week. Coaching went from pattern-based to evidence-based inside three weeks.",
-      line: "Win rate on the team's mid-market segment moved seven points the next quarter. The renewal closed at a 35 percent expansion.",
+{
+  slug: "investment-agents",
+  marqueeLabel: "Investment agents",
+  h1: "AI for Investment Property Agents.",
+  metaTitle: "AI for Investment Property Agents | VERA",
+  metaDescription:
+    "AI for investment property agents who need fast deal math, off-market sourcing, and a CRM that keeps investor clients buying.",
+  intro:
+    "Your investors move fast and disappear if the numbers are slow. AI is the analyst seat you do not have to hire: cap rates, pro formas, rent comps, and investor follow-up running while you are at the property.",
+  painPoints: [
+    "Running cap rates and cash-on-cash manually for every deal eats the morning you need for showings",
+    "Off-market leads from PropStream and DealMachine pile up unworked because there is no time to sort and personalize outreach",
+    "Pro forma builds take an hour each and investors want them before they will take a call",
+    "Investor clients go cold in Follow Up Boss because the re-engagement sequences are generic or nonexistent",
+    "Neighborhood and rent comp research is inconsistent across markets and takes time you do not bill for",
+    "Deal comparison reports that actually close a buyer have to be built fresh every time",
+  ],
+  workflows: [
+    {
+      title: "Cap rate and cash-on-cash analysis",
+      body: "Address in. Purchase price, estimated rents from Rentometer, expenses, NOI, cap rate, and cash-on-cash return out. Formatted as a one-page summary your investor can read before the 8 AM call.",
     },
-    painPoints: [
-      "Reviewing call recordings is where the gold is and nobody has the hours",
-      "Objection libraries go stale the moment you stop maintaining them by hand",
-      "Deal review prep takes longer than the review itself",
-      "One-to-one coaching gets generic because there is no time to study each rep's actual calls",
-      "Your IP lives in your head and a few slide decks",
-      "Sales coaching content lives in your head, not in your pipeline",
-    ],
-    whatChanges: [
-      {
-        heading: "Monday rep one-to-ones",
-        body: "You walk into Becca's session with the three discovery moments from her last week's calls where she missed the next question, the literal exchange in the transcript, and the specific reframe to practice. The coaching lands because it is evidence, not vibes.",
-      },
-      {
-        heading: "The objection library that stays alive",
-        body: "Last week's calls feed the objection library automatically. New patterns get flagged. The doc your team searches when a deal hits friction is current as of yesterday, not last quarter.",
-      },
-      {
-        heading: "The deal review you actually prep for",
-        body: "Pipeline data, the last three calls on the deal, and the questions worth asking are in a brief that takes ten minutes to read. The review is sharper. You stop running out the clock on context.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Call analysis at scale",
-        body: "Gong, Chorus, Salesloft, or raw recordings into a coach-ready brief per rep. Patterns, moments, and the specific exchanges worth coaching.",
-      },
-      {
-        title: "Living objection library",
-        body: "Calls into an updated objection-handling doc your team can search. New patterns flagged when they emerge.",
-      },
-      {
-        title: "Deal review prep",
-        body: "Pipeline data and recent call moments into the questions you would ask. Ready before the meeting.",
-      },
-      {
-        title: "Per-rep development plans",
-        body: "Personalized coaching plans built from actual call patterns, not a generic competency rubric.",
-      },
-      {
-        title: "Content amplification",
-        body: "Your talk tracks and frameworks into LinkedIn carousels, newsletters, and the start of a flagship course.",
-      },
-      {
-        title: "Internal training library",
-        body: "Top-rep moments from real calls into a searchable training library for onboarding new reps.",
-      },
-      {
-        title: "Renewal and expansion case",
-        body: "Custom renewal proposals built from the wins you delivered on the client's team last quarter.",
-      },
-    ],
-    howWeWork: [
-      "We start with the call analysis workflow because for sales coaches it produces the highest-signal win fastest. We pull a sample of recent recordings, build the analysis layer, and you sit in the one-to-one with the output to see if it lands.",
-      "Weeks two through six wire the analysis into deal review prep and the objection library. By week eight we move into rep development plans and the content engine. You leave with a documented system your team or junior coaches can run.",
-      "Tooling stays where it is. Gong, Chorus, Salesloft, Outreach, Salesforce, HubSpot. We integrate against what your clients already pay for. We never replace the platform.",
-      "The hardest part of the rollout is usually not technical. It is convincing the reps that the AI layer is in service of them and not surveillance for the manager. We design the rollout with the reps in the room from week one, give them access to the post-call coaching brief on their own calls, and frame the analysis as their tool first and yours second. The cultural shift that takes hold inside the first month is the difference between a workflow that holds and one that the team quietly works around. We have run this playbook enough times to know which signals predict trouble and how to address them before they become resistance.",
-    ],
-    whatThisIsNot: "This is not Gong with a coaching wrapper. We do not sell you a platform. We do not coach the reps for you. We are not a competitor to your existing call-intelligence stack, we wrap around it. If you want a software product you can resell to your clients as a SaaS, that is a different conversation. What we build is the workflow that turns the call data you already own into coaching that lands.",
-    faq: [
-      {
-        q: "Do you integrate with Gong and Chorus?",
-        a: "Yes. We pull from both, plus Salesloft, Outreach, Salesforce, HubSpot, and most CRMs. We do not replace the platform, we layer coaching workflow on top.",
-      },
-      {
-        q: "Can a single rep use this, or only the coach?",
-        a: "Both. Reps get personal post-call coaching prompts. You get a fleet view across the team. Same workflows, different surfaces. Reps tend to engage when they see the call analysis tied to their actual moments.",
-      },
-      {
-        q: "What is the ROI?",
-        a: "Most engagements pay back in the first quarter through increased win rate or recovered coaching time. We size it on the discovery call against your current pipeline and team size.",
-      },
-      {
-        q: "How do you handle privacy on call recordings?",
-        a: "We work in your tenant or your client's, with zero-retention configurations. Transcripts do not train public models. PII handling is configured to match the client's policy.",
-      },
-      {
-        q: "Can this scale to a coach who runs five teams across different companies?",
-        a: "Yes. Each company gets its own configuration, its own library, and its own analysis. You get a cross-portfolio view of what is working everywhere.",
-      },
-    ],
-    primaryKeyword: "ai for sales coaches",
-    secondaryKeywords: [
-      "ai call analysis for sales coaches",
-      "sales coaching automation",
-      "objection library ai",
-      "sales coach content engine",
-      "rep development plan automation",
-    ],
+    {
+      title: "Pro forma builder",
+      body: "Rehab estimate plus rent projection into a five-year pro forma with year-one cash flow, annualized return, and a refi scenario if the numbers support it. Built in minutes, not an hour.",
+    },
+    {
+      title: "Off-market lead scoring and outreach",
+      body: "PropStream or DealMachine pulls scored against a specific investor's buy box, then a personalized first-touch drafted per property. Two hundred leads to twenty warm outreaches in under an hour.",
+    },
+    {
+      title: "Rent comp briefs",
+      body: "Rentometer pull plus MLS rent history for the zip, formatted into a one-page comp sheet that answers the question your investor actually asks: what will this rent for in ninety days.",
+    },
+    {
+      title: "Deal comparison reports",
+      body: "Two to four properties side by side on the metrics that matter: cap rate, cash-on-cash, price per unit, gross rent multiplier, and a plain-language take on which one wins for the investor's stated criteria.",
+    },
+    {
+      title: "Investor CRM re-engagement",
+      body: "Dormant contacts in Follow Up Boss surfaced by last close date and deal history. Re-engagement messages drafted in your voice, not a broadcast template. The investor who bought a duplex two years ago hears something that references that deal.",
+    },
+    {
+      title: "Neighborhood market briefs",
+      body: "Days on market, price per square foot, rental vacancy, and crime trend for any submarket, pulled and formatted before the client call. You walk in with the answer instead of pulling up Zillow on your phone.",
+    },
+    {
+      title: "Listing and offer package prep",
+      body: "Investment property listings and offer packages prepped with the investor narrative front and center: income history, current rents, expense ratio, and the upside thesis. Buyers and their lenders read it faster.",
+    },
+  ],
+  faq: [
+    {
+      q: "How can AI help agents who work with investors?",
+      a: "The biggest wins are speed and throughput. AI runs deal math in minutes instead of forty, scores lead lists before you work them, and keeps investor relationships warm in the CRM with messages that sound personal. Agents who have it in place can respond to a deal same-day and carry a deeper roster of active investor clients without burning out.",
+    },
+    {
+      q: "How accurate is the deal math AI produces?",
+      a: "As accurate as the inputs you give it. The model runs the formulas correctly every time. The variable is the rent estimate and the expense assumption you feed it. We build the workflow to pull from Rentometer and the MLS for rent comps, and we flag when the inputs are thin so you can verify before you send. You are still the one who signs off on the numbers. AI does the arithmetic and the formatting, not the judgment call.",
+    },
+    {
+      q: "Is my client data and deal data safe?",
+      a: "We work in your tenant with zero-retention configurations. Your investor contacts, deal history, and CRM data do not train public models. We sign NDAs and run everything as if the compliance audit is tomorrow. Follow Up Boss data stays in your Follow Up Boss account.",
+    },
+    {
+      q: "What does an engagement cost and who owns the workflows at the end?",
+      a: "Engagements are flat monthly retainers scoped on the discovery call. You own everything we build. The workflows live in your stack, your API keys, your tenant. When the engagement ends you have a documented playbook and nothing has been locked behind a VERA-proprietary platform.",
+    },
+    {
+      q: "Does this work if I operate in multiple markets?",
+      a: "Yes. We configure the rent comp and neighborhood brief workflows per market. Deal scoring for your investor clients is set up against their individual buy boxes, not a generic national filter. Most agents we work with who operate in two or three markets say the multi-market research time is where they see the biggest relief.",
+    },
+    {
+      q: "I already use Follow Up Boss and DocuSign. Do I have to change tools?",
+      a: "No. We wire into Follow Up Boss for the CRM re-engagement layer and DocuSign sits where it already sits. We do not ask you to migrate. The tools you already pay for do more.",
+    },
+  ],
+  openingEssay: [
+    "Investment agents live in a different rhythm than residential agents. A buyer-side residential client takes six months to close one deal. A serious investor expects you to have three viable options in their inbox by Thursday, with an opinion on each one. The math has to be right, the comps have to be current, and the story has to be tight enough that they trust you before a competitor gets the call. Most agents who work with investors are doing all of that manually, in spreadsheets, on their phone, between showings.",
+    "The bottleneck is not intelligence. Every investment-focused agent we talk to knows how to run a cap rate. The bottleneck is time. It takes forty minutes to pull comps from the MLS, run a cash-on-cash, check Rentometer, and format it into something a busy investor can read at 6 AM. Multiply that by five deals a week and you are spending four hours doing analysis that a model can do in four minutes with the right setup. That is not a small efficiency. That is the difference between responding to a hot deal same-day and responding the next morning after someone else already has it under contract.",
+    "The sourcing problem is equally real. Off-market leads from DealMachine or PropStream arrive as raw data: addresses, equity estimates, ownership info. They do not arrive as a coherent outreach strategy. The agents who close off-market deals are the ones who can take a pull of two hundred leads, score them by fit for a specific investor's criteria, and get a personalized first-touch email out within the hour. That workflow does not happen manually at scale. It happens when there is an AI layer between the data and the CRM.",
+    "Follow Up Boss is only as good as the sequences running inside it. Most agents have a CRM full of investor contacts who went cold because the follow-up got inconsistent. An investor who bought one duplex two years ago is probably ready to buy again. They are not calling you because you have not given them a reason to. AI is what keeps the long tail of investor relationships warm, surfaces the re-engagement timing, and drafts the message that feels personal instead of broadcast.",
+    "The agents who win the next five years in the investment space are not the ones who know the most about deal math. They are the ones who can deliver deal math faster than anyone else in the market. Speed is the product. AI is what makes the speed possible without burning out.",
+  ],
+  whatChanges: [
+    {
+      heading: "The 7 AM deal drop",
+      body: "A deal hits the MLS at 6:45. By 7:10 you have a one-page analysis in your investor's inbox: cap rate, cash-on-cash, rent comp pulled from Rentometer, and a plain-English take. You were not the second agent to call. You were the first one with numbers.",
+    },
+    {
+      heading: "The PropStream pull that actually gets worked",
+      body: "Two hundred absentee-owner leads used to sit in a spreadsheet for two weeks. Now you score them against your investor's buy box in twenty minutes, and the top forty have a personalized first-touch drafted and queued in Follow Up Boss before lunch.",
+    },
+    {
+      heading: "The investor call on Wednesday",
+      body: "Your client asks about a submarket they heard about at a meetup. You walk in with a neighborhood brief already on your screen: days on market, median rent, cap rate range, and what inventory looks like. The conversation moves to a specific property in the first five minutes instead of the last five.",
+    },
+    {
+      heading: "The dormant client who bought again",
+      body: "An investor who closed two years ago and went quiet gets a message that references their duplex by address and notes that similar product in that zip is moving at a better cap rate than when they bought. They reply within the day. The relationship did not go cold. You just had not given it fuel.",
+    },
+    {
+      heading: "The pro forma that closed the deal",
+      body: "Your investor was sitting between two properties. A side-by-side comparison with a five-year pro forma on each, a refi scenario, and a one-line recommendation landed in their inbox at 9 PM. They signed the offer by morning. The other agent sent a PDF of the listing sheet.",
+    },
+  ],
+  howWeWork: [
+    "We start with the workflow that costs you the most deals, which for investment agents is almost always the deal analysis turnaround. We build the cap rate and cash-on-cash workflow on a real deal you have in front of you right now, not a hypothetical. You see whether it shaves forty minutes down to four before we build anything else.",
+    "Weeks two through five add the pro forma builder, rent comp briefs, and the off-market scoring layer wired to your PropStream or DealMachine account. By week six we move into the Follow Up Boss re-engagement sequences, because that is usually where the most money is sitting dormant. By week ten you have a documented operating system and your assistant or a TC can run the research layer without you in the room.",
+    "Everything stays in your stack. Follow Up Boss for the CRM layer, DocuSign where it already lives, the MLS for comps, PropStream or DealMachine for off-market, Rentometer for the rent data. We do not ask you to learn a new platform. We wire AI into the seams of the tools you already pay for.",
+  ],
+  whatThisIsNot:
+    "This is not a deal-finding service. We do not source deals for you or your clients. We do not give investment advice and nothing we build constitutes a recommendation to buy any specific property. We do not replace your judgment on deal underwriting, we compress the time it takes to get the numbers in front of the right people so your judgment can do its job faster. If you want a fully managed transaction coordination service or a lead-generation platform, this is not it.",
+  anecdote: {
+    setup:
+      "An investment-focused agent working with twelve active investor clients was running every deal analysis by hand in a Google Sheet. It took him forty-five minutes per deal and he was missing same-day response windows on deals that were going under contract before he could call his buyers.",
+    turn:
+      "We built the cap rate and pro forma workflow in week one on a real fourplex his client was considering. By week three he had the off-market scoring layer running on his PropStream pulls and a re-engagement sequence live in Follow Up Boss for his dormant list.",
+    line:
+      "He closed three deals in the next sixty days that he would have been too slow to reach. Two of them came from the dormant list.",
   },
+  primaryKeyword: "ai for real estate investors",
+  secondaryKeywords: [
+    "ai for investor agents",
+    "ai deal analysis real estate",
+    "investment property agent ai",
+    "real estate pro forma automation",
+    "ai cap rate analysis real estate",
+    "off market lead scoring ai",
+    "investor crm automation real estate",
+    "ai tools for real estate investment agents",
+  ],
+},
 
-  {
-    slug: "marketing-consultants",
-    marqueeLabel: "Marketing consultants",
-    h1: "AI Consulting for Marketing Consultants.",
-    metaTitle: "AI Consulting for Marketing Consultants | VERA",
-    metaDescription:
-      "AI for independent marketing consultants. Strategy decks, content production, monthly reporting, and the system that lets you carry more retainers without hiring.",
-    intro:
-      "Independent marketing is judgment work that lives or dies by production volume. Your edge is the strategy. AI handles the production, the reporting, and the rinse-and-repeat that used to need an account manager.",
-    openingEssay: [
-      "Independent marketing consulting has a structural problem. The strategy work is where the value is and where the margin is. The execution work is what fills the week. Most independents end up doing too much of the second and not enough of the first, because the second is what the client thinks they hired you for and what they ask about every Friday.",
-      "The cap on most independent practices is six retainers. Above six, you either hire, or you cap your fees and start losing clients to the agency that can deliver more frequently. Below six, you have margin but no slack. The whole game becomes whether you can compress production and reporting enough to make the seventh retainer fit without burning out by Q3.",
-      "AI is the lever that actually moves this. Not the version of AI that writes generic blog posts that read like every other AI blog post. The version that holds the client's brand voice in a trained model, drafts the monthly content calendar against the strategy you wrote, and turns the GA4 export plus HubSpot dashboard into a monthly report that your client's CEO will read. That work used to require a junior strategist and an account manager. Now it sits in your week, and the cap moves from six retainers to nine or ten.",
-      "The piece most consultants get wrong is starting with content. Content is the easiest thing to draft poorly. Start with reporting. Reporting is the thing your client measures the relationship by, and a monthly report that reads like a story instead of a screenshot dump is what gets the retainer renewed. Content gets faster the moment voice training is done. Strategy decks get faster the moment your framework library is queryable. None of those are first.",
-      "There is also a positioning shift happening that most independents have not adjusted for. The clients hiring you in 2026 are already using AI internally. They want a consultant who has an opinion on how AI fits their marketing stack, not someone who pretends it does not exist. The version of you that walks into the QBR with a clear answer on which AI tools their team should be running, and which ones they should ignore, is the version that holds the retainer when their CFO starts asking why they need a consultant at all. The operating layer you build with us is part of what gives you the standing to have that conversation.",
-    ],
-    anecdote: {
-      setup: "An independent marketing consultant with five retainers was losing the last week of every month to reporting. She had turned down two qualified inbounds in the previous quarter because she could not see how to fit them in.",
-      turn: "We built her a reporting workflow against GA4 and HubSpot in the first three weeks, then voice-trained the content engine on two of her client brands. Month-end stopped being a black hole.",
-      line: "She closed the seventh retainer the next quarter. Her rate also went up because the deliverable quality made the conversation easier.",
-    },
-    painPoints: [
-      "Strategy decks take three days to build and look the same every time",
-      "Content production is the bottleneck on every retainer",
-      "Monthly reporting eats the last week of every month and the client reads it for thirty seconds",
-      "Onboarding a new client is the same set of docs done by hand",
-      "Pitch and proposal work falls on you and falls on Friday night",
-    ],
-    whatChanges: [
-      {
-        heading: "The monthly report",
-        body: "Last day of the month. GA4, HubSpot, Looker Studio, and the paid ads pull are in a draft report by 9 AM. You spend an hour editing the narrative. Client reads it the same day and forwards it to her CEO. Renewal conversation goes differently.",
-      },
-      {
-        heading: "The Q3 content calendar",
-        body: "You used to spend a Sunday building the next ninety days. Now you walk into a workshop with the strategy, the AI drafts the calendar, and you finalize together. The Sunday is yours again.",
-      },
-      {
-        heading: "The seventh retainer",
-        body: "You had the inbound. You used to turn it down because you were already past capacity. Now you close it because the production and reporting layer can absorb it without breaking the week.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Reporting automation",
-        body: "GA4, HubSpot, paid ads, and Looker Studio into a monthly client report drafted by AI in your tone. The narrative reads like a story, not a screenshot dump.",
-      },
-      {
-        title: "Voice-trained content engine",
-        body: "Per-client voice models. Captions, posts, and newsletter drafts in each brand's exact tone, not in generic AI voice.",
-      },
-      {
-        title: "Strategy decks",
-        body: "Client brief into a custom deck with your frameworks, the right data pulls, and your visual system. The slow part becomes the strategic call, not the slide build.",
-      },
-      {
-        title: "Onboarding flow",
-        body: "Brand audit, brief intake, asset pull, and kickoff deck in one workflow. From signed contract to the first working session in three days.",
-      },
-      {
-        title: "Custom client playbooks",
-        body: "Your methodology turned into per-client playbooks that update with their actual data and their actual quarter.",
-      },
-      {
-        title: "Proposal engine",
-        body: "Custom proposals from the brief, your standards, and your last twenty wins. Drafted before the discovery call cools.",
-      },
-      {
-        title: "Quarterly business review prep",
-        body: "QBR decks drafted from the quarter's data and the original strategy. Hold up against any client's CFO walking into the room.",
-      },
-    ],
-    howWeWork: [
-      "Start with the workflow that hurts most, which for most marketing consultants is reporting. We pull one client's actual data into a draft report on a real month-end. You see whether it lands before we build anything else.",
-      "Weeks two through six wire reporting, strategy decks, and the voice-trained content engine on at least two clients. Weeks seven through twelve move into proposal automation and QBR prep. By week twelve you are running it and have a documented playbook for a contractor or VA.",
-      "Tooling stays in your stack. GA4, HubSpot, Notion, Figma, your scheduler, your CRM. We integrate. We do not migrate.",
-      "There is one piece of process worth flagging up front. We build the voice models against real client data, which means we ask you to bring three to five of your retainers into the engagement so we can train against their actual past content. Most consultants find this less awkward than expected because the work we are doing produces visibly better deliverables for those clients inside the first month. A few prefer to wait and run a pilot on a single brand first. Either is fine. The pilot version takes a couple of weeks longer to compound but ends up in the same place.",
-    ],
-    whatThisIsNot: "This is not a white-label content factory. We are not shipping ghostwritten campaigns under your name. We are not running the retainer for you. If you want a managed-services agency or a SaaS you can resell, this is not it. The work we build is the operating layer that lets you stay the consultant your clients hired, with a production layer that absorbs the volume so you can stay strategic.",
-    faq: [
-      {
-        q: "Does this work with HubSpot, ConvertKit, or Beehiiv?",
-        a: "Yes. We integrate with most marketing platforms. We do not ask you to migrate clients to a new stack.",
-      },
-      {
-        q: "Can my clients tell that AI wrote it?",
-        a: "Not when we train a voice model on the brand. Your edits land in the brand voice, not in AI voice. The risk is in skipping the voice training step.",
-      },
-      {
-        q: "How many clients can I take with this?",
-        a: "Most consultants add two to four retainers without adding hours. The gain shows up first in the production layer and second in the reporting cycle that used to eat month-end.",
-      },
-      {
-        q: "What if the client wants to see how we use AI?",
-        a: "Most are fine with it once we explain the brand voice training and the data handling. A few want a written policy. We help you draft one and it usually becomes a sales asset.",
-      },
-      {
-        q: "Can this support a small team, or only solo?",
-        a: "Both. Solos get the biggest unit-economics gain. Small teams get a consistent operating system across consultants and faster ramp for new hires.",
-      },
-    ],
-    primaryKeyword: "ai for marketing consultants",
-    secondaryKeywords: [
-      "ai tools for marketing consultants",
-      "marketing consultant automation",
-      "ai monthly reporting for marketing",
-      "voice-trained content engine",
-      "marketing consultant client playbook",
-    ],
-  },
-
-  {
-    slug: "seo-consultants",
-    marqueeLabel: "SEO consultants",
-    h1: "AI Consulting for SEO Consultants.",
-    metaTitle: "AI Consulting for SEO Consultants | VERA",
-    metaDescription:
-      "AI for independent SEO consultants. Keyword research, content briefs, technical audits, AI-search readiness, and reporting that wins renewals.",
-    intro:
-      "SEO is a research-heavy practice and the grind is what eats the week. AI does the digging, structures the briefs, and drafts the reports. You stay focused on the calls that close the deal.",
-    openingEssay: [
-      "SEO is in the middle of the most disruptive shift in twenty years and almost nobody in the consulting market is talking about it honestly. Google AI Overviews are eating clicks. ChatGPT and Perplexity are answering questions that used to go through search. The keyword volume reports your clients are looking at no longer reflect the traffic they used to convert. Anyone selling SEO the way they sold it in 2022 is going to lose the renewal, even if the ranking reports look fine.",
-      "The honest read is that the practice is splitting. There is still classic SEO, which is still a real channel for transactional and commercial queries. There is also AI-search readiness, which is a different practice with different technical work and a different reporting story. The consultants who close 2026 retainers are the ones who can credibly do both, and who can explain to a CMO why both matter without selling fear.",
-      "AI is also the lever for compressing the grind. Keyword research at scale, SERP analysis, content brief generation, audit production, all of it used to be the time-sink of independent SEO work. You can collapse most of it into workflows that run from a seed list and a Search Console pull. The question is not whether to use AI. The question is whether you build it once, on top of the stack you already pay for (Ahrefs, Semrush, Screaming Frog, GSC), or you keep hand-rolling it per client and watching the margin shrink.",
-      "There is one more piece worth naming. SEO clients have always been twitchy about whether their consultant is replaceable by a tool. The way you stay scarce is by being visibly ahead of the shift, by reporting in a way that ties technical work to business outcomes, and by holding the strategic call on what to do when the algorithm moves. AI is what gives you the time to do all three.",
-      "The on-page AI-search work is also where the next year of new scope conversations are going to happen. Most CMOs we hear from are asking their existing SEO vendor what the AI-search story is and getting either silence or vague reassurance. Both lose the retainer. The version of you that comes back with a worked example of a page restructured for AI Overview citations, with the structured data shipped and the citation tracking in place, is the version that turns the AI question into the expansion. The technical work itself is not exotic. The packaging and the reporting around it are the part most consultants have not built yet.",
-    ],
-    painPoints: [
-      "Keyword research at scale is where the wins are and the time is brutal",
-      "Content briefs eat the day and the writers still miss the intent",
-      "Audits take a week to produce and a day to read",
-      "Clients are asking about AI search and you do not have a clean story yet",
-      "Monthly reporting reads like a vendor receipt, not a client win",
-      "Renewals are getting harder because the channel narrative has shifted",
-    ],
-    whatChanges: [
-      {
-        heading: "Monday keyword research",
-        body: "Seed list in. Scored opportunities out. SERP intent, difficulty, the right page type per query, and the AI-search angle for the ones that matter there. A morning of work becomes an hour.",
-      },
-      {
-        heading: "Thursday audit delivery",
-        body: "Screaming Frog crawl, Ahrefs site explorer, GSC pull, and on-page checks into a client-ready audit by Thursday afternoon. The narrative explains what is broken and what the business impact is, not just what is technically wrong.",
-      },
-      {
-        heading: "The AI-search conversation",
-        body: "Client asks about ChatGPT and Perplexity citations on the next call. You walk them through the structured data, the llms.txt, the on-page moves, and the early citation reporting. The conversation that almost cost you the retainer just earned you the expansion.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Keyword research engine",
-        body: "Seed list to scored opportunities. SERP intent, difficulty, and the right page type per query, including the AI Overview cluster opportunities.",
-      },
-      {
-        title: "Programmatic content briefs",
-        body: "Per-query briefs with H tags, internal links, the exact gap to close, and the intent flag. Writers stop missing the brief.",
-      },
-      {
-        title: "Audit automation",
-        body: "Screaming Frog, Ahrefs, Search Console into a client-ready audit. Issues prioritized by business impact, not by severity score.",
-      },
-      {
-        title: "AI-search readiness",
-        body: "Structured data, llms.txt, schema cleanup, and on-page moves that get cited in ChatGPT, Perplexity, and Google AI Overviews. With reporting that shows citations growing.",
-      },
-      {
-        title: "Reporting that wins renewals",
-        body: "GSC, Ahrefs, GA4 into a monthly story your client's CEO will read. Ties technical work to revenue, not just rankings.",
-      },
-      {
-        title: "Custom client playbooks",
-        body: "Your operating system as a per-client playbook that scales with the engagement and survives the handoff to their team.",
-      },
-      {
-        title: "Internal link orchestration",
-        body: "Site graph analysis into specific link recommendations per published page. The cluster work that nobody has time to do manually.",
-      },
-      {
-        title: "Proposal engine",
-        body: "Custom proposals built from the brief, your standards, and your last twenty wins. Including the AI-search angle when it earns its place.",
-      },
-    ],
-    howWeWork: [
-      "We start with reporting because that is the conversation your client measures the renewal by, and it is the workflow that produces the fastest visible win. We pull one of your live clients' data into a draft report on a real month-end.",
-      "Weeks two through six move into the keyword research and content brief engines. Weeks seven through ten address AI-search readiness, which most consultants we work with want to ship to at least two clients before quarter-end. Twelve weeks in, you have the full operating system and a documented playbook.",
-      "Tooling stays where you have it. Ahrefs, Semrush, Screaming Frog, GSC, Looker Studio, Sitebulb. We integrate. The goal is to make every tool you already pay for produce more output.",
-      "One process note worth flagging. SEO clients in 2026 are nervous about how AI is used in their content production, partly because Google has been clear about what gets penalized and partly because the lower-quality end of the AI content market has poisoned the well. We help you build an internal SOP that explains how AI is used in your workflow, where the human editing happens, and what kinds of work the model does and does not touch. Clients consistently respond well to it. The transparency is what turns the AI conversation from a procurement worry into a competitive advantage.",
-    ],
-    whatThisIsNot: "This is not a content mill. We do not write 50 articles a month under your name. We do not do link building. We do not sell you a rank-tracking SaaS. If you are looking for outsourced execution, that is a different vendor. The work we ship is the operating layer that makes your consulting practice sharper and more defensible as the channel shifts.",
-    anecdote: {
-      setup: "An independent SEO consultant with seven retainers spent the last week of every month buried in client reports. Two of his clients had asked about AI search and he had nothing to say beyond hand-waving.",
-      turn: "We built him a reporting workflow that drafts the monthly story from GSC, Ahrefs, and GA4 in his tone. Then we shipped an AI-search readiness audit for both of those clients in three weeks.",
-      line: "One renewal closed at a 22 percent increase. The other expanded scope into AI-search work he could not have priced six months ago.",
-    },
-    faq: [
-      {
-        q: "Will AI replace SEO consultants?",
-        a: "No. AI changes how SEO gets done. Strategy and judgment are still yours. The grind is what gets automated. Consultants who absorb the shift will be more valuable, not less.",
-      },
-      {
-        q: "Does this work with Ahrefs, Semrush, and GSC?",
-        a: "Yes. We integrate with all three, plus Search Console, Looker Studio, Screaming Frog, Sitebulb, and most BI tools.",
-      },
-      {
-        q: "How does this help with AI-search visibility?",
-        a: "We install the structured data, FAQ schema, llms.txt, and on-page moves that get cited in ChatGPT, Perplexity, and Google AI Overviews. We also build the early-stage reporting that tracks citations as they show up, which is the part most consultants do not have yet.",
-      },
-      {
-        q: "Is AI-generated content safe for SEO now?",
-        a: "It depends entirely on the workflow. AI content that ships from a generic prompt and a keyword is what Google penalized. AI content that ships from a strategic brief, with human editing and original research, ranks. The voice-trained content engine we build is the second kind.",
-      },
-      {
-        q: "How fast does it pay back?",
-        a: "Most consultants we work with see the reporting workflow alone pay back inside the first two months on saved time and improved renewal rates. The AI-search work usually opens a scope expansion conversation that pays back the engagement on its own.",
-      },
-    ],
-    primaryKeyword: "ai for seo consultants",
-    secondaryKeywords: [
-      "ai-search readiness for seo",
-      "seo consultant automation",
-      "ai keyword research workflow",
-      "seo audit automation",
-      "seo reporting for renewals",
-    ],
-  },
-
-  {
-    slug: "social-media-managers",
-    marqueeLabel: "Social media managers",
-    h1: "AI Consulting for Social Media Managers.",
-    metaTitle: "AI Consulting for Social Media Managers | VERA",
-    metaDescription:
-      "AI for social media managers. Multi-brand voice models, scheduling, community management, and reporting that holds up at renewal.",
-    intro:
-      "Social is volume work in a voice that has to be exactly right. AI carries the volume. The voice stays yours and the strategy stays in your control.",
-    openingEssay: [
-      "Social media management is one of the worst-paid volume problems in marketing. You are running five brands in five voices, posting across three platforms each, replying to a hundred DMs, building monthly reports, and the client's expectation is that all of it sounds native and looks designed. The fee for that work is rarely what it should be, and the hours required to deliver it are almost always more than the rate covers.",
-      "Two things keep you from raising the price. The first is that the deliverables are visible to the client every day, which means every typo and every off-tone caption costs trust. The second is that the production work feels commoditized from the outside, and the moment a client believes ChatGPT can do it for them, the conversation is hard. Neither of those problems is solved by working more hours.",
-      "The shift is to a workflow that uses AI as the production layer and you as the voice and the strategist. Per-client trained voice models. A scheduler that runs on a calendar built from the strategy. Community management that drafts replies in voice and routes hot ones to you. Reporting that reads like a story your client's CMO will forward. None of this is the work of replacing yourself. It is the work of charging for the right thing.",
-      "The honest read on most AI tools sold to social media managers is that they are template generators with a prettier interface. They flatten brand voice in a week and you are back to writing every caption by hand. The version that works is the one trained on the brand's actual past content, configured per-platform, with you in the editing seat. That setup is what we build.",
-      "Short-form video is the place this conversation matters most. The volume expectation on Reels and TikTok has gotten absurd, and the talent pool of in-house creators that can produce four short-form videos a week per brand does not exist for the rates clients are willing to pay. The workable version of the practice is a script and hook library trained on what is actually working in the brand's category, paired with an editor who can move fast, paired with you on the strategic call about what the brand should be saying this month. AI is the layer that makes the hook library possible. It does not replace the editor. It does not replace your strategic eye. It removes the part of the work where you stare at a blank doc trying to come up with the fifth hook for the same product.",
-    ],
-    anecdote: {
-      setup: "A social media manager running six brand retainers was on the verge of dropping two of them because Thursday and Friday had become production catch-up days where she could not breathe.",
-      turn: "We trained voice models on her three highest-volume brands and built the community management layer first. Drafts started landing in her queue Monday morning. She edited and shipped.",
-      line: "She kept all six retainers, raised the rate on two of them, and stopped checking the brand DMs at midnight.",
-    },
-    painPoints: [
-      "Writing in five client voices a day burns you out by Thursday",
-      "Visual production is bottlenecked by your design hand",
-      "Community management takes the hours you needed for strategy",
-      "Reporting reads like a screenshot dump, not a client win",
-      "Onboarding a new brand is two weeks of voice calibration done by hand",
-      "Sales and proposals fall on the founder and fall on Sunday",
-    ],
-    whatChanges: [
-      {
-        heading: "The Thursday afternoon block",
-        body: "You used to dread the Thursday block where you write next week's captions across five brands. Now the drafts are sitting in Later or Buffer in each brand's tone, you edit for twenty minutes per client, and you are done by lunch.",
-      },
-      {
-        heading: "The DM inbox",
-        body: "Replies draft in voice as soon as a DM lands. You approve in batch. Hot leads, complaints, and anything the model is not sure about route to you with context. The thirty-minute morning ritual becomes ten.",
-      },
-      {
-        heading: "The monthly report",
-        body: "Native analytics into a narrative report your client reads in two minutes. It mentions the campaign that did well, the one that did not, and the recommendation for next month. The PowerPoint with eighteen screenshots is gone.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Per-brand voice models",
-        body: "Voice models trained on each brand's actual past content. Captions, hooks, and stories in each brand's exact tone, not in generic AI voice.",
-      },
-      {
-        title: "Visual production",
-        body: "Templates plus AI image work into scroll-stopping carousels in your client's visual system. Figma stays the source of truth, AI does the volume.",
-      },
-      {
-        title: "Community management layer",
-        body: "DMs, comments, and reply drafting in brand voice. You approve, AI sends. Hot ones route to you with context attached.",
-      },
-      {
-        title: "Reporting that wins renewals",
-        body: "Native analytics into a monthly report that reads like a story. Forward-ready for the client's CMO.",
-      },
-      {
-        title: "Content calendar automation",
-        body: "Strategy into a 30-day calendar, scheduled to Later or Buffer, with assets attached. Approval cycles built in.",
-      },
-      {
-        title: "Onboarding workflow",
-        body: "New brand to a trained voice model and a first content batch in three days. The two-week calibration window collapses.",
-      },
-      {
-        title: "Proposal engine",
-        body: "Discovery calls into custom proposals with the client's brand all over them. Drafted before the call cools.",
-      },
-    ],
-    howWeWork: [
-      "Start with the voice model build for the brand that hurts the most. We use your last six months of their content and your edit notes to train a model that drafts the way the client expects. You see it land before we build anything else.",
-      "Weeks two through six expand voice models across the roster and ship the community management layer and reporting workflow. Weeks seven through ten move into onboarding and proposal automation. By twelve weeks you have the operating system and a playbook for your team.",
-      "Stack stays as is. Later, Buffer, Hootsuite, Sprout, Figma, Canva, Meta Business Suite, your analytics. We integrate against what your clients pay for.",
-      "We also help you write the AI policy that goes into your MSA. Most clients in 2026 want some assurance about how their brand voice and content are being handled by AI tools, and the version that calms procurement teams is a specific written policy rather than a vague reassurance. We supply a template policy and adapt it to your engagement model. It becomes a sales asset rather than a procurement obstacle.",
-    ],
-    whatThisIsNot: "This is not a content factory. We do not ghostwrite for you under a flat fee. We do not run your client accounts. If you want a SaaS or a managed-services arm, that is a different conversation. The work here is the operating layer that lets you stay the social manager, with a production layer that gives you back enough hours to raise the rate or take the seventh retainer.",
-    faq: [
-      {
-        q: "Will my clients catch that AI is writing?",
-        a: "Not when the voice model is trained properly on the brand. The drafts hold the cadence, the references, and the inside jokes. You stay in the editing seat. This is the difference between voice training and a generic prompt.",
-      },
-      {
-        q: "Does this work with Later, Buffer, or Hootsuite?",
-        a: "Yes. We integrate with most schedulers. We do not ask you to migrate clients to a new stack.",
-      },
-      {
-        q: "Can I really manage more clients?",
-        a: "Most managers add two to five retainers with the same hours after the engagement, or they raise rates because the deliverable quality goes up. Either choice is yours.",
-      },
-      {
-        q: "What about TikTok and short-form video?",
-        a: "We build the captioning, the hook library, and the script-drafting layer. The on-camera and the editing stay with you or your editor. The workflow assists, it does not replace the creative.",
-      },
-      {
-        q: "Can this support a small team of managers?",
-        a: "Yes. The voice models become shared infrastructure and consistency goes up across clients. Newer team members ramp on a real operating system.",
-      },
-    ],
-    primaryKeyword: "ai for social media managers",
-    secondaryKeywords: [
-      "ai tools for social media management",
-      "multi-brand voice model",
-      "social media community management ai",
-      "social media reporting ai",
-      "social media manager automation",
-    ],
-  },
-
-  {
-    slug: "brand-consultants",
-    marqueeLabel: "Brand consultants",
-    h1: "AI Consulting for Brand Consultants.",
-    metaTitle: "AI Consulting for Brand Consultants | VERA",
-    metaDescription:
-      "AI for brand consultants and strategists. Research synthesis, naming engines, brand voice systems, and living guidelines the client's team actually uses.",
-    intro:
-      "Brand work is research, articulation, and a system the client can run after you leave. AI handles the research depth and the production while you keep the strategic call.",
-    openingEssay: [
-      "Brand consulting has a delivery problem nobody likes to talk about. The strategy is sharp, the deck is great, the guidelines doc is beautiful, and three months after the engagement ends the client's marketing team is writing in a voice nobody on your engagement would recognize. The brand drifts because the system you handed them is static, and the moment a new marketer joins the team, the doc gets skimmed and ignored.",
-      "There is a similar problem on the input side. The first two weeks of a brand engagement are research. Customer interviews, competitive scans, category analysis, internal stakeholder interviews. The synthesis takes another week. None of this is the work clients want to pay for, but all of it is what makes the strategy credible. You either compress the research and lose the depth, or you do the research properly and watch the margin compress.",
-      "AI does not fix brand strategy. The strategic call is still yours and there is no model that does the part where you decide what the brand actually is. What AI does is collapse the research synthesis and turn the brand voice into something that survives the handoff. A trained voice model on the founder's writing, embedded in a Notion or Frontify guidelines doc the client's team queries when they sit down to write. The brand stops drifting.",
-      "The naming and tagline work is the third place AI earns its place. The old workflow was a brief, a brainstorm, a hundred candidates, a shortlist, and a justification doc. Most of the hundred were never going to make the shortlist. The work was reading through them. A naming engine generates the hundred for you, with the rationale and the trademark flag, and you spend the time on the ten that are actually contenders.",
-      "There is a credibility shift happening in brand work that deserves to be named. The clients hiring a brand consultant in 2026 have already tried Looka, generated a hundred AI logos, and concluded that the strategic call still requires a human. Good news for the consulting practice. The corollary is that they expect the consultant they hire to be visibly using AI in the practice itself, not as a fear-driven holdout from it. The version of you that walks in with a research synthesis workflow that runs in three days instead of two weeks, and a voice model that the client's team can keep using after handoff, is the version that gets the next engagement. The clients are not buying your hours. They are buying the system you have built around your judgment.",
-    ],
-    painPoints: [
-      "Brand research takes two weeks before the first slide is built",
-      "Naming, taglines, and copy iterations eat the back half of every engagement",
-      "Brand guidelines docs never get used by the client's team after handoff",
-      "Voice and tone drift the second you hand off the engagement",
-      "Pitch and proposal work is the slowest part of the sales cycle",
-      "Every engagement reinvents the research process from scratch",
-    ],
-    whatChanges: [
-      {
-        heading: "Week one of the engagement",
-        body: "Customer interview transcripts, competitor copy scans, and category research synthesize into a draft strategic brief by Friday. You bring your judgment to the read on Monday instead of spending the week pulling and tagging quotes.",
-      },
-      {
-        heading: "The naming session",
-        body: "Brief to a hundred candidates to a defensible shortlist of ten with rationales and trademark flags. The work that used to take two weeks happens in a working session.",
-      },
-      {
-        heading: "Six months after handoff",
-        body: "The client's new content marketer joins. She opens the brand guidelines doc, queries it for the brand voice, and the model drafts her first newsletter in a voice that holds. The brand does not drift this time.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Research synthesis engine",
-        body: "Customer interviews, competitive scans, and category research into a strategic brief with quotes attributed and contradictions flagged.",
-      },
-      {
-        title: "Naming and tagline engine",
-        body: "Brief to a hundred candidates to a defensible shortlist with rationale and trademark flags. The work compresses by a factor of five.",
-      },
-      {
-        title: "Trained brand voice system",
-        body: "Voice model trained on the founder's writing and the strategic brief. The client's team writes in voice from day one and keeps writing in voice after handoff.",
-      },
-      {
-        title: "Living brand guidelines",
-        body: "Notion or Frontify deliverable that updates as the brand evolves. Queryable, searchable, used by the team that actually does the writing.",
-      },
-      {
-        title: "Visual identity briefs",
-        body: "Strategy to a design brief your visual partner can execute without a round of revisions.",
-      },
-      {
-        title: "Pitch and renewal engine",
-        body: "Custom proposals from the brief and your last twenty wins. Drafted before the discovery call cools.",
-      },
-      {
-        title: "Stakeholder interview library",
-        body: "Past interviews structured into a queryable library so new engagements start with category context, not a blank doc.",
-      },
-    ],
-    howWeWork: [
-      "We start with the research synthesis workflow because for brand consultants it produces the fastest visible relief. We run it against the engagement you are currently in or one that just finished, so you see the difference on a real brief.",
-      "Weeks two through six build the naming engine and the voice model on a live brand. Weeks seven through ten ship the living guidelines and the proposal engine. By week twelve you have an operating system that scales across engagements and survives team turnover at the client.",
-      "Tooling sits in your stack. Figma, Frontify, Notion, your interview platform, your trademark search tool. We integrate. We do not migrate.",
-      "There is a hand-off pattern that comes up in almost every brand engagement we run, and it is worth flagging. The strategy lands well, the deliverables ship, and three months later the client's in-house team has slowly drifted away from the brand voice. The cause is almost always that the guidelines doc was static and nobody on the team remembered to look at it before writing. The living guidelines and voice model setup we build addresses this directly by making the brand voice queryable inside the tools the team already writes in. The handoff stops being the moment the brand starts to dilute and becomes the moment the brand actually starts to be lived inside the company.",
-    ],
-    anecdote: {
-      setup: "A brand consultant running solo had won a positioning engagement for a Series B fintech company. The strategic call was sharp. The research phase was supposed to take ten days and was on day fourteen with another week to go.",
-      turn: "We built the research synthesis workflow against her interview transcripts and the competitor landscape in week one of our engagement. The synthesis came together inside two days. The strategy phase started a week earlier than planned.",
-      line: "The engagement closed on time at a 30 percent margin instead of a break-even, and the voice model she built for the client is still being used by their content team eighteen months later.",
-    },
-    whatThisIsNot: "This is not a logo generator. We are not selling a brand-in-a-box product. We are not going to do your strategic call for you and we are not going to replace the design partner you work with. If you want a fully productized brand SaaS, that is a different vendor. What we ship is the operating layer that makes your consulting practice deeper, faster, and more defensible after the deck ships.",
-    faq: [
-      {
-        q: "Will AI replace brand strategy?",
-        a: "No. The strategy and the judgment are yours. AI handles the production depth that used to require a team. The strategic call is still the scarce thing and it gets sharper when you have time to think.",
-      },
-      {
-        q: "What about the client's voice and IP?",
-        a: "We train voice models per client and host them in environments where data does not train public models. The voice model is the client's asset and travels with them.",
-      },
-      {
-        q: "Can this work with Figma and Notion?",
-        a: "Yes. The deliverables ship to Figma, Notion, Frontify, or wherever the client's team lives. We do not ask you or the client to switch tools.",
-      },
-      {
-        q: "How do you handle the naming legal review?",
-        a: "The naming engine flags trademark conflicts at the candidate stage so you do not waste cycles on names that will not survive the search. The actual legal review still happens with your IP attorney.",
-      },
-      {
-        q: "How fast does an engagement see results?",
-        a: "Most consultants ship the research synthesis workflow on a live engagement inside three weeks and feel the time relief immediately. The voice model and living guidelines compound over the next two engagements after that.",
-      },
-    ],
-    primaryKeyword: "ai for brand consultants",
-    secondaryKeywords: [
-      "brand voice model ai",
-      "ai naming engine",
-      "brand consultant automation",
-      "living brand guidelines",
-      "brand strategy research synthesis ai",
-    ],
-  },
-
-  {
-    slug: "strategy-consultants",
-    marqueeLabel: "Strategy consultants",
-    h1: "AI Consulting for Strategy Consultants.",
-    metaTitle: "AI Consulting for Strategy Consultants | VERA",
-    metaDescription:
-      "AI for independent strategy consultants. Market research, financial modeling, deck production, and the operating system that lets a one-person practice carry boutique-firm engagements.",
-    intro:
-      "Strategy is research, framing, and recommendation. AI compresses the research timeline and drafts the deliverable. You keep the strategic call, and your week.",
-    openingEssay: [
-      "Independent strategy consulting is a discipline that has been quietly held back by tooling. The fundamental work, framing the problem, gathering the evidence, building the recommendation, has not changed since the eighties. What has changed is that the evidence-gathering layer is now compressible by an order of magnitude. Most independents have not absorbed this yet, which is why a four-week engagement still looks like two weeks of research and one week of deck.",
-      "The compression is not in the strategic call. There is no model that decides what the recommendation is. What gets faster is the part where you read forty earnings calls to find the pattern, where you pull the comp set financials into a comparable analysis, where you turn fifteen customer interviews into themes. All of that used to require a junior associate. Now it sits in a workflow that runs while you are doing the strategic work it is feeding.",
-      "The honest constraint on this shift is judgment. AI will pull the wrong patterns from research if the framing is loose. It will build a financial model that compiles but recommends something stupid if the assumptions are not interrogated. The independents who do this well are the ones who use AI as the research and production layer and stay in the seat for framing, judgment, and the final recommendation. The ones who try to outsource the judgment to the model produce work that looks like a McKinsey deck written by someone who has never worked at McKinsey.",
-      "The competitive picture matters here. A boutique firm with eight associates was your competition five years ago. AI shifts the picture so that a single independent with the right operating system can carry an engagement that used to need a team of four. The clients notice. The deck holds up. The day rate stops looking unreasonable when the deliverable looks like the firm's.",
-      "There is also a moat question worth answering. The fear most independents have is that if AI can do the research and the modeling and the deck production, then the client will eventually do it themselves and stop hiring consultants. The truthful answer is that some clients will. Most will not, because the strategic call still requires judgment built over years of running these problems, and the client's internal team has eight other priorities. What you sell shifts. You stop selling production hours. You start selling the framing, the judgment, and the operating system you have built to deliver. Independents who absorb this shift have higher rates and shorter engagements two years from now. The ones who do not will compete with their own clients' interns.",
-    ],
-    painPoints: [
-      "Market research and competitor scans eat two weeks of every engagement",
-      "Financial modeling is the same template done by hand every time",
-      "Deck production is the slowest part of the work and the part the client measures",
-      "Sales decks and proposals look the same as every other independent's",
-      "Onboarding a client takes a week before the real work starts",
-      "Past engagements are not queryable so every project starts from a blank brief",
-    ],
-    whatChanges: [
-      {
-        heading: "Week one of the engagement",
-        body: "Industry data, competitor moves, and the comp set analysis are in a draft brief by Friday. You walk into Monday with the framing already drafted instead of a research backlog.",
-      },
-      {
-        heading: "The financial model",
-        body: "Your standard template is now populated against the client's data, with sensitivity tables and assumptions you can defend. The half-day you used to spend rebuilding it becomes ninety minutes of editing.",
-      },
-      {
-        heading: "The recommendation deck",
-        body: "Brief to a clean draft deck with your structure and your visual language by Wednesday. You spend the back half of the week on the recommendation itself, which is the part that justifies the day rate.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Research synthesis",
-        body: "Industry data, competitor moves, earnings calls, and customer interviews into a draft strategic brief with sourcing attached.",
-      },
-      {
-        title: "Financial modeling",
-        body: "Your standard template, populated from data, with sensitivity tables and assumptions you can defend in a board room.",
-      },
-      {
-        title: "Recommendation decks",
-        body: "Brief to a clean draft deck with your structure and your visual language. The slow part becomes the strategic call, not the slide build.",
-      },
-      {
-        title: "Custom client playbooks",
-        body: "Your methodology turned into a per-engagement playbook the client can run after you leave.",
-      },
-      {
-        title: "Proposal engine",
-        body: "Custom proposals from the brief, your standards, and your last twenty wins. Drafted before the discovery call cools.",
-      },
-      {
-        title: "Discovery and qualification",
-        body: "Inbound triage, qualification scoring, and discovery call prep drafted from a brief LinkedIn and 10-K pull.",
-      },
-      {
-        title: "Engagement library",
-        body: "Past projects structured into a queryable library so new engagements start with relevant context instead of a blank deck.",
-      },
-      {
-        title: "Quarterly check-in narratives",
-        body: "Long-form clients get a quarterly narrative drafted from the work done, the metrics that moved, and the recommendation for what is next.",
-      },
-    ],
-    howWeWork: [
-      "We start with the research synthesis workflow because for strategy consultants it is the workflow that produces the most visible relief inside two weeks. We run it on a live engagement against real source material.",
-      "Weeks two through six build the financial model template and the deck production workflow. Weeks seven through twelve move into the engagement library and the proposal engine. By week twelve you have an operating system that competes with a boutique firm.",
-      "Stack stays as is. Excel, Google Sheets, PowerPoint, Keynote, Figma, Notion. We integrate. We do not ask you to switch the tools your clients expect.",
-      "One thing worth saying about how we handle source material. Most strategy engagements rely on a research base that is part proprietary client data, part purchased market data, and part open-source signals from filings, earnings calls, and industry reports. We help you build a research library that respects the licensing terms of the purchased sources, keeps the client data in their tenant, and structures the open-source layer so it is queryable across engagements. The result is that your fifth engagement in a sector starts with category fluency you did not have to rebuild. That fluency is what your clients are actually paying for.",
-    ],
-    anecdote: {
-      setup: "A solo strategy consultant was bidding on a market entry engagement against a boutique firm with eight associates. The deliverable expectation was three weeks of research and a recommendation deck.",
-      turn: "We built him a research synthesis workflow and a deck production system in the four weeks before the engagement started. He delivered the work himself in the three-week timeline with a deck the client compared favorably to the boutique firm they had used the prior year.",
-      line: "He has run two more engagements at the same client since, at rates the boutique firm would have charged.",
-    },
-    whatThisIsNot: "This is not a deck factory. We do not ghostwrite strategy decks under your name. We do not interview your clients for you. We do not make the strategic call. If you want a managed-services engagement where the deliverables ship without you in the seat, that is a different vendor. The work we ship is the operating layer that makes your judgment more available to the client by removing everything around it that does not require you.",
-    faq: [
-      {
-        q: "Is this for boutique firms or solo strategy consultants?",
-        a: "Both. The gain is biggest for solo and small-team practices where every hour is the founder's. Boutique firms get a consistent operating system across consultants and faster associate ramp.",
-      },
-      {
-        q: "How does this handle confidential client data?",
-        a: "Engagements run under NDA in your tenant or an isolated environment. Source documents do not train public models. We use zero-retention configurations for anything sensitive.",
-      },
-      {
-        q: "Will AI commoditize strategy work?",
-        a: "It will compete on the work that is already commoditized. The strategic call is still scarce. The independents who absorb the shift will be more valuable, not less. The ones who do not will lose to ones who did.",
-      },
-      {
-        q: "What about hallucinations in research?",
-        a: "We build the workflow with sourcing requirements and a verification step. The model cites the source, you check the source on anything load-bearing. The discipline is the same one you would apply to a junior associate's research, except the workflow enforces it.",
-      },
-      {
-        q: "Can this support an engagement with a Fortune 500?",
-        a: "Yes. We have built engagements that ship into procurement processes and security reviews. The setup respects the data handling requirements that come with large clients.",
-      },
-    ],
-    primaryKeyword: "ai for strategy consultants",
-    secondaryKeywords: [
-      "ai for management consulting",
-      "strategy consultant automation",
-      "ai market research synthesis",
-      "financial modeling automation",
-      "strategy deck production ai",
-    ],
-  },
-
-  {
-    slug: "content-creators",
-    marqueeLabel: "Content creators",
-    h1: "AI Consulting for Content Creators.",
-    metaTitle: "AI Consulting for Content Creators | VERA",
-    metaDescription:
-      "AI for solo creators running newsletters, podcasts, and content businesses. Voice systems, production engines, and the workflows that let one person operate like a team.",
-    intro:
-      "You are the brand. Your voice is the asset. AI carries the volume of production without diluting the voice that built your audience.",
-    openingEssay: [
-      "The economics of a one-person content business have always been strange. The audience is paying attention to one voice. The actual operation behind that voice is a producer, an editor, a writer, a community manager, a sponsorship coordinator, and a strategist. If you do all of those jobs yourself, you stop being the creator and become a back-office manager who happens to publish. If you hire all of them out, the voice flattens because there are now seven people deciding what the brand sounds like.",
-      "The shift with AI is that the production layer can carry more volume without adding humans. The trick, and there is a real trick, is that the voice has to be trained right or the whole thing degrades within a month. Most creators we talk to have tried ChatGPT with a custom GPT or a system prompt. The output reads close enough on the first pass and noticeably worse by the third. The voice flattens, the references go generic, the cadence becomes uniform. The audience can tell, even if they cannot articulate it.",
-      "The version that works is a voice model trained on your actual writing, transcripts, and posts across years. Not a prompt. A model. Embedded in workflows that keep you in the editorial seat for the high-judgment work and use AI for the production volume that used to require a team. Drafts come in close. You edit on the margin. The voice holds.",
-      "There is a second piece worth naming. Most creators are sitting on an idea graveyard of voice memos, half-written notes, Twitter drafts that never shipped, and book ideas that have been on the shelf for two years. The shift is not just in production. It is in turning that graveyard into a queryable idea bank so that when you sit down to write, you start with the inventory of what you have already half-thought, not from a blank doc.",
-      "The third piece is the audience relationship itself. The reason a one-person creator business works at all is that the audience feels something direct about the voice they are hearing. That direct line is the asset. Every layer of automation between you and the audience risks diluting it. The right design keeps you in the editorial seat for the work that decides what the audience thinks of you, and uses AI for everything else. The line that should not be crossed is the high-judgment editorial call. The lines that should be crossed are the production, the triage, the repurposing, and the operational glue. Most creators we work with cross the wrong lines first. They automate the editorial and write the welcome emails by hand. We help reverse that.",
-    ],
-    painPoints: [
-      "Newsletter and podcast production eats every week and nothing else gets shipped",
-      "Sponsorship prep and reporting takes hours that should go to the audience",
-      "Idea capture is messy across Notion, Apple Notes, Twitter drafts, and voice memos",
-      "Repurposing into clips, threads, and shorts almost never happens consistently",
-      "Audience comms drown the inbox and burn the energy needed for the next piece",
-      "The book or course you have been meaning to write has been on the shelf for two years",
-    ],
-    whatChanges: [
-      {
-        heading: "The Monday newsletter window",
-        body: "You sit down at 7:00 with the topic. The voice model has drafted three opening paragraphs from your past pieces on adjacent topics, plus a structural sketch of where the piece could go. You write the piece. The hard part is still writing the piece. The blank doc problem is gone.",
-      },
-      {
-        heading: "After the podcast records",
-        body: "Episode wraps. By the end of the day there are three clip prompts pulled from the transcript, a newsletter summary in your voice, and a thread draft on the punchiest moment. You publish two of them by Wednesday instead of waiting until next month.",
-      },
-      {
-        heading: "The DM inbox",
-        body: "Reply drafts in your voice land in a queue. Audience questions get a thoughtful answer in the voice you would have used if you had the time. You spend ten minutes a day editing and approving instead of two hours every Friday catching up on the backlog.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Voice-trained drafting",
-        body: "Trained voice model on your past work. Drafts that read like you on the first pass, not in generic AI voice.",
-      },
-      {
-        title: "Idea engine",
-        body: "Voice memos, notes, and reads into a queryable idea bank. The next piece starts from the inventory, not a blank doc.",
-      },
-      {
-        title: "Multi-channel repurposing",
-        body: "One long piece into newsletter, thread, podcast notes, and clip prompts in your tone. Volume without the rewriting cost.",
-      },
-      {
-        title: "Sponsorship workflow",
-        body: "Brief intake, asset pull, draft scripts, and post-campaign reporting in one pipeline. The work between you and the check disappears.",
-      },
-      {
-        title: "Audience comms",
-        body: "Reply drafts, DM triage, and welcome sequences that sound like you. You stay in the loop on the ones that need you.",
-      },
-      {
-        title: "Product launches",
-        body: "Course, book, or product launch sequences in your voice across email and social. The launch month stops being a black hole.",
-      },
-      {
-        title: "Long-form research support",
-        body: "Notes, transcripts, and source material organized for the big piece you have been putting off because the research load was too heavy.",
-      },
-    ],
-    howWeWork: [
-      "We start with the voice model because almost everything else in the engagement depends on it being right. We pull your past two years of work, train the model, and you read draft outputs against your editing standard before we build anything else.",
-      "Weeks two through six wire the voice model into newsletter drafting, repurposing, and audience comms. Weeks seven through ten move into sponsorship workflow or product launch support, depending on what is on the calendar. By week twelve you have the operating system and you are running it.",
-      "Stack stays as is. Beehiiv or Substack or ConvertKit, Riverside or Descript, Notion, your inbox, your scheduler. We integrate against what you already use.",
-      "We also have an opinion on the sequence creators run their AI rollout in. Start with the voice model. Do not start with content automation. Most creators who burned themselves on AI did the second first, shipped flat content, lost a chunk of their audience, and concluded the technology was the problem. The technology was not the problem. The order was. With the voice model trained first, every workflow you build on top of it inherits the voice, and the audience never notices the production shift.",
-    ],
-    whatThisIsNot: "This is not ghostwriting. We do not write under your name. We do not run your account. We do not make editorial calls for you. If you want a fully managed content team that ships without you in the seat, that is a different vendor and a different price. The work here is the system that lets you stay the creator without burning out on the operation.",
-    anecdote: {
-      setup: "A creator with 80,000 newsletter subscribers and a podcast was missing every other publish window. The voice memo file on her phone had 300 unprocessed ideas. The sponsorship inbox had not been triaged in a month.",
-      turn: "We trained her voice model on three years of newsletters, built an idea engine that pulled the voice memos into themes, and shipped a sponsorship workflow that drafts replies and runs the reporting cycle.",
-      line: "She is publishing weekly again, the sponsorship inbox is current, and she shipped the first three chapters of the book that had been on the shelf since 2023.",
-    },
-    faq: [
-      {
-        q: "Will AI flatten my voice?",
-        a: "Only if you skip the voice training step. Done right, the drafts hold your cadence, your references, and your opinions. You edit on the margin instead of rewriting. The wrong way to do this is a prompt template, which is why most creators who tried it gave up.",
-      },
-      {
-        q: "Can sponsors tell?",
-        a: "No, when the brand voice is trained well and you stay in the editorial seat. Sponsors usually notice that turnaround improved and the work reads more like you, not less.",
-      },
-      {
-        q: "What does this cost?",
-        a: "Engagements start at four-figure monthly retainers and scale with depth. We scope on the first call so the number is not a surprise.",
-      },
-      {
-        q: "Will this work for a podcast-first business?",
-        a: "Yes. The voice model trains off transcripts. The repurposing layer is the highest-ROI workflow for podcasters because it turns one hour of recording into a week of content without rewriting.",
-      },
-      {
-        q: "I have a team of three. Does this still apply?",
-        a: "Yes. The voice model becomes shared infrastructure across your team so the brand stays consistent even when different humans are drafting. New team members ramp on a documented operating system.",
-      },
-    ],
-    primaryKeyword: "ai for content creators",
-    secondaryKeywords: [
-      "voice model for creators",
-      "creator content engine ai",
-      "newsletter automation ai",
-      "podcast repurposing workflow",
-      "solo creator operating system",
-    ],
-  },
-
-  {
-    slug: "course-creators",
-    marqueeLabel: "Course creators",
-    h1: "AI Consulting for Course Creators.",
-    metaTitle: "AI Consulting for Course Creators | VERA",
-    metaDescription:
-      "AI for course creators and online educators. Curriculum design, student support, launch sequences, and the system that runs the business.",
-    intro:
-      "Selling knowledge at scale is a content engine plus a student support engine plus a launch engine. AI runs all three so the business does not depend on you being everywhere.",
-    openingEssay: [
-      "Course businesses look passive on the outside and are operationally brutal on the inside. The course exists. The students keep coming. But every student asks the same six questions in the first week, every cohort needs the same welcome sequence rebuilt, every launch wants a new email sequence, and the founder is either drowning in the work or paying a team of four that eats half the margin.",
-      "The first place AI earns its keep is not in the course content itself. It is in the student support layer. Most courses we look at have a customer success backlog where the founder or a contractor is hand-answering questions whose answers are already in the course. A trained FAQ knowledge base on the course material, with routing for the questions that actually need a human, takes ninety percent of that load off without making students feel like they got a worse experience. Most students get a faster answer than they would have gotten from the founder.",
-      "The second place is in launches. Launches are the part of the business that produces most of the revenue and consumes most of the founder's energy. Every cycle, the email sequence gets rebuilt from scratch, the sales page gets rewritten, the social pre-launch content gets drafted at the last minute. None of this work has to start from blank. A voice-trained launch engine drafts the next sequence from the last five launches, and you edit instead of writing. The launch month gets less brutal.",
-      "The third move, and this is where the business actually compounds, is in repurposing the course material into adjacent offers. Most course creators are sitting on a body of work that could be a book, a podcast, a community offer, and a higher-tier coaching program. The reason none of those ship is not that the ideas are not there. It is that the rewriting cost is too high. AI compresses the rewriting cost. The shelf finally clears.",
-      "There is a model-of-the-business question that comes up in every engagement we run with course creators. Most of them built the business on a hero launch model, where revenue concentrates in two or three big windows a year. The model worked for a long time and is now under pressure because audience fatigue with launch sequences is higher than it was, and the open rates and conversion numbers from 2021 are not coming back. The version of the business that holds is the one with an evergreen layer underneath the hero launches, plus a community or higher-tier offer that produces recurring revenue between windows. AI does not save the launch model, but it makes the evergreen and community layers feasible on a small team. The course creators who are quietly winning in 2026 are the ones who have made this shift. We help build the operational layer that makes it possible.",
-    ],
-    anecdote: {
-      setup: "A course creator running a flagship cohort program with 400 students per year was burning out on launches. The student support backlog had grown to 80 unresolved tickets per cohort. The book she had been wanting to write was still on the shelf.",
-      turn: "We built a student support knowledge base trained on her course material and her past Q&A library. Tickets dropped 70 percent inside the first cohort. The launch workflow drafted the next sequence from her past five launches.",
-      line: "The next cohort launched on a quiet week. The book came out the following spring.",
-    },
-    painPoints: [
-      "Curriculum design takes months and lives in your head",
-      "Student questions drown the founder and the same six questions show up every cohort",
-      "Launches are one-week sprints that eat the next month",
-      "Repurposing course material into a book, podcast, or community offer never happens",
-      "Onboarding new students is the same set of emails every cohort",
-      "The team you hired to handle the back office is now half the margin",
-    ],
-    whatChanges: [
-      {
-        heading: "Day three of the cohort",
-        body: "New students are asking the same six setup questions they always ask. The FAQ knowledge base answers them inside the platform with a citation to the relevant module. You read the questions that needed you, not the ones that did not.",
-      },
-      {
-        heading: "The launch sequence build",
-        body: "You used to spend a week of evenings writing the next launch's emails. Now the sequence drafts from the last five launches in your voice, you edit for an afternoon, the launch ships.",
-      },
-      {
-        heading: "The book you never wrote",
-        body: "Course modules into a draft book outline in your voice. You spend the writing time on the chapters that need original work, not on rewriting what you already taught.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Student support layer",
-        body: "FAQ knowledge base trained on your course material. Most questions answered before you see them, with routing for the ones that actually need you.",
-      },
-      {
-        title: "Curriculum design engine",
-        body: "Your methodology into modules, lessons, assessments, and homework. Editable structure, not generated to discard.",
-      },
-      {
-        title: "Launch sequences",
-        body: "Email, social, and sales pages in your voice for every launch window. Drafted from past launches that worked.",
-      },
-      {
-        title: "Sales engine",
-        body: "Discovery, application review, and enrollment calls handled by a system, not by you. You join the calls that need a human.",
-      },
-      {
-        title: "Content repurposing",
-        body: "Course modules into a book, podcast, or community offer without rewriting from scratch.",
-      },
-      {
-        title: "Cohort operations",
-        body: "Live cohort prep, session notes, and accountability check-ins handled in workflow.",
-      },
-      {
-        title: "Course iteration loop",
-        body: "Student questions, feedback, and dropout patterns into the next version of the curriculum. The course improves without a full rebuild.",
-      },
-    ],
-    howWeWork: [
-      "Start with the student support workflow because for course creators it produces the fastest visible relief and the highest ROI on retention. We pull the last two cohorts of student questions and build the FAQ knowledge base against them on a real Kajabi or Circle install.",
-      "Weeks two through six ship launch sequences and the cohort operations layer. Weeks seven through ten move into repurposing or the course iteration loop. By week twelve you have an operating system and the team you have stays small.",
-      "Stack stays as is. Kajabi, Teachable, Thinkific, Circle, Skool, ConvertKit, Beehiiv, Stripe. We integrate. We do not ask you to migrate course platforms.",
-      "We also help you size the team you actually need at the end of the engagement. Most course creators we work with come in with three to five contractors handling pieces of the operation that AI can now absorb or reshape. We do not recommend firing anyone. We help you redesign what each person does so the contractor budget produces a multiple of what it was before. The student success person becomes a community lead. The launch assistant becomes a strategist. The team stays the size it was and the business outgrows it without breaking.",
-    ],
-    whatThisIsNot: "This is not a course-in-a-box product. We do not write the curriculum for you. We do not run the cohort. We do not coach your students. If you want an outsourced operations team or a managed-services launch agency, that is a different vendor. The work we ship is the operating system that lets you stay the educator without the back office eating the margin.",
-    faq: [
-      {
-        q: "Does this work with Kajabi, Teachable, or Thinkific?",
-        a: "Yes. We integrate with most course platforms. The workflow runs around your existing setup. We also work with Circle, Skool, and most community platforms.",
-      },
-      {
-        q: "Can AI handle student support without losing the personal touch?",
-        a: "Yes, if it is trained on your real answers and your real material. We set up routing so the personal questions still come to you. Students consistently report faster, more thorough answers than the previous human-only setup.",
-      },
-      {
-        q: "Will my students feel like they are getting AI?",
-        a: "Not when the system is set up right. They feel like they have access to a course that responds faster than the founder ever could alone, in the founder's voice, with citations to the actual material.",
-      },
-      {
-        q: "What about live cohort programs?",
-        a: "Live cohorts get the biggest gain. Prep, recaps, accountability, and the office hours queue are all places where workflow takes hours back without changing the live experience.",
-      },
-      {
-        q: "How fast does the launch workflow pay back?",
-        a: "Most course creators report that the first launch they run with the workflow recovers the engagement cost on saved hours alone. The harder ROI is the second-order win, which is usually a launch that ships on time and at the planned size because the founder did not burn out before launch week.",
-      },
-    ],
-    primaryKeyword: "ai for course creators",
-    secondaryKeywords: [
-      "ai tools for online course creators",
-      "course creator automation",
-      "student support ai",
-      "course launch sequence ai",
-      "cohort operations workflow",
-    ],
-  },
-
-  {
-    slug: "independent-agencies",
-    marqueeLabel: "Independent agencies",
-    h1: "AI Consulting for Independent Agencies.",
-    metaTitle: "AI Consulting for Independent Agencies | VERA",
-    metaDescription:
-      "AI for small independent agencies. Production capacity, monthly reporting, onboarding, and the operating system that lets you grow without doubling headcount.",
-    intro:
-      "Small agencies live or die by the gap between what you can deliver and what you can sell. AI closes the gap. The same team takes on the next two clients without breaking.",
-    openingEssay: [
-      "Independent agencies have a structural ceiling that nobody who has not run one really understands. You can sell more than you can deliver. The founder closes a retainer in week one, the team is at capacity by week three, and by week six the work that closed the retainer is being done by a senior person on the weekend because nobody else can hold the standard. Hiring fixes it for six months, then the new senior person ramps, the salary load grows, the margin compresses, and the cycle repeats.",
-      "The honest read on this ceiling is that headcount has been the only lever for a long time. Agency owners we talk to have tried offshoring, contractors, and hybrid models, and almost all of them end up back at the same problem. The work that requires senior judgment cannot be commoditized, and the work that can be commoditized is the work that produces the visible deliverable the client is reading every month.",
-      "AI moves the ceiling because the commoditizable work, the first-draft copy, the report compilation, the brand voice production, the onboarding deck, all of it can sit in a workflow that the senior person edits instead of builds. The senior person stays the senior person. The team stays small. The next two retainers fit without a hire. This is the structural shift small agencies have been waiting on since project management software showed up.",
-      "The trap is rolling it out badly. Most agencies who tried this in 2023 ended up with one person on the team using ChatGPT and a slack channel full of half-built prompts. The work that comes out is inconsistent, the brand voice flattens, and the senior people stop trusting the layer. The version that holds is the one where AI sits in the agency's operating system, trained on the agency's voice and per-client voices, with workflows that produce a consistent first-draft standard the team edits to ship.",
-      "There is a culture piece worth flagging too. Senior team members at agencies often have a complicated relationship with AI. They watched the first wave of bad tools threaten the work they had spent ten years getting good at, and they are skeptical of anything that smells like that wave. The path through this is not to mandate adoption from the top. The path is to ship a workflow whose first draft is good enough that the senior team chooses to use it because it makes their week shorter, not because they were told to. We work with the team that will actually run the workflow, in their voice, on their clients, and let the quality of the output settle the cultural question. It almost always does inside the first month.",
-    ],
-    anecdote: {
-      setup: "A nine-person independent agency was at capacity on six retainers, with the two senior strategists working weekends to keep the reporting cycle current. The founder was on the verge of either hiring or capping growth.",
-      turn: "We built reporting and the production engine on two service lines in eight weeks. The senior strategists got their weekends back, the production team shipped to a higher standard, and the agency took the seventh retainer without a hire.",
-      line: "The founder used the recovered margin to give the team a raise and stopped recruiting the senior strategist hire she had been losing sleep over.",
-    },
-    painPoints: [
-      "Production capacity is the cap on how many clients you can take",
-      "Reporting eats the back half of every month",
-      "Onboarding new clients takes weeks of meetings and Slack threads",
-      "Pitch and proposal work falls on the founder and falls on Sunday",
-      "The senior team is doing the work that should be drafted by someone else",
-      "Margin compresses every time you add a hire",
-    ],
-    whatChanges: [
-      {
-        heading: "The Tuesday production meeting",
-        body: "The team used to spend an hour walking through what was blocked. Now the first-draft assets for the week are already in the queue, the team is editing instead of building, and the meeting takes twenty minutes.",
-      },
-      {
-        heading: "The last week of the month",
-        body: "Reporting used to consume two senior days per client. Now the reports draft on the third-to-last day. The senior team edits the narrative and ships. The last week of the month is sales and strategy time.",
-      },
-      {
-        heading: "The seventh retainer",
-        body: "You had the inbound. You were going to pass on it because the team was already past capacity. Now you close it because the production layer can absorb it. The margin holds.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Production engine",
-        body: "Briefs into first-draft assets in brand voice across copy, social, and email. The team edits to standard and ships.",
-      },
-      {
-        title: "Reporting automation",
-        body: "GA4, HubSpot, paid ads, and platform analytics into a monthly client report drafted in your house tone.",
-      },
-      {
-        title: "Onboarding flow",
-        body: "Signed contract to brand audit to asset pull to kickoff deck in three days. The two-week onboarding window collapses.",
-      },
-      {
-        title: "Pitch and proposal engine",
-        body: "Custom proposals from the brief and your last twenty wins. Drafted before the discovery call cools.",
-      },
-      {
-        title: "Internal SOPs",
-        body: "Your operating system written down once, queryable forever. New hires ramp on documented process, not tribal knowledge.",
-      },
-      {
-        title: "Client comms",
-        body: "Status updates, weekly recaps, and escalations drafted in workflow. The senior account person stops being the typist.",
-      },
-      {
-        title: "Quarterly business reviews",
-        body: "QBR decks drafted from the quarter's work, the original strategy, and the client's actual numbers. Hold up against the CFO walking into the room.",
-      },
-      {
-        title: "Capacity planning",
-        body: "Real-time view of where the team is overcommitted, with the AI workflows tied to capacity decisions. Hiring stops being the only answer.",
-      },
-    ],
-    howWeWork: [
-      "We start with the workflow that hurts most, which for most independents is either reporting or production. We build it on a real client with a real deadline, with the team that will actually use it in the room.",
-      "Weeks two through six wire reporting and the production engine across at least two service lines. Weeks seven through twelve ship onboarding, proposals, and the internal SOP library. By the end you have an agency operating system the senior team trusts and the founder is not the bottleneck on.",
-      "Stack stays as is. Asana, ClickUp, Notion, Figma, your reporting tools, your CRM. We integrate. We do not ask the team to migrate.",
-      "One thing worth flagging on rollout. The senior team usually pushes back at the first show-and-tell. The way the resistance breaks is to bring them the first deliverable in their own client's voice and let the quality of the draft do the talking. We have run this enough times to know the pattern. The skeptical strategist becomes the first internal champion when the workflow makes their Friday afternoon back. The pattern holds even when the team had a bad ChatGPT experience the year before.",
-    ],
-    whatThisIsNot: "This is not white-label production. We do not ship work under your name on a flat fee. We do not staff the team. We do not run the retainer. If you want an outsourced production partner or a managed service that handles delivery, that is a different vendor. The work here is the operating system that lets your team carry more without breaking and lets the founder stop being the bottleneck.",
-    faq: [
-      {
-        q: "Does this require a tech-heavy team?",
-        a: "No. The engagement is built to be run by the team you have. We are coaching the team into a working system, not handing off a black box.",
-      },
-      {
-        q: "How does this change the team size?",
-        a: "Most agencies add thirty to sixty percent capacity without hiring. Some choose to grow instead and use the new capacity to take bigger retainers. Either choice is yours.",
-      },
-      {
-        q: "What about client confidentiality?",
-        a: "We work in your tenant under NDA. Client data does not train third-party models. The setup respects the data handling promises in your MSAs.",
-      },
-      {
-        q: "What if the senior team resists the workflow?",
-        a: "Most senior resistance is a reaction to a previous bad ChatGPT rollout. We address it by training on the agency's actual voice and shipping a first-draft standard that the senior team would approve. Resistance turns into adoption once they see the first deliverable.",
-      },
-      {
-        q: "Can this support a generalist agency or only a specialist one?",
-        a: "Both. Generalists get the biggest win on the production layer because they cross multiple service lines per client. Specialists get the biggest win on reporting and the proposal engine.",
-      },
-    ],
-    primaryKeyword: "ai for independent agencies",
-    secondaryKeywords: [
-      "ai for small agencies",
-      "agency production automation",
-      "agency reporting ai",
-      "agency operating system",
-      "agency capacity planning ai",
-    ],
-  },
-
-  {
-    slug: "fractional-executives",
-    marqueeLabel: "Fractional executives",
-    h1: "AI Consulting for Fractional Executives.",
-    metaTitle: "AI Consulting for Fractional CMOs, CFOs & COOs | VERA",
-    metaDescription:
-      "AI for fractional CMOs, CFOs, and COOs. Cross-client briefs, board pack automation, operating cadence, and the system that supports four companies at once.",
-    intro:
-      "Fractional work is the most context-switched job in business. AI keeps four companies' contexts current, drafts every board pack, and runs the operating cadence so you can stay strategic.",
-    openingEssay: [
-      "Fractional work is the most cognitively expensive way to make a living in business right now. You are running four companies' contexts in parallel. Each one has its own metrics, its own team, its own slack, its own dashboard, and its own founder who needs you ready to talk numbers in twenty minutes. The standard fractional engagement assumes you can hold all of that in your head, and almost nobody can without paying a tax in either client quality or personal life.",
-      "The board pack is the most visible version of this problem. Every quarter, every company you serve wants a board pack that reads like it was written by someone who has lived inside the business for years. You build it from their data, their narrative, their metrics, their team's input. The work is real and the time required to do it well is more than the fractional fee accounts for. Most fractionals end up either over-investing and losing the margin, or under-investing and shipping a pack that reads generic.",
-      "The shift with AI is not in the strategic call. The strategic call is still yours and that is what the founder is paying for. The shift is in the contextual layer. A workflow that pulls each company's dashboards, slack, email summaries, and CRM data into a morning brief means you walk into the 9 AM call with the CMO's company having read what changed since last week, not having forgotten which company you are on. The cognitive overhead of context switching collapses.",
-      "There is a second-order win that matters even more. Fractionals get hired for pattern recognition across companies. The advice you give a Series B SaaS company on go-to-market is more credible because you also serve a Series A hardware company and a Series C marketplace. AI makes the pattern recognition queryable. You can actually ask, across your portfolio, what worked the last three times a CMO inherited a misaligned brand. That is a level of insight nobody has been able to produce systematically before.",
-      "The fractional market is also about to bifurcate, and the people who do not see this coming will end up on the wrong side of it. The lower end of the market, where the work is mostly executional and the engagement is priced like a senior contractor, is going to compress. AI tools the client buys directly are going to do enough of the executional work that the fractional becomes harder to justify. The upper end, where the work is pattern recognition across a portfolio and strategic judgment the company cannot produce internally, is going to expand. The fractionals who win 2027 are the ones who move up-market into that space, and the operating layer we build is part of what makes the move credible to the kinds of clients that pay for it.",
-    ],
-    painPoints: [
-      "Context switching across four companies eats the morning before the first call",
-      "Board pack prep is the same template done by hand every quarter",
-      "Cross-company patterns are hard to see when each lives in its own Slack",
-      "Every new client needs the same onboarding done from scratch",
-      "Operating cadence rituals slip because the energy is spent on context",
-      "The advice you give is good, but the contextual depth is shallower than it should be",
-    ],
-    whatChanges: [
-      {
-        heading: "The 8 AM context block",
-        body: "Used to be a frantic forty minutes pulling Slack, email, and dashboards into your head before the 9 AM. Now there is a per-company brief on your desk by 7:30. Top three changes, open items, the founder's last note, and the question worth opening with. You read for fifteen minutes per company.",
-      },
-      {
-        heading: "The Q3 board pack",
-        body: "You used to spend a weekend per company building the pack. Now the draft is on your desk Tuesday with the narrative, the metrics, the appendix, and the right charts pulled. You edit for half a day per company and the board pack ships.",
-      },
-      {
-        heading: "The pattern recognition you could not see before",
-        body: "Founder asks how other companies in your portfolio have handled a hire under churn pressure. You query your portfolio knowledge base and walk through three actual examples in real time. The hourly rate suddenly feels like a discount.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Cross-client brief engine",
-        body: "Per-company morning brief from email, Slack, dashboards, and CRM. On your desk before the first call.",
-      },
-      {
-        title: "Board pack automation",
-        body: "Quarterly metrics, narrative, and appendix drafted from the company's own data. Reads like it took a week and shipped in a day.",
-      },
-      {
-        title: "Operating cadence",
-        body: "Weekly leadership rituals running on autopilot. Stand-up agendas, one-on-one prep, and the metrics review. You join when the question needs you.",
-      },
-      {
-        title: "Portfolio pattern recognition",
-        body: "What is working across the companies you serve, queryable in real time. The advice gets sharper.",
-      },
-      {
-        title: "Sales and renewal engine",
-        body: "New engagement proposals built from your standards and your last twenty wins.",
-      },
-      {
-        title: "Personal IP system",
-        body: "Your operating frameworks captured once, available to every company you serve.",
-      },
-      {
-        title: "Onboarding playbook",
-        body: "New fractional engagement to a fully-context-loaded first month in five days. The same playbook every time, customized to the company.",
-      },
-      {
-        title: "Strategic narrative drafting",
-        body: "Founder needs a story for the next raise or the next board. Drafted from the company's own arc, in their voice and yours.",
-      },
-    ],
-    howWeWork: [
-      "We start with the cross-client brief workflow because for fractionals it is the workflow that produces the most visible relief inside two weeks. We build it on your actual roster and you read the first briefs against a real morning.",
-      "Weeks two through six build board pack automation and the operating cadence layer. Weeks seven through ten move into portfolio pattern recognition and the proposal engine. By week twelve you have an operating system that supports four to five engagements without burnout.",
-      "Stack stays as is. QuickBooks, Stripe, HubSpot, Salesforce, Notion, Linear, Slack, the company dashboards. We integrate per company. The brief travels with you, the data stays with each company.",
-      "We are explicit with the founders you serve about what is being integrated and what it means for their data. Most are fine with it once they see the setup, because the alternative is a fractional executive who walks in cold every Monday. A handful of more security-sensitive clients want a written summary they can give their CISO. We supply one and have shipped engagements that pass enterprise security reviews. The setup is not magic. It is just discipline applied early.",
-    ],
-    whatThisIsNot: "This is not a fractional executive replacement product. We do not run the engagement for you. We do not give your clients strategic advice. We do not represent you at the board. If you want a managed-services arm or a fractional staffing platform, that is a different vendor. What we build is the operating layer that lets one fractional executive carry the load that used to require a small advisory firm behind them.",
-    anecdote: {
-      setup: "A fractional CMO serving four Series A and B companies was missing one client's board pack window every quarter because she could not hold all four narratives at once.",
-      turn: "We built her a cross-client brief engine and board pack workflow integrated against each company's dashboards. The board pack now drafts on Tuesday and ships Wednesday.",
-      line: "She closed a fifth retainer in the next month and her family stopped asking which company's Slack she was on at dinner.",
-    },
-    faq: [
-      {
-        q: "Can this scale to four or five fractional engagements?",
-        a: "Yes. Most fractionals we work with add one to two retainers without adding hours, because the cognitive overhead of context switching collapses. A few choose to keep the same number of clients and reinvest the time in being sharper on each one.",
-      },
-      {
-        q: "Does this work across QuickBooks, Stripe, HubSpot, and Salesforce?",
-        a: "Yes. We integrate across most operating stacks. The brief travels with you, the data stays with each company under their own access controls.",
-      },
-      {
-        q: "What does an engagement look like?",
-        a: "Eight to twelve weeks of weekly working sessions while we build the workflow on your real roster. By the end, you run it and have a playbook to onboard the next engagement in five days.",
-      },
-      {
-        q: "How do you handle data isolation across companies?",
-        a: "Each company gets its own configuration, its own access controls, and its own retention policy. The portfolio pattern layer aggregates anonymized signal only with explicit configuration. Most fractionals' clients are fine with the setup once they see it.",
-      },
-      {
-        q: "Can this support a fractional executive who works with PE-backed portfolios?",
-        a: "Yes. PE-backed portfolios are where the portfolio pattern layer earns the most. The aggregated learning across companies is exactly what the PE operating partner is hiring you to produce.",
-      },
-    ],
-    primaryKeyword: "ai for fractional executives",
-    secondaryKeywords: [
-      "ai for fractional cmo",
-      "ai for fractional cfo",
-      "fractional executive automation",
-      "board pack automation",
-      "fractional cross-client workflow",
-    ],
-  },
-
-  {
-    slug: "speaking-coaches",
-    marqueeLabel: "Speaking coaches",
-    h1: "AI Consulting for Speaking Coaches.",
-    metaTitle: "AI Consulting for Speaking Coaches | VERA",
-    metaDescription:
-      "AI for speaking coaches and keynote speakers. Talk development, audience research, bureau workflows, content engines, and the back office that fills the calendar.",
-    intro:
-      "Great speakers run two businesses at once: the craft and the sales pipeline that fills the calendar. AI runs the sales side and supports the craft side so you can focus on the stage.",
-    openingEssay: [
-      "Professional speakers and the coaches who develop them run businesses that look glamorous from the outside and operationally brutal from the inside. The craft of the talk is the visible asset. The invisible asset is the back office: the inbound bureau inquiries, the audience research before each keynote, the post-event follow-up, the content engine that keeps you visible between events, the book that supports the next year of bookings, and the coaching pipeline that feeds the next year of speakers.",
-      "Most coaches we work with are losing inquiries because the response time is too slow. A bureau emails on Tuesday with a fit for a Thursday-after-next keynote. The coach is mid-block with clients all week. The proposal goes out on Friday. By then the bureau has heard back from two other speakers and the slot is gone. The slot was worth fifteen thousand dollars. The reason it was lost is not craft. It is operational latency.",
-      "AI fixes the latency without compromising the personalization. An inbound goes through a triage workflow that pulls the host context, the audience profile, the event format, and your library of past talks. A custom proposal drafts in your voice within an hour, with the right talk angle for that audience and the right past keynotes referenced. You edit, you ship. The bureau gets the response before your competition has read the email.",
-      "The craft side is where AI gets misused most often. You do not want a model writing your keynote. The audience can tell. What you do want is a model that has read every keynote you have ever given, knows the stories you tell, can recommend the right opening for this audience, and can draft the connective tissue while you focus on the new material. That is the version that earns its place in a speaking practice. The craft stays yours. The work around it gets faster.",
-      "There is one more piece worth saying about the economics of speaking. The keynote fee is the visible part of the income. The invisible part is the deal pipeline that the keynote generates, which is the book sales, the coaching enrollments, the consulting engagements that come out of a single talk in front of a thousand decision makers. Most speakers we work with are leaving most of that pipeline on the table because the post-event follow-up is the part of the operation that breaks first when the calendar is full. The cost of that broken follow-up over a year is often more than the speaker's entire revenue from the visible fees. The post-event workflow is the place AI pays back fastest, and the math is uncomfortable to look at the first time we run it. The math is also the reason most speakers we work with start the engagement there.",
-    ],
-    anecdote: {
-      setup: "A keynote speaker doing 32 talks a year had a backlog of post-event follow-up notes from the previous quarter she had not gotten to. Three of those events would have led to coaching engagements if she had followed up within the week.",
-      turn: "We built her a 24-hour post-event workflow that drafts the thank-you, the deliverable summary, and the next-step proposal in her voice. The backlog cleared in two weeks and the workflow shipped on every event going forward.",
-      line: "She closed two coaching engagements in the next ninety days that would not have happened on her previous follow-up cadence.",
-    },
-    painPoints: [
-      "Audience research before every keynote eats the prep window",
-      "Talk development gets rebuilt from scratch every time",
-      "Bureau and inbound inquiries pile up with no time to qualify and respond",
-      "Content for the audience never gets shipped consistently between events",
-      "Post-event follow-up is where the next booking comes from and it always slips",
-      "The book or course you have been meaning to ship has been on the shelf for two years",
-    ],
-    whatChanges: [
-      {
-        heading: "The Tuesday inbound",
-        body: "Bureau email lands at 11:42. By 1:30 there is a draft proposal in your inbox with the audience context, the talk angle, and the right past keynotes referenced. You edit for thirty minutes. The proposal goes out at 2:15. You are the first response the bureau gets.",
-      },
-      {
-        heading: "The prep window for next month's keynote",
-        body: "You used to spend a Saturday on audience research, host background, and the talk arc. Now the audience brief is on your desk Friday afternoon with the host's last three interviews, the audience profile, and a draft of the connective tissue. You spend Saturday on the new stories instead of the structure.",
-      },
-      {
-        heading: "The post-event window",
-        body: "Keynote ends Thursday. By Friday morning the thank-you, the deliverable, and the next-step proposal are drafted in your voice. The client receives them before they have left the venue. The follow-up that used to slip into next month now closes the next engagement.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Bureau and inbound triage",
-        body: "Inquiries scored, qualified, and routed. Custom proposals drafted in your voice before they cool. The response-time advantage that books the keynote.",
-      },
-      {
-        title: "Audience research",
-        body: "Per-event brief on the audience, the host, and the moment. Ready before the prep call, not the night before.",
-      },
-      {
-        title: "Talk development",
-        body: "Your IP library to a custom talk outline. Stories, frameworks, and the through-line for this audience.",
-      },
-      {
-        title: "Content engine",
-        body: "Talks into clips, threads, newsletters, and the start of a flagship course over time. The work that keeps you visible without taking time from the stage.",
-      },
-      {
-        title: "Client follow-up",
-        body: "Thank-you, deliverables, and the next-step pitch in your voice within 24 hours of the keynote.",
-      },
-      {
-        title: "Book and product engine",
-        body: "Talk material into book chapters, courses, and a coaching offer that runs without you on stage. The shelf clears.",
-      },
-      {
-        title: "Coaching pipeline",
-        body: "Inbound coaching inquiries for speakers you might develop go through qualification, scoping, and proposal in workflow.",
-      },
-    ],
-    howWeWork: [
-      "Start with bureau and inbound triage because for speaking coaches this is the workflow that produces the most visible ROI inside thirty days. We pull your last quarter of inbound and build the triage and proposal engine against real inquiries you wish you had not lost.",
-      "Weeks two through six build audience research and talk development workflows on a real upcoming keynote. Weeks seven through ten move into the content engine and book or course support. By week twelve you have a documented operating system and you have stopped losing bookings to response time.",
-      "Stack stays as is. Your bureau platforms, Calendly, your CRM, Notion or Scrivener for talk material, Riverside for recordings. We integrate.",
-      "We also help with the way your fees are presented in proposals. Most speakers we work with have a fee structure that grew accidentally and is now harder to justify than it should be. The proposal engine surfaces the right fee, the right talk angle, and the right rationale based on the audience, the budget signal, and your past similar engagements. The result is a fee conversation that is easier to win at the price you want.",
-    ],
-    whatThisIsNot: "This is not a ghostwriting service. We do not write your keynote. We do not coach the speakers you work with. We do not represent you to bureaus. If you want a managed booking agency or a ghostwriter for your book, that is a different vendor. The work we ship is the back office that lets you stay the speaker and the coach without the operations swallowing the craft.",
-    faq: [
-      {
-        q: "Will AI write my keynote for me?",
-        a: "No. The craft is yours. AI handles the prep, the research, and the post-event sales work so you have time for the craft. The version that writes keynotes for speakers produces work the audience can tell was not yours. That is not what we build.",
-      },
-      {
-        q: "Does this fit with bureaus?",
-        a: "Yes. We integrate with bureau workflows so the inquiry gets into a ready-to-send custom proposal before your competition has read the email. Most bureaus appreciate the response-time improvement.",
-      },
-      {
-        q: "What does this cost?",
-        a: "Engagements start at four-figure monthly retainers and scale with depth. We scope on the first call so the number is not a surprise.",
-      },
-      {
-        q: "Will this work for a coach who develops other speakers?",
-        a: "Yes. The coaching pipeline, the speaker development library, and the post-engagement content workflow are all places where the operating layer earns its place. Your speakers benefit from the same workflow you do.",
-      },
-      {
-        q: "How fast does the inbound workflow pay back?",
-        a: "Most speaking coaches report the inbound workflow paying back inside the first quarter on a single recovered booking. The longer-tail wins are the bookings that used to be lost to slow response time.",
-      },
-    ],
-    primaryKeyword: "ai for speaking coaches",
-    secondaryKeywords: [
-      "ai for keynote speakers",
-      "speaking coach automation",
-      "bureau inbound workflow",
-      "keynote talk development ai",
-      "speaker content engine",
-    ],
-  },
 ];
 
 export function getVerticalBySlug(slug: string): Vertical | undefined {

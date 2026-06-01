@@ -6,6 +6,7 @@ import {
   useReducedMotion,
   useScroll,
   useTransform,
+  useInView,
 } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 
@@ -25,90 +26,91 @@ const CAPABILITIES: Capability[] = [
     id: "marketing",
     num: "01",
     title: "Content & marketing",
-    teaser: "AI drafts your newsletters, posts, courses, and sales pages in your voice.",
+    teaser: "An agent that writes your listing copy, social posts, and newsletter in your voice.",
     detail:
-      "AI agents draft your newsletter, LinkedIn, course outlines, and sales pages from your voice notes and frameworks. You ship more without diluting the voice clients hired you for.",
+      "Give it a listing or a topic. The agent drafts the listing description, the just-listed and just-sold posts, your neighborhood guides, and the monthly newsletter, all in your voice and Fair-Housing-safe, then queues them for your okay before anything goes out.",
     examples: [
-      "Newsletter drafts in 10 minutes",
-      "LinkedIn posts in your tone",
-      "Course modules from frameworks",
+      "Listing descriptions in minutes",
+      "Just-listed and just-sold posts",
+      "Neighborhood guides",
+      "Your monthly newsletter, drafted",
     ],
     youtubeId: "0vZ_UVLhSQQ",
   },
   {
     id: "deals",
     num: "02",
-    title: "Sales & lead gen",
-    teaser: "AI finds leads, preps discovery, and scores qualification.",
+    title: "Client follow-ups",
+    teaser: "An agent that answers new leads in minutes and keeps your whole sphere warm while you're out.",
     detail:
-      "Lead lists pulled from your niche, pre-call research on the prospect, qualification scoring from form fills, objection handling drafts. You fill the pipeline and show up to every call with conviction.",
+      "The agent responds to new leads in minutes, nudges the slow ones on a schedule you set, re-engages the ones who went cold, and keeps your past clients and sphere warm with personal check-ins and referral asks. It scores who is ready and routes the hot ones straight to you, while you're at a showing.",
     examples: [
-      "Lead lists from your niche",
-      "Pre-call prospect research",
-      "Qualification scoring",
-      "Objection handling drafts",
+      "Answers new leads in minutes",
+      "Re-engages leads who went cold",
+      "Past-client check-ins for referrals",
+      "Routes hot leads to you",
     ],
     youtubeId: "UAmKyyZ-b9E",
   },
   {
     id: "market-research",
     num: "03",
-    title: "Client research & briefs",
-    teaser: "AI research briefs in 30 minutes, not three days.",
+    title: "Market & property research",
+    teaser: "Give it an address. It pulls the comps, the history, and the compliance, then writes the brief.",
     detail:
-      "Industry breakdowns, competitor analysis, market sizing, regulatory primers. Pulled from public data and synthesized in your voice. Walk into the call already smart on their world.",
+      "The agent takes an address and works the whole research job: comparable sales and a CMA, the property's history, neighborhood and school data, and the code and compliance notes, then synthesizes it into the brief you walk in with. The evening you used to lose, gone.",
     examples: [
-      "Industry briefs in 30 minutes",
-      "Competitor breakdowns",
-      "Market sizing and TAM",
-      "Discovery call prep",
+      "Comps and a CMA",
+      "Property and home history",
+      "Code and compliance research",
+      "Listing-appointment brief",
     ],
     youtubeId: "R-KJgjIrh24",
   },
   {
     id: "tax",
     num: "04",
-    title: "Operations & admin",
-    teaser: "AI handles CRM, calendar, invoicing, and project ops.",
+    title: "Contracts & compliance",
+    teaser: "It preps the contracts, chases the signatures, and flags the compliance before it bites you.",
     detail:
-      "CRM auto-fill, calendar prep, invoicing reminders, project status reports, inbox triage. The drudgery handled before you even open the app.",
+      "The agent runs each deal's paperwork on its own: contracts and disclosures prepped, signatures and missing documents chased, required disclosures and code, HOA, and zoning issues flagged, every deadline tracked. It checks in before anything high-stakes goes out. The admin you got into real estate to avoid.",
     examples: [
-      "CRM auto-fill from calls",
-      "Calendar prep and briefs",
-      "Invoicing and follow-up",
-      "Project status reports",
+      "Contract and disclosure prep",
+      "Chases signatures and documents",
+      "Code and compliance flags",
+      "Tracks every deadline",
     ],
     youtubeId: "_jjSS0qGFbI",
   },
   {
-    id: "comms",
-    num: "05",
-    title: "Client communications",
-    teaser: "AI recaps, follow-ups, and sequences in your voice.",
-    detail:
-      "Meeting recaps from transcripts, client follow-ups in your tone, day 1, 3, 7, 14, 30 sequences for the leads you would otherwise forget. Hot replies route straight to you.",
-    examples: [
-      "Call recaps from transcripts",
-      "Client follow-ups in your tone",
-      "Long-tail drip sequences",
-      "Hot-lead routing",
-    ],
-    youtubeId: "rBJnWMD0Pho",
-  },
-  {
     id: "negotiation",
-    num: "06",
-    title: "Proposals & pitches",
-    teaser: "AI builds custom proposals, decks, and scope docs in minutes.",
+    num: "05",
+    title: "Showings & scheduling",
+    teaser: "An agent that books showings, builds your route, and chases the feedback after, on its own.",
     detail:
-      "Custom proposals built from your standards, the client's brief, and your last twenty wins. SOWs that match how you actually scope. Pitch decks in your visual language. Pricing options you can defend.",
+      "The agent coordinates showings around your calendar, sends confirmations and reminders to every side, builds your route and tour sheets for the day, and collects and summarizes feedback after each one so the seller update writes itself. It runs while you're in the car.",
     examples: [
-      "Custom proposals",
-      "Scope docs from a brief",
-      "Pitch decks in your style",
-      "Pricing options",
+      "Books and confirms showings",
+      "Daily route and tour sheets",
+      "Reminders to all sides",
+      "Showing feedback summarized",
     ],
     youtubeId: "fOxC44g8vig",
+  },
+  {
+    id: "comms",
+    num: "06",
+    title: "Client experience",
+    teaser: "An agent that answers client questions instantly and keeps everyone updated, so you look like a pro.",
+    detail:
+      "The agent answers client questions the moment they come in, sends proactive 'here is exactly where your deal stands' updates at every step, and turns out polished recaps and reports. Every client feels like your only client, even when you have twelve deals going.",
+    examples: [
+      "Instant answers to client questions",
+      "Proactive deal-status updates",
+      "Polished recaps and reports",
+      "Smooth onboarding for new clients",
+    ],
+    youtubeId: "rBJnWMD0Pho",
   },
 ];
 
@@ -117,12 +119,12 @@ const CAPABILITIES: Capability[] = [
  * automation in one sentence. Not a feature. A change in your week.
  */
 const CONSEQUENCES: Record<string, string> = {
-  "marketing": "You stop disappearing for two weeks at a time.",
-  "deals": "You stop reading their LinkedIn five minutes before the call.",
-  "market-research": "You stop charging for prep time you can not bill.",
-  "tax": "You stop spending Sunday on admin.",
-  "comms": "You stop being the bottleneck in your own inbox.",
-  "negotiation": "You stop losing deals because the proposal did not go out.",
+  "marketing": "You stop going quiet between listings.",
+  "deals": "You stop leaving money on the table to slow follow-up.",
+  "market-research": "You stop losing the listing to the agent who prepped harder.",
+  "tax": "You stop doing the admin you got into real estate to avoid.",
+  "comms": "Every client feels like your only one.",
+  "negotiation": "You stop playing scheduler all day.",
 };
 
 /**
@@ -134,10 +136,13 @@ function VideoPlaceholder({
   title,
   videoUrl,
   youtubeId,
+  play,
 }: {
   title: string;
   videoUrl?: string;
   youtubeId?: string;
+  /** Only mount the player when its band is on screen; unmount frees memory. */
+  play: boolean;
 }) {
   return (
     <div className="relative w-full overflow-hidden rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] aspect-video">
@@ -146,7 +151,7 @@ function VideoPlaceholder({
           watermark, end-of-video suggestions) gets cropped outside the
           aspect-video frame. Pointer events off so hover overlays don't
           trigger. */}
-      {youtubeId ? (
+      {youtubeId && play ? (
         <iframe
           className="absolute pointer-events-none"
           style={{
@@ -161,7 +166,7 @@ function VideoPlaceholder({
           allow="autoplay; encrypted-media; picture-in-picture"
           referrerPolicy="strict-origin-when-cross-origin"
         />
-      ) : videoUrl ? (
+      ) : videoUrl && play ? (
         <video
           autoPlay
           muted
@@ -231,6 +236,12 @@ function CapabilityBand({
   const ref = useRef<HTMLElement>(null);
   const prefersReducedMotion = useReducedMotion();
   const reversed = index % 2 === 1;
+
+  // Only the band on screen plays its video; it unmounts when scrolled away so
+  // memory frees instead of six YouTube players living at once. Off entirely
+  // for reduced motion / mobile.
+  const inView = useInView(ref, { margin: "-25% 0px -25% 0px" });
+  const playVideo = inView && !prefersReducedMotion;
 
   // Track scroll progress through this individual band so the giant numeral
   // can drift on its own while you read it.
@@ -415,6 +426,7 @@ function CapabilityBand({
                   title={cap.title}
                   videoUrl={cap.videoUrl}
                   youtubeId={cap.youtubeId}
+                  play={playVideo}
                 />
               </motion.div>
             </div>
@@ -493,7 +505,9 @@ export function AIRoadmap() {
                 week.
               </p>
               <p className="mt-5 font-sans text-[var(--color-body)] text-base md:text-lg leading-relaxed max-w-[620px]">
-                We build the AI workflows. You keep running the business.
+                Run the right ones and the slow month stops being a coin flip.
+                We help you get there, building it with you or teaching you to
+                run it yourself.
               </p>
             </div>
           </div>

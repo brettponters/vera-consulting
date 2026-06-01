@@ -25,6 +25,12 @@ const nextConfig: NextConfig = {
         destination: '/our-strategy',
         permanent: true,
       },
+      // Old general-AI explainer, replaced by the real estate guide.
+      {
+        source: '/ai-fundamentals',
+        destination: '/ai-in-real-estate',
+        permanent: true,
+      },
     ];
   },
 };
