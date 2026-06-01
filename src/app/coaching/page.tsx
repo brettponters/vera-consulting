@@ -7,11 +7,11 @@ import { FaqBlock, buildFaqJsonLd, type FaqItem } from "@/components/ui/FaqBlock
 const COACHING_FAQ: FaqItem[] = [
   {
     q: "What is 1:1 AI coaching?",
-    a: "Private weekly sessions where we build AI into your actual practice, not a course and not a generic curriculum. We take the parts of your week that eat hours, proposals, briefs, follow-ups, intake, and design the workflows that handle them with you, on your real work.",
+    a: "Private weekly sessions where we build AI into your actual practice, not a course and not a generic curriculum. We take the parts of your week that eat hours, follow-ups, listing prep, buyer research, contract admin, and design the workflows that handle them with you, on your real work.",
   },
   {
     q: "Who is it for?",
-    a: "Solo experts whose business runs on trust: coaches, consultants, marketing and SEO pros, brand strategists, social media managers, and agency owners. People who want personal fluency in AI applied to how they actually work, not a team-wide rollout.",
+    a: "Real estate agents, teams, and brokers who want personal fluency in AI applied to how they actually run their business. Residential agents, listing specialists, buyer's agents, luxury agents, commercial brokers, and investor-focused agents. Not a team-wide rollout, just you and the work you do.",
   },
   {
     q: "Is it remote or in person?",
@@ -30,24 +30,24 @@ const COACHING_FAQ: FaqItem[] = [
 const faqJsonLd = buildFaqJsonLd(COACHING_FAQ);
 
 export const metadata: Metadata = {
-  title: "1:1 AI Coaching for Coaches and Consultants",
+  title: "1:1 AI Coaching for Real Estate Agents | VERA",
   description:
-    "Private weekly 1:1 AI coaching for coaches, consultants, marketing pros, and solo experts whose business runs on trust. Custom workflows built around how you actually run your practice. Remote.",
+    "Private weekly 1:1 AI coaching for real estate agents, teams, and brokers. Custom workflows built around listings, follow-ups, buyer research, and contract admin. Remote and South Florida in person.",
   alternates: {
     canonical: "/coaching",
   },
   openGraph: {
-    title: "1:1 AI Coaching for Coaches and Consultants | VERA",
+    title: "1:1 AI Coaching for Real Estate Agents | VERA",
     description:
-      "Private weekly 1:1 AI coaching for solo experts. Custom workflows around the real work of running your practice.",
+      "Private weekly 1:1 AI coaching for real estate agents and brokers. Custom workflows around the real work of running your practice.",
     type: "website",
     url: "https://veraconsulting.co/coaching",
   },
   twitter: {
     card: "summary_large_image",
-    title: "1:1 AI Coaching for Coaches and Consultants | VERA",
+    title: "1:1 AI Coaching for Real Estate Agents | VERA",
     description:
-      "Private weekly 1:1 AI coaching for coaches, consultants, and solo experts.",
+      "Private weekly 1:1 AI coaching for real estate agents, teams, and brokers.",
   },
 };
 
@@ -82,7 +82,7 @@ export default function CoachingPage() {
               className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.03em] leading-[0.98]"
               style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)" }}
             >
-              1:1 AI coaching for coaches, consultants, and solo experts.
+              1:1 AI coaching for real estate agents, teams, and brokers.
             </h1>
 
             <p
@@ -91,9 +91,9 @@ export default function CoachingPage() {
             >
               Private weekly sessions, 1:1 with the founder, no handoff to
               anyone else. Built around how you specifically run your
-              practice. We design the AI workflows for the parts of your week
-              that take hours, proposals, briefs, follow-ups, status updates,
-              intake notes, and you keep them.
+              business. We design the AI workflows for the parts of your week
+              that take hours, follow-ups, listing prep, buyer research,
+              contract admin, and you keep them.
             </p>
 
             <div>
@@ -119,12 +119,11 @@ export default function CoachingPage() {
                 className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.02em] leading-tight"
                 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2rem)" }}
               >
-                Solo experts who want personal AI coaching, not a team-wide rollout.
+                Real estate agents who want personal AI coaching, not a team-wide rollout.
               </h2>
               <p className="font-sans text-[var(--color-body)] text-base md:text-[17px] leading-relaxed max-w-[640px]">
-                Coaches, consultants, marketing pros, SEO consultants, brand
-                strategists, social media managers, independent agency owners,
-                and the solo experts whose business runs on trust.
+                Residential agents, listing specialists, buyer&rsquo;s agents,
+                luxury agents, commercial brokers, and investor-focused agents.
                 Personal fluency in AI applied to your actual practice, not a
                 generic curriculum. We design the workflows for you. You
                 don&rsquo;t configure tools.

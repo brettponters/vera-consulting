@@ -1,8 +1,8 @@
 /**
  * Local service-area data for /locations/[slug] pages and the homepage
  * South Florida section. One entry per city. Content is written for VERA's
- * ICP, solo entrepreneurs whose business runs on trust (coaches, consultants,
- * marketing pros, agency owners, fractional execs), specializing in agentic AI.
+ * ICP: real estate agents, teams, and brokers who want agentic AI built
+ * around how they actually work, with Fair Housing and client-data guardrails.
  *
  * Keep whyHere, nearby, and faqExtra unique per city so these are real local
  * pages, not near duplicates. Pillars, use cases, and the base FAQ are shared
@@ -38,23 +38,23 @@ export const LOCATIONS: Location[] = [
     postalCode: "33431",
     geo: { lat: 26.3683, lng: -80.1289 },
     blurb:
-      "Home base. 1:1 agentic AI coaching for Boca Raton coaches, consultants, and solo experts, in person or over Google Meet.",
+      "Home base. 1:1 agentic AI coaching for Boca Raton real estate agents, teams, and brokers, in person or over Google Meet.",
     heroIntro:
-      "VERA is based in Boca Raton. We help local coaches, consultants, marketing pros, and solo experts put agentic AI to work on the parts of the week that eat their time, without losing the trust their business runs on.",
+      "VERA is based in Boca Raton. We help local real estate agents, teams, and brokers put agentic AI to work on the parts of the week that eat their time, with Fair Housing and client-data guardrails built in from the start.",
     whyHere: [
-      "Boca runs on independent expertise. Walk through Mizner Park or the offices along the Glades Road corridor and you find coaches, fractional execs, brand strategists, and consultants whose whole business is what they personally deliver. AI is being sold to all of them, and most of it is the same generic demo. The point of working with a Boca Raton AI consultant who is actually local is that we build around how you run your practice, not a template you have to bend yourself around.",
-      "Agentic AI is the part worth understanding. An assistant answers one question at a time; an agent takes a goal and works through the steps. For a solo expert in Boca Raton that is the difference between a tool you babysit and a workflow that drafts the proposal, pulls the research, and writes the follow-up while you do the work only you can do. That is what VERA coaches and builds, applied to your real week.",
+      "Boca Raton's real estate market is competitive and relationship-driven. Walk the Mizner Park corridor or talk to the teams clustered along Glades Road and you find listing agents juggling active listings, buyer's agents chasing leads, and brokers managing both. AI is being sold to all of them, and most of it is the same generic demo with no idea how a real transaction flows. The point of working with a Boca Raton AI consultant who is actually local is that we build around how you run your practice, not a template you have to bend yourself around.",
+      "Agentic AI is the part worth understanding. A plain chatbot answers one question at a time; an agent takes a goal and works through the steps. For a real estate agent in Boca Raton that is the difference between a tool you babysit and a workflow that drafts the follow-up after a showing, pulls comparable sales, and preps the CMA outline while you are still on the road. That is what VERA coaches and builds, applied to your real week, with guardrails so client information is handled correctly and Fair Housing compliance stays intact.",
       "Because we are in town, the first working session and the messy parts can happen in person, the ones where being in the same room is just faster. The weekly cadence then runs over Google Meet, so distance is never the reason something stalls. You get a real person who answers between sessions, not a course you watch alone.",
     ],
     nearby: ["Downtown Boca Raton", "Mizner Park", "Boca West", "Highland Beach"],
     faqExtra: [
       {
-        q: "Do you offer in-person AI coaching in Boca Raton?",
+        q: "Do you offer in-person AI coaching for real estate agents in Boca Raton?",
         a: "Yes. Since VERA is based in Boca Raton, we can meet in person around Mizner Park, downtown, or the Glades Road corridor for the first working session and the parts that go faster face to face. The weekly sessions then run over Google Meet.",
       },
       {
-        q: "What agentic AI workflows do you build for Boca Raton consultants and coaches?",
-        a: "Proposals and scoping docs, client follow-ups, content and marketing drafts, meeting recaps, research briefs, and scheduling, the repetitive work that fills a solo practice's week. We build the one or two worth automating first, with guardrails, and hand them off so they are yours.",
+        q: "What agentic AI workflows do you build for Boca Raton real estate agents?",
+        a: "Showing follow-ups, CMA prep, listing descriptions, buyer and seller check-ins, contract milestone reminders, and lead intake routing, the repetitive work that fills an agent's or team's week. We build the one or two worth automating first, with Fair Housing and client-data guardrails, and hand them off so they are yours to run.",
       },
     ],
   },
@@ -66,19 +66,19 @@ export const LOCATIONS: Location[] = [
     postalCode: "33444",
     geo: { lat: 26.4615, lng: -80.0728 },
     blurb:
-      "Agentic AI coaching for the Delray Beach coaches, consultants, and creative solo pros working off Atlantic Avenue and beyond.",
+      "Agentic AI coaching for Delray Beach real estate agents and teams working the Atlantic Avenue corridor and beyond.",
     heroIntro:
-      "VERA works with Delray Beach coaches, consultants, marketing pros, and solo experts who want agentic AI built around their practice, with the trust their clients expect kept intact.",
+      "VERA works with Delray Beach real estate agents, teams, and brokers who want agentic AI fitted to how they actually work, with the compliance guardrails and client-data discipline the profession demands.",
     whyHere: [
-      "Delray's Atlantic Avenue scene is full of independent professionals in the real sense: solo consultants, agency-of-one owners, creative pros, and coaches running everything themselves. The work that scales badly, proposals, follow-ups, briefs, recaps, is exactly where agentic AI earns its place, and exactly where a careless setup quietly leaks the client trust a Delray Beach practice is built on.",
-      "Most AI coaching you find online is a generic curriculum. A Delray Beach AI consultant who works with you 1:1 is different: we look at your actual week, find the one or two workflows worth building, and set them up with guardrails so you can explain to any client how their information is handled. Agentic AI means the workflow can run multiple steps on its own, drafting, checking, and finishing, instead of you prompting a chatbot line by line.",
+      "Delray Beach has one of the most active real estate markets on the coast: walkable neighborhoods, strong buyer demand, and agents who are expected to know every block from Atlantic Avenue to Pineapple Grove. The pace is high and the follow-up load is constant. Agentic AI earns its place precisely in that gap between the showing and the signed contract, where the agent who responds fastest and most personally wins.",
+      "Most AI tools marketed to real estate agents are generic and built without any understanding of Fair Housing, client confidentiality, or what actually goes into a transaction. A Delray Beach AI consultant who works with you 1:1 is different: we look at your actual week, find the one or two workflows worth building, and set them up with guardrails you can explain to any client or managing broker. Agentic AI means the workflow runs multiple steps on its own, drafting, checking, and finishing, instead of you prompting a chatbot line by line.",
       "We meet Delray clients in person when it helps, around Pineapple Grove or downtown, and run the weekly sessions over Google Meet the rest of the time. The build is shaped to your practice, and you keep it. No dependency on us, no black box.",
     ],
     nearby: ["Atlantic Avenue", "Pineapple Grove", "Lake Ida", "Gulf Stream"],
     faqExtra: [
       {
-        q: "Do you work with coaches and creative pros near Atlantic Avenue in Delray Beach?",
-        a: "Yes, that is most of who we work with in Delray: coaches, consultants, marketing and brand pros, and agency-of-one owners around Atlantic Avenue, Pineapple Grove, and downtown. The agentic AI workflows are built around how your specific practice runs.",
+        q: "Do you work with real estate agents and teams near Atlantic Avenue in Delray Beach?",
+        a: "Yes, that is most of who we work with in Delray: listing agents, buyer's agents, and small teams around Atlantic Avenue, Pineapple Grove, and downtown. The agentic AI workflows are built around how your specific practice runs, with Fair Housing and client-data guardrails included.",
       },
       {
         q: "Is the AI coaching in Delray Beach remote or in person?",
@@ -94,23 +94,23 @@ export const LOCATIONS: Location[] = [
     postalCode: "33435",
     geo: { lat: 26.5318, lng: -80.0905 },
     blurb:
-      "Practical agentic AI coaching for Boynton Beach solo consultants, coaches, and small practice owners.",
+      "Practical agentic AI coaching for Boynton Beach real estate agents, buyer's agents, and small teams.",
     heroIntro:
-      "VERA helps Boynton Beach coaches, consultants, and solo experts adopt agentic AI on the work they already do, carefully, so the trust their business depends on stays intact.",
+      "VERA helps Boynton Beach real estate agents and teams adopt agentic AI on the work they already do, carefully, so the trust their clients place in them stays intact.",
     whyHere: [
-      "Boynton Beach has a fast-growing base of small practices and solo professionals, the kind of business where one person wears every hat. That is the situation agentic AI helps most, because the hours lost to repetitive admin are hours you are not spending with clients. Done right, it gives you back the week. Done carelessly, it puts client information where it should not be, which is the last thing a trust-based Boynton Beach practice can afford.",
-      "Agentic AI is worth understanding before you adopt it. A plain chatbot answers one prompt at a time. An agent takes a goal, like turning your call notes into a follow-up and a scoped proposal, and works through the steps on its own. As a Boynton Beach AI consultant, VERA coaches you to use that well and builds the workflows so they run reliably, not as a demo that breaks the second week.",
+      "Boynton Beach has a fast-growing buyer pool and a real estate agent community that is both local and highly mobile. Agents here cover ground from Renaissance Commons to the barrier island and back, and the administrative load, follow-ups, listing prep, buyer updates, contract milestones, stacks up fast. That is exactly where agentic AI helps most, because the hours lost to repetitive communications are hours you are not showing homes or building relationships. Done right, it gives you time back. Done carelessly, it puts client information where it should not be.",
+      "Agentic AI is worth understanding before you adopt it. A plain chatbot answers one prompt at a time. An agent takes a goal, like turning your showing notes into a personalized follow-up and a next-step checklist, and works through the steps on its own. As a Boynton Beach AI consultant, VERA coaches you to use that well and builds the workflows so they run reliably, not as a demo that breaks the second week, and with the Fair Housing guardrails any licensed agent needs.",
       "We keep it grounded: pick the one or two workflows actually worth building, set them up with guardrails and documentation, and make sure you can run them yourself. In person locally when useful, and over Google Meet for the weekly working sessions, so being a few towns over never slows anything down.",
     ],
     nearby: ["Downtown Boynton Beach", "Renaissance Commons", "Ocean Ridge", "Lantana"],
     faqExtra: [
       {
-        q: "Do you serve small practice owners and solo consultants in Boynton Beach?",
-        a: "Yes. Boynton Beach is full of one-person businesses and small practices, which is exactly who VERA works with. We build agentic AI into the workflows that eat your week so you get time back without adding headcount.",
+        q: "Do you serve real estate agents and buyer's agents in Boynton Beach?",
+        a: "Yes. Boynton Beach agents and small teams are exactly who VERA works with. We build agentic AI into the showing follow-ups, listing prep, and client communications that fill your week so you get time back without adding headcount or risking compliance.",
       },
       {
-        q: "What does agentic AI mean for a solo business in Boynton Beach?",
-        a: "It means AI that completes multi-step work, not just answers questions. Instead of prompting a chatbot over and over, you set a goal and the agent drafts, checks, and finishes, like turning a discovery call into notes, a follow-up, and a proposal. We coach you to use it and build it with guardrails so it is reliable.",
+        q: "What does agentic AI mean for a real estate agent in Boynton Beach?",
+        a: "It means AI that completes multi-step work, not just answers questions. Instead of prompting a chatbot over and over, you set a goal and the agent drafts, checks, and finishes, like turning showing notes into a personalized buyer update and a next-steps checklist. We coach you to use it and build it with Fair Housing and client-data guardrails so it is reliable.",
       },
     ],
   },
@@ -122,23 +122,23 @@ export const LOCATIONS: Location[] = [
     postalCode: "33441",
     geo: { lat: 26.3184, lng: -80.0998 },
     blurb:
-      "Agentic AI coaching for Deerfield Beach consultants, coaches, and independent professionals, remote-friendly via Google Meet.",
+      "Agentic AI coaching for Deerfield Beach real estate agents working both sides of the county line, remote-friendly via Google Meet.",
     heroIntro:
-      "VERA works with Deerfield Beach coaches, consultants, marketing pros, and solo experts who want agentic AI fitted to their practice without putting client trust at risk.",
+      "VERA works with Deerfield Beach real estate agents, teams, and brokers who want agentic AI fitted to their practice without putting client trust or compliance at risk.",
     whyHere: [
-      "Deerfield Beach sits right on the line between Palm Beach and Broward, with a mix of independent consultants, service pros, and small agency owners who run lean. When you are the whole business, the bottleneck is your own time, and that is precisely what agentic AI can give back when it is built around your real workflows instead of a generic playbook bought off a webinar.",
-      "Hiring a Deerfield Beach AI consultant who works 1:1 means the build matches your practice. We find the one or two workflows worth automating, proposals, follow-ups, content, recaps, set them up with guardrails, and coach you until you can run and adjust them yourself. Agentic AI is the engine: it carries a task through several steps on its own rather than waiting on you for each one.",
-      "We are close enough to meet in person when it speeds things up, and we run the weekly sessions over Google Meet otherwise. You end up with AI workflows you understand and own, set up with the guardrails a trust-based practice needs, whether your clients are in Broward, Palm Beach, or anywhere else.",
+      "Deerfield Beach sits right on the line between Palm Beach and Broward, which means the agents here often work both markets and carry the administrative load that comes with it. Dual-county activity doubles the follow-ups, the listing prep, the showing coordination, and the contract paperwork. That is precisely the situation where agentic AI pays off, because it handles the repetitive steps that pile up across both sides of the line, built around your real workflows rather than a generic playbook.",
+      "Hiring a Deerfield Beach AI consultant who works 1:1 means the build matches your practice. We find the one or two workflows worth automating, showing follow-ups, CMA drafts, buyer check-ins, contract milestone alerts, set them up with guardrails, and coach you until you can run and adjust them yourself. Fair Housing compliance and client-data discipline are built in from the start, not bolted on as an afterthought.",
+      "We are close enough to meet in person when it speeds things up, and we run the weekly sessions over Google Meet otherwise. You end up with AI workflows you understand and own, set up so you can answer honestly when a client asks how their information is handled, whether your listings are in Broward, Palm Beach, or both.",
     ],
     nearby: ["The Cove", "Hillsboro", "Lighthouse Point", "Pompano Beach", "Fort Lauderdale"],
     faqExtra: [
       {
-        q: "Do you offer AI coaching and consulting in Deerfield Beach?",
-        a: "Yes. VERA works with Deerfield Beach coaches, consultants, and solo professionals, building agentic AI into the day-to-day work that fills your week. In person locally when it helps, and over Google Meet for the weekly cadence.",
+        q: "Do you offer AI coaching and consulting for real estate agents in Deerfield Beach?",
+        a: "Yes. VERA works with Deerfield Beach agents, teams, and brokers, building agentic AI into the showing follow-ups, listing prep, and client communications that fill the week. In person locally when it helps, and over Google Meet for the weekly cadence.",
       },
       {
         q: "Do you cover both Broward and Palm Beach County from Deerfield Beach?",
-        a: "Yes. Deerfield Beach straddles the county line, and we work across both, plus fully remote over Google Meet for clients further out. Where you sit on the map does not change the work.",
+        a: "Yes. Deerfield Beach straddles the county line, and we work with agents active in both, plus fully remote over Google Meet for clients further out. Where you sit on the map does not change the work.",
       },
     ],
   },
@@ -150,19 +150,19 @@ export const LOCATIONS: Location[] = [
     postalCode: "33301",
     geo: { lat: 26.1224, lng: -80.1373 },
     blurb:
-      "Agentic AI coaching for Fort Lauderdale's freelance, agency, and consulting scene, in person or over Google Meet.",
+      "Agentic AI coaching for Fort Lauderdale real estate agents, luxury listing specialists, and investor-focused teams, in person or over Google Meet.",
     heroIntro:
-      "VERA helps Fort Lauderdale consultants, marketing pros, agency owners, and solo experts adopt agentic AI on the work they already do, with the trust their clients count on kept front and center.",
+      "VERA helps Fort Lauderdale real estate agents, listing specialists, and brokers adopt agentic AI on the work they already do, with the compliance guardrails and client-data discipline the market demands.",
     whyHere: [
-      "Fort Lauderdale's Flagler Village and Las Olas corridors hold one of the densest freelance and small-agency scenes in South Florida: marketing pros, brand strategists, social media managers, and independent consultants. The repetitive work that fills their week, briefs, drafts, reporting, client updates, is exactly where agentic AI pays off, and exactly where a careless rollout risks the client relationships that pay the bills.",
-      "A Fort Lauderdale AI consultant who works with you 1:1 builds around your real work rather than handing you a course. We find the one or two workflows worth automating and set them up properly, with guardrails, evaluation, and documentation. Agentic AI is what makes it worth doing: the workflow runs several steps on its own, so a campaign brief, a content draft, and a client update get done while you focus on the work clients actually pay you for.",
-      "We meet locally when it helps, around downtown, Flagler Village, or Las Olas, and run the weekly cadence over Google Meet the rest of the time. The build is specific to how you work, you keep it, and it is set up so you can answer honestly when a client asks how their information is handled.",
+      "Fort Lauderdale's real estate market runs the full range: waterfront luxury along Las Olas, dense residential turnover in Flagler Village, and a strong investor and commercial layer underneath. Agents here move fast and field a high volume of inquiries. The repetitive work that costs them listings, slow follow-ups after showings, late CMA delivery, generic buyer updates, is exactly where agentic AI earns its place when it is built correctly and not just dropped in from a template.",
+      "A Fort Lauderdale AI consultant who works with you 1:1 builds around your real transactions rather than handing you a generic course. We find the one or two workflows worth automating and set them up properly: showing follow-ups personalized to what each buyer actually looked at, listing description drafts in your voice, CMA prep pulled from the data you already have. Fair Housing compliance and client-data guardrails are in from the start. Agentic AI is what makes it worth doing: the workflow runs several steps on its own so the admin gets done while you focus on the deal.",
+      "We meet locally when it helps, around downtown, Flagler Village, or Las Olas, and run the weekly cadence over Google Meet the rest of the time. The build is specific to how you work, you keep it, and it is set up so you can answer honestly when a client or managing broker asks how their information is handled.",
     ],
     nearby: ["Flagler Village", "Las Olas", "Victoria Park", "Wilton Manors"],
     faqExtra: [
       {
-        q: "Do you work with agencies and freelancers in Fort Lauderdale?",
-        a: "Yes. Fort Lauderdale's freelance and small-agency scene around Flagler Village and Las Olas is a core part of who we work with: marketing pros, brand strategists, social media managers, and independent consultants. We build agentic AI into the briefs, drafts, reporting, and client updates that eat the week.",
+        q: "Do you work with luxury and investor-focused agents in Fort Lauderdale?",
+        a: "Yes. Fort Lauderdale's mix of waterfront luxury, residential turnover, and investor activity is a core part of who we work with: listing agents, buyer's agents, and broker-owners who need AI built around real transaction workflows. We set up the follow-ups, CMA prep, listing copy, and client communications that eat the week, with guardrails that hold up in a regulated profession.",
       },
       {
         q: "Where in Fort Lauderdale do you meet for AI coaching?",
@@ -180,7 +180,7 @@ const REMOTE_FAQ = {
 const BASE_FAQ = [
   {
     q: "Who do you work with?",
-    a: "Solo experts whose business runs on trust: coaches, consultants, marketing pros, SEO consultants, brand strategists, social media managers, independent agency owners, and fractional execs. If your business is built on what you personally deliver, that is who this is for.",
+    a: "Real estate agents, teams, and brokers whose business runs on relationships and trust. That includes listing agents, buyer's agents, luxury specialists, commercial agents, investor-focused agents, and broker-owners. If you are licensed and want agentic AI built around your actual practice with proper guardrails, that is who this is for.",
   },
   REMOTE_FAQ,
   {
@@ -198,45 +198,45 @@ export const LOCATION_PILLARS = [
   {
     title: "Coaching",
     body:
-      "Private weekly 1:1 sessions built around how you actually run your practice. By the end you can evaluate tools, write better prompts, and run agentic AI workflows yourself, with no dependency on anyone else.",
+      "Private weekly 1:1 sessions built around how you actually run your real estate practice. By the end you can evaluate tools, write better prompts, and run agentic AI workflows yourself, with no dependency on anyone else.",
   },
   {
     title: "Strategy",
     body:
-      "We find the one or two workflows genuinely worth building, the ones eating your week, and skip the ten that only look good in a slide. You leave with a plan you can act on, not a wish list.",
+      "We find the one or two workflows genuinely worth building, the ones eating your week between showings and closings, and skip the ten that only look good in a slide. You leave with a plan you can act on, not a wish list.",
   },
   {
     title: "Integration",
     body:
-      "Plans do not save time, systems do. We build the agentic AI workflows into how you work, with the guardrails, evaluation, and documentation a trust-based practice needs, then hand them off so they are yours.",
+      "Plans do not save time, systems do. We build the agentic AI workflows into how you work, with Fair Housing compliance, client-data guardrails, and human-in-the-loop checkpoints built in, then hand them off so they are yours.",
   },
 ];
 
 /** Shared use cases; introduced with a city-specific lead in the template. */
 export const LOCATION_USE_CASES = [
   {
-    title: "Proposals and scoping",
-    body: "Turn a discovery call into a clean, scoped proposal in minutes instead of an evening, in your voice and format.",
+    title: "Showing follow-ups",
+    body: "Personalized follow-up messages drafted the same hour, tied to what each buyer actually saw and asked about during the showing.",
   },
   {
-    title: "Client follow-ups",
-    body: "Notes, recaps, and next steps written and sent the same hour, personalized to what each client actually asked about.",
+    title: "CMA prep",
+    body: "Comparable sales pulled and organized into a clean draft so your market analysis is ready before the listing appointment, not the night after.",
   },
   {
-    title: "Content and marketing",
-    body: "First drafts of posts, newsletters, and briefs that sound like you, so editing replaces staring at a blank page.",
+    title: "Listing descriptions",
+    body: "Property descriptions written in your voice from your notes, ready to edit, so you are not staring at a blank page after every new listing.",
   },
   {
-    title: "Research and briefs",
-    body: "A question becomes a tidy brief with sources, fast, whether it is a market read, a competitor scan, or prep for a call.",
+    title: "Buyer and seller check-ins",
+    body: "Contract milestone updates and routine check-ins drafted and sent on schedule so every client feels informed without it landing on your to-do list.",
   },
   {
-    title: "Meeting notes",
-    body: "Calls captured, summarized, and turned into action items and a follow-up without you typing through the conversation.",
+    title: "Lead intake and routing",
+    body: "Incoming inquiries qualified, logged, and routed with an immediate response so no lead goes cold while you are in a showing.",
   },
   {
-    title: "Scheduling and intake",
-    body: "Intake, routing, and the back-and-forth of booking handled by a workflow so the busywork stops landing on you.",
+    title: "Meeting notes and action items",
+    body: "Calls and walkthroughs captured, summarized, and turned into next steps and follow-up tasks without you typing through the conversation.",
   },
 ];
 

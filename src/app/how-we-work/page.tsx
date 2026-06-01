@@ -4,14 +4,14 @@ import { FAQ } from "./faq";
 import { PHASES } from "./phases";
 
 export const metadata: Metadata = {
-  title: "How We Work",
+  title: "How VERA Works, AI for Real Estate Agents",
   description:
-    "The VERA engagement process: discover, strategize, integrate, operate. How an AI consulting engagement actually unfolds, end to end.",
+    "The VERA engagement process for real estate agents: discover, strategize, integrate, operate. How an agentic AI engagement actually unfolds, end to end.",
   alternates: { canonical: "/how-we-work" },
   openGraph: {
-    title: "How VERA Works, AI Consulting Process",
+    title: "How VERA Works, AI for Real Estate Agents",
     description:
-      "Discover, strategize, integrate, operate. The four phases of a VERA engagement.",
+      "Discover, strategize, integrate, operate. The four phases of a VERA engagement for real estate agents and brokers.",
     url: "https://veraconsulting.co/how-we-work",
     type: "article",
     images: ["/opengraph-image"],

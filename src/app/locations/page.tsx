@@ -5,23 +5,23 @@ import { Button } from "@/components/ui/Button";
 import { LOCATIONS } from "@/data/locations";
 
 export const metadata: Metadata = {
-  title: "Service Areas, AI Coaching Across South Florida",
+  title: "Service Areas, AI Coaching for Real Estate Agents Across South Florida",
   description:
-    "VERA serves coaches, consultants, marketing pros, and solo experts across South Florida, Boca Raton, Delray Beach, Boynton Beach, Deerfield Beach, and Fort Lauderdale, in person or over Google Meet.",
+    "VERA serves real estate agents, teams, and brokers across South Florida, Boca Raton, Delray Beach, Boynton Beach, Deerfield Beach, and Fort Lauderdale, in person or over Google Meet.",
   alternates: { canonical: "/locations" },
   openGraph: {
-    title: "Service Areas, AI Coaching Across South Florida | VERA",
+    title: "Service Areas, AI Coaching for Real Estate Agents Across South Florida | VERA",
     description:
-      "Agentic AI coaching for solo experts across South Florida. In person locally, or over Google Meet anywhere.",
+      "Agentic AI coaching for real estate agents and teams across South Florida. In person locally, or over Google Meet anywhere.",
     type: "website",
     url: "https://veraconsulting.co/locations",
     images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Service Areas, AI Coaching Across South Florida | VERA",
+    title: "Service Areas, AI Coaching for Real Estate Agents Across South Florida | VERA",
     description:
-      "Agentic AI coaching for solo experts across South Florida, in person or over Google Meet.",
+      "Agentic AI coaching for real estate agents and teams across South Florida, in person or over Google Meet.",
   },
 };
 
@@ -80,9 +80,10 @@ export default function LocationsIndexPage() {
               Where we work.
             </h1>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[760px]">
-              Based in Boca Raton, working with solo experts across South
-              Florida. In person when it helps, and over Google Meet anywhere,
-              so distance is never the reason something stalls.
+              Based in Boca Raton, working with real estate agents, teams, and
+              brokers across South Florida. In person when it helps, and over
+              Google Meet anywhere, so distance is never the reason something
+              stalls.
             </p>
           </div>
         </Container>
@@ -126,9 +127,10 @@ export default function LocationsIndexPage() {
               Not in one of these towns?
             </h2>
             <p className="font-sans text-[var(--color-body)] text-lg leading-relaxed max-w-prose">
-              Most of the work happens over Google Meet anyway. If your business
-              runs on trust and you want agentic AI built around how you
-              actually work, the conversation is the same wherever you are.
+              Most of the work happens over Google Meet anyway. If you are a
+              real estate agent, team lead, or broker who wants agentic AI
+              built around how you actually work, the conversation is the same
+              wherever you are.
             </p>
             <Button href="/contact" variant="filled" size="lg" arrow>
               Book a call

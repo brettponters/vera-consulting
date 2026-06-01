@@ -20,7 +20,7 @@ const ROWS: AreaRow[] = [
   {
     label: "Across the U.S.",
     blurb:
-      "Not in South Florida? Most of the work runs over Google Meet, so we coach solo experts anywhere in the country.",
+      "Not in South Florida? Most of the work runs over Google Meet, so we coach real estate agents anywhere in the country.",
     href: "/contact",
   },
 ];
@@ -42,8 +42,8 @@ export function SouthFlorida() {
               className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.02em] leading-tight"
               style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)" }}
             >
-              Based in Boca Raton. Working with solo experts across the United
-              States.
+              Based in Boca Raton. Working with real estate agents across the
+              United States.
             </h2>
             <p className="font-sans text-[var(--color-muted)] text-base leading-relaxed">
               In person around South Florida, and over Google Meet anywhere in

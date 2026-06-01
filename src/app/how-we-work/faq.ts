@@ -5,7 +5,7 @@ export const FAQ = [
   },
   {
     q: "Who do you work with?",
-    a: "Coaches, consultants, marketing pros, SEO consultants, brand strategists, social media managers, independent agency owners, and fractional execs. Solo experts whose business runs on trust.",
+    a: "Real estate agents, teams, and brokers. Residential agents, listing specialists, buyer's agents, luxury agents, commercial brokers, and investor-focused agents whose business runs on relationships.",
   },
   {
     q: "How big is your team?",

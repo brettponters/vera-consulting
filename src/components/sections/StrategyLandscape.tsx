@@ -81,11 +81,11 @@ function CountUp({
 const COPY = [
   {
     head: "AI is already in your clients' world",
-    body: "88% of organizations now use AI in at least one business function. The Fortune 500 has standardized on it. Your clients are reading the same headlines you are, and they are starting to ask what you are doing with it. The bar for a solo expert has moved.",
+    body: "88% of organizations now use AI in at least one business function. The Fortune 500 has standardized on it. Your clients are reading the same headlines you are, and they are starting to ask what you are doing with it. The bar for a real estate agent has moved.",
   },
   {
     head: "Most of it is shallow",
-    body: "Adoption raced ahead of judgment. Only a quarter of teams using AI have any real frame for how they use it, and roughly three quarters of the people running them admit they could not defend their AI practice if a client asked. That gap is the opening. The solo experts who think carefully about how they use AI look very different from the ones bolting it on.",
+    body: "Adoption raced ahead of judgment. Only a quarter of teams using AI have any real frame for how they use it, and roughly three quarters of the people running them admit they could not defend their AI practice if a client asked. That gap is the opening. The agents who think carefully about how they use AI look very different from the ones bolting it on.",
   },
   {
     head: "Regulation is catching up",

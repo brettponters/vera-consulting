@@ -81,7 +81,7 @@ export default function OurStrategyClient() {
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[660px] mb-10">
-                How we help solo experts and practices get fluent in AI on
+                How we help real estate agents and brokers get fluent in AI on
                 the work they already do. Three things: weekly 1:1
                 coaching, a strategy for which workflows are worth
                 building, and the integration to actually ship them.
@@ -162,12 +162,12 @@ export default function OurStrategyClient() {
                   <div>
                     <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed mb-5">
                       &ldquo;I started VERA because AI is going to change
-                      knowledge work at an unprecedented pace, and the
-                      people whose businesses run on trust are the
+                      how real estate is done at an unprecedented pace, and
+                      agents whose businesses run on relationships are the
                       ones with the most to gain and the most to lose. We
-                      use AI to strengthen what people already do well, pick
+                      use AI to strengthen what agents already do well, pick
                       the workflows worth building instead of the ten that
-                      look good in a deck, and stay honest about both the
+                      look good in a demo, and stay honest about both the
                       risks and the opportunities ahead.&rdquo;
                     </p>
                     <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">

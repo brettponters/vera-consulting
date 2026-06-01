@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import GetStartedClient from "./GetStartedClient";
 
 export const metadata: Metadata = {
-  title: "Get Started, Agentic AI for Your Practice",
+  title: "Get Started, Agentic AI for Real Estate Agents",
   description:
-    "Tell us about your practice and we'll reach out within 24 hours. Agentic AI coaching, strategy, and integration for coaches, consultants, and solo experts in Boca Raton, FL.",
+    "Tell us about your real estate business and we'll reach out within 24 hours. Agentic AI coaching, strategy, and integration for agents, teams, and brokers in Boca Raton, FL.",
   alternates: { canonical: "/get-started" },
   openGraph: {
-    title: "Get Started with VERA, Agentic AI for Your Practice",
+    title: "Get Started with VERA, Agentic AI for Real Estate Agents",
     description:
-      "Tell us about your practice and we'll reach out within 24 hours. Agentic AI for solo experts whose business runs on trust.",
+      "Tell us about your business and we'll reach out within 24 hours. Agentic AI for real estate agents, teams, and brokers.",
     type: "website",
     url: "https://veraconsulting.co/get-started",
     siteName: "VERA",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Get Started with VERA, Agentic AI for Your Practice",
+    title: "Get Started with VERA, Agentic AI for Real Estate Agents",
     description:
-      "Agentic AI coaching, strategy, and integration for coaches, consultants, and solo experts.",
+      "Agentic AI coaching, strategy, and integration for real estate agents, teams, and brokers.",
   },
 };
 

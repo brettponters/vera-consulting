@@ -30,7 +30,7 @@ export async function generateMetadata({
   if (!loc) return {};
   const url = `https://veraconsulting.co/locations/${slug}`;
   const title = `AI Consultant in ${loc.city}, ${loc.state}`;
-  const description = `AI consultant in ${loc.city}: agentic AI coaching, automation, strategy, and integration for ${loc.city} coaches, consultants, marketing pros, and solo experts. Built around your practice, with guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
+  const description = `AI consultant in ${loc.city}: agentic AI coaching, automation, strategy, and integration for ${loc.city} real estate agents, teams, and brokers. Built around your practice, with Fair Housing and client-data guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
   return {
     title,
     description,
@@ -38,12 +38,12 @@ export async function generateMetadata({
     keywords: [
       `${loc.city} AI coaching`,
       `${loc.city} AI consultant`,
-      `AI coach ${loc.city}`,
+      `AI for realtors ${loc.city}`,
+      `real estate agent AI ${loc.city}`,
       `agentic AI ${loc.city}`,
       `AI automation ${loc.city}`,
       `AI consulting ${loc.city}`,
-      `AI for consultants ${loc.city}`,
-      `AI for coaches ${loc.city}`,
+      `AI consultant ${loc.city}`,
       `${loc.region} AI consultant`,
     ],
     openGraph: {
@@ -83,7 +83,7 @@ export default async function LocationPage({
         "@type": "ProfessionalService",
         "@id": `${canonicalUrl}#business`,
         name: "VERA Consulting",
-        description: `Agentic AI coaching, strategy, and integration for ${loc.city} coaches, consultants, and solo experts.`,
+        description: `Agentic AI coaching, strategy, and integration for ${loc.city} real estate agents, teams, and brokers.`,
         url: canonicalUrl,
         telephone: "+1-561-900-8182",
         email: "brett@veraconsulting.co",
@@ -191,7 +191,7 @@ export default async function LocationPage({
           <div className="max-w-[760px]">
             <Eyebrow className="mb-5">Why it matters here</Eyebrow>
             <h2 className="font-sans font-semibold text-2xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-8">
-              AI for {loc.city} businesses that run on trust.
+              AI for {loc.city} real estate agents who run on trust.
             </h2>
             <div className="space-y-6 font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)]">
               {loc.whyHere.map((para, i) => (
@@ -212,7 +212,7 @@ export default async function LocationPage({
           <div className="max-w-[760px] mb-12 md:mb-16">
             <Eyebrow className="mb-5">What we do</Eyebrow>
             <h2 className="font-sans font-semibold text-2xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight">
-              How VERA helps {loc.city} solo experts.
+              How VERA helps {loc.city} real estate agents and teams.
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -239,7 +239,7 @@ export default async function LocationPage({
           <div className="max-w-[760px] mb-12 md:mb-16">
             <Eyebrow className="mb-5">What we build</Eyebrow>
             <h2 className="font-sans font-semibold text-2xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight">
-              The agentic AI workflows we build for {loc.city} solo experts.
+              The agentic AI workflows we build for {loc.city} real estate agents.
             </h2>
           </div>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 list-none m-0 p-0">

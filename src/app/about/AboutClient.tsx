@@ -68,11 +68,10 @@ export default function AboutClient() {
 
             <Reveal delay={0.12}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-                I started VERA because the people I want to work with
-                don&rsquo;t need another vendor. They need someone who
-                understands the research, has built the systems, and will tell
-                them the truth about what AI can and can&rsquo;t do for their
-                practice right now.
+                I started VERA because real estate agents don&rsquo;t need
+                another vendor. They need someone who understands the research,
+                has built the systems, and will tell them the truth about what
+                AI can and can&rsquo;t do for their business right now.
               </p>
             </Reveal>
 
@@ -80,9 +79,10 @@ export default function AboutClient() {
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
                 Before VERA, I spent years inside engineering and product teams
                 shipping AI into production. I saw the same pattern over and
-                over: practices spending on AI without understanding what they
-                were buying, consultants selling strategies they couldn&rsquo;t
-                implement, and teams left holding systems nobody documented.
+                over: agents and brokers spending on AI tools without
+                understanding what they were buying, vendors selling strategies
+                they couldn&rsquo;t implement, and teams left holding systems
+                nobody documented.
               </p>
             </Reveal>
 

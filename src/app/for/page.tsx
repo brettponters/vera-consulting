@@ -4,14 +4,14 @@ import { Container } from "@/components/ui/Container";
 import { VERTICALS } from "@/data/verticals";
 
 export const metadata: Metadata = {
-  title: "AI Consulting by Vertical",
+  title: "Real Estate AI by Niche",
   description:
-    "AI consulting and coaching for coaches, consultants, marketing pros, agencies, and the solo experts whose business runs on trust.",
+    "Agentic AI for real estate agents, by niche. Find the workflows that fit your line of business: residential, listing, buyer's, luxury, commercial, or investor-focused.",
   alternates: { canonical: "/for" },
   openGraph: {
-    title: "AI Consulting by Vertical, VERA",
+    title: "Real Estate AI by Niche, VERA",
     description:
-      "Pick your practice. See what we ship for coaches, consultants, marketing pros, and agencies.",
+      "Pick your niche. See what we build for real estate agents, teams, and brokers.",
     url: "https://veraconsulting.co/for",
     type: "website",
     images: ["/opengraph-image"],
@@ -70,11 +70,11 @@ export default function ForIndexPage() {
               className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-8"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
-              Pick your practice.
+              Pick your niche.
             </h1>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[760px]">
-              We work with solo experts whose business runs on trust.
-              Find the workflows that fit yours.
+              We work with real estate agents, teams, and brokers.
+              Find the workflows that fit your line of business.
             </p>
           </div>
         </Container>

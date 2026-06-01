@@ -9,14 +9,14 @@ import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "Agentic AI for Coaches and Consultants | VERA Consulting",
+  title: "Agentic AI for Real Estate Agents | VERA Consulting",
   description:
-    "Agentic AI coaching, strategy, and integration for coaches, consultants, marketing pros, and solo experts whose business runs on trust. Boca Raton, FL.",
+    "Agentic AI for real estate agents: coaching, strategy, and integration that puts AI on the busywork, follow-ups, listings, research, and contracts, without losing the client relationships. Boca Raton, FL.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Agentic AI for Coaches and Consultants | VERA Consulting",
+    title: "Agentic AI for Real Estate Agents | VERA Consulting",
     description:
-      "Agentic AI coaching, strategy, and integration for coaches, consultants, marketing pros, and solo experts whose business runs on trust.",
+      "Agentic AI for real estate agents: coaching, strategy, and integration that puts AI on the busywork, follow-ups, listings, research, and contracts, without losing the client relationships.",
     type: "website",
     url: "https://veraconsulting.co",
     siteName: "VERA",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agentic AI for Coaches and Consultants | VERA Consulting",
+    title: "Agentic AI for Real Estate Agents | VERA Consulting",
     description:
-      "Agentic AI coaching, strategy, and integration for coaches, consultants, marketing pros, and solo experts whose business runs on trust.",
+      "Agentic AI for real estate agents: coaching, strategy, and integration that puts AI on the busywork, follow-ups, listings, research, and contracts, without losing the client relationships.",
   },
 };
 
