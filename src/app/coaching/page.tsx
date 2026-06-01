@@ -30,7 +30,7 @@ const COACHING_FAQ: FaqItem[] = [
 const faqJsonLd = buildFaqJsonLd(COACHING_FAQ);
 
 export const metadata: Metadata = {
-  title: "1:1 AI Coaching for Real Estate Agents | VERA",
+  title: "1:1 AI Coaching for Real Estate Agents",
   description:
     "Private weekly 1:1 AI coaching for real estate agents, teams, and brokers. Custom workflows built around listings, follow-ups, buyer research, and contract admin. Remote and South Florida in person.",
   alternates: {
