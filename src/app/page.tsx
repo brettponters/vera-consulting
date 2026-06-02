@@ -9,12 +9,12 @@ import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "AI Tools for Real Estate Agents | VERA Consulting",
+  title: "AI Solutions for Real Estate | VERA Consulting",
   description:
     "AI tools, coaching, and training for real estate agents. Learn how to use AI and ChatGPT for lead generation, listing descriptions, follow-ups, and market research, without losing the client relationships. Boca Raton, FL.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "AI Tools for Real Estate Agents | VERA Consulting",
+    title: "AI Solutions for Real Estate | VERA Consulting",
     description:
       "AI tools, coaching, and training for real estate agents. Learn how to use AI and ChatGPT for lead generation, listings, follow-ups, and research, without losing the client relationships.",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Tools for Real Estate Agents | VERA Consulting",
+    title: "AI Solutions for Real Estate | VERA Consulting",
     description:
       "AI tools, coaching, and training for real estate agents. How to use AI and ChatGPT for lead gen, listings, follow-ups, and research, without losing the client relationships.",
   },
