@@ -55,7 +55,7 @@ export default function Hero() {
           </Reveal>
 
           <h1
-            aria-label="Agentic AI Solutions for Realtors."
+            aria-label="Agentic AI Solutions for Real Estate."
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
             style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)" }}
           >
@@ -85,7 +85,7 @@ export default function Hero() {
               className="block"
             >
               for{" "}
-              <span style={{ color: "var(--color-accent)" }}>Realtors.</span>
+              <span style={{ color: "var(--color-accent)" }}>Real Estate.</span>
             </motion.span>
           </h1>
 
