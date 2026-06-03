@@ -29,22 +29,21 @@ export async function generateMetadata({
   const loc = getLocationBySlug(slug);
   if (!loc) return {};
   const url = `https://veraconsulting.co/locations/${slug}`;
-  const title = `AI for Real Estate Agents in ${loc.city}, ${loc.state}`;
-  const description = `AI tools, coaching, and training for ${loc.city} real estate agents, teams, and brokers. Learn how to use AI and ChatGPT for lead generation, listings, follow-ups, and research, with Fair Housing and client-data guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
+  const title = `AI for Real Estate in ${loc.city}, ${loc.state}`;
+  const description = `AI tools, coaching, and training for ${loc.city} real estate professionals: agents, teams, brokers, and investors. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, with Fair Housing and client-data guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
   return {
     title,
     description,
     alternates: { canonical: `/locations/${slug}` },
     keywords: [
-      `AI tools for real estate agents ${loc.city}`,
-      `AI for realtors ${loc.city}`,
-      `ChatGPT for real estate agents ${loc.city}`,
+      `AI tools for real estate ${loc.city}`,
+      `AI for real estate agents ${loc.city}`,
+      `AI for real estate investors ${loc.city}`,
+      `ChatGPT for real estate ${loc.city}`,
       `real estate AI ${loc.city}`,
-      `AI training for realtors ${loc.city}`,
-      `AI coaching for real estate agents ${loc.city}`,
       `${loc.city} real estate lead generation AI`,
       `how to use AI in real estate ${loc.city}`,
-      `${loc.region} AI for real estate agents`,
+      `${loc.region} AI for real estate`,
     ],
     openGraph: {
       title: `${title}, VERA`,
@@ -168,7 +167,7 @@ export default async function LocationPage({
               className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
-              AI for real estate agents in {loc.city}.
+              AI for real estate in {loc.city}.
             </h1>
             <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[680px] mb-10">
               {loc.heroIntro}

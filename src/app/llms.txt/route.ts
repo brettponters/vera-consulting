@@ -22,15 +22,15 @@ export function GET() {
 
   const body = `# VERA Consulting
 
-> VERA helps real estate agents, teams, and brokers put agentic AI to work in their business, by building it with them or coaching them to run it themselves. A founder-led Public Benefit Corporation based in Boca Raton, Florida.
+> VERA helps people in real estate put agentic AI to work in their business, by building it with them or coaching them to run it themselves. A founder-led Public Benefit Corporation based in Boca Raton, Florida.
 
 ## What VERA is
 
-VERA Consulting is an agentic-AI consultancy built specifically for real estate professionals: residential agents, listing agents, buyer's agents, luxury and commercial agents, investor-focused agents, teams, and brokers. VERA is not a software product and not a generic "AI agency." It is a hands-on practice that helps an agent figure out which parts of their week are worth automating, then either builds the AI agents and workflows with them or coaches them to run it themselves (for example, teaching them to use Claude well).
+VERA Consulting is an agentic-AI consultancy built specifically for real estate professionals: residential, listing, buyer's, luxury, and commercial agents, plus investors, flippers, wholesalers, property managers, teams, and brokers. VERA is not a software product and not a generic "AI agency." It is a hands-on practice that helps someone in real estate figure out which parts of their week are worth automating, then either builds the AI agents and workflows with them or coaches them to run it themselves (for example, teaching them to use Claude well).
 
-Important distinction: VERA does not do an agent's day-to-day work for them, and the ongoing work is done by the AI agents VERA helps put in place, not by VERA staff. VERA's job is to get the agent there and hand them something they own.
+Important distinction: VERA does not do their day-to-day work for them, and the ongoing work is done by the AI agents VERA helps put in place, not by VERA staff. VERA's job is to get them there and hand them something they own.
 
-VERA is a Public Benefit Corporation. It is founder-led. It works with agents in person around South Florida and remotely anywhere over Google Meet.
+VERA is a Public Benefit Corporation. It is founder-led. It works with real estate professionals in person around South Florida and remotely anywhere over Google Meet.
 
 ## What "agentic AI" means here
 

@@ -11,12 +11,12 @@ import { BookACall } from "@/components/sections/BookACall";
 export const metadata: Metadata = {
   title: "AI Solutions for Real Estate | VERA Consulting",
   description:
-    "AI tools, coaching, and training for real estate agents. Learn how to use AI and ChatGPT for lead generation, listing descriptions, follow-ups, and market research, without losing the client relationships. Boca Raton, FL.",
+    "AI tools, coaching, and training for real estate professionals. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, without losing the personal relationships that close deals. Boca Raton, FL.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "AI Solutions for Real Estate | VERA Consulting",
     description:
-      "AI tools, coaching, and training for real estate agents. Learn how to use AI and ChatGPT for lead generation, listings, follow-ups, and research, without losing the client relationships.",
+      "AI tools, coaching, and training for real estate professionals. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, without losing the personal relationships that close deals.",
     type: "website",
     url: "https://veraconsulting.co",
     siteName: "VERA",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Solutions for Real Estate | VERA Consulting",
     description:
-      "AI tools, coaching, and training for real estate agents. How to use AI and ChatGPT for lead gen, listings, follow-ups, and research, without losing the client relationships.",
+      "AI tools, coaching, and training for real estate professionals. How to use AI and ChatGPT for lead gen, listings, deal research, and follow-ups, without losing the personal relationships that close deals.",
   },
 };
 
