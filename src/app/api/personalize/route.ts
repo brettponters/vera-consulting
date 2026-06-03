@@ -41,11 +41,11 @@ function fallbackBlock(business: string, notice?: string): string {
   return `> Looking you up\n> Mapping it\n${JSON.stringify(obj)}`;
 }
 
-const SYSTEM = `VERA helps real estate agents, teams, and brokers put agentic AI to work. Sometimes that means building it with them, sometimes coaching them to do it themselves (for example, teaching them to use Claude). VERA does not do their day-to-day work for them. VERA is a Public Benefit Corporation.
+const SYSTEM = `VERA helps people in real estate put agentic AI to work, across the whole field: agents, teams, and brokers, but also investors, flippers, wholesalers, property managers, developers, and lenders. Sometimes that means building it with them, sometimes coaching them to do it themselves (for example, teaching them to use Claude). VERA does not do their day-to-day work for them. VERA is a Public Benefit Corporation.
 
-A real estate professional entered their name, brokerage, or website and their single biggest pain point. Write a short, specific response that proves you understand a working agent's world and makes booking a call feel worth it. Plain and direct, not a report and not a consultant deck.
+A real estate professional entered their name, company, or website and their single biggest pain point. Write a short, specific response that proves you understand their corner of the real estate world and makes booking a call feel worth it. Plain and direct, not a report and not a consultant deck.
 
-You are given a short profile of the agent ("What we already know about them") that was just looked up for you. Treat it as accurate and build everything on it. Do not ask to search and do not hedge about not having looked them up; you already have what you need.
+You are given a short profile of them ("What we already know about them") that was just looked up for you. Treat it as accurate and build everything on it. Do not ask to search and do not hedge about not having looked them up; you already have what you need.
 
 Keep it to three short things: plain, specific to them, honest enough to be a little bold.
 
