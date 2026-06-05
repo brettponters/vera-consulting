@@ -9,14 +9,14 @@ import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "AI Solutions for Real Estate | VERA Consulting",
+  title: "AI Readiness & Governance for Professional Services | VERA Consulting",
   description:
-    "AI tools, coaching, and training for real estate professionals. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, without losing the personal relationships that close deals. Boca Raton, FL.",
+    "AI readiness, governance, safe implementation, and training for professional services firms. Capture the upside of AI without putting client trust or compliance at risk. Boca Raton, FL.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "AI Solutions for Real Estate | VERA Consulting",
+    title: "AI Readiness & Governance for Professional Services | VERA Consulting",
     description:
-      "AI tools, coaching, and training for real estate professionals. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, without losing the personal relationships that close deals.",
+      "AI readiness, governance, and training for professional services firms. Capture the upside of AI without putting client trust or compliance at risk.",
     type: "website",
     url: "https://veraconsulting.co",
     siteName: "VERA",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Solutions for Real Estate | VERA Consulting",
+    title: "AI Readiness & Governance for Professional Services | VERA Consulting",
     description:
-      "AI tools, coaching, and training for real estate professionals. How to use AI and ChatGPT for lead gen, listings, deal research, and follow-ups, without losing the personal relationships that close deals.",
+      "AI readiness, governance, and training for professional services firms. Capture the upside of AI without putting client trust or compliance at risk.",
   },
 };
 

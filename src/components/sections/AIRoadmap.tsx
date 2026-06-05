@@ -22,100 +22,100 @@ interface Capability {
 
 const CAPABILITIES: Capability[] = [
   {
-    id: "comms",
-    num: "01",
-    title: "Client experience",
-    teaser: "An agent that knows each client's situation and answers every one personally, so each gets a message built for them, not the same handout everyone else got.",
-    detail:
-      "The agent researches each client and prospect, where they live, where they're moving from, what they're actually trying to solve, then uses it to answer every question the moment it lands and to send material made for them: the relocation guide for the out-of-state buyer, the equity breakdown for the move-up seller, the first-timer walkthrough for the renter. All in your voice, at the scale of your whole database, so each one feels personally handled even when you are juggling a dozen deals.",
-    examples: [
-      "Instant, personal answers in your voice",
-      "Researches each client and prospect",
-      "Personalized outreach, not generic blasts",
-      "Nobody falls through the cracks",
-    ],
-    frameAlt:
-      "Claude answering in a conversation, ready to help the moment a question lands",
-  },
-  {
-    id: "marketing",
-    num: "02",
-    title: "Content & marketing",
-    teaser: "An agent that writes your listing copy, social posts, and newsletter in your voice.",
-    detail:
-      "Give it a listing or a topic. The agent drafts the listing description, the just-listed and just-sold posts, your neighborhood guides, and the monthly newsletter, all in your voice and Fair-Housing-safe, then queues them for your okay before anything goes out.",
-    examples: [
-      "Listing descriptions in minutes",
-      "Just-listed and just-sold posts",
-      "Neighborhood guides",
-      "Your monthly newsletter, drafted",
-    ],
-    frameAlt:
-      "Claude drafting a business document alongside the chat, writing the copy for you",
-  },
-  {
     id: "market-research",
-    num: "03",
-    title: "Market & property research",
-    teaser: "Give it an address. It pulls the comps, the history, and the compliance, then writes the brief.",
+    num: "01",
+    title: "Cross-data research",
+    teaser: "Point it at hundreds of sources at once. It reads every one, connects them, and hands back what matters, cited.",
     detail:
-      "The agent takes an address and works the whole research job: comparable sales and a CMA, the property's history, neighborhood and school data, and the code and compliance notes, then synthesizes it into the brief you walk in with. The evening you used to lose, gone.",
+      "It works across all your data at the same time, your own files and the public record, and surfaces the pattern, the outlier, the answer, with a citation for every claim so you can trust what it found. Days of digging become minutes of reviewing.",
     examples: [
-      "Comps and a CMA",
-      "Property and home history",
-      "Code and compliance research",
-      "Listing-appointment brief",
+      "Reads hundreds of sources at once",
+      "Connects what no one had time to",
+      "Every finding cited to its source",
+      "Days of digging, done in minutes",
     ],
     frameAlt:
       "Claude completing deep research, citing 540 sources, and writing the brief",
   },
   {
-    id: "deals",
-    num: "04",
-    title: "Client follow-ups",
-    teaser: "An agent that answers new leads in minutes and keeps your whole sphere warm while you're out.",
+    id: "comms",
+    num: "02",
+    title: "Your firm's memory",
+    teaser: "Everything your firm has ever done, answerable in plain English the second you ask.",
     detail:
-      "The agent responds to new leads in minutes, nudges the slow ones on a schedule you set, re-engages the ones who went cold, and keeps your past clients and sphere warm with personal check-ins and referral asks. It scores who is ready and routes the hot ones straight to you, while you're at a showing.",
+      "Past work, templates, decisions, who did what, your whole institutional memory searchable in a sentence instead of a message to the one person who remembers. Drawn only from your own files, which stay inside your walls.",
     examples: [
-      "Answers new leads in minutes",
-      "Re-engages leads who went cold",
-      "Past-client check-ins for referrals",
-      "Routes hot leads to you",
+      "Ask your past work anything",
+      "\"How did we handle this before?\"",
+      "No more hunting for the one expert",
+      "Your data stays inside your walls",
     ],
     frameAlt:
-      "Claude working through a task checklist to follow up and knock items off the list",
+      "Claude answering in a conversation, ready to help the moment a question lands",
+  },
+  {
+    id: "negotiation",
+    num: "03",
+    title: "Internal consultant",
+    teaser: "A sharp second opinion on any call, briefed on your business, the moment you need it.",
+    detail:
+      "Talk through the decision, the approach, the pitch, the risk, and get back a clear, reasoned take that knows your context, not generic advice. The senior sounding board you can't always grab, on demand.",
+    examples: [
+      "A second opinion, on demand",
+      "Knows your business and context",
+      "Pressure-tests your thinking",
+      "The sounding board you can't always grab",
+    ],
+    frameAlt:
+      "Claude mapping out a plan and the path forward across the week",
   },
   {
     id: "tax",
-    num: "05",
-    title: "Contracts & compliance",
-    teaser: "It preps the contracts, chases the signatures, and flags the compliance before it bites you.",
+    num: "04",
+    title: "Second set of eyes",
+    teaser: "Catches the typo, the wrong number, the missed detail before it ever reaches the client.",
     detail:
-      "The agent runs each deal's paperwork on its own: contracts and disclosures prepped, signatures and missing documents chased, required disclosures and code, HOA, and zoning issues flagged, every deadline tracked. It checks in before anything high-stakes goes out. The admin you got into real estate to avoid.",
+      "It reviews the work before it goes out and flags what a long day misses, the inconsistency, the number that doesn't add up, the deadline nobody logged. A reviewer that never gets tired and never skims.",
     examples: [
-      "Contract and disclosure prep",
-      "Chases signatures and documents",
-      "Code and compliance flags",
-      "Tracks every deadline",
+      "Catches the little things, every time",
+      "Flags the number that's off",
+      "Never gets tired, never skims",
+      "Caught at your desk, not theirs",
     ],
     frameAlt:
       "Claude reviewing and redlining a contract with tracked changes and a flagged action item",
   },
   {
-    id: "negotiation",
-    num: "06",
-    title: "Showings & scheduling",
-    teaser: "An agent that books showings, builds your route, and chases the feedback after, on its own.",
+    id: "marketing",
+    num: "05",
+    title: "Branded deliverables",
+    teaser: "The report, the proposal, the deck, drafted in your firm's voice and on-brand, ready for your sign-off.",
     detail:
-      "The agent coordinates showings around your calendar, sends confirmations and reminders to every side, builds your route and tour sheets for the day, and collects and summarizes feedback after each one so the seller update writes itself. It runs while you're in the car.",
+      "Give it the inputs and the first draft comes back in your format, tone, and branding, the client report, the proposal, the deck. You review near-final work instead of a blank page, and nothing leaves until you approve it.",
     examples: [
-      "Books and confirms showings",
-      "Daily route and tour sheets",
-      "Reminders to all sides",
-      "Showing feedback summarized",
+      "Reports, proposals, and decks",
+      "In your voice and on-brand",
+      "A near-final draft, not a blank page",
+      "Nothing sends without your sign-off",
     ],
     frameAlt:
-      "Claude managing a weekly calendar of scheduled appointments and meetings",
+      "Claude drafting a business document alongside the chat, writing the copy for you",
+  },
+  {
+    id: "deals",
+    num: "06",
+    title: "Speed gains",
+    teaser: "The tedious, low-value work that slows everyone down, handled, so your people move faster on what matters.",
+    detail:
+      "It takes the grunt work off your team, the formatting, the cleanup, the repetitive multi-step tasks, and runs it in the background. Not to replace anyone, but to clear the drudgery so your people spend their hours where their judgment actually counts.",
+    examples: [
+      "The grunt work, handled",
+      "Hours back on every task",
+      "Augments your team, never replaces it",
+      "Time goes to the work that matters",
+    ],
+    frameAlt:
+      "Claude working through a task checklist to follow up and knock items off the list",
   },
 ];
 
@@ -124,12 +124,12 @@ const CAPABILITIES: Capability[] = [
  * automation in one sentence. Not a feature. A change in your week.
  */
 const CONSEQUENCES: Record<string, string> = {
-  "marketing": "You stop going quiet between listings.",
-  "deals": "You stop leaving money on the table to slow follow-up.",
-  "market-research": "You stop losing the listing to the agent who prepped harder.",
-  "tax": "You stop doing the admin you got into real estate to avoid.",
-  "comms": "More clients, and every one feels like your only one.",
-  "negotiation": "You stop playing scheduler all day.",
+  "market-research": "You see what no one had the hours to find.",
+  "comms": "Your newest hire knows what the firm knows.",
+  "negotiation": "You always have someone sharp to think with.",
+  "tax": "The mistake gets caught before the client sees it.",
+  "marketing": "The blank page stops costing you nights.",
+  "deals": "Your team's hours go to the work that counts.",
 };
 
 /**
@@ -418,12 +418,29 @@ export function AIRoadmap() {
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.035em] leading-[0.92] m-0 max-w-[1100px]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 6rem)" }}
             >
-              Do only the work you{" "}
-              <span className="italic font-light">want</span> to
+              Move fast. Stay{" "}
+              <span className="italic font-light">safe</span>
               <span aria-hidden="true" style={{ color: "var(--color-accent)" }}>
                 .
               </span>
             </motion.h2>
+
+            <motion.p
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+              className="mt-7 md:mt-9 font-sans font-semibold text-[var(--color-heading)] tracking-[-0.01em] leading-snug max-w-[760px]"
+              style={{ fontSize: "clamp(1.25rem, 2.2vw, 1.875rem)" }}
+            >
+              Risk becomes the entry ticket to
+              <span style={{ color: "var(--color-accent)" }}> opportunity</span>.
+            </motion.p>
+
+            <p className="mt-6 md:mt-7 font-sans text-sm md:text-base text-[var(--color-muted)] leading-relaxed max-w-[560px]">
+              Connected to your real, trusted sources and strategies, not a
+              chatbot guessing.
+            </p>
 
           </div>
 
@@ -448,14 +465,13 @@ export function AIRoadmap() {
                 className="font-sans font-black text-[var(--color-heading)] tracking-[-0.025em] leading-[1.05] m-0"
                 style={{ fontSize: "clamp(1.5rem, 2.6vw, 2.5rem)" }}
               >
-                You don&apos;t need all six. You need the right three for
-                <span style={{ color: "var(--color-accent)" }}> your </span>
-                week.
+                You don&apos;t need all six. You need the right ones for
+                <span style={{ color: "var(--color-accent)" }}> where you are</span>.
               </p>
               <p className="mt-5 font-sans text-[var(--color-body)] text-base md:text-lg leading-relaxed max-w-[620px]">
-                Run the right ones and the slow month stops being a coin flip.
-                We help you get there, building it with you or teaching you to
-                run it yourself.
+                Start where the risk, or the opportunity, is biggest. We help
+                you get there, building it with you or teaching your team to run
+                it themselves.
               </p>
             </div>
           </div>
