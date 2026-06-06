@@ -13,15 +13,15 @@ import { useTypewriter } from "@/hooks/useTypewriter";
 
 const BUSINESS_EXAMPLES = [
   "your name",
-  "your firm",
-  "yourfirm.com",
-  "your LinkedIn",
+  "your brokerage",
+  "yourrealty.com",
+  "your Zillow profile",
 ];
 const PAIN_EXAMPLES = [
-  "research eats my week",
-  "we draft the same docs over and over",
-  "client follow-up keeps slipping",
-  "we have no real AI policy yet",
+  "leads keep going cold",
+  "listings eat my weekends",
+  "showings are a scheduling mess",
+  "I forget to follow up",
 ];
 
 /**
@@ -262,14 +262,14 @@ export function PromptPersonalize() {
                 className="font-sans font-black leading-[1.0] tracking-[-0.035em]"
                 style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)", color: INK }}
               >
-                See where AI fits your firm.
+                See what VERA can do for your real estate business.
               </h2>
               <p
                 className="mt-5 font-sans text-lg md:text-xl leading-relaxed max-w-[600px]"
                 style={{ color: INK_DIM }}
               >
-                Drop your name, firm, or site, tell us what&rsquo;s slowing you
-                down, and see exactly where AI earns its place, safely.
+                Drop your name, brokerage, or site, pick what&rsquo;s eating
+                your week, and see exactly what we&rsquo;d take off your plate.
               </p>
 
               {/* Step 1, business input */}

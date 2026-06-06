@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-const LINE_ONE_WORDS = "AI readiness for".split(" ");
+const LINE_ONE_WORDS = "Agentic AI Solutions".split(" ");
 
 export default function Hero() {
   return (
@@ -45,19 +45,19 @@ export default function Hero() {
       </div>
 
       <Container size="wide" className="relative z-10">
-        <div className="max-w-[1100px]">
+        <div className="max-w-[1040px]">
           <Reveal delay={0}>
             <div className="mb-5">
               <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
-                AI Readiness · Public Benefit Corporation
+                Agentic AI · Public Benefit Corporation
               </p>
             </div>
           </Reveal>
 
           <h1
-            aria-label="AI readiness for professional services."
+            aria-label="Agentic AI Solutions for Real Estate."
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
-            style={{ fontSize: "clamp(2.75rem, 6.5vw, 5.75rem)" }}
+            style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)" }}
           >
             <span aria-hidden="true" className="block">
               {LINE_ONE_WORDS.map((word, i) => (
@@ -84,7 +84,8 @@ export default function Hero() {
               transition={{ duration: 0.4, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
               className="block"
             >
-              <span style={{ color: "var(--color-accent)" }}>professional services.</span>
+              for{" "}
+              <span style={{ color: "var(--color-accent)" }}>Real Estate.</span>
             </motion.span>
           </h1>
 

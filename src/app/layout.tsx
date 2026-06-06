@@ -9,8 +9,8 @@ import "./globals.css";
 
 const SITE_URL = "https://veraconsulting.co";
 const SITE_DESCRIPTION =
-  "AI readiness, governance, and training for professional services firms. Capture the upside of AI without putting client trust or compliance at risk. A Public Benefit Corporation in Boca Raton, FL.";
-const DEFAULT_TITLE = "VERA, AI Readiness & Governance for Professional Services";
+  "AI tools, coaching, and training for real estate professionals. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, without losing the personal relationships that close deals. Boca Raton, FL.";
+const DEFAULT_TITLE = "VERA, AI Tools & Coaching for Real Estate";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -42,7 +42,7 @@ const organizationJsonLd = {
   "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
   "@id": `${SITE_URL}/#org`,
   name: "VERA Consulting",
-  description: "AI readiness, governance, and training for professional services firms. Capture the upside of AI without putting client trust or compliance at risk. A Public Benefit Corporation in Boca Raton, FL.",
+  description: "AI tools, coaching, and training for real estate professionals. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, without losing the personal relationships that close deals. Boca Raton, FL.",
   url: SITE_URL,
   email: "brett@veraconsulting.co",
   telephone: "+1-561-900-8182",
@@ -65,7 +65,7 @@ const organizationJsonLd = {
     { "@type": "AdministrativeArea", name: "Palm Beach County" },
   ],
   openingHours: "Mo-Fr 09:00-17:00",
-  serviceType: "AI readiness, governance, and training for professional services firms",
+  serviceType: "AI consulting, coaching, and training for real estate professionals",
   sameAs: [],
 };
 
