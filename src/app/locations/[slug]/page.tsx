@@ -176,8 +176,8 @@ export default async function LocationPage({
               <Button href="/contact" variant="filled" size="lg" arrow>
                 Book a call
               </Button>
-              <Button href="/coaching" variant="ghost" size="lg" arrow>
-                See the coaching
+              <Button href="/our-strategy" variant="ghost" size="lg" arrow>
+                See how we work
               </Button>
             </div>
           </div>

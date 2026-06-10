@@ -56,7 +56,6 @@ VERA's whole stance is that AI should strengthen an agent's business without put
 ## Key pages
 
 - [AI in Real Estate, a practical guide](${SITE}/ai-in-real-estate): what is real, what is hype, what agents actually use AI for, the Fair Housing and data risks, and where to start.
-- [1:1 AI Coaching](${SITE}/coaching): private weekly sessions building AI into an agent's real practice.
 - [How We Work](${SITE}/how-we-work): the discover, strategy, integrate, operate engagement process.
 - [Our Strategy](${SITE}/our-strategy): coaching, strategy, and integration for adopting agentic AI.
 - [Our Work](${SITE}/our-work): case studies and what VERA has built (e.g. CoAgent, a private, local AI agent).

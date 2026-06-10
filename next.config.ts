@@ -31,6 +31,13 @@ const nextConfig: NextConfig = {
         destination: '/ai-in-real-estate',
         permanent: true,
       },
+      // 1:1 coaching offer retired. Send the old URL to the contact page so any
+      // inbound links or indexed traffic land on a live booking page, not a 404.
+      {
+        source: '/coaching',
+        destination: '/contact',
+        permanent: true,
+      },
     ];
   },
 };

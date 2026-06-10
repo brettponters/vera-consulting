@@ -23,7 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/our-work",
     "/ai-in-real-estate",
     "/reading",
-    "/coaching",
     "/contact",
     "/get-started",
   ].map((path) => ({

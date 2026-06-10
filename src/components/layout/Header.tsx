@@ -69,7 +69,6 @@ export function Header() {
           {[
             { label: "Our Work", href: "/our-work" },
             { label: "Our Strategy", href: "/our-strategy" },
-            { label: "1:1 Coaching", href: "/coaching" },
             { label: "AI in Real Estate", href: "/ai-in-real-estate" },
           ].map((link) => (
             <Link
