@@ -22,100 +22,100 @@ interface Capability {
 
 const CAPABILITIES: Capability[] = [
   {
-    id: "comms",
+    id: "negotiation",
     num: "01",
-    title: "Client experience",
-    teaser: "An agent that knows each client's situation and answers every one personally, so each gets a message built for them, not the same handout everyone else got.",
+    title: "Market intelligence",
+    teaser: "We call which neighborhoods are about to move and where the spreads are widening, so you buy ahead of the crowd.",
     detail:
-      "The agent researches each client and prospect, where they live, where they're moving from, what they're actually trying to solve, then uses it to answer every question the moment it lands and to send material made for them: the relocation guide for the out-of-state buyer, the equity breakdown for the move-up seller, the first-timer walkthrough for the renter. All in your voice, at the scale of your whole database, so each one feels personally handled even when you are juggling a dozen deals.",
+      "We watch the signals most investors never see: where prices are turning, which blocks are heating up, how fast things are selling, and where the gap between buy price and exit is opening. You get a read on where to point your money next, before the rest of the market figures it out and bids it up.",
     examples: [
-      "Instant, personal answers in your voice",
-      "Researches each client and prospect",
-      "Personalized outreach, not generic blasts",
-      "Nobody falls through the cracks",
+      "Where prices are turning",
+      "Blocks heating up before they're obvious",
+      "Days-on-market and sell-through trends",
+      "Where the spread is widening",
     ],
     frameAlt:
-      "Claude answering in a conversation, ready to help the moment a question lands",
-  },
-  {
-    id: "marketing",
-    num: "02",
-    title: "Content & marketing",
-    teaser: "An agent that writes your listing copy, social posts, and newsletter in your voice.",
-    detail:
-      "Give it a listing or a topic. The agent drafts the listing description, the just-listed and just-sold posts, your neighborhood guides, and the monthly newsletter, all in your voice and Fair-Housing-safe, then queues them for your okay before anything goes out.",
-    examples: [
-      "Listing descriptions in minutes",
-      "Just-listed and just-sold posts",
-      "Neighborhood guides",
-      "Your monthly newsletter, drafted",
-    ],
-    frameAlt:
-      "Claude drafting a business document alongside the chat, writing the copy for you",
+      "Claude mapping market activity and timing across the weeks",
   },
   {
     id: "market-research",
-    num: "03",
-    title: "Market & property research",
-    teaser: "Give it an address. It pulls the comps, the history, and the compliance, then writes the brief.",
+    num: "02",
+    title: "Property intelligence",
+    teaser: "We see the liens, the tax delinquency, and the title problems on a property before it is on anyone else's radar.",
     detail:
-      "The agent takes an address and works the whole research job: comparable sales and a CMA, the property's history, neighborhood and school data, and the code and compliance notes, then synthesizes it into the brief you walk in with. The evening you used to lose, gone.",
+      "We pull the whole file: open liens and judgments, tax-delinquency status, title history and any clouds, code violations, and where it sits in foreclosure or probate, down to the owner and how to reach them. The all-night county-records dig, run across an entire market at once, so the distressed deal surfaces for you instead of slipping past.",
     examples: [
-      "Comps and a CMA",
-      "Property and home history",
-      "Code and compliance research",
-      "Listing-appointment brief",
+      "Liens, judgments, tax delinquency",
+      "Title history and clouds",
+      "Code violations and permits",
+      "Foreclosure and probate status",
     ],
     frameAlt:
-      "Claude completing deep research, citing 540 sources, and writing the brief",
+      "Claude completing deep research, citing 540 sources, and writing the property file",
+  },
+  {
+    id: "comms",
+    num: "03",
+    title: "Seller intelligence",
+    teaser: "We find the motivated sellers before they list, reach them in your name, and keep working them until they answer.",
+    detail:
+      "We build the list the rest of the market has not found yet, pre-foreclosure, tax-delinquent, absentee, tired-landlord, high-equity, run the skip tracing to get real phone numbers and emails, and open the conversation in your voice. We stay on the slow ones and answer the fast ones in minutes, so the seller who was going to call someone calls you first.",
+    examples: [
+      "Motivated sellers before they list",
+      "Skip tracing for real contacts",
+      "First contact in your voice",
+      "Worked until they answer",
+    ],
+    frameAlt:
+      "Claude answering in a conversation the moment a message lands",
   },
   {
     id: "deals",
     num: "04",
-    title: "Client follow-ups",
-    teaser: "An agent that answers new leads in minutes and keeps your whole sphere warm while you're out.",
+    title: "Deal intelligence",
+    teaser: "We run the numbers the moment a deal comes in, so you know what to pay before anyone else has even looked.",
     detail:
-      "The agent responds to new leads in minutes, nudges the slow ones on a schedule you set, re-engages the ones who went cold, and keeps your past clients and sphere warm with personal check-ins and referral asks. It scores who is ready and routes the hot ones straight to you, while you're at a showing.",
+      "We size up the deal fast: after-repair value off real comps, the rehab number, holding and closing costs, and the most you can pay and still hit your margin. The ones that do not pencil get killed before you waste a drive, and the ones that do reach you with the math already done.",
     examples: [
-      "Answers new leads in minutes",
-      "Re-engages leads who went cold",
-      "Past-client check-ins for referrals",
-      "Routes hot leads to you",
+      "ARV off real comps",
+      "Repair and rehab estimate",
+      "The most you can pay",
+      "Margin checked before you move",
     ],
     frameAlt:
-      "Claude working through a task checklist to follow up and knock items off the list",
+      "Claude working through a checklist, running the numbers on a deal",
   },
   {
     id: "tax",
     num: "05",
-    title: "Contracts & compliance",
-    teaser: "It preps the contracts, chases the signatures, and flags the compliance before it bites you.",
+    title: "Due diligence",
+    teaser: "We pressure-test the deal before you commit, the title, the permits, the flood and rehab risk, and what the seller is not telling you.",
     detail:
-      "The agent runs each deal's paperwork on its own: contracts and disclosures prepped, signatures and missing documents chased, required disclosures and code, HOA, and zoning issues flagged, every deadline tracked. It checks in before anything high-stakes goes out. The admin you got into real estate to avoid.",
+      "Before you put money down, we dig into what could go wrong: title and lien problems, open or missing permits, flood-zone and environmental flags, the real rehab scope, and the holes in the seller's story. You get the deal's downside in writing, so you walk in knowing exactly what you are buying instead of finding out after closing.",
     examples: [
-      "Contract and disclosure prep",
-      "Chases signatures and documents",
-      "Code and compliance flags",
-      "Tracks every deadline",
+      "Title and lien problems surfaced",
+      "Permits, flood, and environmental flags",
+      "The real rehab scope",
+      "What the seller left out",
     ],
     frameAlt:
-      "Claude reviewing and redlining a contract with tracked changes and a flagged action item",
+      "Claude reviewing and redlining a deal, flagging the risks in the document",
   },
   {
-    id: "negotiation",
+    id: "marketing",
     num: "06",
-    title: "Showings & scheduling",
-    teaser: "An agent that books showings, builds your route, and chases the feedback after, on its own.",
+    title: "Buyer intelligence",
+    teaser: "When you have a deal to move, we match it to the right cash buyers and write what gets it sold.",
     detail:
-      "The agent coordinates showings around your calendar, sends confirmations and reminders to every side, builds your route and tour sheets for the day, and collects and summarizes feedback after each one so the seller update writes itself. It runs while you're in the car.",
+      "We take a deal you need to move and work the exit: match it against the buyers most likely to close, write the package and the numbers that make it obvious, and get it in front of the right people while it is still hot. You stop sitting on contracts and start turning them.",
     examples: [
-      "Books and confirms showings",
-      "Daily route and tour sheets",
-      "Reminders to all sides",
-      "Showing feedback summarized",
+      "Matched to the right cash buyers",
+      "A package that sells the numbers",
+      "In front of buyers while it's hot",
+      "Ranks who actually closes",
     ],
     frameAlt:
-      "Claude managing a weekly calendar of scheduled appointments and meetings",
+      "Claude drafting the deal package and buyer outreach alongside the chat",
   },
 ];
 
@@ -124,13 +124,30 @@ const CAPABILITIES: Capability[] = [
  * automation in one sentence. Not a feature. A change in your week.
  */
 const CONSEQUENCES: Record<string, string> = {
-  "marketing": "You stop going quiet between listings.",
-  "deals": "You stop leaving money on the table to slow follow-up.",
-  "market-research": "You stop losing the listing to the agent who prepped harder.",
-  "tax": "You stop doing the admin you got into real estate to avoid.",
-  "comms": "More clients, and every one feels like your only one.",
-  "negotiation": "You stop playing scheduler all day.",
+  "comms": "The seller calls you first, not the other guy.",
+  "marketing": "Contracts move instead of sitting on your desk.",
+  "market-research": "The off-market deal ends up yours.",
+  "deals": "You know what to pay while everyone else is still guessing.",
+  "tax": "You learn the deal's downside before you own it.",
+  "negotiation": "You buy ahead of the crowd, not into it.",
 };
+
+/**
+ * Renders a capability title with its trailing word in the accent color, the
+ * orange "intelligence" thread that ties the family together.
+ */
+function AccentTitle({ title }: { title: string }) {
+  const idx = title.lastIndexOf(" ");
+  if (idx === -1) return <>{title}</>;
+  const first = title.slice(0, idx);
+  const last = title.slice(idx + 1);
+  return (
+    <>
+      {first}{" "}
+      <span style={{ color: "var(--color-accent)" }}>{last}</span>
+    </>
+  );
+}
 
 /**
  * One band = one capability laid out as an editorial spread inside the
@@ -268,7 +285,7 @@ function CapabilityBand({
                 className="relative z-10 font-sans font-black text-[var(--color-heading)] tracking-[-0.035em] leading-[0.92] m-0"
                 style={{ fontSize: "clamp(2.25rem, 4.8vw, 4rem)" }}
               >
-                {cap.title}
+                <AccentTitle title={cap.title} />
                 <span
                   aria-hidden="true"
                   style={{ color: "var(--color-accent)" }}
@@ -406,7 +423,7 @@ export function AIRoadmap() {
               className="font-mono text-[10px] uppercase tracking-[0.28em] font-semibold mb-5 md:mb-7"
               style={{ color: "var(--color-navy)" }}
             >
-              What AI does for you
+              What we bring you
             </p>
 
             <motion.h2
@@ -418,13 +435,26 @@ export function AIRoadmap() {
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.035em] leading-[0.92] m-0 max-w-[1100px]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 6rem)" }}
             >
-              Do only the work you{" "}
-              <span className="italic font-light">want</span> to
+              We find the{" "}
+              <span className="italic font-light">edge</span>. You close the
+              deal
               <span aria-hidden="true" style={{ color: "var(--color-accent)" }}>
                 .
               </span>
             </motion.h2>
 
+            <motion.p
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+              className="mt-6 md:mt-8 font-sans text-[var(--color-body)] text-lg md:text-xl leading-relaxed max-w-[680px]"
+            >
+              The technology changes every week. A tool you buy or a consultant
+              you hire is behind the day it arrives. We stay at the frontier and
+              put what we find into your deals, and we only make money when you
+              do.
+            </motion.p>
           </div>
 
           {/* The vertical reading column. Six bands, full width, read top to
@@ -448,14 +478,14 @@ export function AIRoadmap() {
                 className="font-sans font-black text-[var(--color-heading)] tracking-[-0.025em] leading-[1.05] m-0"
                 style={{ fontSize: "clamp(1.5rem, 2.6vw, 2.5rem)" }}
               >
-                You don&apos;t need all six. You need the right three for
-                <span style={{ color: "var(--color-accent)" }}> your </span>
-                week.
+                We make money when
+                <span style={{ color: "var(--color-accent)" }}> you </span>
+                do.
               </p>
               <p className="mt-5 font-sans text-[var(--color-body)] text-base md:text-lg leading-relaxed max-w-[620px]">
-                Run the right ones and the slow month stops being a coin flip.
-                We help you get there, building it with you or teaching you to
-                run it yourself.
+                That is the whole arrangement. We bring the intelligence and the
+                edge, you make the calls and close the deals. No retainer, no
+                hourly, no paying us to try.
               </p>
             </div>
           </div>
