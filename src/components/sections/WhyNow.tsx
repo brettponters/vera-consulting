@@ -9,7 +9,7 @@ import { Hairline } from "@/components/ui/Hairline";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * WhyNow — "The 18 months" capability-partner reframe.
+ * WhyNow, "The 18 months" capability-partner reframe.
  *
  * Scroll-revealed editorial section with a left-edge progress rail
  * that fills as the reader moves through the three pairs. Each pair

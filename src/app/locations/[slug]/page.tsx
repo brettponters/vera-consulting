@@ -29,21 +29,21 @@ export async function generateMetadata({
   const loc = getLocationBySlug(slug);
   if (!loc) return {};
   const url = `https://veraconsulting.co/locations/${slug}`;
-  const title = `AI for Real Estate in ${loc.city}, ${loc.state}`;
-  const description = `AI tools, coaching, and training for ${loc.city} real estate professionals: agents, teams, brokers, and investors. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, with Fair Housing and client-data guardrails. In person in ${loc.city} or over Google Meet anywhere.`;
+  const title = `Off-Market Deals and Leads in ${loc.city}, ${loc.state}`;
+  const description = `Off-market real estate deals and motivated seller leads in ${loc.city} for investors, wholesalers, flippers, landlords, and agents. VERA partners to source deals, read the market, and run the numbers fast. VERA earns only when you close.`;
   return {
     title,
     description,
     alternates: { canonical: `/locations/${slug}` },
     keywords: [
-      `AI tools for real estate ${loc.city}`,
-      `AI for real estate agents ${loc.city}`,
+      `off-market real estate deals ${loc.city}`,
+      `motivated seller leads ${loc.city}`,
+      `real estate deal sourcing ${loc.city}`,
       `AI for real estate investors ${loc.city}`,
-      `ChatGPT for real estate ${loc.city}`,
-      `real estate AI ${loc.city}`,
-      `${loc.city} real estate lead generation AI`,
-      `how to use AI in real estate ${loc.city}`,
-      `${loc.region} AI for real estate`,
+      `wholesale real estate leads ${loc.city}`,
+      `find off-market properties ${loc.city}`,
+      `AI for real estate agents ${loc.city}`,
+      `${loc.region} off-market real estate deals`,
     ],
     openGraph: {
       title: `${title}, VERA`,
@@ -82,7 +82,7 @@ export default async function LocationPage({
         "@type": "ProfessionalService",
         "@id": `${canonicalUrl}#business`,
         name: "VERA Consulting",
-        description: `Agentic AI coaching, strategy, and integration for ${loc.city} real estate agents, teams, and brokers.`,
+        description: `Off-market deal sourcing and motivated seller leads for ${loc.city} real estate investors and agents, on a performance-based partnership.`,
         url: canonicalUrl,
         telephone: "+1-561-900-8182",
         email: "brett@veraconsulting.co",
@@ -100,10 +100,10 @@ export default async function LocationPage({
           longitude: loc.geo.lng,
         },
         areaServed: { "@type": "City", name: `${loc.city}, ${loc.state}` },
-        serviceType: "Agentic AI Coaching and Consulting",
+        serviceType: "Real Estate Deal Sourcing and Lead Generation",
         availableChannel: {
           "@type": "ServiceChannel",
-          name: "Remote sessions over Google Meet",
+          name: "Remote partnership anywhere",
           serviceUrl: "https://veraconsulting.co/contact",
         },
         parentOrganization: { "@id": "https://veraconsulting.co/#org" },
@@ -167,17 +167,17 @@ export default async function LocationPage({
               className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
-              AI for real estate in {loc.city}.
+              Off-market deals in {loc.city}.
             </h1>
             <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[680px] mb-10">
               {loc.heroIntro}
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Button href="/contact" variant="filled" size="lg" arrow>
-                Book a call
+                Become a partner
               </Button>
               <Button href="/our-strategy" variant="ghost" size="lg" arrow>
-                See how we work
+                See how the partnership works
               </Button>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default async function LocationPage({
           <div className="max-w-[760px]">
             <Eyebrow className="mb-5">Why it matters here</Eyebrow>
             <h2 className="font-sans font-semibold text-2xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-8">
-              AI for {loc.city} real estate agents who run on trust.
+              Finding the edge in {loc.city} real estate.
             </h2>
             <div className="space-y-6 font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)]">
               {loc.whyHere.map((para, i) => (
@@ -211,7 +211,7 @@ export default async function LocationPage({
           <div className="max-w-[760px] mb-12 md:mb-16">
             <Eyebrow className="mb-5">What we do</Eyebrow>
             <h2 className="font-sans font-semibold text-2xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight">
-              How VERA helps {loc.city} real estate agents and teams.
+              How VERA partners with {loc.city} investors and agents.
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -238,7 +238,7 @@ export default async function LocationPage({
           <div className="max-w-[760px] mb-12 md:mb-16">
             <Eyebrow className="mb-5">What we build</Eyebrow>
             <h2 className="font-sans font-semibold text-2xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight">
-              The agentic AI workflows we build for {loc.city} real estate agents.
+              What the partnership delivers for {loc.city} investors and agents.
             </h2>
           </div>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 list-none m-0 p-0">
@@ -336,12 +336,12 @@ export default async function LocationPage({
               Want to talk it through?
             </h2>
             <p className="font-sans text-[var(--color-body)] text-lg leading-relaxed max-w-prose">
-              Twenty minutes over Google Meet, or in person if you are nearby.
-              We figure out together whether this is right for what you are
-              trying to do. No deck, no pitch.
+              Twenty minutes, remote or in person if you are nearby. We figure
+              out together whether the partnership fits what you are trying to
+              do. No retainer, no pitch. VERA makes money only when you close.
             </p>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Book a call
+              Become a partner
             </Button>
           </div>
         </Container>

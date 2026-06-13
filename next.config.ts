@@ -38,6 +38,34 @@ const nextConfig: NextConfig = {
         destination: '/contact',
         permanent: true,
       },
+      // Vertical pages repositioned from agent niches to real estate investing
+      // personas. 301 the old indexed /for/* slugs to the closest new persona so
+      // ranking signal and any inbound links carry forward instead of 404ing.
+      {
+        source: '/for/listing-agents',
+        destination: '/for/real-estate-agents',
+        permanent: true,
+      },
+      {
+        source: '/for/buyers-agents',
+        destination: '/for/real-estate-agents',
+        permanent: true,
+      },
+      {
+        source: '/for/luxury-agents',
+        destination: '/for/real-estate-agents',
+        permanent: true,
+      },
+      {
+        source: '/for/commercial-agents',
+        destination: '/for/real-estate-agents',
+        permanent: true,
+      },
+      {
+        source: '/for/investment-agents',
+        destination: '/for/buy-and-hold',
+        permanent: true,
+      },
     ];
   },
 };

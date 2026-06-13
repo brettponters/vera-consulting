@@ -9,39 +9,39 @@ import { Reveal } from "@/components/ui/Reveal";
 const RISKS = [
   {
     number: "01",
-    title: "Bias & Fairness",
+    title: "Stale, Shared Lists",
     detail:
-      "AI systems inherit and amplify biases from training data. In hiring, lending, healthcare, and insurance, this leads to discriminatory outcomes that create legal exposure and erode public trust.",
+      "Most lead lists are sold to everyone in your market at once. By the time you call, the seller has heard from a dozen investors and the deal is either gone or priced like an auction. Sourcing the same data as everyone else guarantees the same thin margins.",
   },
   {
     number: "02",
-    title: "Hallucination & Accuracy",
+    title: "Bad Numbers, Fast",
     detail:
-      "Large language models produce confident outputs that can be factually wrong. Without validation pipelines, incorrect information enters your workflows and corrupts downstream decision-making.",
+      "AI produces confident outputs that can be wrong. An ARV, a rehab estimate, or a rent comp that looks clean but isn't will turn a good-looking deal into a loss. Without validation behind the numbers, speed just helps you make the wrong call faster.",
   },
   {
     number: "03",
-    title: "Data Privacy & Security",
+    title: "Missing the Motivated Seller",
     detail:
-      "AI creates new attack surfaces (prompt injection, training data extraction, leakage through shared chats) that older security habits weren't designed to address. Client data, contracts, and intake notes pasted into the wrong tool can break confidentiality before you notice. GDPR, CCPA, and HIPAA still apply.",
+      "The deals worth having come from sellers with a real reason to move: probate, tax delinquency, code violations, tired landlords. Generic outreach blasts everyone equally and reaches almost no one with timing. Miss the signal and you miss the off-market deal entirely.",
   },
   {
     number: "04",
-    title: "Regulatory Exposure",
+    title: "Slow to the Door",
     detail:
-      "What's compliant today may not be compliant next quarter. The EU AI Act, state-level legislation, and FTC enforcement are accelerating. Retroactive compliance costs significantly more than building it in from the start.",
+      "Off-market deals go to whoever reaches the seller first with a credible offer. If your sourcing and analysis take days, the deal is already under contract with someone faster. In this market, the edge is timing as much as price.",
   },
   {
     number: "05",
-    title: "Generic Output",
+    title: "Generic, Ignored Outreach",
     detail:
-      "If your work starts sounding like every other agent running the same prompts on the same model, the thing your clients hired you for thins out. The risk for a real estate agent is not that AI replaces you, it's that it quietly flattens your voice and your point of view into something interchangeable.",
+      "If your messages sound like every other investor running the same templates on the same model, sellers tune them out. The risk is not that AI replaces your outreach, it's that it flattens it into noise that gets deleted before anyone reads the offer.",
   },
   {
     number: "06",
-    title: "Vendor Lock-in",
+    title: "Buying a Tool That Ages Out",
     detail:
-      "Architecture decisions made today determine your flexibility for years. Committing to a single vendor without proper evaluation is expensive to undo and often requires rebuilding from scratch.",
+      "The technology moves every week. A platform you buy or a list provider you sign with is behind the day it arrives, and switching later is expensive. Committing to a static tool locks you out of the next data source before you've used the last one.",
   },
 ];
 
@@ -181,14 +181,14 @@ export function StrategyRisks() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-sans font-semibold text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] text-[var(--color-heading)] leading-[1.05] max-w-[640px]">
-                Where AI adoption goes wrong.
+                Where deal sourcing goes wrong.
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[560px] mt-6">
-                Most AI failures aren&rsquo;t technical. They&rsquo;re about
-                judgment. These are the six places we see solo practices and
-                small teams get caught off guard.
+                Most missed deals aren&rsquo;t about effort. They&rsquo;re about
+                data and timing. These are the six places we see investors and
+                agents lose deals before they ever make an offer.
               </p>
             </Reveal>
           </div>
@@ -196,10 +196,10 @@ export function StrategyRisks() {
           <Reveal delay={0.15}>
             <div className="text-left md:text-right">
               <div className="font-sans font-bold text-5xl md:text-6xl text-[var(--color-accent)] leading-none tracking-[-0.03em]">
-                58pt
+                1st
               </div>
               <div className="font-sans text-xs md:text-sm text-[var(--color-muted)] mt-2 max-w-[180px] md:ml-auto leading-snug">
-                gap between AI adoption and governance readiness
+                off-market deals go to whoever reaches the seller first
               </div>
             </div>
           </Reveal>
@@ -221,9 +221,9 @@ export function StrategyRisks() {
           <div className="flex gap-4 items-stretch mt-16 max-w-[820px] mx-auto">
             <div className="w-[3px] bg-[var(--color-accent)] rounded-sm shrink-0" />
             <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed py-1">
-              &ldquo;The agents who get AI right aren&rsquo;t the ones
-              moving fastest. They&rsquo;re the ones who keep their judgment
-              and their voice intact while everyone else outsources both.&rdquo;
+              &ldquo;The investors who win don&rsquo;t have more money than
+              everyone else. They see the deal first, run the numbers right,
+              and reach the seller before the market does.&rdquo;
             </p>
           </div>
         </Reveal>

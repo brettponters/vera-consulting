@@ -6,9 +6,9 @@ import { Hairline } from "@/components/ui/Hairline";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * Purpose — why RAIN exists, what we believe, PBC commitment.
+ * Purpose, why RAIN exists, what we believe, PBC commitment.
  *
- * Replaces ThreeShapes. This is the values section — it should
+ * Replaces ThreeShapes. This is the values section, it should
  * feel like a founder talking, not a deck presenting.
  */
 export default function Purpose() {
@@ -26,16 +26,17 @@ export default function Purpose() {
 
           <Reveal delay={0.05}>
             <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-10">
-              AI is going to change how every industry works.
+              AI is changing how real estate gets done.
             </h2>
           </Reveal>
 
           <Reveal delay={0.12}>
             <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-10">
-              Most companies are moving fast on AI and figuring out the
-              consequences later. We think that&rsquo;s backwards — especially
-              when these systems are making real decisions about real people.
-              VERA exists to help teams get AI right the first time.
+              The edge is moving to whoever finds the deal first. Most investors
+              and agents are still working the same lists as everyone else. We
+              built VERA to put the smartest models in the world to work
+              sourcing off-market deals and motivated sellers, and to win only
+              when our partners do.
             </p>
           </Reveal>
 

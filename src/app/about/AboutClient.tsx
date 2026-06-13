@@ -37,15 +37,16 @@ export default function AboutClient() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                A small practice with a specific bet.
+                A partner that wins when you close.
               </motion.span>
             </h1>
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
-                VERA exists because the people doing serious work with AI need
-                someone in the room who has read the papers and shipped the
-                systems. That&rsquo;s what we do.
+                VERA exists to find the edge in real estate. Off-market deals,
+                motivated seller leads, and the read on a market before the
+                crowd has it. We put it into your deals and only get paid when
+                you close.
               </p>
             </Reveal>
           </div>
@@ -62,35 +63,35 @@ export default function AboutClient() {
 
             <Reveal delay={0.05}>
               <h2 className="font-sans font-semibold text-2xl md:text-3xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-8">
-                Senior, research-first, accountable.
+                Why I built a partner, not a tool.
               </h2>
             </Reveal>
 
             <Reveal delay={0.12}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-                I started VERA because real estate agents don&rsquo;t need
-                another vendor. They need someone who understands the research,
-                has built the systems, and will tell them the truth about what
-                AI can and can&rsquo;t do for their business right now.
+                I started VERA because real estate investors and agents
+                don&rsquo;t need another tool. A tool you buy is behind the day
+                it ships. They need a partner who stays at the frontier and
+                puts what they find into real deals, week after week.
               </p>
             </Reveal>
 
             <Reveal delay={0.18}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
                 Before VERA, I spent years inside engineering and product teams
-                shipping AI into production. I saw the same pattern over and
-                over: agents and brokers spending on AI tools without
-                understanding what they were buying, vendors selling strategies
-                they couldn&rsquo;t implement, and teams left holding systems
-                nobody documented.
+                shipping AI into production. I watched the same pattern in real
+                estate: investors and agents paying for tools and subscriptions
+                that aged out in months, while the people running the sharpest
+                models found the deals first.
               </p>
             </Reveal>
 
             <Reveal delay={0.24}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)]">
-                So I built a practice that works differently. Small, senior,
-                research-first. We do the strategy and the implementation,
-                because separating those two is how projects fail.
+                So I built VERA to work differently. It runs as a
+                performance-based partnership. No retainer, no hourly, no
+                paying to try. We bring the deals and the edges, and we make
+                money only when our partners close.
               </p>
             </Reveal>
           </div>
@@ -156,7 +157,7 @@ export default function AboutClient() {
                 figure out whether we&rsquo;re the right fit.
               </p>
               <Button href="/contact" variant="filled" size="lg" arrow>
-                Book a call
+                Become a partner
               </Button>
             </div>
           </Reveal>

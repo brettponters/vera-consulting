@@ -22,7 +22,7 @@ const LEGAL_LINKS = [
  * Site footer.
  *
  * Hard-quoted PBC line (do not paraphrase):
- * "VERA is a Public Benefit Corporation. A fixed percentage of net consulting
+ * "VERA is a Public Benefit Corporation. A fixed percentage of net
  *  revenue is committed annually to independent AI safety and alignment research."
  */
 export function Footer() {
@@ -44,8 +44,8 @@ export function Footer() {
             </p>
             <p className="font-sans text-sm leading-relaxed text-[var(--color-muted)]">
               VERA is a Public Benefit Corporation. A fixed percentage of net
-              consulting revenue is committed annually to independent AI safety
-              and alignment research.
+              revenue is committed annually to independent AI safety and
+              alignment research.
             </p>
           </div>
 

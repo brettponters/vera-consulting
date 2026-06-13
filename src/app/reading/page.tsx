@@ -4,12 +4,12 @@ import ReadingClient from "./ReadingClient";
 export const metadata: Metadata = {
   title: "AI Research and Reading for Real Estate",
   description:
-    "The research, papers, and writing shaping how VERA thinks about AI strategy, integration, and coaching for real estate professionals.",
+    "The research, papers, and writing that shape how VERA finds the edge in real estate: sourcing off-market deals, motivated seller leads, and reading markets before the crowd.",
   alternates: { canonical: "/reading" },
   openGraph: {
     title: "Reading, VERA on AI for Real Estate",
     description:
-      "Research, papers, and writing shaping how we think about AI strategy and integration for real estate professionals.",
+      "Research, papers, and writing that shape how VERA sources off-market deals and reads markets before the crowd for real estate investors and agents.",
     url: "https://veraconsulting.co/reading",
     type: "article",
     images: ["/opengraph-image"],

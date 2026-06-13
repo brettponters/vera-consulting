@@ -17,48 +17,48 @@ export function GET() {
 
   const locations = LOCATIONS.map(
     (l) =>
-      `- [AI consultant in ${l.city}, ${l.state}](${SITE}/locations/${l.slug}): ${l.blurb}`,
+      `- [AI for real estate in ${l.city}, ${l.state}](${SITE}/locations/${l.slug}): ${l.blurb}`,
   ).join("\n");
 
   const body = `# VERA Consulting
 
-> VERA helps people in real estate put agentic AI to work in their business, by building it with them or coaching them to run it themselves. A founder-led Public Benefit Corporation based in Boca Raton, Florida.
+> VERA is an intelligence partner for real estate and real estate investing. We find the edge: sourcing off-market deals, surfacing motivated-seller leads, reading markets and properties before the crowd, and running the numbers fast. A founder-led Public Benefit Corporation based in Boca Raton, Florida.
 
 ## What VERA is
 
-VERA Consulting is an agentic-AI consultancy built specifically for real estate professionals: residential, listing, buyer's, luxury, and commercial agents, plus investors, flippers, wholesalers, property managers, teams, and brokers. VERA is not a software product and not a generic "AI agency." It is a hands-on practice that helps someone in real estate figure out which parts of their week are worth automating, then either builds the AI agents and workflows with them or coaches them to run it themselves (for example, teaching them to use Claude well).
+VERA is an intelligence partner for real estate investors and agents: wholesalers, fix-and-flip, buy-and-hold landlords, land and new construction, plus residential, listing, buyer's, luxury, and commercial agents, teams, and brokers. VERA is not a software product, not a course, and not a generic "AI agency." We find off-market deals, surface motivated-seller leads, and run the numbers fast so our partners get to the deal first.
 
-Important distinction: VERA does not do their day-to-day work for them, and the ongoing work is done by the AI agents VERA helps put in place, not by VERA staff. VERA's job is to get them there and hand them something they own.
+VERA works as a performance-based partnership. No retainer, no hourly, no paying to try. We make money only when our partners close. The technology moves every week; a tool you buy or a vendor you hire is behind the day it arrives. A partner who stays at the frontier and puts what they find into your deals is the only thing that keeps compounding.
 
-VERA is a Public Benefit Corporation. It is founder-led. It works with real estate professionals in person around South Florida and remotely anywhere over Google Meet.
+VERA is a Public Benefit Corporation. It is founder-led. It works with investors and agents in person around South Florida and remotely anywhere over Google Meet.
 
-## What "agentic AI" means here
+## How VERA finds the edge
 
-An assistant or chatbot answers one prompt at a time and forgets the goal between messages. An agentic AI takes a goal, breaks it into steps, uses the agent's existing tools (CRM, email, calendar, the MLS), and follows through on its own, checking with the human before anything high-stakes. The practical difference for a real estate agent: instead of a tool you have to remember to open, you get a workflow that runs in the background while you are out showing homes.
+Behind the work is an operations team running the smartest AI models in the world. You do not buy the models or manage the process; you get the outcome. VERA takes a goal, sourcing off-market inventory, finding sellers ready to move, scoring a market before it turns, and follows through, putting qualified deals and analysis in front of you so you can act first.
 
-## What VERA builds for agents (six capabilities)
+## What VERA delivers
 
-- Content & marketing: an agent that drafts listing descriptions, just-listed and just-sold posts, neighborhood guides, and the monthly newsletter in the agent's voice, Fair-Housing-aware, queued for approval before anything goes out.
-- Client follow-ups: an agent that answers new leads in minutes, nudges the slow ones on a schedule, re-engages cold leads, and keeps the agent's past clients and sphere warm so no money is left on the table.
-- Market & property research: an agent that pulls comparable sales and a CMA, property history, neighborhood and school data, and code/compliance notes into one brief before a listing appointment.
-- Contracts & compliance: an agent that preps contracts and disclosures, chases signatures and missing documents, flags code, HOA, and zoning issues, and tracks every deadline.
-- Showings & scheduling: an agent that books showings, builds the daily route, sends reminders to all sides, and collects and summarizes feedback after each one.
-- Client experience: an agent that answers every client personally and instantly so an agent can take on more clients without any of them slipping through the cracks.
+- Off-market deal sourcing: finding properties before they hit the MLS, building target lists, and surfacing inventory the crowd never sees.
+- Motivated-seller leads: identifying owners ready to sell, scoring intent, and putting warm, qualified leads in front of you fast.
+- Market and property intelligence: reading markets and individual properties before the crowd, with comps, history, and neighborhood signal pulled into one brief.
+- Deal analysis: running the numbers fast on fix-and-flip, buy-and-hold, wholesale, and land plays so you know the spread before you commit.
+- Lead generation for agents and teams: filling the pipeline with qualified buyers and sellers and keeping the sphere warm so no opportunity slips.
+- Speed to the deal: getting you to the right property and the right seller ahead of everyone working the same market.
 
 ## How VERA works
 
-A typical engagement runs in four phases: discover (learn how the practice actually runs), strategy (decide which one or two workflows are worth building first), integrate (build them on the agent's real stack, with guardrails), and operate (monitor and adjust). Delivery is either done-with-you building or 1:1 coaching, whichever gets the agent there faster.
+VERA is a partnership, not an engagement you pay to begin. We bring the intelligence, the deal flow, and the analysis; you bring local knowledge and the ability to close. We earn when you earn. That alignment is the point: it keeps us at the frontier and keeps the edge pointed at your deals.
 
-## Guardrails and trust
+## Trust and guardrails
 
-VERA's whole stance is that AI should strengthen an agent's business without putting their license or their clients' trust at risk. AI-written listing copy is reviewed by a human for Fair Housing compliance. Client data is kept where it belongs and not dumped into third-party tools. AI can research and flag compliance issues, but the agent and their broker make the call. The relationship and the negotiation stay human; AI handles the busywork around them.
+VERA is a Public Benefit Corporation, and the alignment runs both ways. Your data stays where it belongs and is not dumped into third-party tools. AI does the sourcing, scoring, and analysis; the relationship, the negotiation, and the final call stay yours. We win only when you close, so our incentive is your result, not your retainer.
 
 ## Key pages
 
-- [AI in Real Estate, a practical guide](${SITE}/ai-in-real-estate): what is real, what is hype, what agents actually use AI for, the Fair Housing and data risks, and where to start.
-- [How We Work](${SITE}/how-we-work): the discover, strategy, integrate, operate engagement process.
-- [Our Strategy](${SITE}/our-strategy): coaching, strategy, and integration for adopting agentic AI.
-- [Our Work](${SITE}/our-work): case studies and what VERA has built (e.g. CoAgent, a private, local AI agent).
+- [AI in Real Estate, a practical guide](${SITE}/ai-in-real-estate): what is real, what is hype, what investors and agents actually use AI for, and where the edge is.
+- [How We Work](${SITE}/how-we-work): how the partnership works and why we earn only when you close.
+- [Our Strategy](${SITE}/our-strategy): how VERA sources off-market deals and motivated-seller leads with agentic AI.
+- [Our Work](${SITE}/our-work): what VERA has built (e.g. CoAgent, a private, local AI agent).
 - [Contact](${SITE}/contact): book an intro call.
 
 ## AI for your real estate niche
@@ -73,7 +73,7 @@ ${locations}
 
 - Email: brett@veraconsulting.co
 - Phone: +1-561-900-8182
-- Based in Boca Raton, FL. Serves South Florida in person and works with agents anywhere remotely.
+- Based in Boca Raton, FL. Serves South Florida in person and works with investors and agents anywhere remotely.
 `;
 
   return new Response(body, {

@@ -9,14 +9,14 @@ import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "AI Solutions for Real Estate | VERA Consulting",
+  title: "AI for Real Estate Investors & Agents | VERA",
   description:
-    "AI tools, coaching, and training for real estate professionals. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, without losing the personal relationships that close deals. Boca Raton, FL.",
+    "Off-market real estate deals and motivated seller leads, found first. VERA is an AI deal sourcing partner for investors and agents. We earn only when you close. No retainer. Boca Raton, FL.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "AI Solutions for Real Estate | VERA Consulting",
+    title: "AI for Real Estate Investors & Agents | VERA",
     description:
-      "AI tools, coaching, and training for real estate professionals. Learn how to use AI and ChatGPT for lead generation, listings, deal research, and follow-ups, without losing the personal relationships that close deals.",
+      "Off-market real estate deals and motivated seller leads, found first. VERA is an AI deal sourcing partner for investors and agents. We earn only when you close. No retainer.",
     type: "website",
     url: "https://veraconsulting.co",
     siteName: "VERA",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Solutions for Real Estate | VERA Consulting",
+    title: "AI for Real Estate Investors & Agents | VERA",
     description:
-      "AI tools, coaching, and training for real estate professionals. How to use AI and ChatGPT for lead gen, listings, deal research, and follow-ups, without losing the personal relationships that close deals.",
+      "Off-market deals and motivated seller leads, found first. VERA is an AI deal sourcing partner for real estate investors and agents. We earn only when you close.",
   },
 };
 

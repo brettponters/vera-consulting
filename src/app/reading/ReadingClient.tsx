@@ -41,8 +41,9 @@ export default function ReadingClient() {
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
-                This is the research that shapes how we think about AI in
-                production. We update this list as the field moves.
+                This is the research that shapes how we find the edge in real
+                estate. We stay at the frontier so the work points at your
+                deals. We update this list as the field moves.
               </p>
             </Reveal>
           </div>

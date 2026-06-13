@@ -9,53 +9,53 @@ import { Reveal } from "@/components/ui/Reveal";
 const SERVICES = [
   {
     number: "01",
-    title: "Coaching",
+    title: "Deal Sourcing",
     description:
-      "1:1 weekly sessions on your real clients, your real content, your real proposals. You get fluent in AI on your actual work, not toy examples. The fastest path to taking bigger work without hiring.",
+      "Off-market deals matched to your buy box. We run the smartest models in the world across the data most investors never touch, then hand you properties before they hit the market. You get deals, not a dashboard.",
     includes: [
-      "Weekly 1:1 sessions with the founder",
-      "Workflow design around your real work",
-      "Prompt and tool fluency on your stack",
-      "Async support between sessions",
-      "Three-month minimum, then ongoing",
-      "Documentation you can come back to",
+      "Off-market and pre-MLS properties",
+      "Matched to your market and buy box",
+      "Wholesale, fix & flip, buy & hold, land",
+      "Delivered as deals, not raw lists",
+      "Refreshed as new inventory surfaces",
+      "Priced to your numbers, not an auction",
     ],
   },
   {
     number: "02",
-    title: "Strategy",
+    title: "Seller-Lead Intelligence",
     description:
-      "We pick the three to five AI workflows that actually move your practice. Everything else gets cut so you can ship the ones that matter, in the right order, with honest tradeoffs you can defend to a client.",
+      "Motivated sellers, surfaced early. We read the signals most outreach misses, probate, tax delinquency, code violations, tired landlords, and reach them with a message that lands instead of one more ignored blast.",
     includes: [
-      "Workflow inventory and triage",
-      "Three-to-five workflow shortlist",
-      "Tool selection and evaluation",
-      "Implementation sequencing",
-      "Simple measurement",
-      "Tradeoffs you can defend",
+      "Motivated-seller signal scoring",
+      "Probate, tax, and distress signals",
+      "Skip-traced, verified contacts",
+      "Outreach written to actually land",
+      "Timed to when the seller is ready",
+      "Market and neighborhood read",
     ],
   },
   {
     number: "03",
-    title: "Integration",
+    title: "Analysis & Disposition",
     description:
-      "AI wired into the tools you already run. Notion, HubSpot, ConvertKit, Stripe, Beehiiv, your scheduler, your CRM, whatever the stack is. Working output in three weeks, not three quarters.",
+      "The numbers, fast and defensible. We run ARV, rehab, rent, and exit math in minutes so you can make an offer with confidence, then help you move the deal, hold it, wholesale it, or flip it.",
     includes: [
-      "Tool connections and automations",
-      "Workflow build and testing",
-      "Prompt and template libraries",
-      "Light operating documentation",
-      "Handoff so you can run it yourself",
-      "30-day post-build support",
+      "ARV, rehab, and rent comps",
+      "Fix and flip deal analysis",
+      "Cash-flow and hold modeling",
+      "Offer math you can defend",
+      "Disposition and buyer matching",
+      "Numbers backed by real data",
     ],
   },
 ];
 
 const DIFFERENTIATORS = [
-  "Research-backed recommendations",
-  "No handoffs to junior teams",
-  "Full documentation & knowledge transfer",
-  "30-day post-engagement support",
+  "We only get paid when you close",
+  "No retainer, no hourly, no paying to try",
+  "Always at the frontier of the models",
+  "A partner, not a tool you outgrow",
 ];
 
 function ServiceCard({
@@ -224,11 +224,11 @@ export function StrategyServices() {
       <Container size="wide">
         <div className="max-w-[820px] mb-12 md:mb-16">
           <Reveal>
-            <Eyebrow className="mb-4">Services</Eyebrow>
+            <Eyebrow className="mb-4">What we deliver</Eyebrow>
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-sans font-semibold text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] text-[var(--color-heading)] leading-[1.05]">
-              What we offer.
+              Deals in, edge out.
             </h2>
           </Reveal>
         </div>

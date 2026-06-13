@@ -22,7 +22,7 @@ export const selectedWork = {
     name: "CoAgent",
     // founder to review and confirm
     description:
-      "A local-first autonomous AI agent built end-to-end: no cloud database, no third-party data pipeline. Uses the open Model Context Protocol to integrate with the user's own tools. Currently deployed in real estate; architecture is general.",
+      "A local-first autonomous AI agent built end-to-end: no cloud database, no third-party data pipeline. It sources off-market deals and ranks motivated-seller leads on the user's own machine, using the open Model Context Protocol to integrate with their tools. Currently deployed in real estate; architecture is general.",
     cta: {
       label: "Read the deep-dive →",
       href: "/work/coagent",
@@ -30,5 +30,5 @@ export const selectedWork = {
   } satisfies WorkItem,
 
   holdingLine:
-    "More work to come — by name, when clients have agreed to be named.",
+    "More work to come, by name, when clients have agreed to be named.",
 } as const;

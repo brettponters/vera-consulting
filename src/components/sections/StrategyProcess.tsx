@@ -8,49 +8,49 @@ import { Reveal } from "@/components/ui/Reveal";
 const STEPS = [
   {
     number: "1",
-    title: "Assessment",
+    title: "Your Buy Box",
     description:
-      "We start by understanding where you are, infrastructure, AI maturity, goals, and constraints. We evaluate what's working, what's not, and where AI can create real value. The strategy we build is only as good as our understanding of your reality.",
+      "We start with what you actually want: market, asset type, price band, strategy, and the deals you'd buy tomorrow. The sharper your buy box, the sharper what we send. No deal we source is worth anything if it doesn't fit how you operate.",
     details: [
-      "Infrastructure review",
-      "Stakeholder interviews",
-      "Data readiness",
-      "Risk identification",
-      "Competitive landscape",
+      "Market and neighborhoods",
+      "Asset type and price band",
+      "Wholesale, flip, hold, or land",
+      "Capital and timeline",
+      "Deal criteria",
     ],
   },
   {
     number: "2",
-    title: "Scope of Work",
+    title: "We Source",
     description:
-      "We define exactly what we'll deliver, when, and what success looks like. Every scope of work includes measurable success criteria. We typically present two or three options at different levels of depth so you can choose the engagement that fits your budget and timeline.",
+      "We run the smartest models in the world across the data most investors never touch, surface off-market deals and motivated sellers, and run the numbers before we send anything. You get deals that fit, with the math already done, not raw lists to dig through.",
     details: [
-      "Defined deliverables",
-      "Timeline and milestones",
-      "Resource requirements",
-      "Success criteria",
-      "Investment summary",
+      "Off-market deal sourcing",
+      "Motivated-seller signals",
+      "ARV, rehab, and rent comps",
+      "Pre-screened to your buy box",
+      "Refreshed as inventory moves",
     ],
   },
   {
     number: "3",
-    title: "Execution",
+    title: "You Close, We Win",
     description:
-      "We do the work, coaching, strategy, integration, whatever the scope calls for. Regular updates, full documentation, no lock-in. When we're done, you own everything we built. Every engagement includes a 30-day post-completion support window.",
+      "You make the offers and close the deals. We stay at the frontier of the technology and keep feeding your pipeline. We only get paid when you close, so our incentive is simple: more deals that actually work for you.",
     details: [
-      "Weekly check-ins",
-      "Progress reporting",
-      "Full documentation",
-      "Knowledge transfer",
-      "Post-engagement support",
+      "Deals delivered, not dashboards",
+      "Disposition and buyer matching",
+      "Always at the model frontier",
+      "Paid only when you close",
+      "A partnership, not a contract",
     ],
   },
 ];
 
 const TIMELINE = [
-  { label: "Assessment", value: "2-3 weeks" },
-  { label: "Scope of Work", value: "1 week" },
-  { label: "Execution", value: "4-12 weeks" },
+  { label: "Your Buy Box", value: "1 call" },
+  { label: "We Source", value: "Ongoing" },
+  { label: "You Close", value: "We win when you do" },
 ];
 
 export function StrategyProcess() {
@@ -64,14 +64,14 @@ export function StrategyProcess() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-sans font-semibold text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] text-[var(--color-heading)] leading-[1.05] mb-6">
-                How we scope a strategy engagement.
+                How the partnership works.
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[560px]">
-                Every engagement starts with an honest assessment, a scoped
-                proposal, and a defined execution plan. For the deeper
-                implementation phases, see{" "}
+                It starts with your buy box, runs on the deals and seller leads
+                we source, and pays off when you close. We win when you win. For
+                more on how we run it, see{" "}
                 <a
                   href="/how-we-work"
                   className="text-[var(--color-accent)] underline underline-offset-2"

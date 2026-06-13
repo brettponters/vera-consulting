@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import AboutClient from "./AboutClient";
 
 export const metadata: Metadata = {
-  title: { absolute: "About VERA, Agentic AI for Real Estate Agents" },
+  title: { absolute: "About VERA, AI Partner for Real Estate Investors" },
   description:
-    "VERA is a founder-led agentic AI practice for real estate agents, teams, and brokers. Research-first strategy, hands-on integration, and 1:1 coaching. Public Benefit Corporation in Boca Raton, FL.",
+    "VERA is an intelligence partner for real estate investors and agents. We find off-market deals and motivated seller leads, and we only earn when you close. Public Benefit Corporation in Boca Raton, FL.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About VERA, Agentic AI for Real Estate Agents",
+    title: "About VERA, AI Partner for Real Estate Investors",
     description:
-      "A founder-led practice for real estate agents: agentic AI strategy, integration, and 1:1 coaching. Public Benefit Corporation in Boca Raton, FL.",
+      "An intelligence partner for real estate investors and agents. We source off-market deals and motivated seller leads, and win only when you close. Boca Raton, FL.",
     url: "https://veraconsulting.co/about",
     type: "website",
     images: ["/opengraph-image"],

@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import OurWorkClient from "./OurWorkClient";
 
 export const metadata: Metadata = {
-  title: "Agentic AI Case Studies",
+  title: "Off-Market Real Estate Deals: VERA Case Studies",
   description:
-    "Agentic AI case studies and builds for real estate agents, teams, and brokers: AI agents, automation, strategy, and integration. What we've built and what it actually changed.",
+    "How VERA sources off-market real estate deals, surfaces motivated seller leads, and runs the numbers for investors, wholesalers, flippers, and agents. The work and what it changed.",
   alternates: { canonical: "/our-work" },
   openGraph: {
-    title: "Our Work, VERA Engagements & Case Studies",
+    title: "VERA Case Studies: Off-Market Deals & Seller Leads",
     description:
-      "What we've built for real estate agents and brokers adopting agentic AI strategy, integration, and coaching.",
+      "What VERA built to find off-market properties and motivated seller leads for real estate investors and agents. Real AI, in production, and what it changed.",
     url: "https://veraconsulting.co/our-work",
     type: "article",
     images: ["/opengraph-image"],

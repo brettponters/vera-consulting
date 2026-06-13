@@ -7,7 +7,7 @@ import { Hairline } from "@/components/ui/Hairline";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * About — founder-forward section on the home page.
+ * About, founder-forward section on the home page.
  *
  * NOT the /about route. A short section that makes the page become a person.
  * Layout: wide container, md+ photo col (2fr) + text col (3fr).
@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section
       id="about"
-      aria-label="About RAIN"
+      aria-label="About VERA"
       className="py-16 md:py-24"
     >
       <Container size="wide">
@@ -39,7 +39,7 @@ export default function About() {
               <div className="flex flex-col gap-4">
                 <Eyebrow>About</Eyebrow>
                 <h2 className="font-sans font-semibold text-[var(--color-heading)] text-3xl md:text-4xl tracking-[-0.02em] leading-tight">
-                  RAIN is a small practice with a specific bet.
+                  VERA is a partner that wins when you close.
                 </h2>
               </div>
             </Reveal>
@@ -48,14 +48,14 @@ export default function About() {
               {/* founder to confirm */}
               <p className="font-sans font-medium text-[var(--color-body)] text-lg leading-relaxed">
                 {/* founder to confirm */}
-                I&rsquo;m [Founder Name]. I started RAIN because the companies integrate I want to work with
-                (banks, hospitals, law firms, regulated SaaS) are about to deploy AI
-                that will run their core operations for the next decade, and most of them don&rsquo;t
-                have anyone in the building who has read the papers and shipped the systems. RAIN is
-                the practice that does. I take a small number of engagements each year. The work is
-                hands-on: I write the strategy, I integrate the systems, I stay long enough to watch them
-                run in production. The bet is that depth matters more than scale, and that the firms
-                who plan this on purpose will own the next decade.
+                I&rsquo;m [Founder Name]. I started VERA because real estate
+                investors and agents don&rsquo;t need another tool that ages
+                out in months. They need a partner who stays at the frontier
+                and puts what they find into real deals. VERA finds the edge:
+                off-market deals, motivated seller leads, and the read on a
+                market before the crowd has it. We run as a performance-based
+                partnership. No retainer, no hourly, no paying to try. We make
+                money only when our partners close.
               </p>
             </Reveal>
 
@@ -63,15 +63,15 @@ export default function About() {
               <div className="flex flex-col gap-6">
                 <Hairline />
                 <p className="font-sans text-[var(--color-muted)] text-base leading-relaxed">
-                  RAIN is incorporated as a Public Benefit Corporation. A fixed percentage of net
-                  consulting revenue is committed annually to independent AI safety research, in our
+                  VERA is incorporated as a Public Benefit Corporation. A fixed percentage of net
+                  revenue is committed annually to independent AI safety research, in our
                   charter.
                 </p>
                 <Link
                   href="/about"
                   className="font-sans text-sm font-medium text-[var(--color-accent)] hover:opacity-75 transition-opacity duration-150 w-fit"
                 >
-                  More about RAIN &rarr;
+                  More about VERA &rarr;
                 </Link>
               </div>
             </Reveal>

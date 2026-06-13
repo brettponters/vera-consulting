@@ -5,19 +5,19 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const SERVICES = [
   {
-    title: "Coaching",
+    title: "Deal sourcing",
     description:
-      "1:1 weekly sessions on your real clients, your real content, your real proposals. You get fluent in AI on your actual work, not toy examples. The fastest path to taking bigger work.",
+      "We find off-market deals and rank motivated-seller leads before the rest of the market sees them. The signals run on the smartest AI models in the world, pointed at your buy box.",
   },
   {
-    title: "Strategy",
+    title: "Deal analysis",
     description:
-      "We pick the three to five AI workflows that actually move your business. Everything else gets cut so you can ship the ones that matter.",
+      "Comps, ARV, repairs, and margin run the moment a lead comes in. You know whether to chase a property in seconds, not after a night of spreadsheets.",
   },
   {
-    title: "Integration",
+    title: "Partnership",
     description:
-      "AI wired into the tools you already run. Notion, HubSpot, ConvertKit, Stripe, Beehiiv, whatever the stack is. Working output in three weeks, not three quarters.",
+      "No retainer, no hourly, no paying to try. We make money only when you close. The technology moves every week, and we stay at the frontier so your deals do too.",
   },
 ];
 

@@ -1,10 +1,11 @@
 /**
- * Real estate pain points for the "See what VERA can do" personalizer.
+ * Real estate pain points for the "See where VERA would find your edge"
+ * personalizer.
  *
- * VERA's ICP is real estate professionals. When a visitor types their name,
- * brokerage, or site, we match it to a real estate niche and show pains
- * specific to it, so the menu feels seen without any AI cost. No match falls
- * back to GENERIC_PAINS (the everyday agent set).
+ * VERA's ICP is real estate and real estate investing. When a visitor types
+ * their name, company, or site, we match it to a niche and show pains specific
+ * to it, so the menu feels seen without any AI cost. No match falls back to
+ * GENERIC_PAINS (the deal-sourcing default).
  *
  * Matching is first-hit by keyword, so order MORE specific niches before
  * broader ones.
@@ -16,17 +17,58 @@ export interface JobPains {
   pains: string[];
 }
 
-// Default: the everyday residential agent.
+// Default: sourcing deals and leads, the work that limits every closing.
 export const GENERIC_PAINS: string[] = [
+  "Finding off-market deals is all manual",
+  "Motivated-seller leads go cold before I reach them",
+  "Underwriting and running the numbers takes too long",
+  "Pulling comps and ARV estimates eats my time",
   "Following up with leads before they go cold",
-  "Listing descriptions and marketing eat my time",
-  "Scheduling showings and tours is all manual",
-  "Staying top of mind with past clients slips",
-  "Transaction paperwork and coordination pile up",
-  "Pulling comps and CMAs takes too long",
+  "Reading a market early enough to act first is hard",
 ];
 
 const JOB_PAINS: JobPains[] = [
+  {
+    keywords: [
+      "wholesale",
+      "wholesaler",
+      "off-market",
+      "motivated seller",
+      "dispo",
+      "cash buyer",
+    ],
+    pains: [
+      "Finding off-market deals is all manual",
+      "Motivated-seller leads go cold before I reach them",
+      "Skip tracing and list pulling eats my week",
+      "Underwriting each deal takes too long",
+      "Matching deals to cash buyers is slow",
+    ],
+  },
+  {
+    keywords: [
+      "flip",
+      "flipper",
+      "fix and flip",
+      "rehab",
+      "investor",
+      "investment",
+      "investments",
+      "capital",
+      "holdings",
+      "ventures",
+      "acquisitions",
+      "buy and hold",
+      "land",
+    ],
+    pains: [
+      "Finding off-market deals before the crowd is hard",
+      "Underwriting and ARV analysis takes all night",
+      "Vetting motivated-seller leads is all manual",
+      "Estimating rehab and holding costs is slow",
+      "Reading a market early enough to act first is hard",
+    ],
+  },
   {
     keywords: ["luxury", "high-end", "estate agent", "luxury homes"],
     pains: [
@@ -80,8 +122,8 @@ const JOB_PAINS: JobPains[] = [
 ];
 
 /**
- * Returns pain points tailored to the visitor's real estate niche, or the
- * everyday-agent set when nothing matches. Always returns a non-empty list.
+ * Returns pain points tailored to the visitor's niche, or the deal-sourcing
+ * default when nothing matches. Always returns a non-empty list.
  */
 export function painsFor(business: string): string[] {
   const text = business.toLowerCase();

@@ -8,7 +8,7 @@ export function BookACall() {
   return (
     <section
       id="book-a-call"
-      aria-label="Book a call"
+      aria-label="Become a partner"
       className="bg-[var(--color-surface)] py-20 md:py-28"
     >
       <Container size="prose">
@@ -24,14 +24,14 @@ export function BookACall() {
 
           <Reveal delay={0.1}>
             <p className="font-sans text-[var(--color-body)] text-lg leading-relaxed max-w-prose">
-              30 minutes. We&rsquo;ll talk about what you&rsquo;re trying to do
-              and whether we can help. No deck, no pitch.
+              30 minutes. We&rsquo;ll talk about the deals you&rsquo;re chasing
+              and whether we can find you an edge. No deck, no pitch.
             </p>
           </Reveal>
 
           <Reveal delay={0.2}>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Book a call
+              Become a partner
             </Button>
           </Reveal>
         </div>

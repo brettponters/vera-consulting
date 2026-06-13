@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact, AI Coaching for Real Estate Agents in Boca Raton",
+  title: "Contact VERA, AI for Real Estate Investors in Boca Raton",
   description:
-    "Book a call or send a message. 1:1 agentic AI coaching, strategy, and integration for real estate agents and brokers in Boca Raton, South Florida, and remote.",
+    "Book a call or send a message. VERA sources off-market deals and motivated seller leads for real estate investors and agents. Boca Raton, South Florida, and remote.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact VERA, AI Coaching for Real Estate Agents",
+    title: "Contact VERA, AI for Real Estate Investors",
     description:
-      "Book a call or send a message. Agentic AI coaching, strategy, and integration for real estate agents, teams, and brokers.",
+      "Book a call or send a message. VERA sources off-market deals and motivated seller leads for real estate investors, agents, teams, and brokers.",
     type: "website",
     url: "https://veraconsulting.co/contact",
     siteName: "VERA",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact VERA, AI Coaching for Real Estate Agents",
+    title: "Contact VERA, AI for Real Estate Investors",
     description:
-      "Book a call or send a message. Agentic AI coaching for real estate agents and brokers.",
+      "Book a call or send a message. VERA finds off-market deals and motivated seller leads for real estate investors and agents.",
   },
 };
 

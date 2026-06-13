@@ -21,30 +21,30 @@ interface Pillar {
 const pillars: Pillar[] = [
   {
     number: "01",
-    heading: "Research-backed",
+    heading: "Aligned with you",
     paragraphs: [
-      "Every recommendation traces back to published research, tested benchmarks, or proven production patterns. When we say a model fits your use case or an architecture will scale, we have evidence for it.",
+      "We make money only when our partners close. No retainer, no hourly, no paying to try. That one fact decides everything: we send deals that actually work for you, because deals that don't never pay us.",
     ],
   },
   {
     number: "02",
-    heading: "Responsibly powerful",
+    heading: "At the frontier",
     paragraphs: [
-      "AI should be capable enough to make a real difference and reliable enough to trust. Every system we integrate ships with guardrails, evaluation frameworks, and documentation. You don't have to choose between AI that works and AI that's safe.",
+      "The technology moves every week. We run the smartest models in the world and keep moving with them, so the edge you get compounds instead of aging out. A tool you buy is behind the day it arrives. A partner who stays at the frontier isn't.",
     ],
   },
   {
     number: "03",
-    heading: "Transparent",
+    heading: "Numbers you can trust",
     paragraphs: [
-      "AI systems make decisions that affect real people. We're honest about what works, what doesn't, and where the real risks are, so you can make informed decisions about what to deploy and how.",
+      "A deal is only as good as the math behind it. We back every ARV, rent, and rehab figure with real data, and we are honest about what we don't know. You make the offer with confidence because the numbers hold up.",
     ],
   },
   {
     number: "04",
-    heading: "Built to stay ahead",
+    heading: "A partner, not a tool",
     paragraphs: [
-      "AI is shifting from reactive tools to proactive systems, and regulation is following close behind. We help you build policies, evaluation frameworks, and operational processes that account for where things are heading, not just where they are today.",
+      "We don't hand you software and walk away. We source the deals, surface the sellers, run the numbers, and stay in it as the market and the models shift. The edge keeps coming because someone is out at the frontier finding it for you.",
     ],
   },
 ];

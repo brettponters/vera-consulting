@@ -10,29 +10,29 @@ import { Button } from "@/components/ui/Button";
 /* ─── CoAgent: the change, in plain terms ─── */
 
 const BEFORE = [
-  "Your morning starts with 80 emails, three reschedules, and four follow-ups you will forget by noon.",
-  "AI could take most of it, but every tool wanted your clients' private data on its servers. Off the table.",
-  "So you did it all by hand, and the real work waited until the afternoon.",
+  "Your day starts with skip-tracing lists, county records, and a hundred properties you have to call before someone else gets there first.",
+  "AI could surface the motivated sellers and run the numbers, but every tool wanted your lead data on its servers. Off the table.",
+  "So you worked the list by hand, and the best off-market deals went to whoever moved faster.",
 ];
 
 const AFTER = [
-  "It is handled before you sit down. The inbox is triaged, replies are drafted, the meetings are moved.",
-  "Four things need your yes. You approve them in a minute and start the work only you can do.",
-  "And none of it left your laptop. Your clients' data never touched someone else's cloud.",
+  "The motivated-seller signals are already ranked when you sit down. The off-market list is scored, the comps are pulled, the numbers are run.",
+  "A handful of deals need your yes. You approve them in a minute and spend your day on the ones worth chasing.",
+  "And none of it left your laptop. Your lead data never touched someone else's cloud.",
 ];
 
 const MEANS_FOR_YOU = [
   {
-    title: "Get your mornings back",
-    body: "The repetitive hour that opens your day, triage, scheduling, follow-ups, runs before you wake up. You start on the work that pays.",
+    title: "Find the deals first",
+    body: "The off-market list gets sourced, scored, and ranked before you wake up. You start the day on the properties most likely to close, not a cold spreadsheet.",
   },
   {
-    title: "Stop dropping the ball",
-    body: "Follow-ups, renewals, the lead from Tuesday. The agent catches what falls through the cracks, so a forgotten reply stops costing you the deal.",
+    title: "Stop losing motivated sellers",
+    body: "The follow-up, the lead from Tuesday, the seller who almost said yes. The agent catches what falls through the cracks, so a missed call stops costing you the deal.",
   },
   {
-    title: "Keep your clients' trust",
-    body: "Everything runs on your own machine. The data clients trust you with never leaves it. That is the difference between a demo and something you can actually use.",
+    title: "Keep your data yours",
+    body: "Everything runs on your own machine. Your lead lists and deal pipeline never leave it. That is the difference between a demo and something you can actually run your business on.",
   },
 ];
 
@@ -68,8 +68,9 @@ export default function OurWorkClient() {
 
             <Reveal delay={0.2}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
-                Real AI, shipped to production, and what it actually changed for
-                the people using it.
+                Real AI, shipped to production, finding off-market deals and
+                motivated-seller leads, and what it actually changed for the
+                people closing them.
               </p>
             </Reveal>
           </div>
@@ -117,8 +118,8 @@ export default function OurWorkClient() {
               className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.01em] leading-snug max-w-[760px] mb-14"
               style={{ fontSize: "clamp(1.375rem, 2.6vw, 2.125rem)" }}
             >
-              We gave a busy solo operator their mornings back, without their
-              clients&rsquo; data ever leaving their laptop.
+              We put a busy solo investor in front of the right off-market
+              deals first, without their lead data ever leaving their laptop.
             </p>
           </Reveal>
 
@@ -212,7 +213,7 @@ export default function OurWorkClient() {
             </Reveal>
             <Reveal delay={0.1}>
               <Button href="/contact" variant="filled" size="lg" arrow>
-                Book a call
+                Become a partner
               </Button>
             </Reveal>
           </div>

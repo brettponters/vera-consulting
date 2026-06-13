@@ -4,13 +4,13 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { AnimatedDiagram } from "@/components/ui/AnimatedDiagram";
 
-// founder to confirm — all card copy below
+// founder to confirm, all card copy below
 
 const shapes = [
   {
-    title: "Strategy",
+    title: "Source",
     // founder to confirm
-    body: "We sit with your team, read your stack, and write the plan that actually fits — what to integrate, what to buy, what to leave alone.",
+    body: "We run the smartest models in the world to find off-market deals and motivated sellers, then hand you properties matched to your buy box.",
     diagram: (
       // Circle mark for Strategy
       <svg
@@ -32,9 +32,9 @@ const shapes = [
     ),
   },
   {
-    title: "Integrate",
+    title: "Analyze",
     // founder to confirm
-    body: "We design and ship the systems hands-on — models, evals, retrieval, agent workflows — with the depth to know how they behave under load.",
+    body: "We run ARV, rehab, rent, and exit math in minutes so you can make an offer with confidence, backed by real data and not guesswork.",
     diagram: (
       // Square mark for Build
       <svg
@@ -57,9 +57,9 @@ const shapes = [
     ),
   },
   {
-    title: "Operate",
+    title: "Close",
     // founder to confirm
-    body: "We stay long enough to watch what we built run in production, tune it, document it, and hand it off so your team owns what they run.",
+    body: "You make the offers and close the deals. We keep your pipeline full and stay at the frontier, and we only get paid when you close.",
     diagram: (
       // Triangle mark for Operate
       <svg
@@ -90,7 +90,7 @@ export function ThreeShapes() {
       <Container size="wide">
         <Reveal>
           <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] mb-12 md:mb-16">
-            Three shapes. Sized to the work.
+            Source. Analyze. Close.
           </h2>
         </Reveal>
 

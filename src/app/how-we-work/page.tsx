@@ -4,14 +4,14 @@ import { FAQ } from "./faq";
 import { PHASES } from "./phases";
 
 export const metadata: Metadata = {
-  title: "How VERA Works, AI for Real Estate Agents",
+  title: "How VERA Works, AI for Real Estate Investors",
   description:
-    "The VERA engagement process for real estate agents: discover, strategize, integrate, operate. How an agentic AI engagement actually unfolds, end to end.",
+    "How the VERA partnership works for real estate investors and agents: we source off-market deals and motivated seller leads, and we only earn when you close.",
   alternates: { canonical: "/how-we-work" },
   openGraph: {
-    title: "How VERA Works, AI for Real Estate Agents",
+    title: "How VERA Works, AI for Real Estate Investors",
     description:
-      "Discover, strategize, integrate, operate. The four phases of a VERA engagement for real estate agents and brokers.",
+      "How a VERA partnership works for real estate investors and agents. We bring off-market deals and motivated seller leads, and win only when you close.",
     url: "https://veraconsulting.co/how-we-work",
     type: "article",
     images: ["/opengraph-image"],
@@ -31,15 +31,15 @@ const faqJsonLd = {
   })),
 };
 
-// HowTo schema for the engagement process. Answer engines extract numbered
-// procedures as authoritative "how does an AI consulting engagement work"
+// HowTo schema for the partnership process. Answer engines extract numbered
+// procedures as authoritative "how does an AI real estate partnership work"
 // references (AEO).
 const howToJsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How a VERA AI consulting engagement works",
+  name: "How a VERA real estate partnership works",
   description:
-    "The four phases of a VERA agentic AI engagement: discover, strategy, integrate, operate.",
+    "How a VERA partnership works for real estate investors and agents: discover, strategy, integrate, operate.",
   step: PHASES.map((phase, i) => ({
     "@type": "HowToStep",
     position: i + 1,

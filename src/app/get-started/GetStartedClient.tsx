@@ -84,7 +84,7 @@ export default function GetStartedClient() {
               className="font-sans font-bold text-[var(--color-heading)] leading-[1.08] tracking-[-0.02em] mb-6"
               style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
             >
-              Get AI working for your practice, the right way.
+Get the deals before the crowd does.
             </motion.h1>
 
             <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] mb-8">
@@ -94,9 +94,9 @@ export default function GetStartedClient() {
 
             <ul className="flex flex-col gap-4 mb-10">
               {[
-                "Strategy and implementation grounded in real research",
-                "Systems with guardrails, evaluation, and documentation",
-                "A founder who stays until it works in production",
+                "Off-market deals and motivated seller leads, sourced for you",
+                "Markets and numbers read fast, before the crowd moves",
+                "Performance-based: we earn only when you close",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
@@ -113,7 +113,7 @@ export default function GetStartedClient() {
               </span>
               <span className="text-[var(--color-hairline)]">·</span>
               <span className="font-sans text-xs text-[var(--color-muted)]">
-                A percentage of every engagement funds independent AI safety research
+A percentage of every dollar we earn funds independent AI safety research
               </span>
             </div>
           </div>

@@ -13,14 +13,14 @@ import { useTypewriter } from "@/hooks/useTypewriter";
 
 const BUSINESS_EXAMPLES = [
   "your name",
-  "your brokerage",
+  "your investing company",
   "yourrealty.com",
-  "your Zillow profile",
+  "your brokerage",
 ];
 const PAIN_EXAMPLES = [
-  "leads keep going cold",
-  "listings eat my weekends",
-  "showings are a scheduling mess",
+  "finding off-market deals is all manual",
+  "motivated-seller leads go cold",
+  "underwriting takes me all night",
   "I forget to follow up",
 ];
 
@@ -46,7 +46,7 @@ const WAITING = ["Working from what we found", "Writing it up"];
 const PROFILING_STEPS = [
   "Finding your business",
   "Reading your site",
-  "Spotting what slows you down",
+  "Spotting where you'd find an edge",
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -219,7 +219,7 @@ export function PromptPersonalize() {
   return (
     <section
       ref={sectionRef}
-      aria-label="See what VERA can do for your business"
+      aria-label="See where VERA would find your edge"
       className="bg-[var(--color-surface)]"
     >
       <motion.div
@@ -262,14 +262,14 @@ export function PromptPersonalize() {
                 className="font-sans font-black leading-[1.0] tracking-[-0.035em]"
                 style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)", color: INK }}
               >
-                See what VERA can do for your real estate business.
+                See where VERA would find your edge.
               </h2>
               <p
                 className="mt-5 font-sans text-lg md:text-xl leading-relaxed max-w-[600px]"
                 style={{ color: INK_DIM }}
               >
-                Drop your name, brokerage, or site, pick what&rsquo;s eating
-                your week, and see exactly what we&rsquo;d take off your plate.
+                Drop your name, company, or site, tell us where deals or leads
+                dry up, and see exactly where we&rsquo;d find you an edge.
               </p>
 
               {/* Step 1, business input */}
@@ -367,7 +367,7 @@ export function PromptPersonalize() {
                       className="font-sans font-semibold text-lg md:text-xl"
                       style={{ color: INK }}
                     >
-                      What&rsquo;s eating your week? Tell us in your words.
+                      Where do deals or leads dry up? Tell us in your words.
                     </p>
                     <button
                       type="button"
@@ -396,7 +396,7 @@ export function PromptPersonalize() {
                       }}
                       maxLength={140}
                       autoFocus
-                      aria-label="What's eating your week?"
+                      aria-label="Where do deals or leads dry up?"
                       placeholder={painPlaceholder}
                       className="flex-1 min-w-0 bg-transparent font-sans outline-none placeholder:text-[rgba(255,255,255,0.55)] py-2"
                       style={{
@@ -524,7 +524,7 @@ export function PromptPersonalize() {
                           className="group inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-sans text-sm font-medium no-underline transition-all duration-200 ease-out hover:-translate-y-px"
                           style={{ backgroundColor: DARK, color: "#F5EFE4" }}
                         >
-                          Book a call
+                          Become a partner
                           <svg
                             aria-hidden="true"
                             width="14"
@@ -561,7 +561,7 @@ export function PromptPersonalize() {
                       <p style={{ color: INK_DIM }} className="font-sans">
                         That one&rsquo;s not cooperating. Try again, or just{" "}
                         <a href="/contact" className="underline underline-offset-4" style={{ color: INK }}>
-                          book a call
+                          become a partner
                         </a>{" "}
                         and we&rsquo;ll do it live.
                       </p>

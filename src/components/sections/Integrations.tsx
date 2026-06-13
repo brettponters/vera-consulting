@@ -6,7 +6,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * Integrations — animated orbit of tool icons.
+ * Integrations, animated orbit of tool icons.
  *
  * Left: copy about integrating AI into existing systems.
  * Right: tool icons orbiting slowly around an ellipse,
@@ -40,16 +40,16 @@ export default function Integrations() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-6">
-                AI that works inside the tools your team already uses.
+                AI that works inside the CRM and tools you already run.
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)]">
                 We don&rsquo;t integrate AI that lives in a silo. Everything we
-                ship connects to the systems you already run. Slack, Outlook,
-                Zoom, Salesforce, your internal tools. The goal is AI that
-                fits into how your team actually works, not a new platform
-                they have to learn.
+                ship connects to the systems you already run. Your CRM, your
+                lead lists, your dispo and pipeline tools. The goal is AI that
+                fits into how you already source and close deals, not a new
+                platform you have to learn.
               </p>
             </Reveal>
           </div>

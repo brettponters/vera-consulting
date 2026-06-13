@@ -1,22 +1,22 @@
 export const FAQ = [
   {
-    q: "How long does a typical engagement last?",
-    a: "Strategy-only work usually runs 4–6 weeks. If we're integrating a system end-to-end, it's more like 3–6 months. We'll give you a clear timeline before anything starts.",
+    q: "How does the partnership work?",
+    a: "We find the edge and put it into your deals. Off-market deals, motivated seller leads, and fast numbers. We partner on performance, so we earn only when you close. No retainer, no hourly, no paying to try.",
   },
   {
     q: "Who do you work with?",
-    a: "Real estate agents, teams, and brokers. Residential agents, listing specialists, buyer's agents, luxury agents, commercial brokers, and investor-focused agents whose business runs on relationships.",
+    a: "Real estate investors first: wholesalers, fix and flip, buy and hold, landlords, land, and new construction. We also work with agents, teams, and brokers who want a steady flow of off-market deals and motivated seller leads.",
   },
   {
-    q: "How big is your team?",
-    a: "Small. Senior. The person on your first call is the person doing the work. That's the whole idea.",
+    q: "What does it cost?",
+    a: "Nothing up front. The partnership is performance-based, so there is no retainer, no hourly billing, and no fee to try it. We make money only when our partners close.",
   },
   {
-    q: "What does pricing look like?",
-    a: "Project-based, scoped to deliverables. You'll know what you're paying and what you're getting before we start. No hourly billing, no open-ended retainers.",
+    q: "Why a partner instead of a tool I can buy?",
+    a: "The technology moves every week. A tool or subscription is behind the day it ships. A partner who stays at the frontier and puts what they find into your deals is the only thing that keeps compounding.",
   },
   {
-    q: "Can you work with my VA or contractor?",
-    a: "That's the default. If someone else operates parts of your practice with you, we bring them into the build so they're not guessing how to use it after we leave.",
+    q: "Can you work with my team or VA?",
+    a: "Yes. If others source or work deals with you, we bring them into the flow so leads and off-market deals land where your team already works.",
   },
 ];

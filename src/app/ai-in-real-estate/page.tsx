@@ -9,14 +9,14 @@ import { CapabilityCards } from "./CapabilityCards";
 const SITE_URL = "https://veraconsulting.co";
 
 export const metadata: Metadata = {
-  title: "How to Use AI in Real Estate: A Practical Guide",
+  title: "AI for Real Estate & Investors: A Practical Guide",
   description:
-    "How to use AI in real estate, in plain English. What AI tools actually do, how to use ChatGPT for listings, deal research, and lead follow-up, the Fair Housing and data risks, and where to start. Written for people who close deals, not write code.",
+    "AI for real estate and real estate investors, in plain English. How AI finds off-market deals and motivated-seller leads, runs comps and underwriting, and handles agent busywork, plus the Fair Housing and data risks and where to start.",
   alternates: { canonical: "/ai-in-real-estate" },
   openGraph: {
-    title: "How to Use AI in Real Estate: A Practical Guide",
+    title: "AI for Real Estate & Investors: A Practical Guide",
     description:
-      "What's real, what's hype, and where AI earns its place in a real estate business. Agentic AI explained for real estate professionals, with the Fair Housing and client-data guardrails that matter.",
+      "What's real, what's hype, and where AI earns its place in real estate and investing. How AI sources off-market deals and motivated-seller leads, with the Fair Housing and data guardrails that matter.",
     type: "article",
     url: `${SITE_URL}/ai-in-real-estate`,
     siteName: "VERA",
@@ -25,48 +25,52 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI in Real Estate: A Practical Guide",
+    title: "AI for Real Estate & Investors: A Practical Guide",
     description:
-      "What's real, what's hype, and where AI earns its place in a real estate business.",
+      "What's real, what's hype, and where AI earns its place in real estate and investing, from off-market deal sourcing to motivated-seller leads.",
   },
 };
 
 const FAQ: FaqItem[] = [
   {
+    q: "How are real estate investors using AI?",
+    a: "To find the edge before the crowd. AI scans for off-market properties and motivated-seller signals, builds comps and ARV in minutes, underwrites a deal against your buy box, and ranks the list so you call the best lead first. Then it handles the follow-up and disposition outreach. The negotiation and the offer stay yours.",
+  },
+  {
     q: "How are real estate agents using AI?",
-    a: "For the work around the deal, not the deal itself: drafting listing copy and social posts, answering new leads in minutes and nudging the slow ones, pulling comps and property research into a brief, prepping contracts and flagging compliance, coordinating showings, and keeping every client updated. The relationship and the negotiation stay human.",
+    a: "For the work around the deal, not the deal itself: sourcing and qualifying leads, drafting listing copy and social posts, answering new leads in minutes and nudging the slow ones, pulling comps and property research into a brief, prepping contracts and flagging compliance, and keeping every client updated. The relationship and the negotiation stay human.",
   },
   {
     q: "What is agentic AI in real estate?",
-    a: "Agentic AI is software that takes a goal and works through the steps on its own, instead of answering one prompt at a time. A chatbot writes the follow-up email when you ask. An agent watches for the new lead, writes the follow-up, schedules the next touch, and routes the hot one to you, while you are out at a showing. It checks with you before anything high-stakes.",
+    a: "Agentic AI is software that takes a goal and works through the steps on its own, instead of answering one prompt at a time. A chatbot writes a follow-up email when you ask. An agent watches for a new off-market lead, pulls comps, runs the numbers, writes the outreach, schedules the next touch, and routes the best deals to you while you are out closing. It checks with you before anything high-stakes.",
   },
   {
     q: "Is it safe to use AI with client data and Fair Housing rules?",
-    a: "It can be, if it is built that way. AI-written listing copy can drift into Fair Housing violations, so a human signs off on every word. Client data should never be dumped into a random tool's servers; the systems worth using keep it where it belongs. AI can research and flag compliance, but your judgment and your broker still decide.",
+    a: "It can be, if it is built that way. AI-written listing copy can drift into Fair Housing violations, so a human signs off on every word. Client and seller data should never be dumped into a random tool's servers; the systems worth using keep it where it belongs. AI can research and flag compliance, but your judgment and your broker still decide.",
   },
   {
-    q: "Will AI replace real estate agents?",
-    a: "No. It replaces the busywork, not the trust. Clients hire an agent for judgment, negotiation, and someone who has their back on the biggest purchase of their life. AI does not do that. What it does is hand the agents who use it more time and a sharper edge, so they out-list and out-close the agents who don't.",
+    q: "Will AI replace real estate agents and investors?",
+    a: "No. It replaces the busywork, not the judgment. Clients and sellers deal with you for trust, negotiation, and someone who has their back on the biggest transaction of their life. AI does not do that. What it does is hand the people who use it more time and a sharper edge, so they source more deals and close more of them than the ones who don't.",
   },
   {
-    q: "What AI should a real estate agent start with?",
-    a: "The one workflow eating your week, usually lead follow-up. Get that running reliably before adding anything else. Pick tools that keep client data private, and skip anything that is a chatbot with a new logo. You do not have to build it alone; the point is to start where the time is bleeding.",
+    q: "What AI should you start with in real estate?",
+    a: "The one workflow eating your week. For investors, that is usually deal sourcing and motivated-seller lead finding; for agents, lead follow-up. Get that running reliably before adding anything else. Pick tools that keep client and seller data private, and skip anything that is a chatbot with a new logo. You do not have to build it alone; the point is to start where the time is bleeding.",
   },
 ];
 
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "AI in Real Estate: What Agents Actually Use It For",
+  headline: "AI for Real Estate and Investors: What It Actually Does",
   description:
-    "A practical guide to AI in real estate for agents: what's real, what agents use it for, the Fair Housing and data risks, and where to start.",
+    "A practical guide to AI for real estate and real estate investors: sourcing off-market deals and motivated-seller leads, comps and underwriting, agent workflows, the Fair Housing and data risks, and where to start.",
   url: `${SITE_URL}/ai-in-real-estate`,
   author: { "@type": "Organization", name: "VERA Consulting", url: SITE_URL },
   publisher: { "@type": "Organization", name: "VERA Consulting", url: SITE_URL },
   datePublished: "2026-05-31",
   dateModified: "2026-05-31",
   inLanguage: "en-US",
-  about: ["AI in Real Estate", "Agentic AI", "Real Estate Technology", "Real Estate Agents"],
+  about: ["AI for Real Estate", "AI for Real Estate Investors", "Off-Market Real Estate Deals", "Real Estate Deal Sourcing", "Motivated Seller Leads"],
 };
 
 const faqJsonLd = buildFaqJsonLd(FAQ);
@@ -144,16 +148,17 @@ export default function AiInRealEstatePage() {
                 </span>
               </h1>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[600px] mb-10">
-                What&rsquo;s actually changing for agents, what&rsquo;s hype,
-                and where AI earns its place in your business. Written plain,
-                for people who close deals, not people who write code.
+                What&rsquo;s actually changing for investors and agents,
+                what&rsquo;s hype, and where AI earns its place, from sourcing
+                off-market deals to running the numbers. Written plain, for
+                people who close deals, not people who write code.
               </p>
 
               {/* TOC strip, section nav mirroring the OurStrategy pattern */}
               <div className="pt-6 border-t border-[var(--color-hairline)] grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-[560px]">
                 {[
                   { num: "01", label: "The shift" },
-                  { num: "02", label: "What it does" },
+                  { num: "02", label: "Finding deals" },
                   { num: "03", label: "Agentic AI" },
                   { num: "04", label: "The guardrails" },
                   { num: "05", label: "Where to start" },
@@ -222,8 +227,8 @@ export default function AiInRealEstatePage() {
                     The shift that matters is quieter. Software that takes a
                     goal and runs the steps on its own, an agent, not a chatbot
                     you babysit. That is the difference between a tool you have
-                    to remember to use and a system that just runs while you are
-                    out showing homes.
+                    to remember to use and a system that finds off-market deals
+                    and works your leads while you are out closing.
                   </p>
                 </div>
               </div>
@@ -249,8 +254,9 @@ export default function AiInRealEstatePage() {
                 <SectionLabel>02 / In practice</SectionLabel>
                 <SectionHeadline>Six places it earns its keep.</SectionHeadline>
                 <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[720px] mb-2">
-                  Every one of these is the work that keeps you from the work
-                  you got into real estate for.
+                  From finding off-market deals to clearing the busywork. Every
+                  one of these either puts a deal in front of you or hands back
+                  the hours you got into real estate to spend on closing.
                 </p>
                 {/* Client component: capability cards with icons */}
                 <CapabilityCards />
@@ -281,16 +287,18 @@ export default function AiInRealEstatePage() {
                 <div className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[720px]">
                   <p>
                     A chatbot waits for a prompt and forgets the goal between
-                    messages. Agentic AI takes a goal, breaks it into steps,
-                    uses your tools, and follows through, checking with you
-                    before anything high-stakes.
+                    messages. Agentic AI takes a goal, like &ldquo;find me
+                    motivated sellers in this zip and underwrite the best
+                    ones,&rdquo; breaks it into steps, uses your tools, and
+                    follows through, checking with you before anything
+                    high-stakes.
                   </p>
                 </div>
                 {/* Client component: the animated flow diagram */}
                 <AgentFlowDiagram />
                 <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[720px] mt-6">
-                  For an agent, that is the difference between another app to
-                  open and a piece of your week handed back.
+                  That is the difference between another app to open and a
+                  pipeline of deals working itself while you focus on closing.
                 </p>
               </div>
             </div>
@@ -325,8 +333,8 @@ export default function AiInRealEstatePage() {
                         v: "AI-written listing copy can wander into language that violates Fair Housing. A human signs off on every word.",
                       },
                       {
-                        k: "Client data",
-                        v: "Your clients trust you with private information. It should never get dumped into a random tool's servers. The systems worth using keep it where it belongs.",
+                        k: "Client and seller data",
+                        v: "Clients and sellers trust you with private information. It should never get dumped into a random tool's servers. The systems worth using keep it where it belongs.",
                       },
                       {
                         k: "Disclosures and compliance",
@@ -334,7 +342,7 @@ export default function AiInRealEstatePage() {
                       },
                       {
                         k: "The trust itself",
-                        v: "The relationship is the business. AI handles the busywork around it, never the human part clients pay you for.",
+                        v: "The relationship is the business. AI handles the busywork around it, never the human part clients and sellers deal with you for.",
                       },
                     ].map(({ k, v }, i) => (
                       <li
@@ -396,14 +404,15 @@ export default function AiInRealEstatePage() {
                 <div className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] flex flex-col gap-4 max-w-[720px]">
                   <p>
                     You do not need ten tools. You need the one workflow that is
-                    costing you most, usually lead follow-up, running reliably,
-                    then the next.
+                    costing you most, usually deal sourcing or lead follow-up,
+                    running reliably, then the next.
                   </p>
                   <p>
-                    Pick tools that keep client data private. Skip anything that
-                    is a chatbot with a new logo. And you do not have to build
-                    it alone: we either build it with you or coach you to run it
-                    yourself, whichever gets you there faster.
+                    Pick tools that keep client and seller data private. Skip
+                    anything that is a chatbot with a new logo. And you do not
+                    have to build it alone. VERA partners on your deals and puts
+                    the newest models to work inside your pipeline. We only make
+                    money when you close.
                   </p>
                 </div>
               </div>
@@ -428,20 +437,23 @@ export default function AiInRealEstatePage() {
               <div className="relative z-10">
                 <SectionLabel>06 / What&rsquo;s next</SectionLabel>
                 <SectionHeadline>
-                  The agents who adopt early get the edge.
+                  The ones who adopt early get the edge.
                 </SectionHeadline>
                 <div className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] flex flex-col gap-4 max-w-[720px]">
                   <p>
                     Near term, these agents get better at working across your
-                    whole stack, your CRM, your inbox, the MLS, with more
-                    autonomy and the same approval step before anything risky.
-                    This is not science fiction and it is not five years out. It
-                    is happening now.
+                    whole stack, your CRM, your inbox, the MLS, the off-market
+                    data, with more autonomy and the same approval step before
+                    anything risky. This is not science fiction and it is not
+                    five years out. It is happening now.
                   </p>
                   <p>
-                    The agents who put it to work this year will out-list and
-                    out-close the ones who wait. That is the whole opportunity,
-                    and the whole risk of sitting still.
+                    Here is the catch: the technology moves every week. A tool
+                    you buy or a course you take is behind the day it arrives.
+                    The ones who put it to work this year, and keep a partner at
+                    the frontier feeding what they find into deals, will source
+                    more and close more than the ones who wait. That is the
+                    whole opportunity, and the whole risk of sitting still.
                   </p>
                 </div>
               </div>
@@ -455,7 +467,7 @@ export default function AiInRealEstatePage() {
       <FaqBlock
         items={FAQ}
         eyebrow="The short answers"
-        heading="AI in real estate, in plain terms."
+        heading="AI for real estate and investors, in plain terms."
         bg="bg-[var(--color-surface)]"
       />
 
@@ -474,11 +486,12 @@ export default function AiInRealEstatePage() {
               Want to put it to work in your business?
             </h2>
             <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-prose">
-              We help agents find the one workflow worth starting with, then
-              build it with you or coach you to run it. Start with a call.
+              VERA partners on your deals, finds the off-market edge, and puts
+              the newest models to work in your pipeline. No retainer. We only
+              make money when you close. Start with a call.
             </p>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Book a call
+              Become a partner
             </Button>
           </div>
         </Container>

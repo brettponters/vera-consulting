@@ -2,7 +2,8 @@
  * Vertical landing pages.
  *
  * Each entry powers a /for/[slug] page and the homepage marquee link.
- * Slugs are immutable once shipped (URLs, sitemap, inbound links).
+ * Slugs are immutable once shipped (URLs, sitemap, inbound links). Old agent
+ * slugs are 301-redirected to these in next.config.ts.
  *
  * Voice rules:
  * - No em-dashes. Use commas, periods, line breaks.
@@ -18,7 +19,7 @@
  * - painPoints: 4-6 things that actually eat the week.
  * - whatChanges: 3-4 before/after vignettes.
  * - workflows: 6-8 cards. Specific, named, narrow.
- * - howWeWork: 2-3 paragraphs explaining the engagement.
+ * - howWeWork: 2-3 paragraphs explaining the partnership.
  * - whatThisIsNot: one sharp paragraph of refusal.
  * - anecdote: optional 3-part scenario block.
  * - faq: 4-6 of the questions buyers actually ask.
@@ -47,640 +48,592 @@ export interface Vertical {
 
 export const VERTICALS: Vertical[] = [
 {
-    slug: "listing-agents",
-    marqueeLabel: "Listing agents",
-    h1: "AI for Listing Agents.",
-    metaTitle: "AI for Listing Agents | VERA",
-    metaDescription:
-      "AI for listing agents who want to win more listings, launch faster, and keep sellers informed without burning Friday night on follow-up.",
-    intro:
-      "Winning the listing is only the start. The work that follows, the copy, the coordination, the seller updates, the showing feedback, the next FSBO outreach, is what decides whether you can carry twelve listings without dropping one.",
-    painPoints: [
-      "Writing listing descriptions for every property eats the evening before launch",
-      "CMA prep and pricing narratives for seller presentations take ninety minutes that could be a showing",
-      "Seller update calls pile up all week and the communication gaps show in the reviews",
-      "Showing feedback arrives in drips across ShowingTime, text, and email and never gets synthesized before Sunday",
-      "FSBO and expired outreach sequences are always almost built but never actually running",
-      "Coordinating photographers, stagers, and sign installers is a scheduling job that falls entirely on you",
-    ],
-    workflows: [
-      {
-        title: "Listing description drafts",
-        body: "Property notes and MLS data in, a clean draft in your voice ready to edit in minutes. Output goes through your review before MLS input, keeping Fair Housing compliance where it belongs: with you.",
-      },
-      {
-        title: "CMA narrative and pricing story",
-        body: "Comparable sales, list-to-sale ratios, and days-on-market pulled into a seller-ready pricing narrative before the appointment. The conversation leads with evidence, not instinct.",
-      },
-      {
-        title: "Weekly seller reports",
-        body: "Showing traffic, online views, market context, and your commentary in a branded email that goes out every Monday morning. Sellers stop calling to ask what is happening.",
-      },
-      {
-        title: "Showing feedback synthesis",
-        body: "Feedback from ShowingTime, email, and text collapsed into a single summary you can forward to the seller or use in a price-reduction conversation. Done by Thursday, not Sunday.",
-      },
-      {
-        title: "FSBO and expired outreach sequences",
-        body: "Multi-touch sequences in your voice, timed and personalized to the property and the owner's situation. Built once, running against your farm list every week.",
-      },
-      {
-        title: "Listing appointment packet",
-        body: "Your marketing plan, pricing story, bio, and testimonials assembled into a polished leave-behind specific to the address and the seller's situation. No more printing the generic version.",
-      },
-      {
-        title: "Launch coordination checklist",
-        body: "Photographer, stager, sign installer, MLS input, Zillow syndication, social media, and showing availability in one tracked workflow per listing. Nothing falls through.",
-      },
-      {
-        title: "Follow-up and referral engine",
-        body: "Post-closing follow-up sequence and anniversary touches drafted in your voice and queued in Follow Up Boss or kvCORE. The referral conversation starts before they forget your name.",
-      },
-    ],
-    faq: [
-      {
-        q: "How can AI help listing agents?",
-        a: "The highest-impact uses are the ones that recur on every listing: description drafts, CMA narratives, seller update emails, and showing feedback summaries. Each one takes thirty to ninety minutes by hand. With a trained workflow, each one takes five to fifteen minutes to review and approve. Across a twelve-listing inventory that is a real workweek recovered.",
-      },
-      {
-        q: "Does AI-drafted listing copy create Fair Housing risk?",
-        a: "Only if you skip the review step, which you should never skip regardless of how the copy was produced. We train output on language you have already approved, and the final copy goes through you before MLS submission. The agent is the publisher of record. AI speeds up the draft. The compliance review stays human.",
-      },
-      {
-        q: "Is my client data and MLS data kept private?",
-        a: "Everything runs in your tenant with zero-retention configuration. MLS data, seller contact details, and property information do not train public models and do not leave a shared environment. We work under NDA and treat the data as if the brokerage compliance officer is reading the audit log.",
-      },
-      {
-        q: "Do I own the workflows and content, or is it locked into VERA?",
-        a: "You own everything. The sequences live in your Follow Up Boss, kvCORE, or BoldTrail account. The templates live in your Google Docs or Notion. The voice model is trained on your writing. At the end of the engagement you have a documented operating system your team or TC can run without us.",
-      },
-      {
-        q: "What does the engagement actually look like?",
-        a: "Weekly working sessions on your real listings and your real farm. Not a course, not a sandbox. We build the description workflow on the listing you are launching next week. Seller reports go live on your current inventory within the first three weeks. Eight to twelve weeks and you are running it without us.",
-      },
-      {
-        q: "What if I have a transaction coordinator or buyer's agent on my team?",
-        a: "The workflows integrate naturally. Your TC gets the launch checklist. Your buyer's agent can use a version of the outreach sequences for sphere follow-up. We document everything so the whole team can run it, not just you.",
-      },
-    ],
-    openingEssay: [
-      "Most listing agents we talk to are running a production machine that depends on one person holding every thread. The photographer is scheduled, the stager has a walk-through, ShowingTime is live, the seller wants an update, and there are three expired listings in the farm who have not heard from you in two weeks. None of that is slow work. All of it is work that only you can drop.",
-      "The honest picture of where AI fits in a listing practice is not glamorous. It is not some breakthrough in property valuation or a replacement for your market knowledge. It is the part of the week that lives between appointments. The listing description draft that takes you thirty-five minutes to write because you want it to be right. The CMA narrative for the seller presentation that takes ninety minutes to pull together. The showing feedback summary you mean to send by Friday but it is now Sunday. The expired outreach sequence that would absolutely work if you ever had two hours to build it.",
-      "Listing descriptions deserve a specific word. AI-drafted copy for a listing requires the same review you would give any other marketing piece, because generic language about 'spacious,' 'light-filled,' and 'perfect for entertaining' is exactly what Fair Housing attorneys read looking for substituted code. VERA trains on descriptions you have already approved and reviewed, produces output you edit before it publishes, and flags language patterns worth scrutiny. The draft is faster. The liability discipline stays with you. That is the right division of labor.",
-      "The agents who close more listings in the next two years are not the ones with the most charm or the biggest ad spend. They are the ones who can service the listings they already have at a level that generates referrals, respond to FSBOs and expireds before a competitor does, and show up to every listing appointment with a pricing narrative and a marketing plan that does not look like every other agent's packet. AI is how you do all three without adding hours to the week.",
-      "There is also a seller communication problem worth naming. Sellers are anxious. The market moved while their home has been listed. Showing traffic dropped. They are reading Zillow every morning and wondering why you have not called. Most listing agents are not bad at client communication. They are busy. The agent who sends a weekly showing traffic summary and a market-context note every Monday at 9 AM, without writing it every Monday at 9 AM, is the agent whose sellers stay calm and whose reviews mention responsiveness. That is a solvable problem.",
-    ],
-    whatChanges: [
-      {
-        heading: "The day before launch",
-        body: "You used to spend the evening writing the listing description, pulling comps for the MLS notes, and building the social post from scratch. Now you open a draft at 6:30 PM that has the copy, the key features pulled from your showing notes, and the Instagram caption ready to edit. You are done by 7:15.",
-      },
-      {
-        heading: "The seller update call you were dreading",
-        body: "Showing traffic is down. The seller is reading Zillow at 11 PM and your voicemail is full. Instead of a reactive call, she already has your Monday morning email: showing count, feedback summary, active comparable movement, and your read on what it means. The call becomes a strategy conversation instead of damage control.",
-      },
-      {
-        heading: "The listing appointment on Thursday",
-        body: "You used to arrive with the same printed CMA packet every other agent brings. Now you arrive with a pricing narrative tied to this specific property and this specific seller's timeline, a marketing plan with the actual channels and approximate timelines named, and a leave-behind that has your recent sold data for this zip code. The appointment goes differently.",
-      },
-      {
-        heading: "The expired follow-up that finally runs",
-        body: "There are fourteen expireds in your farm from the last six months. You know them by address. You have never reached all of them in a week. The sequence is now drafted, personalized to their original list price and days on market, and running in Follow Up Boss. Three replied this month.",
-      },
-      {
-        heading: "The Sunday night catch-up that disappeared",
-        body: "Showing feedback from the week was scattered across ShowingTime notifications, two text messages, and a voicemail. Summarizing it for the seller used to be Sunday evening. Now it is Thursday afternoon, in your inbox as a draft, ready to send or forward with one edit.",
-      },
-    ],
-    howWeWork: [
-      "We start with the workflow that runs on every listing, which for most listing agents is the description draft and the weekly seller report. We build both on a listing you have active right now, not a hypothetical property. By the end of week two you have seen the output on real copy and real seller data.",
-      "Weeks three through six add the CMA narrative, the showing feedback synthesis, and the FSBO and expired outreach sequences. We wire these into the tools you already use. Follow Up Boss, kvCORE, BoldTrail, ShowingTime, your MLS, Canva, BombBomb. We do not ask you to migrate to a new platform. The AI sits in the gaps in your current stack.",
-      "By week ten you have a documented operating system your transaction coordinator or buyers agent can run. The workflows live in your accounts. The voice model is trained on your writing. At the end of the engagement you are running it and we are not the bottleneck.",
-    ],
-    whatThisIsNot: "This is not an IDX lead generation platform. We are not running ads for you. We are not replacing your MLS or your CRM. We do not write offers, negotiate contracts, or provide legal or compliance advice. If you want a virtual assistant service that manages your calendar and answers calls, this is not it. What we build is the operating layer for the listing side of your business, the copy, the communication, the outreach, the prep, so the agent in front of the seller is the best version of you.",
-    primaryKeyword: "ai for listing agents",
-    secondaryKeywords: [
-      "ai listing description writer for realtors",
-      "listing agent automation",
-      "seller update email automation real estate",
-      "cma narrative ai real estate",
-      "fsbo expired outreach ai",
-      "showing feedback summary tool",
-      "listing agent workflow tools",
-      "real estate listing marketing ai",
-    ],
+  "slug": "wholesalers",
+  "marqueeLabel": "Wholesalers",
+  "h1": "AI for Wholesalers.",
+  "metaTitle": "AI for Wholesalers | VERA",
+  "metaDescription": "AI for wholesalers that finds motivated seller leads and off-market deals, scores lists, drafts outreach in your name, and prices ARV fast. Partner, not a tool.",
+  "intro": "Wholesaling is a sourcing game. VERA finds the motivated sellers and off-market deals other wholesalers never see, scores the list, and gets your outreach out before the competition dials.",
+  "painPoints": [
+    "Your list is the same list every other wholesaler in the market bought, and you are all door-knocking the same tired absentee owners",
+    "Skip tracing and scoring ten thousand records by hand means most of the list never gets worked, and the good leads age out before you reach them",
+    "Cold outreach goes out as a generic blast, so motivated sellers tunnel right past it and your reply rate stays in the basement",
+    "A lead finally calls back and you are guessing at ARV and repair costs on the phone, then watching the spread vanish when a real comp shows up",
+    "Your cash buyer list is thin and stale, so you lock a contract and scramble to assign it before the inspection period burns down",
+    "Dead leads pile up in the CRM with no follow-up sequence, and the seller who was not ready in March sells to someone else in July"
+  ],
+  "workflows": [
+    {
+      "title": "Off-market lead sourcing",
+      "body": "We find motivated sellers across the data most wholesalers never combine: absentee owners, high equity, pre-foreclosure, probate, tired landlords, code violations, long ownership. The result is a list specific to your market and your criteria, not a generic county pull everyone else already has."
+    },
+    {
+      "title": "Motivated-seller scoring",
+      "body": "Every record on the list gets ranked by likelihood to sell, blending equity, distress signals, ownership length, and life events into one score. You work the top of the list first and stop wasting calls on owners who will never deal."
+    },
+    {
+      "title": "Skip trace and outreach in your name",
+      "body": "We skip trace the scored list and draft a first touch written to each property and owner, sent across call, text, and mail in your name. Ten thousand cold records become a few hundred warm, personalized outreaches in a day, not a month."
+    },
+    {
+      "title": "ARV and rehab modeling",
+      "body": "Address in, numbers out: pulled comps, ARV, a repair estimate by scope, and the max allowable offer for your spread. Fast enough to price a deal while the seller is still on the phone, accurate enough that the number holds at closing."
+    },
+    {
+      "title": "Cash buyer matching",
+      "body": "Your buyer list mapped to each deal the moment it is under contract. We match by box, price range, area, and buy history, then route the property to the buyers most likely to take it, so the assignment closes inside the inspection window."
+    },
+    {
+      "title": "Cold lead reactivation",
+      "body": "The sellers who said not yet are not dead, they are early. We surface re-engagement timing across your old lists and CRM and draft follow-up that references their specific property, so the owner who passed in spring hears from you again right when they are ready."
+    },
+    {
+      "title": "Comp and offer analysis",
+      "body": "Two or three deals side by side on the numbers that decide which one you chase: spread, ARV confidence, repair risk, days to assign, and a plain-language read on which one is the cleaner contract."
+    },
+    {
+      "title": "Market and neighborhood reads",
+      "body": "Where the motivated-seller density is rising, which zips your cash buyers are hungry for right now, and where spreads are widening before the rest of the market notices. The edge is knowing where to point the list next month, not last month."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How does the deal-source fee work? What does it cost to start?",
+      "a": "There is no cost to start: no retainer, no hourly, no fee to try it. VERA makes money only when you assign a contract and get paid. If a deal we sourced and scored closes, we share in your fee. If nothing closes, you owe nothing."
+    },
+    {
+      "q": "Where do the leads come from, and how are they different from a list service?",
+      "a": "We combine the data most wholesalers never put together: absentee owners, high equity, pre-foreclosure, probate, tired landlords, code violations, long ownership. Then we score every record by real motivation signals so you call the top doors first. A raw county pull is the same data every wholesaler in your market already bought; this is a list built to your market and your criteria."
+    },
+    {
+      "q": "Is my territory exclusive, or are you working the same deals with other wholesalers nearby?",
+      "a": "Talk to us about your market before you assume the worst. We will be straight with you about how we handle overlap in your area, because sending the same scored lead to competing partners would undercut the close rate we both get paid on. Our incentive is your contract closing, not flooding a zip code."
+    },
+    {
+      "q": "What happens if no deal closes? Am I still on the hook for anything?",
+      "a": "Nothing. The arrangement is performance-based: if you do not assign a contract, we do not get paid. No retainer, no monthly bill, no minimums. We only win when you close, which is why we will not waste your time with marginal leads or lists already worked to death."
+    },
+    {
+      "q": "Do I own the leads, the data, and the seller relationships, or do you?",
+      "a": "You do. The outreach goes out in your name, the seller who calls back is calling you, and the relationship is yours. We put the scored lists, the personalized first touch, and the deal math into your pipeline; the contacts and the contracts stay with your business."
+    }
+  ],
+  "openingEssay": [
+    "Wholesaling lives and dies on one number: how many real off-market leads you can put in front of a motivated seller before the next investor does. The contract, the assignment, the fee, none of it happens without deal flow at the top. Most wholesalers spend their week fighting that top of the funnel by hand, and it shows in the close rate.",
+    "The list is the problem, then it is the speed, then it is the pricing. A raw pull from a list service is ten thousand absentee owners with no signal on who is actually ready to sell. Skip tracing, scoring, and personalizing outreach across that volume is days of work, so most of it never gets done. The leads that do get worked get a generic blast that motivated sellers ignore. Then a deal comes back and you guess at ARV and repairs, and the spread you thought you had disappears at the closing table.",
+    "A tool will not fix this. The list services and dialers you already pay for are the same ones every wholesaler in your market pays for, so you are all working the same data the same way. A consultant will not fix it either, because by the time anyone writes down a playbook, the models that source and score have already moved. The thing that compounds is a partner who stays at the frontier of what AI can do and points it straight at your deal flow, every week, as the technology changes underneath it.",
+    "That is what VERA is. We run the smartest models in the world against the boring, brutal work that decides whether you close: finding the sellers with real motivation, scoring the list so you call the right doors first, writing outreach that sounds like you sent it, and pricing the deal fast enough to lock it before someone else does. We make money when you assign the contract, not before."
+  ],
+  "whatChanges": [
+    {
+      "heading": "The list that calls the right doors first",
+      "body": "You used to work a ten thousand record pull top to bottom and burn a week on doors that were never going to sell. Now the list comes back scored by real motivation signals, equity, distress, ownership length, life events, and you call the top two hundred first. Same list, the deals surface in days instead of months."
+    },
+    {
+      "heading": "Outreach that does not read like a blast",
+      "body": "A pull of absentee owners used to get one generic text and a 1 percent reply rate. Now each top lead gets a first touch written to that property and that owner, sent in your name across the channels you already use. The sellers who were ignoring you start replying because it no longer sounds like the seventh wholesaler this week."
+    },
+    {
+      "heading": "ARV and repairs before you hang up",
+      "body": "A seller calls back at 4 PM and you used to stall, run comps that night, and call back tomorrow when they had already talked to two other buyers. Now the comps, the ARV, and a repair estimate are in front of you while you are still on the phone. You make the offer live and lock the contract that afternoon."
+    },
+    {
+      "heading": "The assignment that is already lined up",
+      "body": "You used to lock a deal and then start texting buyers, sweating the inspection clock. Now your cash buyer list is matched to the deal the moment it is under contract, the right buyers get the property mapped to their box, and the assignment closes inside the window instead of at the edge of it."
+    }
+  ],
+  "howWeWork": [
+    "VERA is a partnership, not a purchase. There is no retainer, no hourly, no fee to try it. We bring the deal flow and the edge, we put the intelligence into your sourcing, and we make money only when you assign a contract and get paid. If you do not close, neither do we. That is the whole arrangement.",
+    "We do this because the technology will not sit still. The models that source, score, and price are better every week, and a tool you bought last quarter or a playbook a consultant handed you is already behind. We stay at the frontier full time and keep pointing whatever is newest and sharpest straight at your deal flow, so the edge compounds instead of decaying.",
+    "Behind it is a small operations team running the smartest AI in the world against the unglamorous work that decides your fee. You do not manage software or learn a system. You get the scored lists, the outreach in your name, the deal math, and the buyer matches, and we are aligned with you on the only outcome that matters, which is the contract closing."
+  ],
+  "whatThisIsNot": "This is not a course, and there is nothing to learn before it works. It is not a list you buy once and burn through. It is not a consultant who hands you a playbook and invoices you whether or not a deal closes. It is not software you log into and run yourself. It is a performance-based partner that sources the deals, scores the leads, and prices the numbers, and gets paid only when you assign the contract.",
+  "anecdote": {
+    "setup": "A wholesaler in a competitive metro was buying the same absentee-owner list as every other investor in town and texting it with one generic blast. He was pulling maybe one contract a month and could not tell you why those sellers said yes when a hundred others ignored him.",
+    "turn": "We rescored his existing list against motivation signals he was not combining, equity, ownership length, code violations, and probate, then drafted a first touch written per property and sent in his name. The top two hundred leads went out warm in a day. ARV and repair numbers were ready on every callback, so he was making offers live instead of calling back the next morning.",
+    "line": "Same list he already owned. The deals were always in there. He just had not been calling the right doors first."
   },
-
-{
-    slug: "buyers-agents",
-    marqueeLabel: "Buyer's agents",
-    h1: "AI for Buyer's Agents.",
-    metaTitle: "AI for Buyer's Agents | VERA",
-    metaDescription:
-      "AI for buyer's agents who want to win more offers and lose fewer leads. Speed-to-lead, tour sheets, buyer education, and offer prep.",
-    intro:
-      "The lead that goes unanswered for two hours is already talking to someone else. AI closes that gap, writes the property summaries, builds the tour sheets, and keeps not-ready-yet buyers warm for months. You stay on the deals.",
-    openingEssay: [
-      "Buyer representation is a timing game at the top and a patience game at the bottom. At the top you have the active buyer who needs a showing scheduled today, a tour sheet by tomorrow, and an offer drafted before the weekend. At the bottom you have the buyer who is six months out, still deciding on the neighborhood, still getting pre-approved, still not ready. Both buyers need you. Only one of them urgently. The week breaks when you try to run both at the same cadence.",
-      "The speed-to-lead problem in buyer's agent work is real and it is not about being lazy. It is about the math. You are on a listing tour when a Zillow Premier Agent lead comes in at 11:15 on a Tuesday. By the time you are back in the car, it is 12:45. The national average response time for real estate leads is somewhere above an hour. The conversion advantage for agents who respond in five minutes versus thirty is documented everywhere. The gap is not effort, it is capacity. You are not sitting at a desk with an inbox.",
-      "Matching buyers to inventory is the other side of the coin. Most buyer's agents we talk to carry twenty to thirty active searches at any given point. Some of those buyers have been in your database since February. They want a three-bed in a specific school zone, under $620K, and they want to know when something hits before the Zillow alert. That matchmaking work, pulling new MLS listings each morning, running them against the buyer's criteria, and writing a property summary the buyer can actually read, is forty-five minutes to an hour of daily work that compounds across a roster. AI does that between 6:00 and 7:00 AM so when you open your coffee you are sending matches, not building them.",
-      "The offer-writing season is where the real pressure lives. You have a buyer who wants to move. The market is moving. The listing went active on Thursday. You need a comparative market analysis pulled, a net sheet drafted, the offer terms researched, and a decision framework ready for your buyer's call at 5:30 PM. That sequence used to take the whole afternoon. With the right workflows in Follow Up Boss and your MLS, it takes ninety minutes and you are still in front of it before dinner.",
-      "The buyers who are not ready yet are the ones most agents handle worst, not because they do not care but because the drip infrastructure is built for volume and not for actual follow-through. A buyer who said six months ago that they need a good school and a garage gets a market update email the same week as every other person in the database. What they should be getting is a message that says a house with a rated elementary school and a two-car garage just came on at $585K, and here is why the seller's days on market might mean you have a negotiating window. That is the message that converts. AI writes it. You send it.",
-    ],
-    painPoints: [
-      "Leads from Zillow Premier Agent and kvCORE go cold in under an hour when you are in a showing",
-      "Matching twenty-plus active buyers to new MLS inventory every morning takes the first hour of every day",
-      "Tour sheets and property summaries are built by hand before every showing appointment",
-      "Not-ready-yet buyers get generic drip and fall out of the pipeline before they are ready to act",
-      "Offer-writing prep, pulling comps, drafting a net sheet, researching the seller, takes most of the afternoon before a competitive deadline",
-      "Post-close follow-up and referral asks get skipped because there is always an active deal that is louder",
-    ],
-    workflows: [
-      {
-        title: "Speed-to-lead response",
-        body: "New lead hits from Zillow Premier Agent, Sierra Interactive, or kvCORE. An AI-drafted initial message goes out in under two minutes in your voice with a specific property reference. You see the hot reply. Silence gets a follow-up the next morning.",
-      },
-      {
-        title: "Daily buyer-to-inventory matching",
-        body: "New MLS actives pulled each morning against every buyer's saved criteria. Property summaries written in plain language with the details that matter for that buyer's specific situation. In your Follow Up Boss inbox by 6:30 AM, ready to send.",
-      },
-      {
-        title: "Tour sheet builder",
-        body: "Showing appointments confirmed. Property notes, neighborhood comps, school ratings, HOA details, and the three questions to ask during the walkthrough pulled into a single PDF per property. Ready before you leave the driveway.",
-      },
-      {
-        title: "Offer prep package",
-        body: "Listing history, recent solds within a half-mile, days on market, seller disclosure notes, and a draft net sheet organized before the 5:30 PM buyer call. The decision conversation starts with data, not with you scrambling to pull it.",
-      },
-      {
-        title: "Not-ready-yet buyer nurture",
-        body: "Buyers who are six to twelve months out get specific, personalized market updates in your voice when something relevant hits. Not a generic newsletter. A message that says this property matches three of your four criteria and here is why this week matters.",
-      },
-      {
-        title: "Buyer education sequence",
-        body: "Pre-approval, inspection, appraisal, title, closing costs, all of it explained in a sequence timed to where the buyer is in the process. Written in your voice. Reduces the three AM anxiety text and the repeat questions that eat your Thursday afternoon.",
-      },
-      {
-        title: "Lender and title follow-up",
-        body: "Conditions outstanding, appraisal ordered, clear to close pending, tracked and nudged without you being the relay. DocuSign links chased, Dotloop packages organized, the closing coordinator cc'd on the right thread at the right time.",
-      },
-      {
-        title: "Post-close and referral cadence",
-        body: "Thirty-day, ninety-day, and one-year check-ins drafted in your voice and scheduled before the keys hand off. The referral ask goes out at the moment the client is most likely to give you one, not when you remember to send it.",
-      },
-    ],
-    faq: [
-      {
-        q: "How can AI help buyer's agents specifically?",
-        a: "The highest-value applications are speed-to-lead response, daily MLS matching and property summaries, tour sheet preparation, and offer-writing prep. Those four workflows cover the parts of the week where buyer's agents lose the most time and miss the most conversions. AI does not replace your judgment on the offer strategy or your relationship with the buyer. It does the structural work that eats the hours around those things.",
-      },
-      {
-        q: "Can AI actually respond to leads fast enough to make a difference?",
-        a: "Yes. A workflow wired to your CRM, whether that is Follow Up Boss, kvCORE, or Sierra Interactive, can get a personalized first message out in under two minutes. The message references the specific property the lead inquired about and is drafted in your voice. You see the hot reply and handle the conversation. The leads that go cold are the ones nobody answers in the first thirty minutes. That window is now covered.",
-      },
-      {
-        q: "What happens to client data when AI is involved?",
-        a: "We work inside your tenant with zero-retention configurations on the underlying models. Buyer criteria, contact information, and transaction details do not train public AI systems. We sign NDAs and the data architecture is designed to match what a real estate brokerage would need to show a compliance review. If your brokerage has a specific data handling policy, we configure to it.",
-      },
-      {
-        q: "What does an engagement cost and who owns the workflows?",
-        a: "Engagements are monthly retainers scoped on the discovery call. You own every workflow we build. The automations live in your CRM, your MLS connection, and your existing tools. If you stop working with us, the system keeps running. We document everything so you or a transaction coordinator can maintain it without us.",
-      },
-      {
-        q: "What if I am already using BombBomb video or a drip campaign in kvCORE?",
-        a: "We integrate with what you have. BombBomb stays for the relationship touches that benefit from video. The AI layer handles the written follow-up, the property matching, and the off-hours response. The drip campaigns in kvCORE get replaced or augmented with personalized triggers instead of time-based generic sequences. The tool stays. The logic gets smarter.",
-      },
-      {
-        q: "Does this work for a solo buyer's agent or only a team?",
-        a: "It works for both, but solo agents usually see the fastest relief because the cap on their business is entirely their personal time. The workflows that cover speed-to-lead and daily MLS matching tend to pay back inside the first month on time savings alone. Teams get additional leverage when the buyer intake, education sequences, and post-close cadence are standardized across agents.",
-      },
-    ],
-    whatChanges: [
-      {
-        heading: "Tuesday at 11:15 AM",
-        body: "A new Zillow Premier Agent lead comes in while you are walking through a property with another buyer. By 11:17, the lead has a message from you referencing the specific listing they asked about and asking when they want to see it. You read the reply at 12:45. The lead did not go to voicemail.",
-      },
-      {
-        heading: "Wednesday morning at 6:30",
-        body: "You open Follow Up Boss and there are eleven buyer-match messages ready to send. Each one names a specific new listing against that buyer's saved criteria, with a two-paragraph property summary and a note about why this one fits better or worse than the last thing you showed them. You review, edit two of them, and send all eleven before your first coffee is cold.",
-      },
-      {
-        heading: "Thursday before the offer deadline",
-        body: "Your buyer wants to move on the listing that went active Monday. You open the offer prep package at 3:00 PM. Comps from the last ninety days within a half-mile. Seller's original list price, price reductions, days on market. A draft net sheet. The questions worth asking your buyer at 5:30. You are ready. The offer goes in by 7:00 PM.",
-      },
-      {
-        heading: "The buyer from February",
-        body: "She said she was not ready until fall. Generic drip would have kept her on a list she ignores. Instead, when a three-bed with a rated school comes on in her target zip at $608K on a slow week, she gets a message in your voice explaining why this week might be the one to move. She calls you. You have a showing scheduled before noon.",
-      },
-      {
-        heading: "Thirty days after closing",
-        body: "The Garcias moved in three weeks ago. You have not thought about a follow-up yet because you have two offers pending and a new buyer consultation tomorrow. At 9:00 AM the thirty-day check-in sends itself. They reply with three names of people from their office who are looking. You did not remember to ask. The system did.",
-      },
-    ],
-    howWeWork: [
-      "We start with the workflow that is bleeding the most time, which for most buyer's agents is either speed-to-lead coverage or daily MLS matching. We build the first workflow against your actual CRM, your actual incoming leads, and your actual active buyers. Not a demo environment. The first week you see it run on real leads.",
-      "By week four you have the lead response and the morning match reports running. Weeks five through eight wire the tour sheet builder and the offer prep package. The buyer education sequence and the post-close cadence ship in weeks nine through twelve. You leave the engagement with a documented operating system your TC or buyer's specialist can run.",
-      "Tooling stays where it is. Follow Up Boss, kvCORE, BoldTrail, Sierra Interactive, your MLS connection, DocuSign, Dotloop. We integrate against what you already pay for. We do not ask you to migrate your database or learn a new platform. The AI layer wraps around the tools your brokerage already supports.",
-    ],
-    whatThisIsNot:
-      "This is not a lead generation service. We do not buy you leads. We do not run your ads. We do not coach you on negotiation or help you script a listing presentation. If you want a dialer, an ISA, or a coaching program, this is not it. What we build is the operational layer that stops the leads you are already paying for from going cold, and stops the hours between showings from being eaten by work a well-designed system can do for you.",
-    primaryKeyword: "ai for buyer's agents",
-    secondaryKeywords: [
-      "ai tools for buyer's agents",
-      "real estate lead follow-up automation",
-      "mls buyer matching ai",
-      "buyer agent tour sheet automation",
-      "real estate offer prep ai",
-      "buyer nurture sequence real estate",
-      "follow up boss ai integration",
-      "kvcore ai workflow buyer agent",
-    ],
-  },
-
-{
-    slug: "luxury-agents",
-    marqueeLabel: "Luxury agents",
-    h1: "AI for Luxury Real Estate Agents.",
-    metaTitle: "AI for Luxury Real Estate Agents | VERA",
-    metaDescription:
-      "AI for luxury real estate agents who protect client relationships while running a high-touch practice. Back office, not a client-facing replacement.",
-    intro:
-      "Your clients expect white-glove service and absolute discretion. AI is the back office that makes both possible at the cadence your portfolio demands, without turning you into an administrator.",
-    openingEssay: [
-      "Luxury real estate is a relationship business that runs on trust, timing, and a reputation you have spent years earning. The clients you serve are sophisticated. They have options. They chose you because you know the market, you know the right people, and you handle everything without making them feel like a transaction. None of that changes when you add AI to the back office. What changes is how much of your week is left over to be the agent they hired.",
-      "The structural problem in a high-end residential practice is that the service standard is higher, but the operational support is often the same as any other agent. You are writing bespoke listing narratives for properties that deserve them. You are preparing market briefs sophisticated enough that a CEO will actually read them. You are coordinating private showings with discretion, managing a sphere of HNW contacts who expect personalized touchpoints, and following up after every interaction in a way that feels personal because it is. All of that done by hand, across a roster of active clients, is a week that disappears before Thursday.",
-      "Where AI fits in luxury is not where it fits in volume real estate. The pitch about automating client communication is the wrong framing here. Your clients are not getting a templated email sequence. AI is for the work they never see: the listing brief drafted before you present it, the comp analysis formatted to match the level of your buyer, the pre-showing memo so you walk in prepared, the sphere follow-up queued and personalized to each relationship, the property narrative polished before it goes to the marketing team.",
-      "The agents who win the next five years in luxury are not the ones who use AI to replace the white-glove experience. They are the ones who use it to extend their capacity without diluting it. The tenth sphere touchpoint of the week lands because there was infrastructure to support it. The listing narrative is better because you had the preparation time to edit it instead of writing it from scratch at midnight. The showing goes well because your prep doc was waiting for you at 7:30 AM.",
-      "The hard part is building the right system. A generic CRM workflow will not do it. ChatGPT with a prompt will not do it. The work is to take your specific practice, your sphere, your voice, your markets, and your workflow, and wire AI into the exact seams where it relieves pressure without touching the client relationship itself. That is what we build.",
-    ],
-    painPoints: [
-      "Listing narratives for high-end properties take hours to write well and every property deserves a different one",
-      "Sphere maintenance for HNW relationships slips when transactions get busy, and slippage costs referrals",
-      "Market and comp briefs for sophisticated buyers take research time that competes with showing schedules",
-      "Pre-showing prep is either rushed or nonexistent because the day filled up",
-      "Coordinating private showings, NDA exchanges, and discretion logistics is manual and scattered across email and text",
-      "Thought-leadership content and personal brand posts keep getting pushed because active listings come first",
-    ],
-    whatChanges: [
-      {
-        heading: "The listing narrative",
-        body: "New listing goes live Friday. You used to spend Wednesday evening writing the property story from scratch, pulling adjectives out of thin air at 10 PM. Now you open a draft at 8 AM Thursday that captures the architectural provenance, the lifestyle angle, and the neighborhood context, all in your voice. You spend an hour editing. The narrative goes to the marketing team by noon.",
-      },
-      {
-        heading: "The sphere touchpoint",
-        body: "There are fourteen people in your top-tier sphere who have not heard from you in six weeks because two listings consumed the month. On Sunday morning you review a queue of personalized touchpoint drafts, each one tied to something specific about that relationship, a market move they would care about, an off-market they might know someone for, a follow-up on the conversation you had in March. You approve, edit lightly, and send. Done before the weekend is over.",
-      },
-      {
-        heading: "The buyer brief",
-        body: "Sophisticated buyer flying in from New York for Tuesday showings. The comp analysis and neighborhood brief used to take a Sunday to assemble. Now you open a formatted brief Monday morning, review it for accuracy, add your own read on the one comp that needs context, and send it before lunch. The buyer arrives prepared. The Tuesday goes better.",
-      },
-      {
-        heading: "Pre-showing prep",
-        body: "Showing at a 12-million-dollar property at 11:00 AM. You used to walk in with notes in your head and hope nothing slipped. Now there is a one-page prep document on your phone at 10:15: property history, seller situation, the three questions the buyer asked last week, and one thing worth pointing out that is not on the listing sheet. The showing is sharper.",
-      },
-      {
-        heading: "The personal brand post",
-        body: "You have market opinions worth sharing and a following that has been quiet for two months. A transaction insight from the week becomes a polished LinkedIn post on Thursday morning, drafted from your notes in your voice, ready to publish with five minutes of editing. You do not have to choose between being present for clients and being visible in the market.",
-      },
-    ],
-    workflows: [
-      {
-        title: "Listing narrative drafts",
-        body: "Property details, architectural notes, and your past listing copy feed a draft narrative for each new listing. In your voice, specific to the property, ready to edit, not to write from scratch.",
-      },
-      {
-        title: "Sphere touchpoint queue",
-        body: "Your Follow Up Boss or kvCORE contacts, their history, and recent market activity feed a weekly queue of personalized outreach drafts. You review, approve, and send. The relationship stays warm without the Sunday morning scramble.",
-      },
-      {
-        title: "Buyer market and comp briefs",
-        body: "MLS data, recent sales, and neighborhood context into a formatted brief your most sophisticated buyers will read. Styled to match the level of the conversation.",
-      },
-      {
-        title: "Pre-showing prep documents",
-        body: "Property history, seller notes, buyer questions from the CRM, and one or two talking points assembled into a one-page brief the morning of the showing. Ready on your phone before you leave.",
-      },
-      {
-        title: "Private showing coordination",
-        body: "Scheduling, NDA logistics, and discretion notes organized in one thread. No more piecing together who confirmed what across three email chains and a text thread.",
-      },
-      {
-        title: "Thought-leadership content",
-        body: "Your market read, your recent transactions, and your opinions on what is moving drafted into LinkedIn posts, newsletter pieces, and event talking points. Voice-trained on your past writing so it reads like you, not like AI.",
-      },
-      {
-        title: "Referral source follow-up",
-        body: "Attorneys, financial advisors, concierge firms, and past clients who send referrals get consistent, personalized follow-up after every transaction close. The relationship that drives your next deal gets the attention it earns.",
-      },
-      {
-        title: "Listing presentation prep",
-        body: "Seller profile, property context, recent comps, and your positioning pulled into a presentation brief before the listing appointment. You walk in prepared to earn the listing, not to read slides.",
-      },
-    ],
-    faq: [
-      {
-        q: "How can AI help luxury real estate agents?",
-        a: "AI handles the back office, not the client relationship. Listing narratives, market briefs, showing prep, sphere touchpoints, and content all take preparation time that competes with your showing schedule. AI drafts the preparation work so you arrive ready, follow up consistently, and publish content you have been putting off, without delegating the judgment or the voice.",
-      },
-      {
-        q: "Does this make me sound like a robot to high-end clients?",
-        a: "Only if the voice training is skipped. We train models on your past listing copy, emails, and posts. The drafts land in your cadence and your specifics. You stay in the editing seat. Nothing goes to a client unreviewed. The agents we work with consistently say the communication feels more like them, not less, because the volume of thoughtful outreach actually increases.",
-      },
-      {
-        q: "My clients expect discretion. How do you handle confidentiality?",
-        a: "We work in your tenant with zero-retention configurations. Client data, property details, and relationship notes do not train public models. We sign NDAs and configure every workflow as if the data is under strict privacy rules, because in luxury real estate it is. No client information touches a shared environment.",
-      },
-      {
-        q: "What does an engagement cost and who owns the workflows?",
-        a: "Engagements are retainer-based, scoped on the discovery call. There are no per-seat surprises and no subscription that keeps running after we are done. Everything we build sits in your stack, in your Follow Up Boss or kvCORE account, in your Notion, in your email tool. You own it. If you end the engagement, the workflows keep working because they live in your tenant, not ours.",
-      },
-      {
-        q: "I already have a transaction coordinator. How does this fit?",
-        a: "AI and a TC solve different problems. Your TC handles the transaction pipeline. AI handles the relationship and marketing layer that happens before and after the transaction: sphere maintenance, content, listing narratives, comp briefs, showing prep. Most agents find the two complement each other well, and some TCs become the second pair of hands running the AI workflows.",
-      },
-      {
-        q: "Which CRMs and tools does this work with?",
-        a: "We integrate with Follow Up Boss, kvCORE, and most high-end CRM platforms. We work with the MLS export formats you already pull, DocuSign for transaction coordination, and your existing email and calendar stack. We do not ask you to migrate anything.",
-      },
-    ],
-    howWeWork: [
-      "Engagements start with a working session on your actual listings and your actual sphere, not a demo environment. We pick the workflow where you feel the most friction, which for most luxury agents is either listing narrative prep or sphere maintenance, and build it against your real data in the first two weeks.",
-      "The first four to six weeks typically ship a listing narrative workflow, a sphere touchpoint queue, and a buyer brief template. Weeks seven through twelve move into showing prep, content, and referral source follow-up, depending on what the practice needs. By week twelve you are running the system with your TC or assistant, and there is a documented playbook for them to maintain it without us.",
-      "Everything stays in your stack. Follow Up Boss or kvCORE for the sphere layer, your MLS access for comp briefs, your existing email client, Canva or your design workflow for listing marketing. We wire AI into the seams of what you already pay for. No new platform to learn, no migration to execute.",
-    ],
-    whatThisIsNot: "This is not a client communication bot and it is not a replacement for the white-glove experience your clients are paying for. We do not send emails on your behalf without your review. We do not auto-respond to HNW clients. We do not run your showing schedule or your transaction pipeline. If you want a chatbot that talks to prospects on your website, that is a different product and a different conversation. What we build is the preparation and relationship infrastructure that lets you keep delivering the level of service you are known for, at a volume that would otherwise require a full team behind you.",
-    primaryKeyword: "ai for luxury real estate agents",
-    secondaryKeywords: [
-      "luxury real estate agent ai tools",
-      "ai listing narrative real estate",
-      "high-end real estate agent automation",
-      "sphere of influence ai real estate",
-      "luxury agent market brief ai",
-      "hnw client relationship management ai",
-      "real estate personal brand ai content",
-      "luxury real estate showing prep ai",
-    ],
-  },
-
-{
-    slug: "commercial-agents",
-    marqueeLabel: "Commercial agents",
-    h1: "AI for Commercial Real Estate Agents.",
-    metaTitle: "AI for Commercial Real Estate Agents | VERA",
-    metaDescription:
-      "AI for commercial real estate agents who want faster deal analysis, deeper prospect research, and pipelines that actually close. Built for CRE.",
-    intro:
-      "Commercial real estate runs on analysis, research, and long-cycle nurture. AI compresses the prep, drafts the documents, and keeps every prospect warm while you are closing the deal in front of you.",
-    openingEssay: [
-      "The CRE week has a structural problem. The work that wins deals, tenant research, comp analysis, cap rate modeling, submarket reports, takes the same hours as the deals themselves. By the time you have analyzed the rent roll on the industrial flex you are trying to sell and drafted the offering memorandum, the three warm prospects you should have called on Tuesday are cold. The math does not improve by working later. It improves by changing which parts of the prep you do by hand.",
-      "Most of what a commercial agent does before a pitch is research and synthesis. CoStar pull, LoopNet cross-reference, Crexi comp check, Excel model for the NOI summary, draft of the LOI, market narrative for the submarket. A good analyst can do all of that in four hours for a single deal. An experienced broker does it in two. With a well-built AI workflow, the first pass of every piece of that is on your screen in thirty minutes and you spend the next hour making it sharp. The strategic calls, the relationship calls, the calls that move a deal, are what fill the rest of the day.",
-      "The pipeline problem is the one most CRE brokers feel the most and fix the least. Commercial sales cycles run six to eighteen months. A prospect you qualify in January may not be ready to transact until Q3. Staying present across a sixty-name pipeline without spamming and without going silent is the craft. Most brokers do it on instinct, which means the ones who got a call this week stayed warm and the twenty who did not are quietly moving toward a competitor. AI makes it possible to run a disciplined outreach cadence across every name in the pipeline without spending the morning writing emails.",
-      "The document problem is quieter but it eats real hours. Offering memorandums, LOIs, proposals, market reports. These are documents that need to be specific, accurate, and well-written. They also follow predictable structures and are built from information you already have. The broker who can turn a full OM around in a day instead of three days has a real competitive edge on deals where the seller wants to move fast. The broker who consistently delivers submarket reports that read like they were written by a research analyst, not pulled from a CoStar PDF, is the one who gets called first on off-market listings.",
-      "The honest version of AI for commercial real estate is not that it replaces the judgment. Cap rate interpretation, reading a market cycle, knowing when a tenant credit is shakier than the rent roll shows, that is yours. What AI replaces is the hours of structured work between the judgment calls. The research pull. The first draft. The email that needed to go out yesterday. The pipeline follow-up that slipped to next week. Get those right and your week looks different.",
-    ],
-    painPoints: [
-      "Pulling CoStar comps, modeling NOI, and building the financial narrative for a single deal takes half a day",
-      "Offering memoranda and proposals take three days to produce and the first draft is still half-wrong",
-      "Pipeline nurture across long-cycle prospects falls apart because there is no time to write sixty personalized touchpoints",
-      "Tenant and buyer prospect research before a pitch is always shallower than it should be",
-      "Submarket reports read like CoStar exports because there is no time to turn the data into a narrative",
-      "LOIs and lease summaries get drafted on Friday night because the week ran out",
-    ],
-    workflows: [
-      {
-        title: "Financial analysis briefs",
-        body: "Cap rate, NOI, rent roll summary, and the key risk flags for a deal, drafted from the inputs you already have in Excel or Argus. The first pass is ready before the client meeting.",
-      },
-      {
-        title: "Offering memorandum drafts",
-        body: "Property description, financial summary, market narrative, and tenant overview into a structured OM draft. You spend the time editing the details, not building the scaffold.",
-      },
-      {
-        title: "LOI and proposal drafts",
-        body: "Deal terms and context into a first-draft LOI or proposal in your format. Reviewed and sent the same day the deal conversation happens.",
-      },
-      {
-        title: "Submarket and market reports",
-        body: "CoStar and LoopNet data pulled into a narrative market report your client will actually read. Vacancy trends, absorption, notable transactions, and the outlook in your voice.",
-      },
-      {
-        title: "Prospect research briefs",
-        body: "Tenant or buyer background, business profile, likely real estate needs, and the three things worth knowing before the first call. Ready before you pick up the phone.",
-      },
-      {
-        title: "Pipeline nurture cadence",
-        body: "Sixty-name pipeline with a personalized outreach sequence per contact. Market updates, deal alerts, and check-ins drafted in your voice and timed to the prospect's cycle stage.",
-      },
-      {
-        title: "Comp summaries",
-        body: "CoStar, LoopNet, and Crexi searches synthesized into a clean comp summary with the relevant data points flagged. The spreadsheet your client asks for is ready, not in progress.",
-      },
-      {
-        title: "Deal timeline and follow-up tracker",
-        body: "Open deals, next steps, and follow-up timing across your active book. Drafted from your CRM notes so nothing slips between the site tour and the LOI.",
-      },
-    ],
-    faq: [
-      {
-        q: "How can AI help commercial real estate agents?",
-        a: "The highest-value areas are financial analysis prep, document drafting, prospect research, and pipeline nurture. AI compresses the structured work between judgment calls. You still read the deal and know the market. AI does the rent roll summary, the OM draft, the comp synthesis, and the outreach email that needed to go out Tuesday. Most CRE brokers get four to eight hours a week back in the first month.",
-      },
-      {
-        q: "Will AI make my cap rate and NOI analysis less accurate?",
-        a: "The inputs determine the accuracy, not the AI layer. We build the workflow against your actual numbers from Excel or Argus. The AI structures and narrates the analysis; it does not source the figures. You review every output before it goes to a client. The risk of error goes down, not up, because the workflow makes it harder to transpose a number or miss a line item in the summary.",
-      },
-      {
-        q: "How is client and deal data handled?",
-        a: "Your data stays in your environment. We work in your tenant with zero-retention configurations. Deal financials, tenant information, and prospect data do not train public models and do not leave the tools you already control. We sign NDAs and treat every engagement as if the audit is next week.",
-      },
-      {
-        q: "What does this cost and who owns the workflows we build?",
-        a: "Engagements are monthly retainers scoped on the discovery call. Everything we build runs in your stack, your CoStar account, your CRM, your cloud storage. When the engagement ends, the workflows are yours. There is no proprietary platform, no per-seat license, no lock-in. You own the operating system.",
-      },
-      {
-        q: "Does this work with CoStar, LoopNet, and my CRM?",
-        a: "Yes. We build against CoStar exports, LoopNet data pulls, and Crexi outputs. We integrate with the CRM you use, whether that is Salesforce, HubSpot, ClientLook, or a custom setup. We do not ask you to migrate or replace tools you already pay for.",
-      },
-      {
-        q: "I work on long sales cycles. How does AI help with a deal that takes twelve months to close?",
-        a: "Long cycles are where the pipeline nurture workflow matters most. We build a contact cadence that keeps every prospect in your pipeline touched at the right interval with something specific, a submarket update, a relevant comp, a deal alert, not a generic check-in. The broker who stays present across the full cycle wins the deal when the tenant finally moves. AI makes it possible to stay present across sixty names without writing sixty emails by hand every month.",
-      },
-    ],
-    whatChanges: [
-      {
-        heading: "Tuesday morning before the pitch",
-        body: "You have a meeting at 10:00 with a prospect who owns two office buildings and might list one. You open the brief at 8:30. Building address, recent comps in the submarket, estimated cap rate range, tenant credit summary, and the three things worth knowing about the owner's portfolio. You wrote none of it. You read it in fifteen minutes and walked in sharp.",
-      },
-      {
-        heading: "The offering memorandum",
-        body: "Industrial flex listing signs Thursday. The seller wants the OM out Monday. Used to mean a weekend. Now it means Friday afternoon drafting the property narrative and financial summary into the workflow, Saturday morning reviewing the output, Monday morning sending a polished document. The weekend is still mostly yours.",
-      },
-      {
-        heading: "The pipeline that stayed warm",
-        body: "You have forty-three prospects in various stages of a six-to-eighteen-month cycle. Most of them have not heard from you since last quarter. The workflow runs a monthly outreach cadence against each one with a market note or a comp that is actually relevant to their asset class. Three of them respond in the next thirty days. One schedules a call.",
-      },
-      {
-        heading: "The submarket report your client forwarded",
-        body: "You sent a quarterly industrial submarket report last month. Two paragraphs of narrative, absorption data, three notable transactions, and an outlook paragraph in your voice. Your client forwarded it to two colleagues. One of them called you the following week about a building they need to sell.",
-      },
-      {
-        heading: "The LOI that closed the site tour",
-        body: "Site tour on Wednesday. Tenant says they want to move forward. You draft the LOI on the drive back, review it over dinner, send it Thursday morning. The competing broker sent theirs Friday afternoon. You had the deal in hand before the weekend.",
-      },
-    ],
-    howWeWork: [
-      "Engagements start with the workflow that is costing you the most hours right now. For most CRE brokers that is either the financial analysis brief or the offering memorandum, because those are the documents that determine whether you win the listing. We build the workflow on a real deal in your active book, with your CoStar data and your deal terms. Not a sandbox. Not a template exercise. You see it work on something live before we build anything else.",
-      "By week four you have a financial analysis brief workflow and an OM draft workflow running on real listings. Weeks five through eight wire the prospect research brief and the pipeline nurture cadence against your CRM. By week twelve you have a documented operating system that runs on CoStar, your CRM, your cloud drive, and your email client. Nothing requires a new platform. Your existing stack gets smarter.",
-      "We work with your tools. CoStar exports, LoopNet pulls, Crexi data, Excel and Argus models, Salesforce or HubSpot or ClientLook, DocuSign for the signature workflow. The AI layer sits between the data you already pull and the documents you already deliver. If you have a specific tool your market uses that is not on that list, bring it to the discovery call and we will tell you within a week whether we can wire to it.",
-    ],
-    whatThisIsNot: "This is not a CoStar replacement, a valuation tool, or a transaction management platform. We do not underwrite deals for you, give legal advice, or review contracts. We do not run your business while you golf. If you want a managed-services shop that sends emails under your name without your involvement, this is not it. The brokers we work with are serious practitioners who want to stay close to every deal and every client relationship. What we build is the structural support that lets you stay in those relationships without the prep work eating the week.",
-    primaryKeyword: "ai for commercial real estate agents",
-    secondaryKeywords: [
-      "ai for commercial real estate brokers",
-      "commercial real estate agent automation",
-      "cre offering memorandum ai",
-      "ai for cap rate and noi analysis",
-      "commercial real estate pipeline management",
-      "ai lease and financial analysis cre",
-      "commercial real estate prospect research ai",
-      "costar ai workflow for brokers",
-    ],
-  },
-
-{
-  slug: "investment-agents",
-  marqueeLabel: "Investment agents",
-  h1: "AI for Investment Property Agents.",
-  metaTitle: "AI for Investment Property Agents | VERA",
-  metaDescription:
-    "AI for investment property agents who need fast deal math, off-market sourcing, and a CRM that keeps investor clients buying.",
-  intro:
-    "Your investors move fast and disappear if the numbers are slow. AI is the analyst seat you do not have to hire: cap rates, pro formas, rent comps, and investor follow-up running while you are at the property.",
-  painPoints: [
-    "Running cap rates and cash-on-cash manually for every deal eats the morning you need for showings",
-    "Off-market leads from PropStream and DealMachine pile up unworked because there is no time to sort and personalize outreach",
-    "Pro forma builds take an hour each and investors want them before they will take a call",
-    "Investor clients go cold in Follow Up Boss because the re-engagement sequences are generic or nonexistent",
-    "Neighborhood and rent comp research is inconsistent across markets and takes time you do not bill for",
-    "Deal comparison reports that actually close a buyer have to be built fresh every time",
-  ],
-  workflows: [
-    {
-      title: "Cap rate and cash-on-cash analysis",
-      body: "Address in. Purchase price, estimated rents from Rentometer, expenses, NOI, cap rate, and cash-on-cash return out. Formatted as a one-page summary your investor can read before the 8 AM call.",
-    },
-    {
-      title: "Pro forma builder",
-      body: "Rehab estimate plus rent projection into a five-year pro forma with year-one cash flow, annualized return, and a refi scenario if the numbers support it. Built in minutes, not an hour.",
-    },
-    {
-      title: "Off-market lead scoring and outreach",
-      body: "PropStream or DealMachine pulls scored against a specific investor's buy box, then a personalized first-touch drafted per property. Two hundred leads to twenty warm outreaches in under an hour.",
-    },
-    {
-      title: "Rent comp briefs",
-      body: "Rentometer pull plus MLS rent history for the zip, formatted into a one-page comp sheet that answers the question your investor actually asks: what will this rent for in ninety days.",
-    },
-    {
-      title: "Deal comparison reports",
-      body: "Two to four properties side by side on the metrics that matter: cap rate, cash-on-cash, price per unit, gross rent multiplier, and a plain-language take on which one wins for the investor's stated criteria.",
-    },
-    {
-      title: "Investor CRM re-engagement",
-      body: "Dormant contacts in Follow Up Boss surfaced by last close date and deal history. Re-engagement messages drafted in your voice, not a broadcast template. The investor who bought a duplex two years ago hears something that references that deal.",
-    },
-    {
-      title: "Neighborhood market briefs",
-      body: "Days on market, price per square foot, rental vacancy, and crime trend for any submarket, pulled and formatted before the client call. You walk in with the answer instead of pulling up Zillow on your phone.",
-    },
-    {
-      title: "Listing and offer package prep",
-      body: "Investment property listings and offer packages prepped with the investor narrative front and center: income history, current rents, expense ratio, and the upside thesis. Buyers and their lenders read it faster.",
-    },
-  ],
-  faq: [
-    {
-      q: "How can AI help agents who work with investors?",
-      a: "The biggest wins are speed and throughput. AI runs deal math in minutes instead of forty, scores lead lists before you work them, and keeps investor relationships warm in the CRM with messages that sound personal. Agents who have it in place can respond to a deal same-day and carry a deeper roster of active investor clients without burning out.",
-    },
-    {
-      q: "How accurate is the deal math AI produces?",
-      a: "As accurate as the inputs you give it. The model runs the formulas correctly every time. The variable is the rent estimate and the expense assumption you feed it. We build the workflow to pull from Rentometer and the MLS for rent comps, and we flag when the inputs are thin so you can verify before you send. You are still the one who signs off on the numbers. AI does the arithmetic and the formatting, not the judgment call.",
-    },
-    {
-      q: "Is my client data and deal data safe?",
-      a: "We work in your tenant with zero-retention configurations. Your investor contacts, deal history, and CRM data do not train public models. We sign NDAs and run everything as if the compliance audit is tomorrow. Follow Up Boss data stays in your Follow Up Boss account.",
-    },
-    {
-      q: "What does an engagement cost and who owns the workflows at the end?",
-      a: "Engagements are flat monthly retainers scoped on the discovery call. You own everything we build. The workflows live in your stack, your API keys, your tenant. When the engagement ends you have a documented playbook and nothing has been locked behind a VERA-proprietary platform.",
-    },
-    {
-      q: "Does this work if I operate in multiple markets?",
-      a: "Yes. We configure the rent comp and neighborhood brief workflows per market. Deal scoring for your investor clients is set up against their individual buy boxes, not a generic national filter. Most agents we work with who operate in two or three markets say the multi-market research time is where they see the biggest relief.",
-    },
-    {
-      q: "I already use Follow Up Boss and DocuSign. Do I have to change tools?",
-      a: "No. We wire into Follow Up Boss for the CRM re-engagement layer and DocuSign sits where it already sits. We do not ask you to migrate. The tools you already pay for do more.",
-    },
-  ],
-  openingEssay: [
-    "Investment agents live in a different rhythm than residential agents. A buyer-side residential client takes six months to close one deal. A serious investor expects you to have three viable options in their inbox by Thursday, with an opinion on each one. The math has to be right, the comps have to be current, and the story has to be tight enough that they trust you before a competitor gets the call. Most agents who work with investors are doing all of that manually, in spreadsheets, on their phone, between showings.",
-    "The bottleneck is not intelligence. Every investment-focused agent we talk to knows how to run a cap rate. The bottleneck is time. It takes forty minutes to pull comps from the MLS, run a cash-on-cash, check Rentometer, and format it into something a busy investor can read at 6 AM. Multiply that by five deals a week and you are spending four hours doing analysis that a model can do in four minutes with the right setup. That is not a small efficiency. That is the difference between responding to a hot deal same-day and responding the next morning after someone else already has it under contract.",
-    "The sourcing problem is equally real. Off-market leads from DealMachine or PropStream arrive as raw data: addresses, equity estimates, ownership info. They do not arrive as a coherent outreach strategy. The agents who close off-market deals are the ones who can take a pull of two hundred leads, score them by fit for a specific investor's criteria, and get a personalized first-touch email out within the hour. That workflow does not happen manually at scale. It happens when there is an AI layer between the data and the CRM.",
-    "Follow Up Boss is only as good as the sequences running inside it. Most agents have a CRM full of investor contacts who went cold because the follow-up got inconsistent. An investor who bought one duplex two years ago is probably ready to buy again. They are not calling you because you have not given them a reason to. AI is what keeps the long tail of investor relationships warm, surfaces the re-engagement timing, and drafts the message that feels personal instead of broadcast.",
-    "The agents who win the next five years in the investment space are not the ones who know the most about deal math. They are the ones who can deliver deal math faster than anyone else in the market. Speed is the product. AI is what makes the speed possible without burning out.",
-  ],
-  whatChanges: [
-    {
-      heading: "The 7 AM deal drop",
-      body: "A deal hits the MLS at 6:45. By 7:10 you have a one-page analysis in your investor's inbox: cap rate, cash-on-cash, rent comp pulled from Rentometer, and a plain-English take. You were not the second agent to call. You were the first one with numbers.",
-    },
-    {
-      heading: "The PropStream pull that actually gets worked",
-      body: "Two hundred absentee-owner leads used to sit in a spreadsheet for two weeks. Now you score them against your investor's buy box in twenty minutes, and the top forty have a personalized first-touch drafted and queued in Follow Up Boss before lunch.",
-    },
-    {
-      heading: "The investor call on Wednesday",
-      body: "Your client asks about a submarket they heard about at a meetup. You walk in with a neighborhood brief already on your screen: days on market, median rent, cap rate range, and what inventory looks like. The conversation moves to a specific property in the first five minutes instead of the last five.",
-    },
-    {
-      heading: "The dormant client who bought again",
-      body: "An investor who closed two years ago and went quiet gets a message that references their duplex by address and notes that similar product in that zip is moving at a better cap rate than when they bought. They reply within the day. The relationship did not go cold. You just had not given it fuel.",
-    },
-    {
-      heading: "The pro forma that closed the deal",
-      body: "Your investor was sitting between two properties. A side-by-side comparison with a five-year pro forma on each, a refi scenario, and a one-line recommendation landed in their inbox at 9 PM. They signed the offer by morning. The other agent sent a PDF of the listing sheet.",
-    },
-  ],
-  howWeWork: [
-    "We start with the workflow that costs you the most deals, which for investment agents is almost always the deal analysis turnaround. We build the cap rate and cash-on-cash workflow on a real deal you have in front of you right now, not a hypothetical. You see whether it shaves forty minutes down to four before we build anything else.",
-    "Weeks two through five add the pro forma builder, rent comp briefs, and the off-market scoring layer wired to your PropStream or DealMachine account. By week six we move into the Follow Up Boss re-engagement sequences, because that is usually where the most money is sitting dormant. By week ten you have a documented operating system and your assistant or a TC can run the research layer without you in the room.",
-    "Everything stays in your stack. Follow Up Boss for the CRM layer, DocuSign where it already lives, the MLS for comps, PropStream or DealMachine for off-market, Rentometer for the rent data. We do not ask you to learn a new platform. We wire AI into the seams of the tools you already pay for.",
-  ],
-  whatThisIsNot:
-    "This is not a deal-finding service. We do not source deals for you or your clients. We do not give investment advice and nothing we build constitutes a recommendation to buy any specific property. We do not replace your judgment on deal underwriting, we compress the time it takes to get the numbers in front of the right people so your judgment can do its job faster. If you want a fully managed transaction coordination service or a lead-generation platform, this is not it.",
-  anecdote: {
-    setup:
-      "An investment-focused agent working with twelve active investor clients was running every deal analysis by hand in a Google Sheet. It took him forty-five minutes per deal and he was missing same-day response windows on deals that were going under contract before he could call his buyers.",
-    turn:
-      "We built the cap rate and pro forma workflow in week one on a real fourplex his client was considering. By week three he had the off-market scoring layer running on his PropStream pulls and a re-engagement sequence live in Follow Up Boss for his dormant list.",
-    line:
-      "He closed three deals in the next sixty days that he would have been too slow to reach. Two of them came from the dormant list.",
-  },
-  primaryKeyword: "ai for real estate investors",
-  secondaryKeywords: [
-    "ai for investor agents",
-    "ai deal analysis real estate",
-    "investment property agent ai",
-    "real estate pro forma automation",
-    "ai cap rate analysis real estate",
-    "off market lead scoring ai",
-    "investor crm automation real estate",
-    "ai tools for real estate investment agents",
-  ],
+  "primaryKeyword": "ai for wholesalers",
+  "secondaryKeywords": [
+    "motivated seller leads",
+    "off-market real estate deals",
+    "wholesale real estate leads",
+    "real estate deal sourcing",
+    "find off-market properties",
+    "ai for real estate investors",
+    "real estate lead generation"
+  ]
 },
-
+{
+  "slug": "fix-and-flip",
+  "marqueeLabel": "Fix & flip",
+  "h1": "AI for Fix and Flip Investors.",
+  "metaTitle": "Fix and Flip Deal Analysis with AI | VERA",
+  "metaDescription": "Fix and flip deal analysis and off-market sourcing, run by an AI partner. VERA finds the deals, models ARV and rehab, and only gets paid when you close.",
+  "intro": "The flip you want is not on the MLS. It is a tired house owned by someone who has not decided to sell yet. VERA finds it first, runs the numbers before the crowd, and brings it to you as a partner who only wins when you close.",
+  "painPoints": [
+    "The on-market deals are picked over and priced for a retail buyer, so the spread is gone before you make an offer",
+    "Your last seller list went cold because the skip-trace data was stale and the outreach sounded like every other postcard in the mailbox",
+    "Pulling and adjusting comps for ARV eats an evening per property, and a soft comp can turn a green deal red after you already bought",
+    "Rehab estimates swing by twenty thousand depending on who walks it, and you find the real number after demo starts",
+    "You see a promising address and lose a day deciding whether it pencils while a cash buyer two zip codes over already has it under contract",
+    "Good wholesalers send you their leftovers, and the A-deals get assigned to the buyer they called first"
+  ],
+  "workflows": [
+    {
+      "title": "Off-market deal sourcing",
+      "body": "We hunt the houses that never hit the MLS: absentee owners, tired landlords, pre-foreclosures, inherited and code-violation properties in your target zips. Scored against your exact buy box and price band, so what reaches you already fits the kind of flip you actually do."
+    },
+    {
+      "title": "Motivated-seller signal scoring",
+      "body": "Not every distressed property has a motivated owner. We read the signals, equity position, time held, tax status, occupancy, life events in the public record, and rank the list by who is most likely to sell at a number that works for a flip. You work the top of the list, not the whole haystack."
+    },
+    {
+      "title": "Skip-trace and outreach in your name",
+      "body": "We trace owners to real, current contact info and run the first-touch outreach in your name and your voice across call, text, and mail. The seller who calls back is calling you, with the property already qualified, so you spend your time talking to people who want to deal."
+    },
+    {
+      "title": "ARV and comp analysis",
+      "body": "Defensible after-repair value on any address in minutes. Recent comparable sales adjusted for condition, size, and location, with weak comps flagged and a confidence range, so your offer is anchored to reality and you can defend the number to a lender or a partner."
+    },
+    {
+      "title": "Rehab scope and cost modeling",
+      "body": "A line-item rehab estimate from photos, property age, and your scope, priced to your local crew and material costs. The number you need to know whether the deal still pencils, before you commit, not after the dumpster shows up."
+    },
+    {
+      "title": "Deal underwriting in minutes",
+      "body": "Purchase price, rehab, holding and selling costs, and ARV run into max allowable offer, projected spread, and return on cash. A one-page read on whether to make the offer and at what number, fast enough to beat the cash buyer who is also looking at it."
+    },
+    {
+      "title": "Buyer and exit matching",
+      "body": "We match the finished product, or the wholesale assignment, to the end buyer most likely to take it and at what price. Retail flip, landlord, or another investor. You know the exit before you commit to the entry."
+    },
+    {
+      "title": "Market and timing reads",
+      "body": "Where days-on-market, price cuts, and inventory are moving in your submarkets, so you flip into demand instead of into a stalling market. The read that tells you which zip to push on this quarter and which one to wait out."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How does VERA get paid on a flip?",
+      "a": "We get paid only when you close a flip, with no retainer, no hourly, and no monthly fee. Our cut comes out of the spread on a deal we sourced and underwrote and you closed. If we never put a deal in front of you that you close, we never get paid."
+    },
+    {
+      "q": "Where do the off-market deals come from?",
+      "a": "We hunt the houses that never hit the MLS: absentee owners, tired landlords, pre-foreclosures, inherited and code-violation properties in your target zips. We score owners by motivation using equity, time held, tax status, occupancy, and life events in the public record, then trace them to current contact info and run first-touch outreach in your name. The seller who calls back is calling you, with the property already qualified."
+    },
+    {
+      "q": "Who carries the risk if the ARV or rehab number is off?",
+      "a": "You make the buy decision and you own the deal, so the acquisition risk is yours. Our job is to give you a defensible ARV with weak comps flagged and a confidence range, plus a line-item rehab estimate priced to your local crew costs, before you commit. We surface the numbers so you can walk away from a deal that does not pencil, rather than finding out after demo starts."
+    },
+    {
+      "q": "How accurate are the comps and rehab estimates?",
+      "a": "The ARV is built from recent comparable sales adjusted for condition, size, and location, with soft comps flagged so you do not anchor to a sale that does not apply, and it comes with a confidence range rather than a single hopeful number. Rehab is a line-item range from photos, property age, and your scope, priced to your local costs instead of a national average. These are inputs you can defend to a lender or a partner, and you confirm them on your own walkthrough before you sign."
+    },
+    {
+      "q": "What happens if a deal falls through?",
+      "a": "If it does not close, we do not get paid for it, so a dead deal costs you nothing in fees. We keep sourcing against your buy box and bring you the next qualified address. Because our incentive is your spread, we are not going to waste your time with marginal deals just to fill a pipeline."
+    }
+  ],
+  "openingEssay": [
+    "Fix and flip lives and dies on two numbers and a clock. The number you buy at, the number you sell at, and how fast you can be certain of both before the deal moves to someone else. Get the buy wrong by fifteen thousand and the flip that looked like a forty-thousand-dollar spread is a part-time job that pays minimum wage. Most flippers are not losing on the rehab. They are losing on the deals they never saw and the comps they trusted too late.",
+    "The MLS is the wrong place to win. By the time a flip-worthy property is listed, an agent has run the comps, three other investors have it in a spreadsheet, and the price already reflects what it is worth. The money is in the houses that are not listed: the inherited property two states away from the heir, the landlord who is done with one bad tenant, the pre-foreclosure where the owner still has equity and no plan. Finding those at volume, then knowing in minutes which ones actually pencil, is the whole game.",
+    "A tool will not get you there, and a consultant will not either. The data sources, the models that read a property and a market, the outreach that gets a tired seller to call back, all of it moves every single week. The skip-trace stack that worked in January is mid-tier by summer. A piece of software you buy is frozen the day it ships. Someone you pay to advise you is one step removed from the deal. The only thing that compounds is a partner who stays at the frontier of what this technology can do and points it directly at your next acquisition.",
+    "That is what VERA is. Not a course, not a list, not a login. A partner that sources off-market opportunities, surfaces motivated sellers, models ARV and rehab before you walk the property, and runs on the smartest AI in the world behind the curtain. We make money when you close a flip and at no other time. Our incentive is your spread, which means we are not selling you access. We are finding you deals."
+  ],
+  "whatChanges": [
+    {
+      "heading": "The deal that was never listed",
+      "body": "Instead of refreshing the MLS for scraps, you wake up to three off-market addresses that fit your buy box, each with the owner's situation, an equity estimate, and an ARV range already attached. You are not the tenth call. The owner has not talked to anyone else yet."
+    },
+    {
+      "heading": "The comp set you can actually trust",
+      "body": "A property comes in and you have a defensible ARV in minutes, not after an evening in the MLS. Recent sales, adjusted for condition and footprint, with the soft comps flagged so you do not anchor your offer to a sale that does not really apply. You make the offer the same day, with conviction."
+    },
+    {
+      "heading": "The rehab number before you swing a hammer",
+      "body": "Photos, age, and the scope you describe turn into a line-item rehab range tied to your local crew costs, not a national average. You know whether the spread survives a kitchen, a roof, and a surprise before you ever sign, so demo-day surprises do not eat the profit."
+    },
+    {
+      "heading": "The exit lined up at acquisition",
+      "body": "Before you close the buy, you already know who the likely end buyer is and at what number. The retail flip price, or the buy-and-hold investor whose criteria this hits, with their offer range. You are not hoping it sells in ninety days. You bought it knowing where it lands."
+    }
+  ],
+  "howWeWork": [
+    "We are a partner, not a vendor. We bring you the deals, the seller leads, the ARV, the rehab number, and the exit. We make money only when you close a flip. No retainer, no hourly, no monthly fee, no paying to try. If we do not put a deal in front of you that you close, we do not get paid. That is the entire arrangement, and it is on purpose.",
+    "It works because our incentive is your spread. A consultant gets paid whether your deal is good or not. A software subscription charges you whether you ever close. We only win when you win, which means we are not going to waste your time with marginal addresses or seller lists that have already been worked to death. The deals we bring you are the ones we would want a share of.",
+    "Behind it is an operations team running the strongest AI in the world, pointed at sourcing and underwriting all day. The technology moves every week and we move with it, so the edge you get this quarter is sharper than the one you had last quarter. You do not manage any of that. You get the deals, the numbers, and the exit, and you decide what to buy."
+  ],
+  "whatThisIsNot": "This is not a course on how to flip houses, and nobody here is going to teach you a system you already know. It is not a list of leads you buy once and work until it goes cold. It is not a consultant who hands you a strategy deck and an invoice. It is not software you log into and operate yourself. It is a partner that does the sourcing and the analysis, brings you deals that pencil, and gets paid only when you close one.",
+  "anecdote": {
+    "setup": "A flipper doing six houses a year was sourcing entirely off the MLS and the occasional wholesaler assignment. The on-market spreads had compressed to where two of his last four flips barely cleared their costs, and the good wholesale deals were going to buyers who got the call before he did.",
+    "turn": "We turned on off-market sourcing in his three target zips, scored the owners by motivation, and ran skip-trace outreach in his name. Every qualified callback came with an ARV range and a rehab estimate already attached, and he was underwriting same-day instead of losing a property to a faster buyer.",
+    "line": "He closed four off-market flips in the next five months, each one at a spread the MLS had not offered him in over a year, and VERA was paid only on the ones that closed."
+  },
+  "primaryKeyword": "fix and flip deal analysis",
+  "secondaryKeywords": [
+    "off-market real estate deals",
+    "ai for real estate investors",
+    "motivated seller leads",
+    "real estate deal sourcing",
+    "find off-market properties",
+    "arv calculator ai",
+    "fix and flip leads",
+    "real estate lead generation"
+  ]
+},
+{
+  "slug": "buy-and-hold",
+  "marqueeLabel": "Buy & hold",
+  "h1": "AI for Buy and Hold Investors.",
+  "metaTitle": "AI for Buy and Hold Investors | VERA",
+  "metaDescription": "Off-market real estate deals and motivated seller leads for buy and hold investors. VERA sources rentals, runs the numbers, and only gets paid when you close.",
+  "intro": "Buy and hold is won on acquisition. The rentals that cash flow are bought right, before the listing goes live and the bidding starts. VERA finds those deals and brings them to you.",
+  "painPoints": [
+    "Deal flow has dried up. The on-market inventory that pencils as a rental is gone, and what is left does not cash flow at today's rates.",
+    "Every property worth owning has eight offers on it within a day, and you are bidding against people who will accept a worse return than you will.",
+    "Your seller lists are stale. The same skip-traced numbers everyone bought, dialed by everyone, answered by no one.",
+    "Underwriting a deal takes you a full evening of pulling rent comps, estimating turn costs, and modeling the hold, so half of them are gone before you finish.",
+    "Rent comps and ARV pulled from a portal are wrong often enough that one bad number turns a buy into a should not have.",
+    "Equity sits dead in seasoned properties that should be refinanced or 1031'd, but finding the next acquisition to roll into is the bottleneck."
+  ],
+  "workflows": [
+    {
+      "title": "Off-market rental sourcing",
+      "body": "VERA scans for owners likely to sell, absentee landlords, long-tenured owners, equity-rich properties, distressed notes, and matches them against your buy box: market, unit count, price band, and target return. Deals reach you before they list."
+    },
+    {
+      "title": "Motivated-seller lead scoring",
+      "body": "Instead of a raw list, you get owners ranked by real signals: tax delinquency, code violations, vacancy, out-of-state ownership, recent life events. The names that surface first are the ones most likely to take a call."
+    },
+    {
+      "title": "Skip-trace and outreach in your name",
+      "body": "VERA enriches owner contact data and runs the first-touch outreach as you, across text, mail, and voicemail, so qualified seller conversations land in your pipeline instead of dying in a spreadsheet."
+    },
+    {
+      "title": "Rent comp and cash flow modeling",
+      "body": "For any address, VERA pulls true rent comps for the unit mix, builds the rent roll, and models cash-on-cash, cap rate, and DSCR at your financing terms. You see whether it holds up before you offer."
+    },
+    {
+      "title": "Turn and CapEx estimation",
+      "body": "VERA reads the condition signals and estimates make-ready and deferred-maintenance cost, so the rehab line in your hold model is grounded in the property, not a guess that wrecks year one."
+    },
+    {
+      "title": "Refinance and 1031 timing",
+      "body": "VERA tracks equity and seasoning across your portfolio and flags when a cash-out refi or 1031 exchange makes sense, then sources the off-market property to redeploy into within the exchange window."
+    },
+    {
+      "title": "Market and submarket reads",
+      "body": "Rent growth, vacancy trend, permit activity, and buyer competition by submarket, so you concentrate capital where rents are climbing and pull back before a market softens."
+    },
+    {
+      "title": "Owner financing and creative structuring",
+      "body": "When a seller has equity and no urgency for cash, VERA surfaces it and frames the seller-finance or subject-to terms that make the deal cash flow when a straight purchase will not."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How does the fee actually work?",
+      "a": "There is no retainer, no hourly, and nothing to pay while we look. VERA sources off-market rentals, runs the numbers, and earns only when you close on a deal we brought you. If a property never makes it to closing, you owe nothing."
+    },
+    {
+      "q": "Where do the off-market deals come from?",
+      "a": "VERA scans for owners who are likely to sell but have not listed: absentee landlords, long-tenured and equity-rich owners, properties with tax delinquency, code violations, or vacancy. We match those against your buy box (market, unit count, price band, target return) and run the first-touch outreach in your name, so the deals reach you before they hit the MLS and draw a bidding war."
+    },
+    {
+      "q": "How accurate are the rent comps and cash-flow numbers?",
+      "a": "For any address, VERA pulls true rent comps for the actual unit mix, builds the rent roll, and models cash-on-cash, cap rate, and DSCR at your financing terms. Turn and CapEx are estimated from the property's condition signals, not a flat guess, so the rehab line is grounded in that specific deal. You see whether it holds before you offer, and you underwrite every number yourself before you commit."
+    },
+    {
+      "q": "Do I get exclusivity or a protected territory?",
+      "a": "When VERA sources a deal that fits your buy box, it goes to you, not shopped to a list of competing buyers. We work this as a partnership in your market, not a lead service reselling the same names to everyone. If you want the specifics of how that works for your area, that is a direct conversation before we start."
+    },
+    {
+      "q": "What happens if nothing closes?",
+      "a": "You pay nothing. The arrangement only works if we keep bringing you deals worth closing, so the risk of a dry stretch sits with us, not you. That is the whole point of getting paid on the close instead of a retainer: our incentive is to find rentals that actually pencil and get you into them."
+    }
+  ],
+  "openingEssay": [
+    "The best rental you will buy this year is owned by someone who has not decided to sell yet. A tired landlord with three vacancies. An out-of-state heir sitting on a paid-off duplex. An owner two payments behind who would rather take a clean offer than a foreclosure on their record. None of them are on the MLS.",
+    "By the time those properties do list, you are competing with every other buyer in the county, and the cash flow you needed is already priced out of the deal. Winning buy and hold is not about analyzing harder than the next investor. It is about seeing the deal first and knowing fast whether it holds.",
+    "A tool that finds off-market owners is dated the week after you buy it, because the data sources and the models shift constantly. A consultant who teaches you a sourcing system has no stake in whether the next deal closes. Neither one keeps pace with how quickly this is moving.",
+    "VERA is built the other way. We stay at the frontier, point it at sourcing rentals that cash flow, and bring the deals straight to you. We earn when you close, not before. That is the only arrangement that keeps compounding as the technology keeps changing."
+  ],
+  "whatChanges": [
+    {
+      "heading": "Before: waiting on the MLS",
+      "body": "You refreshed listing alerts and offered on whatever showed up, losing most and overpaying on the rest. Now off-market duplexes and small multifamily matching your buy box land in your inbox before they list, with the rent roll and a hold model already attached."
+    },
+    {
+      "heading": "Before: a seller list that goes nowhere",
+      "body": "You bought a list, blasted it, and got crickets. Now VERA surfaces owners with real motivation, tired landlords, absentee owners, equity-rich and behind, then runs skip-trace and outreach in your name so the conversations that start are with people actually open to selling."
+    },
+    {
+      "heading": "Before: an evening per underwrite",
+      "body": "Pulling comps, estimating CapEx, and modeling cash-on-cash by hand meant you only ran the deals you already liked. Now the numbers come back in minutes, rent comps, turn budget, hold returns, and refinance math, so you can say no fast and yes faster."
+    },
+    {
+      "heading": "Before: dead equity, no next move",
+      "body": "Equity piled up in seasoned properties while your next acquisition stalled. Now VERA flags refinance and 1031 windows and lines up the off-market replacement property to roll into before the clock runs."
+    }
+  ],
+  "howWeWork": [
+    "VERA is a partner, not a vendor. We bring you off-market deals, motivated seller leads, and the numbers behind them, and we make money only when you close. No retainer, no hourly, no paying to find out if it works.",
+    "That structure is the point. The technology that finds these deals changes every week. A tool you buy is dated the day it ships, and a consultant you hire has no stake in whether the deal closes. A partner who stays at the frontier and feeds what they find straight into your acquisitions is the only arrangement that keeps paying off as the tools keep moving.",
+    "Behind it is an operations team running the sharpest AI models available, pointed at one job: getting you into the right rentals before the crowd does. You see the deals and the edge. We carry the engine."
+  ],
+  "whatThisIsNot": "This is not a course on rental investing, not a list of leads you buy by the thousand, not a consultant billing you to talk strategy, and not software you log into and operate yourself. It is a partnership. VERA sources the deals, runs the numbers, and earns only when you close.",
+  "anecdote": {
+    "setup": "A buy and hold investor in a Sunbelt metro had not closed an acquisition in five months. On-market duplexes were drawing six offers and penciling at a 4 percent cash-on-cash, below his floor.",
+    "turn": "VERA surfaced an absentee owner with two side-by-side fourplexes, paid off, one unit vacant, taxes a year behind. The owner had never listed. VERA ran the outreach in his name and had the rent roll and hold model back to him the same week.",
+    "line": "He bought both off-market at a price that listed would have drawn a bidding war, and the portfolio cash flowed from month one."
+  },
+  "primaryKeyword": "AI for real estate investors",
+  "secondaryKeywords": [
+    "off-market real estate deals",
+    "motivated seller leads",
+    "real estate deal sourcing",
+    "buy and hold rental properties",
+    "find off-market properties",
+    "real estate lead generation",
+    "rental property cash flow analysis"
+  ]
+},
+{
+  "slug": "land-and-development",
+  "marqueeLabel": "Land & development",
+  "h1": "AI for Land and New Construction Investors.",
+  "metaTitle": "AI for Land & New Construction Investors | VERA",
+  "metaDescription": "Find off-market land and development deals before the crowd. VERA sources motivated-seller leads, reads parcels, and runs feasibility fast, as a performance-based partner.",
+  "intro": "The best land deals close before they ever hit a listing. VERA finds the parcels, the motivated sellers, and the numbers that work, so you are first to the table instead of bidding against ten other builders.",
+  "painPoints": [
+    "Deal flow is thin and getting thinner. The good infill lots and assemblage plays are picked over before you hear about them, and brokers send you the same tired listings everyone else is chasing.",
+    "You are bidding against builders and land bankers on anything that hits the MLS, which means you are competing on price for the deals with the least margin left.",
+    "Seller lists go stale fast. The owner of that 12-acre parcel moved, died, transferred it to an LLC, or already sold, and you find out after you have mailed them three times.",
+    "Feasibility takes days you do not have. Zoning, setbacks, utility access, impact fees, and density math have to line up before you can even price an offer, and by then the parcel is gone.",
+    "Comps for finished product are a guess. New construction and land have thin comp sets, so your ARV and your exit number are built on three sales that barely match the lot you are actually building on.",
+    "You are doing all of this alone or with a part-time VA, so the research that actually finds off-market deals always loses to the fire of the week."
+  ],
+  "workflows": [
+    {
+      "title": "Off-market parcel sourcing",
+      "body": "We hunt your target submarkets for buildable land and teardown opportunities that fit your criteria, vacant lots, underutilized parcels, assemblage candidates, and surface them before they list."
+    },
+    {
+      "title": "Motivated-seller signal scoring",
+      "body": "Tax delinquency, out-of-state and absentee owners, long holds, estate and probate transfers, code violations. We score every parcel by how likely the owner is to actually sell, so you call the right doors first."
+    },
+    {
+      "title": "Skip-trace and outreach in your name",
+      "body": "We find current contact info for parcel owners hiding behind LLCs and trusts, then run the outreach, mail, text, and calls, branded as you, so replies land in your pipeline, not ours."
+    },
+    {
+      "title": "Zoning and entitlement feasibility",
+      "body": "For any parcel, a fast read on allowable use, density, setbacks, utility access, and the likely entitlement path, so you know what you can build before you make an offer."
+    },
+    {
+      "title": "Buildable comp and ARV modeling",
+      "body": "We assemble the thin comp sets land and new construction live on, finished-product sales, lot values, absorption, and model an exit number you can underwrite against, not guess at."
+    },
+    {
+      "title": "Rehab and build cost modeling",
+      "body": "For teardown and new construction plays, a grounded estimate of hard and soft costs, impact fees, and timeline, mapped against the exit, so the deal pencils before you commit capital."
+    },
+    {
+      "title": "Assemblage opportunity mapping",
+      "body": "We identify adjacent parcels under separate ownership that combine into a developable site, and the ownership signals that say which neighbors might sell, so you build the assemblage the market hasn't spotted."
+    },
+    {
+      "title": "Buyer and builder matching",
+      "body": "When you wholesale or flip the lot, we match it to the builders, developers, and land buyers actively buying that product in that submarket, so the disposition is as fast as the acquisition."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How does the fee actually work? What do I pay?",
+      "a": "Nothing up front. There is no retainer, no hourly, no monthly software fee. We source the parcels, score the sellers, run the feasibility and comps, and put it all into your pipeline. If a deal we sourced and analyzed turns into a closing, we share in it. If nothing closes, you owe nothing."
+    },
+    {
+      "q": "How do you find off-market parcels and motivated sellers?",
+      "a": "We hunt your target submarkets for buildable land, teardowns, vacant lots, and assemblage candidates before they list. Then we score every parcel by how likely the owner is to sell, using signals like tax delinquency, out-of-state and absentee ownership, long holds, estate and probate transfers, and code violations. We skip-trace current contact behind LLCs and trusts and run the outreach in your name, so replies land in your pipeline, not ours."
+    },
+    {
+      "q": "Can you really price a parcel without me doing days of zoning and feasibility work?",
+      "a": "Yes. For any parcel we give you a fast read on allowable use, density, setbacks, utility access, and the likely entitlement path, usually the same morning the lead comes in. We pair it with a buildable comp set and an exit number you can underwrite against. The point is to put a number you can offer with confidence in front of you before the parcel is gone, not to replace your own diligence before you close."
+    },
+    {
+      "q": "Do I get exclusivity in my territory?",
+      "a": "We work each deal into one partner's pipeline, not a shared list that ten builders are calling off of. When we source and score a parcel for you and run outreach in your name, that lead is yours. Tell us your submarkets and buildable criteria up front so we are hunting the right ground for you specifically."
+    },
+    {
+      "q": "What happens if nothing closes? And do I own the deals and data?",
+      "a": "If nothing closes, you owe nothing, that is the whole point of the structure and why our incentive matches yours. The parcels, seller contacts, feasibility reads, and comps go into your pipeline and are yours to act on, evaluate, and offer on. You build; we only get paid when a deal we sourced and analyzed funds."
+    }
+  ],
+  "openingEssay": [
+    "Land and new construction is a research game disguised as a real estate game. The deal is won by whoever understands the parcel first: zoning, entitlements, utilities, flood and soil, what the comps say a finished product clears, and whether the seller will actually move. Most investors do that work one parcel at a time, by hand, after the property is already on someone's radar.",
+    "A tool promises to speed that up. But the tool you buy this quarter is built on what was true last quarter, and land intelligence moves faster than that: new parcel data, new zoning changes, new permit filings, new ways to read a market. By the time a platform ships a feature, the edge it captured is already common. A consultant has the same problem, plus a retainer that bills whether or not you close.",
+    "VERA is the other thing. We are a partner that sits at the frontier of what AI can do with property, parcel, and seller data, and we put that directly into your pipeline. When a better model or a better data source shows up, you get it inside your deals, not in a slide deck six months later. The edge keeps compounding because we keep moving.",
+    "And we only make money when you close. No retainer, no hourly, no paying to find out if it works. We bring the deals and the analysis. You build."
+  ],
+  "whatChanges": [
+    {
+      "heading": "Monday, instead of refreshing the MLS",
+      "body": "A list is waiting: 40 parcels in your target submarkets that fit your buildable criteria, ranked by how likely the owner is to sell and how clean the entitlement path looks. None of them are listed. You spend the morning calling, not searching."
+    },
+    {
+      "heading": "The 9-acre parcel, priced in an hour",
+      "body": "Instead of three days of zoning lookups and napkin math, the feasibility read is in front of you the same morning the lead comes in: allowable density, setback and utility constraints, an as-built comp set, and a number you can actually offer with confidence."
+    },
+    {
+      "heading": "The seller who never lists",
+      "body": "An out-of-state owner inherited a parcel they have paid taxes on for nine years and never thought to sell. VERA surfaced the ownership signal, skip-traced current contact, and reached out in your name. You are the only buyer at the table."
+    },
+    {
+      "heading": "A pipeline you can see",
+      "body": "Instead of a shoebox of half-finished leads, you have a live view of every parcel in motion, where each seller stands, and which deals are worth your next call. The week runs on signal, not on whatever is loudest."
+    }
+  ],
+  "howWeWork": [
+    "We work as a partner, not a vendor. VERA brings the deals and the intelligence, off-market parcels, scored seller leads, feasibility, comps, the numbers, and puts them straight into your pipeline. You evaluate, you offer, you build. There is no platform to log into and no course to finish.",
+    "We make money only when you close. No retainer, no hourly, no monthly software fee, no paying to try. If a deal we sourced and analyzed turns into a closing, we share in it. If it doesn't, you owe nothing. Our incentive is the same as yours: real deals that actually fund.",
+    "That structure is the whole point. The technology underneath this moves every week, and we stay at the frontier of it so you don't have to track it. When a sharper model or a better data source shows up, it shows up in your deals, not in a future product update. You get the edge while it's still an edge."
+  ],
+  "whatThisIsNot": "This is not a course on land investing, and it is not a list you buy once and watch go stale. It is not a consultant billing you to explain the market, and it is not another piece of software you log into and operate yourself. VERA is a partner that sources the deals, runs the numbers, and only gets paid when you close.",
+  "anecdote": {
+    "setup": "A builder doing four spec homes a year was stuck. Every buildable lot in his county was either listed and overbid or owned by someone who wouldn't return a call. His pipeline was three weak leads and a lot of driving for dollars.",
+    "turn": "We ran his submarket for absentee and long-hold owners of vacant residential parcels, scored them, skip-traced the top tier, and reached out in his name. Inside three weeks he was talking to an out-of-state owner of two adjacent lots who had no idea they were buildable together.",
+    "line": "He closed the assemblage off-market, at his number, with no other builder ever knowing it was for sale."
+  },
+  "primaryKeyword": "AI for real estate investors",
+  "secondaryKeywords": [
+    "off-market land deals",
+    "off-market real estate deals",
+    "motivated seller leads",
+    "real estate deal sourcing",
+    "find off-market properties",
+    "land development deal analysis",
+    "new construction deal analysis",
+    "real estate lead generation"
+  ]
+},
+{
+  "slug": "real-estate-agents",
+  "marqueeLabel": "Agents & teams",
+  "h1": "AI for Real Estate Agents and Teams.",
+  "metaTitle": "AI for Real Estate Agents and Teams | VERA",
+  "metaDescription": "AI for real estate agents and teams that sources off-market deals, surfaces motivated seller leads, and runs comps fast. A partner that earns only when you close.",
+  "intro": "The agents winning right now are not working harder lists. They are getting to the seller before the sign goes up. VERA finds those owners, those streets, and those deals before they hit the MLS, and hands them to you.",
+  "painPoints": [
+    "Your lead sources have gone flat. Portals, referrals, and farm postcards bring in the same buyers and sellers every other agent in your zip code is already chasing.",
+    "You find out a house is for sale when the sign goes in the yard, the same day as everyone else, instead of three weeks earlier when the owner first started thinking about it.",
+    "Your old prospect and expired-listing lists are dead. You are dialing numbers that no longer work and homeowners who sold two years ago.",
+    "Pricing a listing or advising a buyer means hand-pulling comps, and half of them do not hold up when the appraiser or the other side pushes back.",
+    "A buyer asks what a property is really worth and you are stuck eyeballing it, because running a defensible number takes an hour you do not have on a showing day.",
+    "Your team is drowning in follow-up. The leads that would convert with one more well-timed touch go cold because nobody got to them in time."
+  ],
+  "workflows": [
+    {
+      "title": "Off-market seller sourcing",
+      "body": "VERA reads ownership tenure, life events, financial signals, and neighborhood turnover to surface the owners in your farm most likely to sell soon, by name and address, before they ever list."
+    },
+    {
+      "title": "Motivated seller scoring",
+      "body": "Not every owner is ready. VERA ranks your area and your existing leads by genuine likelihood to sell, so your hours go to the conversations that actually become listings."
+    },
+    {
+      "title": "Defensible comps and valuation",
+      "body": "Pull a list price or a buyer-side number in minutes, with a comp set and reasoning built to survive an appraiser, a lender, and the agent across the table."
+    },
+    {
+      "title": "Listing-appointment intelligence",
+      "body": "Before you knock, VERA briefs you on the property, the owner, the neighborhood trend, and the price story, so you walk in as the agent who already did the homework."
+    },
+    {
+      "title": "Database revival and skip-trace",
+      "body": "VERA cleans your dead and aging contacts, restores current phone and contact detail, re-scores who is worth a touch now, and tells you why."
+    },
+    {
+      "title": "Outreach in your name",
+      "body": "VERA drafts the call script, text, and email for each lead, tuned to their situation and your voice, so the follow-up sounds like you and lands at the right moment."
+    },
+    {
+      "title": "Buyer-to-listing matching",
+      "body": "VERA connects the buyers in your book to the off-market and soon-to-list properties that actually fit them, so both sides of the deal come from your pipeline."
+    },
+    {
+      "title": "Market read for your farm",
+      "body": "VERA tracks which streets are turning over, where inventory is tightening, and where pricing is moving, so you target the blocks about to break instead of the ones already picked over."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How does VERA get paid, and how is that different from my commission split?",
+      "a": "There is no retainer, no hourly, and no software fee. VERA earns only when a deal we sourced closes, so it never touches your existing brokerage split or comes out of your pocket up front. If a lead we surface never crosses the table, it costs you nothing."
+    },
+    {
+      "q": "Where do the off-market seller leads come from?",
+      "a": "We read ownership tenure, life events, financial signals, and neighborhood turnover to find the owners in your farm most likely to sell in the next few months, before they list. Every name gets scored by genuine likelihood to sell, so what reaches you is a real lead with a reason it is worth a call, not a raw list. You get the name, the address, and why now."
+    },
+    {
+      "q": "Do I get an exclusive territory, or will you hand the same leads to other agents in my market?",
+      "a": "A lead we surface for you is yours to work. We are tied to your closing, so feeding the same owner to a competing agent would work against the only way we get paid. Reach out about your specific market and we will confirm what we can commit to before you start."
+    },
+    {
+      "q": "Does this replace my CRM and the tools I already use?",
+      "a": "No. VERA delivers the lead, the comp, and the timing into the way you already work, so you keep your CRM, your dialer, and your brand. There is no platform to log into and no system to learn. The work stays behind the curtain and you get the result."
+    },
+    {
+      "q": "Whose name is the outreach in, and how does that stay compliant with Fair Housing?",
+      "a": "Outreach goes out in your name and your voice, and you stay the agent and publisher of record on everything that reaches a consumer. You review and approve what goes out, so you keep full control of your compliance, including Fair Housing. We hand you the draft and the reasoning; the final call is yours."
+    }
+  ],
+  "openingEssay": [
+    "Your market is the same set of properties everyone else is staring at. The difference between a flat year and a record one is who reaches the motivated owner first, and who can tell a real deal from a tire-kicker in the time it takes to pull a comp. That is an intelligence problem, not an effort problem. Adding hours to a process built on stale lists and public data does not move the number.",
+    "Most agents and teams try to close the gap by buying a tool or hiring someone to teach them a system. Both are behind the moment they arrive. The models that read a market, score a seller's likelihood to list, and value a property change almost every week. A platform you log into ships an update once a quarter, if that. The edge it sold you last year is the floor everyone stands on this year.",
+    "VERA is built differently. We are a partner that lives at the frontier of these models and puts what we find directly into your pipeline: the owners about to sell, the streets turning over, the listings priced wrong, the comps that hold up under a lender's eye. The work stays behind the curtain. What reaches you is the lead, the number, and the reason it is worth your time.",
+    "And we only get paid when you close. No retainer, no monthly software bill, no course to buy first. We make money the same way you do, on the deal that actually crosses the table. That alignment is the whole point: a partner whose incentive is your next closing, staying current so you do not have to."
+  ],
+  "whatChanges": [
+    {
+      "heading": "From waiting on the sign to knowing first",
+      "body": "Before: you learn a property is listing when it is already on the MLS, competing with every agent who got the same alert. After: VERA flags the owners in your area most likely to sell in the next few months, by name and address, so you are the conversation they remember when they decide it is time."
+    },
+    {
+      "heading": "From guessing the number to defending it",
+      "body": "Before: you eyeball a list price or a buyer's offer, then scramble when the appraisal or the counter challenges it. After: VERA hands you a valuation and a comp set built to hold up, with the reasoning attached, so you walk into the listing appointment or the negotiation already right."
+    },
+    {
+      "heading": "From dead lists to live conversations",
+      "body": "Before: your database is full of disconnected numbers and people who already moved. After: VERA cleans, enriches, and re-scores your contacts, then surfaces the handful worth a call this week, with current phone, situation, and why now."
+    },
+    {
+      "heading": "From follow-up chaos to the right touch at the right time",
+      "body": "Before: leads slip through because your team cannot get to all of them. After: VERA watches the pipeline and tells you which lead to reach, on which channel, with what to say, before it goes cold."
+    }
+  ],
+  "howWeWork": [
+    "The arrangement is simple. VERA brings the intelligence and the edge: the off-market sellers, the scored leads, the comps that hold, the timing on who to reach and when. You bring the relationships and close the deals. We do not charge a retainer, an hourly rate, or a software fee. There is nothing to buy before you see what we find.",
+    "We get paid only when you close. That is the entire structure. If a lead we surface never becomes a deal, it costs you nothing. It means we are not selling you access and walking away. We are tied to the same outcome you are, which is why we keep pushing to find the next deal instead of collecting a subscription.",
+    "Behind that is a team running the smartest models in the world and staying current as they change, week over week. You never have to learn a platform, manage a tool, or keep up with what shifted in the technology. You get the result: the lead, the number, the reason it is worth your time, delivered into the way you already work."
+  ],
+  "whatThisIsNot": "This is not a course, and nobody is going to teach you a system. It is not a lead list you buy by the thousand and burn through in a week. It is not a consultant who bills you to write a strategy you then have to run yourself. And it is not another piece of software to log into, learn, and maintain. It is a partner that finds the deals, hands them to you, and only makes money when you close.",
+  "anecdote": {
+    "setup": "A team in a tight suburban market had farmed the same three neighborhoods for years. Their lead flow had flattened, and every listing they chased had four other agents on it.",
+    "turn": "VERA scored the owners across those neighborhoods and flagged a handful showing early sell signals: long tenure, a recent estate event, a refinance that had aged out. One was an owner who had not listed and was not on anyone's radar yet.",
+    "line": "The agent reached out with a script VERA had drafted for that exact situation, had the listing conversation two weeks before the owner would have called anyone, and signed it off-market. No sign, no competing offers, no portal."
+  },
+  "primaryKeyword": "AI for real estate agents",
+  "secondaryKeywords": [
+    "AI for real estate",
+    "real estate lead generation",
+    "motivated seller leads",
+    "off-market real estate deals",
+    "real estate deal sourcing",
+    "find off-market properties",
+    "AI for real estate teams"
+  ]
+}
 ];
 
 export function getVerticalBySlug(slug: string): Vertical | undefined {

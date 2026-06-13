@@ -1,55 +1,55 @@
 /**
- * The four phases of a VERA engagement. Shared by the client UI and the
+ * The four phases of a VERA partnership. Shared by the client UI and the
  * server page's HowTo JSON-LD, so it lives in a plain (non-"use client")
  * module both can import.
  */
 export const PHASES = [
   {
     number: "01",
-    title: "Discover",
+    title: "Fit",
     description:
-      "We spend time with your team, engineers, ops, compliance, and learn how your business actually runs. We look at your data, your infrastructure, your regulatory situation, what you've tried before. We ask a lot of questions. By the end, we put together an honest assessment of what's feasible and what isn't.",
+      "We start with your buy box: your market, your price band, your criteria, what you have already tried. We look at where deal flow is thin and where an edge actually exists for you. If we can find you one, we agree on how the partnership and the fee work before anything else, with no retainer and nothing to pay to start.",
     deliverables: [
-      "Technical and operational assessment",
-      "Stakeholder interviews",
-      "Risk and compliance landscape review",
-      "Feasibility analysis with honest recommendations",
+      "Your buy box, market, and criteria mapped",
+      "An honest read on where the edge is",
+      "Deal and fee structure agreed up front",
+      "No retainer, nothing to pay to start",
     ],
   },
   {
     number: "02",
-    title: "Strategy",
+    title: "Source",
     description:
-      "We write the plan, architecture, evaluation criteria, foundation, timeline. We define what success looks like together and scope everything to what your team can maintain long-term. You review it, we revise it, and nothing moves forward until we're both confident in it.",
+      "We hunt the deals that never hit the MLS: absentee owners, tax delinquency, pre-foreclosure, probate, code violations, tired landlords in your target areas. We score every owner by real motivation signals, skip-trace current contact behind LLCs and trusts, and run the comps, ARV, and rehab math before anything reaches you.",
     deliverables: [
-      "AI strategy document",
-      "Architecture and system design",
-      "Evaluation and success criteria",
-      "Foundation and compliance framework",
+      "Off-market deals matched to your buy box",
+      "Motivated-seller leads scored by real signals",
+      "Comps, ARV, and rehab math on every deal",
+      "Skip-traced contacts behind LLCs and trusts",
     ],
   },
   {
     number: "03",
-    title: "Integrate",
+    title: "Deliver",
     description:
-      "We join your team, same codebase, same standups, same channels. We write the code together, set up guardrails and monitoring together, and document everything as we go. Your engineers are part of the entire integration.",
+      "The scored deals and leads land straight in your pipeline, with first-touch outreach going out in your name. You get the address, the numbers, and the reason it is worth a call, so you can offer with confidence and move before the crowd. The seller who calls back is calling you.",
     deliverables: [
-      "Production-ready AI systems",
-      "Testing and evaluation pipelines",
-      "Integration with existing infrastructure",
-      "Full technical documentation",
+      "Scored deals routed into your pipeline",
+      "First-touch outreach in your name",
+      "The numbers you need to offer with confidence",
+      "Signals on which sellers are ready to move",
     ],
   },
   {
     number: "04",
-    title: "Operate",
+    title: "Close and compound",
     description:
-      "After launch, we stay on. We monitor performance, watch for model drift and data shifts, and make adjustments over time. We check in quarterly to review how things are running and flag anything that needs attention.",
+      "You make the calls and close the deals. We get paid on the deal and at no other time, so our incentive is your next closing. We keep sourcing, keep scoring, and keep the sharpest models current in your market, so the edge compounds instead of aging out.",
     deliverables: [
-      "Performance monitoring dashboards",
-      "Drift detection and alerting",
-      "Quarterly reviews and optimization",
-      "Team training and knowledge transfer",
+      "You close, we get paid only then",
+      "A steady flow of new sourced opportunities",
+      "The frontier kept current in your deals",
+      "A partner who stays as long as the deals do",
     ],
   },
 ];

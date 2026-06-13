@@ -59,7 +59,7 @@ export function AgentFlowDiagram() {
           {[
             { label: "You prompt it", icon: "person" },
             { label: "It writes one reply", icon: "text" },
-            { label: "You forget to follow up", icon: "stop", muted: true },
+            { label: "The lead goes cold", icon: "stop", muted: true },
           ].map((step, i) => (
             <div key={step.label} className="flex flex-col items-center w-full max-w-[220px]">
               <motion.div
@@ -174,11 +174,11 @@ export function AgentFlowDiagram() {
 
         <div className="px-6 py-7 flex flex-col gap-0 items-center relative">
           {[
-            { label: "New lead arrives", icon: "goal" },
-            { label: "Writes follow-up in minutes", icon: "write" },
-            { label: "Schedules next touch", icon: "schedule" },
+            { label: "Spots an off-market deal", icon: "goal" },
+            { label: "Pulls comps, runs the numbers", icon: "write" },
+            { label: "Reaches out, schedules next touch", icon: "schedule" },
             { label: "Checks in before anything risky", icon: "check" },
-            { label: "Routes hot leads to you", icon: "route", accent: true },
+            { label: "Routes the best deals to you", icon: "route", accent: true },
           ].map((step, i) => (
             <div key={step.label} className="flex flex-col items-center w-full max-w-[240px]">
               <motion.div
@@ -265,7 +265,7 @@ export function AgentFlowDiagram() {
             className="mt-5 font-mono text-[10px] uppercase tracking-[0.2em]"
             style={{ color: "var(--color-accent)" }}
           >
-            On its own, while you&rsquo;re showing homes
+            On its own, while you&rsquo;re closing deals
           </motion.p>
         </div>
       </div>

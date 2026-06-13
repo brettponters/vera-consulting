@@ -73,7 +73,7 @@ export default async function ForVerticalPage({
         description: v.metaDescription,
         url: canonicalUrl,
         provider: { "@id": "https://veraconsulting.co/#org" },
-        serviceType: "AI Consulting",
+        serviceType: "Real estate deal sourcing",
         audience: {
           "@type": "BusinessAudience",
           name: v.marqueeLabel,
@@ -141,7 +141,7 @@ export default async function ForVerticalPage({
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Button href="/contact" variant="filled" size="lg" arrow>
-                Book a call
+                Become a partner
               </Button>
               <Button href="/" variant="ghost" size="lg" arrow>
                 See how it works
@@ -160,7 +160,7 @@ export default async function ForVerticalPage({
                 The read
               </p>
               <p className="font-sans font-black text-[var(--color-heading)] text-base md:text-lg tracking-[-0.01em] leading-snug">
-                A practitioner&rsquo;s view of what AI actually changes for {labelLower}.
+                Where AI finds the edge in deals and leads for {labelLower}.
               </p>
             </div>
             <div className="md:col-span-9 md:col-start-4">
@@ -191,13 +191,13 @@ export default async function ForVerticalPage({
         <Container size="wide">
           <div className="max-w-[820px] mb-10 md:mb-14">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-3">
-              What eats your week
+              What slows the deal flow
             </p>
             <h2
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.03em] leading-[1.05]"
               style={{ fontSize: "clamp(1.875rem, 3.5vw, 2.75rem)" }}
             >
-              The drag is real. The fix is workflow, not effort.
+              The drag is real. The fix is better signal, not more hours.
             </h2>
           </div>
           <ul className="max-w-[920px] list-none m-0 p-0 border-t border-[var(--color-hairline)]">
@@ -232,7 +232,7 @@ export default async function ForVerticalPage({
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.03em] leading-[1.05]"
               style={{ fontSize: "clamp(1.875rem, 3.5vw, 2.75rem)" }}
             >
-              Specific moments in your week, after.
+              Specific moments in your pipeline, after.
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14">
@@ -307,13 +307,13 @@ export default async function ForVerticalPage({
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
             <div className="md:col-span-4">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-accent)] font-semibold mb-3">
-                The engagement
+                The partnership
               </p>
               <h2
                 className="font-sans font-black text-[var(--color-heading)] tracking-[-0.03em] leading-[1.05]"
                 style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}
               >
-                How we actually work with {labelLower}.
+                How we actually partner with {labelLower}.
               </h2>
             </div>
             <div className="md:col-span-7 md:col-start-6">
@@ -433,15 +433,15 @@ export default async function ForVerticalPage({
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.03em] leading-[1.05] mb-6"
               style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
             >
-              Want this running in your practice?
+              Want this running in your pipeline?
             </h2>
             <p className="font-sans font-medium text-[var(--color-body)] text-base md:text-lg leading-snug mb-8">
-              30 minutes on the phone. We scope which workflow to ship first
-              and what it costs. You leave with a sharper view, even if you do
-              not hire us.
+              30 minutes on the phone. We scope where the edge is in your deals
+              and leads, and which one to chase first. No retainer, no hourly.
+              We make money only when you close.
             </p>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Book a call
+              Become a partner
             </Button>
           </div>
         </Container>

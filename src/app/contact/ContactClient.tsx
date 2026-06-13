@@ -106,7 +106,7 @@ export default function ContactClient() {
                     : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
                 }`}
               >
-                Book a call
+                Become a partner
               </button>
               <button
                 type="button"

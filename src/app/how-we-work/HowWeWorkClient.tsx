@@ -11,39 +11,39 @@ import { PHASES } from "./phases";
 
 const WHAT_YOU_GET = [
   {
-    label: "Strategy",
+    label: "Deals",
     items: [
-      "A clear picture of what AI can and can't do for you",
-      "Prioritized use cases ranked by impact",
-      "Architecture that fits your existing stack",
-      "A regulatory roadmap so nothing surprises you",
+      "Off-market deals matched to your buy box",
+      "Motivated seller leads scored and prioritized",
+      "Markets and properties read before the crowd",
+      "Numbers run fast so you can move first",
     ],
   },
   {
-    label: "Integration",
+    label: "Pipeline",
     items: [
-      "AI systems running in production",
-      "Agents that work within your workflows",
-      "Evaluation frameworks so you know it's working",
-      "Guardrails, monitoring, and policy documentation that holds up to audit",
+      "A steady flow of sourced opportunities",
+      "Leads routed straight into your workflow",
+      "Comps, ARV, and rehab math on every deal",
+      "Signals on which sellers are ready to move",
     ],
   },
   {
-    label: "Coaching",
+    label: "Partnership",
     items: [
-      "1:1 weekly working sessions tailored to your business",
-      "Frameworks for evaluating AI tools without getting sold",
-      "Practice on your real workflows, not toy examples",
-      "Conviction by the end of the engagement, not slides",
+      "Performance-based, no retainer or hourly",
+      "We win only when you close",
+      "No paying to try, no software to babysit",
+      "The frontier kept current in your deals every week",
     ],
   },
   {
-    label: "Ownership",
+    label: "Edge",
     items: [
-      "Your team trained on every system",
-      "Full knowledge transfer, nothing held back",
-      "Documentation that doesn't collect dust",
-      "Ongoing advisory if you want it",
+      "The sharpest AI models, run by our team",
+      "An edge that compounds instead of aging out",
+      "Direction on where the next deals are coming from",
+      "A partner who stays as long as the deals do",
     ],
   },
 ];
@@ -76,15 +76,15 @@ export default function HowWeWorkClient() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               >
-                You should know exactly what you're getting and how we get there.
+                You should know exactly how the deals reach you and how we both win.
               </motion.span>
             </h1>
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[640px]">
-                Every engagement follows the same structure. We wrote it
+                Every partnership follows the same structure. We wrote it
                 down so you can see exactly what happens, when, and what
-                you walk away with at each step.
+                deals you get out of each step.
               </p>
             </Reveal>
           </div>
@@ -99,7 +99,7 @@ export default function HowWeWorkClient() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-16 md:mb-20">
-              How an engagement works.
+              How the partnership works.
             </h2>
           </Reveal>
 
@@ -157,7 +157,7 @@ export default function HowWeWorkClient() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-12 md:mb-16 max-w-xl">
-              What&rsquo;s yours when we&rsquo;re done.
+              What you get from the partnership.
             </h2>
           </Reveal>
 
@@ -194,23 +194,24 @@ export default function HowWeWorkClient() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-sans font-semibold text-3xl md:text-4xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-10">
-                Why it works this way.
+                Why a partner, not a tool.
               </h2>
             </Reveal>
 
             <Reveal delay={0.12}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-                The same people who write the strategy are the ones
-                who integrate it. That way the plan reflects what&rsquo;s
-                actually possible, and the integration follows the plan.
+                The technology moves every week. A tool you buy or a
+                subscription you pay for is behind the day it arrives. A
+                partner who stays at the frontier and puts what they find
+                into your deals is the only thing that keeps compounding.
               </p>
             </Reveal>
 
             <Reveal delay={0.18}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-10">
-                When the engagement ends, your team runs the system.
-                They were part of the whole process, so there&rsquo;s
-                no handoff gap. Everything is documented and tested.
+                We win only when you close, so our incentives sit on the
+                same side as yours. No retainer, no hourly, no paying to
+                try. We get paid when the deal does.
               </p>
             </Reveal>
 
@@ -277,13 +278,13 @@ export default function HowWeWorkClient() {
             </Reveal>
             <Reveal delay={0.05}>
               <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-8">
-                Book a call and we&rsquo;ll walk through where you are
+                Become a partner and we&rsquo;ll walk through where you are
                 and what might make sense.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
               <Button href="/contact" variant="filled" size="lg" arrow>
-                Book a call
+                Become a partner
               </Button>
             </Reveal>
           </div>

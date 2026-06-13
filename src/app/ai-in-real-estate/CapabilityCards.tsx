@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 /**
- * Six AI capabilities for real estate agents.
+ * Six AI capabilities for real estate and real estate investing.
  * Each card: custom minimal SVG line icon + layered editorial treatment.
  * Staggered scroll-reveal. Compositor-friendly (transform + opacity only).
  */
@@ -102,45 +102,45 @@ function IconExperience() {
 
 const CAPABILITIES: Capability[] = [
   {
-    key: "marketing",
+    key: "research",
     num: "01",
-    title: "Content & marketing",
-    body: "Listing copy, just-listed and just-sold posts, and your newsletter, in your voice.",
-    icon: <IconMarketing />,
+    title: "Off-market deal sourcing",
+    body: "Off-market properties, distressed and motivated-seller signals, surfaced before they hit the market.",
+    icon: <IconResearch />,
   },
   {
     key: "followups",
     num: "02",
-    title: "Client follow-ups",
-    body: "New leads answered in minutes, the slow ones nudged, your sphere kept warm.",
+    title: "Motivated-seller leads",
+    body: "Seller leads answered in minutes, the slow ones nudged, your buyer and seller lists kept warm.",
     icon: <IconFollowUp />,
   },
   {
-    key: "research",
+    key: "showings",
     num: "03",
-    title: "Market & property research",
-    body: "Comps, property history, neighborhood and compliance, pulled into one brief.",
-    icon: <IconResearch />,
+    title: "Comps, ARV & underwriting",
+    body: "Comps, repair estimates, and rent or flip math run against your buy box, so you know the number fast.",
+    icon: <IconShowings />,
+  },
+  {
+    key: "marketing",
+    num: "04",
+    title: "Listing & disposition marketing",
+    body: "Listing copy, just-listed and just-sold posts, and dispo blasts to your buyer list, in your voice.",
+    icon: <IconMarketing />,
   },
   {
     key: "contracts",
-    num: "04",
+    num: "05",
     title: "Contracts & compliance",
     body: "Paperwork prepped, signatures chased, disclosures and code flagged.",
     icon: <IconContracts />,
   },
   {
-    key: "showings",
-    num: "05",
-    title: "Showings & scheduling",
-    body: "Booked, routed, with feedback collected and summarized after.",
-    icon: <IconShowings />,
-  },
-  {
     key: "experience",
     num: "06",
-    title: "Client experience",
-    body: "Instant answers and proactive updates, so every client feels like your only one.",
+    title: "Client & seller experience",
+    body: "Instant answers and proactive updates, so every client and seller feels like your only one.",
     icon: <IconExperience />,
   },
 ];

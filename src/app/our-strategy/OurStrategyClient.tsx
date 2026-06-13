@@ -62,8 +62,8 @@ export default function OurStrategyClient() {
                 }}
                 className="block"
               >
-                Coaching, Strategy{" "}
-                <span className="text-[var(--color-accent)]">&amp;</span>
+                We find the{" "}
+                <span className="text-[var(--color-accent)]">deals.</span>
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 24 }}
@@ -75,23 +75,24 @@ export default function OurStrategyClient() {
                 }}
                 className="block"
               >
-                Integration.
+                You close them.
               </motion.span>
             </h1>
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[660px] mb-10">
-                How we help real estate agents and brokers get fluent in AI on
-                the work they already do. Three things: weekly 1:1
-                coaching, a strategy for which workflows are worth
-                building, and the integration to actually ship them.
+                We are an intelligence partner for real estate and real estate
+                investing. We source off-market deals, surface motivated-seller
+                leads, read markets and properties before the crowd, and run
+                the numbers fast. We make money only when you close. No
+                retainer, no hourly, no paying to try.
               </p>
             </Reveal>
 
             <Reveal delay={0.5}>
               <div className="flex flex-wrap items-center gap-4">
                 <Button href="/contact" variant="filled" size="lg" arrow>
-                  Book a call
+                  Become a partner
                 </Button>
                 <a
                   href="/strategy-guide.pdf"
@@ -161,14 +162,13 @@ export default function OurStrategyClient() {
                   <div className="w-[3px] bg-[var(--color-accent)] rounded-sm shrink-0" />
                   <div>
                     <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed mb-5">
-                      &ldquo;I started VERA because AI is going to change
-                      how real estate is done at an unprecedented pace, and
-                      agents whose businesses run on relationships are the
-                      ones with the most to gain and the most to lose. We
-                      use AI to strengthen what agents already do well, pick
-                      the workflows worth building instead of the ten that
-                      look good in a demo, and stay honest about both the
-                      risks and the opportunities ahead.&rdquo;
+                      &ldquo;I started VERA because AI is changing how real
+                      estate gets done at an unprecedented pace, and the edge
+                      is moving to whoever finds the deal first. We run the
+                      smartest models in the world to source off-market
+                      properties, surface motivated sellers, and read markets
+                      before the crowd. We put that edge into our partners&rsquo;
+                      deals, and we only get paid when they close.&rdquo;
                     </p>
                     <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
                       Founder, VERA Consulting
@@ -204,19 +204,19 @@ export default function OurStrategyClient() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-sans font-semibold text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] text-[var(--color-heading)] leading-[1.05] mb-6">
-                Want to talk through your situation?
+                Want more deals in your pipeline?
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] mb-10">
-                Book a call and we&rsquo;ll walk through where you are and
-                what might make sense.
+                Become a partner and we&rsquo;ll walk through your market, your
+                buy box, and the deals we can source for you.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Button href="/contact" variant="filled" size="lg" arrow>
-                  Book a call
+                  Become a partner
                 </Button>
                 <a
                   href="/strategy-guide.pdf"

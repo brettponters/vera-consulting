@@ -1,5 +1,5 @@
 /**
- * About section copy — founder-forward, home page.
+ * About section copy, founder-forward, home page.
  * TODO: founder to supply:
  *   - Real name (replace [Founder Name])
  *   - Years in prior field (replace [N years])
@@ -13,17 +13,17 @@ export const about = {
   // TODO: founder to confirm real name
   founderName: "[Founder Name]",
 
-  // TODO: founder photo — replace src in About.tsx with real path
+  // TODO: founder photo, replace src in About.tsx with real path
   founderPhotoSrc: "/founder-placeholder.jpg",
 
   // ~95 words, first-person, calm, risk-forward by being plain.
   // Bracketed items need founder confirmation. Do NOT invent specifics.
   paragraph:
-    "I'm [Founder Name]. Before VERA, I spent [N years] in [the field I worked in] — including [prior role at firm] — where I watched organizations make high-stakes decisions on AI systems they didn't fully understand. I started VERA because that gap has real costs, and closing it requires someone who has done the reading and will tell you the truth. I take a small number of engagements each year. The work is hands-on. I write the strategy, integrate the systems, and stay accountable to what they produce.",
+    "I'm [Founder Name]. Before VERA, I spent [N years] in [the field I worked in], including [prior role at firm], where I watched the people running the sharpest AI models find the opportunities first. I started VERA to put that edge into real estate deals. We source off-market deals and motivated seller leads, run the numbers fast, and partner on performance. We make money only when you close.",
 
-  // Keep verbatim — set by foundation.
+  // Keep verbatim, set by foundation.
   pbcStatement:
-    "VERA is incorporated as a Public Benefit Corporation. 5% of net consulting revenue is committed annually to independent AI safety research, in our charter.",
+    "VERA is incorporated as a Public Benefit Corporation. 5% of net revenue is committed annually to independent AI safety research, in our charter.",
 
   moreLink: {
     label: "More about VERA →",

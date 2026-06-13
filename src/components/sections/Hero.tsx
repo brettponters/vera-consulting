@@ -49,7 +49,8 @@ export default function Hero() {
           <Reveal delay={0}>
             <div className="mb-5">
               <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
-                Agentic AI · Public Benefit Corporation
+                A performance-based intelligence partner · Public Benefit
+                Corporation
               </p>
             </div>
           </Reveal>
@@ -91,9 +92,9 @@ export default function Hero() {
 
           <Reveal delay={0.55}>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[640px] mb-2">
-              We believe this revolutionary technology can bring you more
-              clients, lower costs, and wider reach, without ever losing what
-              makes you&hellip; you.
+              We find the off-market deals, the motivated sellers, and the edge
+              in a market before the crowd sees it. We only make money when you
+              close.
             </p>
           </Reveal>
         </div>

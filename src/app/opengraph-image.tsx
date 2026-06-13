@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "VERA, AI Strategy, Integration & Coaching";
+export const alt = "VERA, AI for off-market deals and motivated seller leads";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -68,7 +68,7 @@ export default function OpengraphImage() {
               maxWidth: 1000,
             }}
           >
-            AI that's powerful, accountable, and designed to last.
+Find the deals first. We earn when you close.
           </div>
           <div
             style={{
@@ -79,11 +79,11 @@ export default function OpengraphImage() {
               color: "#5C5C66",
             }}
           >
-            <span>AI Strategy</span>
+            <span>Off-Market Deals</span>
             <span style={{ color: "#C97B3F" }}>·</span>
-            <span>Integration</span>
+            <span>Seller Leads</span>
             <span style={{ color: "#C97B3F" }}>·</span>
-            <span>Coaching</span>
+            <span>Partnership</span>
           </div>
         </div>
 

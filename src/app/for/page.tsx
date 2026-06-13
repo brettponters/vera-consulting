@@ -4,14 +4,14 @@ import { Container } from "@/components/ui/Container";
 import { VERTICALS } from "@/data/verticals";
 
 export const metadata: Metadata = {
-  title: "Real Estate AI by Niche",
+  title: "AI for Real Estate Investors and Agents by Strategy",
   description:
-    "Agentic AI for real estate agents, by niche. Find the workflows that fit your line of business: residential, listing, buyer's, luxury, commercial, or investor-focused.",
+    "AI for real estate investors and agents, by strategy. Off-market deal sourcing, motivated seller leads, fix and flip analysis for wholesalers, flippers, landlords, land, and agents.",
   alternates: { canonical: "/for" },
   openGraph: {
-    title: "Real Estate AI by Niche, VERA",
+    title: "AI for Real Estate Investors and Agents, VERA",
     description:
-      "Pick your niche. See what we build for real estate agents, teams, and brokers.",
+      "Pick your strategy. See the edge VERA delivers on off-market deals and motivated seller leads for investors, agents, teams, and brokers.",
     url: "https://veraconsulting.co/for",
     type: "website",
     images: ["/opengraph-image"],
@@ -70,11 +70,12 @@ export default function ForIndexPage() {
               className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-8"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
-              Pick your niche.
+              Pick your strategy.
             </h1>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[760px]">
-              We work with real estate agents, teams, and brokers.
-              Find the workflows that fit your line of business.
+              Wholesale, fix and flip, buy and hold, land, agents and teams.
+              See the edge VERA delivers on off-market deals and motivated
+              seller leads for your strategy.
             </p>
           </div>
         </Container>

@@ -22,13 +22,13 @@ const STATS = [
   {
     value: 25,
     suffix: "%",
-    label: "have governance frameworks robust enough to match adoption pace",
+    label: "of teams using AI have any real frame for how they use it",
     source: "Grant Thornton, 2026",
   },
   {
     value: 78,
     suffix: "%",
-    label: "of executives lack confidence they could pass an AI governance audit",
+    label: "of leaders say they are not getting the value they expected from AI",
     source: "Grant Thornton, 2026",
   },
   {
@@ -80,20 +80,20 @@ function CountUp({
 
 const COPY = [
   {
-    head: "AI is already in your clients' world",
-    body: "88% of organizations now use AI in at least one business function. The Fortune 500 has standardized on it. Your clients are reading the same headlines you are, and they are starting to ask what you are doing with it. The bar for a real estate agent has moved.",
+    head: "AI is already moving real estate",
+    body: "88% of organizations now use AI in at least one business function. The biggest firms have standardized on it. In real estate that means the edge is moving to whoever finds the deal first, prices it fastest, and reaches the seller before anyone else. The bar has moved.",
   },
   {
     head: "Most of it is shallow",
-    body: "Adoption raced ahead of judgment. Only a quarter of teams using AI have any real frame for how they use it, and roughly three quarters of the people running them admit they could not defend their AI practice if a client asked. That gap is the opening. The agents who think carefully about how they use AI look very different from the ones bolting it on.",
+    body: "Adoption raced ahead of judgment. Only a quarter of teams using AI have any real frame for how they use it. Most investors and agents are still buying lists everyone else has and running the same tired prompts. That gap is the opening. Sourcing off-market deals with real intelligence looks nothing like bolting a chatbot onto your CRM.",
   },
   {
-    head: "Regulation is catching up",
-    body: "The EU AI Act is in effect. U.S. states are passing AI-specific laws. NIST has published its AI Risk Management Framework. None of this targets solo practices directly, but the standards your clients sign contracts under are tightening. Knowing what is coming is part of looking like a serious professional.",
+    head: "The technology moves every week",
+    body: "New models, new data sources, new ways to find motivated sellers ship constantly. A tool you buy is behind the day it arrives. A partner who stays at the frontier and puts what they find into your deals is the only thing that keeps compounding. That is the difference between a tool and a partner.",
   },
   {
-    head: "Small bets, big difference",
-    body: "Global AI spending is $2.5 trillion and climbing 44% a year. Most of that is being spent badly. For a one-person practice, the question is not how much to spend. It is which two or three workflows, used well, change how much work you can take on without hiring.",
+    head: "Small edges, real money",
+    body: "Global AI spending is $2.5 trillion and climbing 44% a year. Most of it is spent badly. For an investor or agent, the question is not how much software to buy. It is which off-market deals and motivated-seller leads actually land in your pipeline, and what they close for.",
   },
 ];
 
@@ -107,9 +107,9 @@ export function StrategyLandscape() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-sans font-semibold text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] text-[var(--color-heading)] leading-[1.05]">
-              The adoption is here.{" "}
+              The edge is here.{" "}
               <span className="text-[var(--color-muted)]">
-                The infrastructure isn&rsquo;t.
+                Most of the market is missing it.
               </span>
             </h2>
           </Reveal>

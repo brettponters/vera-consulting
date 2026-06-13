@@ -2,7 +2,7 @@
  * Three Shapes section copy.
  *
  * Each shape.description is a verb-led sentence, ~22–28 words, in studio voice.
- * Written for a regulated-industry buyer (finance, healthcare, legal, B2B SaaS).
+ * Written for real estate investors and agents sourcing off-market deals.
  *
  * TODO (founder to review and confirm): all three one-liners below are drafts.
  * Replace with your final language before launch.
@@ -15,27 +15,27 @@ export interface Shape {
 }
 
 export const threeShapes = {
-  h2: "Three shapes. Sized to the work.",
-  closing: "Most engagements start with a Strategy conversation.",
+  h2: "Source. Analyze. Close.",
+  closing: "Most partnerships start with a call about your buy box.",
 
   shapes: [
     {
-      name: "Strategy",
+      name: "Source",
       // founder to review and confirm
       description:
-        "Assess your current AI surface area against what regulators, auditors, and your own leadership team will need to see — and give you a written plan worth acting on.",
+        "Run the smartest models in the world across the data most investors never touch, and hand you off-market deals and motivated sellers matched to your buy box.",
     },
     {
-      name: "Integrate",
+      name: "Analyze",
       // founder to review and confirm
       description:
-        "Design and ship a custom AI system — scoped small enough to monitor, documented well enough to defend, and tested for the failure modes that matter in your operation.",
+        "Run ARV, rehab, rent, and exit math in minutes, backed by real data, so you can make an offer with confidence instead of guessing at the numbers.",
     },
     {
-      name: "Steward",
+      name: "Close",
       // founder to review and confirm
       description:
-        "Stay alongside your team through the first year a system runs in production, handling the reviews, adjustments, and incidents that determine whether it holds up.",
+        "Keep your pipeline full while you make the offers and close the deals, staying at the frontier of the models and getting paid only when you win.",
     },
   ] satisfies Shape[],
 } as const;

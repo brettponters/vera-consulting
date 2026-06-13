@@ -17,14 +17,13 @@ export function FounderVision() {
               <div className="w-[3px] bg-[var(--color-navy)] rounded-sm shrink-0" />
               <div>
                 <p className="font-sans italic text-xl md:text-2xl text-[var(--color-heading)] leading-relaxed mb-6">
-                  &ldquo;We started VERA because AI is going to change
-                  knowledge work at an unprecedented pace, and the people
-                  whose businesses run on trust are the ones with
-                  the most to gain. We believe in using AI to strengthen
-                  what people already do well, picking the workflows worth
-                  building instead of the ten that look good in a deck, and
-                  being honest about both the risks and the opportunities
-                  ahead.&rdquo;
+                  &ldquo;We started VERA because the best AI moves faster than
+                  any real estate business can keep up with on its own, and the
+                  edge it creates, finding off-market deals, reading a market
+                  early, going to the right seller first, goes to whoever has it
+                  working in their deals today. We stay at the frontier, put
+                  what we find to work, and only make money when our partners
+                  close.&rdquo;
                 </p>
                 <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
                   VERA Consulting

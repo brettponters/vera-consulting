@@ -3,22 +3,22 @@
  * TODO: founder to supply:
  *   - Real name (replace [Founder Name])
  *   - Calendar URL (replace #schedule placeholder)
- *   - Confirm email address (currently founder@rain.studio — mark as unverified)
+ *   - Confirm email address (currently founder@rain.studio, mark as unverified)
  */
 
 export const bookACall = {
-  h2: "Book a call.",
+  h2: "Become a partner.",
 
   body: [
     "Calls are 30 minutes.",
-    "We talk about what you're trying to do, what you've tried, and what would actually help.",
+    "We talk about the deals you're chasing, where leads dry up, and whether we can find you an edge.",
     "No deck. No pitch. If we're not the right fit, we'll say so.",
   ],
 
   scheduleLink: {
     // TODO: founder to confirm real name
     label: "Schedule a call with [Founder Name] →",
-    // TODO: founder calendar URL — do not replace with a real Calendly/Cal.com URL until confirmed
+    // TODO: founder calendar URL, do not replace with a real Calendly/Cal.com URL until confirmed
     href: "#schedule",
   },
 

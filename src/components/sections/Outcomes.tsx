@@ -4,30 +4,30 @@ import { Button } from "@/components/ui/Button";
 
 const SEGMENTS = [
   {
-    eyebrow: "Short-term rentals",
-    headline: "Higher RevPAR. Fewer 11pm guest messages.",
-    outcomes: [
-      "Dynamic pricing tuned to your market",
-      "Guest replies in your voice in 30 seconds",
-      "Review responses that don't sound like a bot",
-    ],
-  },
-  {
     eyebrow: "Wholesale",
     headline: "Same lists. 2 to 3x the deals.",
     outcomes: [
-      "AI voice agents on inbound seller calls",
+      "Motivated-seller leads scored before you call",
       "Day 1 through 90 follow-up that actually runs",
-      "Dispo that matches buyers to assignments",
+      "Dispo that matches assignments to cash buyers",
     ],
   },
   {
-    eyebrow: "Multifamily",
-    headline: "Lower opex. Higher conversion.",
+    eyebrow: "Fix & flip",
+    headline: "Off-market deals first. Numbers in seconds.",
     outcomes: [
-      "Leasing AI that doesn't lose a 9pm tour",
-      "Delinquency outreach without burning trust",
-      "Fair housing audits on every system",
+      "Off-market properties sourced and ranked daily",
+      "ARV, repairs, and margin run before you offer",
+      "Comps pulled the moment a lead comes in",
+    ],
+  },
+  {
+    eyebrow: "Agents & teams",
+    headline: "More listings. Fewer leads dropped.",
+    outcomes: [
+      "Seller leads worked the minute they come in",
+      "Listing prospects surfaced before they list",
+      "Follow-up that runs without you remembering",
     ],
   },
 ];
