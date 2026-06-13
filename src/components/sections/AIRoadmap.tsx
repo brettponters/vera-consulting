@@ -330,7 +330,7 @@ function CapabilityBand({
                     <span
                       aria-hidden="true"
                       className="mt-[10px] h-[6px] w-[6px] rounded-full shrink-0"
-                      style={{ backgroundColor: "var(--color-accent)" }}
+                      style={{ backgroundColor: "var(--color-heading)" }}
                     />
                     <span className="font-sans font-semibold text-[var(--color-heading)] text-[15px] md:text-[16px] leading-snug">
                       {ex}
@@ -435,10 +435,11 @@ export function AIRoadmap() {
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.035em] leading-[0.92] m-0 max-w-[1100px]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 6rem)" }}
             >
-              <span style={{ color: "var(--color-accent)" }}>
-                &ldquo;Intelligence&rdquo;
-              </span>{" "}
+              <span style={{ color: "var(--color-accent)" }}>Intelligence</span>{" "}
               as a Service
+              <span aria-hidden="true" style={{ color: "var(--color-accent)" }}>
+                .
+              </span>
             </motion.h2>
 
             <motion.p
