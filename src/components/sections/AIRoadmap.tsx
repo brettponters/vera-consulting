@@ -435,7 +435,9 @@ export function AIRoadmap() {
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.035em] leading-[0.92] m-0 max-w-[1100px]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 6rem)" }}
             >
-              <span style={{ color: "var(--color-accent)" }}>Intelligence</span>{" "}
+              <span style={{ color: "var(--color-accent)" }}>
+                &ldquo;Intelligence&rdquo;
+              </span>{" "}
               as a Service
             </motion.h2>
 
