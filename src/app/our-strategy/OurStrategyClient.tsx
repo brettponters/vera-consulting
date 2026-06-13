@@ -171,7 +171,7 @@ export default function OurStrategyClient() {
                       deals, and we only get paid when they close.&rdquo;
                     </p>
                     <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
-                      Founder, VERA Consulting
+                      Founder, VERA Solutions
                     </div>
                     <div className="font-sans text-xs text-[var(--color-muted)] mt-0.5">
                       Public Benefit Corporation

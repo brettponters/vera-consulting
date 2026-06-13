@@ -41,7 +41,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
   "@id": `${SITE_URL}/#org`,
-  name: "VERA Consulting",
+  name: "VERA Solutions",
   description: "AI for real estate investors and agents. VERA sources off-market deals, surfaces motivated seller leads, reads markets before the crowd, and runs the numbers fast. A performance partnership: we earn only when you close. Boca Raton, FL.",
   url: SITE_URL,
   email: "brett@veraconsulting.co",

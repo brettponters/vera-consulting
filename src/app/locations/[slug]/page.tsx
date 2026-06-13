@@ -81,7 +81,7 @@ export default async function LocationPage({
       {
         "@type": "ProfessionalService",
         "@id": `${canonicalUrl}#business`,
-        name: "VERA Consulting",
+        name: "VERA Solutions",
         description: `Off-market deal sourcing and motivated seller leads for ${loc.city} real estate investors and agents, on a performance-based partnership.`,
         url: canonicalUrl,
         telephone: "+1-561-900-8182",

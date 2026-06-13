@@ -20,7 +20,7 @@ export function GET() {
       `- [AI for real estate in ${l.city}, ${l.state}](${SITE}/locations/${l.slug}): ${l.blurb}`,
   ).join("\n");
 
-  const body = `# VERA Consulting
+  const body = `# VERA Solutions
 
 > VERA is an intelligence partner for real estate and real estate investing. We find the edge: sourcing off-market deals, surfacing motivated-seller leads, reading markets and properties before the crowd, and running the numbers fast. A founder-led Public Benefit Corporation based in Boca Raton, Florida.
 

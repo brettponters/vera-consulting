@@ -65,8 +65,8 @@ const articleJsonLd = {
   description:
     "A practical guide to AI for real estate and real estate investors: sourcing off-market deals and motivated-seller leads, comps and underwriting, agent workflows, the Fair Housing and data risks, and where to start.",
   url: `${SITE_URL}/ai-in-real-estate`,
-  author: { "@type": "Organization", name: "VERA Consulting", url: SITE_URL },
-  publisher: { "@type": "Organization", name: "VERA Consulting", url: SITE_URL },
+  author: { "@type": "Organization", name: "VERA Solutions", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "VERA Solutions", url: SITE_URL },
   datePublished: "2026-05-31",
   dateModified: "2026-05-31",
   inLanguage: "en-US",

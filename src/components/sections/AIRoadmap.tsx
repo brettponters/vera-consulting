@@ -423,7 +423,7 @@ export function AIRoadmap() {
               className="font-mono text-[10px] uppercase tracking-[0.28em] font-semibold mb-5 md:mb-7"
               style={{ color: "var(--color-navy)" }}
             >
-              What we bring you
+              Intelligence as a Service
             </p>
 
             <motion.h2
