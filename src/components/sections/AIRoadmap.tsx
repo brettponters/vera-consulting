@@ -423,7 +423,7 @@ export function AIRoadmap() {
               className="font-mono text-[10px] uppercase tracking-[0.28em] font-semibold mb-5 md:mb-7"
               style={{ color: "var(--color-navy)" }}
             >
-              Intelligence as a Service
+              What we bring you
             </p>
 
             <motion.h2
@@ -435,12 +435,8 @@ export function AIRoadmap() {
               className="font-sans font-black text-[var(--color-heading)] tracking-[-0.035em] leading-[0.92] m-0 max-w-[1100px]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 6rem)" }}
             >
-              We find the{" "}
-              <span className="italic font-light">edge</span>. You close the
-              deal
-              <span aria-hidden="true" style={{ color: "var(--color-accent)" }}>
-                .
-              </span>
+              <span style={{ color: "var(--color-accent)" }}>Intelligence</span>{" "}
+              as a Service
             </motion.h2>
 
             <motion.p
