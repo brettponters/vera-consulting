@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import OurStrategyClient from "./OurStrategyClient";
 
 export const metadata: Metadata = {
-  title: "Off-Market Deal Sourcing & AI for Real Estate Investors",
+  title: "AI Strategy for Real Estate Wholesalers | VERA",
   description:
-    "How VERA sources off-market deals and motivated seller leads for real estate investors and agents. A performance partnership: we win when you close. Boca Raton, FL.",
+    "How VERA sources deals by your criteria, underwrites every contract, and finds the buyer. A JV partnership for real estate wholesalers. We only win when you close.",
   alternates: { canonical: "/our-strategy" },
   openGraph: {
-    title: "Off-Market Deal Sourcing for Real Estate Investors | VERA",
+    title: "AI Strategy for Real Estate Wholesalers | VERA",
     description:
-      "How VERA sources off-market deals and motivated seller leads for real estate investors and agents. A performance partnership: we win when you close.",
+      "How VERA sources deals, underwrites contracts, and connects wholesalers with the right buyer. We JV on every deal and only win when you close.",
     url: "https://veraconsulting.co/our-strategy",
     type: "article",
     images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Off-Market Deal Sourcing for Real Estate Investors | VERA",
+    title: "AI Strategy for Real Estate Wholesalers | VERA",
     description:
-      "Off-market deals, motivated seller leads, and deal analysis for real estate investors, agents, and teams. We win when you close.",
+      "Deal sourcing, underwriting, and buyer matching for real estate wholesalers. We JV on every deal and only win when you close.",
   },
 };
 

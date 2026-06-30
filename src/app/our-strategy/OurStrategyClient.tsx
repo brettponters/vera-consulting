@@ -81,11 +81,10 @@ export default function OurStrategyClient() {
 
             <Reveal delay={0.4}>
               <p className="font-sans text-lg md:text-xl leading-relaxed text-[var(--color-body)] max-w-[660px] mb-10">
-                We are an intelligence partner for real estate and real estate
-                investing. We source off-market deals, surface motivated-seller
-                leads, read markets and properties before the crowd, and run
-                the numbers fast. We make money only when you close. No
-                retainer, no hourly, no paying to try.
+                We are an intelligence partner for real estate wholesalers. We
+                source deals by your criteria, underwrite every contract, and
+                connect you with the right buyer from our list. We JV on every
+                deal. No retainer, no upfront cost, nothing until you close.
               </p>
             </Reveal>
 
@@ -162,13 +161,12 @@ export default function OurStrategyClient() {
                   <div className="w-[3px] bg-[var(--color-accent)] rounded-sm shrink-0" />
                   <div>
                     <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed mb-5">
-                      &ldquo;I started VERA because AI is changing how real
-                      estate gets done at an unprecedented pace, and the edge
-                      is moving to whoever finds the deal first. We run the
-                      smartest models in the world to source off-market
-                      properties, surface motivated sellers, and read markets
-                      before the crowd. We put that edge into our partners&rsquo;
-                      deals, and we only get paid when they close.&rdquo;
+                      &ldquo;I started VERA because AI is changing how
+                      wholesale real estate gets done and the edge is moving
+                      fast. We source deals by your criteria, run the
+                      underwriting, and find the buyer from our list. We JV
+                      on every deal, so our incentive is simple: we only win
+                      when you close.&rdquo;
                     </p>
                     <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
                       Founder, VERA Solutions

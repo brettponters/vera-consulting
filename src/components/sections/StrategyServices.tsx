@@ -11,14 +11,14 @@ const SERVICES = [
     number: "01",
     title: "Deal Sourcing",
     description:
-      "Off-market deals matched to your buy box. We run the smartest models in the world across the data most investors never touch, then hand you properties before they hit the market. You get deals, not a dashboard.",
+      "Off-market deals found by your criteria. We pull fresh data county by county from our own maintained database, surface properties before they hit the market, and send you deals that already fit your market and your numbers.",
     includes: [
-      "Off-market and pre-MLS properties",
-      "Matched to your market and buy box",
-      "Wholesale, fix & flip, buy & hold, land",
+      "Off-market and pre-market properties",
+      "Matched to your market and criteria",
+      "Fresh data, county by county",
+      "Our own maintained database",
       "Delivered as deals, not raw lists",
       "Refreshed as new inventory surfaces",
-      "Priced to your numbers, not an auction",
     ],
   },
   {
@@ -32,28 +32,28 @@ const SERVICES = [
       "Skip-traced, verified contacts",
       "Outreach written to actually land",
       "Timed to when the seller is ready",
-      "Market and neighborhood read",
+      "Market and neighborhood reads",
     ],
   },
   {
     number: "03",
-    title: "Analysis & Disposition",
+    title: "Underwriting & Buyer Matching",
     description:
-      "The numbers, fast and defensible. We run ARV, rehab, rent, and exit math in minutes so you can make an offer with confidence, then help you move the deal, hold it, wholesale it, or flip it.",
+      "The numbers done, and the buyer found. We underwrite every contract fast so you know exactly what you have, then match it to the right buyer from our list so the assignment closes inside the inspection window.",
     includes: [
-      "ARV, rehab, and rent comps",
-      "Fix and flip deal analysis",
-      "Cash-flow and hold modeling",
-      "Offer math you can defend",
-      "Disposition and buyer matching",
+      "ARV and rehab modeling",
+      "Underwriting and deal math",
+      "Offer price you can defend",
+      "Buyer list matching",
+      "Assignment and disposition",
       "Numbers backed by real data",
     ],
   },
 ];
 
 const DIFFERENTIATORS = [
-  "We only get paid when you close",
-  "No retainer, no hourly, no paying to try",
+  "We JV on every deal",
+  "No retainer, no upfront cost",
   "Always at the frontier of the models",
   "A partner, not a tool you outgrow",
 ];

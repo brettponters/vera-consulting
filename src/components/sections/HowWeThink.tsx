@@ -28,9 +28,9 @@ const pillars: Pillar[] = [
   },
   {
     number: "02",
-    heading: "At the frontier",
+    heading: "Fresh data. Full service.",
     paragraphs: [
-      "The technology moves every week. We run the smartest models in the world and keep moving with them, so the edge you get compounds instead of aging out. A tool you buy is behind the day it arrives. A partner who stays at the frontier isn't.",
+      "The technology changes every week. We pull our data fresh, county by county, from our own maintained database. Not a shared list that is already six months old when you touch it. We stay at the frontier and put what we find into your deals: sourcing properties based on your criteria, running the underwriting, and finding the right buyer. We earn only when you close.",
     ],
   },
   {

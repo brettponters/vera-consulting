@@ -66,6 +66,12 @@ const nextConfig: NextConfig = {
         destination: '/for/buy-and-hold',
         permanent: true,
       },
+      // Individual city pages removed, one national page now at /locations.
+      {
+        source: '/locations/:slug+',
+        destination: '/locations',
+        permanent: true,
+      },
     ];
   },
 };

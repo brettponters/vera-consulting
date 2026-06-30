@@ -4,14 +4,14 @@ import { FAQ } from "./faq";
 import { PHASES } from "./phases";
 
 export const metadata: Metadata = {
-  title: "How VERA Works, AI for Real Estate Investors",
+  title: "How VERA Works | AI for Real Estate Wholesalers",
   description:
-    "How the VERA partnership works for real estate investors and agents: we source off-market deals and motivated seller leads, and we only earn when you close.",
+    "How the VERA partnership works for real estate wholesalers: we source deals by your criteria, underwrite every contract, and find the buyer. We JV on every deal.",
   alternates: { canonical: "/how-we-work" },
   openGraph: {
-    title: "How VERA Works, AI for Real Estate Investors",
+    title: "How VERA Works | AI for Real Estate Wholesalers",
     description:
-      "How a VERA partnership works for real estate investors and agents. We bring off-market deals and motivated seller leads, and win only when you close.",
+      "How the VERA JV partnership works for real estate wholesalers. Deal sourcing, underwriting, and buyer matching. We only win when you close.",
     url: "https://veraconsulting.co/how-we-work",
     type: "article",
     images: ["/opengraph-image"],

@@ -56,9 +56,9 @@ export default function Hero() {
           </Reveal>
 
           <h1
-            aria-label="Agentic AI Solutions for Real Estate."
+            aria-label="Agentic AI Solutions for Real Estate Wholesalers."
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
-            style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)" }}
+            style={{ fontSize: "clamp(2.5rem, 5.5vw, 5rem)" }}
           >
             <span aria-hidden="true" className="block">
               {LINE_ONE_WORDS.map((word, i) => (
@@ -86,15 +86,14 @@ export default function Hero() {
               className="block"
             >
               for{" "}
-              <span style={{ color: "var(--color-accent)" }}>Real Estate.</span>
+              <span style={{ color: "var(--color-accent)" }}>Real Estate Wholesalers.</span>
             </motion.span>
           </h1>
 
           <Reveal delay={0.55}>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[640px] mb-2">
-              We believe this revolutionary technology can bring you more
-              clients, lower costs, and wider reach, without ever losing what
-              makes you&hellip; you.
+              We can bring you more deals and buyers and better spreads, without
+              ever losing what makes you&hellip; you.
             </p>
           </Reveal>
         </div>

@@ -13,9 +13,9 @@ import { useTypewriter } from "@/hooks/useTypewriter";
 
 const BUSINESS_EXAMPLES = [
   "your name",
-  "your investing company",
-  "yourrealty.com",
-  "your brokerage",
+  "your wholesaling company",
+  "yourwebsite.com",
+  "your investing business",
 ];
 const PAIN_EXAMPLES = [
   "finding off-market deals is all manual",

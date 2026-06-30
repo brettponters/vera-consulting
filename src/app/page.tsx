@@ -9,14 +9,14 @@ import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "AI for Real Estate Investors & Agents | VERA",
+  title: "AI for Real Estate Wholesalers | VERA",
   description:
-    "Off-market real estate deals and motivated seller leads, found first. VERA is an AI deal sourcing partner for investors and agents. We earn only when you close. No retainer. Boca Raton, FL.",
+    "AI for real estate wholesalers. VERA sources deals by your criteria, underwrites every contract, and connects you with the right buyer. We JV on every deal. No retainer, nothing until you close.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "AI for Real Estate Investors & Agents | VERA",
+    title: "AI for Real Estate Wholesalers | VERA",
     description:
-      "Off-market real estate deals and motivated seller leads, found first. VERA is an AI deal sourcing partner for investors and agents. We earn only when you close. No retainer.",
+      "AI for real estate wholesalers. VERA sources deals by your criteria, underwrites every contract, and connects you with the right buyer. We JV on every deal.",
     type: "website",
     url: "https://veraconsulting.co",
     siteName: "VERA",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI for Real Estate Investors & Agents | VERA",
+    title: "AI for Real Estate Wholesalers | VERA",
     description:
-      "Off-market deals and motivated seller leads, found first. VERA is an AI deal sourcing partner for real estate investors and agents. We earn only when you close.",
+      "AI for real estate wholesalers. VERA sources deals, underwrites contracts, and finds the buyer. We JV on every deal. No retainer, nothing until you close.",
   },
 };
 

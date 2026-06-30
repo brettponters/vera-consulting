@@ -1,42 +1,41 @@
-import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Marquee } from "@/components/ui/Marquee";
-import { VERTICALS } from "@/data/verticals";
 
-/**
- * IndustriesMarquee, thin strip directly below Hero.
- * Mobile: swipeable. Desktop: animated marquee.
- *
- * Each item links to its vertical landing page at /for/[slug]
- * for the programmatic SEO play.
- */
+const SERVICES = [
+  "Deal sourcing",
+  "Underwriting",
+  "Buyer matching",
+  "Market reads",
+  "Off-market leads",
+  "Motivated seller scoring",
+  "ARV modeling",
+  "Cash buyer list",
+];
+
 export default function IndustriesMarquee() {
   return (
     <section
       className="mt-4 md:mt-10 py-6 md:py-10 border-t border-b border-[var(--color-hairline)]"
-      aria-label="Who we work with"
+      aria-label="What we do"
     >
       <Container size="wide">
         <p className="font-sans font-medium text-xs uppercase tracking-[0.12em] text-[var(--color-muted)] mb-4 md:hidden">
-          For you →
+          What we do →
         </p>
         <div className="flex items-center gap-4 md:gap-8">
           <p
             className="font-sans font-medium text-xs uppercase tracking-[0.12em] text-[var(--color-muted)] shrink-0 hidden md:block"
             aria-hidden="true"
           >
-            For you →
+            What we do →
           </p>
           <Marquee duration={140} pauseOnHover reverse className="min-w-0">
             <span className="flex items-center whitespace-nowrap px-4 md:px-6">
-              {VERTICALS.map((v) => (
-                <span key={v.slug} className="flex items-center">
-                  <Link
-                    href={`/for/${v.slug}`}
-                    className="font-sans font-medium text-base md:text-lg text-[var(--color-body)] hover:text-[var(--color-accent)] transition-colors no-underline"
-                  >
-                    {v.marqueeLabel}
-                  </Link>
+              {SERVICES.map((service) => (
+                <span key={service} className="flex items-center">
+                  <span className="font-sans font-medium text-base md:text-lg text-[var(--color-body)]">
+                    {service}
+                  </span>
                   <span
                     className="mx-3 md:mx-4 text-[var(--color-accent)]"
                     aria-hidden="true"

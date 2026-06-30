@@ -8,49 +8,49 @@ import { Reveal } from "@/components/ui/Reveal";
 const STEPS = [
   {
     number: "1",
-    title: "Your Buy Box",
+    title: "Your Criteria",
     description:
-      "We start with what you actually want: market, asset type, price band, strategy, and the deals you'd buy tomorrow. The sharper your buy box, the sharper what we send. No deal we source is worth anything if it doesn't fit how you operate.",
+      "We start with what you actually want: the markets you work, the types of deals you take under contract, and the buyers you already know. The sharper your criteria, the sharper what we source.",
     details: [
-      "Market and neighborhoods",
-      "Asset type and price band",
-      "Wholesale, flip, hold, or land",
-      "Capital and timeline",
-      "Deal criteria",
+      "Your target markets",
+      "Deal criteria and price range",
+      "Your existing buyers",
+      "Property types",
+      "Timeline and volume",
     ],
   },
   {
     number: "2",
-    title: "We Source",
+    title: "We Source and Underwrite",
     description:
-      "We run the smartest models in the world across the data most investors never touch, surface off-market deals and motivated sellers, and run the numbers before we send anything. You get deals that fit, with the math already done, not raw lists to dig through.",
+      "We source off-market properties by your criteria using fresh data pulled county by county from our own database, underwrite every contract, and match the deal to the right buyer on our list. You get deals with the math done, not raw lists to dig through.",
     details: [
       "Off-market deal sourcing",
-      "Motivated-seller signals",
-      "ARV, rehab, and rent comps",
-      "Pre-screened to your buy box",
-      "Refreshed as inventory moves",
+      "Fresh data, county by county",
+      "ARV and underwriting",
+      "Pre-screened to your criteria",
+      "Buyer list matching",
     ],
   },
   {
     number: "3",
-    title: "You Close, We Win",
+    title: "We JV, You Close",
     description:
-      "You make the offers and close the deals. We stay at the frontier of the technology and keep feeding your pipeline. We only get paid when you close, so our incentive is simple: more deals that actually work for you.",
+      "You take the deal under contract. We handle the underwriting and connect you with the right buyer. We JV on every deal together, so we only win when you close. The partnership keeps running as long as you keep closing.",
     details: [
-      "Deals delivered, not dashboards",
-      "Disposition and buyer matching",
-      "Always at the model frontier",
-      "Paid only when you close",
-      "A partnership, not a contract",
+      "Deal under contract",
+      "We find the buyer",
+      "JV on every deal",
+      "Paid when you close",
+      "A real partnership",
     ],
   },
 ];
 
 const TIMELINE = [
-  { label: "Your Buy Box", value: "1 call" },
+  { label: "Your Criteria", value: "1 call" },
   { label: "We Source", value: "Ongoing" },
-  { label: "You Close", value: "We win when you do" },
+  { label: "You Close", value: "We JV the deal" },
 ];
 
 export function StrategyProcess() {
@@ -69,8 +69,9 @@ export function StrategyProcess() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[560px]">
-                It starts with your buy box, runs on the deals and seller leads
-                we source, and pays off when you close. We win when you win. For
+                It starts with your criteria, runs on the deals we source and
+                underwrite, and pays off when you close. We JV on every deal,
+                so we only win when you do. For
                 more on how we run it, see{" "}
                 <a
                   href="/how-we-work"

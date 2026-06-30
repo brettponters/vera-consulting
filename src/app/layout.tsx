@@ -9,8 +9,8 @@ import "./globals.css";
 
 const SITE_URL = "https://veraconsulting.co";
 const SITE_DESCRIPTION =
-  "AI for real estate investors and agents. VERA sources off-market deals, surfaces motivated seller leads, and runs the numbers fast. A performance partnership: we earn when you close. Boca Raton, FL.";
-const DEFAULT_TITLE = "AI for Real Estate Investors & Agents | VERA";
+  "AI for real estate wholesalers. VERA sources deals by your criteria, underwrites every contract, and connects you with the right buyer. We JV on every deal. No retainer, nothing until you close.";
+const DEFAULT_TITLE = "AI for Real Estate Wholesalers | VERA";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+  "@type": ["Organization", "ProfessionalService"],
   "@id": `${SITE_URL}/#org`,
   name: "VERA Solutions",
-  description: "AI for real estate investors and agents. VERA sources off-market deals, surfaces motivated seller leads, reads markets before the crowd, and runs the numbers fast. A performance partnership: we earn only when you close. Boca Raton, FL.",
+  description: "AI for real estate wholesalers. VERA sources deals by your criteria, underwrites every contract, and connects you with the right buyer from our list. We JV on every deal. No retainer, nothing until you close.",
   url: SITE_URL,
   email: "brett@veraconsulting.co",
   telephone: "+1-561-900-8182",
@@ -54,18 +54,9 @@ const organizationJsonLd = {
     postalCode: "33431",
     addressCountry: "US",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 26.3683,
-    longitude: -80.1289,
-  },
-  areaServed: [
-    { "@type": "City", name: "Boca Raton" },
-    { "@type": "City", name: "Delray Beach" },
-    { "@type": "AdministrativeArea", name: "Palm Beach County" },
-  ],
+  areaServed: { "@type": "Country", name: "United States" },
   openingHours: "Mo-Fr 09:00-17:00",
-  serviceType: "AI deal sourcing and market intelligence partnership for real estate investors and agents",
+  serviceType: "AI deal sourcing, underwriting, and buyer matching for real estate wholesalers",
   sameAs: [],
 };
 

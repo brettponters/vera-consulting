@@ -8,36 +8,35 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const STATS = [
   {
+    value: 82,
+    suffix: "%",
+    label: "of real estate professionals now use AI tools, up from 58% in 2024",
+    source: "RPR, 2026",
+  },
+  {
     value: 88,
     suffix: "%",
-    label: "of organizations use AI regularly in at least one business function",
-    source: "McKinsey, 2026",
+    label: "of real estate investors are already piloting AI across their operations",
+    source: "JLL, 2026",
   },
   {
-    value: 92,
+    value: 17,
     suffix: "%",
-    label: "of Fortune 500 companies have deployed generative AI",
-    source: "Fortune, 2026",
+    label: "say AI has had a significant positive impact on their business",
+    source: "NAR, 2025",
   },
   {
-    value: 25,
+    value: 40,
     suffix: "%",
-    label: "of teams using AI have any real frame for how they use it",
-    source: "Grant Thornton, 2026",
-  },
-  {
-    value: 78,
-    suffix: "%",
-    label: "of leaders say they are not getting the value they expected from AI",
-    source: "Grant Thornton, 2026",
-  },
-  {
-    value: 2.5,
-    prefix: "$",
-    suffix: "T",
-    label: "global AI spending in 2026, up 44% year-over-year",
+    label: "of enterprise applications will embed AI agents by end of 2026, up from under 5% in 2025",
     source: "Gartner, 2026",
-    decimals: 1,
+  },
+  {
+    value: 301,
+    prefix: "$",
+    suffix: "B",
+    label: "global AI spending in 2026, up 35% year-over-year",
+    source: "Gartner, 2026",
   },
 ];
 
@@ -80,20 +79,20 @@ function CountUp({
 
 const COPY = [
   {
-    head: "AI is already moving real estate",
-    body: "88% of organizations now use AI in at least one business function. The biggest firms have standardized on it. In real estate that means the edge is moving to whoever finds the deal first, prices it fastest, and reaches the seller before anyone else. The bar has moved.",
+    head: "AI is everywhere in real estate now",
+    body: "82% of real estate professionals use AI tools and 88% of real estate investors are actively piloting it. The biggest operators have standardized on it. The edge is moving to whoever uses it deepest, not just first.",
   },
   {
-    head: "Most of it is shallow",
-    body: "Adoption raced ahead of judgment. Only a quarter of teams using AI have any real frame for how they use it. Most investors and agents are still buying lists everyone else has and running the same tired prompts. That gap is the opening. Sourcing off-market deals with real intelligence looks nothing like bolting a chatbot onto your CRM.",
+    head: "Almost nobody is getting real value",
+    body: "Only 17% say AI has had a significant positive impact on their business. Adoption raced ahead of results. Most wholesalers are still buying the same tired lists and running the same generic outreach. That gap is the opening. Real deal intelligence looks nothing like bolting a chatbot onto your CRM.",
   },
   {
     head: "The technology moves every week",
     body: "New models, new data sources, new ways to find motivated sellers ship constantly. A tool you buy is behind the day it arrives. A partner who stays at the frontier and puts what they find into your deals is the only thing that keeps compounding. That is the difference between a tool and a partner.",
   },
   {
-    head: "Small edges, real money",
-    body: "Global AI spending is $2.5 trillion and climbing 44% a year. Most of it is spent badly. For an investor or agent, the question is not how much software to buy. It is which off-market deals and motivated-seller leads actually land in your pipeline, and what they close for.",
+    head: "The agentic wave is just arriving",
+    body: "Gartner puts global AI spending at $301 billion in 2026 and projects 40% of enterprise applications will embed AI agents by year end, up from under 5% last year. The wholesalers who set up real AI deal flow now own the edge for the next decade.",
   },
 ];
 

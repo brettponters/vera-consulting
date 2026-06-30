@@ -186,9 +186,9 @@ export function StrategyRisks() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)] max-w-[560px] mt-6">
-                Most missed deals aren&rsquo;t about effort. They&rsquo;re about
-                data and timing. These are the six places we see investors and
-                agents lose deals before they ever make an offer.
+                Most missed deals are not about effort. They are about data
+                and timing. These are the six places we see wholesalers lose
+                deals before they ever get a contract signed.
               </p>
             </Reveal>
           </div>
@@ -221,9 +221,10 @@ export function StrategyRisks() {
           <div className="flex gap-4 items-stretch mt-16 max-w-[820px] mx-auto">
             <div className="w-[3px] bg-[var(--color-accent)] rounded-sm shrink-0" />
             <p className="font-sans italic text-lg md:text-xl text-[var(--color-heading)] leading-relaxed py-1">
-              &ldquo;The investors who win don&rsquo;t have more money than
-              everyone else. They see the deal first, run the numbers right,
-              and reach the seller before the market does.&rdquo;
+              &ldquo;The wholesalers who win do not have more deals than
+              everyone else. They see the right deals first, underwrite
+              fast, and have the buyer ready before the inspection clock
+              starts.&rdquo;
             </p>
           </div>
         </Reveal>
