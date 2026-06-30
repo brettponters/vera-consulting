@@ -137,7 +137,7 @@ export function StrategyLandscape() {
             >
               <div className="font-sans font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--color-accent)] leading-none tracking-[-0.03em]">
                 {s.prefix}
-                <CountUp to={s.value} decimals={s.decimals ?? 0} />
+                <CountUp to={s.value} decimals={0} />
                 {s.suffix}
               </div>
               <p className="font-sans text-xs md:text-sm text-[var(--color-body)] mt-4 leading-snug">
