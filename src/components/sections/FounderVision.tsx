@@ -1,10 +1,10 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * Homepage vision block. "Our vision" quote, presented without a founder
- * photo or name for now (de-personalized at the owner's request).
+ * Homepage vision block. "Our vision" quote with founder photo + name.
  */
 export function FounderVision() {
   return (
@@ -25,8 +25,25 @@ export function FounderVision() {
                   what we find to work, and only make money when our partners
                   close.&rdquo;
                 </p>
-                <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
-                  VERA Solutions
+                <div className="flex items-center gap-3">
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full">
+                    <Image
+                      src="/founder.jpg"
+                      alt="Brett Ponters, founder of VERA"
+                      fill
+                      sizes="48px"
+                      className="object-cover"
+                      style={{ objectPosition: "50% 22%" }}
+                    />
+                  </div>
+                  <div>
+                    <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
+                      Brett Ponters
+                    </div>
+                    <div className="font-sans text-xs text-[var(--color-muted)] mt-0.5">
+                      Founder, VERA Solutions
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -21,15 +22,17 @@ export default function About() {
     >
       <Container size="wide">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 md:gap-20 items-start">
-          {/* ── Founder photo placeholder ──────────────────────────────── */}
+          {/* ── Founder photo ──────────────────────────────────────────── */}
           <Reveal delay={0} className="mx-auto md:mx-0 w-full max-w-[320px] md:max-w-none">
-            <div
-              className="w-full aspect-[4/5] bg-[var(--color-surface)] border border-[var(--color-body)] flex items-center justify-center"
-              aria-label="Founder photo placeholder"
-            >
-              <span className="font-sans text-xs text-[var(--color-muted)]">
-                founder photo placeholder
-              </span>
+            <div className="relative w-full aspect-[4/5] overflow-hidden bg-[var(--color-surface)] border border-[var(--color-body)]">
+              <Image
+                src="/founder.jpg"
+                alt="Brett Ponters, founder of VERA"
+                fill
+                sizes="(min-width: 768px) 40vw, 320px"
+                className="object-cover"
+                style={{ objectPosition: "50% 25%" }}
+              />
             </div>
           </Reveal>
 
@@ -48,7 +51,7 @@ export default function About() {
               {/* founder to confirm */}
               <p className="font-sans font-medium text-[var(--color-body)] text-lg leading-relaxed">
                 {/* founder to confirm */}
-                I&rsquo;m [Founder Name]. I started VERA because real estate
+                I&rsquo;m Brett Ponters. I started VERA because real estate
                 investors and agents don&rsquo;t need another tool that ages
                 out in months. They need a partner who stays at the frontier
                 and puts what they find into real deals. VERA finds the edge:
