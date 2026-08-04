@@ -1,11 +1,61 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
 const LINE_ONE_WORDS = "Agentic AI Solutions".split(" ");
+
+const AUDIENCES = ["Wholesalers.", "Investors.", "Realtors."];
+const AUDIENCE_HOLD_MS = 5000;
+
+function RotatingAudience() {
+  const [index, setIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setIndex((i) => (i + 1) % AUDIENCES.length),
+      AUDIENCE_HOLD_MS,
+    );
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <span
+      className="relative inline-grid overflow-hidden align-bottom"
+      style={{
+        perspective: 900,
+        paddingBottom: "0.08em",
+        marginBottom: "-0.08em",
+      }}
+    >
+      <AnimatePresence mode="popLayout" initial={false}>
+        <motion.span
+          key={AUDIENCES[index]}
+          initial={
+            reduceMotion
+              ? { opacity: 0 }
+              : { y: "105%", rotateX: -35, opacity: 0 }
+          }
+          animate={{ y: 0, rotateX: 0, opacity: 1 }}
+          exit={
+            reduceMotion
+              ? { opacity: 0 }
+              : { y: "-105%", rotateX: 35, opacity: 0 }
+          }
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="col-start-1 row-start-1"
+          style={{ color: "var(--color-accent)" }}
+        >
+          {AUDIENCES[index]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+}
 
 export default function Hero() {
   return (
@@ -56,7 +106,7 @@ export default function Hero() {
           </Reveal>
 
           <h1
-            aria-label="Agentic AI Solutions for Real Estate Wholesalers."
+            aria-label="Agentic AI Solutions for Real Estate Wholesalers, Investors, and Realtors."
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
             style={{ fontSize: "clamp(2.5rem, 5.5vw, 5rem)" }}
           >
@@ -86,7 +136,8 @@ export default function Hero() {
               className="block"
             >
               for{" "}
-              <span style={{ color: "var(--color-accent)" }}>Real Estate Wholesalers.</span>
+              <span style={{ color: "var(--color-accent)" }}>Real Estate</span>{" "}
+              <RotatingAudience />
             </motion.span>
           </h1>
 
