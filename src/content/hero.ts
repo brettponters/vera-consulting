@@ -21,7 +21,7 @@ export const hero = {
       href: "#three-shapes",
     },
     secondary: {
-      label: "Become a partner",
+      label: "Become a Partner",
       href: "#book-a-call",
     },
   },

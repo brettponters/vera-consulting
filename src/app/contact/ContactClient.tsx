@@ -106,7 +106,7 @@ export default function ContactClient() {
                     : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
                 }`}
               >
-                Become a partner
+                Become a Partner
               </button>
               <button
                 type="button"
@@ -130,7 +130,7 @@ export default function ContactClient() {
           <div style={{ display: tab === "call" ? "block" : "none" }}>
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/brett-veraconsulting/30min?hide_event_type_details=1&hide_gdpr_banner=1"
+              data-url="https://calendly.com/brett-verasolutions/brett-one-on-one?hide_event_type_details=1&hide_gdpr_banner=1"
               style={{ minWidth: "100%", height: "700px" }}
             />
           </div>

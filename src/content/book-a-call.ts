@@ -7,7 +7,7 @@
  */
 
 export const bookACall = {
-  h2: "Become a partner.",
+  h2: "Become a Partner.",
 
   body: [
     "Calls are 30 minutes.",

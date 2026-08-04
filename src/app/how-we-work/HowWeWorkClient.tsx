@@ -284,7 +284,7 @@ export default function HowWeWorkClient() {
             </Reveal>
             <Reveal delay={0.1}>
               <Button href="/contact" variant="filled" size="lg" arrow>
-                Become a partner
+                Become a Partner
               </Button>
             </Reveal>
           </div>

@@ -91,7 +91,7 @@ export default function OurStrategyClient() {
             <Reveal delay={0.5}>
               <div className="flex flex-wrap items-center gap-4">
                 <Button href="/contact" variant="filled" size="lg" arrow>
-                  Become a partner
+                  Become a Partner
                 </Button>
                 <a
                   href="/strategy-guide.pdf"
@@ -214,7 +214,7 @@ export default function OurStrategyClient() {
             <Reveal delay={0.15}>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Button href="/contact" variant="filled" size="lg" arrow>
-                  Become a partner
+                  Become a Partner
                 </Button>
                 <a
                   href="/strategy-guide.pdf"

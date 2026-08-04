@@ -491,7 +491,7 @@ export default function AiInRealEstatePage() {
               make money when you close. Start with a call.
             </p>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Become a partner
+              Become a Partner
             </Button>
           </div>
         </Container>

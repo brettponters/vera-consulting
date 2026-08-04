@@ -148,7 +148,7 @@ export default function LocationsPage() {
               deal slips.
             </p>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Become a partner
+              Become a Partner
             </Button>
           </div>
         </Container>
@@ -269,7 +269,7 @@ export default function LocationsPage() {
               commitment.
             </p>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Become a partner
+              Become a Partner
             </Button>
           </div>
         </Container>

@@ -157,7 +157,7 @@ export default function AboutClient() {
                 figure out whether we&rsquo;re the right fit.
               </p>
               <Button href="/contact" variant="filled" size="lg" arrow>
-                Become a partner
+                Become a Partner
               </Button>
             </div>
           </Reveal>

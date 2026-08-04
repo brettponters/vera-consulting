@@ -174,7 +174,7 @@ export default async function LocationPage({
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Button href="/contact" variant="filled" size="lg" arrow>
-                Become a partner
+                Become a Partner
               </Button>
               <Button href="/our-strategy" variant="ghost" size="lg" arrow>
                 See how the partnership works
@@ -341,7 +341,7 @@ export default async function LocationPage({
               do. No retainer, no pitch. VERA makes money only when you close.
             </p>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Become a partner
+              Become a Partner
             </Button>
           </div>
         </Container>

@@ -141,7 +141,7 @@ export default async function ForVerticalPage({
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Button href="/contact" variant="filled" size="lg" arrow>
-                Become a partner
+                Become a Partner
               </Button>
               <Button href="/" variant="ghost" size="lg" arrow>
                 See how it works
@@ -441,7 +441,7 @@ export default async function ForVerticalPage({
               We make money only when you close.
             </p>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Become a partner
+              Become a Partner
             </Button>
           </div>
         </Container>

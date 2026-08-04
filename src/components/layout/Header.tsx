@@ -85,7 +85,7 @@ export function Header() {
           href="/contact"
           className="ml-4 inline-flex items-center rounded-full bg-[var(--color-accent)] px-5 py-3 md:py-2.5 font-sans text-sm font-medium text-white no-underline transition-opacity duration-150 hover:opacity-90"
         >
-          Become a partner
+          Become a Partner
         </Link>
       </div>
 

@@ -8,7 +8,7 @@ export function BookACall() {
   return (
     <section
       id="book-a-call"
-      aria-label="Become a partner"
+      aria-label="Become a Partner"
       className="bg-[var(--color-surface)] py-20 md:py-28"
     >
       <Container size="prose">
@@ -31,7 +31,7 @@ export function BookACall() {
 
           <Reveal delay={0.2}>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              Become a partner
+              Become a Partner
             </Button>
           </Reveal>
         </div>

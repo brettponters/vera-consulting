@@ -524,7 +524,7 @@ export function PromptPersonalize() {
                           className="group inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-sans text-sm font-medium no-underline transition-all duration-200 ease-out hover:-translate-y-px"
                           style={{ backgroundColor: DARK, color: "#F5EFE4" }}
                         >
-                          Become a partner
+                          Become a Partner
                           <svg
                             aria-hidden="true"
                             width="14"
