@@ -19,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/how-we-work",
     "/our-strategy",
-    "/our-work",
     "/ai-in-real-estate",
     "/reading",
     "/contact",

@@ -67,7 +67,6 @@ export function Header() {
         {/* Nav links + CTA, right side */}
         <nav className="hidden md:flex items-center gap-6">
           {[
-            { label: "Our Work", href: "/our-work" },
             { label: "Our Strategy", href: "/our-strategy" },
             { label: "AI in Real Estate", href: "/ai-in-real-estate" },
           ].map((link) => (

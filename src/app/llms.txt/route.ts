@@ -58,7 +58,6 @@ The alignment runs both ways. Your data stays where it belongs and is not dumped
 - [AI in Real Estate, a practical guide](${SITE}/ai-in-real-estate): what is real, what is hype, what investors and agents actually use AI for, and where the edge is.
 - [How We Work](${SITE}/how-we-work): how the partnership works and why we earn only when you close.
 - [Our Strategy](${SITE}/our-strategy): how VERA sources off-market deals and motivated-seller leads with agentic AI.
-- [Our Work](${SITE}/our-work): what VERA has built (e.g. CoAgent, a private, local AI agent).
 - [Contact](${SITE}/contact): book an intro call.
 
 ## AI for your real estate niche
