@@ -5,23 +5,23 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { RotatingWord } from "@/components/ui/RotatingWord";
 
 export const metadata: Metadata = {
-  title: "AI for Real Estate Wholesalers Nationwide | VERA",
+  title: "Nationwide AI for Wholesalers, Investors & Realtors",
   description:
-    "VERA partners with real estate wholesalers across the United States. We source deals by your criteria, underwrite every contract, and connect you with the right buyer. We JV on every deal.",
+    "VERA partners with wholesalers, investors, and realtors across the United States. We source deals by your criteria, underwrite every contract, and connect you with the right buyer.",
   alternates: { canonical: "/locations" },
   openGraph: {
-    title: "AI for Real Estate Wholesalers Nationwide | VERA",
+    title: "Nationwide AI for Wholesalers, Investors & Realtors",
     description:
-      "VERA partners with real estate wholesalers across the US. Deal sourcing, underwriting, and buyer matching. We JV on every deal and only win when you close.",
+      "VERA partners with wholesalers, investors, and realtors across the US. Deal sourcing, underwriting, and buyer matching. We only win when you close.",
     type: "website",
     url: "https://veraconsulting.co/locations",
     images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI for Real Estate Wholesalers Nationwide | VERA",
+    title: "Nationwide AI for Wholesalers, Investors & Realtors",
     description:
-      "AI deal sourcing, underwriting, and buyer matching for real estate wholesalers across the US. We JV on every deal.",
+      "AI deal sourcing, underwriting, and buyer matching for wholesalers, investors, and realtors across the US.",
   },
 };
 
@@ -106,9 +106,9 @@ const MARKETS = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "VERA, AI for Real Estate Wholesalers",
+  name: "VERA, AI for Real Estate Wholesalers, Investors & Realtors",
   description:
-    "VERA sources deals by your criteria, underwrites every contract, and connects you with the right buyer from our list. We JV on every deal. No retainer, nothing until you close.",
+    "VERA sources deals by your criteria, underwrites every contract, and connects you with the right buyer from our list. No retainer, nothing until you close.",
   provider: {
     "@type": "Organization",
     name: "VERA Solutions",
@@ -116,7 +116,7 @@ const jsonLd = {
   },
   areaServed: { "@type": "Country", name: "United States" },
   serviceType:
-    "AI deal sourcing, underwriting, and buyer matching for real estate wholesalers",
+    "AI deal sourcing, underwriting, and buyer matching for real estate wholesalers, investors, and realtors",
 };
 
 export default function LocationsPage() {
