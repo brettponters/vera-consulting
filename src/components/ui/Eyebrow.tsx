@@ -7,7 +7,7 @@ interface EyebrowProps {
 
 /**
  * Small uppercase label used above section headings.
- * Examples: "Selected work" / "Research-backed" / "AI consulting · Public Benefit Corporation"
+ * Examples: "Selected work" / "Research-backed" / "AI consulting"
  */
 export function Eyebrow({ children, className = "" }: EyebrowProps) {
   return (

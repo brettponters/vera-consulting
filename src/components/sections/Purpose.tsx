@@ -39,23 +39,6 @@ export default function Purpose() {
               when our partners do.
             </p>
           </Reveal>
-
-          {/* PBC commitment */}
-          <Reveal delay={0.3}>
-            <Hairline className="mb-8" />
-            <div className="flex flex-col gap-4">
-              <p className="font-sans font-semibold text-sm uppercase tracking-[0.12em] text-[var(--color-accent)]">
-                Public Benefit Corporation
-              </p>
-              <p className="font-sans text-base leading-relaxed text-[var(--color-body)]">
-                VERA is incorporated as a Public Benefit Corporation. A fixed
-                percentage of every dollar we earn goes directly to independent
-                AI safety research. We made that commitment because this
-                technology is powerful, and someone should be making sure
-                it keeps working for people, not just on them.
-              </p>
-            </div>
-          </Reveal>
         </div>
       </Container>
     </section>

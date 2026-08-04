@@ -32,8 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const thinOrLegal: MetadataRoute.Sitemap = [
-    "/charter",
-    "/benefit-report",
     "/privacy",
   ].map((path) => ({
     url: `${BASE_URL}${path}`,

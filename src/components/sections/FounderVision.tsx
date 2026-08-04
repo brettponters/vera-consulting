@@ -28,9 +28,6 @@ export function FounderVision() {
                 <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
                   VERA Solutions
                 </div>
-                <div className="font-sans text-xs text-[var(--color-muted)] mt-0.5">
-                  Public Benefit Corporation
-                </div>
               </div>
             </div>
           </Reveal>

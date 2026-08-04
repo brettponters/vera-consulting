@@ -171,24 +171,11 @@ export default function OurStrategyClient() {
                     <div className="font-sans text-sm font-semibold text-[var(--color-heading)]">
                       Founder, VERA Solutions
                     </div>
-                    <div className="font-sans text-xs text-[var(--color-muted)] mt-0.5">
-                      Public Benefit Corporation
-                    </div>
                   </div>
                 </div>
               </div>
             </Reveal>
 
-            <Reveal delay={0.1}>
-              <div>
-                <Eyebrow className="mb-5">What to expect</Eyebrow>
-                <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-body)]">
-                  VERA is incorporated as a Public Benefit Corporation. A fixed
-                  percentage of every dollar we earn goes to independent AI
-                  safety research.
-                </p>
-              </div>
-            </Reveal>
           </div>
         </Container>
       </section>

@@ -41,7 +41,7 @@ function fallbackBlock(business: string, notice?: string): string {
   return `> Looking you up\n> Mapping it\n${JSON.stringify(obj)}`;
 }
 
-const SYSTEM = `VERA is a performance-based intelligence partner for real estate wholesalers. Here is exactly how it works: wholesalers go out and get properties under contract. VERA then does three things for them: underwrites the deal (runs the numbers fast so the wholesaler knows exactly what they have), sources deals (finds off-market properties based on what the wholesaler is targeting in their specific markets), and connects buyers (VERA has a buyers list and matches the right buyer to each deal). VERA earns a split on the deal, 50/50 or 60/40, nothing upfront, no retainer. VERA is a Public Benefit Corporation.
+const SYSTEM = `VERA is a performance-based intelligence partner for real estate wholesalers. Here is exactly how it works: wholesalers go out and get properties under contract. VERA then does three things for them: underwrites the deal (runs the numbers fast so the wholesaler knows exactly what they have), sources deals (finds off-market properties based on what the wholesaler is targeting in their specific markets), and connects buyers (VERA has a buyers list and matches the right buyer to each deal). VERA earns a split on the deal, 50/50 or 60/40, nothing upfront, no retainer.
 
 A real estate wholesaler entered their name, company, or website and the single place where their business is stuck or leaking. Write a short, specific response that proves you understand their operation and makes them want to work with VERA. Plain and direct, not a report.
 

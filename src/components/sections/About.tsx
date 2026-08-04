@@ -62,11 +62,6 @@ export default function About() {
             <Reveal delay={0.3}>
               <div className="flex flex-col gap-6">
                 <Hairline />
-                <p className="font-sans text-[var(--color-muted)] text-base leading-relaxed">
-                  VERA is incorporated as a Public Benefit Corporation. A fixed percentage of net
-                  revenue is committed annually to independent AI safety research, in our
-                  charter.
-                </p>
                 <Link
                   href="/about"
                   className="font-sans text-sm font-medium text-[var(--color-accent)] hover:opacity-75 transition-opacity duration-150 w-fit"

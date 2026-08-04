@@ -98,52 +98,6 @@ export default function AboutClient() {
         </Container>
       </section>
 
-      {/* PBC */}
-      <section className="py-16 md:py-24 bg-[var(--color-surface)]">
-        <Container size="wide">
-          <div className="max-w-[760px]">
-            <Reveal>
-              <Eyebrow className="mb-4">Public Benefit Corporation</Eyebrow>
-            </Reveal>
-
-            <Reveal delay={0.05}>
-              <h2 className="font-sans font-semibold text-2xl md:text-3xl tracking-[-0.02em] text-[var(--color-heading)] leading-tight mb-8">
-                Why we structured it this way.
-              </h2>
-            </Reveal>
-
-            <Reveal delay={0.12}>
-              <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-                VERA is incorporated as a Public Benefit Corporation. A fixed
-                percentage of every dollar we earn goes to independent AI safety
-                research. That&rsquo;s in our charter, not a marketing page.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.18}>
-              <p className="font-sans text-base leading-relaxed text-[var(--color-body)] mb-6">
-                We made that commitment because this technology is powerful,
-                and someone should be making sure it keeps working for people,
-                not just on them. We integrate AI for a living. Funding the people
-                who study its risks felt like the obvious thing to do.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.24}>
-              <Hairline className="my-8" />
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/charter" variant="ghost" size="md" arrow>
-                  Read our charter
-                </Button>
-                <Button href="/benefit-report" variant="ghost" size="md" arrow>
-                  Annual benefit report
-                </Button>
-              </div>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
-
       {/* CTA */}
       <section className="py-16 md:py-24 bg-[var(--color-bg)]">
         <Container size="wide">

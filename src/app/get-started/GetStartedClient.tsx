@@ -107,15 +107,6 @@ Get the deals before the crowd does.
               ))}
             </ul>
 
-            <div className="flex items-center gap-3 pt-6 border-t border-[var(--color-hairline)]">
-              <span className="font-sans font-semibold text-xs uppercase tracking-[0.12em] text-[var(--color-accent)]">
-                Public Benefit Corporation
-              </span>
-              <span className="text-[var(--color-hairline)]">·</span>
-              <span className="font-sans text-xs text-[var(--color-muted)]">
-A percentage of every dollar we earn funds independent AI safety research
-              </span>
-            </div>
           </div>
 
           {/* Right, form */}

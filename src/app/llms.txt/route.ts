@@ -22,7 +22,7 @@ export function GET() {
 
   const body = `# VERA Solutions
 
-> VERA is an intelligence partner for real estate and real estate investing. We find the edge: sourcing off-market deals, surfacing motivated-seller leads, reading markets and properties before the crowd, and running the numbers fast. A founder-led Public Benefit Corporation based in Boca Raton, Florida.
+> VERA is an intelligence partner for real estate and real estate investing. We find the edge: sourcing off-market deals, surfacing motivated-seller leads, reading markets and properties before the crowd, and running the numbers fast. Founder-led and based in Boca Raton, Florida.
 
 ## What VERA is
 
@@ -30,7 +30,7 @@ VERA is an intelligence partner for real estate investors and agents: wholesaler
 
 VERA works as a performance-based partnership. No retainer, no hourly, no paying to try. We make money only when our partners close. The technology moves every week; a tool you buy or a vendor you hire is behind the day it arrives. A partner who stays at the frontier and puts what they find into your deals is the only thing that keeps compounding.
 
-VERA is a Public Benefit Corporation. It is founder-led. It works with investors and agents in person around South Florida and remotely anywhere over Google Meet.
+VERA is founder-led. It works with investors and agents in person around South Florida and remotely anywhere over Google Meet.
 
 ## How VERA finds the edge
 
@@ -51,7 +51,7 @@ VERA is a partnership, not an engagement you pay to begin. We bring the intellig
 
 ## Trust and guardrails
 
-VERA is a Public Benefit Corporation, and the alignment runs both ways. Your data stays where it belongs and is not dumped into third-party tools. AI does the sourcing, scoring, and analysis; the relationship, the negotiation, and the final call stay yours. We win only when you close, so our incentive is your result, not your retainer.
+The alignment runs both ways. Your data stays where it belongs and is not dumped into third-party tools. AI does the sourcing, scoring, and analysis; the relationship, the negotiation, and the final call stay yours. We win only when you close, so our incentive is your result, not your retainer.
 
 ## Key pages
 

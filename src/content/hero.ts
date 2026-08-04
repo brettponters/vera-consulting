@@ -4,7 +4,7 @@
  */
 
 export const hero = {
-  eyebrow: "A performance-based intelligence partner · Public Benefit Corporation",
+  eyebrow: "A performance-based intelligence partner",
 
   // ~22 words. Names what VERA is and who it serves.
   // Explicit positioning: deal-sourcing edge, partnership, paid on results.

@@ -4,7 +4,7 @@ import AboutClient from "./AboutClient";
 export const metadata: Metadata = {
   title: { absolute: "About VERA, AI Partner for Real Estate Investors" },
   description:
-    "VERA is an intelligence partner for real estate investors and agents. We find off-market deals and motivated seller leads, and we only earn when you close. Public Benefit Corporation in Boca Raton, FL.",
+    "VERA is an intelligence partner for real estate investors and agents. We find off-market deals and motivated seller leads, and we only earn when you close. Based in Boca Raton, FL.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About VERA, AI Partner for Real Estate Investors",

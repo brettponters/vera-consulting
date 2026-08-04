@@ -215,21 +215,6 @@ export default function HowWeWorkClient() {
               </p>
             </Reveal>
 
-            <Reveal delay={0.24}>
-              <Hairline className="mb-8" />
-              <div className="flex flex-col gap-4">
-                <p className="font-sans font-semibold text-sm uppercase tracking-[0.12em] text-[var(--color-accent)]">
-                  Public Benefit Corporation
-                </p>
-                <p className="font-sans text-base leading-relaxed text-[var(--color-body)]">
-                  VERA is a Public Benefit Corporation. A fixed percentage
-                  of every dollar we earn goes to independent AI safety
-                  research. This technology is moving fast, and we think
-                  the people deploying it should also be funding the work
-                  to make sure it stays safe.
-                </p>
-              </div>
-            </Reveal>
           </div>
         </Container>
       </section>

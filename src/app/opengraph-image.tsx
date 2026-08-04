@@ -99,7 +99,6 @@ Find the deals first. We earn when you close.
           }}
         >
           <span>veraconsulting.co</span>
-          <span>Public Benefit Corporation</span>
         </div>
       </div>
     ),

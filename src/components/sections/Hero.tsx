@@ -99,8 +99,7 @@ export default function Hero() {
           <Reveal delay={0}>
             <div className="mb-5">
               <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
-                A performance-based intelligence partner · Public Benefit
-                Corporation
+                A performance-based intelligence partner
               </p>
             </div>
           </Reveal>

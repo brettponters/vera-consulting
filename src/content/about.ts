@@ -21,10 +21,6 @@ export const about = {
   paragraph:
     "I'm [Founder Name]. Before VERA, I spent [N years] in [the field I worked in], including [prior role at firm], where I watched the people running the sharpest AI models find the opportunities first. I started VERA to put that edge into real estate deals. We source off-market deals and motivated seller leads, run the numbers fast, and partner on performance. We make money only when you close.",
 
-  // Keep verbatim, set by foundation.
-  pbcStatement:
-    "VERA is incorporated as a Public Benefit Corporation. 5% of net revenue is committed annually to independent AI safety research, in our charter.",
-
   moreLink: {
     label: "More about VERA →",
     href: "/about",

@@ -13,17 +13,11 @@ const NAV_LINKS = [
 ];
 
 const LEGAL_LINKS = [
-  { href: "/charter", label: "Charter" },
-  { href: "/benefit-report", label: "Annual benefit report" },
   { href: "/privacy", label: "Privacy" },
 ];
 
 /**
  * Site footer.
- *
- * Hard-quoted PBC line (do not paraphrase):
- * "VERA is a Public Benefit Corporation. A fixed percentage of net
- *  revenue is committed annually to independent AI safety and alignment research."
  */
 export function Footer() {
   const pathname = usePathname();
@@ -37,15 +31,10 @@ export function Footer() {
       <Hairline variant="full" />
       <Container size="wide">
         <div className="py-12 md:py-16 space-y-8">
-          {/* Wordmark + PBC statement */}
+          {/* Wordmark */}
           <div className="space-y-3 max-w-[560px]">
             <p className="font-sans text-sm font-semibold text-[var(--color-heading)]">
               VERA
-            </p>
-            <p className="font-sans text-sm leading-relaxed text-[var(--color-muted)]">
-              VERA is a Public Benefit Corporation. A fixed percentage of net
-              revenue is committed annually to independent AI safety and
-              alignment research.
             </p>
           </div>
 
