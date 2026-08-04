@@ -5,23 +5,23 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { RotatingWord } from "@/components/ui/RotatingWord";
 
 export const metadata: Metadata = {
-  title: "Nationwide AI for Wholesalers, Investors & Realtors",
+  title: "Nationwide AI for Wholesalers, Investors & Agents",
   description:
-    "VERA partners with wholesalers, investors, and realtors across the United States. We source deals by your criteria, underwrite every contract, and connect you with the right buyer.",
+    "VERA partners with wholesalers, investors, and agents across the United States. We source deals by your criteria, underwrite every contract, and connect you with the right buyer.",
   alternates: { canonical: "/locations" },
   openGraph: {
-    title: "Nationwide AI for Wholesalers, Investors & Realtors",
+    title: "Nationwide AI for Wholesalers, Investors & Agents",
     description:
-      "VERA partners with wholesalers, investors, and realtors across the US. Deal sourcing, underwriting, and buyer matching. We only win when you close.",
+      "VERA partners with wholesalers, investors, and agents across the US. Deal sourcing, underwriting, and buyer matching. We only win when you close.",
     type: "website",
     url: "https://veraconsulting.co/locations",
     images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nationwide AI for Wholesalers, Investors & Realtors",
+    title: "Nationwide AI for Wholesalers, Investors & Agents",
     description:
-      "AI deal sourcing, underwriting, and buyer matching for wholesalers, investors, and realtors across the US.",
+      "AI deal sourcing, underwriting, and buyer matching for wholesalers, investors, and agents across the US.",
   },
 };
 
@@ -106,7 +106,7 @@ const MARKETS = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "VERA, AI for Real Estate Wholesalers, Investors & Realtors",
+  name: "VERA, AI for Real Estate Wholesalers, Investors & Agents",
   description:
     "VERA sources deals by your criteria, underwrites every contract, and connects you with the right buyer from our list. No retainer, nothing until you close.",
   provider: {
@@ -116,7 +116,7 @@ const jsonLd = {
   },
   areaServed: { "@type": "Country", name: "United States" },
   serviceType:
-    "AI deal sourcing, underwriting, and buyer matching for real estate wholesalers, investors, and realtors",
+    "AI deal sourcing, underwriting, and buyer matching for real estate wholesalers, investors, and agents",
 };
 
 export default function LocationsPage() {
@@ -139,7 +139,7 @@ export default function LocationsPage() {
               <span className="block">
                 We work with{" "}
                 <RotatingWord
-                  words={["wholesalers", "investors", "realtors"]}
+                  words={["wholesalers", "investors", "agents"]}
                 />
               </span>
               <span

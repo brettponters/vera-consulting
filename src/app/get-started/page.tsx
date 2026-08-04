@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Get Started",
     description:
-      "Tell us about your business and we'll reach out within 24 hours. AI deal sourcing, underwriting, and buyer matching for wholesalers, investors, and realtors.",
+      "Tell us about your business and we'll reach out within 24 hours. AI deal sourcing, underwriting, and buyer matching for wholesalers, investors, and agents.",
     type: "website",
     url: "https://veraconsulting.co/get-started",
     siteName: "VERA",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Get Started",
     description:
-      "AI deal sourcing, underwriting, and buyer matching for wholesalers, investors, and realtors. We win only when you close.",
+      "AI deal sourcing, underwriting, and buyer matching for wholesalers, investors, and agents. We win only when you close.",
   },
 };
 

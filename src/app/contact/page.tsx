@@ -4,7 +4,7 @@ import ContactClient from "./ContactClient";
 export const metadata: Metadata = {
   title: "Become a Partner",
   description:
-    "Book a call or send a message. VERA is an AI intelligence partner for wholesalers, investors, and realtors. We source deals, underwrite fast, and find the buyer.",
+    "Book a call or send a message. VERA is an AI intelligence partner for wholesalers, investors, and agents. We source deals, underwrite fast, and find the buyer.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Become a Partner",

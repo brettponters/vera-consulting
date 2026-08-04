@@ -9,14 +9,14 @@ import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "AI for Real Estate Wholesalers, Investors & Realtors | VERA",
+  title: "AI for Real Estate Wholesalers, Investors & Agents | VERA",
   description:
-    "Agentic AI for real estate wholesalers, investors, and realtors. VERA sources off-market deals, underwrites fast, and matches the right buyer. No retainer, nothing until you close.",
+    "Agentic AI for real estate wholesalers, investors, and agents. VERA sources off-market deals, underwrites fast, and matches the right buyer. No retainer, nothing until you close.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "AI for Real Estate Wholesalers, Investors & Realtors | VERA",
+    title: "AI for Real Estate Wholesalers, Investors & Agents | VERA",
     description:
-      "Agentic AI for real estate wholesalers, investors, and realtors. VERA sources off-market deals, underwrites fast, and matches the right buyer.",
+      "Agentic AI for real estate wholesalers, investors, and agents. VERA sources off-market deals, underwrites fast, and matches the right buyer.",
     type: "website",
     url: "https://veraconsulting.co",
     siteName: "VERA",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI for Real Estate Wholesalers, Investors & Realtors | VERA",
+    title: "AI for Real Estate Wholesalers, Investors & Agents | VERA",
     description:
-      "Agentic AI for wholesalers, investors, and realtors. VERA sources deals, underwrites fast, and finds the buyer. Nothing upfront, we earn only when you close.",
+      "Agentic AI for wholesalers, investors, and agents. VERA sources deals, underwrites fast, and finds the buyer. Nothing upfront, we earn only when you close.",
   },
 };
 

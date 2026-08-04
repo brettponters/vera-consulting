@@ -32,7 +32,7 @@ export function SouthFlorida() {
               <span className="block">
                 We work with{" "}
                 <RotatingWord
-                  words={["wholesalers", "investors", "realtors"]}
+                  words={["wholesalers", "investors", "agents"]}
                 />
               </span>
               <span className="block">across the United States.</span>

@@ -8,7 +8,7 @@ import { RotatingWord } from "@/components/ui/RotatingWord";
 
 const LINE_ONE_WORDS = "Agentic AI Solutions".split(" ");
 
-const AUDIENCES = ["Wholesalers.", "Investors.", "Realtors."];
+const AUDIENCES = ["Wholesalers.", "Investors.", "Agents."];
 
 export default function Hero() {
   return (
@@ -58,7 +58,7 @@ export default function Hero() {
           </Reveal>
 
           <h1
-            aria-label="Agentic AI Solutions for Real Estate Wholesalers, Investors, and Realtors."
+            aria-label="Agentic AI Solutions for Real Estate Wholesalers, Investors, and Agents."
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
             style={{ fontSize: "clamp(2.5rem, 5.5vw, 5rem)" }}
           >
