@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Hairline } from "@/components/ui/Hairline";
+import { RotatingWord } from "@/components/ui/RotatingWord";
 
 const SAMPLE_MARKETS = [
   { label: "Atlanta, GA", blurb: "One of the highest-volume wholesale markets in the country." },
@@ -28,7 +29,13 @@ export function SouthFlorida() {
               className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.02em] leading-tight"
               style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)" }}
             >
-              We work with wholesalers across the United States.
+              <span className="block">
+                We work with{" "}
+                <RotatingWord
+                  words={["wholesalers", "investors", "realtors"]}
+                />
+              </span>
+              <span className="block">across the United States.</span>
             </h2>
             <p className="font-sans text-[var(--color-muted)] text-base leading-relaxed">
               The partnership is fully remote. We pull fresh data county by county,

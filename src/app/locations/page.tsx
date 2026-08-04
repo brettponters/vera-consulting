@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { RotatingWord } from "@/components/ui/RotatingWord";
 
 export const metadata: Metadata = {
   title: "AI for Real Estate Wholesalers Nationwide | VERA",
@@ -135,8 +136,16 @@ export default function LocationsPage() {
               className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-8"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
             >
-              We work with wholesalers{" "}
-              <span style={{ color: "var(--color-accent)" }}>
+              <span className="block">
+                We work with{" "}
+                <RotatingWord
+                  words={["wholesalers", "investors", "realtors"]}
+                />
+              </span>
+              <span
+                className="block"
+                style={{ color: "var(--color-accent)" }}
+              >
                 anywhere in the country.
               </span>
             </h1>
