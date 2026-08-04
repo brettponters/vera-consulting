@@ -11,25 +11,20 @@ import {
 import { Container } from "@/components/ui/Container";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
-const BUSINESS_EXAMPLES = [
-  "your name",
-  "your wholesaling company",
-  "yourwebsite.com",
-  "your investing business",
-];
 const PAIN_EXAMPLES = [
   "finding off-market deals is all manual",
   "motivated-seller leads go cold",
   "underwriting takes me all night",
+  "my pipeline dries up between closings",
   "I forget to follow up",
 ];
 
 /**
  * Interactive "see what VERA can do for your business", on a VERA-orange panel
- * that expands to full-width as you scroll in. Two steps: the visitor enters
- * their business, picks their biggest pain point, then we stream a focused fix
- * for that pain in their context (Claude + live web search). Falls back
- * gracefully. Goal feeling: seen, hopeful, trusting.
+ * that expands to full-width as you scroll in. One step: the visitor types
+ * their biggest pain point and we stream a focused fix for it (Claude infers
+ * what kind of operator they are from the wording). Falls back gracefully.
+ * Goal feeling: seen, hopeful, trusting.
  */
 
 interface Result {
@@ -40,14 +35,9 @@ interface Result {
   notice?: string;
 }
 
-type Phase = "idle" | "profiling" | "pain" | "loading" | "done" | "error";
+type Phase = "idle" | "loading" | "done" | "error";
 
-const WAITING = ["Working from what we found", "Writing it up"];
-const PROFILING_STEPS = [
-  "Finding your business",
-  "Reading your site",
-  "Spotting where you'd find an edge",
-];
+const WAITING = ["Reading it", "Writing it up"];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 const ORANGE_GRADIENT =
@@ -59,28 +49,20 @@ const HAIR = "rgba(252,248,241,0.22)";
 const DARK = "#241A0C";
 
 export function PromptPersonalize() {
-  const [business, setBusiness] = useState("");
   const [pain, setPain] = useState("");
   const [customPain, setCustomPain] = useState("");
   const [phase, setPhase] = useState<Phase>("idle");
-  const [profile, setProfile] = useState("");
-  const [profileLines, setProfileLines] = useState<string[]>([]);
   const [result, setResult] = useState<Result | null>(null);
   const [steps, setSteps] = useState<string[]>([]);
   const [waitIndex, setWaitIndex] = useState(0);
-  const [profileStep, setProfileStep] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
 
   const reduce = useReducedMotion();
 
-  // Animated example placeholders, idle when reduced-motion or already typing.
-  const bizExample = useTypewriter(BUSINESS_EXAMPLES, !reduce && business === "");
-  const bizPlaceholder = reduce
-    ? `e.g. ${BUSINESS_EXAMPLES[0]}`
-    : `e.g. ${bizExample}`;
+  // Animated example placeholder, idle when reduced-motion or already typing.
   const painExample = useTypewriter(
     PAIN_EXAMPLES,
-    !reduce && phase === "pain" && customPain === "",
+    !reduce && phase === "idle" && customPain === "",
   );
   const painPlaceholder = reduce
     ? `e.g. ${PAIN_EXAMPLES[0]}`
@@ -115,60 +97,6 @@ export function PromptPersonalize() {
     return () => clearInterval(id);
   }, [phase, steps.length]);
 
-  useEffect(() => {
-    if (phase !== "profiling") return;
-    setProfileStep(0);
-    const id = setInterval(
-      () => setProfileStep((i) => Math.min(i + 1, PROFILING_STEPS.length - 1)),
-      900,
-    );
-    return () => clearInterval(id);
-  }, [phase]);
-
-  // Look the business up once: Haiku reads their site (or infers from the name)
-  // and returns a short profile. The profile is reused by solve() so the answer
-  // is grounded without searching again. The visitor then types their own pain.
-  async function goToPain() {
-    if (business.trim().length < 2) return;
-    setProfile("");
-    setProfileLines([]);
-    setPhase("profiling");
-    try {
-      const res = await fetch("/api/personalize/profile", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ business: business.trim() }),
-      });
-      if (!res.ok || !res.body) throw new Error("request failed");
-      const reader = res.body.getReader();
-      const dec = new TextDecoder();
-      let buf = "";
-      for (;;) {
-        const { done, value: chunk } = await reader.read();
-        if (done) break;
-        buf += dec.decode(chunk, { stream: true });
-        const live = buf
-          .split("\n")
-          .map((l) => l.trim())
-          .filter((l) => l.startsWith(">"))
-          .map((l) => l.replace(/^>\s?/, "").trim())
-          .filter(Boolean);
-        if (live.length) setProfileLines(live);
-      }
-      const i = buf.indexOf("{");
-      const j = buf.lastIndexOf("}");
-      if (i !== -1 && j > i) {
-        const data = JSON.parse(buf.slice(i, j + 1)) as {
-          profile?: string;
-        };
-        if (typeof data.profile === "string") setProfile(data.profile);
-      }
-    } catch {
-      /* fall back to hardcoded pains below */
-    }
-    setPhase("pain");
-  }
-
   async function solve(chosen: string) {
     setPain(chosen);
     setSteps([]);
@@ -178,7 +106,7 @@ export function PromptPersonalize() {
       const res = await fetch("/api/personalize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ business: business.trim(), pain: chosen, profile }),
+        body: JSON.stringify({ pain: chosen }),
       });
       if (!res.ok || !res.body) throw new Error("request failed");
       const reader = res.body.getReader();
@@ -268,119 +196,17 @@ export function PromptPersonalize() {
                 className="mt-5 font-sans text-lg md:text-xl leading-relaxed max-w-[600px]"
                 style={{ color: INK_DIM }}
               >
-                Drop your name, company, or site, tell us where deals or leads
-                dry up, and see exactly where we&rsquo;d find you an edge.
+                Tell us where deals or leads dry up, in your own words, and
+                see exactly where we&rsquo;d find you an edge.
               </p>
 
-              {/* Step 1, business input */}
+              {/* One step: type the pain */}
               {phase === "idle" && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="mt-10 md:mt-12"
                 >
-                  <div
-                    className="flex items-center gap-3 rounded-2xl pl-5 pr-2 py-2 border transition-colors focus-within:border-[rgba(255,255,255,0.65)]"
-                    style={{ borderColor: "rgba(255,255,255,0.30)" }}
-                  >
-                    <input
-                      type="text"
-                      value={business}
-                      onChange={(e) => setBusiness(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter") goToPain();
-                      }}
-                      maxLength={80}
-                      aria-label="Your website or business name"
-                      placeholder={bizPlaceholder}
-                      className="flex-1 min-w-0 bg-transparent font-sans outline-none placeholder:text-[rgba(255,255,255,0.55)] py-2"
-                      style={{
-                        fontSize: "clamp(1.125rem, 2.2vw, 1.625rem)",
-                        color: INK,
-                      }}
-                    />
-                    <button
-                      type="button"
-                      onClick={goToPain}
-                      disabled={business.trim().length < 2}
-                      aria-label="Continue"
-                      className="shrink-0 flex h-11 w-11 md:h-12 md:w-12 items-center justify-center rounded-full transition-opacity hover:opacity-90 disabled:opacity-30"
-                      style={{ backgroundColor: "#FFFFFF", color: "#241A0C" }}
-                    >
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                        <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </button>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Between steps, looking the business up (live search lines) */}
-              {phase === "profiling" && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="mt-10 md:mt-12 flex flex-col gap-2.5 font-mono text-sm"
-                >
-                  {(profileLines.length
-                    ? profileLines
-                    : [`${PROFILING_STEPS[profileStep]}…`]
-                  ).map((s, idx, arr) => {
-                    const isLast = idx === arr.length - 1;
-                    return (
-                      <div
-                        key={s + idx}
-                        className="flex items-center gap-3"
-                        style={{ color: INK_DIM, opacity: isLast ? 1 : 0.55 }}
-                      >
-                        <span className="relative inline-flex h-2 w-2 shrink-0">
-                          {isLast && (
-                            <span className="absolute inset-0 rounded-full opacity-75 animate-ping" style={{ backgroundColor: INK }} />
-                          )}
-                          <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: INK }} />
-                        </span>
-                        {s}
-                      </div>
-                    );
-                  })}
-                </motion.div>
-              )}
-
-              {/* Step 2, pick a pain */}
-              {phase === "pain" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, ease: EASE }}
-                  className="mt-10 md:mt-12"
-                >
-                  {profile && (
-                    <p
-                      className="font-mono text-[10px] uppercase tracking-[0.24em] font-semibold mb-3"
-                      style={{ color: INK_FAINT }}
-                    >
-                      Read your site: <span className="normal-case tracking-normal">{profile}</span>
-                    </p>
-                  )}
-                  <div className="flex items-center justify-between mb-5 gap-4">
-                    <p
-                      className="font-sans font-semibold text-lg md:text-xl"
-                      style={{ color: INK }}
-                    >
-                      Where do deals or leads dry up? Tell us in your words.
-                    </p>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setCustomPain("");
-                        setPhase("idle");
-                      }}
-                      className="shrink-0 font-sans text-sm underline underline-offset-4"
-                      style={{ color: INK_FAINT }}
-                    >
-                      back
-                    </button>
-                  </div>
                   <div
                     className="flex items-center gap-3 rounded-2xl pl-5 pr-2 py-2 border transition-colors focus-within:border-[rgba(255,255,255,0.65)]"
                     style={{ borderColor: "rgba(255,255,255,0.30)" }}
@@ -395,7 +221,6 @@ export function PromptPersonalize() {
                         }
                       }}
                       maxLength={140}
-                      autoFocus
                       aria-label="Where do deals or leads dry up?"
                       placeholder={painPlaceholder}
                       className="flex-1 min-w-0 bg-transparent font-sans outline-none placeholder:text-[rgba(255,255,255,0.55)] py-2"
@@ -569,7 +394,7 @@ export function PromptPersonalize() {
                         type="button"
                         onClick={() => {
                           setCustomPain("");
-                          setPhase("pain");
+                          setPhase("idle");
                         }}
                         className="mt-4 font-sans text-sm font-semibold underline underline-offset-4"
                         style={{ color: INK }}
