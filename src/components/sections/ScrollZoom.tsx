@@ -22,15 +22,15 @@ const PILLARS: Pillar[] = [
   },
   {
     letter: "E",
-    title: "Ethical",
+    title: "Evidence-Based",
     detail:
-      "Every AI system affects people who never agreed to it, your clients, employees, applicants, patients. We design for fairness, test for bias, protect privacy, and refuse to ship anything that fails those tests. If the right answer for a project is don't deploy, that's the answer we give.",
+      "Every recommendation traces back to something concrete, published research, tested benchmarks, or production patterns we've watched hold up. When we say a model fits your work or a deal is worth your time, we have the evidence for it and we'll show it to you. We don't repeat AI hype back to you.",
   },
   {
     letter: "R",
-    title: "Research-Backed",
+    title: "Real Estate",
     detail:
-      "Every recommendation traces back to something concrete, published research, tested benchmarks, or production patterns we've watched hold up. When we say a model fits your work or an architecture will scale, we have the evidence for it and we'll show it to you. We don't repeat AI hype back to you.",
+      "This isn't general-purpose AI pointed at houses. Everything we build runs on deals: sourcing off-market properties, reading markets and sellers early, underwriting fast, and matching the right buyer to each contract. Real estate is the whole product, not one vertical we happen to serve.",
   },
   {
     letter: "A",

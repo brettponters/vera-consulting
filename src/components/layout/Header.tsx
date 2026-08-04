@@ -58,7 +58,7 @@ export function Header() {
           </svg>
           <span>VERA</span>
           <span className="hidden md:inline text-[10px] font-medium tracking-[0.08em] uppercase text-[var(--color-muted)]">
-            Value-Driven, Ethical, Research-Backed AI
+            Value-Driven, Evidence-Based Real Estate AI
           </span>
         </Link>
 
