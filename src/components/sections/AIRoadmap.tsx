@@ -18,6 +18,8 @@ interface Capability {
   examples: string[];
   /** Alt text for the per-band Claude product frame in /public/capabilities. */
   frameAlt: string;
+  /** Optional external product visual. Real-estate frames remain local. */
+  frameSrc?: string;
 }
 
 const CAPABILITIES: Capability[] = [
@@ -128,6 +130,7 @@ const OUTBOUND_CAPABILITIES: Capability[] = [
     detail: "We look at the clients you serve best, where the pain is urgent, who can afford the work, and what makes your agency meaningfully different. That becomes a focused market thesis instead of a broad list and a hopeful send.",
     examples: ["Best-fit client segments", "Buying triggers and timing", "Offer-to-market fit", "A reason to reach out now"],
     frameAlt: "VERA mapping the strongest market and audience opportunities",
+    frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68ca3ab64f1b049e5ee849a4_de784e201ec29242bb2373d0c5eb32b6_Find%20leads.png",
   },
   {
     id: "market-research",
@@ -137,6 +140,7 @@ const OUTBOUND_CAPABILITIES: Capability[] = [
     detail: "We source the accounts, identify the right decision-makers, verify their contact data, and enrich each record with the context that matters. The result is a usable market, not another database export.",
     examples: ["Right companies and roles", "Verified work emails", "Company and buyer context", "Duplicates removed before spend"],
     frameAlt: "VERA researching and organizing qualified prospects",
+    frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd08b727755a29c3f9a86d_4bc1ddfc2229fe91c1c6bb60b23b243d_Leads%20Finder%20%281%29.avif",
   },
   {
     id: "comms",
@@ -146,6 +150,7 @@ const OUTBOUND_CAPABILITIES: Capability[] = [
     detail: "We research what the agency can credibly notice, connect that observation to the reason for reaching out, and keep the offer direct. Personalization supports the conversation instead of becoming the conversation.",
     examples: ["Human opening blocks", "Relevant target-audience language", "Clear offer positioning", "Copy that sounds like you"],
     frameAlt: "VERA writing a relevant outbound message from prospect research",
+    frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd00aef8d6168583465351_Frame%201171277500.webp",
   },
   {
     id: "deals",
@@ -155,6 +160,7 @@ const OUTBOUND_CAPABILITIES: Capability[] = [
     detail: "We manage the lists, sequences, variables, sending logic, and tests. Replies tell us where the audience or message is strong, weak, or unclear, and we use that signal to make the next batch better.",
     examples: ["Campaign setup and QA", "Controlled batch launches", "Message and audience tests", "Iteration from real replies"],
     frameAlt: "VERA monitoring and improving a live outbound campaign",
+    frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd0e02151c3084ed023c65_22a49ea2c31f05ffae46c96e2bd5e001_Campaigns%20table%20row.avif",
   },
   {
     id: "tax",
@@ -164,6 +170,7 @@ const OUTBOUND_CAPABILITIES: Capability[] = [
     detail: "We verify emails before personalization, control sending volume, remove duplicates, and keep invalid or risky contacts out of the campaign. Clean operations are part of performance, not an afterthought.",
     examples: ["Verification before enrichment", "Domain-level deduplication", "Controlled sending volume", "Clean campaign data"],
     frameAlt: "VERA checking campaign data and deliverability safeguards",
+    frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd11dd8f6af1f4e052c17f_9085c2dea438c8f99f9073b428a44d86_smart%20analytics%20result.avif",
   },
   {
     id: "marketing",
@@ -173,6 +180,7 @@ const OUTBOUND_CAPABILITIES: Capability[] = [
     detail: "We define qualification before launch, watch which prospects engage, and keep the campaign aligned with the kind of meeting your team would genuinely take. The system is built around pipeline quality, not vanity metrics.",
     examples: ["Qualification defined upfront", "Replies routed clearly", "Meetings tied to the ICP", "Performance measured in conversations"],
     frameAlt: "VERA connecting campaign activity to qualified agency meetings",
+    frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd1620eb35a203b2f78622_28b012c6455180f3078edcb70b21fa35_unified%20inbox.png",
   },
 ];
 
@@ -224,22 +232,24 @@ function CapabilityFrame({
   id,
   title,
   frameAlt,
+  frameSrc,
 }: {
   id: string;
   title: string;
   frameAlt: string;
+  frameSrc?: string;
 }) {
   // A still frame from a Claude (Anthropic) product demo, chosen to match the
   // band's topic. One image per band, served locally from /public/capabilities.
   return (
     <div className="relative w-full overflow-hidden rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] aspect-video">
       <img
-        src={`/capabilities/${id}.jpg`}
+        src={frameSrc ?? `/capabilities/${id}.jpg`}
         alt={frameAlt}
         loading="lazy"
         width={1280}
         height={720}
-        className="absolute inset-0 h-full w-full object-cover"
+        className={`absolute inset-0 h-full w-full ${frameSrc ? "object-contain bg-[#f5f6fa] p-4 md:p-7" : "object-cover"}`}
       />
 
       {/* Footer caption, sits on a subtle gradient so it stays legible over
@@ -265,11 +275,13 @@ function CapabilityFrame({
 function CapabilityBand({
   cap,
   consequence,
+  showDecorativeNumeral,
   isLast,
   index,
 }: {
   cap: Capability;
   consequence: string;
+  showDecorativeNumeral: boolean;
   isLast: boolean;
   index: number;
 }) {
@@ -319,26 +331,28 @@ function CapabilityBand({
               {/* Giant outlined numeral, decorative. Sits on the outer side
                   of the content column (opposite the video), extending past
                   the column toward the page edge. */}
-              <span
-                aria-hidden="true"
-                className={`hidden lg:block absolute font-sans font-black select-none pointer-events-none ${
-                  reversed
-                    ? "right-0 lg:-right-[4vw] xl:-right-[8vw]"
-                    : "left-0 lg:-left-[4vw] xl:-left-[8vw]"
-                }`}
-                style={{
-                  color: "transparent",
-                  WebkitTextStroke: "1.5px var(--color-accent)",
-                  fontSize: "clamp(8rem, 14vw, 15rem)",
-                  lineHeight: 0.78,
-                  letterSpacing: "-0.06em",
-                  top: "-3rem",
-                  opacity: 0.45,
-                  zIndex: 0,
-                }}
-              >
-                {cap.num}
-              </span>
+              {showDecorativeNumeral && (
+                <span
+                  aria-hidden="true"
+                  className={`hidden lg:block absolute font-sans font-black select-none pointer-events-none ${
+                    reversed
+                      ? "right-0 lg:-right-[4vw] xl:-right-[8vw]"
+                      : "left-0 lg:-left-[4vw] xl:-left-[8vw]"
+                  }`}
+                  style={{
+                    color: "transparent",
+                    WebkitTextStroke: "1.5px var(--color-accent)",
+                    fontSize: "clamp(8rem, 14vw, 15rem)",
+                    lineHeight: 0.78,
+                    letterSpacing: "-0.06em",
+                    top: "-3rem",
+                    opacity: 0.45,
+                    zIndex: 0,
+                  }}
+                >
+                  {cap.num}
+                </span>
+              )}
 
               <motion.h3
                 id={`cap-${cap.id}-title`}
@@ -460,6 +474,7 @@ function CapabilityBand({
                   id={cap.id}
                   title={cap.title}
                   frameAlt={cap.frameAlt}
+                  frameSrc={cap.frameSrc}
                 />
               </motion.div>
             </div>
@@ -535,6 +550,7 @@ export function AIRoadmap({ outbound = false }: { outbound?: boolean }) {
                 key={cap.id}
                 cap={cap}
                 consequence={consequences[cap.id]}
+                showDecorativeNumeral={!outbound}
                 isLast={i === capabilities.length - 1}
                 index={i}
               />
