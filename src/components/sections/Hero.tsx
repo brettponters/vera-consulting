@@ -9,6 +9,11 @@ import { RotatingWord } from "@/components/ui/RotatingWord";
 export default function Hero({ outbound = false }: { outbound?: boolean }) {
   const lineOneWords = (outbound ? "Cold Email Outbound" : "Agentic AI Solutions").split(" ");
   const audiences = ["Wholesalers.", "Investors.", "Agents."];
+  const outboundAudiences = [
+    "PPC Agencies.",
+    "Paid Media Teams.",
+    "Digital Agencies.",
+  ];
   return (
     <section
       aria-label="Introduction"
@@ -97,9 +102,14 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
             >
               for{" "}
               {outbound ? (
-                <span style={{ color: "var(--color-accent)" }}>
-                  Growing PPC Agencies.
-                </span>
+                <>
+                  <span style={{ color: "var(--color-accent)" }}>Growing</span>{" "}
+                  <RotatingWord
+                    words={outboundAudiences}
+                    fixedWidth="9.5em"
+                    style={{ color: "var(--color-accent)" }}
+                  />
+                </>
               ) : (
                 <>
                   <span style={{ color: "var(--color-accent)" }}>Real Estate</span>{" "}

@@ -11,6 +11,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 interface RotatingWordProps {
   words: readonly string[];
   holdMs?: number;
+  fixedWidth?: number | string;
   className?: string;
   style?: CSSProperties;
 }
@@ -24,6 +25,7 @@ interface RotatingWordProps {
 export function RotatingWord({
   words,
   holdMs = 5000,
+  fixedWidth,
   className,
   style,
 }: RotatingWordProps) {
@@ -49,7 +51,7 @@ export function RotatingWord({
     <motion.span
       className={`relative inline-grid overflow-hidden align-bottom ${className ?? ""}`}
       initial={false}
-      animate={{ width }}
+      animate={{ width: fixedWidth ?? width }}
       transition={{
         duration: reduceMotion ? 0 : 0.7,
         ease: [0.22, 1, 0.36, 1],
