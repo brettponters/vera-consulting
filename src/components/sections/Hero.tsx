@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { RotatingWord } from "@/components/ui/RotatingWord";
 
 export default function Hero({ outbound = false }: { outbound?: boolean }) {
-  const lineOneWords = (outbound ? "Performance-Based Outbound" : "Agentic AI Solutions").split(" ");
+  const lineOneWords = (outbound ? "Cold Email Outbound" : "Agentic AI Solutions").split(" ");
   const audiences = ["Wholesalers.", "Investors.", "Agents."];
   return (
     <section
@@ -51,7 +51,7 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
             <div className="mb-5">
               <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
                 {outbound
-                  ? "A performance-based growth partner"
+                  ? "A founder-led outbound partner"
                   : "A performance-based intelligence partner"}
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
           <h1
             aria-label={
               outbound
-                ? "Performance-Based Outbound for Paid Media and Digital Agencies."
+                ? "Cold Email Outbound for Growing PPC Agencies."
                 : "Agentic AI Solutions for Real Estate Wholesalers, Investors, and Agents."
             }
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"

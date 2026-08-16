@@ -60,7 +60,7 @@ export function Header() {
           <span>VERA</span>
           <span className="hidden md:inline text-[10px] font-medium tracking-[0.08em] uppercase text-[var(--color-muted)]">
             {isOutbound
-              ? "Founder-Led, Performance-Based Outbound"
+              ? "Founder-Led Cold Email Outbound"
               : "Value-Driven, Evidence-Based Real Estate AI"}
           </span>
         </Link>

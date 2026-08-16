@@ -8,9 +8,9 @@ import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "Performance-Based Outbound for Agencies | VERA Solutions",
+  title: "Cold Email Outbound for Growing Agencies | VERA Solutions",
   description:
-    "VERA Solutions builds and runs performance-based outbound systems for paid media and digital advertising agencies.",
+    "VERA Solutions builds and runs cold email outbound systems for growing paid media and digital advertising agencies.",
   alternates: { canonical: "/outbound" },
 };
 
