@@ -8,9 +8,7 @@ import { RotatingWord } from "@/components/ui/RotatingWord";
 
 export default function Hero({ outbound = false }: { outbound?: boolean }) {
   const lineOneWords = (outbound ? "Performance-Based Outbound" : "Agentic AI Solutions").split(" ");
-  const audiences = outbound
-    ? ["Paid Media Agencies.", "PPC Agencies.", "Digital Agencies."]
-    : ["Wholesalers.", "Investors.", "Agents."];
+  const audiences = ["Wholesalers.", "Investors.", "Agents."];
   return (
     <section
       aria-label="Introduction"
@@ -48,7 +46,7 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
       </div>
 
       <Container size="wide" className="relative z-10">
-        <div className="max-w-[1040px]">
+        <div className={outbound ? "max-w-[1200px]" : "max-w-[1040px]"}>
           <Reveal delay={0}>
             <div className="mb-5">
               <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
@@ -66,7 +64,11 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
                 : "Agentic AI Solutions for Real Estate Wholesalers, Investors, and Agents."
             }
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
-            style={{ fontSize: "clamp(2.5rem, 5.5vw, 5rem)" }}
+            style={{
+              fontSize: outbound
+                ? "clamp(2.5rem, 4.7vw, 4.5rem)"
+                : "clamp(2.5rem, 5.5vw, 5rem)",
+            }}
           >
             <span aria-hidden="true" className="block">
               {lineOneWords.map((word, i) => (
@@ -94,13 +96,19 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
               className="block"
             >
               for{" "}
-              <span style={{ color: "var(--color-accent)" }}>
-                {outbound ? "Growing" : "Real Estate"}
-              </span>{" "}
-              <RotatingWord
-                words={audiences}
-                style={{ color: "var(--color-accent)" }}
-              />
+              {outbound ? (
+                <span style={{ color: "var(--color-accent)" }}>
+                  Growing PPC Agencies.
+                </span>
+              ) : (
+                <>
+                  <span style={{ color: "var(--color-accent)" }}>Real Estate</span>{" "}
+                  <RotatingWord
+                    words={audiences}
+                    style={{ color: "var(--color-accent)" }}
+                  />
+                </>
+              )}
             </motion.span>
           </h1>
 
