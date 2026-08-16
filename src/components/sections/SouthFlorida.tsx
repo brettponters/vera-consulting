@@ -12,9 +12,20 @@ const SAMPLE_MARKETS = [
   { label: "Across the U.S.", blurb: "Based in Boca Raton. The partnership runs fully remote, so your market is our market." },
 ];
 
-export function SouthFlorida() {
+const OUTBOUND_PARTNERS = [
+  { label: "Paid media agencies", blurb: "Agencies running Google Ads, Meta Ads, or both for a defined group of clients." },
+  { label: "PPC specialists", blurb: "Focused teams with strong campaign delivery and room for more of the right accounts." },
+  { label: "Full-service digital agencies", blurb: "Agencies where paid acquisition is a meaningful, proven part of the offer." },
+  { label: "Founder-led teams", blurb: "Operators who still care about fit, reputation, and the quality of every new client." },
+  { label: "Growing delivery teams", blurb: "Agencies with capacity to onboard new work without compromising the work itself." },
+  { label: "Across the U.S.", blurb: "VERA is based in Boca Raton and operates campaigns remotely across the country." },
+];
+
+export function SouthFlorida({ outbound = false }: { outbound?: boolean }) {
+  const rows = outbound ? OUTBOUND_PARTNERS : SAMPLE_MARKETS;
   return (
     <section
+      id={outbound ? "who-we-work-with" : undefined}
       aria-label="Where we work"
       className="bg-[var(--color-bg)] py-16 md:py-20"
     >
@@ -23,7 +34,7 @@ export function SouthFlorida() {
         <div className="pt-16 md:pt-20">
           <div className="max-w-[720px] space-y-5 mb-10 md:mb-14">
             <p className="font-sans text-xs uppercase tracking-[0.14em] text-[var(--color-accent)]">
-              Where we work
+              {outbound ? "Who we work with" : "Where we work"}
             </p>
             <h2
               className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.02em] leading-tight"
@@ -32,20 +43,24 @@ export function SouthFlorida() {
               <span className="block">
                 We work with{" "}
                 <RotatingWord
-                  words={["wholesalers", "investors", "agents"]}
+                  words={outbound
+                    ? ["paid media agencies", "PPC specialists", "digital agencies"]
+                    : ["wholesalers", "investors", "agents"]}
                 />
               </span>
-              <span className="block">across the United States.</span>
+              <span className="block">
+                {outbound ? "that are ready to grow." : "across the United States."}
+              </span>
             </h2>
             <p className="font-sans text-[var(--color-muted)] text-base leading-relaxed">
-              The partnership is fully remote. We pull fresh data county by county,
-              source deals by your criteria, and find the buyer from our list wherever
-              you operate.
+              {outbound
+                ? "The best fit is an agency with a clear offer, proof it can deliver, and room for new clients. We bring the outbound system and operate it with you."
+                : "The partnership is fully remote. We pull fresh data county by county, source deals by your criteria, and find the buyer from our list wherever you operate."}
             </p>
           </div>
 
           <ul className="list-none m-0 p-0 border-t border-[var(--color-hairline)]">
-            {SAMPLE_MARKETS.map((row, i) => {
+            {rows.map((row, i) => {
               const alignRight = i % 2 === 1;
               return (
                 <li
@@ -75,14 +90,16 @@ export function SouthFlorida() {
             })}
           </ul>
 
-          <div className="mt-10">
-            <Link
-              href="/locations"
-              className="font-sans text-sm font-medium text-[var(--color-accent)] no-underline hover:underline"
-            >
-              All markets we serve →
-            </Link>
-          </div>
+          {!outbound && (
+            <div className="mt-10">
+              <Link
+                href="/locations"
+                className="font-sans text-sm font-medium text-[var(--color-accent)] no-underline hover:underline"
+              >
+                All markets we serve →
+              </Link>
+            </div>
+          )}
         </div>
       </Container>
     </section>

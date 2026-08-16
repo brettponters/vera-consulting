@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
-export default function ContactClient() {
+export default function ContactClient({ outbound = false }: { outbound?: boolean }) {
   const [tab, setTab] = useState<"call" | "form">("call");
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -44,7 +44,9 @@ export default function ContactClient() {
           email: data.email,
           company: data.company || "-",
           message: data.message,
-          _subject: `New VERA contact: ${data.name}`,
+          _subject: outbound
+            ? `New VERA Outbound inquiry: ${data.name}`
+            : `New VERA contact: ${data.name}`,
           _template: "table",
         }),
       });
@@ -72,7 +74,9 @@ export default function ContactClient() {
         <Container size="wide" className="relative z-10">
           <div className="max-w-[760px]">
             <Reveal>
-              <Eyebrow className="mb-5">Contact</Eyebrow>
+              <Eyebrow className="mb-5">
+                {outbound ? "Outbound pilot" : "Contact"}
+              </Eyebrow>
             </Reveal>
 
             <h1
@@ -88,7 +92,7 @@ export default function ContactClient() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                Let&rsquo;s talk
+                {outbound ? "Let’s talk outbound" : "Let’s talk"}
                 <span style={{ color: "var(--color-accent)" }}>.</span>
               </motion.span>
             </h1>
@@ -106,7 +110,7 @@ export default function ContactClient() {
                     : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
                 }`}
               >
-                Become a Partner
+                {outbound ? "Book a pilot call" : "Become a Partner"}
               </button>
               <button
                 type="button"
@@ -149,7 +153,9 @@ export default function ContactClient() {
                     Got it.
                   </h2>
                   <p className="font-sans text-base text-[var(--color-body)]">
-                    We&rsquo;ll be in touch soon.
+                    {outbound
+                      ? "I’ll be in touch soon to talk through the pilot."
+                      : "We’ll be in touch soon."}
                   </p>
                 </div>
               ) : (
@@ -194,7 +200,7 @@ export default function ContactClient() {
 
                   <div>
                     <label htmlFor="message" className="font-sans text-sm font-medium text-[var(--color-heading)] mb-1.5 block">
-                      What are you looking for?
+                      {outbound ? "Who would you most like to meet?" : "What are you looking for?"}
                     </label>
                     <textarea
                       id="message"

@@ -23,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/reading",
     "/contact",
     "/get-started",
+    "/outbound",
+    "/outbound/contact",
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified,

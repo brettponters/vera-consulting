@@ -6,11 +6,11 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { RotatingWord } from "@/components/ui/RotatingWord";
 
-const LINE_ONE_WORDS = "Agentic AI Solutions".split(" ");
-
-const AUDIENCES = ["Wholesalers.", "Investors.", "Agents."];
-
-export default function Hero() {
+export default function Hero({ outbound = false }: { outbound?: boolean }) {
+  const lineOneWords = (outbound ? "Performance-Based Outbound" : "Agentic AI Solutions").split(" ");
+  const audiences = outbound
+    ? ["Paid Media Agencies.", "PPC Agencies.", "Digital Agencies."]
+    : ["Wholesalers.", "Investors.", "Agents."];
   return (
     <section
       aria-label="Introduction"
@@ -52,18 +52,24 @@ export default function Hero() {
           <Reveal delay={0}>
             <div className="mb-5">
               <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
-                A performance-based intelligence partner
+                {outbound
+                  ? "A performance-based growth partner"
+                  : "A performance-based intelligence partner"}
               </p>
             </div>
           </Reveal>
 
           <h1
-            aria-label="Agentic AI Solutions for Real Estate Wholesalers, Investors, and Agents."
+            aria-label={
+              outbound
+                ? "Performance-Based Outbound for Paid Media and Digital Agencies."
+                : "Agentic AI Solutions for Real Estate Wholesalers, Investors, and Agents."
+            }
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
             style={{ fontSize: "clamp(2.5rem, 5.5vw, 5rem)" }}
           >
             <span aria-hidden="true" className="block">
-              {LINE_ONE_WORDS.map((word, i) => (
+              {lineOneWords.map((word, i) => (
                 <motion.span
                   key={`${word}-${i}`}
                   initial={{ y: 10 }}
@@ -76,7 +82,7 @@ export default function Hero() {
                   className="inline-block whitespace-pre"
                 >
                   {word}
-                  {i < LINE_ONE_WORDS.length - 1 ? " " : ""}
+                  {i < lineOneWords.length - 1 ? " " : ""}
                 </motion.span>
               ))}
             </span>
@@ -88,9 +94,11 @@ export default function Hero() {
               className="block"
             >
               for{" "}
-              <span style={{ color: "var(--color-accent)" }}>Real Estate</span>{" "}
+              <span style={{ color: "var(--color-accent)" }}>
+                {outbound ? "Growing" : "Real Estate"}
+              </span>{" "}
               <RotatingWord
-                words={AUDIENCES}
+                words={audiences}
                 style={{ color: "var(--color-accent)" }}
               />
             </motion.span>
@@ -98,8 +106,9 @@ export default function Hero() {
 
           <Reveal delay={0.55}>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[640px] mb-2">
-              We can bring you more deals and buyers and better spreads, without
-              ever losing what makes you&hellip; you.
+              {outbound
+                ? "We build and run the outbound system that turns your agency’s work into qualified conversations, without adding another job to your team."
+                : "We can bring you more deals and buyers and better spreads, without ever losing what makes you… you."}
             </p>
           </Reveal>
         </div>

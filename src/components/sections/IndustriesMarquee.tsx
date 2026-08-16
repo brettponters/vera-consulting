@@ -12,7 +12,19 @@ const SERVICES = [
   "Cash buyer list",
 ];
 
-export default function IndustriesMarquee() {
+const OUTBOUND_SERVICES = [
+  "Market strategy",
+  "Lead sourcing",
+  "Email verification",
+  "Prospect research",
+  "Personalized copy",
+  "Campaign operations",
+  "Reply intelligence",
+  "Qualified meetings",
+];
+
+export default function IndustriesMarquee({ outbound = false }: { outbound?: boolean }) {
+  const services = outbound ? OUTBOUND_SERVICES : SERVICES;
   return (
     <section
       className="mt-4 md:mt-10 py-6 md:py-10 border-t border-b border-[var(--color-hairline)]"
@@ -31,7 +43,7 @@ export default function IndustriesMarquee() {
           </p>
           <Marquee duration={140} pauseOnHover reverse className="min-w-0">
             <span className="flex items-center whitespace-nowrap px-4 md:px-6">
-              {SERVICES.map((service) => (
+              {services.map((service) => (
                 <span key={service} className="flex items-center">
                   <span className="font-sans font-medium text-base md:text-lg text-[var(--color-body)]">
                     {service}

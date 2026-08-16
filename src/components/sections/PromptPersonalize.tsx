@@ -19,6 +19,14 @@ const PAIN_EXAMPLES = [
   "I forget to follow up",
 ];
 
+const OUTBOUND_PAIN_EXAMPLES = [
+  "referrals are too unpredictable",
+  "we need more qualified sales conversations",
+  "our team does not have time to prospect",
+  "cold email has never worked for us",
+  "we keep attracting the wrong clients",
+];
+
 /**
  * Interactive "see what VERA can do for your business", on a VERA-orange panel
  * that expands to full-width as you scroll in. One step: the visitor types
@@ -48,7 +56,7 @@ const INK_FAINT = "rgba(252,248,241,0.56)";
 const HAIR = "rgba(252,248,241,0.22)";
 const DARK = "#241A0C";
 
-export function PromptPersonalize() {
+export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) {
   const [pain, setPain] = useState("");
   const [customPain, setCustomPain] = useState("");
   const [phase, setPhase] = useState<Phase>("idle");
@@ -60,12 +68,13 @@ export function PromptPersonalize() {
   const reduce = useReducedMotion();
 
   // Animated example placeholder, idle when reduced-motion or already typing.
+  const painExamples = outbound ? OUTBOUND_PAIN_EXAMPLES : PAIN_EXAMPLES;
   const painExample = useTypewriter(
-    PAIN_EXAMPLES,
+    painExamples,
     !reduce && phase === "idle" && customPain === "",
   );
   const painPlaceholder = reduce
-    ? `e.g. ${PAIN_EXAMPLES[0]}`
+    ? `e.g. ${painExamples[0]}`
     : `e.g. ${painExample}`;
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -106,7 +115,7 @@ export function PromptPersonalize() {
       const res = await fetch("/api/personalize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ pain: chosen }),
+        body: JSON.stringify({ pain: chosen, context: outbound ? "outbound-agency-growth" : "real-estate" }),
       });
       if (!res.ok || !res.body) throw new Error("request failed");
       const reader = res.body.getReader();
@@ -147,7 +156,7 @@ export function PromptPersonalize() {
   return (
     <section
       ref={sectionRef}
-      aria-label="See where VERA would find your edge"
+      aria-label={outbound ? "See where VERA would improve your outbound" : "See where VERA would find your edge"}
       className="bg-[var(--color-surface)]"
     >
       <motion.div
@@ -190,14 +199,17 @@ export function PromptPersonalize() {
                 className="font-sans font-black leading-[1.0] tracking-[-0.035em]"
                 style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)", color: INK }}
               >
-                See where VERA would find your edge.
+                {outbound
+                  ? "See where VERA would improve your outbound."
+                  : "See where VERA would find your edge."}
               </h2>
               <p
                 className="mt-5 font-sans text-lg md:text-xl leading-relaxed max-w-[600px]"
                 style={{ color: INK_DIM }}
               >
-                Tell us where deals or leads dry up, in your own words, and
-                see exactly where we&rsquo;d find you an edge.
+                {outbound
+                  ? "Tell us where new business gets stuck, in your own words, and see where we’d start."
+                  : "Tell us where deals or leads dry up, in your own words, and see exactly where we’d find you an edge."}
               </p>
 
               {/* One step: type the pain */}
@@ -221,7 +233,7 @@ export function PromptPersonalize() {
                         }
                       }}
                       maxLength={140}
-                      aria-label="Where do deals or leads dry up?"
+                      aria-label={outbound ? "Where does new business get stuck?" : "Where do deals or leads dry up?"}
                       placeholder={painPlaceholder}
                       className="flex-1 min-w-0 bg-transparent font-sans outline-none placeholder:text-[rgba(255,255,255,0.55)] py-2"
                       style={{
@@ -345,7 +357,7 @@ export function PromptPersonalize() {
 
                       <div className="mt-9">
                         <a
-                          href="/contact"
+                          href={outbound ? "/outbound/contact" : "/contact"}
                           className="group inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-sans text-sm font-medium no-underline transition-all duration-200 ease-out hover:-translate-y-px"
                           style={{ backgroundColor: DARK, color: "#F5EFE4" }}
                         >
@@ -385,7 +397,7 @@ export function PromptPersonalize() {
                     >
                       <p style={{ color: INK_DIM }} className="font-sans">
                         That one&rsquo;s not cooperating. Try again, or just{" "}
-                        <a href="/contact" className="underline underline-offset-4" style={{ color: INK }}>
+                        <a href={outbound ? "/outbound/contact" : "/contact"} className="underline underline-offset-4" style={{ color: INK }}>
                           become a partner
                         </a>{" "}
                         and we&rsquo;ll do it live.

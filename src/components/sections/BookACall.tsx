@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 
-export function BookACall() {
+export function BookACall({ outbound = false }: { outbound?: boolean }) {
   return (
     <section
       id="book-a-call"
@@ -24,14 +24,15 @@ export function BookACall() {
 
           <Reveal delay={0.1}>
             <p className="font-sans text-[var(--color-body)] text-lg leading-relaxed max-w-prose">
-              30 minutes. We&rsquo;ll talk about the deals you&rsquo;re chasing
-              and whether we can find you an edge. No deck, no pitch.
+              {outbound
+                ? "30 minutes. We’ll talk about the clients you want, what makes a meeting worth taking, and whether the model fits. No deck, no pressure."
+                : "30 minutes. We’ll talk about the deals you’re chasing and whether we can find you an edge. No deck, no pitch."}
             </p>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <Button href="/contact" variant="filled" size="lg" arrow>
-              Become a Partner
+            <Button href={outbound ? "/outbound/contact" : "/contact"} variant="filled" size="lg" arrow>
+              {outbound ? "Explore a Pilot" : "Become a Partner"}
             </Button>
           </Reveal>
         </div>
