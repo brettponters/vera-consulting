@@ -117,37 +117,29 @@ export default async function RoadmapPage({
       </section>
 
       <section className="px-6 pb-10 md:px-12 md:pb-16">
-        <div className="mx-auto max-w-6xl rounded-3xl border border-black/10 bg-white p-8 md:p-12">
-          <SectionLabel>Why outbound</SectionLabel>
-          <h2 className="max-w-3xl text-3xl font-semibold leading-tight md:text-5xl">
-            It turns existing proof into a measurable way to create new conversations.
-          </h2>
-          <div className="mt-10 grid gap-x-12 gap-y-0 md:grid-cols-2">
-            {[
-              ["Precise", "Choose the exact account, company size, market, and decision-maker before spending money."],
-              ["Owned", "Build a repeatable acquisition channel that does not depend entirely on referrals or ad auctions."],
-              ["Measurable", "Track which market, title, proof point, and message actually creates positive replies."],
-              ["Learnable", "Use each batch to improve the next one instead of committing to a large campaign on assumptions."],
-            ].map(([title, description]) => (
-              <article key={title} className="border-t border-black/10 py-6">
-                <h3 className="text-xl font-semibold">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-black/60">{description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-10 md:px-12 md:pb-16">
         <div className="mx-auto max-w-6xl rounded-3xl border border-black/10 bg-[#efe8dc] p-8 md:p-12">
           <div>
-            <SectionLabel>The statistics</SectionLabel>
+            <SectionLabel>The science-backed approach</SectionLabel>
             <h2 className="max-w-3xl text-3xl font-semibold leading-tight md:text-4xl">
-              Use scale to improve the offer.
+              Treat outbound like an experiment, not a guessing game.
             </h2>
             <p className="mt-5 max-w-3xl text-black/60">
-              Outbound creates repeated, measurable attempts at the same offer. With clean data and enough controlled volume, small improvements in the audience, proof, or offer can compound into substantially more qualified conversations for the team.
+              Start with a clear hypothesis about the audience, proof, and offer. Hold the other variables steady, test one meaningful change at a time, and judge it using positive replies and qualified meetings. Once the evidence identifies a winner, controlled scale turns a small improvement into substantially more opportunities for the team.
             </p>
+            <div className="mt-8 grid gap-4 md:grid-cols-4">
+              {[
+                ["01", "Hypothesis", "Define what should work and why."],
+                ["02", "Control", "Change one meaningful variable at a time."],
+                ["03", "Evidence", "Measure positive replies and qualified meetings."],
+                ["04", "Scale", "Increase volume only after the result repeats."],
+              ].map(([number, title, description]) => (
+                <div key={title} className="border-t border-black/15 pt-4">
+                  <p className="text-xs font-bold text-[#c97b3f]">{number}</p>
+                  <p className="mt-3 font-semibold">{title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-black/50">{description}</p>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="mt-9 divide-y divide-black/10 border-y border-black/10">
             {[
@@ -241,7 +233,7 @@ export default async function RoadmapPage({
             </p>
           </div>
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.12em] text-[#8b5a32]">Proof signals to match</p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.12em] text-[#8b5a32]">Proof statements the campaign can use</p>
             <ol className="divide-y divide-black/10 rounded-2xl bg-[#f8f6f1] px-6">
               {roadmap.personalizationSignals.map((item, index) => (
                 <li key={item} className="flex gap-5 py-5">
@@ -251,45 +243,8 @@ export default async function RoadmapPage({
               ))}
             </ol>
             <p className="mt-5 text-sm leading-relaxed text-black/50">
-              AI selects one supported signal, writes the opener and subject around it, and keeps the offer and claims locked. Every line retains its source for review.
+              AI chooses the statement that best supports the conversation, then adapts the opener around the prospect’s real context. It never changes the numbers, exaggerates the claim, or invents a result.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-10 md:px-12 md:pb-16">
-        <div className="mx-auto grid max-w-6xl gap-10 rounded-3xl border border-black/10 bg-white p-8 md:grid-cols-[0.72fr_1.28fr] md:p-12">
-          <div>
-            <SectionLabel>How to use outbound</SectionLabel>
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-              Extend what already works.
-            </h2>
-          </div>
-          <ul className="divide-y divide-black/10">
-            {roadmap.howOutboundHelps.map((reason, index) => (
-              <li key={reason} className="flex gap-5 py-5 first:pt-0 last:pb-0">
-                <span className="mt-1 font-semibold text-[#c97b3f]">0{index + 1}</span>
-                <p className="text-lg leading-relaxed text-black/70">{reason}</p>
-              </li>
-            ))}
-          </ul>
-          <div className="md:col-span-2 mt-2 flex flex-col items-stretch gap-3 rounded-2xl bg-[#f8f6f1] p-5 md:flex-row md:items-center">
-            {[
-              ["01", "Existing proof"],
-              ["02", "Targeted accounts"],
-              ["03", "Qualified conversations"],
-              ["04", "Better decisions"],
-            ].map(([number, label], index, items) => (
-              <div key={label} className="contents">
-                <div className="flex flex-1 items-center gap-3 rounded-xl bg-white px-4 py-4">
-                  <span className="text-xs font-bold text-[#c97b3f]">{number}</span>
-                  <span className="text-sm font-semibold">{label}</span>
-                </div>
-                {index < items.length - 1 ? (
-                  <span aria-hidden="true" className="self-center text-xl text-black/25 rotate-90 md:rotate-0">→</span>
-                ) : null}
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -318,65 +273,12 @@ export default async function RoadmapPage({
               ))}
             </ol>
           </div>
-          <p className="mt-12 max-w-2xl text-lg leading-relaxed text-black/60">
-            This is a starting hypothesis, not a promise dressed up as a plan. The first 150 accounts create the evidence needed to refine the market, message, and offer intelligently.
-          </p>
         </div>
       </section>
 
-      <section className="px-6 pb-20 md:px-12 md:pb-28">
-        <div className="mx-auto max-w-6xl rounded-3xl border border-black/10 bg-white p-8 md:p-12">
-          <SectionLabel>What we measure</SectionLabel>
-          <div className="grid gap-10 md:grid-cols-[0.72fr_1.28fr]">
-            <div>
-              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-                Use statistics to decide what to do next.
-              </h2>
-              <p className="mt-5 text-black/60">
-                The goal is not more reporting. It is giving your team clear evidence about which markets and messages deserve more time.
-              </p>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {[
-                ["Delivery", "Is the list clean enough to reach the market safely?"],
-                ["Positive replies", "Which audience and message creates genuine interest?"],
-                ["Meetings", "Does that interest convert into qualified conversations?"],
-                ["Segment lift", "Which title, size, and niche beats the campaign baseline?"],
-              ].map(([title, description]) => (
-                <article key={title} className="rounded-2xl bg-[#f8f6f1] p-6">
-                  <h3 className="text-lg font-semibold">{title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-black/60">{description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-black/10 bg-[#efe8dc] px-6 py-14 md:px-12 md:py-20">
+      <section className="border-t border-black/10 bg-[#efe8dc] px-6 py-10 md:px-12 md:py-12">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel>The data</SectionLabel>
-          <div className="grid gap-px overflow-hidden rounded-3xl border border-black/10 bg-black/10 md:grid-cols-3">
-            <article className="bg-[#f8f6f1] p-8">
-              <p className="text-5xl font-semibold tracking-tight">85M</p>
-              <p className="mt-4 leading-relaxed text-black/65">
-                cold emails were analyzed in Gong’s research. The strongest guidance favors short, relevant messages over long explanations.
-              </p>
-            </article>
-            <article className="bg-[#f8f6f1] p-8">
-              <p className="text-5xl font-semibold tracking-tight">30.2%</p>
-              <p className="mt-4 leading-relaxed text-black/65">
-                lower reply likelihood for C-level executives than non-executives. That is why the list includes owners and marketing leaders instead of relying only on CEOs.
-              </p>
-            </article>
-            <article className="bg-[#f8f6f1] p-8">
-              <p className="text-5xl font-semibold tracking-tight">&lt;4</p>
-              <p className="mt-4 leading-relaxed text-black/65">
-                words is Gong’s subject-line recommendation. Short internal-looking subjects give the message more room to feel personal instead of promotional.
-              </p>
-            </article>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-black/50">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-black/50">
             <a className="underline underline-offset-4 hover:text-black" href={roadmap.companyEvidenceUrl} target="_blank" rel="noreferrer">
               Company evidence: {roadmap.company}
             </a>

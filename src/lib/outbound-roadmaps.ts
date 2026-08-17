@@ -48,9 +48,9 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
       "Use the Aegis PipelineAMP integration when talking to B2B teams that care about capturing, routing, and following up with every inquiry.",
     ],
     personalizationSignals: [
-      "52% lower CPA and 38% more qualified leads for prospects focused on paid-media efficiency.",
-      "29 commercial and nine informational pages for local-service companies needing a stronger search footprint.",
-      "PipelineAMP-connected lead capture for B2B teams concerned with inquiry tracking and follow-up.",
+      "We’ve helped 300+ clients generate more than 500K leads and $100M+ in reported revenue.",
+      "In one paid-media engagement, we lowered acquisition costs by 52% while increasing qualified leads by 38%.",
+      "For Aegis IT, we connected every form and callback request directly to PipelineAMP so its team could track and follow up with each opportunity.",
     ],
     angle:
       "Build three proof lanes—paid-media efficiency, local SEO depth, and CRM-connected conversion—then let response data show which lane creates the strongest qualified interest.",
