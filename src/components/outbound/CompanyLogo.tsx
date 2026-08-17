@@ -31,10 +31,7 @@ export function CompanyLogo({
   const isLightBackground = (red * 299 + green * 587 + blue * 114) / 1000 > 170;
 
   return (
-    <div
-      className="flex h-20 w-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-black/10 px-5 py-4"
-      style={{ backgroundColor }}
-    >
+    <div className="flex h-16 w-48 shrink-0 items-center justify-start overflow-hidden">
       {failed || !logoUrl ? (
         <span
           className={`text-2xl font-black tracking-[0.12em] ${isLightBackground ? "text-black" : "text-white"}`}
