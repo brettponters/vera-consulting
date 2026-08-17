@@ -9,6 +9,7 @@ export type OutboundRoadmap = {
   buyerRoles: string;
   listFilters: string;
   howOutboundHelps: [string, string, string];
+  personalizationSignals: [string, string, string];
   angle: string;
   companyEvidenceUrl: string;
 };
@@ -33,6 +34,11 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
       "Activate the 500K+ lead and $100M+ revenue proof instead of waiting for prospects to discover it through search or referrals.",
       "Use each case study to open conversations with companies that closely resemble the client and problem behind that result.",
       "Test industries and service angles in small batches, then give the team evidence about where outbound creates the most qualified interest.",
+    ],
+    personalizationSignals: [
+      "500K+ leads generated for prospects focused on lead volume and acquisition systems.",
+      "$100M+ in reported client revenue for prospects who care about commercial outcomes rather than channel activity.",
+      "300+ client engagements for established companies looking for an experienced, multi-service partner.",
     ],
     angle:
       "Lead with the scale of the results, then connect that proof to a specific type of business rather than pitching every service Media Components offers.",

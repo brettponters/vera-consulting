@@ -129,18 +129,18 @@ export default async function RoadmapPage({
           <div>
             <SectionLabel>The statistics</SectionLabel>
             <h2 className="max-w-3xl text-3xl font-semibold leading-tight md:text-4xl">
-              Turn the first batch into usable evidence.
+              Use scale to improve the offer.
             </h2>
-            <p className="mt-5 max-w-2xl text-black/60">
-              Split 300 contacts evenly between two hypotheses. Compare positive replies and qualified meetings, not opens, then use the stronger result to shape the next batch.
+            <p className="mt-5 max-w-3xl text-black/60">
+              Outbound creates repeated, measurable attempts at the same offer. With clean data and enough controlled volume, small improvements in the audience, proof, or offer can compound into substantially more qualified conversations for the team.
             </p>
           </div>
           <div className="mt-9 divide-y divide-black/10 border-y border-black/10">
             {[
-              ["150 / 150", "Equal test groups", "Give each hypothesis the same opportunity to produce a signal."],
-              ["3% = 9", "Positive-reply scenario", "At a 3% positive-reply rate, 300 delivered emails would create nine interested conversations."],
-              ["5% = 15", "Upside scenario", "At 5%, the same batch would create fifteen. These are scenarios, not promised outcomes."],
-              ["Scale the winner", "Decision rule", "Expand only when one segment beats the baseline on positive replies and qualified meetings."],
+              ["150 / 150", "Test the offer", "Split the first batch evenly so two offer or proof hypotheses receive the same opportunity."],
+              ["3% = 9", "Create a baseline", "At a 3% positive-reply rate, 300 delivered emails would create nine interested conversations."],
+              ["+1% = +30", "See the leverage", "Moving from 3% to 4% adds three conversations per 300, or thirty across 3,000 delivered emails."],
+              ["Scale the winner", "Compound the lift", "Increase volume only after the stronger combination also produces more qualified meetings."],
             ].map(([value, label, description]) => (
               <div key={label} className="grid gap-3 py-5 md:grid-cols-[9rem_12rem_1fr] md:items-baseline">
                 <p className="text-2xl font-semibold tracking-tight">{value}</p>
@@ -148,6 +148,32 @@ export default async function RoadmapPage({
                 <p className="text-sm leading-relaxed text-black/55">{description}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-10 rounded-2xl bg-white p-7 md:p-9">
+            <div className="flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <p className="text-sm font-semibold">The effect of a one-point lift</p>
+                <p className="mt-1 text-sm text-black/50">Positive replies per 3,000 delivered emails</p>
+              </div>
+              <p className="text-xs text-black/45">Illustrative scenario, not a forecast</p>
+            </div>
+            <div className="mt-8 space-y-5">
+              {[
+                ["3% baseline", "90 conversations", "75%"],
+                ["4% improved", "120 conversations", "100%"],
+              ].map(([label, value, width], index) => (
+                <div key={label} className="grid gap-2 md:grid-cols-[8rem_1fr_10rem] md:items-center">
+                  <p className="text-sm font-semibold">{label}</p>
+                  <div className="h-4 overflow-hidden rounded-full bg-black/5">
+                    <div
+                      className={`h-full rounded-full ${index === 0 ? "bg-black/30" : "bg-[#c97b3f]"}`}
+                      style={{ width }}
+                    />
+                  </div>
+                  <p className="text-sm text-black/60 md:text-right">{value}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -163,22 +189,28 @@ export default async function RoadmapPage({
               The framework stays fixed. Research changes the substance inside each part, so the campaign remains consistent without sounding mass-produced.
             </p>
           </div>
-          <div className="mt-10 rounded-2xl border border-black/10 bg-white p-7 md:p-10">
-            <p className="mb-7 text-base text-black/55">Hey {`{{firstName}}`},</p>
-            <div className="space-y-7">
+          <div className="mt-10 overflow-hidden rounded-2xl border border-black/10 bg-white">
+            <div className="border-b border-black/10 bg-[#f8f6f1] px-7 py-5 text-sm text-black/50 md:px-10">
+              <p><span className="inline-block w-16">To</span>{`{{firstName}}`} at {`{{companyName}}`}</p>
+              <p className="mt-2"><span className="inline-block w-16">Subject</span>{`{{personalSubject}}`}</p>
+            </div>
+            <div className="p-7 md:p-10">
+              <p className="text-base text-black/65">Hey {`{{firstName}}`},</p>
+              <div className="mt-7 space-y-7">
               {[
-                ["Personal", "{{One verified observation that makes the message relevant to this person and company.}}"],
-                ["What you do", "{{One plain-English sentence describing the useful outcome you create.}}"],
-                ["Proof", "{{One credible result, case study, customer, or operating signal supporting that outcome.}}"],
-                ["Offer", "{{One valuable, low-risk reason for the recipient to continue the conversation.}}"],
+                ["Personal", "{{personalizedOpening}}"],
+                ["What you do", "{{clearOutcome}}"],
+                ["Proof", "{{relevantProof}}"],
+                ["Offer", "{{irresistibleOffer}}"],
               ].map(([title, line], index) => (
-                <div key={title} className="grid gap-2 md:grid-cols-[8rem_1fr]">
-                  <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#c97b3f]">0{index + 1} · {title}</p>
+                <div key={title}>
+                  <p className="mb-2 text-[0.65rem] font-bold uppercase tracking-[0.14em] text-[#c97b3f]">0{index + 1} · {title}</p>
                   <p className="text-lg leading-relaxed text-black/70">{line}</p>
                 </div>
               ))}
+              </div>
+              <p className="mt-8 text-base text-black/55">{`{{signature}}`}</p>
             </div>
-            <p className="mt-8 text-base text-black/55">{`{{Signature}}`}</p>
           </div>
         </div>
       </section>
@@ -188,22 +220,26 @@ export default async function RoadmapPage({
           <div>
             <SectionLabel>AI personalization</SectionLabel>
             <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-              Automate the research work, not the relationship.
+              Personalize where it changes relevance.
             </h2>
+            <p className="mt-5 text-black/60">
+              For {roadmap.company}, the system should choose the proof that best matches each prospect instead of repeating the same credential to everyone.
+            </p>
           </div>
-          <ol className="space-y-4">
-            {[
-              "Collect factual signals from each company’s website, case studies, services, and public positioning.",
-              "Choose one relevant signal and connect it to the campaign hypothesis without inventing familiarity.",
-              "Generate a short opener and subject while the offer, structure, and claims remain controlled.",
-              "Keep a human-readable evidence trail so every personalized line can be checked before launch.",
-            ].map((item, index) => (
-              <li key={item} className="flex gap-5 rounded-2xl bg-[#f8f6f1] p-5">
-                <span className="font-semibold text-[#c97b3f]">0{index + 1}</span>
-                <p className="leading-relaxed text-black/70">{item}</p>
-              </li>
-            ))}
-          </ol>
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.12em] text-[#8b5a32]">Proof signals to match</p>
+            <ol className="divide-y divide-black/10 rounded-2xl bg-[#f8f6f1] px-6">
+              {roadmap.personalizationSignals.map((item, index) => (
+                <li key={item} className="flex gap-5 py-5">
+                  <span className="font-semibold text-[#c97b3f]">0{index + 1}</span>
+                  <p className="leading-relaxed text-black/70">{item}</p>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-5 text-sm leading-relaxed text-black/50">
+              AI selects one supported signal, writes the opener and subject around it, and keeps the offer and claims locked. Every line retains its source for review.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -223,6 +259,24 @@ export default async function RoadmapPage({
               </li>
             ))}
           </ul>
+          <div className="md:col-span-2 mt-2 flex flex-col items-stretch gap-3 rounded-2xl bg-[#f8f6f1] p-5 md:flex-row md:items-center">
+            {[
+              ["01", "Existing proof"],
+              ["02", "Targeted accounts"],
+              ["03", "Qualified conversations"],
+              ["04", "Better decisions"],
+            ].map(([number, label], index, items) => (
+              <div key={label} className="contents">
+                <div className="flex flex-1 items-center gap-3 rounded-xl bg-white px-4 py-4">
+                  <span className="text-xs font-bold text-[#c97b3f]">{number}</span>
+                  <span className="text-sm font-semibold">{label}</span>
+                </div>
+                {index < items.length - 1 ? (
+                  <span aria-hidden="true" className="self-center text-xl text-black/25 rotate-90 md:rotate-0">→</span>
+                ) : null}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
