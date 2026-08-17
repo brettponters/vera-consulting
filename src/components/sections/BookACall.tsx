@@ -32,7 +32,7 @@ export function BookACall({ outbound = false }: { outbound?: boolean }) {
 
           <Reveal delay={0.2}>
             <Button href={outbound ? "/outbound/contact" : "/contact"} variant="filled" size="lg" arrow>
-              {outbound ? "Explore a Pilot" : "Become a Partner"}
+              {outbound ? "Book a Call" : "Become a Partner"}
             </Button>
           </Reveal>
         </div>
