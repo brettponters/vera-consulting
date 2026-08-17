@@ -41,11 +41,10 @@ export default async function RoadmapPage({
       <section className="border-b border-black/10 px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-14 flex items-start">
-            <div className="flex items-center gap-5">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
               <CompanyLogo
                 company={roadmap.company}
                 logoUrl={roadmap.logoUrl}
-                backgroundColor={roadmap.logoBackgroundColor}
               />
               <div>
                 <p className="text-sm font-semibold">Prepared for {roadmap.company}</p>
