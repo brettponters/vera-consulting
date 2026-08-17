@@ -27,7 +27,7 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
       {
         company: roadmap.company,
         recipient: roadmap.recipient,
-        logoUrl: "",
+        logoUrl: roadmap.logoUrl,
         logoBackgroundColor: "transparent",
         proof: roadmap.proof,
         websiteFindings: roadmap.websiteFindings as [string, string, string],

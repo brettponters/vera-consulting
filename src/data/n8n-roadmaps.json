@@ -1,6 +1,7 @@
 [
   {
     "id": "rm_ai_ai_plexus",
+    "logoUrl": "https://www.aiplexus.io/assets/logo.webp",
     "company": "AI Plexus",
     "recipient": "Meg",
     "website": "http://www.aiplexus.io",
@@ -32,6 +33,7 @@
   },
   {
     "id": "rm_ai_clairio",
+    "logoUrl": "https://www.clairio.ai/favicon.ico",
     "company": "Clairio",
     "recipient": "Damon",
     "website": "http://www.clairio.ai",
@@ -63,6 +65,7 @@
   },
   {
     "id": "rm_ai_decion_technologies",
+    "logoUrl": "",
     "company": "Decion Technologies",
     "recipient": "Mason",
     "website": "http://www.deciontech.com",
@@ -94,6 +97,7 @@
   },
   {
     "id": "rm_ai_isometrik_ai",
+    "logoUrl": "https://www.isometrik.ai/assets/logo-QNAqRa9p.svg",
     "company": "Isometrik AI",
     "recipient": "Rahul",
     "website": "http://www.isometrik.ai",
@@ -125,6 +129,7 @@
   },
   {
     "id": "rm_ai_tedesco_ai_business_solution",
+    "logoUrl": "https://static.wixstatic.com/media/9f6155_a28e413d5995413da80cd019c6c34d07~mv2.png/v1/fill/w_466,h_122,al_c,q_85,enc_avif,quality_auto/9f6155_a28e413d5995413da80cd019c6c34d07~mv2.png",
     "company": "Tedesco AI Business Solutions",
     "recipient": "Robert",
     "website": "http://www.tedescobiz.com",
@@ -156,6 +161,7 @@
   },
   {
     "id": "rm_ppc_attn_makers",
+    "logoUrl": "https://cdn.prod.website-files.com/6473d5c9107043aab07df0bd/6758f0b584a92dc051cfd5a6_Logo-wide.svg",
     "company": "ATTN Makers",
     "recipient": "Rowen",
     "website": "http://www.attnmakers.com",
@@ -187,6 +193,7 @@
   },
   {
     "id": "rm_ppc_cornerlight_digital",
+    "logoUrl": "https://images.squarespace-cdn.com/content/v1/5b8ac17ed274cb57438e8eb5/1551240918835-EB0TYYIIPP9ZG0WA5QUT/favicon.ico?format=100w",
     "company": "Cornerlight Digital",
     "recipient": "Melina",
     "website": "http://www.cornerlightdigital.com",
@@ -218,6 +225,7 @@
   },
   {
     "id": "rm_ppc_paladin_ppc",
+    "logoUrl": "https://paladinppc.com/wp-content/uploads/2024/12/cropped-cropped-cropped-cropped-Paladin-PPC-Website-Logo-250x83.png",
     "company": "Paladin PPC",
     "recipient": "Ryan",
     "website": "http://www.paladinppc.com",
@@ -249,6 +257,7 @@
   },
   {
     "id": "rm_ppc_roi_samurai",
+    "logoUrl": "https://roisamurai.com/wp-content/uploads/2025/02/logo.svg",
     "company": "ROI Samurai",
     "recipient": "Curtis",
     "website": "http://www.roisamurai.com",
@@ -280,6 +289,7 @@
   },
   {
     "id": "rm_ppc_the_med_spa_agency",
+    "logoUrl": "https://cdn-ilecaik.nitrocdn.com/meoAdRczZtGtklGDKQlTfBiUlXWGboFF/assets/images/optimized/rev-7bf0f24/themedspaagency.com/wp-content/uploads/2024/12/Medspa-logo.webp",
     "company": "The Med Spa Agency",
     "recipient": "Chris",
     "website": "http://www.themedspaagency.com",
@@ -310,4 +320,3 @@
     "angle": "Leverage their #1 rating and proven results to attract med spas seeking effective digital marketing."
   }
 ]
-
