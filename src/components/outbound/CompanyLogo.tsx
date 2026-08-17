@@ -12,7 +12,6 @@ export function CompanyLogo({
   backgroundColor: string;
 }) {
   const [failed, setFailed] = useState(false);
-  const isFavicon = logoUrl.includes("google.com/s2/favicons");
   const initials = company
     .split(/\s+/)
     .filter(Boolean)
@@ -33,10 +32,10 @@ export function CompanyLogo({
 
   return (
     <div
-      className="flex h-16 w-48 shrink-0 items-center justify-center rounded-xl border border-black/10 p-4"
+      className="flex h-20 w-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-black/10 px-5 py-4"
       style={{ backgroundColor }}
     >
-      {failed || !logoUrl || isFavicon ? (
+      {failed || !logoUrl ? (
         <span
           className={`text-2xl font-black tracking-[0.12em] ${isLightBackground ? "text-black" : "text-white"}`}
           aria-label={`${company} wordmark`}
@@ -47,7 +46,7 @@ export function CompanyLogo({
         <img
           src={logoUrl}
           alt={`${company} logo`}
-          className="h-full w-full object-contain"
+          className="block max-h-11 max-w-full object-contain"
           onError={() => setFailed(true)}
         />
       )}

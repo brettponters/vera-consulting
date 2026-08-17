@@ -59,7 +59,7 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
   rm_dr_4f8k2: {
     company: "Digital Resource",
     recipient: "Anny",
-    logoUrl: "https://www.google.com/s2/favicons?domain=yourdigitalresource.com&sz=128",
+    logoUrl: "https://cdn.prod.website-files.com/5d9df710f28632786a98f21a/5dd837010422d34e2b071e31_Digital-Resource-logo.webp",
     logoBackgroundColor: "#ffffff",
     proof:
       "Digital Resource reports 1,637 leads and $109,542 in revenue for Stretch Zone Manhasset in 10 months, plus $87,806 in revenue for Georgetown Sedation Dentistry in 60 days.",
@@ -95,7 +95,7 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
   rm_ne_9q2v7: {
     company: "NetElixir",
     recipient: "Arijeet",
-    logoUrl: "https://www.google.com/s2/favicons?domain=netelixir.com&sz=128",
+    logoUrl: "https://cdn.prod.website-files.com/686d19b33da2afe91661213f/6874ce770a55f445b52bb951_netelixir-logo-dark.svg",
     logoBackgroundColor: "#ffffff",
     proof:
       "NetElixir reports a 243% increase in amika’s Amazon ad sales and 250% market-share growth for its hero product, while Rochester 100 achieved 350% year-over-year revenue growth.",
@@ -131,7 +131,7 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
   rm_bt_6m3c8: {
     company: "Block & Tam",
     recipient: "Kellie",
-    logoUrl: "https://www.google.com/s2/favicons?domain=blockandtam.com&sz=128",
+    logoUrl: "https://images.squarespace-cdn.com/content/v1/68f3e83107159829b76ff2bc/20c9fada-8dcf-4594-a744-a06ca7b725b4/Blockandtam_mainlogo.png",
     logoBackgroundColor: "#ffffff",
     proof:
       "Block & Tam reports 73% revenue growth, a 29% ROAS increase, a 49% CPM reduction, and a 93% CVM improvement for Veronica Beard.",
@@ -167,7 +167,7 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
   rm_ph_3w8n5: {
     company: "PHUELED",
     recipient: "Adrien",
-    logoUrl: "https://www.google.com/s2/favicons?domain=phueled.com&sz=128",
+    logoUrl: "https://framerusercontent.com/images/KVxDrIXB4zzDqcYuATXgVwMVtY.png",
     logoBackgroundColor: "#ffffff",
     proof:
       "PHUELED reports 35% year-over-year impression growth for Coachella, an 83% CPC reduction in 41 days for Netflix’s Tudum, and 49% new-customer revenue growth in 76 days for a jewelry engagement.",
@@ -203,7 +203,7 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
   rm_cd_8r5t1: {
     company: "Conduit Digital",
     recipient: "Alexandra",
-    logoUrl: "https://www.google.com/s2/favicons?domain=conduitdigital.us&sz=128",
+    logoUrl: "https://static.wixstatic.com/media/8f47dc_c2ee872171ea4eefb0a238631fd80651~mv2.png",
     logoBackgroundColor: "#ffffff",
     proof:
       "Conduit Digital reports a 157% year-over-year decrease in cost per employee application and a 35x increase in time on site through programmatic display.",
