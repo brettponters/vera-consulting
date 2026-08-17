@@ -1,3 +1,5 @@
+import n8nRoadmaps from "@/data/n8n-roadmaps.json";
+
 export type OutboundRoadmap = {
   company: string;
   recipient: string;
@@ -19,6 +21,32 @@ export type OutboundRoadmap = {
 // Temporary local record provider. The page imports only getOutboundRoadmap(),
 // so a database can replace this map without changing the roadmap template.
 const roadmapRecords: Record<string, OutboundRoadmap> = {
+  ...Object.fromEntries(
+    n8nRoadmaps.map((roadmap) => [
+      roadmap.id,
+      {
+        company: roadmap.company,
+        recipient: roadmap.recipient,
+        logoUrl: "",
+        logoBackgroundColor: "transparent",
+        proof: roadmap.proof,
+        websiteFindings: roadmap.websiteFindings as [string, string, string],
+        evidenceLinks: [
+          { label: `${roadmap.company} website`, url: roadmap.website },
+          { label: "Website research", url: roadmap.website },
+          { label: "Source evidence", url: roadmap.website },
+        ],
+        outboundUseCase: roadmap.outboundUseCase,
+        outboundUseCaseNote: roadmap.outboundUseCaseNote,
+        buyerRoles: roadmap.buyerRoles,
+        listFilters: roadmap.listFilters,
+        howOutboundHelps: roadmap.howOutboundHelps as [string, string, string],
+        personalizationSignals: roadmap.personalizationSignals as [string, string, string],
+        angle: roadmap.angle,
+        companyEvidenceUrl: roadmap.website,
+      } satisfies OutboundRoadmap,
+    ]),
+  ),
   rm_7k3p9x2m: {
     company: "Media Components",
     recipient: "Denis",
