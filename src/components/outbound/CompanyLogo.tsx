@@ -25,7 +25,7 @@ export function CompanyLogo({
       <img
         src={logoUrl}
         alt={`${company} logo`}
-        className="block h-full w-full object-contain object-left"
+        className="block h-full w-full object-contain object-left mix-blend-multiply"
         onLoad={(event) => {
           const { naturalWidth, naturalHeight } = event.currentTarget;
           if (!naturalWidth || !naturalHeight || (naturalWidth <= 64 && naturalHeight <= 64)) {
