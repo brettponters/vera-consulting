@@ -1,4 +1,5 @@
 import n8nRoadmaps from "@/data/n8n-roadmaps.json";
+import { neon } from "@neondatabase/serverless";
 
 export type OutboundRoadmap = {
   company: string;
@@ -18,8 +19,8 @@ export type OutboundRoadmap = {
   companyEvidenceUrl: string;
 };
 
-// Temporary local record provider. The page imports only getOutboundRoadmap(),
-// so a database can replace this map without changing the roadmap template.
+// Canary records remain available locally while production records are loaded
+// from Neon. The page template does not change as campaign volume grows.
 const roadmapRecords: Record<string, OutboundRoadmap> = {
   ...Object.fromEntries(
     n8nRoadmaps.map((roadmap) => [
@@ -267,5 +268,23 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
 };
 
 export async function getOutboundRoadmap(id: string) {
+  const databaseUrl = process.env.DATABASE_URL;
+  if (databaseUrl) {
+    try {
+      const sql = neon(databaseUrl);
+      const rows = await sql`
+        SELECT payload
+        FROM outbound_roadmaps
+        WHERE public_id = ${id}
+          AND status = 'published'
+          AND (expires_at IS NULL OR expires_at > NOW())
+        LIMIT 1
+      `;
+      if (rows[0]?.payload) return rows[0].payload as OutboundRoadmap;
+    } catch (error) {
+      console.error("Unable to load outbound roadmap from Neon", error);
+    }
+  }
+
   return roadmapRecords[id] ?? null;
 }
