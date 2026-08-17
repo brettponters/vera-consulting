@@ -74,8 +74,22 @@ export default async function RoadmapPage({
           <SectionLabel>Built for {roadmap.company}</SectionLabel>
           <div className="divide-y divide-black/10">
             <article className="grid gap-4 py-7 first:pt-0 md:grid-cols-[0.32fr_0.68fr]">
-              <h2 className="text-xl font-semibold">Your proof</h2>
-              <p className="leading-relaxed text-black/65">{roadmap.proof}</p>
+              <h2 className="text-xl font-semibold">What stood out</h2>
+              <div>
+                <p className="text-lg leading-relaxed text-black/70">{roadmap.proof}</p>
+                <ul className="mt-6 divide-y divide-black/10 border-y border-black/10">
+                  {roadmap.websiteFindings.map((finding) => (
+                    <li key={finding} className="py-4 leading-relaxed text-black/60">{finding}</li>
+                  ))}
+                </ul>
+                <div className="mt-4 flex flex-wrap gap-4 text-xs text-black/45">
+                  {roadmap.evidenceLinks.map((link) => (
+                    <a key={link.url} href={link.url} target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-black">
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </article>
             <article className="grid gap-4 py-7 md:grid-cols-[0.32fr_0.68fr]">
               <h2 className="text-xl font-semibold">Outbound use case</h2>
