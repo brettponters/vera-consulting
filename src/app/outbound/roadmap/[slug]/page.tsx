@@ -40,7 +40,7 @@ export default async function RoadmapPage({
     <div className="bg-[#f8f6f1] text-black">
       <section className="border-b border-black/10 px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-14 flex flex-wrap items-start justify-between gap-6">
+          <div className="mb-14 flex items-start">
             <div className="flex items-center gap-5">
               <CompanyLogo
                 company={roadmap.company}
@@ -52,9 +52,6 @@ export default async function RoadmapPage({
                 <p className="text-sm text-black/55">By VERA Solutions</p>
               </div>
             </div>
-            <p className="rounded-full border border-black/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em]">
-              Private working draft
-            </p>
           </div>
 
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.16em] text-[#8b5a32]">
