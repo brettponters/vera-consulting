@@ -4,11 +4,11 @@ export type OutboundRoadmap = {
   logoUrl: string;
   logoBackgroundColor: string;
   proof: string;
-  audience: string;
-  audienceNote: string;
-  decisionMakers: string;
+  outboundUseCase: string;
+  outboundUseCaseNote: string;
+  buyerRoles: string;
   listFilters: string;
-  whyThisAudience: [string, string, string];
+  howOutboundHelps: [string, string, string];
   angle: string;
   companyEvidenceUrl: string;
 };
@@ -23,16 +23,16 @@ const roadmapRecords: Record<string, OutboundRoadmap> = {
     logoBackgroundColor: "#111827",
     proof:
       "500K+ leads generated and more than $100M in reported client revenue gives the campaign a concrete story to lead with.",
-    audience: "Regional healthcare groups",
-    audienceNote:
-      "Start with established specialty-care groups where patient value supports a multi-channel engagement across search, paid media, web, reputation, and lead follow-up.",
-    decisionMakers: "CMO, VP Marketing, or Growth Director",
+    outboundUseCase: "Turn existing case studies into targeted distribution",
+    outboundUseCaseNote:
+      "Use the industries, services, and results Media Components already knows well. Outbound adds a direct path to similar companies instead of asking the agency to change its market.",
+    buyerRoles: "Owners and marketing leaders inside the segments you already serve",
     listFilters:
-      "Southeast U.S. · 5–50 locations · 50–500 employees · active patient acquisition",
-    whyThisAudience: [
-      "Media Components already presents HIPAA awareness alongside lead generation, web, SEO, paid media, and video capabilities.",
-      "A multi-location practice can buy several of those services together instead of treating the agency as a single-channel vendor.",
-      "The $100M+ revenue and 500K+ lead figures make a stronger introduction when the buyer already thinks in patient value and location-level growth.",
+      "Existing client patterns · service fit · company size · budget signals · decision-maker relevance",
+    howOutboundHelps: [
+      "Activate the 500K+ lead and $100M+ revenue proof instead of waiting for prospects to discover it through search or referrals.",
+      "Use each case study to open conversations with companies that closely resemble the client and problem behind that result.",
+      "Test industries and service angles in small batches, then give the team evidence about where outbound creates the most qualified interest.",
     ],
     angle:
       "Lead with the scale of the results, then connect that proof to a specific type of business rather than pitching every service Media Components offers.",

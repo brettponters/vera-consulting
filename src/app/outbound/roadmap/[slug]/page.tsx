@@ -64,7 +64,7 @@ export default async function RoadmapPage({
             A client acquisition plan for {roadmap.company}.
           </h1>
           <p className="mt-9 max-w-2xl text-lg leading-relaxed text-black/65 md:text-xl">
-            {roadmap.recipient}, this uses the proof already on your site to define a focused market, a campaign hypothesis, and a measurable first test.
+            {roadmap.recipient}, this uses the proof already on your site to show how outbound could extend what your team already does well through a measurable first test.
           </p>
         </div>
       </section>
@@ -78,17 +78,17 @@ export default async function RoadmapPage({
               <p className="leading-relaxed text-black/65">{roadmap.proof}</p>
             </article>
             <article className="grid gap-4 py-7 md:grid-cols-[0.32fr_0.68fr]">
-              <h2 className="text-xl font-semibold">Audience hypothesis</h2>
+              <h2 className="text-xl font-semibold">Outbound use case</h2>
               <div>
-                <h3 className="text-2xl font-semibold">{roadmap.audience}</h3>
-                <p className="mt-3 leading-relaxed text-black/65">{roadmap.audienceNote}</p>
+                <h3 className="text-2xl font-semibold">{roadmap.outboundUseCase}</h3>
+                <p className="mt-3 leading-relaxed text-black/65">{roadmap.outboundUseCaseNote}</p>
                 <dl className="mt-6 grid gap-5 text-sm sm:grid-cols-2">
               <div>
-                <dt className="font-semibold text-black">Decision-makers</dt>
-                <dd className="mt-1 text-black/55">{roadmap.decisionMakers}</dd>
+                <dt className="font-semibold text-black">Who to reach</dt>
+                <dd className="mt-1 text-black/55">{roadmap.buyerRoles}</dd>
               </div>
               <div>
-                <dt className="font-semibold text-black">Starting filters</dt>
+                <dt className="font-semibold text-black">How to segment</dt>
                 <dd className="mt-1 text-black/55">{roadmap.listFilters}</dd>
               </div>
                 </dl>
@@ -125,26 +125,27 @@ export default async function RoadmapPage({
       </section>
 
       <section className="px-6 pb-10 md:px-12 md:pb-16">
-        <div className="mx-auto grid max-w-6xl gap-8 rounded-3xl border border-black/10 bg-[#efe8dc] p-8 md:grid-cols-[0.8fr_1.2fr] md:p-12">
+        <div className="mx-auto max-w-6xl rounded-3xl border border-black/10 bg-[#efe8dc] p-8 md:p-12">
           <div>
-            <SectionLabel>The model</SectionLabel>
-            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-              Start with a controlled experiment, not a giant send.
+            <SectionLabel>The statistics</SectionLabel>
+            <h2 className="max-w-3xl text-3xl font-semibold leading-tight md:text-4xl">
+              Turn the first batch into usable evidence.
             </h2>
-            <p className="mt-5 max-w-md text-black/60">
-              These are planning assumptions, not promised outcomes. Replace them with real campaign data after the first batch.
+            <p className="mt-5 max-w-2xl text-black/60">
+              Split 300 contacts evenly between two hypotheses. Compare positive replies and qualified meetings, not opens, then use the stronger result to shape the next batch.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="mt-9 divide-y divide-black/10 border-y border-black/10">
             {[
-              ["150", "target accounts"],
-              ["2", "relevant contacts per account"],
-              ["300", "maximum initial contacts"],
-              ["1", "clear market hypothesis"],
-            ].map(([value, label]) => (
-              <div key={label} className="rounded-2xl border border-black/10 bg-white p-7">
-                <p className="text-4xl font-semibold tracking-tight">{value}</p>
-                <p className="mt-2 text-sm text-black/55">{label}</p>
+              ["150 / 150", "Equal test groups", "Give each hypothesis the same opportunity to produce a signal."],
+              ["3% = 9", "Positive-reply scenario", "At a 3% positive-reply rate, 300 delivered emails would create nine interested conversations."],
+              ["5% = 15", "Upside scenario", "At 5%, the same batch would create fifteen. These are scenarios, not promised outcomes."],
+              ["Scale the winner", "Decision rule", "Expand only when one segment beats the baseline on positive replies and qualified meetings."],
+            ].map(([value, label, description]) => (
+              <div key={label} className="grid gap-3 py-5 md:grid-cols-[9rem_12rem_1fr] md:items-baseline">
+                <p className="text-2xl font-semibold tracking-tight">{value}</p>
+                <p className="font-semibold">{label}</p>
+                <p className="text-sm leading-relaxed text-black/55">{description}</p>
               </div>
             ))}
           </div>
@@ -163,20 +164,21 @@ export default async function RoadmapPage({
             </p>
           </div>
           <div className="mt-10 rounded-2xl border border-black/10 bg-white p-7 md:p-10">
-            {[
-              ["Personal", "Use one verified detail that proves the company was researched and makes the message relevant."],
-              ["What you do", "Explain the useful outcome in plain language without listing every service or capability."],
-              ["Proof", "Support the claim with the strongest result, case study, customer, or credible operating signal."],
-              ["Offer", "Make the next step valuable and low-risk enough that replying feels easier than ignoring it."],
-            ].map(([title, description], index) => (
-              <article key={title} className="grid gap-3 border-b border-black/10 py-6 first:pt-0 last:border-0 last:pb-0 md:grid-cols-[9rem_1fr]">
-                <div className="flex items-baseline gap-3">
-                  <span className="text-sm font-semibold text-[#c97b3f]">0{index + 1}</span>
-                  <h3 className="text-xl font-semibold">{title}</h3>
+            <p className="mb-7 text-base text-black/55">Hey {`{{firstName}}`},</p>
+            <div className="space-y-7">
+              {[
+                ["Personal", "{{One verified observation that makes the message relevant to this person and company.}}"],
+                ["What you do", "{{One plain-English sentence describing the useful outcome you create.}}"],
+                ["Proof", "{{One credible result, case study, customer, or operating signal supporting that outcome.}}"],
+                ["Offer", "{{One valuable, low-risk reason for the recipient to continue the conversation.}}"],
+              ].map(([title, line], index) => (
+                <div key={title} className="grid gap-2 md:grid-cols-[8rem_1fr]">
+                  <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#c97b3f]">0{index + 1} · {title}</p>
+                  <p className="text-lg leading-relaxed text-black/70">{line}</p>
                 </div>
-                <p className="leading-relaxed text-black/60">{description}</p>
-              </article>
-            ))}
+              ))}
+            </div>
+            <p className="mt-8 text-base text-black/55">{`{{Signature}}`}</p>
           </div>
         </div>
       </section>
@@ -208,13 +210,13 @@ export default async function RoadmapPage({
       <section className="px-6 pb-10 md:px-12 md:pb-16">
         <div className="mx-auto grid max-w-6xl gap-10 rounded-3xl border border-black/10 bg-white p-8 md:grid-cols-[0.72fr_1.28fr] md:p-12">
           <div>
-            <SectionLabel>Why this market</SectionLabel>
+            <SectionLabel>How to use outbound</SectionLabel>
             <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-              Why it fits.
+              Extend what already works.
             </h2>
           </div>
           <ul className="divide-y divide-black/10">
-            {roadmap.whyThisAudience.map((reason, index) => (
+            {roadmap.howOutboundHelps.map((reason, index) => (
               <li key={reason} className="flex gap-5 py-5 first:pt-0 last:pb-0">
                 <span className="mt-1 font-semibold text-[#c97b3f]">0{index + 1}</span>
                 <p className="text-lg leading-relaxed text-black/70">{reason}</p>
@@ -231,16 +233,15 @@ export default async function RoadmapPage({
             <h2 className="mb-10 max-w-2xl text-3xl font-semibold md:text-4xl">
               Learn, then scale.
             </h2>
-            <ol className="relative ml-4 border-l border-black/20 pl-9 md:ml-6 md:pl-12">
+            <ol className="divide-y divide-black/10 border-y border-black/10">
               {[
                 ["Define", "Choose one audience hypothesis, the decision-makers, and what counts as a qualified opportunity."],
                 ["Test", "Build a 150-account sample and contact up to two relevant people per company."],
                 ["Measure", "Hold the offer steady while comparing proof points, titles, and positive replies."],
                 ["Scale", "Expand only the segment and message that beat the campaign baseline."],
               ].map((item, index) => (
-                <li key={item[0]} className="relative grid gap-2 border-b border-black/10 py-7 first:pt-0 last:border-0 last:pb-0 md:grid-cols-[9rem_1fr]">
-                  <span className={`absolute -left-[3.05rem] flex h-5 w-5 items-center justify-center rounded-full border-4 border-[#f8f6f1] bg-[#c97b3f] md:-left-[3.8rem] ${index === 0 ? "top-1" : "top-8"}`} />
-                  <div className="flex items-baseline gap-3">
+                <li key={item[0]} className="grid gap-3 py-7 md:grid-cols-[10rem_1fr]">
+                  <div className="flex items-baseline gap-4">
                     <span className="text-sm font-semibold text-[#c97b3f]">0{index + 1}</span>
                     <h3 className="text-xl font-semibold">{item[0]}</h3>
                   </div>
