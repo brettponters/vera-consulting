@@ -78,7 +78,7 @@ export default async function RoadmapPage({
               <p className="leading-relaxed text-black/65">{roadmap.proof}</p>
             </article>
             <article className="grid gap-4 py-7 md:grid-cols-[0.32fr_0.68fr]">
-              <h2 className="text-xl font-semibold">Best first market</h2>
+              <h2 className="text-xl font-semibold">Audience hypothesis</h2>
               <div>
                 <h3 className="text-2xl font-semibold">{roadmap.audience}</h3>
                 <p className="mt-3 leading-relaxed text-black/65">{roadmap.audienceNote}</p>
@@ -210,7 +210,7 @@ export default async function RoadmapPage({
           <div>
             <SectionLabel>Why this market</SectionLabel>
             <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-              The recommendation comes from your operating strengths, not a generic agency list.
+              Why it fits.
             </h2>
           </div>
           <ul className="divide-y divide-black/10">
@@ -227,20 +227,24 @@ export default async function RoadmapPage({
       <section className="px-6 pb-20 md:px-12 md:pb-28">
         <div className="mx-auto max-w-6xl border-t border-black/15 pt-12">
           <div>
-            <SectionLabel>04 / Test</SectionLabel>
-            <h2 className="mb-8 max-w-2xl text-3xl font-semibold md:text-4xl">
-              Keep the first run narrow enough to learn something useful.
+            <SectionLabel>The roadmap</SectionLabel>
+            <h2 className="mb-10 max-w-2xl text-3xl font-semibold md:text-4xl">
+              Learn, then scale.
             </h2>
-            <ol className="grid gap-px overflow-hidden rounded-3xl border border-black/10 bg-black/10 md:grid-cols-4">
+            <ol className="relative ml-4 border-l border-black/20 pl-9 md:ml-6 md:pl-12">
               {[
-                "Build a 150-account sample using the market and filters above.",
-                "Contact up to two marketing decision-makers per account.",
-                "Hold the offer constant and test two proof-led hypotheses.",
-                "Compare positive replies by title, company size, and message before expanding.",
+                ["Define", "Choose one audience hypothesis, the decision-makers, and what counts as a qualified opportunity."],
+                ["Test", "Build a 150-account sample and contact up to two relevant people per company."],
+                ["Measure", "Hold the offer steady while comparing proof points, titles, and positive replies."],
+                ["Scale", "Expand only the segment and message that beat the campaign baseline."],
               ].map((item, index) => (
-                <li key={item} className="min-h-48 bg-white p-7">
-                  <span className="mb-8 block font-semibold text-[#c97b3f]">0{index + 1}</span>
-                  <span className="text-lg leading-snug">{item}</span>
+                <li key={item[0]} className="relative grid gap-2 border-b border-black/10 py-7 first:pt-0 last:border-0 last:pb-0 md:grid-cols-[9rem_1fr]">
+                  <span className={`absolute -left-[3.05rem] flex h-5 w-5 items-center justify-center rounded-full border-4 border-[#f8f6f1] bg-[#c97b3f] md:-left-[3.8rem] ${index === 0 ? "top-1" : "top-8"}`} />
+                  <div className="flex items-baseline gap-3">
+                    <span className="text-sm font-semibold text-[#c97b3f]">0{index + 1}</span>
+                    <h3 className="text-xl font-semibold">{item[0]}</h3>
+                  </div>
+                  <p className="text-lg leading-relaxed text-black/65">{item[1]}</p>
                 </li>
               ))}
             </ol>
