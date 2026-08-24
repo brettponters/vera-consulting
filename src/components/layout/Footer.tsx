@@ -22,6 +22,15 @@ const LEGAL_LINKS = [
 export function Footer() {
   const pathname = usePathname();
   const year = new Date().getFullYear();
+  const isOutbound =
+    pathname === "/" || pathname === "/contact" || pathname.startsWith("/outbound");
+  const navLinks = isOutbound
+    ? [
+        { href: "/#ai-capabilities-heading", label: "What we do" },
+        { href: "/#who-we-work-with", label: "Who we work with" },
+        { href: "/contact", label: "Contact" },
+      ]
+    : NAV_LINKS;
 
   // Hide on landing pages
   if (pathname === "/get-started") return null;
@@ -43,7 +52,7 @@ export function Footer() {
             {/* Primary nav repeated */}
             <nav aria-label="Footer navigation">
               <ul className="flex flex-wrap gap-x-6 gap-y-2 list-none m-0 p-0">
-                {NAV_LINKS.map(({ href, label }) => (
+                {navLinks.map(({ href, label }) => (
                   <li key={href}>
                     <Link
                       href={href}

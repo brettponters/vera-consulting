@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/api/",
       },
     ],
-    sitemap: "https://veraconsulting.co/sitemap.xml",
+    sitemap: "https://www.verasolutions.ai/sitemap.xml",
   };
 }

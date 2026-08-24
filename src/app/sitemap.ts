@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllSlugs } from "@/data/verticals";
 
-const BASE_URL = "https://veraconsulting.co";
+const BASE_URL = "https://www.verasolutions.ai";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -23,8 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/reading",
     "/contact",
     "/get-started",
-    "/outbound",
-    "/outbound/contact",
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified,

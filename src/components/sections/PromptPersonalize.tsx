@@ -357,7 +357,7 @@ export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) 
 
                       <div className="mt-9">
                         <a
-                          href={outbound ? "/outbound/contact" : "/contact"}
+                          href="/contact"
                           className="group inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-sans text-sm font-medium no-underline transition-all duration-200 ease-out hover:-translate-y-px"
                           style={{ backgroundColor: DARK, color: "#F5EFE4" }}
                         >
@@ -397,7 +397,7 @@ export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) 
                     >
                       <p style={{ color: INK_DIM }} className="font-sans">
                         That one&rsquo;s not cooperating. Try again, or just{" "}
-                        <a href={outbound ? "/outbound/contact" : "/contact"} className="underline underline-offset-4" style={{ color: INK }}>
+                        <a href="/contact" className="underline underline-offset-4" style={{ color: INK }}>
                           become a partner
                         </a>{" "}
                         and we&rsquo;ll do it live.

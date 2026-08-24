@@ -6,7 +6,7 @@ import { HeroVisual } from "./HeroVisual";
 import { AgentFlowDiagram } from "./AgentFlowDiagram";
 import { CapabilityCards } from "./CapabilityCards";
 
-const SITE_URL = "https://veraconsulting.co";
+const SITE_URL = "https://www.verasolutions.ai";
 
 export const metadata: Metadata = {
   title: "AI for Real Estate & Investors: A Practical Guide",

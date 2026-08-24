@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "VERA partners with wholesalers, investors, and agents across the US. Deal sourcing, underwriting, and buyer matching. We only win when you close.",
     type: "website",
-    url: "https://veraconsulting.co/locations",
+    url: "https://www.verasolutions.ai/locations",
     images: ["/opengraph-image"],
   },
   twitter: {
@@ -112,7 +112,7 @@ const jsonLd = {
   provider: {
     "@type": "Organization",
     name: "VERA Solutions",
-    url: "https://veraconsulting.co",
+    url: "https://www.verasolutions.ai",
   },
   areaServed: { "@type": "Country", name: "United States" },
   serviceType:

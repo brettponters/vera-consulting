@@ -23,7 +23,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const v = getVerticalBySlug(slug);
   if (!v) return {};
-  const url = `https://veraconsulting.co/for/${slug}`;
+  const url = `https://www.verasolutions.ai/for/${slug}`;
   return {
     title: v.metaTitle,
     description: v.metaDescription,
@@ -53,7 +53,7 @@ export default async function ForVerticalPage({
   const v = getVerticalBySlug(slug);
   if (!v) notFound();
 
-  const canonicalUrl = `https://veraconsulting.co/for/${slug}`;
+  const canonicalUrl = `https://www.verasolutions.ai/for/${slug}`;
 
   // Adjacent verticals for cross-linking.
   const idx = VERTICALS.findIndex((x) => x.slug === slug);
@@ -72,7 +72,7 @@ export default async function ForVerticalPage({
         name: v.h1.replace(/\.$/, ""),
         description: v.metaDescription,
         url: canonicalUrl,
-        provider: { "@id": "https://veraconsulting.co/#org" },
+        provider: { "@id": "https://www.verasolutions.ai/#org" },
         serviceType: "Real estate deal sourcing",
         audience: {
           "@type": "BusinessAudience",
@@ -86,13 +86,13 @@ export default async function ForVerticalPage({
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://veraconsulting.co/",
+            item: "https://www.verasolutions.ai/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Verticals",
-            item: "https://veraconsulting.co/for",
+            item: "https://www.verasolutions.ai/for",
           },
           {
             "@type": "ListItem",
