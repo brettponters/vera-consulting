@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "How It Works: AI for Wholesalers, Investors & Agents",
     description:
       "How the VERA partnership works for wholesalers, investors, and agents. Deal sourcing, underwriting, and buyer matching. We only win when you close.",
-    url: "https://veraconsulting.co/how-we-work",
+    url: "https://www.verasolutions.ai/how-we-work",
     type: "article",
     images: ["/opengraph-image"],
   },

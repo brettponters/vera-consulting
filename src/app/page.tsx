@@ -9,38 +9,40 @@ import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "AI for Real Estate Wholesalers, Investors & Agents | VERA",
+  title: {
+    absolute: "Outbound Client Acquisition for Growing Agencies | VERA Solutions",
+  },
   description:
-    "Agentic AI for real estate wholesalers, investors, and agents. VERA sources off-market deals, underwrites fast, and matches the right buyer. No retainer, nothing until you close.",
+    "VERA Solutions builds and runs outbound client-acquisition systems for growing paid media and digital advertising agencies.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "AI for Real Estate Wholesalers, Investors & Agents | VERA",
+    title: "Outbound Client Acquisition for Growing Agencies | VERA Solutions",
     description:
-      "Agentic AI for real estate wholesalers, investors, and agents. VERA sources off-market deals, underwrites fast, and matches the right buyer.",
+      "VERA Solutions builds and runs outbound client-acquisition systems for growing paid media and digital advertising agencies.",
     type: "website",
-    url: "https://veraconsulting.co",
-    siteName: "VERA",
+    url: "https://www.verasolutions.ai",
+    siteName: "VERA Solutions",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI for Real Estate Wholesalers, Investors & Agents | VERA",
+    title: "Outbound Client Acquisition for Growing Agencies | VERA Solutions",
     description:
-      "Agentic AI for wholesalers, investors, and agents. VERA sources deals, underwrites fast, and finds the buyer. Nothing upfront, we earn only when you close.",
+      "VERA Solutions builds and runs outbound client-acquisition systems for growing paid media and digital advertising agencies.",
   },
 };
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <IndustriesMarquee />
-      <PromptPersonalize />
-      <AIRoadmap />
-      <FounderVision />
+      <Hero outbound />
+      <IndustriesMarquee outbound />
+      <PromptPersonalize outbound />
+      <AIRoadmap outbound />
+      <FounderVision outbound />
       {/* <Testimonials /> */}
-      <SouthFlorida />
-      <BookACall />
+      <SouthFlorida outbound />
+      <BookACall outbound />
     </>
   );
 }

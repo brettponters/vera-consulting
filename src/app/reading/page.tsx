@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Reading, VERA on AI for Real Estate",
     description:
       "Research, papers, and writing that shape how VERA sources off-market deals and reads markets before the crowd for real estate investors and agents.",
-    url: "https://veraconsulting.co/reading",
+    url: "https://www.verasolutions.ai/reading",
     type: "article",
     images: ["/opengraph-image"],
   },

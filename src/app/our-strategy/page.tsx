@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "AI Strategy for Wholesalers, Investors & Agents",
     description:
       "How VERA sources deals, underwrites contracts, and connects you with the right buyer. A performance partnership, we only win when you close.",
-    url: "https://veraconsulting.co/our-strategy",
+    url: "https://www.verasolutions.ai/our-strategy",
     type: "article",
     images: ["/opengraph-image"],
   },

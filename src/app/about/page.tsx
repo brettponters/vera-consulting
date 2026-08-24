@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "About VERA, AI Partner for Real Estate",
     description:
       "An intelligence partner for real estate wholesalers, investors, and agents. We source off-market deals and motivated seller leads, and win only when you close. Boca Raton, FL.",
-    url: "https://veraconsulting.co/about",
+    url: "https://www.verasolutions.ai/about",
     type: "website",
     images: ["/opengraph-image"],
   },

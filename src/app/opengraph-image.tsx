@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "VERA, AI for off-market deals and motivated seller leads";
+export const alt = "VERA Solutions, outbound client acquisition for growing agencies";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -68,7 +68,7 @@ export default function OpengraphImage() {
               maxWidth: 1000,
             }}
           >
-Find the deals first. We earn when you close.
+Outbound client acquisition for growing agencies.
           </div>
           <div
             style={{
@@ -79,11 +79,11 @@ Find the deals first. We earn when you close.
               color: "#5C5C66",
             }}
           >
-            <span>Off-Market Deals</span>
+            <span>Targeted Research</span>
             <span style={{ color: "#C97B3F" }}>·</span>
-            <span>Seller Leads</span>
+            <span>Personalized Outreach</span>
             <span style={{ color: "#C97B3F" }}>·</span>
-            <span>Partnership</span>
+            <span>Qualified Conversations</span>
           </div>
         </div>
 
@@ -98,7 +98,7 @@ Find the deals first. We earn when you close.
             textTransform: "uppercase",
           }}
         >
-          <span>veraconsulting.co</span>
+          <span>verasolutions.ai</span>
         </div>
       </div>
     ),

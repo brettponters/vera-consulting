@@ -14,7 +14,8 @@ import { usePathname } from "next/navigation";
  */
 export function Header() {
   const pathname = usePathname();
-  const isOutbound = pathname.startsWith("/outbound");
+  const isOutbound =
+    pathname === "/" || pathname === "/contact" || pathname.startsWith("/outbound");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -37,7 +38,7 @@ export function Header() {
       <div className="flex h-14 items-center gap-3 md:gap-8 px-6 md:px-16">
         {/* Wordmark + acronym */}
         <Link
-          href={isOutbound ? "/outbound" : "/"}
+          href="/"
           className="font-sans text-sm font-semibold tracking-wide text-[var(--color-heading)] no-underline flex items-center gap-3"
           aria-label="VERA, home"
         >
@@ -71,8 +72,8 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6">
           {(isOutbound
             ? [
-                { label: "What We Do", href: "/outbound#ai-capabilities-heading" },
-                { label: "Who We Work With", href: "/outbound#who-we-work-with" },
+                { label: "What We Do", href: "/#ai-capabilities-heading" },
+                { label: "Who We Work With", href: "/#who-we-work-with" },
               ]
             : [
                 { label: "Our Strategy", href: "/our-strategy" },
@@ -90,7 +91,7 @@ export function Header() {
         </nav>
 
         <Link
-          href={isOutbound ? "/outbound/contact" : "/contact"}
+          href="/contact"
           className="ml-4 inline-flex items-center rounded-full bg-[var(--color-accent)] px-5 py-3 md:py-2.5 font-sans text-sm font-medium text-white no-underline transition-opacity duration-150 hover:opacity-90"
         >
           {isOutbound ? "Book a Call" : "Become a Partner"}

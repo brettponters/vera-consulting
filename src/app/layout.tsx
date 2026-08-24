@@ -7,15 +7,15 @@ import { EditMode } from "@/components/ui/EditMode";
 import { MotionGuard } from "@/components/MotionGuard";
 import "./globals.css";
 
-const SITE_URL = "https://veraconsulting.co";
+const SITE_URL = "https://www.verasolutions.ai";
 const SITE_DESCRIPTION =
-  "Agentic AI for real estate wholesalers, investors, and agents. VERA sources off-market deals, underwrites fast, and matches the right buyer. No retainer, nothing until you close.";
-const DEFAULT_TITLE = "AI for Real Estate Wholesalers, Investors & Agents | VERA";
+  "VERA Solutions builds and runs outbound client-acquisition systems for growing paid media and digital advertising agencies.";
+const DEFAULT_TITLE = "Outbound Client Acquisition for Growing Agencies | VERA Solutions";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    template: "%s | VERA",
+    template: "%s | VERA Solutions",
     default: DEFAULT_TITLE,
   },
   description: SITE_DESCRIPTION,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: DEFAULT_TITLE,
     description: SITE_DESCRIPTION,
     type: "website",
-    siteName: "VERA",
+    siteName: "VERA Solutions",
     url: SITE_URL,
   },
   twitter: {
@@ -42,7 +42,7 @@ const organizationJsonLd = {
   "@type": ["Organization", "ProfessionalService"],
   "@id": `${SITE_URL}/#org`,
   name: "VERA Solutions",
-  description: "Agentic AI for real estate wholesalers, investors, and agents. VERA sources off-market deals, underwrites fast, and matches the right buyer from our list. No retainer, nothing until you close.",
+  description: SITE_DESCRIPTION,
   url: SITE_URL,
   email: "brett@veraconsulting.co",
   telephone: "+1-561-900-8182",
@@ -56,7 +56,7 @@ const organizationJsonLd = {
   },
   areaServed: { "@type": "Country", name: "United States" },
   openingHours: "Mo-Fr 09:00-17:00",
-  serviceType: "AI deal sourcing, underwriting, and buyer matching for real estate wholesalers, investors, and agents",
+  serviceType: "Outbound client-acquisition systems for paid media and digital advertising agencies",
   sameAs: [],
 };
 

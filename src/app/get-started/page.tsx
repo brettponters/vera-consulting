@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description:
       "Tell us about your business and we'll reach out within 24 hours. AI deal sourcing, underwriting, and buyer matching for wholesalers, investors, and agents.",
     type: "website",
-    url: "https://veraconsulting.co/get-started",
+    url: "https://www.verasolutions.ai/get-started",
     siteName: "VERA",
     locale: "en_US",
   },

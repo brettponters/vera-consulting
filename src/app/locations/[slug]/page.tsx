@@ -28,7 +28,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const loc = getLocationBySlug(slug);
   if (!loc) return {};
-  const url = `https://veraconsulting.co/locations/${slug}`;
+  const url = `https://www.verasolutions.ai/locations/${slug}`;
   const title = `Off-Market Deals and Leads in ${loc.city}, ${loc.state}`;
   const description = `Off-market real estate deals and motivated seller leads in ${loc.city} for investors, wholesalers, flippers, landlords, and agents. VERA partners to source deals, read the market, and run the numbers fast. VERA earns only when you close.`;
   return {
@@ -69,7 +69,7 @@ export default async function LocationPage({
   const loc = getLocationBySlug(slug);
   if (!loc) notFound();
 
-  const canonicalUrl = `https://veraconsulting.co/locations/${slug}`;
+  const canonicalUrl = `https://www.verasolutions.ai/locations/${slug}`;
   const faq = getLocationFaq(loc);
 
   // Other cities, for cross-linking at the bottom.
@@ -104,9 +104,9 @@ export default async function LocationPage({
         availableChannel: {
           "@type": "ServiceChannel",
           name: "Remote partnership anywhere",
-          serviceUrl: "https://veraconsulting.co/contact",
+          serviceUrl: "https://www.verasolutions.ai/contact",
         },
-        parentOrganization: { "@id": "https://veraconsulting.co/#org" },
+        parentOrganization: { "@id": "https://www.verasolutions.ai/#org" },
       },
       {
         "@type": "BreadcrumbList",
@@ -115,13 +115,13 @@ export default async function LocationPage({
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://veraconsulting.co/",
+            item: "https://www.verasolutions.ai/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Locations",
-            item: "https://veraconsulting.co/locations",
+            item: "https://www.verasolutions.ai/locations",
           },
           {
             "@type": "ListItem",
