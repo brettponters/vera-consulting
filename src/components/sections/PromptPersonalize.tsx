@@ -22,8 +22,8 @@ const PAIN_EXAMPLES = [
 const OUTBOUND_PAIN_EXAMPLES = [
   "referrals are too unpredictable",
   "we need more qualified sales conversations",
-  "our team does not have time to prospect",
-  "cold email has never worked for us",
+  "our growth efforts feel disconnected",
+  "our team does not have time to build pipeline",
   "we keep attracting the wrong clients",
 ];
 
@@ -98,7 +98,6 @@ export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) 
 
   useEffect(() => {
     if (phase !== "loading" || steps.length) return;
-    setWaitIndex(0);
     const id = setInterval(
       () => setWaitIndex((i) => (i + 1) % WAITING.length),
       1600,
@@ -109,6 +108,7 @@ export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) 
   async function solve(chosen: string) {
     setPain(chosen);
     setSteps([]);
+    setWaitIndex(0);
     setResult(null);
     setPhase("loading");
     try {
@@ -156,7 +156,7 @@ export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) 
   return (
     <section
       ref={sectionRef}
-      aria-label={outbound ? "See where VERA would improve your outbound" : "See where VERA would find your edge"}
+      aria-label={outbound ? "See where VERA would improve your growth system" : "See where VERA would find your edge"}
       className="bg-[var(--color-surface)]"
     >
       <motion.div
@@ -200,7 +200,7 @@ export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) 
                 style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)", color: INK }}
               >
                 {outbound
-                  ? "See where VERA would improve your outbound."
+                  ? "See where your system gets stuck."
                   : "See where VERA would find your edge."}
               </h2>
               <p
@@ -208,7 +208,7 @@ export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) 
                 style={{ color: INK_DIM }}
               >
                 {outbound
-                  ? "Tell us where new business gets stuck, in your own words, and see where we’d start."
+                  ? "Tell us where new business is getting stuck, in your own words, and see where we’d start."
                   : "Tell us where deals or leads dry up, in your own words, and see exactly where we’d find you an edge."}
               </p>
 
@@ -361,7 +361,7 @@ export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) 
                           className="group inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-sans text-sm font-medium no-underline transition-all duration-200 ease-out hover:-translate-y-px"
                           style={{ backgroundColor: DARK, color: "#F5EFE4" }}
                         >
-                          Become a Partner
+                          Plan Your Growth
                           <svg
                             aria-hidden="true"
                             width="14"
@@ -398,7 +398,7 @@ export function PromptPersonalize({ outbound = false }: { outbound?: boolean }) 
                       <p style={{ color: INK_DIM }} className="font-sans">
                         That one&rsquo;s not cooperating. Try again, or just{" "}
                         <a href="/contact" className="underline underline-offset-4" style={{ color: INK }}>
-                          become a partner
+                          plan your growth
                         </a>{" "}
                         and we&rsquo;ll do it live.
                       </p>

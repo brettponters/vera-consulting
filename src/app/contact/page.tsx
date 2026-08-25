@@ -3,15 +3,15 @@ import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Book an Outbound Strategy Call | VERA Solutions",
+    absolute: "Plan Your B2B Growth | VERA Solutions",
   },
   description:
-    "Book a call with VERA Solutions to discuss an outbound client-acquisition plan for your paid media or digital advertising agency.",
+    "Define a measurable B2B growth target with VERA Solutions and explore the acquisition system required to reach it.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Book an Outbound Strategy Call | VERA Solutions",
+    title: "Plan Your B2B Growth | VERA Solutions",
     description:
-      "Book a call with VERA Solutions to discuss an outbound client-acquisition plan for your paid media or digital advertising agency.",
+      "Define a measurable B2B growth target with VERA Solutions and explore the acquisition system required to reach it.",
     type: "website",
     url: "https://www.verasolutions.ai/contact",
     siteName: "VERA Solutions",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Book an Outbound Strategy Call | VERA Solutions",
+    title: "Plan Your B2B Growth | VERA Solutions",
     description:
-      "Book a call with VERA Solutions to discuss an outbound client-acquisition plan for your paid media or digital advertising agency.",
+      "Define a measurable B2B growth target with VERA Solutions and explore the acquisition system required to reach it.",
   },
 };
 

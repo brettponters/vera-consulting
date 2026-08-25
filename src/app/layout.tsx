@@ -9,8 +9,8 @@ import "./globals.css";
 
 const SITE_URL = "https://www.verasolutions.ai";
 const SITE_DESCRIPTION =
-  "VERA Solutions builds and runs outbound client-acquisition systems for growing paid media and digital advertising agencies.";
-const DEFAULT_TITLE = "Outbound Client Acquisition for Growing Agencies | VERA Solutions";
+  "VERA Solutions turns measurable B2B growth targets into operated acquisition systems, with compensation aligned to the outcome.";
+const DEFAULT_TITLE = "Outcome-Aligned B2B Growth Partner | VERA Solutions";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -56,7 +56,7 @@ const organizationJsonLd = {
   },
   areaServed: { "@type": "Country", name: "United States" },
   openingHours: "Mo-Fr 09:00-17:00",
-  serviceType: "Outbound client-acquisition systems for paid media and digital advertising agencies",
+  serviceType: "Outcome-aligned B2B growth strategy and operated acquisition systems",
   sameAs: [],
 };
 

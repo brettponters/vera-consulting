@@ -7,13 +7,8 @@ import { Button } from "@/components/ui/Button";
 import { RotatingWord } from "@/components/ui/RotatingWord";
 
 export default function Hero({ outbound = false }: { outbound?: boolean }) {
-  const lineOneWords = (outbound ? "Outbound Client Acquisition" : "Agentic AI Solutions").split(" ");
+  const lineOneWords = (outbound ? "Define the outcome." : "Agentic AI Solutions").split(" ");
   const audiences = ["Wholesalers.", "Investors.", "Agents."];
-  const outboundAudiences = [
-    "PPC Agencies.",
-    "Paid Media Teams.",
-    "Digital Agencies.",
-  ];
   return (
     <section
       aria-label="Introduction"
@@ -56,7 +51,7 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
             <div className="mb-5">
               <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">
                 {outbound
-                  ? "A founder-led outbound partner"
+                  ? "B2B Growth Partner"
                   : "A performance-based intelligence partner"}
               </p>
             </div>
@@ -65,7 +60,7 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
           <h1
             aria-label={
               outbound
-                ? "Outbound Client Acquisition for Growing PPC Agencies."
+                ? "Define the outcome. We build the system to reach it."
                 : "Agentic AI Solutions for Real Estate Wholesalers, Investors, and Agents."
             }
             className="font-sans font-black text-[var(--color-heading)] leading-[1.02] tracking-[-0.03em] mb-10"
@@ -100,16 +95,9 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
               transition={{ duration: 0.4, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
               className="block"
             >
-              for{" "}
+              {outbound ? "We build the system to " : "for "}
               {outbound ? (
-                <>
-                  <span style={{ color: "var(--color-accent)" }}>Growing</span>{" "}
-                  <RotatingWord
-                    words={outboundAudiences}
-                    fixedWidth="9.5em"
-                    style={{ color: "var(--color-accent)" }}
-                  />
-                </>
+                <span style={{ color: "var(--color-accent)" }}>reach it.</span>
               ) : (
                 <>
                   <span style={{ color: "var(--color-accent)" }}>Real Estate</span>{" "}
@@ -125,10 +113,27 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
           <Reveal delay={0.55}>
             <p className="font-sans font-semibold text-[var(--color-body)] text-xl md:text-2xl leading-snug max-w-[640px] mb-2">
               {outbound
-                ? "We build and run the outbound system that turns your agency’s work into qualified conversations, without adding another job to your team."
+                ? "VERA turns a clear B2B growth target into a working acquisition system, from market strategy and outbound to follow-up automation and continuous optimization."
                 : "We can bring you more deals and buyers and better spreads, without ever losing what makes you… you."}
             </p>
           </Reveal>
+
+          {outbound && (
+            <Reveal delay={0.65}>
+              <p className="font-sans text-base md:text-lg leading-relaxed text-[var(--color-muted)] max-w-[680px] mt-5">
+                We agree on the outcome before launch. Our compensation is
+                aligned to achieving it.
+              </p>
+              <div className="flex flex-wrap gap-3 mt-8">
+                <Button href="/contact" size="lg" arrow>
+                  Plan Your Growth
+                </Button>
+                <Button href="/#how-it-works" variant="ghost" size="lg">
+                  See How It Works
+                </Button>
+              </div>
+            </Reveal>
+          )}
         </div>
       </Container>
     </section>

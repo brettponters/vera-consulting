@@ -61,7 +61,7 @@ export function Header() {
           <span>VERA</span>
           <span className="hidden md:inline text-[10px] font-medium tracking-[0.08em] uppercase text-[var(--color-muted)]">
             {isOutbound
-              ? "Outbound for Growing Agencies"
+              ? "Outcome-Aligned B2B Growth Partner"
               : "Value-Driven, Evidence-Based Real Estate AI"}
           </span>
         </Link>
@@ -73,6 +73,7 @@ export function Header() {
           {(isOutbound
             ? [
                 { label: "What We Do", href: "/#ai-capabilities-heading" },
+                { label: "How It Works", href: "/#how-it-works" },
                 { label: "Who We Work With", href: "/#who-we-work-with" },
               ]
             : [
@@ -94,7 +95,7 @@ export function Header() {
           href="/contact"
           className="ml-4 inline-flex items-center rounded-full bg-[var(--color-accent)] px-5 py-3 md:py-2.5 font-sans text-sm font-medium text-white no-underline transition-opacity duration-150 hover:opacity-90"
         >
-          {isOutbound ? "Book a Call" : "Become a Partner"}
+          {isOutbound ? "Plan Your Growth" : "Become a Partner"}
         </Link>
       </div>
 

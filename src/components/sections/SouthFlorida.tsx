@@ -13,12 +13,12 @@ const SAMPLE_MARKETS = [
 ];
 
 const OUTBOUND_PARTNERS = [
-  { label: "Paid media agencies", blurb: "Agencies running Google Ads, Meta Ads, or both for a defined group of clients." },
-  { label: "PPC specialists", blurb: "Focused teams with strong campaign delivery and room for more of the right accounts." },
-  { label: "Full-service digital agencies", blurb: "Agencies where paid acquisition is a meaningful, proven part of the offer." },
-  { label: "Founder-led teams", blurb: "Operators who still care about fit, reputation, and the quality of every new client." },
-  { label: "Growing delivery teams", blurb: "Agencies with capacity to onboard new work without compromising the work itself." },
-  { label: "Across the U.S.", blurb: "VERA is based in Boca Raton and operates campaigns remotely across the country." },
+  { label: "Proven B2B offers", blurb: "Companies with an offer customers already buy and credible proof that the work delivers." },
+  { label: "Defined economics", blurb: "Teams that understand deal value, sales capacity, and what a qualified opportunity is worth." },
+  { label: "Clear customer fit", blurb: "Businesses that know the companies and decision-makers they are equipped to help." },
+  { label: "Sales-ready teams", blurb: "Companies able to respond quickly and run a capable sales process when opportunities arrive." },
+  { label: "Committed partners", blurb: "Leaders willing to provide the access, feedback, approvals, and follow-up the system requires." },
+  { label: "Room to grow", blurb: "Delivery teams with capacity to serve more customers without compromising the work." },
 ];
 
 export function SouthFlorida({ outbound = false }: { outbound?: boolean }) {
@@ -44,17 +44,17 @@ export function SouthFlorida({ outbound = false }: { outbound?: boolean }) {
                 We work with{" "}
                 <RotatingWord
                   words={outbound
-                    ? ["paid media agencies", "PPC specialists", "digital agencies"]
+                    ? ["B2B companies", "service firms", "founder-led teams"]
                     : ["wholesalers", "investors", "agents"]}
                 />
               </span>
               <span className="block">
-                {outbound ? "that are ready to grow." : "across the United States."}
+                {outbound ? "with something proven to grow." : "across the United States."}
               </span>
             </h2>
             <p className="font-sans text-[var(--color-muted)] text-base leading-relaxed">
               {outbound
-                ? "The best fit is an agency with a clear offer, proof it can deliver, and room for new clients. We bring the outbound system and operate it with you."
+                ? "The best fit has a proven offer, credible customer proof, sales capacity, and room for new business. VERA builds and operates the growth system around that foundation."
                 : "The partnership is fully remote. We pull fresh data county by county, source deals by your criteria, and find the buyer from our list wherever you operate."}
             </p>
           </div>

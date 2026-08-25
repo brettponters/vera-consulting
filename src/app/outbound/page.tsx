@@ -8,9 +8,9 @@ import { SouthFlorida } from "@/components/sections/SouthFlorida";
 import { BookACall } from "@/components/sections/BookACall";
 
 export const metadata: Metadata = {
-  title: "Outbound Client Acquisition for Growing Agencies | VERA Solutions",
+  title: "Outcome-Aligned B2B Growth Partner | VERA Solutions",
   description:
-    "VERA Solutions builds and runs outbound client-acquisition systems for growing paid media and digital advertising agencies.",
+    "VERA Solutions turns measurable B2B growth targets into operated acquisition systems, with compensation aligned to the outcome.",
   alternates: { canonical: "/outbound" },
 };
 

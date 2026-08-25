@@ -45,7 +45,7 @@ export default function ContactClient({ outbound = false }: { outbound?: boolean
           company: data.company || "-",
           message: data.message,
           _subject: outbound
-            ? `New VERA Outbound inquiry: ${data.name}`
+            ? `New VERA growth inquiry: ${data.name}`
             : `New VERA contact: ${data.name}`,
           _template: "table",
         }),
@@ -75,7 +75,7 @@ export default function ContactClient({ outbound = false }: { outbound?: boolean
           <div className="max-w-[760px]">
             <Reveal>
               <Eyebrow className="mb-5">
-                {outbound ? "Outbound pilot" : "Contact"}
+                {outbound ? "Outcome-Aligned Partnership" : "Contact"}
               </Eyebrow>
             </Reveal>
 
@@ -92,7 +92,7 @@ export default function ContactClient({ outbound = false }: { outbound?: boolean
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                {outbound ? "Let’s talk outbound" : "Let’s talk"}
+                {outbound ? "Let’s talk growth" : "Let’s talk"}
                 <span style={{ color: "var(--color-accent)" }}>.</span>
               </motion.span>
             </h1>
@@ -110,7 +110,7 @@ export default function ContactClient({ outbound = false }: { outbound?: boolean
                     : "text-[var(--color-muted)] hover:text-[var(--color-body)]"
                 }`}
               >
-                {outbound ? "Book a pilot call" : "Become a Partner"}
+                {outbound ? "Book a growth call" : "Become a Partner"}
               </button>
               <button
                 type="button"
@@ -154,7 +154,7 @@ export default function ContactClient({ outbound = false }: { outbound?: boolean
                   </h2>
                   <p className="font-sans text-base text-[var(--color-body)]">
                     {outbound
-                      ? "I’ll be in touch soon to talk through the pilot."
+                      ? "I’ll be in touch soon to talk through the outcome."
                       : "We’ll be in touch soon."}
                   </p>
                 </div>
@@ -200,7 +200,7 @@ export default function ContactClient({ outbound = false }: { outbound?: boolean
 
                   <div>
                     <label htmlFor="message" className="font-sans text-sm font-medium text-[var(--color-heading)] mb-1.5 block">
-                      {outbound ? "Who would you most like to meet?" : "What are you looking for?"}
+                      {outbound ? "Where do you want the business to grow?" : "What are you looking for?"}
                     </label>
                     <textarea
                       id="message"
