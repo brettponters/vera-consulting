@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "VERA Solutions, outbound client acquisition for growing agencies";
+export const alt = "VERA Solutions, an outcome-aligned B2B growth partner";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -68,7 +68,7 @@ export default function OpengraphImage() {
               maxWidth: 1000,
             }}
           >
-Outbound client acquisition for growing agencies.
+Define the outcome. We build the system to reach it.
           </div>
           <div
             style={{
@@ -79,11 +79,11 @@ Outbound client acquisition for growing agencies.
               color: "#5C5C66",
             }}
           >
-            <span>Targeted Research</span>
+            <span>Growth Strategy</span>
             <span style={{ color: "#C97B3F" }}>·</span>
-            <span>Personalized Outreach</span>
+            <span>Operated Acquisition</span>
             <span style={{ color: "#C97B3F" }}>·</span>
-            <span>Qualified Conversations</span>
+            <span>Outcome Alignment</span>
           </div>
         </div>
 

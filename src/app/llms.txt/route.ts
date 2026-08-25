@@ -9,33 +9,35 @@ const SITE = "https://www.verasolutions.ai";
 export function GET() {
   const body = `# VERA Solutions
 
-> VERA Solutions builds and runs outbound client-acquisition systems for growing paid media and digital advertising agencies.
+> VERA Solutions is an outcome-aligned B2B growth partner. It turns a measurable growth target into an operated acquisition system and ties the majority of its compensation to achieving the agreed milestone.
 
 ## What VERA Solutions does
 
-VERA helps agencies create a repeatable outbound channel without asking their delivery team to become a prospecting team. The work combines market selection, account research, contact data, personalized messaging, campaign infrastructure, deliverability, launch, and ongoing optimization.
+VERA begins with a measurable business-development target, such as qualified attended opportunities or sales-qualified pipeline. It then builds and operates the system required to reach it: market and offer strategy, targeting, prospect research, messaging, outbound acquisition, CRM routing, follow-up automation, reporting, and continuous optimization.
 
-## Who VERA Solutions works with
+Outbound is a capability inside the broader growth system, not the identity of the company.
 
-- PPC and paid media agencies
-- Digital advertising agencies
-- Performance marketing agencies
-- Agencies with proven client results that want a more predictable new-business pipeline
+## How the partnership works
 
-## How the engagement works
+Before launch, VERA and the client agree on the metric, qualification criteria, target, timeline, attribution rules, and commitments on both sides. A build fee covers the operating system. The majority of VERA's fee is earned when the agreed growth milestone is achieved.
 
-VERA identifies the strongest market and offer hypothesis, builds the target list and messaging, launches the outbound system, and improves it from response data. The goal is qualified conversations with companies that fit the agency's existing strengths.
+## Who VERA works with
+
+- B2B companies with a proven offer and credible customer proof
+- Teams that understand their ideal customer and deal economics
+- Companies with sales capacity to respond to qualified opportunities quickly
+- Partners willing to provide the access, feedback, approvals, and follow-up required to operate the system
 
 ## Key pages
 
-- [Home](${SITE}): outbound client-acquisition offer, capabilities, and ideal agency partners.
-- [Contact](${SITE}/contact): book an outbound strategy call or send a message.
+- [Home](${SITE}): B2B growth-partner positioning, operating model, capabilities, and fit.
+- [Contact](${SITE}/contact): define a growth target and explore the partnership.
 
 ## Contact
 
 - Email: brett@veraconsulting.co
 - Phone: +1-561-900-8182
-- Based in Boca Raton, Florida, and works with agencies remotely.
+- Based in Boca Raton, Florida, and works with B2B companies remotely.
 `;
 
   return new Response(body, {

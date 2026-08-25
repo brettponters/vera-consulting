@@ -125,19 +125,19 @@ const OUTBOUND_CAPABILITIES: Capability[] = [
   {
     id: "negotiation",
     num: "01",
-    title: "Market intelligence",
-    teaser: "We find the segments where your offer has a real reason to win, so the campaign starts with a market worth pursuing.",
-    detail: "We look at the clients you serve best, where the pain is urgent, who can afford the work, and what makes your agency meaningfully different. That becomes a focused market thesis instead of a broad list and a hopeful send.",
-    examples: ["Best-fit client segments", "Buying triggers and timing", "Offer-to-market fit", "A reason to reach out now"],
-    frameAlt: "VERA mapping the strongest market and audience opportunities",
+    title: "Growth strategy",
+    teaser: "We define the market, offer, ideal customer, and measurable objective before choosing the channel.",
+    detail: "We start with the target, then work backward into the clients you serve best, the problems they will pay to solve, the proof that makes you credible, and the clearest path to a qualified conversation.",
+    examples: ["One measurable growth target", "Best-fit client segments", "Offer-to-market fit", "Qualification defined upfront"],
+    frameAlt: "VERA mapping a measurable B2B growth strategy",
     frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68ca3ab64f1b049e5ee849a4_de784e201ec29242bb2373d0c5eb32b6_Find%20leads.png",
   },
   {
     id: "market-research",
     num: "02",
-    title: "Prospect intelligence",
-    teaser: "We build a clean picture of the companies and people your agency should actually want to meet.",
-    detail: "We source the accounts, identify the right decision-makers, verify their contact data, and enrich each record with the context that matters. The result is a usable market, not another database export.",
+    title: "Account intelligence",
+    teaser: "We build a clean picture of the companies and people your business should actually want to meet.",
+    detail: "We source the accounts, identify the right decision-makers, verify their contact data, and enrich each record with the context that matters. The result is a qualified market, not another database export.",
     examples: ["Right companies and roles", "Verified work emails", "Company and buyer context", "Duplicates removed before spend"],
     frameAlt: "VERA researching and organizing qualified prospects",
     frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd08b727755a29c3f9a86d_4bc1ddfc2229fe91c1c6bb60b23b243d_Leads%20Finder%20%281%29.avif",
@@ -145,39 +145,39 @@ const OUTBOUND_CAPABILITIES: Capability[] = [
   {
     id: "comms",
     num: "03",
-    title: "Message intelligence",
-    teaser: "We turn real prospect context into an email that sounds like a person with a reason to be in their inbox.",
-    detail: "We research what the agency can credibly notice, connect that observation to the reason for reaching out, and keep the offer direct. Personalization supports the conversation instead of becoming the conversation.",
-    examples: ["Human opening blocks", "Relevant target-audience language", "Clear offer positioning", "Copy that sounds like you"],
-    frameAlt: "VERA writing a relevant outbound message from prospect research",
+    title: "Messaging and positioning",
+    teaser: "We turn your proof and market insight into a clear reason for the right buyer to start a conversation.",
+    detail: "We connect what you do best to a specific buyer problem, then turn that position into direct, credible outreach. Personalization supports the offer instead of becoming the offer.",
+    examples: ["Proof-led positioning", "Relevant buyer language", "Clear reasons to respond", "Copy that sounds like you"],
+    frameAlt: "VERA shaping B2B positioning and personalized outreach",
     frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd00aef8d6168583465351_Frame%201171277500.webp",
   },
   {
     id: "deals",
     num: "04",
-    title: "Campaign intelligence",
-    teaser: "We launch, measure, and improve the campaign as one living system instead of calling the first version finished.",
+    title: "Outbound acquisition",
+    teaser: "We turn the strategy into a live acquisition channel and operate it as one connected system.",
     detail: "We manage the lists, sequences, variables, sending logic, and tests. Replies tell us where the audience or message is strong, weak, or unclear, and we use that signal to make the next batch better.",
-    examples: ["Campaign setup and QA", "Controlled batch launches", "Message and audience tests", "Iteration from real replies"],
-    frameAlt: "VERA monitoring and improving a live outbound campaign",
+    examples: ["Campaign setup and QA", "Controlled launches", "Message and audience tests", "Iteration from real replies"],
+    frameAlt: "VERA operating and improving a live outbound acquisition system",
     frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd0e02151c3084ed023c65_22a49ea2c31f05ffae46c96e2bd5e001_Campaigns%20table%20row.avif",
   },
   {
     id: "tax",
     num: "05",
-    title: "Deliverability intelligence",
-    teaser: "We protect the sending system before scale turns a small mistake into a damaged domain.",
-    detail: "We verify emails before personalization, control sending volume, remove duplicates, and keep invalid or risky contacts out of the campaign. Clean operations are part of performance, not an afterthought.",
-    examples: ["Verification before enrichment", "Domain-level deduplication", "Controlled sending volume", "Clean campaign data"],
-    frameAlt: "VERA checking campaign data and deliverability safeguards",
+    title: "Growth infrastructure",
+    teaser: "We connect the data, outreach, CRM, qualification, follow-up, and reporting behind the campaign.",
+    detail: "We build the operating logic that keeps opportunities from falling between tools or teams. Clean data, protected sending, clear routing, follow-up, and one source of truth are part of performance, not afterthoughts.",
+    examples: ["Verified campaign data", "CRM and calendar routing", "Follow-up automation", "Outcome reporting"],
+    frameAlt: "VERA connecting the infrastructure behind a B2B growth system",
     frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd11dd8f6af1f4e052c17f_9085c2dea438c8f99f9073b428a44d86_smart%20analytics%20result.avif",
   },
   {
     id: "marketing",
     num: "06",
     title: "Pipeline intelligence",
-    teaser: "We stay focused on the outcome that matters: qualified conversations with companies your agency can help.",
-    detail: "We define qualification before launch, watch which prospects engage, and keep the campaign aligned with the kind of meeting your team would genuinely take. The system is built around pipeline quality, not vanity metrics.",
+    teaser: "We measure the system against the agreed growth milestone, not a dashboard full of activity.",
+    detail: "We define qualification and attribution before launch, watch which prospects engage, and keep the system aligned with opportunities your team would genuinely pursue. Performance is measured against the goal we set together.",
     examples: ["Qualification defined upfront", "Replies routed clearly", "Meetings tied to the ICP", "Performance measured in conversations"],
     frameAlt: "VERA connecting campaign activity to qualified agency meetings",
     frameSrc: "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68cd1620eb35a203b2f78622_28b012c6455180f3078edcb70b21fa35_unified%20inbox.png",
@@ -198,12 +198,12 @@ const CONSEQUENCES: Record<string, string> = {
 };
 
 const OUTBOUND_CONSEQUENCES: Record<string, string> = {
-  "negotiation": "You stop asking the wrong market to care.",
-  "market-research": "The right person makes it into the campaign.",
-  "comms": "The email feels relevant before it ever mentions the offer.",
-  "deals": "Every batch teaches the next one something useful.",
-  "tax": "You scale the campaign without wasting data or trust.",
-  "marketing": "Your team spends time on conversations worth having.",
+  "negotiation": "The work starts with a goal, not a list of tactics.",
+  "market-research": "The right person makes it into the growth system.",
+  "comms": "Your proof becomes a reason for the right buyer to respond.",
+  "deals": "Outbound becomes an operated channel, not a side project.",
+  "tax": "Every qualified opportunity reaches the right next step.",
+  "marketing": "Progress is measured against the outcome you agreed on.",
 };
 
 /**
@@ -508,7 +508,7 @@ export function AIRoadmap({ outbound = false }: { outbound?: boolean }) {
               className="font-mono text-[10px] uppercase tracking-[0.28em] font-semibold mb-5 md:mb-7"
               style={{ color: "var(--color-navy)" }}
             >
-              {outbound ? "What we build and run" : "What we bring you"}
+              {outbound ? "What VERA operates" : "What we bring you"}
             </p>
 
             <motion.h2
@@ -521,7 +521,7 @@ export function AIRoadmap({ outbound = false }: { outbound?: boolean }) {
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 6rem)" }}
             >
               <span style={{ color: "var(--color-accent)" }}>
-                {outbound ? "Outbound" : "Intelligence"}
+                {outbound ? "Growth" : "Intelligence"}
               </span>{" "}
               as a Service
               <span aria-hidden="true" style={{ color: "var(--color-accent)" }}>
@@ -537,7 +537,7 @@ export function AIRoadmap({ outbound = false }: { outbound?: boolean }) {
               className="mt-6 md:mt-8 font-sans text-[var(--color-body)] text-lg md:text-xl leading-relaxed max-w-[680px]"
             >
               {outbound
-                ? "Good outbound is not one list, one template, or one tool. We connect the market, data, message, infrastructure, and iteration, then operate the system alongside you."
+                ? "Outbound is one part of the system. We connect strategy, targeting, messaging, acquisition, follow-up, and measurement, then operate the whole thing against one agreed target."
                 : "The technology changes every week. A tool you buy or a consultant you hire is behind the day it arrives. We stay at the frontier and put what we find into your deals, and we only make money when you do."}
             </motion.p>
           </div>
@@ -565,13 +565,19 @@ export function AIRoadmap({ outbound = false }: { outbound?: boolean }) {
                 className="font-sans font-black text-[var(--color-heading)] tracking-[-0.025em] leading-[1.05] m-0"
                 style={{ fontSize: "clamp(1.5rem, 2.6vw, 2.5rem)" }}
               >
-                {outbound ? "We get paid when" : "We make money when"}
-                <span style={{ color: "var(--color-accent)" }}> you </span>
-                do.
+                {outbound ? "Aligned around the outcome" : "We make money when"}
+                {outbound ? (
+                  <span style={{ color: "var(--color-accent)" }}>.</span>
+                ) : (
+                  <>
+                    <span style={{ color: "var(--color-accent)" }}> you </span>
+                    do.
+                  </>
+                )}
               </p>
               <p className="mt-5 font-sans text-[var(--color-body)] text-base md:text-lg leading-relaxed max-w-[620px]">
                 {outbound
-                  ? "That is the arrangement. We build and run the outbound system, your team takes the conversations, and you pay when a qualified meeting attends. No retainer and no long-term commitment."
+                  ? "We agree on the metric, qualification criteria, timeline, attribution rules, and client commitments before launch. A build fee covers the operating system. The majority of our fee is earned when the agreed growth milestone is achieved."
                   : "That is the whole arrangement. We bring the intelligence and the edge, you make the calls and close the deals. No retainer, no hourly, no paying us to try."}
               </p>
             </div>

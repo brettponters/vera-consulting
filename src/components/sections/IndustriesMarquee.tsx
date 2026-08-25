@@ -13,14 +13,14 @@ const SERVICES = [
 ];
 
 const OUTBOUND_SERVICES = [
-  "Market strategy",
-  "Lead sourcing",
-  "Email verification",
+  "Growth strategy",
+  "Market selection",
+  "Offer positioning",
   "Prospect research",
-  "Personalized copy",
-  "Campaign operations",
-  "Reply intelligence",
-  "Qualified meetings",
+  "Outbound acquisition",
+  "CRM follow-up",
+  "Pipeline reporting",
+  "Continuous optimization",
 ];
 
 export default function IndustriesMarquee({ outbound = false }: { outbound?: boolean }) {

@@ -18,21 +18,21 @@ export function BookACall({ outbound = false }: { outbound?: boolean }) {
               className="font-sans font-semibold text-[var(--color-heading)] tracking-[-0.02em] leading-tight"
               style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)" }}
             >
-              Want to talk?
+              Where do you want the business to grow?
             </h2>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p className="font-sans text-[var(--color-body)] text-lg leading-relaxed max-w-prose">
               {outbound
-                ? "30 minutes. We’ll talk about the clients you want, what makes a meeting worth taking, and whether the model fits. No deck, no pressure."
+                ? "30 minutes. We’ll define the outcome, look at what is standing between you and it, and decide whether the partnership fits. No deck, no pressure."
                 : "30 minutes. We’ll talk about the deals you’re chasing and whether we can find you an edge. No deck, no pitch."}
             </p>
           </Reveal>
 
           <Reveal delay={0.2}>
             <Button href="/contact" variant="filled" size="lg" arrow>
-              {outbound ? "Book a Call" : "Become a Partner"}
+              {outbound ? "Plan Your Growth" : "Become a Partner"}
             </Button>
           </Reveal>
         </div>
