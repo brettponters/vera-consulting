@@ -26,7 +26,6 @@ export function Footer() {
     pathname === "/" || pathname === "/contact" || pathname.startsWith("/outbound");
   const navLinks = isOutbound
     ? [
-        { href: "/#how-it-works", label: "How it works" },
         { href: "/#ai-capabilities-heading", label: "What we do" },
         { href: "/#who-we-work-with", label: "Who we work with" },
         { href: "/contact", label: "Contact" },

@@ -73,7 +73,6 @@ export function Header() {
           {(isOutbound
             ? [
                 { label: "What We Do", href: "/#ai-capabilities-heading" },
-                { label: "How It Works", href: "/#how-it-works" },
                 { label: "Who We Work With", href: "/#who-we-work-with" },
               ]
             : [

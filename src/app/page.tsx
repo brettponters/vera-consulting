@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import IndustriesMarquee from "@/components/sections/IndustriesMarquee";
-import { GrowthPartnership } from "@/components/sections/GrowthPartnership";
 import { PromptPersonalize } from "@/components/sections/PromptPersonalize";
 import { AIRoadmap } from "@/components/sections/AIRoadmap";
 import { FounderVision } from "@/components/sections/FounderVision";
@@ -39,7 +38,6 @@ export default function Home() {
       <Hero outbound />
       <IndustriesMarquee outbound />
       <PromptPersonalize outbound />
-      <GrowthPartnership />
       <AIRoadmap outbound />
       <FounderVision outbound />
       {/* <Testimonials /> */}

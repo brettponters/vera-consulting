@@ -128,9 +128,6 @@ export default function Hero({ outbound = false }: { outbound?: boolean }) {
                 <Button href="/contact" size="lg" arrow>
                   Plan Your Growth
                 </Button>
-                <Button href="/#how-it-works" variant="ghost" size="lg">
-                  See How It Works
-                </Button>
               </div>
             </Reveal>
           )}
