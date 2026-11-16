@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 
-const BOOKING_URL = "https://api.leadconnectorhq.com/widget/booking/ErRLWbReo85OvkhovCwj";
+const BOOKING_URL = "https://api.leadconnectorhq.com/widget/booking/uI7W5zURd6p2E0Lfp82Z";
 const FORM_ID = "IIPPJr7CMMbn7XcIGmKF";
 const FORM_URL = `https://api.leadconnectorhq.com/widget/form/${FORM_ID}`;
 
